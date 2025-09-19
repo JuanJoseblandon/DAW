@@ -6,7 +6,7 @@ package suma;
 
 /**
  *
- * @author Alumno Tarde
+ * @author WacheR
  */
 public class Suma {
 
