@@ -1,0 +1,94 @@
+# Sistemas informaticos |
+------------------------|
+   ________
+## Hardware: Esa la parte fisica formada por los compoinentes  electronicos y fisicos
+   --------
+## Software: Es la parte lógita, formada por los sistemas opertivos, programas y datos ademas de las documentacion de l SO
+   --------
+## Firmware: Es el software mas basico, integrado directamente en el hardware, BIOS, UEFI
+   --------
+## Informática: Tratamiento automantico de la información.
+   -----------
+*************************
+|Clasificación de los SI|
+*************************
+### SI de uso general.
+Aquellos que se usan para un gran abanico de tareas.
+
+### SI de uso especifico.
+Aquellos que tienen un proposito concreto.
+
+**********************************
+|Clasificación de los ordenadores|
+**********************************
+
+## Superordenadores.
+Equipos para una enorme tratamiento de la informacion.
+
+## Mainframes/ macroordenadores
+Gran capacidad de tratamiento pero de acceso más abierto que superordenadores
+
+## Servidores y workstation
+* Servidores: Computadoras que prestan servicio a otras computadoras.
+* Workstation: ordenadores que pueden acceder a los serviios de los servidores.
+
+## PC (ordenadores personales)
+Son los que se usan en el hogar y en el trabajo, pudiendo trabajar independientemente 
+o usar los servicios de los servidores.
+
+* Sobremesa: Es un PC que se coloca en un lugr fijo,
+* Pórtatil: Es un PC que que puede ser llevado de un sitio a otro (laptop, notebook).
+* Convertible 2 en 1: Es un PC portatil cuya pantalla se puede extraer y funcionar
+independientemente.
+* Tablet: Es un PC que que consiste en una pantalla tactil y con menor capacidad
+de procesamiento.
+* Smartphone (teléfono inteligente): Es un PC que consisten en un movil, menor
+con menor capacidad que un pc convencional y que una tablet.
+* SBC (Single Board computer): Un ordenador muy compacto de tamaño muy reducido
+construiido en una sola pcb (raspberry pi, ps5, minipc).
+
+## Clientes ligeros (thin client)
+Ordenadores muy compatos y ded prqueño tamaño que necesitan de un servidor
+obligatoriamente.
+
+******************************
+|Arquitectura de un ordenador|
+******************************
+
+# Unidad central de proceso (CPU)
+Es el componente principal encargado de todo el tratamiento informático.
+
+* Unidad Aritmetic-logica (ALU)
+Es una parte de la CPU que se encarga de las operaciones.
+
+** Registro de datos.
+Es donde va la informacion que va a sere tratada.
+
+** Registro acumulador
+Almacena resultados que van a ser tratados.
+
+** Registro de estado.
+Se encarga de almacenar la operacio/nes que se estan procesando.
+
+** Circuito operacional.
+Es donde se realizan las operaciones.
+
+* Unidad de control.
+es una parte de la CPU que controla todo el tratamiento.
+
+** Registro de instrucción
+Es donde se guarda la instrucción que esta procesando.
+
+** Registro contador de programas.
+Se encarga de almacenar la direccion de la siguiente instrucción.
+
+** Decodificador.
+Se encarga de interpretar la instrucción.
+
+** Secuenciador/Emisor de impulsos.
+Emite impulsos que indican que se pase al tratamiento siguiente.
+
+** Reloj.
+Se encarga de sincronizar todo el sistema.
+
+
