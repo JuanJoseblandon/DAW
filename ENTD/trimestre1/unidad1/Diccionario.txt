@@ -62,3 +62,11 @@ Es una secuencia ordenada de pasos para resolver un problema.
 6 cobrar total
 7 Esperar al siguiente cliente y volver al paso 1
 
+
+# Representacion Graficas de algoritmos
+
+* Diagrama de flujo: Es un esquema con figuras de un algoritmo
+
+*Pseudocodigo: Es una secuencia de instrucciones que representa las 
+proposiociones/sentencias de un programa.
+
