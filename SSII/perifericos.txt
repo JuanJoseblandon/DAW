@@ -1,0 +1,51 @@
+***********************
+Perifericos de entrada.
+**********************
+
+microfono:Capta sonido del entorno y lo transmite al ordenador .
+
+teclado: permite al usuario interacctuar y transmitir información al 
+ordenador de manera escrita.
+
+ratón:  permite ibnteractuar con el ordenador atraves de gestos.
+
+********************
+Periferico de salida.
+********************
+
+altavoces: trasmite de audio desde el ordenador a los usuarios.
+
+monitor:trasmite imagenes y texto desde el ordenador al usuario
+
+********************************
+Perifericos de entrada y salida
+********************************
+
+Tarjeta de Red:permite a un ordenador o dispositivo conectarse a una red
+Pantalla tactil:Permite 
+impresoras multifunción:
+
+
+********************
+Memorias secundarias
+********************
+
+Disco duro (HDD): Unidad de memoria basado en discos magneticos, su memoria varía 
+desde unos pocos MB hasta 20TB y su velocidad de escritura/lectura entre 80 y 160MB/s
+
+Disco duro de Estado solido (SSD): Unidad de memoria digital basado en chips
+digitales de almacenamiento, su capacidad va desde 120GB hasta 16TB y su velocidad
+desde 500MB/s en caso del bus SATA hasta los 10.000 MB/s por el puesto PCI
+
+Tarjetas SD: es un dispositivo de memoria flash extraíble y de pequeño tamaño que 
+sirve para almacenar y transferir datos digitales, mayormente usados en dispositivos 
+portatiles. Su velocidad va desde 10MB/s hasta 30MB/s y su tamaño desde 1GB 
+hasta 512GB.
+
+Compact Disk: es un disco compacto (del inglés Compact Disc), un tipo de disco óptico 
+que almacena datos digitales, como música, software o archivos, 
+de forma plana y circular, su velodicad de mide en rpm y va desde 200 hasta 500rpm
+
+
+ 
+
