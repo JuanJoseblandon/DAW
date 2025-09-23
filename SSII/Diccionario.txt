@@ -91,4 +91,101 @@ Emite impulsos que indican que se pase al tratamiento siguiente.
 ** Reloj.
 Se encarga de sincronizar todo el sistema.
 
+# Memoria Principal
+Es donde se almacenan toda la información antes de ser tratada en la cpu.
+Se le denomina RAM (Random Access Memory), ya que para leer un dato no hace falta
+pasar por  los anteriores.
+
+* Registro de direcciones.
+Almacena  la dirección que se va a leer o escribir.
+
+* Registro de intercambio.
+Contiene el dato que va a ser leido o escrito.
+
+* Selector de memoria.
+Seleciona la dirección donde se encuentra el siguiente registro de dirección.
+
+# Unidad de entrada/salida.
+Es encargada  de a comunicación entre la CPU y los periféricos.
+Realmente esta dentro de la placa madre
+
+# Buses de sistyema
+Son las vias de comunicación entre los diferentes componentes del sistema.
+
+* Bus de datos
+Son aquellas vias por las que se mueven la información que va a ser procesada
+
+* Bus de Direcciones.
+son las vias por las que se mueven las direcciones de los dato sque van a ser 
+procesados.
+
+* Bus de control
+son las vis por donde se mueven las señales que ordenan el proceso.
+
+****************************************************************************
+
+# Periféricos
+Son los elementos que permiten la comunicación con el interios del ordenador
+Exinten:
+-Entrada
+-salida
+-Entrada/salida
+
+# Memorias de almacenamiento externo
+Son almacenes de informaciónen la que esta se guarda antes de pasar  a la 
+memoria RAM.
+Sin de tipo no volatil, suelen ser grandes.
+
+- Volatil, la informacion desaparece cuando no hay corriente.
+
+********************
+|Unidades de medida|
+********************
+
+# Capacidad de datos
+
+* bit: unidad minima de medida
+* byte: conjunto de bits que representan un caracter, 
+  normalmente son 8 bits
+
+* kilobyte: son 1024 bytes
+* megabyte: 1024 kilobytes
+* gigabyte: 1024 megabytes
+* terabyte: 1024 gigabytes
+
+# Velocidad de ciclos(clock)
+
+* herzio(Hz): 1 ciclo por segundo
+* kHz:1000 Hz
+* Mhz:1000 KHz
+* GHz:1000 MHz
+
+# Velocidad de transferencia de informacion
+* Bits por segundo (bps): unidad de transferencia de informacion
+* Byte por segundo (Bps):
+* KBps: son 1000 Bps
+* MBps: 1000 KBps
+* GBps: 1000 MBps
+* TBps: 1000 Gbps
+
+# Medida de potencia
+* Vatio (W): medida de potencia
+* Voltio (V): medida de tension
+* Amperio (A): medida de intensidad
+* Ohmios (ohm): medida de resitencia
+
+
+# Sistema de numeracion
+
+Es un conjunto de simbolos que representa valores numericos
+
+##########################
+Ejercicio cambio a decimal
+##########################
+
+10101110 -->174
+00110111 -->55
+11111111 -->255
+
+
 
