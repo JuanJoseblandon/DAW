@@ -1,0 +1,64 @@
+*****************************
+|Software y programas Tema 1|
+*****************************
+
+# Tipos de  Software
+
+* Hardware: Componentes físicos que se pùeden ver y tocar:
+* Software: Conjuntosde programas informaticos que actuan sobre el hardware
+para ejecutar lo que el usuario desee
+
+-------------------------
+* Clasificacion Software:
+-------------------------
+
+## Por licencia
+
+ * Software Libre: Se puede usar sin ninguna licencia.
+ * Software Propietario: Se necesita una licencia.
+
+## Tipos de tarea que realiza
+
+ * Sistema: Software basico necesario para que funcione un equipo
+(linux, unix,windows,macos,android).
+
+ * Programacion:conjunto de apps que permiten elaborar otras apps.
+  (IDE's).
+
+ * Aplicacion:Aquellos prgramas con un proposito concreto
+ (calculadora,vmware).
+
+-------------------
+| Que es programa?|
+-------------------
+Es un conjunto de instrucciones que permiten realizar una tarea
+
+ --------------------------
+//Entornos de desarrollo.//
+-------------------------
+Es un tipo de software que facilitan y mejoran la programacion.
+
+ -------------
+//Algoritmo.//
+-------------
+Es una secuencia ordenada de pasos para resolver un problema.
+
+
+
+**************************************************************
+**************************************************************
+
+####################################
+#EJERCICIO1. Cajero de supermercado#
+####################################
+
+1 Escoger un producto
+2 Tiene codigo?
+2/1 no --> buscar precio en las tablas.
+2/1 si --> escanear codigo
+3 se suma precio
+4 Repetir hasta que no haya mas productos pasos 2-3
+5 cuando no haya mas productos informar del tota al cliente
+6 cobrar total
+7 Esperar al siguiente cliente y volver al paso 1
+
