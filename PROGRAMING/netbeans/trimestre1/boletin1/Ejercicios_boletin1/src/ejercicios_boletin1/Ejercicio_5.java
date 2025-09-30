@@ -6,7 +6,7 @@ package ejercicios_boletin1;
 
 /**
  *
- * @author Alumno Tarde
+ * @author JuanJoseBlandon
  */
 //ejercicio5
 import java.util.Scanner;
@@ -17,7 +17,8 @@ public class Ejercicio_5 {
         int nota1 = sc.nextInt();
         System.out.println("dame la segunda  nota en numeros enteros");
         int nota2 = sc.nextInt();
-        int media = nota1+nota2%2;
+        float  media = ((float)nota1 + (float)nota2)/2;
         System.out.println("La media aritmetica es "+ media);
     }
 }
+
