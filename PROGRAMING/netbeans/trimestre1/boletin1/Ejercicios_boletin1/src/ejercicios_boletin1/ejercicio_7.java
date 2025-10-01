@@ -16,18 +16,18 @@ public class ejercicio_7 {
         Scanner sc = new Scanner (System.in);
         float numero = sc.nextFloat();
         int entero = (int)numero;
-        float decimal = (int)numero - entero;
+        float decimal = numero - entero;
         int redondeo = (int)(decimal * 10);
-        
-        System.out.println("parte entera "+entero );
-        System.out.println("decimal "+decimal);
-        System.out.println("decimal*10 "+redondeo);
+//        System.out.println("numero como tal "+numero);
+//        System.out.println("parte entera "+entero );
+//        System.out.println("decimal "+decimal);
+//        System.out.println("decimal*10 "+redondeo);
 
-//        if (redondeo < 5) {
-//            System.out.println("EL redondeo aprox es: "+entero +decimal);
-//        } else {
-//            entero =entero+1;
-//            System.out.println("El redondeo2 es: "+entero+"."+decimal);
-//        }
+        if (redondeo < 5) {
+            System.out.println("EL redondeo aprox es: "+entero +"."+(redondeo)%10 );
+        } else {
+            entero =entero+1;
+            System.out.println("El redondeo es: "+entero);
+        }
     }
 }
