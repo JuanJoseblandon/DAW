@@ -46,15 +46,18 @@ public class pruebas {
 ////                throw new AssertionError();
 //        }
 //        }while (opcion !='5');
-    
-int a=1, b=2, c=3;
-int resultado;
-resultado = a++ == 1 && a > b++ ? a+=b:
-                 a > 0 && a== b ? a+=c:
-                          a==c ?  a++ : a--;
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-        System.out.println(resultado);
+
+/*operador ternario*/    
+//int a=1, b=2, c=3;
+//int resultado;
+//resultado = a++ == 1 && a > b++ ? a+=b:
+//                 a > 0 && a== b ? a+=c:
+//                          a==c ?  a++ : a--;
+//        System.out.println(a);
+//        System.out.println(b);
+//        System.out.println(c);
+//        System.out.println(resultado);
+
+
     }
 }
