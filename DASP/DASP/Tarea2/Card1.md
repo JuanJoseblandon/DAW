@@ -1,0 +1,1 @@
+tarjeta 1 de la tarea 2 de obsidian
