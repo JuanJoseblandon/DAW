@@ -1,4 +1,4 @@
-*****************************
+﻿*****************************
 |Software y programas Tema 1|
 *****************************
 
@@ -62,6 +62,8 @@ Es una secuencia ordenada de pasos para resolver un problema.
 6 cobrar total
 7 Esperar al siguiente cliente y volver al paso 1
 
+**************************************************************
+**************************************************************
 
 # Representacion Graficas de algoritmos
 
@@ -69,4 +71,43 @@ Es una secuencia ordenada de pasos para resolver un problema.
 
 *Pseudocodigo: Es una secuencia de instrucciones que representa las 
 proposiociones/sentencias de un programa.
+
+
+**************************
+|Lenguaje de programacion|
+**************************
+Lenguaje Binario: que usan los ordenadores compuesto por 0 y 1.
+
+*Identificadores:Un espacio de memoria asociad a un nombre
+*constante:Datos que no cambina su valor a l largo del  programa 
+*operadores: Simolos que representan operaciones entre variables, contantes y expesiones
+
+
+*Lenguajes intermedios: 
+*Lenguajes estructurado: se caracteriza por el emple de estructuras para la creracion de cualquier programa
+
+**********************************
+| Codigo fuente,objeto,ejecutable|
+**********************************
+ 
+C fuente
+C objeto
+
+*****************
+Maquina virtuales
+*****************
+
+Simulacion de sistemas operativos,
+MV de sistemas vbox
+MV programas java
+
+********************
+Fases del Desarrollo
+********************
+-Análisis
+-diseño
+-Programación
+-Pruebas
+-Explotación
+-Mantenimiento 
 

@@ -1,4 +1,4 @@
-Proceso EdadMediaGrupoMientras
+Proceso promedio_grupo
     Definir i, edad, suma Como Entero
     Definir promedio Como Real
 	
