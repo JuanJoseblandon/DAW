@@ -104,10 +104,92 @@ MV programas java
 ********************
 Fases del Desarrollo
 ********************
--Análisis
--diseño
--Programación
--Pruebas
--Explotación
--Mantenimiento 
+-Optimización de una aplicación: Proceso de mejorar el rendimiento, eficiencia y consumo de recursos de un programa.
 
+- Seguridad de una aplicación: Conjunto de medidas para proteger datos y evitar accesos o acciones no autorizadas.
+
+-ERS (Especificación de Requisitos del Software): Documento que define qué debe hacer el software y sus condiciones.
+
+-Software maduro: Programa probado y estable, con pocas fallas y alto nivel de confiabilidad.-mantenimiento perfectivo
+
+***********************
+Fases de mantenimiento
+*********************** 
+
+-Prueba de caja negra: Evalúa el funcionamiento del software sin conocer su código interno, solo sus entradas y salidas.
+
+-Prueba de caja blanca: Analiza la lógica interna del código para verificar su correcto funcionamiento.
+
+-Mantenimiento correctivo: Corrige errores detectados tras la entrega del software.
+
+-Mantenimiento adaptativo: Ajusta el software a cambios en el entorno o nuevas necesidades.
+
+-Mantenimiento perfectivo: Mejora funciones o rendimiento sin que existan fallos previos.
+
+********************************  
+Roles en desarrollo de software
+******************************** 
+
+-Director de proyecto: Planifica, coordina y supervisa todo el proceso de desarrollo del software.
+
+-Analista de sistemas: Estudia las necesidades del cliente y define los requisitos del sistema.
+
+-Diseñador de software: Crea la arquitectura y estructura del programa antes de codificarlo.
+
+-Desarrollador de software: Escribe, prueba y mantiene el código del programa.
+
+************************************** 
+Modelos de ciclo de vida del software
+**************************************
+
+-Modelo en cascada: El desarrollo se realiza por etapas consecutivas (análisis → diseño → implementación → pruebas → mantenimiento). Cada fase debe completarse antes de pasar a la siguiente.
+
+-Modelo incremental: El software se construye y entrega en partes (incrementos), cada uno añade nuevas funciones hasta completar el sistema.
+
+-Modelo de construcción de prototipos: Se crea un modelo inicial (prototipo) para comprender mejor los requisitos antes del desarrollo final.
+
+-Modelo en espiral: Combina etapas del modelo en cascada con ciclos repetitivos de planificación, análisis de riesgos y mejora continua.
+
+*********************** 
+Marco de trabajo ágil
+*********************
+-Marco de trabajo ágil: Conjunto de métodos que promueven entregas rápidas, trabajo en equipo y adaptación a cambios durante el desarrollo del software.
+
+****** 
+Scrum
+******
+
+-Scrum: Método ágil basado en ciclos cortos llamados sprints para entregar partes funcionales del software con colaboración constante.
+
+-Product Owner (Propietario del producto): Define los requisitos y prioriza las tareas del proyecto; representa las necesidades del cliente.
+
+-Scrum Master: Facilita el proceso Scrum, elimina obstáculos y asegura que el equipo siga las prácticas ágiles correctamente.
+
+-Equipo de desarrollo Scrum: Grupo multidisciplinario que diseña, construye, prueba y entrega el producto en cada sprint.
+
+-Product Backlog: Lista priorizada de todas las funciones, mejoras y correcciones pendientes del producto.
+
+-Sprint Backlog: Conjunto de tareas seleccionadas del product backlog que se realizarán durante un sprint.
+
+-Incremento Scrum: Resultado funcional del trabajo completado al final de cada sprint; debe estar listo para ser entregado o usado.
+
+-Reunión diaria Scrum (Daily Scrum): Reunión corta (15 min aprox.) donde el equipo revisa avances, planes y obstáculos.
+
+-Sprint: Periodo corto y fijo (generalmente de 1 a 4 semanas) donde el equipo desarrolla un conjunto de funcionalidades.
+
+-Sprint Planning: Reunión al inicio del sprint donde se decide qué tareas se harán y cómo.
+
+-Sprint Review: Revisión al final del sprint donde se muestra el incremento al cliente y se obtienen comentarios.
+
+-Sprint Retrospective: Reunión de mejora interna del equipo para analizar qué funcionó bien y qué se puede optimizar.
+
+
+
+******************** 
+Otros marcos ágiles
+********************
+- Kanban: Método visual de gestión del trabajo basado en tarjetas y columnas que muestran el flujo de tareas (pendiente, en progreso, terminado).
+
+- Tablero Kanban: Herramienta visual donde se organizan las tareas según su estado, ayudando a controlar el progreso y limitar el trabajo en curso.
+
+- Scrumban: Enfoque híbrido que combina la estructura de Scrum con la flexibilidad visual de Kanban para mejorar la eficiencia y adaptabilidad.
