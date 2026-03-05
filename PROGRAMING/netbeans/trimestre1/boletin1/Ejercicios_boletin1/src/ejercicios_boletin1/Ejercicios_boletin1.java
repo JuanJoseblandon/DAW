@@ -11,7 +11,8 @@ package ejercicios_boletin1;
 import java.util.Scanner;
 public class Ejercicios_boletin1 {
     // Ejercicio 1
-   public static void main(String[] args) {
+/*
+ /  public static void main(String[] args) {
         // TODO code application logic here
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce un número entero: ");
@@ -21,3 +22,19 @@ public class Ejercicios_boletin1 {
     }
     
 }
+*/
+    public static String procesarNumero(int input) {
+        return "el numero entero introducido es " + input;
+            
+    }
+    public static int leerNumero() {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Introduce un número entero: ");
+    return sc.nextInt();
+    }
+    public static void main(String[] args) {
+        int numero = leerNumero();
+        String resultado = procesarNumero(numero);
+        System.out.println(resultado);
+    }
+}    
