@@ -7,3 +7,5 @@ BBDD | Base de Datos primero de DAW. |
 PROG | Programación de primero de DAW. |
 SSII | Sistemas Informáticos de primero de DAW. |
 ENTD |Entornos de Desarrollo de primero de DAW. |
+SASP | Sostenibilidad Aplicada al Sistema Productivo |
+DASP | Digitalizacion Aplicada a los Sectores Productivos |
