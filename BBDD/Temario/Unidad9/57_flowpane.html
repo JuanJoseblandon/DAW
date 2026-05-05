@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.7.- FlowPane </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-85"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Interfaces gráficas de usuario</a></li>
+   <li><a href="1_arquitectura_de_javafx.html" class="no-ch">1.- Arquitectura de JavaFX</a></li>
+   <li><a href="2_estructura_de_una_aplicacin.html" class="daddy">2.- Estructura de una aplicación</a>
+   <ul class="other-section">
+      <li><a href="21_grafo_de_escena.html" class="no-ch">2.1.- Grafo de escena</a></li>
+      <li><a href="22_instalar_sdk.html" class="no-ch">2.2.- Instalar SDK</a></li>
+      <li><a href="23_primer_ejemplo.html" class="no-ch">2.3.- Primer ejemplo</a></li>
+   </ul>
+   </li>
+   <li><a href="3_eventos.html" class="daddy">3.- Eventos</a>
+   <ul class="other-section">
+      <li><a href="31_modelo_de_gestin_de_eventos.html" class="no-ch">3.1.- Modelo de gestión de eventos</a></li>
+      <li><a href="32_tipos_de_eventos.html" class="no-ch">3.2.- Tipos de eventos</a></li>
+      <li><a href="33_aadir_un_manejador_de_evento.html" class="no-ch">3.3.- Añadir un manejador de evento</a></li>
+   </ul>
+   </li>
+   <li><a href="4_css.html" class="daddy">4.- CSS</a>
+   <ul class="other-section">
+      <li><a href="41_introduccin.html" class="no-ch">4.1.- Introducción</a></li>
+      <li><a href="42_hoja_de_estilo_por_defecto.html" class="no-ch">4.2.- Hoja de estilo por defecto</a></li>
+      <li><a href="43_hoja_de_estilo_especfica_de_la_escena.html" class="no-ch">4.3.- Hoja de estilo específica de la escena</a></li>
+      <li><a href="44_hoja_de_estilo_especfica_del_padre.html" class="no-ch">4.4.- Hoja de estilo específica del padre</a></li>
+      <li><a href="45_estilo_especfico_en_componente.html" class="no-ch">4.5.- Estilo específico en componente</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_layout_panes.html" class="current-page-parent daddy">5.- Layout panes</a>
+   <ul>
+      <li><a href="51_absolute_layout.html" class="no-ch">5.1.- Absolute layout</a></li>
+      <li><a href="52_hbox.html" class="no-ch">5.2.- HBox</a></li>
+      <li><a href="53_vbox.html" class="no-ch">5.3.- VBox</a></li>
+      <li><a href="54_borderpane.html" class="no-ch">5.4.- BorderPane</a></li>
+      <li><a href="55_anchorpane.html" class="no-ch">5.5.- AnchorPane</a></li>
+      <li><a href="56_stackpane.html" class="no-ch">5.6.- StackPane</a></li>
+      <li id="active"><a href="57_flowpane.html" class="active no-ch">5.7.- FlowPane</a></li>
+      <li><a href="58_tilepane.html" class="no-ch">5.8.- TilePane</a></li>
+      <li><a href="59_gridpane.html" class="no-ch">5.9.- GridPane</a></li>
+   </ul>
+   </li>
+   <li><a href="6_controles_ui.html" class="daddy">6.- Controles UI</a>
+   <ul class="other-section">
+      <li><a href="61_label_etiqueta_y_textfield_campo_de_texto.html" class="no-ch">6.1.- Label (Etiqueta) y TextField (Campo de texto)</a></li>
+      <li><a href="62_button_botn.html" class="daddy">6.2.- Button (Botón)</a>
+      <ul class="other-section">
+         <li><a href="621_aadir_imagenicono_a_botn.html" class="no-ch">6.2.1.- Añadir imagen/icono a botón</a></li>
+         <li><a href="622_validar_entrada.html" class="no-ch">6.2.2.- Validar entrada</a></li>
+      </ul>
+      </li>
+      <li><a href="63_men.html" class="no-ch">6.3.- Menú</a></li>
+      <li><a href="64_menubutton.html" class="no-ch">6.4.- MenuButton</a></li>
+      <li><a href="65_checkbox.html" class="no-ch">6.5.- CheckBox</a></li>
+      <li><a href="66_radiobutton_radiobotn.html" class="no-ch">6.6.- RadioButton (Radiobotón)</a></li>
+      <li><a href="67_combobox.html" class="daddy">6.7.- ComboBox</a>
+      <ul class="other-section">
+         <li><a href="671_seleccionar_un_valor.html" class="no-ch">6.7.1.- Seleccionar un valor</a></li>
+      </ul>
+      </li>
+      <li><a href="68_listview_lista.html" class="daddy">6.8.- ListView (Lista)</a>
+      <ul class="other-section">
+         <li><a href="681_obtener_valor_seleccionado.html" class="no-ch">6.8.1.- Obtener valor seleccionado</a></li>
+         <li><a href="682_seleccionar_varios_elementos.html" class="no-ch">6.8.2.- Seleccionar varios elementos.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="7_javafx_fxml.html" class="daddy">7.- JavaFX FXML</a>
+   <ul class="other-section">
+      <li><a href="71_javafx_scene_builder.html" class="no-ch">7.1.- JavaFX Scene Builder</a></li>
+      <li><a href="72_estructura_de_un_proyecto_fxml.html" class="daddy">7.2.- Estructura de un proyecto FXML</a>
+      <ul class="other-section">
+         <li><a href="721_el_fichero_fxml.html" class="no-ch">7.2.1.- El fichero .fxml</a></li>
+         <li><a href="722_controlador.html" class="no-ch">7.2.2.- Controlador</a></li>
+         <li><a href="723_clase_principal.html" class="no-ch">7.2.3.- Clase principal</a></li>
+         <li><a href="724_ejemplo_javafx_con_scene_builder_y_netbeans.html" class="no-ch">7.2.4.- Ejemplo JavaFX con Scene Builder y NetBeans</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="8_paso_de_informacin_entre_ventanas.html" class="daddy">8.- Paso de información entre ventanas</a>
+   <ul class="other-section">
+      <li><a href="81_paso_de_informacin_entre_ventanas_usando_fxml.html" class="no-ch">8.1.- Paso de información entre ventanas usando FXML</a></li>
+      <li><a href="82_paso_de_informacin_entre_ventanas_usando_fxml_ii.html" class="no-ch">8.2.- Paso de información entre ventanas usando FXML (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="9_grficos.html" class="daddy">9.- Gráficos</a>
+   <ul class="other-section">
+      <li><a href="91_ejemplo_diagrama_de_quesos.html" class="no-ch">9.1.- Ejemplo: diagrama de quesos</a></li>
+   </ul>
+   </li>
+   <li><a href="10_imagen_audio_y_vdeo.html" class="daddy">10.- Imagen, audio y vídeo</a>
+   <ul class="other-section">
+      <li><a href="101_imagen.html" class="no-ch">10.1.- Imagen</a></li>
+      <li><a href="102_audio.html" class="no-ch">10.2.- Audio</a></li>
+      <li><a href="103_vdeo.html" class="no-ch">10.3.- Vídeo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_lambda.html" class="no-ch">Anexo I.- Lambda</a></li>
+   <li><a href="anexo_ii_atributos_tipo_property.html" class="no-ch">Anexo II.- Atributos tipo Property</a></li>
+   <li><a href="anexo_iii_ejemplo_de_aplicacin.html" class="no-ch">Anexo III.- Ejemplo de aplicación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="56_stackpane.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="58_tilepane.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.7.- FlowPane</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id249">
+<div class="iDevice emphasis0">
+<div id="ta249_69" class="block iDevice_content">
+<p>Un <span lang="en">layout</span> horizontal de este tipo <strong>dispone sus nodos hijos en una fila hasta que la anchura del panel alcanza cierto tamaño que puedes especificar</strong>. En el momento en que se alcanza ese tamaño se empieza por una nueva fila de nodos hijo.</p>
+<p>Un <span lang="en">layout</span> vertical de este tipo funciona de manera similar a lo expuesto, en vez de en filas en columnas. Cuando se alcanza el tamaño límite se añade una nueva columna inmediatamente a la derecha de la columna actual.</p>
+<p>En el siguiente listado podemos ver un ejemplo de este panel con orientación vertical:</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id247">
+<div class="iDevice emphasis0">
+<div id="ta247_69" class="block iDevice_content">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>package flowpaneejemplo;
+
+import javafx.application.Application;
+import javafx.geometry.Orientation;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.FlowPane;
+import javafx.stage.Stage;
+
+/**
+ * Ejemplo de uso del panel FlowPane
+ * @author JJBH
+ */
+public class FlowPaneEjemplo extends Application {
+
+    @Override
+    public void start(Stage stage) {
+                
+        // Crear panel
+        FlowPane flow = new FlowPane(Orientation.HORIZONTAL);
+        // Espacio entre filas y columnas
+        flow.setVgap(8);
+        flow.setHgap(4);
+        // Ancho preferido
+        flow.setPrefWrapLength(300); 
+        // Añadir 10 botones
+        for (int i = 0; i &lt; 10; i++) {
+            flow.getChildren().add(new Button("botón"));
+        }
+        
+        // EStabelcemos propiedades del escenario
+        stage.setTitle("Ejemplo FlowPane");
+        stage.setWidth(500);
+        stage.setHeight(500);
+        
+        // Creamos escena
+        Scene scene = new Scene(flow);
+        // Añair escena al escenario         
+        stage.setScene(scene);
+        // Mostrar escenario
+        stage.show();
+    }
+ 
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+</code></pre>
+</div>
+</div>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id267">
+<div class="iDevice emphasis0">
+<div id="ta267_69" class="block iDevice_content">
+<p>Puedes descargar el proyecto a continuación:</p>
+<p style="text-align: center;"><a title="Descargar el proyecto de ejemplo de FlowPane. [zip – 22 KB]" href="FlowPaneEjemplo.zip" target="_blank"><span class="paquete">FlowPane en JavaFX</span></a> <span class="tamano">(22 KB)</span></p>
+<p>El resultado de la ejecución del programa se ve en la imagen de la izquierda. Si cambias la orientación de horizontal a vertical, entonces obtendrás el resultado de la derecha.</p>
+<div>
+<div style="width: 50%; float: left;">
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="flowhorizontal.png" target="_blank"><img src="flowhorizontal_mini.1.png" alt="Horizontal disposición." title="Horizontal disposición." style="vertical-align: baseline;" class="imagen_ampliable" width="197" height="200" /></a></div>
+<div class="elemento_centrado credenciales">José Javier Bermúdez Hernández.
+<div class="elemento_centrado credenciales">Uso educativo-nc. Captura de pantalla de una</div>
+<div class="elemento_centrado credenciales">aplicación JavaFX.</div>
+</div>
+</div>
+</div>
+<div style="width: 50%; float: left;">
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="flowvertical.png" target="_blank"><img src="vertical_mini.png" alt="Disposición vertical." title="Vertical" class="imagen_ampliable" style="vertical-align: middle;" width="200" height="200" /></a></div>
+<div class="elemento_centrado credenciales">José Javier Bermúdez Hernández.
+<div class="elemento_centrado credenciales">Uso educativo-nc. Captura de pantalla de una</div>
+<div class="elemento_centrado credenciales">aplicación JavaFX.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="separador"></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id213">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-213_56" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion213_56" class="block question iDevice_content">
+<p>Para establecer el ancho preferido de un panel <code>FlowPane</code> se emplea:</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i213_59" class="sr-av"><a href="#answer-213_59">Opción 1</a></label><input type="radio" name="option213_56" id="i213_59" class="exe-radio-option exe-radio-option-0-4-213_56-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-213_59"><div id="taans213_59" class="block iDevice_content">
+<p><code>setWidth</code></p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i213_442" class="sr-av"><a href="#answer-213_442">Opción 2</a></label><input type="radio" name="option213_56" id="i213_442" class="exe-radio-option exe-radio-option-1-4-213_56-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-213_442"><div id="taans213_442" class="block iDevice_content">
+<p><code>setHeight</code></p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i213_445" class="sr-av"><a href="#answer-213_445">Opción 3</a></label><input type="radio" name="option213_56" id="i213_445" class="exe-radio-option exe-radio-option-2-4-213_56-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-213_445"><div id="taans213_445" class="block iDevice_content">
+<p><code>setPrefWrapLength</code></p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i213_448" class="sr-av"><a href="#answer-213_448">Opción 4</a></label><input type="radio" name="option213_56" id="i213_448" class="exe-radio-option exe-radio-option-3-4-213_56-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-213_448"><div id="taans213_448" class="block iDevice_content">
+<p><code>setTitle</code></p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b213_56" class="feedback js-hidden">
+<div id="taf213_59" class=" iDevice_content">
+<p>No es correcto.</p>
+</div>
+</section>
+<section id="sa1b213_56" class="feedback js-hidden">
+<div id="taf213_442" class=" iDevice_content">
+<p>Incorrecto.</p>
+</div>
+</section>
+<section id="sa2b213_56" class="feedback js-hidden">
+<div id="taf213_445" class=" iDevice_content">
+<p>&iexcl;Eso es!</p>
+</div>
+</section>
+<section id="sa3b213_56" class="feedback js-hidden">
+<div id="taf213_448" class=" iDevice_content">
+<p>No es as&iacute;.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-213_59">Incorrecto</a><span> (<a href="#sa0b213_56">Retroalimentación</a>)</span></li>
+<li><a href="#answer-213_442">Incorrecto</a><span> (<a href="#sa1b213_56">Retroalimentación</a>)</span></li>
+<li><a href="#answer-213_445">Opción correcta</a><span> (<a href="#sa2b213_56">Retroalimentación</a>)</span></li>
+<li><a href="#answer-213_448">Incorrecto</a><span> (<a href="#sa3b213_56">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="56_stackpane.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="58_tilepane.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

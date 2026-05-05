@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.- Conversiones entre cadenas y tipos numéricos (I). | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-75"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li class="current-page-parent"><a href="2__cadenas_de_caracteres.html" class="current-page-parent daddy">2.-  Cadenas de caracteres.</a>
+   <ul>
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="active daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul>
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2.- Conversiones entre cadenas y tipos numéricos (I).</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id311">
+<div class="iDevice emphasis0">
+<div id="ta311_73" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="alphabet-gdd34fe1b8_640.png" alt="Letras, dígitos y caracteres especiales" title="Caracteres" style="float: right;" width="240" height="358" /><figcaption class="figcaption"><a href="https://pixabay.com/es/illustrations/alfabeto-n%c3%bameros-simbolos-letras-7226609/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Eleatell en Pixabay (se abre en una nueva ventana).">Eleatell</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Una operación muy habitual al trabajar con textos es la conversión de número a cadena y viceversa. Imagínate que un texto aparece un número que representa un precio, ¿cómo compruebas que esa edad es mayor que una determinada cantidad? Para poder realizar esa comprobación tienes que pasar la cadena a número. Por otro lado, a veces tenemos valores numéricos que nos interesa que formen parte de un texto. En ese otro caso lo que nos interesa es transformar ese número en una cadena.</p>
+<p>Supongamos que disponemos de una cadena que contiene el texto "<code>35</code>". Se trata de un texto que contiene caracteres numéricos, pero no es un número. No podemos efectuar operaciones aritméticas con él. Por ejemplo, si intentamos sumarlo a un <code>35</code>, ya hemos visto en apartados anteriores que Java automáticamente transformará el <code>int</code> a un <code>String</code> para llevar a cabo una concatenación:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String elem1 = 35;
+int elem2 = 5;
+System.out.printf ("La suma es: %s\n", elem1+elem2); // Mostrará por pantalla 355 y no 40</code></pre>
+</div>
+</div>
+<p>Por tanto, la conversión de un número a texto es automática si el número forma parte de una concatenación con otras cadenas, pues Java llevará a cabo la conversión de manera implícita y automática:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.printf ("La suma es: %s\n", Integer.toString(elem1) + elem2); // Esto no es necesario pues se hace de manera automática</code></pre>
+</div>
+</div>
+<p>En general, siempre que deseemos transformar un valor numérico a un texto, podemos usar alguno de las clases "<em></em><span lang="en"><em>wrapper</em></span>" o "<a href="#tb2407284-d1a5-1d29-59d1-ee66df8022e1" id="linkb2407284-d1a5-1d29-59d1-ee66df8022e1" class="exe-tooltip definition-tt" title="Clase envoltorio"><strong>envoltorio</strong></a>" (<code>Byte</code>, <code>Short</code>, <code>Integer</code>, <code>Long</code>, <code>Float</code>, <code>Double</code>) que nos proporciona Java para "envolver" cada uno de los tipos primitivos numéricos (<code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code>). A partir de ahí, basta con utilizar el método estático <code>toString()</code>. Por ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int valorInt = 25;
+String textoInt = Integer.toString(valorInt);
+System.out.printf ("Entero: %d - Cadena: \"%s\"\n", valorInt, textoInt);</code></pre>
+</div>
+</div>
+<p>Como puedes observar, la variable <code>valorInt</code> es de tipo <code>int</code> y la variable <code>textoInt</code> es de tipo <code>String</code>. Y aunque al mostrarlas por pantalla podría parecer que contienen el mismo valor, al observar el código se ve claramente que no es así:</p>
+<ul>
+<li class="lista_verificacion">en un caso se trata de la <strong>representación mediante 32 bits de un número entero</strong> mediante ceros y unos (variable o literal de tipo <code>int</code>);</li>
+<li class="lista_verificacion">en el otro caso se trata de la representación, mediante <strong>dos caracteres del código Unicode</strong>, de un número de dos cifras (objeto o literal de tipo <code>String</code>).</li>
+</ul>
+<p>En ambos casos se trata de una representación de un contenido mediante ceros y unos (como cualquier dato contenido en la memoria de un ordenador), pero esos ceros y unos serán diferentes dado que estarán representando algo diferente, aunque aparentemente ante nuestros ojos puedan parecer lo mismo al mostrarse por pantalla (pues en ambos casos tienen la misma representación "textual" por pantalla).</p>
+<p>El mismo experimento podríamos realizarlo con cualquier otro valor numérico (literal o variable) tanto de tipo entero como real. Aquí tienes un par de ejemplos más con valores de tipo <code>long</code> y de tipo <code>double</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>long valorLong = 25_000_000_000L;  // Veinticinco mil millones
+String textoLong = Long.toString(valorLong);
+System.out.printf ("Long: %d - Cadena: \"%s\"\n", valorLong, textoLong);</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>double valorDouble = 6.023e23; // Equivalente a 6.023 multiplicado por 10 elevado a 23
+String textoDouble = Double.toString(valorDouble);
+System.out.printf ("Double: %f - Cadena: \"%s\"\n", valorDouble, textoDouble); </code></pre>
+</div>
+</div>
+<div id="tb2407284-d1a5-1d29-59d1-ee66df8022e1" class="exe-tooltip-text">
+<p>Las clases envoltorio son clases que encapsulan tipos de datos básicos, tales como tales como int, short, double, etc. Sirven básicamente para poder usar los tipos básicos como si fueran objetos. Las clases envoltorio son generalmente inmutables.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id312">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta312_70" class="block iDevice_content">
+<p>Los números generalmente se almacenan en memoria como números binarios, es decir, secuencias de unos y ceros con los que se puede operar (sumar, restar, etc.). No debes confundir los tipos de datos que contienen números (<code>int</code>, <code>short</code>, <code>long</code>, <code>float</code> y <code>double</code>) con las secuencias de caracteres que representan un número. No es lo mismo <code>123</code> que "<code>123</code>", el primero es un número y el segundo es una cadena formada por tres caracteres: '<code>1</code>', '<code>2</code>' y '<code>3</code>'.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id313">
+<div class="iDevice emphasis0">
+<div id="ta313_85" class="block iDevice_content">
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionfpdIdevice em_iDevice em_iDevice_reflexionfpd" id="id314">
+<div class="iDevice emphasis_reflexionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h1 class="iDeviceTitle">Reflexiona</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta314_119" class="block iDevice_content">
+<p>¿Cuál crees que será el resultado de hacer <code>System.out.println("A"+5f)</code>?</p>
+</div>
+<form name="feedback-form-314" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedback314text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-314" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-314" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div id="ta314_120" class="block iDevice_content">
+<p>El resultado que deberíamos obtener por pantalla debería ser el siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>A5.0</code></pre>
+</div>
+</div>
+<p>¿Entiendes por qué? Si no lo ves claro, puede que sea un buen momento para pasarte por el foro y exponer tus dudas...</p>
+</div>
+</section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id315">
+<div class="iDevice emphasis0">
+<div id="ta315_85" class="block iDevice_content">
+<p>Las clases envoltorio de los tipos numéricos, además de proporcionar el método <code>toString</code>, que genera una cadena con los caracteres numéricos para representar el número de manera "textual", también ofrecen métodos de conversión de número a texto en los que la representación se realiza en otra base numérica y no necesariamente la decimal. Se trata de los métodos: <code>toHexString</code>, <code>toBinaryString</code> y <code>toOctalString</code>, que llevan a cabo una transformación a cadena utilizando las bases hexadecimal, binaria y octal respectivamente. Aquí tienes un ejemplo de uso:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span> valorInt<span class="token operator">=</span><span class="token number">255</span><span class="token punctuation">;</span>
+String textoIntDec<span class="token operator">=</span> Integer<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>valorInt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+String textoIntHex<span class="token operator">=</span> Integer<span class="token punctuation">.</span><span class="token function">toHexString</span><span class="token punctuation">(</span>valorInt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+String textoIntBin<span class="token operator">=</span> Integer<span class="token punctuation">.</span><span class="token function">toBinaryString</span><span class="token punctuation">(</span>valorInt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+String textoIntOct<span class="token operator">=</span> Integer<span class="token punctuation">.</span><span class="token function">toOctalString</span><span class="token punctuation">(</span>valorInt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"Entero: %d (la pantalla lo representa en base decimal, aunque internamente en el ordenador esté en binario)\n"</span><span class="token punctuation">,</span> valorInt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"Cadena (dec): \"%s\" (representación textual del número en base decimal)\n"</span><span class="token punctuation">,</span> textoIntDec<span class="token punctuation">)</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"Cadena (hex): \"%s\" (representación textual del número en base hexadecimal)\n"</span><span class="token punctuation">,</span> textoIntHex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"Cadena (bin): \"%s\" (representación textual del número en base binaria)\n"</span><span class="token punctuation">,</span> textoIntBin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"Cadena (oct): \"%s\" (representación textual del número en base octal)\n"</span><span class="token punctuation">,</span> textoIntOct<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</div>
+</div>
+<p>Si lo pruebas, deberías obtener una salida similar a la siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre class=" language-latex"><code class=" language-latex">Entero: 255 (la pantalla lo representa en base decimal, aunque internamente en el ordenador esté en binario)
+Cadena (dec): "255" (representación textual del número en base decimal)
+Cadena (hex): "ff" (representación textual del número en base hexadecimal)
+Cadena (bin): "11111111" (representación textual del número en base binaria)
+Cadena (oct): "377" (representación textual del número en base octal)</code></pre>
+</div>
+</div>
+<p>Además, el método <code>toString</code> está sobrecargado mediante una segunda versión con dos parámetros que permite especificar cualquier tipo de base, de manera que el ejemplo anterior también se podría haber resuelto de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre class=" language-java"><code class=" language-java">String textoIntDec<span class="token operator">=</span> Integer<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>valorInt<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// En este caso no es necesario indicar el 10</span>
+String textoIntHex<span class="token operator">=</span> Integer<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>valorInt<span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+String textoIntBin<span class="token operator">=</span> Integer<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>valorInt<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+String textoIntOct<span class="token operator">=</span> Integer<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>valorInt<span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</div>
+</div>
+<p>Obviamente, además de poder indicar las bases típicas (10, 2, 16, 8), este método permite representar textualmente un valor numérico en cualquier base arbitraria que elijamos.</p>
+<p>Respecto a los envoltorios para valores reales (<code>Double</code> y <code>Float</code>), tan solo se dispone de los métodos <code>toString</code> (con tan solo un parámetro) y <code>toHexString</code>, de manera que <strong>solo se podrán obtener representaciones textuales de números reales usando las bases decimal y hexadecima</strong>l.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id316">
+<div class="iDevice emphasis0">
+<div id="ta316_85" class="block iDevice_content">
+<p>Por último, otra forma de obtener una representación textual de un valor numérico es mediante el uso del "<strong><a href="#tebe6058b-831d-e9ad-ec44-0eb9ce803780" id="linkebe6058b-831d-e9ad-ec44-0eb9ce803780" class="exe-tooltip definition-tt">formateado de cadenas</a></strong>". La clase <code>String</code> de Java dispone de un método que permite "formatear" valores de manera similar a como vimos que se podía hacer con <code>System.out.printf</code>. Se trata del método <code>format</code>, que permite crear una cadena proyectando los argumentos en un formato específico de salida.</p>
+<p>Ese <strong>formato de salida</strong>, también denominado "<strong>cadena de formato</strong>", es el primer argumento del método <code>format</code>. A partir de ahí, se podrán añadir tantos parámetros como valores queremos que se integren en la cadena que deseamos generar. La forma de integrarse esos valores se llevará a cabo mediante los <a href="#ta73e3034-23b2-2551-1f7d-8b6c3381a3d1" id="linka73e3034-23b2-2551-1f7d-8b6c3381a3d1" class="exe-tooltip definition-tt"><strong>especificadores de formato</strong></a>, que estarán formados, como mínimo, por el símbolo tanto por ciento (<code>%</code>) y una letra (<code>d</code>, <code>f</code>, <code>x</code>, <abbr title="etcétera">etc</abbr>.). Esos especificadores indican cómo se deben formatear o proyectar los argumentos que hay después de la cadena de formato en el método <code>format</code>.</p>
+<p>Como ya se ha indicado, la forma de usar los especificadores de formato es idéntica a la que ya has visto para <code>System.out.printf</code>, de manera que tampoco es necesario insistir en ello.</p>
+<div id="tebe6058b-831d-e9ad-ec44-0eb9ce803780" class="exe-tooltip-text">
+<p>Operación consistente en especificar cómo queremos que se transforme un dato, generalmente numérico, en cadena. Dicha conversión permite especificar de forma precisa cosas como el número de decimales que queremos que tenga el resultado.</p>
+</div>
+<div id="ta73e3034-23b2-2551-1f7d-8b6c3381a3d1" class="exe-tooltip-text">
+<p>Consiste en una subcadena dentro de una cadena que especifica cómo se debe formatear un dato concreto que se pasa como argumento al método format. El especificador de formato está formado por un carácter de escape "%" seguido de varios símbolos, destinados a describir cómo será el formato de salida.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id317">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta317_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b317" class="block iDevice_content">
+<p>Intenta reproducir el efecto obtenido mediante los métodos <code>toString</code>, <code>toHexString</code> y <code>toOctalString</code>. pero usando en esta ocasión el método <code>format</code> con el especificador de formato adecuado. Dado que <strong>no existe especificador de formato para la base binaria</strong>, no se te pide que generes un equivalente a <code>toBinaryString</code>.</p>
+</section>
+<form name="feedback-form-quesFeedback0b317" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b317text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b317" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b317" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso tendremos que usar el método <code>format</code> con los especificadores de formato <code>%d</code> (para entero representado en base decimal), <code>%x</code> (para entero <code>%d</code> en base hexadecimal usando minúsculas), <code>%X</code> (para entero representado en base hexadecimal usando mayúsculas) y %o (para entero representado en base octal):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int valorInt=255;
+String textoIntDec  = String.format ("%d", valorInt);
+String textoIntHex1 = String.format ("%x", valorInt);  // Versión "minúsculas"
+String textoIntHex2 = String.format ("%X", valorInt);  // Versión "mayúsculas"
+String textoIntOct  = String.format ("%o", valorInt);
+
+
+System.out.printf ("Entero: %d (la pantalla lo representa en base decimal, aunque internamente en el ordenador esté en binario)\n", valorInt);
+System.out.printf ("Cadena (dec): \"%s\" (representación del número en base decimal)\n", textoIntDec);
+System.out.printf ("Cadena (hex): \"%s\" (representación del número en base hexadecimal usando minúsculas)\n", textoIntHex1);
+System.out.printf ("Cadena (hex): \"%s\" (representación del número en base hexadecimal usando mayúsculas)\n", textoIntHex2);
+System.out.printf ("Cadena (oct): \"%s\" (representación del número en base octal)\n", textoIntOct);</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+<section id="taquesQuestion1b317" class="block iDevice_content">
+<p>Intenta obtener ahora representaciones textuales del número real 3,141592 con los siguientes formatos:</p>
+<ol>
+<li>de la manera más fiel posible al número original;</li>
+<li>quedándote solo con dos decimales;</li>
+<li>con una anchura de seis caracteres y tres decimales;</li>
+<li>con una anchura de seis caracteres, un decimal y rellenando con ceros a la izquierda;</li>
+<li>con cuatro decimales y añadiendo el texto "cm" al final.</li>
+</ol>
+<p>Dado que el formato ya lo vamos a generar mediante <code>String.format</code>, utiliza para mostrar por pantalla los resultados <code>System.out.println</code> en lugar de <code>System.out.printf</code>.</p>
+</section>
+<form name="feedback-form-quesFeedback1b317" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b317text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b317" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b317" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>El funcionamiento es prácticamente idéntico al del formateo mediante <code>System.out.printf</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>double valorDouble = 3.141592;
+String texto1 = String.format ("%f", valorDouble);
+String texto2 = String.format ("%.2f", valorDouble);
+String texto3 = String.format ("%6.3f", valorDouble);
+String texto4 = String.format ("%06.1f", valorDouble);
+String texto5 = String.format ("%.4f cm", valorDouble);
+
+System.out.println ("Representación 0: " + valorDouble + " (el número tal cual lo formatee automáticamente println)");
+System.out.println ("Representación 1: " + texto1);
+System.out.println ("Representación 2: " + texto2);
+System.out.println ("Representación 3: " + texto3);
+System.out.println ("Representación 4: " + texto4);
+System.out.println ("Representación 5: " + texto5);</code></pre>
+</div>
+</div>
+<p>El resultado final por pantalla debería ser similar al siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Representación 0: 3.141592 (el número tal cual lo formatee automáticamente println)
+Representación 1: 3,141592
+Representación 2: 3,14
+Representación 3:  3,142
+Representación 4: 0003,1
+Representación 5: 3,1416 cm</code></pre>
+</div>
+</div>
+<p>La diferencia con <code>printf</code> está en que el texto que queremos que aparezca en pantalla primero lo generamos y almacenamos en un <code>String</code> y a continuación lo mostramos por pantalla, mientras que <code>printf</code> llevaba a cabo ese formateo, pero nosotros no nos quedábamos con una "copia" de esa cadena. Simplemente, se imprimía en pantalla.</p>
+<p>Si en el futuro nos interesara disponer de la representación textual de un número con algún determinado formato para incrustarla dentro de un texto mayor (por ejemplo en un informe), independientemente de si eso va a ser mostrado por pantalla o no, este método nos será de gran ayuda. Si simplemente queremos mostrar una representación textual formateada de un valor por pantalla, entonces es suficiente con el uso de <code>System.out.printf</code>.</p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id320">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta320_128" class="block iDevice_content">
+<p>Es importante que conozcas bien el método <code>format</code> y los especificadores de formato. Puedes echarle un vistazo a:</p>
+<ul>
+<li class="lista_verificacion"><a href="anexo_i_formateado_de_cadenas_en_java.html" title="Enlace al anexo I sobre formateado de cadenas en esta misma unidad (se abre en una nueva ventana)." target="_blank" class="html"><em>Anexo I: Formateado de cadenas en Java</em></a>, en esta unidad.</li>
+<li class="lista_verificacion"><em><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Formatter.html#syntax" title="Enlace a la documentación de la API sobre la estructura de las cadenas de formato en Java (se abre en una nueva ventana)." target="_blank" class="html">Documentación javadoc sobre la estructura de las cadenas de formato en Java</a></em>.</li>
+</ul>
+<p>Respecto a las clases "envoltorio" de los tipos numéricos, además de los métodos estáticos "herramienta" que hemos visto, hay algunos otros que en el futuro podrían resultarte de utilidad. Puedes consultar toda esa información en la documentación javadoc de cada una de esas clases: <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="Enlace a la documentación de la API para la clase Integer (se abre en una nueva ventana)." target="_blank" class="html">Integer</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="Enlace a la documentación de la API para la clase Double (se abre en una nueva ventana)." target="_blank" class="html">Double</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="Enlace a la documentación de la API para la clase Long (se abre en una nueva ventana)." target="_blank" class="html">Long</a>, <abbr title="etcétera">etc</abbr>.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

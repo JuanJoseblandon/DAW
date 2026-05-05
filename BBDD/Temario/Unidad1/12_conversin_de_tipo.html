@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>12.- Conversión de tipo | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-70"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="12_conversin_de_tipo.html" class="active no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="118_precedencia_de_operadores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="13_comentarios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">12.- Conversión de tipo</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id112">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta112_66" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="PROG02_CONT_R39_CASO_BU004807.jpg" alt="Imagen en la que se aprecia a Juan programando delante del ordenador." title="Programando." style="float: left;" height="128" width="192" /></div>
+<div class="elemento_centrado credenciales">Stockbyte. Uso educativo no comercial para</div>
+<div class="elemento_centrado credenciales">plataformas p&uacute;blicas de Formaci&oacute;n Profesional</div>
+<div class="elemento_centrado credenciales">a distancia. CD-DVD Num. 109.</div>
+</div>
+<p><strong>Mar&iacute;a</strong> ha avanzado mucho en sus conocimientos sobre <span lang="en">Java</span> y ha contado con mucha ayuda por parte de <strong>Juan. </strong>Ahora mismo tiene un problema con el c&oacute;digo, y le comenta:</p>
+<p>&mdash;Estoy atrancada en el c&oacute;digo. Tengo una variable de tipo <code>byte</code> y quiero asignarle un valor de tipo<code> int</code>, pero el compilador me da un error de posible p&eacute;rdida de precisi&oacute;n. &iquest;T&uacute; sabes qu&eacute; significa eso?</p>
+<p>&mdash;Claro &mdash;le contesta<strong> Juan</strong>&mdash;, es un problema de conversi&oacute;n de tipos, para asignarle el valor a la variable de tipo <code>byte</code> debes hacer un <span lang="en">casting</span>.</p>
+<p>&mdash;&iexcl;Ah! , &iquest;y c&oacute;mo se hace eso?</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id113">
+<div class="iDevice emphasis0">
+<div id="ta113_73" class="block iDevice_content">
+<p>Imagina que queremos dividir un número entre otro: ¿tendrá decimales el resultado de esa división?</p>
+<p>Podemos pensar que siempre que el denominador no sea divisible entre el divisor, tendremos un resultado con decimales, pero no es así.</p>
+<p><span style="border: 0.1em solid #004781; background-color: #004781; border-radius: 0.5em 0.5em 0.5em 0.5em; color: #ffffff; padding: 0.15em 0.5em; font-weight: bold;">Si el denominador y el divisor son variables de tipo entero, el resultado será entero y no tendrá decimales</span>. Para que el resultado tenga decimales necesitaremos hacer una <strong>conversión de tipo</strong>.</p>
+<p>Las conversiones de tipo se realizan para hacer que el resultado de una expresión sea del tipo que nosotros deseamos. En el ejemplo anterior, para hacer que el resultado de la división sea de tipo real,con decimales, debemos hacer una conversión de tipo. Existen dos tipos de conversiones:</p>
+<ul class="lista_verificacion">
+<li>
+<p><strong>Conversiones automáticas</strong>. Cuando a una variable de un tipo se le asigna un valor de otro tipo numérico con menos bits para su representación, se realiza una conversión automática. En ese caso, el valor se dice que es <strong>promocionado</strong> al tipo más grande (el de la variable), para poder hacer la asignación. También se realizan conversiones automáticas en las operaciones aritméticas, cuando estamos utilizando valores de distinto tipo, el valor más pequeño se promociona al valor más grande, ya que el tipo mayor siempre podrá representar cualquier valor del tipo menor (por ejemplo, de <code>int</code> a <code>long</code> o de <code>float</code> a <code>double</code>).</p>
+</li>
+<li>
+<p><strong>Conversiones explícitas</strong>. Cuando hacemos una conversión de un tipo con más bits a un tipo con menos bits. En estos casos debemos indicar que queremos hacer la conversión de manera expresa, ya que se puede producir una pérdida de datos y hemos de ser conscientes de ello. Este tipo de conversiones se realiza con el <strong>operador <code>cast</code></strong>. El operador <code>cast</code> es un operador unario que se forma colocando delante del valor a convertir el tipo de dato entre paréntesis. Tiene la misma precedencia que el resto de operadores unarios y se asocia de derecha a <span>izquierda</span>. Las conversiones explícitas también suelen ser conocidas como <strong></strong><span lang="en"><strong>casting</strong></span>.</p>
+</li>
+</ul>
+<p>Debemos tener en cuenta que <strong>un valor numérico nunca puede ser asignado a una variable de un tipo menor en rango, si no es con una conversión explícita</strong>. Por ejemplo:</p>
+<div class="highlighted-code language-java" style="width: 41.75em;">
+<pre><code>int a;
+byte b;
+a = 12;             // no se realiza conversión alguna  
+b = 12;             // se permite porque 12 está dentro
+                    // del rango permitido de valores para b
+b = a;              // error, no permitido (incluso aunque
+                    // 12 podría almacenarse en un byte)
+byte b = (byte) a;  // Correcto, forzamos conversión explícita</code>
+</pre>
+</div>
+<p>En el ejemplo anterior vemos un caso típico de error de tipos, ya que estamos intentando asignarle a <code>b</code> el valor de <code>a</code>, siendo <code>b</code> de un tipo más pequeño. El compilador detecta que<code> a</code> es "un recipiente más grande", y que por tanto si intentamos volcar su contenido en<code> b</code> que es un recipiente más pequeño, puede no caber, así que mejor avisar del error, y no dejar ni intentarlo, no sea que se pierda el contenido "por desbordamiento del recipiente". </p>
+<p>Lo correcto es forzar la conversión de <code>a</code> al tipo de datos <code>byte</code>, (puesto que su contenido, <code>12</code>, realmente puede ser visto como un literal <code>byte</code> también) y entonces asignarle su valor a la variable <code>b</code>.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id229">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(icon_debesconocerfpd.png)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta229_48" class="block iDevice_content">
+<p>En el <a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" title="Acceder al anexo II de la unidad">Anexo II</a> de esta misma unidad hay información importante sobre cómo se producen las conversiones de tipos en <span lang="en">Java</span>, tanto automáticas como explícitas.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="118_precedencia_de_operadores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="13_comentarios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

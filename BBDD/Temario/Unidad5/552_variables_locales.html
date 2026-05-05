@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.5.2.- Variables locales | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-53"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li><a href="4_atributos.html" class="daddy">4.- Atributos</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_mtodos.html" class="current-page-parent daddy">5.- Métodos</a>
+   <ul>
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="55_cuerpo_de_un_mtodo.html" class="current-page-parent daddy">5.5.- Cuerpo de un método</a>
+      <ul>
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li id="active"><a href="552_variables_locales.html" class="active no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="551_valor_devuelto_por_un_mtodo_return.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="553_el_operador_de_autorreferencia_this.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5.5.2.- Variables locales</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id164">
+<div class="iDevice emphasis0">
+<div id="ta164_154" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="home-146585_640.png" alt="Icono de una casa" title="Home" style="float: right;" width="200" height="189" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/casa-silueta-icono-146585/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de OpenClipart-Vectors en Pixabay (se abre en una nueva ventana).">OpenClipart-Vectors</a> <span class="license"><span class="sep">(</span><span class="license"><span class="sep"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep"></span></span></span></span><span class="sep">)</span></span></div>
+</div>
+<p>Hemos realizado la comparación del cuerpo de un método con un pequeño programa que en ocasiones podrá tener cierta complejidad. En tales casos puede ser habitual que necesitemos algunas <strong>variables internas o auxiliares</strong> para realizar cálculos intermedios. Esas variables son conocidas con el nombre de <strong>variables locales</strong>.</p>
+<p>La forma de declarar una variable local es exactamente la misma que vimos a principio de curso: tipo y nombre de la variable junto con aquellos modificadores que permita el lenguaje. De hecho, <strong>en <span lang="en">Java</span>, las variables que has estado usando hasta ahora ya eran locales</strong>, pues eran variables declaradas <strong>dentro de un método llamado <code>main</code></strong>.</p>
+<p>Por ejemplo, supongamos que vamos a implementar un método (llamado por ejemplo <code>sumaSerie</code>) que sume todos los números que hay entre dos enteros que se pasan como parámetros. Para llevar a cabo esta tarea necesitaríamos al menos un <strong>par de variables</strong>: un <strong>contador</strong> para ir desde un número hasta otro y un <strong>acumulador</strong> para ir sumando sucesivamente cada número.</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">int sumaSerie (int inicio, int fin) {
+  int contador;  // Variable local contador
+  int suma= 0;   // Variable local acumuladora de la suma de cada número recorrido
+  for (contador=inicio; contador&lt;=fin; contador++) {  // Recorremos todos los números desde inicio hasta fin
+    suma +=contador;  // Vamos sumando en el acumulador suma cada uno de los números que vamos recorriendo
+  }
+  return suma; // Devolvemos la suma acumulada
+}</code>
+</pre>
+</div>
+<p><span class="destacado_inline"><strong>Debes evitar asignar a las variables locales nombres que coincidan con el de algún parámetro. El compilador no lo permitirá pues se trataría de un identificador duplicado</strong>.</span></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice em_iDevice_recomendacionfpd" id="id165">
+<div class="iDevice emphasis_recomendacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_recomendacionfpd.png)"><h2 class="iDeviceTitle">Recomendación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta165_131" class="block iDevice_content">
+<p>Es muy importante que sepamos <strong>distinguir cuándo un dato determinado debe ser almacenado en un atributo y cuándo se trata simplemente de un cálculo intermedio o auxiliar y por tanto es suficiente con una variable local</strong>.</p>
+<p>Ten en cuenta que <strong>la información almacenada en una variable local desaparece en cuanto finalice la ejecución de un método</strong>. En consecuencia, si se puede volver a calcular esa información en el futuro sin necesidad de tener que guardarla en un atributo, es que no es necesario un atributo para ella.</p>
+<p><strong>Ejemplo</strong>: imagina una clase que representa a un <strong>rectángulo</strong>, la cual contiene sendos atributos de tipo real para almacenar su <strong>base</strong> y su <strong>altura</strong>. Podríamos tener también un atributo para guardar su <strong>superficie</strong>, pero no tendría sentido, pues cada vez que quisiéramos saber su superficie podríamos calcularla.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id279">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta279_151" class="block iDevice_content">
+<p><strong>Hay lenguajes en los que existe la posibilidad de disponer de variables globales. Se trata de variables a las cuales se tiene acceso desde cualquier parte del programa.</strong></p>
+<p><strong>En <span lang="en">Java</span>, así como en otros lenguajes orientados a objetos, los programas consisten en un conjunto de clases, unas independientes de otras, dando lugar a que toda variable o atributo que se defina en cada clase sea independiente a las que se definan en las demás. Esto hace que el concepto de variable global no tenga mucho sentido en este contexto.</strong></p>
+<p><strong>Lo más parecido a una variable global que podríamos encontrar en programas escritos en lenguaje <span lang="en">Java</span> serían los siguientes casos:</strong></p>
+<ul>
+<li class="lista_verificacion"><strong>Los <span style="background-color: #5bbdf4;"><em>atributos estáticos</em></span> de una clase, que serían valores comunes y compartidos por todos los objetos instancia de una misma clase. Estos atributos podrían considerarse como variables "globales" a todos los objetos que se instancien de la clase.</strong></li>
+<li class="lista_verificacion"><strong>Los <span style="background-color: #5bbdf4;"><em style="background-color: #5bbdf4;">atributos estáticos públicos</em></span>, que además de ser compartidos por todos los objetos de una misma clase, serían accesibles desde cualquier método de cualquier otra clase, no sólo desde los objetos instancia de la propia clase. Es decir, serían visibles desde cualquier parte del programa.</strong></li>
+<li class="lista_verificacion"><strong>Los <em><span style="background-color: #5bbdf4;">atributos estáticos contenidos por la clase principal de un programa <span lang="en">Java</span></span>. </em>Se considera la clase principal de un programa <span class="lista_verificacion" lang="en">Java</span> aquella que contiene un método <code>main</code>. El método <code>main</code> de una clase <span class="lista_verificacion" lang="en">Java</span>, que veremos más adelante, es un método estático especial a partir del cual comenzaría la ejecución de un programa <span class="lista_verificacion" lang="en">Java</span>.</strong></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id168">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta168_128" class="block iDevice_content">
+<p>Si tienes interés acerca del concepto de <strong>variable global</strong> frente al de <strong>variable local</strong> en los lenguajes de programación puedes consultar la siguiente referencia:</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a un artículo de la Wikpedia sobre variables globales (se abre en ventana nueva)" href="https://es.wikipedia.org/wiki/Variable_global" target="_blank"><span lang="en">Variable global (Wikipedia).</span></a></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id280">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta280_151" class="block iDevice_content">
+<p><strong><span style="background-color: #5bbdf4;"><em>Si declaras una variable local con el mismo nombre (identificador) que un atributo</em></span>, el compilador de <span lang="en">Java</span> lo permitirá, pero debes tener en cuenta que cuando hagas referencia a ese identificador te estarás refiriendo a la variable local y no al atributo. En estos casos se dice que has ocultado (en inglés "<em><span lang="en">hidden</span></em>", ocultado o "<em><span lang="en">shadowed</span></em>", "ensombrecido") el atributo.</strong></p>
+<p><strong>Esto sucede tanto con las variables locales como con los parámetros del método: si se llaman igual que un atributo, ocultarán (<em><span lang="en">hide</span> </em>o <em><span lang="en">shadow</span></em>, en inglés) al atributo. Pero entonces, ¿cómo podríamos acceder al atributo? Para resolver este problema dispondrás del operador de autorreferencia <code>this</code>, que verás en el próximo apartado.</strong></p>
+<p><strong>Puede que entonces te preguntes ahora: ¿y qué pasa si un parámetro y un atributo tienen el mismo nombre? Esta situación no es posible y ya la hemos comentado anteriormente. <em><span style="background-color: #5bbdf4;">Dentro de un método, el compilador de Java no permite nombrar a una variable local con el mismo identificador que un parámetro del método</span>.</em></strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="551_valor_devuelto_por_un_mtodo_return.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="553_el_operador_de_autorreferencia_this.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

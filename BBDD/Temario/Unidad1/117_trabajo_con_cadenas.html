@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.7.- Trabajo con cadenas | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-68"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li class="current-page-parent"><a href="11_operadores_y_expresiones.html" class="current-page-parent daddy">11.- Operadores y expresiones</a>
+   <ul>
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li id="active"><a href="117_trabajo_con_cadenas.html" class="active no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="116_operadores_de_bits.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="118_precedencia_de_operadores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.7.- Trabajo con cadenas</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id225">
+<div class="iDevice emphasis0">
+<div id="ta225_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG01_CONT_R34_Cadenas.jpg.jpg" alt="Una cadena al frente con el mar y una isla al fondo." title="Cadena" style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-nd" title="CC by-nc-nd" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-nd</span></a> <a title="Santa Pola" href="https://www.flickr.com/photos/santapolaturismo/8026408933/in/photolist-degrJV-EgPVc-EgPVt-8zhseg-8ZmaGx-2reUW-bnVxac-rbd9AN-bQxY5M-4vGq6m-r1B6Ez-5ymv7s-FPmVgD-oSo2MP-dqasbi-9fjSxY-bepHb8-8JhaAw-7keGC3-EgPVk-p75Fo3-9zv5LT-3EjLQT-5x47nV-8oYSF7-fDBJxe-zUS4Eb-6JrNoR-heYozr-5ypzQg-cQvg21-9i2c1d-aeZxh7-pgtUEc-UBXSL-u7XwC-djZjmu-i22B9Z-4ghM8t-qM51EL-4gmGzu-crS8a3-M7Kjs-4gmJpL-aAYtCo-cXecnm-8eM7Jt-4idDa9-7s2sTW-comjNU" target="_blank">Santa Pola</a></div>
+</div>
+<p>Ya hemos visto en el apartado de literales que el objeto <code>String</code> se corresponde con una secuencia de caracteres entrecomillados, como por ejemplo “<code>hola</code>”. Este literal se puede utilizar en <span lang="en">Java</span> como si de un tipo de datos primitivo se tratase, y como caso especial, no necesita del operador <code>new</code> para ser creado.</p>
+<p>No se trata aquí de que nos adentremos en lo que es una clase u objeto, puesto que lo veremos en unidades posteriores, y trabajaremos mucho sobre ello. Aquí sólo vamos a utilizar determinadas operaciones que podemos realizar con el objeto <code>String</code>, y lo verás mucho más claro con ejemplos descriptivos.</p>
+<p>Para aplicar una operación a una variable de tipo <code>String</code>, escribiremos su nombre seguido de la operación, separados por un punto. Entre las principales operaciones que podemos utilizar para trabajar con cadenas de caracteres están las siguientes:</p>
+<ul class="lista_verificacion">
+<li><strong>Creación</strong>. Como hemos visto en el apartado de literales, podemos crear una variable de tipo <strong><span style="font-size: medium;"><code>String</code> </span></strong>simplemente asignándole una cadena de caracteres encerrada entre comillas dobles.</li>
+<li><strong>Obtención del carácter</strong> que se encuentra en una posición determinada de la cadena. Para ello se utiliza el método <strong><span style="font-size: medium;"><code>charAt</code></span></strong>.</li>
+<li><strong>Obtención de longitud</strong>. Si necesitamos saber la longitud de un <span style="font-size: medium;"><strong><code>String</code></strong></span>, utilizaremos el método <strong><span style="font-size: medium;"><code>length</code></span></strong>.</li>
+<li><strong>Concatenación</strong>. Se utiliza el operador <strong><span style="font-size: medium;">+</span></strong> o el método <strong><span style="font-size: medium;"><code>concat()</code></span></strong> para concatenar cadenas de caracteres.</li>
+<li><strong>Comparación</strong>. El método <strong><span style="font-size: medium;"><code>equals</code></span></strong> nos devuelve un valor booleano que indica si las cadenas comparadas son o no iguales. El método <span style="font-size: medium;"><strong><code>equalsIgnoreCase</code></strong></span> hace lo propio, ignorando las mayúsculas de las cadenas a considerar. Las comparaciones entre objetos <span style="font-size: medium;"><strong><code>String</code></strong></span> nunca deben hacerse con el operador <span style="font-size: medium;"><strong><code>==</code></strong></span>.</li>
+<li><strong>Obtención de subcadenas</strong>. Podemos obtener cadenas derivadas de una cadena original con el método <strong><span style="font-size: medium;"><code>substring()</code></span></strong>, al cual le debemos indicar el inicio y el fin de la subcadena a obtener.</li>
+<li><strong>Cambio a mayúsculas/minúsculas</strong>. Los métodos<strong><span style="font-size: medium;"><code> toUpperCase</code></span></strong> y <strong><span style="font-size: medium;"><code>toLowerCase</code></span></strong> devuelven una nueva variable que transforma en mayúsculas o minúsculas, respectivamente, la variable inicial.</li>
+<li><strong>Conversiones. </strong> Utilizaremos el método<strong><span style="font-size: medium;"><code> valueOf </code></span></strong>para convertir un tipo de dato primitivo (<strong><span style="font-size: medium;"><code>int</code></span></strong>, <strong><span style="font-size: medium;"><code>long</code></span></strong>,<strong><span style="font-size: medium;"> <code>float</code></span></strong>, <abbr title="etcétera.">etc.</abbr>) a una variable de tipo <strong><span style="font-size: medium;"><code>String</code></span></strong>.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id226">
+<div class="iDevice emphasis0">
+<div id="ta226_85" class="block iDevice_content">
+<p>A continuación tienes varios ejemplos de las distintas operaciones que podemos realizar con cadenas de caracteres o <code>String</code> en <span lang="en">Java</span>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class EjemploCadenas {
+
+    public static void main(String[] args) {
+
+        // Cadenas de ejemplo con las que trabajar
+        String cadena1 = "CICLO DAM-DAW";
+        String cadena2 = "ciclo dam-daw";
+
+        System.out.println ("EJEMPLOS DE OPERACIONES CON CADENAS");
+        System.out.println ("-----------------------------------");
+        
+        // Mostramos las cadenas originales
+        System.out.println ("La cadena cadena1 es " + cadena1);
+        System.out.println ("La cadena cadena2 es " + cadena2);
+        System.out.println ();
+
+        System.out.println ("Longitud de cadena1: " + cadena1.length());
+        System.out.println ("Longitud de cadena2: " + cadena2.length());
+
+        // Concatenación de cadenas (concat o bien operador +)
+        System.out.println ("Concatenación cadena1 y cadena2: " + cadena1.concat(cadena2));
+        System.out.println ("Concatenación cadena2 y cadena1: " + cadena2 + cadena1);
+
+        // Comparación de cadenas
+        System.out.println ("cadena1.equals(cadena2) es: " + cadena1.equals(cadena2));
+        System.out.println ("cadena1.equalsIgnoreCase(cadena2) es: " + cadena1.equalsIgnoreCase(cadena2));
+
+        // Obtención de subcadenas
+        System.out.println ("cadena1.substring(0,5) es: " + cadena1.substring(0, 5));
+
+        // Pasar a minúsculas
+        System.out.println ("cadena1.toLowerCase() es: " + cadena1.toLowerCase());
+        System.out.println();
+    }
+}
+</code></pre>
+</div>
+</div>
+<p>El resultado que se debería obtener es el siguiente:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>EJEMPLOS DE OPERACIONES CON CADENAS
+-----------------------------------
+La cadena cadena1 es CICLO DAM-DAW
+La cadena cadena2 es ciclo dam-daw
+
+Longitud de cadena1: 13
+Longitud de cadena2: 13
+Concatenación cadena1 y cadena2: CICLO DAM-DAWciclo dam-daw
+Concatenación cadena2 y cadena1: ciclo dam-dawCICLO DAM-DAW
+cadena1.equals(cadena2) es: false
+cadena1.equalsIgnoreCase(cadena2) es: true
+cadena1.substring(0,5) es: CICLO
+cadena1.toLowerCase() es: ciclo dam-daw</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id201">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta201_149" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b201" class="block iDevice_content">
+<p>Dada la variable <code>cadena</code> tipo <code>String</code>, haz que vaya mostrando por pantalla la secuencia siguiente:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>La casa de
+La casa de Juan es
+La casa de Juan es el número 
+La casa de Juan es el número 25.</code></pre>
+</div>
+</div>
+<p>Para ello tienes que ir modificando el valor de la variable <code>cadena</code>, partiendo del valor que tiene con anterioridad. Para ello puedes usar una de las dos formas siguientes:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>cadena=cadena+"texto añadido";
+cadena+="texto añadido"</code></pre>
+</div>
+</div>
+<p>Fíjate por último que <code>25</code> es un número, y no un texto.</p>
+</section>
+<form name="feedback-form-quesFeedback0b201" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b201text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b201" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b201" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Una solución posible sería:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class EjemploConcatenacion {
+     public static void main(String[] args) {
+        String cadena="La";
+        
+        cadena+=" casa de";
+        System.out.println(cadena);
+        
+        cadena+=" Juan es";        
+        System.out.println(cadena);
+                
+        cadena+=" el número ";        
+        System.out.println(cadena);
+        
+        cadena+=25 + ".";        
+        System.out.println(cadena);        
+    }
+}</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id202">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-202_142" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion202_142" class="block question iDevice_content">
+<p>¿Cuál de las siguientes formas es la forma aconsejada para comparar si dos cadenas son iguales entre sí?</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i202_145" class="sr-av"><a href="#answer-202_145">Opción 1</a></label><input type="radio" name="option202_142" id="i202_145" class="exe-radio-option exe-radio-option-0-4-202_142-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-202_145"><div id="taans202_145" class="block iDevice_content">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>cad1.equals(cad2)</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i202_12953" class="sr-av"><a href="#answer-202_12953">Opción 2</a></label><input type="radio" name="option202_142" id="i202_12953" class="exe-radio-option exe-radio-option-1-4-202_142-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-202_12953"><div id="taans202_12953" class="block iDevice_content">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>cad1==cad2</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i202_12956" class="sr-av"><a href="#answer-202_12956">Opción 3</a></label><input type="radio" name="option202_142" id="i202_12956" class="exe-radio-option exe-radio-option-2-4-202_142-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-202_12956"><div id="taans202_12956" class="block iDevice_content">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>cad1===cad2</code></pre>
+</div>
+</div>
+<p></p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i202_12959" class="sr-av"><a href="#answer-202_12959">Opción 4</a></label><input type="radio" name="option202_142" id="i202_12959" class="exe-radio-option exe-radio-option-3-4-202_142-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-202_12959"><div id="taans202_12959" class="block iDevice_content">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>cad1.compareTo(cad2)</code></pre>
+</div>
+</div>
+<p></p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b202_142" class="feedback js-hidden">
+<div id="taf202_145" class=" iDevice_content">
+<p><strong>Efectivamente, esta es la forma correcta. Enhorabuena. </strong></p>
+<p>Nunca jamás hay que usar <code>==</code> para comprobar si el contenido de dos cadenas es el mismo.<strong><br /></strong></p>
+</div>
+</section>
+<section id="sa1b202_142" class="feedback js-hidden">
+<div id="taf202_12953" class=" iDevice_content">
+<p><strong>Incorrecto.</strong> Aunque en algunos casos puede funcionar, esta no es la forma correcta, dado que compara si las dos cadenas tienen la misma dirección de memoria y no si ambas cadenas tienen el mismo contenido en memoria.</p>
+</div>
+</section>
+<section id="sa2b202_142" class="feedback js-hidden">
+<div id="taf202_12956" class=" iDevice_content">
+<p><strong>Incorrecto</strong>. Este operador no existe en Java, aunque si en otros lenguajes.</p>
+</div>
+</section>
+<section id="sa3b202_142" class="feedback js-hidden">
+<div id="taf202_12959" class=" iDevice_content">
+<p><strong>Parcialmente correcto, hay otra opción más correcta que esta.</strong> Aunque el método <code>compareTo</code> existe, y podría servir para comparar cadenas, esta operación retorna un entero indicando si la cadena es anterior, igual o posterior alfabéticamente a la pasada por parámetro. La idea es obtener un tipo de dato <code>boolean </code> (<code>true</code> si son iguales y <code>false</code> si no lo son). Podría ser válido si fuera: <code>cad1.compareTo(cad2)==0</code>.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-202_145">Opción correcta</a><span> (<a href="#sa0b202_142">Retroalimentación</a>)</span></li>
+<li><a href="#answer-202_12953">Incorrecto</a><span> (<a href="#sa1b202_142">Retroalimentación</a>)</span></li>
+<li><a href="#answer-202_12956">Incorrecto</a><span> (<a href="#sa2b202_142">Retroalimentación</a>)</span></li>
+<li><a href="#answer-202_12959">Incorrecto</a><span> (<a href="#sa3b202_142">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id215">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta215_148" class="block story iDevice_content">
+<p>El siguiente código Java pregunta al usuario por una palabra y la muestra por pantalla:</p>
+<div class="highlighted-code language-java">
+<pre><code>import java.util.Scanner;
+
+public class Palabra {
+    public static void main(String args[]) {
+      Scanner teclado=new Scanner(System.in);
+      System.out.print ("Introduzca una palabra: ");
+      String palabra= teclado.nextLine();
+      System.out.print ("La palabra introducida es " + palabra);
+    }
+}</code>
+</pre>
+</div>
+<p>Para obtener el carácter ubicado en una determinada posición de una cadena en Java disponemos del método <code>charAt</code> teniendo en cuenta que la primera posición es cero y que la última es la del tamaño de la cadena menos uno.</p>
+<p>Por ejemplo, dada la siguiente cadena:</p>
+<div class="highlighted-code language-java">
+<pre><code>String palabra= "ejemplo";</code>
+</pre>
+</div>
+<p>podríamos obtener el carácter ubicado en la primera posición aplicando a la variable <code>palabra</code> el método <code>charAt</code> con el valor <code>0</code>:</p>
+<div class="highlighted-code language-java">
+<pre><code>char primeraLetra= palabra.charAt (0);</code>
+</pre>
+</div>
+<p>en tal caso obtendríamos el carácter <code>'e'</code> ¿Cómo obtendríamos el último? De manera similar, pero accediendo a la posición <code>palabra.length() - 1</code>:</p>
+<div class="highlighted-code language-java">
+<pre><code>char ultimaLetra= palabra.charAt (palabra.length()-1);</code>
+</pre>
+</div>
+<p>en este caso obtendríamos el carácter <code>'o'</code>.</p>
+</section>
+<section id="taquesQuestion0b215" class="block iDevice_content">
+<p>Amplía el fragmento de código anterior para que además de solicitar una palabra se muestren por pantalla la primera y la última letra de esa palabra.</p>
+<p>Por ejemplo, si la palabra introducida es <code>"prueba"</code> el programa debería mostrar por pantalla los caracteres <code>'p'</code> y <code>'a'</code>.</p>
+</section>
+<form name="feedback-form-quesFeedback0b215" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b215text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b215" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b215" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Para mostrar el primer y último carácter habrá que usar los métodos <code>charAt</code> y <code>length</code> tal y como acabamos de ver:</p>
+<div class="highlighted-code language-java line-numbers">
+<div class="highlighted-code language-java">
+<pre><code>import java.util.Scanner;
+
+public class Palabra {
+    public static void main(String args[]) {
+      Scanner teclado=new Scanner(System.in);
+      System.out.print ("Introduzca una palabra: ");
+      String palabra= teclado.nextLine();
+	  
+      char primeraLetra= palabra.charAt (0);
+      char ultimaLetra=  palabra.charAt ( palabra.length()-1 );	  
+      System.out.println ("La palabra introducida es: " + palabra);
+	  System.out.println ("La primera letra de la palabra es: " + primeraLetra);
+	  System.out.println ("La última letra de la palabra es: "  + ultimaLetra);
+    }
+}</code>
+</pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="116_operadores_de_bits.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="118_precedencia_de_operadores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

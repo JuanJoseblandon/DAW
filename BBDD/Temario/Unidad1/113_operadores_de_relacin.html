@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.3.- Operadores de relación | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-65"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li class="current-page-parent"><a href="11_operadores_y_expresiones.html" class="current-page-parent daddy">11.- Operadores y expresiones</a>
+   <ul>
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li id="active"><a href="113_operadores_de_relacin.html" class="active no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="112_operadores_de_asignacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="114_operadores_lgicos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.3.- Operadores de relación</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id180">
+<div class="iDevice emphasis0">
+<div id="ta180_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG02_CONT_R29_Relacion.jpg" alt="Imagen con los operadores de relación de Java escritos sobre un fondo de números." title="Operadores de relación." style="float: right;" width="200" height="124" /></div>
+<div class="elemento_centrado credenciales">Flor Moncada Añón. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">Elaboración propia.</div>
+</div>
+<p>Los operadores relacionales se utilizan para comparar datos de tipo primitivo (numérico, carácter y booleano). El resultado de la comparación se utilizará en otras expresiones o sentencias, que permitirán comprobar en una condición dicho resultado, y ejecutar una acción u otra en función de si se cumple o no la condición comprobada al comparar.</p>
+<p>Estas expresiones en <span lang="en">Java</span> dan siempre como resultado un valor booleano <code>true</code> o <code>false</code>. En la tabla siguiente aparecen los operadores relacionales en <span lang="en">Java</span>.</p>
+<table class="tabla" summary="Cuadro o tabla de siete filas por tres columnas, de título &quot;Operadores relacionales en Java&quot;, de modo que para cada operador relacional se indica cómo se escribe en Java y su significado. Debe ser leída en columnas de izquierda a derecha y de arriba abajo."><caption>Operadores relacionales en Java</caption>
+<thead>
+<tr><th scope="col">Operador</th><th scope="col">Ejemplo en Java</th><th scope="col">Significado</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><code>==</code></span></td>
+<td style="text-align: center;"><span style="font-size: medium;"><code>op1 == op2</code></span></td>
+<td><span style="font-size: medium;"><code>op1</code> igual a <code>op2</code></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><code>!=</code></span></td>
+<td style="text-align: center;"><span style="font-size: medium;"><code>op1 != op2</code></span></td>
+<td><span style="font-size: medium;"><code>op1</code> distinto de <code>op2</code></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><code>&gt;</code></span></td>
+<td style="text-align: center;"><span style="font-size: medium;"><code>op1 &gt; op2</code></span></td>
+<td><span style="font-size: medium;"><code>op1</code> mayor que <code>op2</code></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><code>&lt;</code></span></td>
+<td style="text-align: center;"><span style="font-size: medium;"><code>op1 &lt; op2 </code></span></td>
+<td><span style="font-size: medium;"><code>op1</code> menor que <code>op2</code></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><code>&gt;=</code></span></td>
+<td style="text-align: center;"><span style="font-size: medium;"><code>op1 &gt;= op2 </code></span></td>
+<td><span style="font-size: medium;"><code>op1</code> mayor o igual que <code>op2</code></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><code>&lt;=</code></span></td>
+<td style="text-align: center;"><span style="font-size: medium;"><code>op1 &lt;= op2 </code></span></td>
+<td><span style="font-size: medium;"><code>op1</code> menor o igual que <code>op2</code></span></td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Hasta ahora hemos visto ejemplos que creaban variables y se inicializaban con algún valor. Pero ¿y si lo que queremos es que el usuario introduzca un valor al programa?</p>
+<p>Entonces debemos agregarle interactividad a nuestro programa, por ejemplo utilizando la clase <code>Scanner</code>. Aunque no hemos visto todavía qué son las clases y los objetos, de momento vamos a pensar que la clase <code>Scanner</code> nos va a permitir leer los datos que se escriben por teclado, y que para usarla es necesario importar el paquete de clases que la contiene. El código del ejemplo lo tienes a continuación. El programa se quedará esperando a que el usuario escriba algo en el teclado y pulse la tecla intro. En ese momento se convierte lo leído a un valor del tipo <code>int</code> y lo guarda en la variable indicada. Además de los operadores relacionales, en este ejemplo utilizamos también el operador condicional, que compara si los números son iguales. Si lo son, devuelve la cadena iguales y si no, la cadena distintos.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.util.Scanner; //importamos el paquete necesario para poder usar la clase Scanner
+
+public class EjemploRelacionales {
+
+   public static void main( String args[] ){
+
+      Scanner teclado = new Scanner( System.in );
+      int x, y;
+      String cadena;
+      boolean resultado;
+
+      System.out.print( "Introducir primer número: " );
+      x = teclado.nextInt(); // pedimos el primer número al usuario
+      System.out.print( "Introducir segundo número: " );
+      y = teclado.nextInt(); // pedimos el segundo número al usuario
+
+      // realizamos las comparaciones y las mostramos por pantalla
+      cadena=(x==y)?"iguales":"distintos";
+      System.out.printf("Los números %d y %d son %s\n",x,y,cadena); 
+      resultado=(x!=y);
+      System.out.println("x != y  // es " + resultado);
+      resultado=(x &lt; y );
+      System.out.println("x &lt; y  // es " + resultado);
+      resultado=(x &gt; y );
+      System.out.println("x &gt; y  // es " + resultado);
+      resultado=(x &lt;= y );
+      System.out.println("x &lt;= y  // es " + resultado);
+      resultado=(x &gt;= y );
+      System.out.println("x &gt;= y  // es " + resultado);
+    } 
+} 
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id100">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-100_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion100_60" class="block question iDevice_content">
+<p><strong>Se&ntilde;ala cu&aacute;les son los operadores relacionales en <span lang="en">Java</span>.</strong></p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i100_63" class="sr-av"><a href="#answer-100_63">Opción 1</a></label><input type="radio" name="option100_60" id="i100_63" class="exe-radio-option exe-radio-option-0-4-100_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-100_63"><div id="taans100_63" class="block iDevice_content">
+<p><span style="font-size: medium;"><code>= =, ! =, &gt;, &lt;, &gt; =, &lt; =</code>.</span></p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i100_110" class="sr-av"><a href="#answer-100_110">Opción 2</a></label><input type="radio" name="option100_60" id="i100_110" class="exe-radio-option exe-radio-option-1-4-100_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-100_110"><div id="taans100_110" class="block iDevice_content">
+<p><span style="font-size: medium;"><code>=, !=, &gt;, &lt;, &gt;=, &lt;=.</code> </span></p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i100_113" class="sr-av"><a href="#answer-100_113">Opción 3</a></label><input type="radio" name="option100_60" id="i100_113" class="exe-radio-option exe-radio-option-2-4-100_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-100_113"><div id="taans100_113" class="block iDevice_content">
+<p><span style="font-size: medium;"><code>==, =!, &gt;, &lt;, =&gt;, =&lt;.</code> </span></p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i100_116" class="sr-av"><a href="#answer-100_116">Opción 4</a></label><input type="radio" name="option100_60" id="i100_116" class="exe-radio-option exe-radio-option-3-4-100_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-100_116"><div id="taans100_116" class="block iDevice_content">
+<p><span style="font-size: medium;"><code>==, !=, &gt;, &lt;, &gt;=, &lt;=.</code> </span></p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b100_60" class="feedback js-hidden">
+<div id="taf100_63" class=" iDevice_content">
+<p>No es correcta, porque hay un error de sintaxis al colocar un espacio entre los s&iacute;mbolos de cada operador.</p>
+</div>
+</section>
+<section id="sa1b100_60" class="feedback js-hidden">
+<div id="taf100_110" class=" iDevice_content">
+<p>Incorrecta, porque <span style="font-size: medium;"><code>=</code></span> es el operador de asignaci&oacute;n, no el operador relacional de igualdad <span style="font-size: medium;"><code>==</code></span>.</p>
+</div>
+</section>
+<section id="sa2b100_60" class="feedback js-hidden">
+<div id="taf100_113" class=" iDevice_content">
+<p>No es la respuesta correcta, porque los s&iacute;mbolos de los operadores distinto a, mayor o igual y menor o igual son <span style="font-size: medium;"><code>!=</code>, <code>&gt;=</code></span> y <span style="font-size: medium;"><code>&lt;=</code></span>, respectivamente.</p>
+</div>
+</section>
+<section id="sa3b100_60" class="feedback js-hidden">
+<div id="taf100_116" class=" iDevice_content">
+<p>Muy bien. Tienes claro cu&aacute;les son los operadores relacionales en <span lang="en">Java</span>.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-100_63">Incorrecto</a><span> (<a href="#sa0b100_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-100_110">Incorrecto</a><span> (<a href="#sa1b100_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-100_113">Incorrecto</a><span> (<a href="#sa2b100_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-100_116">Opción correcta</a><span> (<a href="#sa3b100_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id197">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta197_149" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b197" class="block iDevice_content">
+<p>Dada una variable entera <code>x</code> cuyo valor inicial es <code>5</code>, y otra variable entera <code>z</code> cuyo valor inicial es <code>6</code>, haz que se muestre la secuencia de resultados: <code>true</code>, <code>false</code>, <code>true</code>, <code>false</code>, <code>true</code>, <code></code>y <code>false</code> (6 en total); usando un operador de relación diferente en cada caso.</p>
+</section>
+<form name="feedback-form-quesFeedback0b197" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b197text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b197" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b197" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Una solución posible podría ser la siguiente:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class EjercicioOperadoresRelacionales {
+     public static void main(String[] args) {
+         int x=5;
+         int z=6;
+         boolean b=x&lt;z;
+         System.out.println(b);
+         b=x&gt;z;
+         System.out.println(b);
+         b=x&lt;=z;
+         System.out.println(b);
+         b=x&gt;=z;
+         System.out.println(b);
+         b=x!=z;
+         System.out.println(b);
+         b=x==z;
+         System.out.println(b);
+    }
+}</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="112_operadores_de_asignacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="114_operadores_lgicos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

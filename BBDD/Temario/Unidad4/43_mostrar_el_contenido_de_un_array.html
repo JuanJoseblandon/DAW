@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.3.- Mostrar el contenido de un array. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-93"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4__arrays.html" class="current-page-parent daddy">4.-  Arrays.</a>
+   <ul>
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li id="active"><a href="43_mostrar_el_contenido_de_un_array.html" class="active no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="42_inicializacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="44_el_mtodo_split_de_la_clase_string.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.3.- Mostrar el contenido de un array.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id382">
+<div class="iDevice emphasis0">
+<div id="ta382_69" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="chalk-board-g7da0e1f97_640.png" alt="Pizarra de tiza." title="Pizarra." style="float: right;" width="240" height="211" /><figcaption class="figcaption"><a href="https://pixabay.com/es/vectors/pizarra-de-tiza-escuela-educaci%c3%b3n-303457/" target="_blank" class="author" title="Acceder a la web de descarga de la imagen de Clker-Free-Vector-Images en Pixabay. (Se abre en una nueva ventana)">Clker-Free-Vector-Images</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Es posible que en nuestros programas necesitemos mostrar por pantalla el contenido completo de todos los elementos contenidos en un array. Para ello bastaría con realizar un <strong>bucle que fuera desde el primer índice hasta el último</strong> y se encargara de ir mostrando el contenido de cada elemento correspondiente a esa posición o índice:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Mostrar el contenido del array escribiendo cada elemento en una línea diferente
+for (int i = 0; i &lt; arrayElementos.length; i++) {
+    System.out.printf("El contenido de la posición: %d es %d\n", i, arrayElementos[i]);
+}
+</code></pre>
+</div>
+</div>
+<p>Este ejemplo mostraría cada elemento en una línea diferente indicando su posición. Si quisiéramos, por ejemplo, mostrar todos los elementos en una misma línea, separándolos por un espacio en blanco podríamos hacer:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Mostrar el contenido del array escribiendo cada elemento seperado por un espacio
+System.out.printf("El contenido del array es: ");
+for (int i = 0; i &lt; arrayElementos.length; i++) {
+    System.out.printf("%d ", i, arrayElementos[i]);
+}
+</code></pre>
+</div>
+</div>
+<p>Y así en general para cualquier manera que se te ocurra a la hora de presentar esa información.</p>
+<p>También puedes, en lugar de escribir toda esa información en pantalla, generar una única cadena con todos los datos para más adelante mostrarla en pantalla con una sóla sentencia o bien para que la utilice otra parte de tu programa (o incluso otro programa). En tal caso, en lugar de ir mostrando cada fragmento de información por pantalla irías concatenando todos esos fragmentos en una única cadena. Los ejemplos anteriores podrían quedar entonces así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Volcar el contenido del array en un objeto String
+String contenidoArray= "";
+for (int i = 0; i &lt; arrayElementos.length; i++) {
+    contenidoArray += String.format ("El contenido de la posición: %d es %d\n", i, arrayElementos[i]);
+}
+// Mostrar el contenido del array
+System.out.printf("%s\n", contenidoArray);
+</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Volcar el contenido del array en un objeto String
+String contenidoArray= "";
+for (int i = 0; i &lt; arrayElementos.length; i++) {
+    contenidoArray += arrayElementos[i] + " ";
+}
+// Mostrar el contenido del array 
+System.out.printf("El contenido del array es: %s", contenidoArray);</code></pre>
+</div>
+</div>
+<p>Basándose en esa filosofía de encapsular los resultados, Java proporciona algunas herramientas para generar un <code>String</code> con una representación textual del contenido de un array. Se trata del método estático <code>toString</code> de la clase <code>Arrays</code>, que recibe como parámetro un arrray y devuelve un objeto <code>String</code> con una representación textual. El formato de la cadena que devuelve es del estilo:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>[elemento_0, elemento_1, elemento_2, . . . , elemento_(n-1)]</code></pre>
+</div>
+</div>
+<p>donde n sería el tamaño del array.</p>
+<p>En tal caso, el código para mostrar el contenido de un array se vería sensiblemente simplificado:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.printf("El contenido del array es: %s\n", Arrays.toString(arrayElementos));</code></pre>
+</div>
+</div>
+<p>La clase <code>Arrays</code> se encuentra en el paquete <code>java.util</code>, así que recuerda que deberás hacer un <code>import</code> <code>java.util.Arrays</code> para poder utilizarla en tus programas. Puedes consultar toda la información sobre el método estático <code>Arrays.toString</code> en la documentación de la <acronym title="Application Programming Interface">API</acronym> de Java:</p>
+<p style="text-align: center;"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Arrays.html#toString(int%5B%5D)" title="Acceder al javadoc de la API de Java para la clase Arrays" target="_blank" class="html">Método toString de la clase Arrays</a>.</p>
+<p>Observarás que en realidad que el método está <strong>sobrecargado</strong> y que hay tantas versiones del método como tipos primitivos hay en Java.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id384">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta384_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b384" class="block iDevice_content">
+<p>Escribe un programa en Java que solicite un número n y rellene un array de enteros de tamaño n con los n primeros números pares empezando desde 0 y terminando con 2(n-1). Una vez relleno el array, se debe mostrar su contenido por pantalla escribiendo cada elemento en una línea diferente.</p>
+<p>Un posible resultado de la ejecución del  programa podría ser:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre class="  language-latex"><code class="  language-latex">ARRAY DE NÚMEROS PARES
+----------------------
+Introduzca la cantidad de elementos: 12
+
+RESULTADO: LISTA DE PARES EN EL ARRAY
+-------------------------------------
+Elemento  0:  0
+Elemento  1:  2
+Elemento  2:  4
+Elemento  3:  6
+Elemento  4:  8
+Elemento  5: 10
+Elemento  6: 12
+Elemento  7: 14
+Elemento  8: 16
+Elemento  9: 18
+Elemento 10: 20
+Elemento 11: 22</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b384" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b384text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b384" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b384" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>El programa podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre class="  language-java"><code class="  language-java">//----------------------------------------------
+//          Declaraciónn de variables 
+//----------------------------------------------
+// Constantes
+
+// Variables de entrada
+int cantidadPares;
+
+// Variables de salida
+int listaPares[];
+
+// Variables auxiliares
+
+// Clase Scanner para petición de datos
+Scanner teclado = new Scanner(System.in);
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("ARRAY DE NÚMEROS PARES");
+System.out.println("----------------------");
+System.out.print("Introduzca la cantidad de elementos: ");
+cantidadPares= teclado.nextInt();
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+// Reservamos espacio para el array
+listaPares= new int[cantidadPares];
+
+// Rellenamos el array con los pares desde 0 hasta 2*(cantidadPares-1)
+for (int i=0; i&lt;cantidadPares; i++) {
+    listaPares[i]= i*2;
+}
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println();
+System.out.println("RESULTADO: LISTA DE PARES EN EL ARRAY");
+System.out.println("-------------------------------------");
+// Mostramos el contenido del array elemento a elemento
+for (int i=0; i&lt;listaPares.length; i++) {
+    System.out.printf ("Elemento %2d: %2d\n", i, listaPares[i]);
+}</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b384" class="block iDevice_content">
+<p>Prueba ahora a mostrar todos los elementos en una única línea separándolos por un espacio en blanco. En tal caso, el resultado debería ser algo como:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>0 2 4 6 8 10 12 14 16 18 20 22 </code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback1b384" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b384text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b384" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b384" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso, en lugar de escribir un avance de línea (<code>"\n"</code>) después de cada elemento, podemos colocar un espacio en blanco (<code>" "</code>) u otro separador:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Mostramos el contenido del array elemento a elemento
+System.out.printf("Contenido del array: ");
+for (int i = 0; i &lt; listaPares.length; i++) {
+    System.out.printf("%d ", listaPares[i]);
+}</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion2b384" class="block iDevice_content">
+<p>¿Y si quisiéramos <code>Arrays.toString</code> para mostrar el contenido? ¿Cómo lo harías?</p>
+</section>
+<form name="feedback-form-quesFeedback2b384" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b384text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b384" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback2b384" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En ese caso sería incluso más sencillo, pues nos ahorramos tener que hacer un bucle ya que el método <code>toString</code> internamente lo hará por nosotros para generar un objeto <code>String</code> con la representación textual del contenido del array:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.printf("\nContenido del array: %s ", Arrays.toString(listaPares));</code></pre>
+</div>
+</div>
+<p>Eso sí, tendremos que amoldarnos al formato que utiliza <code>Arrays.toString</code>.:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Contenido del array: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]</code></pre>
+</div>
+</div>
+<p>Si queremos personalizarlo de algún modo, tendremos que implementarlo nosotros "a mano".</p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id385">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicios Resueltos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta385_148" class="block story iDevice_content">
+<p>Vamos a ver un par de ejercicios donde tengamos que operar un los contenidos de uno o varios arrays y colocar los resultados en otros arrays.</p>
+</section>
+<section id="taquesQuestion0b385" class="block iDevice_content">
+<p>1.- Dados dos arrays de diez elementos, escribir un programa en Java que cree un tercer array del mismo tamaño y con el siguiente contenido:</p>
+<ul>
+<li class="lista_verificacion">en la <strong>primera y última posición</strong> se almacenarán, respectivamente, <strong>el menor y el mayor elemento</strong> que se encuentre entre los dos arrays;</li>
+<li class="lista_verificacion">en el <strong>resto de posiciones</strong>, se almacenará la <strong>suma de los dos valores</strong> que haya en esa posición en cada array;</li>
+<li class="lista_verificacion">al final del programa, se debe mostrar el <strong>máximo de todos los elementos</strong> contenidos en este nuevo array.</li>
+</ul>
+<p>El contenido de los dos arrays será:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>Array 1:  [1, 8, 3, 1, 3, 7, 5, 2, 4, 6]
+Array 2:  [3, 4, 5, 6, 2, 5, 1, 7, 5, 5]</code></pre>
+</div>
+</div>
+<p>Por tanto, el resultado del programa debería ser el siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Array resultado: [1, 12, 8, 7, 5, 12, 6, 9, 9, 8]
+Máximo del array resultado: 12</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b385" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b385text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b385" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b385" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>La manera más sencilla de resolver este problema es ir recorriendo simultáneamente ambos arrays e ir comparando y operando:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+// Constantes
+// Variables de entrada
+int[] arrayEnteros1 = {1, 8, 3, 1, 3, 7, 5, 2, 4, 6};
+int[] arrayEnteros2 = {3, 4, 5, 6, 2, 5, 1, 7, 5, 5};
+
+// Variables de salida
+int[] arrayResultado;
+int mayor3;
+
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("EJERCICIO DE ARRAYS");
+System.out.println("-------------------");
+System.out.printf("Array 1:         %s\n", Arrays.toString(arrayEnteros1));
+System.out.printf("Array 2:         %s\n", Arrays.toString(arrayEnteros2));
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+arrayResultado = new int[arrayEnteros1.length];
+
+// Tomamos inicialmente como valores máximo y minimo el valor de la primera posición
+int mayor = arrayEnteros1[0] &gt; arrayEnteros2[0] ? arrayEnteros1[0] : arrayEnteros2[0];
+int menor = arrayEnteros1[0] &lt; arrayEnteros2[0] ? arrayEnteros1[0] : arrayEnteros2[0];
+
+mayor3 = mayor; // El mayor elemento hasta el momento es el primero
+// Recorremos desde la segunda posición (1) hasta la penúltima (arrayResultado.length-2)
+for (int i = 1; i &lt; arrayResultado.length - 1; i++) {
+    // Exploración del mayor (nos vamos quedando con el mayor que encontremos en cada iteración)
+    int mayorLocal = arrayEnteros1[i] &gt; arrayEnteros2[i] ? arrayEnteros1[i] : arrayEnteros2[i];
+    mayor = mayorLocal &gt; mayor ? mayorLocal : mayor;
+
+    // Exploración del menor (nos vamos quedando con el menor que encontremos en cada iteración)
+    int menorLocal = arrayEnteros1[i] &lt; arrayEnteros2[i] ? arrayEnteros1[i] : arrayEnteros2[i];
+    menor = menorLocal &lt; menor ? mayorLocal : menor;
+
+    // Suma (vamos acumulando)
+    arrayResultado[i] = arrayEnteros1[i] + arrayEnteros2[i];
+
+    // Calculamos el mayor de lo que llevamos hasta el momento
+    mayor3 = arrayResultado[i] &gt; mayor3 ? arrayResultado[i] : mayor3;
+}
+
+// Asignamos valor a la primera y última posición
+arrayResultado[0] = menor;
+arrayResultado[arrayResultado.length - 1] = mayor;
+
+// Tenemos en cuenta estos dos valores para el cálculo del mayor en el array resultado
+mayor3 = mayor &gt; mayor3 ? mayor : mayor3;
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println();
+System.out.println("RESULTADO");
+System.out.println("---------");
+System.out.printf("Array resultado: %s\n", Arrays.toString(arrayResultado));
+System.out.printf("Máximo del array resultado: %d\n", mayor3);</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b385" class="block iDevice_content">
+<p>2.- Dados los dos arrays anteriores, escribir ahora un programa en Java que cree otro tercer array del mismo tamaño y con el siguiente contenido:</p>
+<ul>
+<li class="lista_verificacion">en la <strong>primera posición</strong> se almacenará la <strong>suma de todos los elementos del primer array</strong> y en la <strong>última posición</strong> se almacenará la <strong>suma de todos los elementos del segundo array</strong>;</li>
+<li class="lista_verificacion">en el <strong>resto de posiciones</strong>, se almacenará <strong>el contenido de mayor valor de los arrays en esa posición</strong>;</li>
+<li class="lista_verificacion">al final del programa, se debe mostrar la <strong>suma de todos los elementos contenidos en este nuevo array</strong>.</li>
+</ul>
+<p>En este caso el resultado debería ser:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Array resultado: [40, 8, 5, 6, 3, 7, 5, 7, 5, 43]
+Suma del array resultado: 129</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback1b385" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b385text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b385" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b385" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>El método de resolución es similar al del ejercicio anterior: se trata también de ir recorriendo, comparando y operando.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+// Constantes
+// Variables de entrada
+int[] arrayEnteros1 = {1, 8, 3, 1, 3, 7, 5, 2, 4, 6};
+int[] arrayEnteros2 = {3, 4, 5, 6, 2, 5, 1, 7, 5, 5};
+
+int[] arrayResultados = new int[arrayEnteros1.length];
+int suma1 = 0;
+int suma2 = 0;
+int sumatotal = 0;
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("EJERCICIO DE ARRAYS");
+System.out.println("-------------------");
+System.out.printf("Array 1:         %s\n", Arrays.toString(arrayEnteros1));
+System.out.printf("Array 2:         %s\n", Arrays.toString(arrayEnteros2));
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+for (int i = 0; i &lt; arrayEnteros1.length -1 ; i++) {
+    suma1 = suma1 + (arrayEnteros1[i]);
+    suma2 = suma2 + (arrayEnteros2[i]);
+    for (int c = 0; c &lt; arrayEnteros1.length; c++) {
+        if (arrayEnteros1[c] &gt; arrayEnteros2[c]) {
+            arrayResultados[c] = arrayEnteros1[c];
+
+        } else {
+            arrayResultados[i + 1] = arrayEnteros2[i];
+        }
+    }
+}
+arrayResultados[0] = suma1;
+arrayResultados[9] = suma2;
+for (int k = 0; k &lt; arrayResultados.length; k++) {
+    sumatotal = sumatotal + arrayResultados[k];
+}
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println();
+System.out.println("RESULTADO");
+System.out.println("---------");
+
+System.out.println("Array resultado: " + Arrays.toString(arrayResultados));
+System.out.printf("Suma del array resultado: %s \n", sumatotal);
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id408">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta408_43" class="block iDevice_content">
+<p>La clase <code>Arrays</code> de la <acronym title="Application Programming Interface">API</acronym> de Java contiene varios métodos interesantes para manipular arrays, además de los que ya hemos visto para generar una "representación textual (método <code>Arrays</code>)". Entre ellos puedes encontrar utilidades para buscar un valor, ordenar, comparar dos arrays, copiar un array (o parte de él) en otro, <abbr title="etcétera">etc</abbr>. Estas son algunas de ellas:</p>
+<ul>
+<li class="lista_verificacion"><code>toString</code>, que ya lo conocemos.</li>
+<li class="lista_verificacion"><code>fill</code>, para rellenar todo el array (o parte de él) con un determinado valor;</li>
+<li class="lista_verificacion"><code>equals</code>, para comparar el contenido de dos arrays;</li>
+<li class="lista_verificacion"><code>copyOf</code>, <code>copyRange</code>, para generar una copia del array (o de parte de él).</li>
+<li class="lista_verificacion"><code>binarySearch</code>, para llevar a cabo una búsqueda en el array. El array debe estar ordenado para poder realizar la búsqueda con éxito.</li>
+<li class="lista_verificacion"><code>sort</code>, para ordenar el array.</li>
+</ul>
+<p>Es interesante que le eches un vistazo a estas dos referencias para que observes el potencial que puede ofrecerte. Seguro que más adelante te pueden resultar de gran utilidad:</p>
+<ul>
+<li class="lista_verificacion"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Arrays.html" title="Acceder a la Documentación oficial de la clase Arrays de la API de Java" target="_blank" class="html">Documentación oficial de la clase <code>Arrays</code> de la API de Java</a>.</li>
+<li class="lista_verificacion"><a class="html" title="Acceder al artículo sobre la clase Arrays" href="http://aprenderaprogramar.es/index.php?option=com_content&amp;view=article&amp;id=642:clase-arrays-del-api-java-metodos-equals-comparar-copyof-copiar-fill-rellenar-ejemplos-cu00676b&amp;catid=68:curso-aprender-programacion-java-desde-cero&amp;Itemid=188" target="_blank">Artículo de aprenderaprogramar.com: la clase <code>Arrays</code> del <acronym title="Application Programming Interface">API</acronym> de Java</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="42_inicializacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="44_el_mtodo_split_de_la_clase_string.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

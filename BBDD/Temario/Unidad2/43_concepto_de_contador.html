@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.3.- Concepto de contador. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-58"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul class="other-section">
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructuras_de_seleccin_o_condicionales.html" class="daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul class="other-section">
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li><a href="34_estructura_selectiva_mltiple_switch_i.html" class="daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul class="other-section">
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="current-page-parent daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul>
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="43_concepto_de_contador.html" class="active no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li><a href="45_estructura_repetitiva_for_i.html" class="daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul class="other-section">
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul class="other-section">
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="421_estructura_repetitiva_dowhile_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="44_concepto_de_acumulador.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.3.- Concepto de contador.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id219">
+<div class="iDevice emphasis0">
+<div id="ta219_154" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 189px;"><img src="pencil-308509_640.png" alt="Hoja de checklists" title="Lista" style="float: right;" width="160" height="164" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/l%C3%A1piz-marcas-notas-programa-lista-308509/" title="Acceder a la web de descarga de la imagen de Clker-Free-Vector-Images en Pixabay (se abre en una nueva ventana)" target="_blank" class="author" rel="noopener"><span class="author">Clker-Free-Vector-Images</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank" rel="noopener">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>En muchas ocasiones cuando se implementa un bucle, suele disponer de una variable que se va incrementando (o decrementando) a medida que se va realizando iteraciones sobre ese bucle. A este tipo de variables se les suele llamar <strong>contadores</strong>.</p>
+<p>En algunos de los ejemplos que ya hemos visto en apartados anteriores aparecían ese tipo de variables "contadoras":</p>
+<ul>
+<li class="lista_verificacion">para ir desde 1 hasta 5, en el primer ejemplo que se planteó. Variable <code>numero</code>;</li>
+<li class="lista_verificacion">para ir desde inicio hasta fin, en el ejemplo de la secuencia de números. Variable <code>numero</code>;</li>
+<li class="lista_verificacion">para ir desde 1 hasta 10, en las tablas de multiplicar. Variable <code>contador</code>.</li>
+</ul>
+<p>Ahora bien, no siempre tiene por qué haber un contador asociado a un bucle. Por ejemplo en el caso de la comprobación de validez de entradas no se utilizaba ninguna variable para saber cuántas veces se había tenido que repetir la entrada de datos. No se hacía porque no se ha considerado útil o necesario. Si se hubiera considerado así podría haberse hecho sin problema.</p>
+<p>Veamos un ejemplo más de una variable de tipo contador que pueda resultarnos útil. Imagina un cajero automático de un banco. Se nos permite introducir nuestro código hasta tres veces. Si al tercer intento no introducimos el código correctamente, no se nos permitirá entrar al sistema. Supongamos que nuestro código es 6767. Podríamos implementarlo utilizando un contador (variable <code>numIntentos</code>) que llegara hasta tres y a partir de ahí se saliera del bucle:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+Scanner teclado = new Scanner(System.in);  
+final int CODIGO= 6767; // Constante que contiene el código correcto
+int codigoIntroducido;  // Código introducio por el usuario
+int numIntentos=0;      // Contador que representa el número de intentos
+
+// Entrada de datos
+do {
+    System.out.print ("Introduzca código (entre 0 y 9999): ");
+    codigoIntroducido= teclado.nextInt();
+    numIntentos++;
+    if (codigoIntroducido != CODIGO)
+        System.out.println ("Código incorrecto.");
+} while (codigoIntroducido != CODIGO &amp;&amp; numIntentos&lt;3); // Mientras el código sea incorrecto y no hayamos llegado al límite de intentos
+
+// Comprobación de código correcto
+if (codigoIntroducido == CODIGO)
+    System.out.println ("Código correcto. Acceso concedido.");
+else
+    System.out.println ("Número de intentos superado. Acceso bloqueado");
+</code></pre>
+</div>
+</div>
+<p>De esta manera, sabemos que el bucle se puede ejecutar entre una vez como mínimo (por ser <code>do-while</code>) y tres veces como máximo (que es el número máximo de intentos permitidos). Eso lo controlamos mediante la condición <code>( codigoIntroducido != CODIGO &amp;&amp; numIntentos&lt;3 )</code>, que mientras sea <code>true</code> hará que se vuelva a ejecutar el cuerpo del bucle. Si una vez salgamos del bucle</p>
+<p>Puedes ver que dentro de una estructura iterativa (bucle) puede haber estructuras de tipo condicional (<code>if</code>, <code>if-else</code>, <code>switch</code>) sin problema.</p>
+<p>También podríamos haber implementado este programa utilizando una variable de tipo <code>boolean</code> para evitar realizar varias veces comprobaciones similares:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+Scanner teclado = new Scanner(System.in);  
+final int CODIGO= 6767; // Constante que contiene el código correcto
+int codigoIntroducido;  // Código introducio por el usuario
+int numIntentos=0;      // Contador que representa el número de intentos
+boolean codigoCorrecto; // Indica si se ha llegado a introducir el código correcto
+
+// Entrada de datos
+codigoCorrecto= false;  // Comenzamos asumiendo que no tenemos un código correcto
+do {
+    System.out.print ("Introduzca código (entre 0 y 9999): ");
+    codigoIntroducido= teclado.nextInt();
+    numIntentos++;
+    if (codigoIntroducido == CODIGO) 
+        codigoCorrecto= true;  // Si el código es correcto, esta variable pasa a true 
+    else
+        System.out.println ("Código incorrecto.");
+} while (!codigoCorrecto &amp;&amp; numIntentos&lt;3); // Mientras el código sea incorrecto y no hayamos llegado al límite de intentos
+
+// Comprobación de código correcto
+if (!codigoCorrecto)
+    System.out.println ("Número de intentos superado. Acceso bloqueado");
+else
+    System.out.println ("Código correcto. Acceso concedido.");
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id220">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta220_148" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b220" class="block iDevice_content">
+<p>Escribe un programa que solicite dos números por teclado (inicio y fin, donde inicio debería ser menor o igual que fin) y muestre por pantalla cuántos múltiplos de tres hay entre esos dos números, ambos incluidos. Utiliza una variable de tipo <strong>contador</strong> para ir contándolos.</p>
+<p>Aquí tienes un ejemplo de una posible ejecución del programa:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Introduzca el inicio: 2
+Introduzca el fin: 15
+
+Entre 2 y 15 hay 5 múltiplos de tres.</code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback0b220" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b220text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b220" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b220" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Vamos a utilizar dos contadores, uno para ir desde el inicio hasta el fin (tal y como se ha hecho en otros ejercicios) y otro para ir contando o "marcando" cuántos múltiplos de tres vamos encontrando:</p>
+<ul>
+<li class="lista_verificacion">variable <code>contador</code>;</li>
+<li class="lista_verificacion">variable <code>contadorMultiplos3</code>.</li>
+</ul>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+// ------------------------
+Scanner teclado = new Scanner(System.in);  
+int inicio, fin;  // Entradas
+int contador, contadorMultiplos3; // Dos contadores
+
+// Entrada de datos
+// ----------------
+System.out.print ("Introduzca el inicio: ");
+inicio = teclado.nextInt();
+System.out.print("Introduzca el fin: ");
+fin = teclado.nextInt();
+
+// Procesamiento
+// -------------
+// Iniciamos contadores
+contador= inicio;  
+contadorMultiplos3=0;
+// Recorremos números desde inicio hasta fin
+while (contador &lt;= fin) {
+    if (contador % 3 == 0)  // Si alguno es múltiplo de 3, incrementamos el contador de múltiplos
+        contadorMultiplos3++;
+    contador++;  // Incrementamos el contador que va desde inicio hasta fin
+}
+
+// Salida de resultados
+// --------------------
+System.out.println ("\nEntre " + inicio + " y " + fin + " hay " + contadorMultiplos3 + " múltiplos de tres.");
+System.out.println ();</code></pre>
+</div>
+</div>
+<p><br /><br /></p>
+<p></p>
+<p></p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id226">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta226_121" class="block iDevice_content">
+<p><strong>Un contador no siempre tiene por qué incrementarse</strong>. Podemos encontrarnos con casos en los que el contador comience con un determinado valor y vaya decrementándose hasta otro valor (podríamos decir que se trata de un "descontador", pues va "descontando" en lugar de "contando", o bien "contando hacia atrás").</p>
+<p>Por otro lado, <strong>un contador no siempre tiene por qué ir de uno en uno</strong>. Puede ir de dos en dos, tres en tres, o en general al ritmo que se considere oportuno.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id227">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta227_148" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b227" class="block iDevice_content">
+<p>Escribe un programa que muestre por pantalla una cuenta atrás que vaya de diez en diez, comenzando en 100 y terminando en 0.</p>
+<p>La salida debería ser algo similar a lo siguiente:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Cuenta atrás desde 100 hasta 0, de 10 en 10.
+100 90 80 70 60 50 40 30 20 10 0 </code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback0b227" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b227text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b227" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b227" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Un posible programa que resuelva el problema prodía ser el siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+int contador;
+
+// No hay entrada de datos: tenemos toda la información que necesitamos
+
+// Procesamiento y salida de resultados a la vez: cuenta atrás
+System.out.println ("Cuenta atrás desde 100 hasta 0, de 10 en 10.");
+contador= 100; // Iniciamos el contador a 100
+while (contador &gt;=0 ) { // Mientras el contador se mayor o igual que cero seguimos iterando el bucle
+    System.out.print (contador + " ");
+    contador -= 10; // Vamos restando 10 en cada iteración
+}
+System.out.println ();</code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="421_estructura_repetitiva_dowhile_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="44_concepto_de_acumulador.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

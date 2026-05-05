@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.4.- Modificadores de contenido (I): atributos constantes | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-18"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_atributos.html" class="current-page-parent daddy">4.- Atributos</a>
+   <ul>
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li id="active"><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="active no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li><a href="5_mtodos.html" class="daddy">5.- Métodos</a>
+   <ul class="other-section">
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="43_modificadores_de_acceso.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.4.- Modificadores de contenido (I): atributos constantes</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id25">
+<div class="iDevice emphasis0">
+<div id="ta25_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="cars-4814015_640.jpg" alt="Tablero de mandos de un automóvil" title="Tablero de mandos" style="float: right;" width="200" height="134" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/coches-coche-caballo-ford-volante-4814015/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Luk Luk en Pixabay (se abre en una nueva ventana).">Luk Luk</a> <span class="license"><span class="sep">(</span><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span>)</span></span></div>
+</div>
+<p>Continuando con ejemplo de la clase <code>Vehiculo</code>, podríamos llegar a la siguiente conclusión respecto a los atributos:</p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li>algunos atributos no van a cambiar nunca de valor una vez se fabrique el vehículo;</li>
+<li>otros, sin embargo, podrán ir modificando su valor a lo largo del tiempo. En cada momento que se consulten, su valor puede ser diferente.</li>
+</ol>
+<p>En el primer caso estaríamos hablando de datos que una vez creado el objeto ya no tiene sentido que se modifique su valor. Es decir, se trata de características del objeto que forman parte de su "naturaleza" (podemos considerarlos como información "estructural" del objeto). Es algo que no va a cambiar a lo largo del tiempo y que va a permanecer inalterable. Algunos ejemplos podrían ser:</p>
+<div class="elemento_derecha">
+<div class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 200px;"><img src="320px-Matricula_automovilistica_Espana_2000_5776_CNS.jpg" alt="Placa de matrícula española" title="Matrícula" width="200" height="44" />
+<div class="figcaption"><a href="https://commons.wikimedia.org/wiki/File:Matr%C3%ADcula_automovil%C3%ADstica_Espa%C3%B1a_2000_5776_CNS.jpg" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Grez en Wiki Commons (se abre en una nueva ventana).">Grez</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a los términos de la licencia Creative Commons BY-SA (se abre e una nueva ventana).">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+</div>
+<ul class="lista_verificacion">
+<li>la <strong>capacidad del depósito de combustible</strong> del vehículo;</li>
+<li>la <strong>matrícula</strong> del vehículo;</li>
+<li>el <strong>año de matriculación</strong> o, si se prefiere, la <strong>fecha completa de matriculación</strong> del vehículo;</li>
+<li>la <strong>máxima velocidad</strong> que puede alcanzar el vehículo;</li>
+<li>el <strong>número de marchas</strong> del vehículo (si es que es de cambio manual);</li>
+<li><abbr title="etcétera">etc</abbr>.</li>
+</ul>
+<p>Se trata claramente de valores que jamás van a cambiar para un vehículo concreto una vez creado.</p>
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="speed-1249610_640.jpg" alt="Indicador de velocídad de un vehículo" title="Velocidad" style="float: right;" width="200" height="133" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/velocidad-coche-veh%C3%ADculo-unidad-1249610/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Arek Socha en Pixabay (se abre en una nueva ventana).">Arek Socha</a> <span class="license"><span class="sep">(</span><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep">)</span></span></div>
+</div>
+<p>En el segundo caso, se trata de características que sí pueden cambiar con el tiempo y que podríamos decir que representarían su "estado". Algunos ejemplos podrían ser:</p>
+<ul class="lista_verificacion">
+<li>la <strong>velocidad actual</strong> a la que va el vehículo,</li>
+<li>el <strong>nivel actual de combustible</strong> en el depósito,</li>
+<li>la <strong>distancia recorrida</strong> hasta el momento,</li>
+<li>el <strong>estado del motor</strong> (si está apagado o encendido),</li>
+<li><abbr title="etcétera">etc</abbr>.</li>
+</ul>
+<p>Cada uno de esos datos podrá ser diferente cada vez que se consulten. Tendrán un valor inicial al crearse el objeto e irán cambiando a lo largo del tiempo.</p>
+<p>Para implementar el primer grupo de atributos (atributos de "naturaleza" del objeto, inmutables), podemos utilizar un modificador de contenido que obligue a que ese valor sea constante, es decir, que una vez que se le asigne un valor, éste no pueda ser modificado. Para poder lograr esto en <span lang="en">Java</span> contamos con el <strong>modificador de contenido</strong> <code>final</code>.</p>
+<p>Para implementar el segundo grupo de atributos (atributos de "estado" del objeto, variables), simplemente podemos declararlos como lo hemos hecho hasta ahora. De este modo serán valores variables y no constantes.</p>
+<p><strong>Los modificadores de contenido no son excluyentes</strong> (pueden aparecer varios para un mismo atributo). Son los siguientes:</p>
+<ul class="lista_verificacion">
+<li>modificador <code>final</code>. Indica que el atributo es una <strong>constante</strong>. Su valor no podrá ser modificado a lo largo de la vida del objeto. Por convenio, el nombre de los <strong>atributos constantes</strong> (<code>final</code>) se escribe con <strong>todas las letras en mayúsculas, separando las palabras con el carácter <code>'_'</code></strong>. Aunque ahora vamos a ver una excepción;</li>
+<li>modificador <code>static</code>. Hace que el atributo sea común para todos los objetos de una misma clase. Es decir, todos los objetos de la clase compartirán ese mismo atributo con el mismo valor. Es un caso de miembro estático o miembro de clase: un <strong>atributo estático</strong> o <strong>atributo de clase</strong> o <strong>variable de clase</strong>.</li>
+</ul>
+<p>En el siguiente apartado sobre atributos estáticos verás ejemplos de atributos estáticos (<code>static</code>). Veamos ahora un ejemplo de atributos constantes (<code>final</code>).</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id26">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-26_60" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion26_60" class="block question iDevice_content">
+<p><strong>¿Con qué modificador puede indicarse en <span lang="en">Java</span> que un atributo es constante?</strong></p>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i26_63" class="sr-av"><a href="#answer-26_63">Opción 1</a></label><input type="radio" name="option26_60" id="i26_63" class="exe-radio-option exe-radio-option-0-4-26_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-26_63"><a name="answer-26_63"></a>
+<div id="taans26_63" class="block iDevice_content">
+<p>Con el modificador <code>constant</code>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i26_83" class="sr-av"><a href="#answer-26_83">Opción 2</a></label><input type="radio" name="option26_60" id="i26_83" class="exe-radio-option exe-radio-option-1-4-26_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-26_83"><a name="answer-26_83"></a>
+<div id="taans26_83" class="block iDevice_content">
+<p>Con el modificador <code>starter</code>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i26_86" class="sr-av"><a href="#answer-26_86">Opción 3</a></label><input type="radio" name="option26_60" id="i26_86" class="exe-radio-option exe-radio-option-2-4-26_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-26_86"><a name="answer-26_86"></a>
+<div id="taans26_86" class="block iDevice_content">
+<p>Con el modificador <code>final</code>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i26_89" class="sr-av"><a href="#answer-26_89">Opción 4</a></label><input type="radio" name="option26_60" id="i26_89" class="exe-radio-option exe-radio-option-3-4-26_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-26_89"><a name="answer-26_89"></a>
+<div id="taans26_89" class="block iDevice_content">
+<p>Con el modificador <code>static</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b26_60" class="feedback js-hidden"><a name="sa0b26_60"></a>
+<div id="taf26_63" class=" iDevice_content">
+<p>¡Error! Ese modificador no existe en <span lang="en">Java</span>.</p>
+</div>
+</div>
+<div id="sa1b26_60" class="feedback js-hidden"><a name="sa1b26_60"></a>
+<div id="taf26_83" class=" iDevice_content">
+<p>¡Has fallado! Ese modificador no existe en <span lang="en">Java</span>.</p>
+</div>
+</div>
+<div id="sa2b26_60" class="feedback js-hidden"><a name="sa2b26_60"></a>
+<div id="taf26_86" class=" iDevice_content">
+<p>&iexcl;As&iacute; es! &iexcl;Enhorabuena! El modificador <code>final</code> es el que se utiliza para declarar un atributo como constante.</p>
+</div>
+</div>
+<div id="sa3b26_60" class="feedback js-hidden"><a name="sa3b26_60"></a>
+<div id="taf26_89" class=" iDevice_content">
+<p>¡No! ¡Error! El modificador <code>static</code> se utiliza para declarar miembros estáticos o de clase.</p>
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-26_63">Incorrecto</a><span> (<a href="#sa0b26_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-26_83">Incorrecto</a><span> (<a href="#sa1b26_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-26_86">Opción correcta</a><span> (<a href="#sa2b26_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-26_89">Incorrecto</a><span> (<a href="#sa3b26_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id129">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta129_148" class="block story iDevice_content">
+<p>Continuamos con nuestra clase de ejemplo con la que pretendemos representar vehículos. Hasta el momento habíamos decidido incluir los siguientes atributos:</p>
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="speed-4297546_640.png" alt="Indicador de velocidad de un vehículo" title="Velocidad" style="float: right;" width="200" height="100" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/velocidad-veloc%C3%ADmetro-4297546/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Izwar Muis en Pixabay (se abre en una nueva ventana).">Izwar Muis</a> <span class="license"><span class="sep">(</span><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep">)</span></span></div>
+</div>
+<ul class="lista_verificacion">
+<li><strong>capacidad del depósito de combustible</strong>. En litros;</li>
+<li><strong>matrícula</strong>;</li>
+<li><strong>fecha de matriculación</strong>;</li>
+<li><strong>estado del motor</strong> (encendido o apagado);</li>
+<li><strong>distancia recorrida desde que se fabricó el vehículo</strong> (memoria de ruta global). En kilómetros;</li>
+<li><strong>distancia recorrida desde que se arrancó por última vez</strong> (memoria de ruta parcial). En kilómetros.</li>
+</ul>
+</div>
+<div id="taquesQuestion0b129" class="block iDevice_content">
+<p>Debemos ahora realizar, para cada atributo, un análisis para decidir:</p>
+<ol>
+<li><strong>cuáles deberían ser constantes o inmutables;</strong></li>
+<li><strong>cuáles deberían poder cambiar su valor</strong> con el tiempo (mutables o variables).</li>
+</ol>
+</div>
+<form name="feedback-form-quesFeedback0b129" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b129text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b129" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b129" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En actividades anteriores ya hemos decidido qué <strong>identificadores</strong> (nombres) asignar a cada uno de estos atributos, así como su <strong>tipo</strong> y su <strong>visibilidad</strong>.</p>
+<p>Ahora habrá que analizar cuáles tiene sentido que sean constantes o inmutables (representan una característica que nunca va a cambiar) y cuáles no (representan el estado del objeto en cada momento del tiempo). Podríamos llegar a las siguientes conclusiones:</p>
+<ul class="lista_verificacion">
+<li><strong>capacidad del depósito de combustible</strong>. Se trata de una propiedad invariable para cada vehículo en particular. Una vez que se fabrique un determinado vehículo, siempre tendrá la misma capacidad de combustible pues el tamaño físico del depósito no va a variar. Se trata por tanto de un atributo <strong>constante</strong>: modificador <code>final</code>;</li>
+<li><strong>matrícula</strong>. Una vez matriculado el vehículo, no podemos cambiar su matrícula, salvo casos excepcionales como importación/exportación o cosas así. Pero no vamos a tener en cuenta ese caso. Por tanto lo trataremos como un atributo inmutable o <strong>constante</strong>: modificador <code>final</code>;</li>
+<li><strong>fecha de matriculación</strong>. Una vez que el vehículo es matriculado, ésa es su fecha de matriculación. No debería cambiar, salvo que se quisiera tener en cuenta la misma excepción que en el caso anterior. Es por tanto también <strong>constante</strong> e irá acompañado de un modificador <code>final</code>;</li>
+<li><strong>estado del motor</strong> (encendido o apagado). El vehículo podrá estar apagado en un determinado momento y pasar a estado encendido en cuanto se arranque. Se trata entonces de un atributo <strong>variable</strong> y no necesita de ningún modificador adicional;</li>
+<li><strong>distancia recorrida desde que se fabricó el vehículo</strong>. Comenzará valiendo cero e irá aumentando según se vaya utilizando el vehículo. Nunca disminuirá. Será <strong>variable</strong>;</li>
+<li><strong>distancia recorrida desde que se arrancó por última vez</strong>. Comenzará valiendo cero e irá aumentando según se vaya utilizando el vehículo, pero cada vez que se apague y se vuelva a arrancar comenzará de nuevo desde cero. Por tanto también será <strong>variable</strong>;</li>
+</ul></div>
+</form>
+<div id="taquesQuestion1b129" class="block iDevice_content">
+<p>Una vez realizado ese análisis, podemos incluir una <strong>nueva columna en nuestra tabla de atributos</strong> para indicar, además del nombre, el tipo y la visibilidad, la posible <strong>mutabilidad</strong> o inmutabilidad del atributo (es decir, si va a ser un atributo constante o variable).</p>
+</div>
+<form name="feedback-form-quesFeedback1b129" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b129text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b129" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b129" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Aquí tenemos una tabla resumen de nuestros atributos una vez realizado el anterior análisis en el que hemos valorado, para cada uno, si debería ser constante o variable (condición de mutabilidad o inmutabilidad):</p>
+<table class="tabla" style="width: 100%;" summary="Tabla de cuatro columnas que contiene para cada fila el nombre, el tipo, la visibilidad y la inmutabilidad de cada uno de los atributos de la clase Vehiculo" border="1"><caption>Atributos de la clase <code>Vehiculo</code></caption>
+<tbody>
+<tr><th>Nombre</th><th>Tipo</th><th scope="col">Visibilidad</th><th>Mutabilidad (constante/variable)</th></tr>
+<tr>
+<td><code>capacidadDeposito</code></td>
+<td><code>double</code></td>
+<td>privada (<code>private</code>)</td>
+<td>constante (<code>final</code>)</td>
+</tr>
+<tr>
+<td><code>matricula</code></td>
+<td><code>String</code></td>
+<td>privada (<code>private</code>)</td>
+<td>constante (<code>final</code>)</td>
+</tr>
+<tr>
+<td><code>fechaMatriculacion</code></td>
+<td><code>LocalDate</code></td>
+<td>privada (<code>private</code>)</td>
+<td>constante (<code>final</code>)</td>
+</tr>
+<tr>
+<td><code>estadoMotor</code></td>
+<td><code>boolean</code></td>
+<td>privada (<code>private</code>)</td>
+<td>variable</td>
+</tr>
+<tr>
+<td><code>kilometrosTotales</code></td>
+<td><code>double</code></td>
+<td>privada (<code>private</code>)</td>
+<td>variable</td>
+</tr>
+<tr>
+<td><code>kilometrosParciales</code></td>
+<td><code>double</code></td>
+<td>privada (<code>private</code>)</td>
+<td>variable</td>
+</tr>
+</tbody>
+</table></div>
+</form>
+<div id="taquesQuestion2b129" class="block iDevice_content">
+<p>A partir de la <strong>tabla</strong> que has confeccionado con el <strong>nombre</strong>, el <strong>tipo</strong>, la <strong>visibilidad</strong> y la <strong>mutabilidad</strong> para cada atributo, escribe la <strong>clase <span lang="en">Java</span> que representa a un vehículo</strong>.</p>
+</div>
+<form name="feedback-form-quesFeedback2b129" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b129text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b129" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b129" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>A partir de la tabla de atributos es fácil escribir el código de la clase <span lang="en">Java</span>:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">public class Vehiculo {
+
+  // Atributos de objeto constantes (representan características "inmutables" del vehículo)
+  private final double capacidadDeposito;        // Capacidad del depósito de combustible del vehículo (en litros)
+  private final String matricula;                // Matrícula del vehículo
+  private final LocalDate fechaMatriculacion;    // Fecha de matriculación del vehículo 
+
+  // Atributos de objeto variables (representan el estado del vehículo en un instante dado)
+  private boolean estadoMotor;             // Estado del motor del vehículo (arrancado o apagado)
+  private double kilometrosTotales;        // Distancia total recorrida desde que fabricó el vehículo (en kilómetros)
+  private double kilometrosParciales       // Distancia recorrida desde que el vehículo se arrancó por última vez  (en kilómetros)
+}</code></pre>
+</div>
+<p>Dado que cada vez hay más variedad de atributos, es bueno que los vayas clasificando por grupos para facilitar la legibilidad del código.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id206">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta206_121" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 160px;"><img src="320px-CamelCase_new.svg.png" alt="Dromedario con la inscripción camelCase" title="camelCase" style="float: right;" width="160" height="118" />
+<div class="figcaption"><a href="https://en.wikipedia.org/wiki/File:CamelCase_new.svg" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Emoji One en Wikimedia Commons (se abre en una nueva ventana).">Emoji One</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a los términos de la licencia Creative Commons BY-SA (se abre en una nueva ventana).">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+<p><br />Desde el comienzo de este curso, siempre hemos afirmado que el convenio más estándar de nombrado de indentificadores en <span lang="en">Java</span> indica que aquellos elementos que sean de tipo constante (<code>final</code>) deberían seguir la nomenclatura de usar siempre mayúsculas y guión bajo para separar cada palabra.</p>
+<p>Sin embargo, en el ejemplo anterior te has encontrado con atributos constantes que hemos declarado usando el formato "<a href="#t2ed8d08d-947a-333b-6156-e0a1d0c85c3f" id="link2ed8d08d-947a-333b-6156-e0a1d0c85c3f" title="Lower Camel Case | Ver la definición" class="exe-tooltip definition-tt titled-tt"><em><span lang="en">lower camel case</span></em></a>" en lugar de las mayúsculas. Es habitual que <strong>cuando se trate de atributos de objeto</strong> (no de variables locales, sino de atributos de objeto) se use este modelo para distinguirlo de las constantes que sean atributos de clase, como verás más adelante.</p>
+<div id="t2ed8d08d-947a-333b-6156-e0a1d0c85c3f" class="exe-tooltip-text">
+<p>Estilo de escritura de identificadores donde se usa sólo la mayúscula en la primera letra de cada palabra salvo en la primera palabra, que va completa en minúsculas. Entre cada palabra no hay separación. Van todas las palabras unidas.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="43_modificadores_de_acceso.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

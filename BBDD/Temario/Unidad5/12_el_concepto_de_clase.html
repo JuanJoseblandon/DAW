@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2.- El concepto de clase | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li class="current-page-parent"><a href="1_concepto_de_clase.html" class="current-page-parent daddy">1.- Concepto de clase</a>
+   <ul>
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li id="active"><a href="12_el_concepto_de_clase.html" class="active no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li><a href="4_atributos.html" class="daddy">4.- Atributos</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li><a href="5_mtodos.html" class="daddy">5.- Métodos</a>
+   <ul class="other-section">
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="11_repaso_del_concepto_de_objeto.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_empaquetado_de_clases.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.2.- El concepto de clase</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id6">
+<div class="iDevice emphasis0">
+<div id="ta6_73" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="PROG06_CONT_R06_Modelo.jpg" alt="Modelo de manualidades." title="Modelo de manualidades." style="float: left;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="Acceder a los términos de la Licencia CC BY-NC-SA (se abre en una nueva ventana)." href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a> <a title="Acceder a la web descarga de la imagen de Marius Watz en Flickr (se abre en una nueva ventana)." href="https://www.flickr.com/photos/watz/5495949974/in/photostream/" target="_blank">Marius Watz</a></div>
+</div>
+<p>Está claro que dentro de un mismo programa tendrás la oportunidad de encontrar decenas, cientos o incluso miles de objetos. En algunos casos no se parecerán en nada unos a otros, pero también podrás observar que habrá muchos que tengan un gran parecido, compartiendo un mismo comportamiento y unos mismos atributos. Habrá muchos objetos que sólo se diferenciarán por los valores que toman algunos de esos atributos.</p>
+<p>Es aquí donde entra en escena el concepto de <strong>clase</strong>. Está claro que no podemos definir la estructura y el comportamiento de cada objeto cada vez que va a ser utilizado dentro de un programa, pues la escritura del código sería una tarea interminable y redundante. La idea es poder disponer de una <strong>plantilla</strong> o <strong>modelo</strong> para cada conjunto de objetos que sean del mismo tipo, es decir, que tengan los mismos atributos y un comportamiento similar.</p>
+<div class="destacado">
+<p><strong>Una clase consiste en la definición de un tipo de objeto. Se trata de una descripción detallada de cómo van a ser los objetos que pertenezcan a esa clase, indicando qué tipo de información contendrán (atributos) y cómo se podrá interactuar con ellos (comportamiento).</strong></p>
+</div>
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG06_CONT_R07_zendala.jpg" alt="Plantilla de una figura geométrica Zendala. " title="Plantilla Zendala." style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="Acceder a los términos de la Licencia CC BY-NC-SA (se abre en una nueva ventana)." href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a> <a title="Acceder a la web descarga de la imagen de Jo in NZ en Flickr (se abre en una nueva ventana)." href="https://www.flickr.com/photos/jo_in_nz/5055562942/" target="_blank">Jo in NZ</a></div>
+</div>
+<p>Como ya has visto anteriormente, una clase consiste en un plantilla en la que se especifican:</p>
+<ul class="lista_verificacion">
+<li>Los <strong>atributos</strong> que van a ser comunes a todos los objetos que pertenezcan a esa clase (información).</li>
+<li>Los <strong>métodos</strong> que permiten interactuar con esos objetos (comportamiento).</li>
+</ul>
+<p>A partir de este momento podrás hablar ya sin confusión de objetos y de clases, sabiendo que los primeros son instancias concretas de las segundas, que no son más que una abstracción o definición.</p>
+<p>Si nos volvemos a fijar en los ejemplos de objetos del apartado anterior podríamos observar que las clases serían lo que clasificamos como "familias" de objetos (<code>Vehiculo</code>, <code>Cocodrilo</code>, <code>Circulo</code>, <code>Persona</code>). Por ejemplo, podríamos hablar de la clase <code>Vehiculo</code> y de varios objetos de esa clase: el Seat Toledo rojo de 2020, el primer Opel Astra amarillo de 2018 y el segundo Opel Astra amarillo de 2018.</p>
+<div class="destacado">
+<p><strong>En el lenguaje cotidiano de muchos programadores puede ser habitual la confusión entre los términos clase y objeto. Aunque normalmente el contexto nos permite distinguir si nos estamos refiriendo realmente a una clase (definición abstracta) o a un objeto (instancia concreta), hay que tener cuidado con su uso para no dar lugar a interpretaciones erróneas, especialmente durante el proceso de aprendizaje.</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id7">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta7_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b7" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b7" class="block iDevice_content">
+<p><strong>Un objeto y una clase en realidad hacen referencia al mismo concepto. Podr&iacute;a decirse que son sin&oacute;nimos.&nbsp;</strong></p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b7"><input type="radio" name="option0b7" id="true0b7" class="exe-radio-option exe-radio-option-0-2-0b7-truefalse" /> Verdadero</label> 
+<label for="false0b7"><input type="radio" name="option0b7" id="false0b7" class="exe-radio-option exe-radio-option-1-2-0b7-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b7" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b7-result" class="wrong">Falso</strong></p>
+<p>No es cierto. Aunque a veces ambos t&eacute;rminos son utilizados para referirnos a lo mismo, no se trata del mismo concepto. Una clase consiste en una definici&oacute;n abstracta de c&oacute;mo puede ser un objeto (qu&eacute; informaci&oacute;n contiene y c&oacute;mo se puede interaccionar con &eacute;l), pero no se refiere a ninguna instancia espec&iacute;fica de objeto (podr&iacute;amos decir que especificamos qu&eacute; atributos puede tener, pero no qu&eacute; valor tienen). Por otro lado un objeto es una instancia concreta de una clase, es decir, un conjunto de valores concretos para una definici&oacute;n gen&eacute;rica de clase.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id163">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta163_121" class="block iDevice_content">
+<p>Nuevamente, si has trabajado antes con el <strong>modelo Entidad/Relación</strong>, también es muy probable que te hayas fijado en el paralelismo que existe entre el concepto de <strong>clase</strong> y el de <strong>entidad</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id273">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta273_128" class="block iDevice_content">
+<p>Aquí tienes un par de vídeos introductorios a la <strong>programación orientada a objetos</strong> usando el lenguaje <span lang="en">Java</span>.</p>
+<figure class="exe-figure exe-media position-center" style="width: 320px;">
+<div class="figcaption header"><strong>Introducción a la Programación Orientada a Objetos</strong></div>
+<iframe width="320" height="240" style="border: 0;" src="//www.youtube.com/embed/XmUz5WJmJVU?list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk"></iframe><figcaption class="figcaption"><span class="title"><a href="ResumenTextualVideoIntroPOO01.html" title="Acceder a la descripción textual para el vídeo (se abre en una nueva ventana)." target="_blank"><em>Resumen textual del vídeo</em></a></span></figcaption></figure>
+<p>En el segundo vídeo se comienzan a escribir algunos ejemplos en <span lang="en">Java</span> que es posible que aún no entiendas, pues se habla de algunos conceptos a los que llegaremos en apartados posteriores. Si es así, no te preocupes, cuando llegues a un punto que no entiendas, no continúes con el visionado del vídeo y vuelve cuando hayas visto los conceptos de <strong>método</strong> y <strong>constructor</strong>.</p>
+<figure class="exe-figure exe-media position-center" style="width: 320px;">
+<div class="figcaption header"><strong>Introducción a la Programación Orientada a Objetos (II): clases y objetos</strong></div>
+<iframe width="320" height="240" style="border: 0;" src="//www.youtube.com/embed/ZY5pwm92cWQ?list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk"></iframe><figcaption class="figcaption"><span class="title"><a href="ResumenTextualVideoIntroPOO02.html" title="Acceder a la descripción textual para el vídeo (se abre en una nueva ventana)." target="_blank"><em>Resumen textual del vídeo</em></a></span></figcaption></figure>
+<p><br /><br /></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="11_repaso_del_concepto_de_objeto.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_empaquetado_de_clases.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

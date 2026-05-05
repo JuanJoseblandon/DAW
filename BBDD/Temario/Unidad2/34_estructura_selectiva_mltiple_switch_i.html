@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.4.- Estructura selectiva múltiple: switch (I). </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul class="other-section">
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_estructuras_de_seleccin_o_condicionales.html" class="current-page-parent daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul>
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li id="active"><a href="34_estructura_selectiva_mltiple_switch_i.html" class="active daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul>
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul class="other-section">
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li><a href="45_estructura_repetitiva_for_i.html" class="daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul class="other-section">
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul class="other-section">
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="33_estructuras_condicionales_anidadas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3.4.- Estructura selectiva múltiple: switch (I).</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id17">
+<div class="iDevice emphasis0">
+<div id="ta17_73" class="block iDevice_content">
+<p>¿Qué podemos hacer cuando nuestro programa debe elegir entre más de dos alternativas?</p>
+<div class="elemento_centrado"><a title="Imagen ampliada para Diagrama de flujo de sentencia switch." href="PROG03_CONT_R03_diagramaswitch.jpg"><img alt="Un rombo verde con la inscripción “expresión” muestra bajo él tres recuadros que representan los posibles valores que toma la variable que controla la estructura. Bajo cada uno de los recuadros verdes indicados, aparecen sendos recuadros azules con la palabra “secuencia1,2,...N” inscrita. De estos recuadros parten flechas que se unen en una pequeña circunferencia, de la que parte otra flecha hacia abajo." class="imagen_ampliable" src="PROG03_CONT_R03_diagramaswitch_miniatura.jpg" style="width: 180px; height: 160px;" title="Diagrama de flujo de sentencia switch." width="180" height="160" /></a></div>
+<p>Una posible solución podría ser emplear estructuras <code>if</code> anidadas, aunque no siempre esta solución es la más eficiente, porque en caso de que las sucesivas condiciones que se van evaluando sean falsas, puede ser necesario comprobar todas antes de saber con seguridad en qué caso nos encontramos. ¿No sería deseable que con una sola comprobación pudiéramos ir directamente al caso apropiado y ejecutar las instrucciones que lleve asociadas?</p>
+<p>Desde luego que sí, esto sería más eficiente, y en algunos casos es posible. Cuando estamos ante estas situaciones podemos utilizar la estructura de <strong>selección múltiple, </strong>que en <span lang="en">Java</span>  es la sentencia<strong> </strong> <code lang="en">switch</code>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id115">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta115_50" class="block iDevice_content">
+<p><strong>Indica para cada afirmaci&oacute;n si es verdadera o falsa.</strong></p>
+</div>
+<div class="question">
+<form name="true-false-form-0b115" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b115" class="block iDevice_content">
+<p>La estructura tipo <code>switch</code> resulta imprescindible en cualquier lenguaje, ya que de lo contrario no se podr&iacute;an tomar decisiones que implican la posibilidad de seguir por m&aacute;s de dos caminos.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b115"><input type="radio" name="option0b115" id="true0b115" class="exe-radio-option exe-radio-option-0-2-0b115-truefalse" /> Verdadero</label> 
+<label for="false0b115"><input type="radio" name="option0b115" id="false0b115" class="exe-radio-option exe-radio-option-1-2-0b115-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b115" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b115-result" class="wrong">Falso</strong></p>
+<p>Es falso, ya que cualquier estructura tipo <code>switch</code> puede construirse a base de anidar estructuras <code>if/else</code>.</p>
+</div>
+</div>
+<div class="question">
+<form name="true-false-form-1b115" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 2</h3>
+<div id="taquestion1b115" class="block iDevice_content">
+<p>La estructura tipo <code>switch</code> es más eficiente para resolver un problema con múltiples posibilidades, que el uso de estructuras <code>if/else</code> anidadas para resolver ese mismo problema.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true1b115"><input type="radio" name="option1b115" id="true1b115" class="exe-radio-option exe-radio-option-0-2-1b115-truefalse" /> Verdadero</label> 
+<label for="false1b115"><input type="radio" name="option1b115" id="false1b115" class="exe-radio-option exe-radio-option-1-2-1b115-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s1b115" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s1b115-result" class="right">Verdadero</strong></p>
+<p>Es verdadero, ya que al ejecutar el <code>switch</code>, se eval&uacute;a la expresi&oacute;n una &uacute;nica vez, y dependiendo del valor que tome, nos lleva a ejecutar el grupo de sentencias asociado, sin tener que volver a evaluar ninguna expresi&oacute;n m&aacute;s. Sin embargo, para conseguir eso a base de usar <code>if/else</code> anidados, cada caso debe ser comprobado, y si no se cumple, hay que seguir haciendo comprobaciones, evaluando las condiciones para decidir si se trata de cada caso particular. De esta forma, si el caso fuese el &uacute;ltimo de la lista, obliga a haber evaluado y comprobado todas las condiciones de los casos previos antes de descartarlos.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id114">
+<div class="iDevice emphasis0">
+<div id="ta114_69" class="block iDevice_content">
+<p>¿Cómo se implementa esta estructura en Java? En Java se la conoce como estructura <code>switch</code>. En la siguiente tabla se muestra tanto la sintaxis, como el funcionamiento de esta estructura en el lenguaje <span lang="en">Java</span>.</p>
+<table class="tabla" style="width: 1129px; height: 735px;" summary="En esta tabla aparece la sintaxis de la estructura switch, con la manera en la que se han de colocar las diferentes alternativas de que consta, así como los bloques de sentencias asociados a cada alternativa. Por otra parte, se detallan las condiciones que han de cumplirse y el funcionamiento de este tipo de estructura condicional múltiple. "><caption>Estructura selectiva múltiple en <span lang="en">Java </span> (<code>switch</code>)</caption>
+<tbody>
+<tr><th scope="col"><strong>Sintaxis</strong></th><th scope="col"><strong>Condiciones</strong></th></tr>
+<tr>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>switch (expresion){
+
+   case valor1:
+      sentencia1_1;
+      sentencia1_2;
+      . . .
+      break;
+
+   case valor2:
+      sentencia2_1;
+      sentencia2_2;
+      . . .
+      break;
+
+   . . .
+
+   case valorN:
+     sentenciaN_1;
+     sentenciaN_2;
+     . . .
+     break;
+
+   default:
+     sentencias_default;
+
+}
+</code></pre>
+</div>
+</div>
+</td>
+<td>
+<ul class="lista_verificacion">
+<li>Donde expresión debe ser del tipo <strong><span style="font-size: medium;"><code>char</code></span></strong>, <span style="font-size: medium;"><strong><code>byte</code></strong></span>, <strong><span style="font-size: medium;"><code>short</code></span></strong> o <strong><span style="font-size: medium;"><code>int</code></span></strong>, y las constantes de cada <span style="font-size: medium;"><strong><code>case</code></strong></span> deben ser de este tipo o de un tipo compatible. Sólo desde la versión 7 del lenguaje Java se permiten expresiones de tipo <strong><span style="font-size: medium;"><code>String</code></span></strong> en la expresión, pero esto no funcionará con versiones anteriores del lenguaje.</li>
+<li>La expresión debe ir entre paréntesis.</li>
+<li>Cada <strong><span style="font-size: medium;"><code>case</code> </span></strong>llevará asociado un valor y se finalizará con dos puntos (<strong><span style="font-size: large;"><code>:</code></span></strong>).</li>
+<li>El bloque de sentencias asociado a la cláusula <strong><span style="font-size: medium;"><code>default</code></span></strong> puede finalizar con una sentencia de ruptura <strong><span style="font-size: medium;"><code>break</code></span></strong> o no. No hay diferencia de funcionamiento. Se permite por mantener la estructura de las demás etiquetas, pero el compilador no lo necesita si el <strong><span style="font-size: medium;"><code>default</code></span></strong> va al final, tal y como se ve en el código, puesto que la llave de cierre delimita el final del <strong><span style="font-size: medium;"><code>switch</code></span></strong>.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="2"><strong>Funcionamiento:</strong>
+<ul class="lista_verificacion">
+<li>Las diferentes alternativas de esta estructura estarán precedidas de la cláusula <strong><span style="font-size: medium;"><code>case</code></span></strong> que se ejecutará cuando el valor asociado al <strong><span style="font-size: medium;"><code>case</code></span></strong> coincida con el valor obtenido al evaluar la expresión del <strong><span style="font-size: medium;"><code>switch</code></span></strong>.</li>
+<li>Tradicionalmente, en las cláusulas <strong><span style="font-size: medium;"><code>case</code></span></strong> de Java <strong>no podían indicarse expresiones condicionales, rangos de valores o listas de valores</strong> (aunque otros lenguajes de programación sí lo permiten). Habrá que asociar una cláusula <strong><span style="font-size: medium;"><code>case</code></span></strong> a cada uno de los valores que deban ser tenidos en cuenta. Esto ha cambiado desde el <acronym title="Java Developmnet Kit">JDK</acronym> 12, que sí permite especificar listas de valores a través de expresiones lambda.</li>
+<li>Se pueden especificar varios <strong><span style="font-size: medium;"><code>case</code></span></strong> uno detrás de otro, de manera que para todos esos valores se ejecute la misma sección de código.</li>
+<li>La cláusula <strong><span style="font-size: medium;"><code>default</code></span></strong> será utilizada para indicar un caso por omisión o por defecto (cualquier otro caso no contemplado en las cláusulas <strong><span style="font-size: medium;"><code>case</code></span></strong>, en realidad). Las sentencias asociadas a la cláusula <strong><span style="font-size: medium;"><code>default</code></span></strong> se ejecutarán si ninguno de los valores indicados en las cláusulas <strong><span style="font-size: medium;"><code>case</code></span></strong> coincide con el resultado de la evaluación de la expresión de la estructura <strong><span style="font-size: medium;"><code>switch</code></span></strong>.</li>
+<li>La cláusula <strong><span style="font-size: medium;"><code>default</code></span></strong> puede no existir, y por tanto, si ningún<strong><span style="font-size: medium;"> <code>case</code></span></strong> ha sido activado finalizaría el <strong><span style="font-size: medium;"><code>switch</code></span></strong>.</li>
+<li>Cada cláusula <strong><span style="font-size: medium;"><code>case</code></span></strong> puede llevar asociadas una o varias sentencias, sin necesidad de delimitar dichos bloques por medio de llaves.</li>
+<li>En el momento en el que el resultado de la evaluación de la expresión coincide con alguno de los valores asociados a las cláusulas <strong><span style="font-size: medium;"><code>case</code></span></strong>, se ejecutarán todas las instrucciones asociadas hasta la aparición de una sentencia <strong><span style="font-size: medium;"><code>break</code></span></strong> de ruptura (la sentencia <strong><span style="font-size: medium;"><code>break</code></span></strong> se analizará en epígrafes posteriores). Esto hace que si en una cláusula <strong><span style="font-size: medium;"><code>case</code></span></strong> no se incluye un <strong><span style="font-size: medium;"><code>break</code></span></strong> para finalizarla, al entrar en esa cláusula, se producirá un "<strong>efecto en cascada"</strong>, de forma que seguirá ejecutando las sentencias de la siguiente cláusula <strong><span style="font-size: medium;"><code>case</code></span></strong>, y así sucesivamente las de todas las que sigan, hasta que en alguna encuentre una sentencia <strong><span style="font-size: medium;"><code>break</code></span></strong>, o hasta que alcance el final de la sentencia. Esto puede ser aprovechado para darle más versatilidad a la sentencia <strong><span style="font-size: medium;"><code>switch</code></span></strong> y hacer algo parecido a los rangos que sí permiten otros lenguajes, aunque sea de una forma "no muy limpia".</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>En resumen, se ha de comparar el valor de una expresión con un conjunto de valores constantes, si el valor de la expresión coincide con alguno de los valores constantes contemplados, se ejecutarán los bloques de instrucciones asociados al mismo. Si no existiese coincidencia, se podrán ejecutar una serie de instrucciones por omisión, si se ha incluido la cláusula <code>default</code>, o se saltará a la sentencia siguiente a esta estructura selectiva (tras la llave de cierre) si no se ha incluido esa cláusula.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id194">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta194_151" class="block iDevice_content">
+<p>Quizás esta estructura es la que más diferencias y particularidades presenta para distintos lenguajes de programación, de manera que si más adelante trabajas con otros lenguajes puede que te encuentres algo bastante distinto a la sintaxis de Java. Lo importante es que el planteamiento sigue siendo el mismo: se evalúa una expresión, y según su valor, se toma el camino que marca una de las etiquetas que identifican cada uno de los casos posibles.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id196">
+<div class="iDevice emphasis0">
+<div id="ta196_85" class="block iDevice_content">
+<p>Veamos un ejemplo sencillo. Imagina un programa que en función del valor de una variable entera llamada <strong><span style="font-size: medium;"><code>switch</code></span></strong> nos indique por pantalla el mensaje "cero", "uno", "dos" o bien "otro". Veamos cómo podría implementarse utilizando la estructura <strong><span style="font-size: medium;"><code>switch</code></span></strong> y también su equivalente mediante un grupo de estructuras <code>if-else</code> anidadas.</p>
+<table class="tabla" summary="En esta tabla aparece un ejemplo de programa resuelto con switch a la izquierda y el mismo programa reuelto con if-else a la derecha. "><caption>Ejemplo de uso de la estructura <code>switch</code> en <span lang="en">Java</span></caption>
+<tbody>
+<tr><th scope="col">Ejemplo resuelto con <code>switch</code></th><th scope="col">Ejemplo resuelto con <code>if-else</code> anidados</th></tr>
+<tr>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>switch (numero) {
+    case 0:
+        System.out.println ("cero");
+        break;
+    case 1:
+        System.out.println ("uno");
+        break;
+    case 2:
+        System.out.println ("dos");
+        break;
+    default:
+        System.out.println ("otro");
+}</code></pre>
+</div>
+</div>
+</td>
+<td>
+<div class="highlighted-code language-markup">
+<div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (numero==1)
+    System.out.println ("cero");
+else if (numero==2)
+    System.out.println ("uno");
+else if (numero==3)
+    System.out.println ("dos");
+else 
+    System.out.println ("otro");
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id197">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta197_148" class="block story iDevice_content">
+<p>En el ejemplo anterior podríamos mejorar algunas cosas como por ejemplo disponer de una variable de tipo <code>String</code> que contenga el resultado final y de esa manera escribir una única línea de tipo <code>System.out.println</code> una vez finalizada la estructura de control, a modo de <strong>salida de resultados</strong>. También se podría haber realizado la solicitud de un número entero por teclado antes de comenzar (<strong>entrada de datos</strong>) y así ya tendríamos un programa completamente operativo.</p>
+</div>
+<div id="taquesQuestion0b197" class="block iDevice_content">
+<p>Modifica y completa el programa del ejemplo anterior para que solicite un número entero por teclado y muestre el mensaje apropiado por pantalla utilizando la estructura:</p>
+<ol>
+<li>entrada de datos:</li>
+<li>procesamiento;</li>
+<li>salida de resultados;</li>
+</ol>
+</div>
+<form name="feedback-form-quesFeedback0b197" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b197text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b197" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b197" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Para llevar a cabo este ejercicio e implementar un programa completamente operativo, lo primero que habría que hacer es declarar las dos variables que necesitamos: una de entrada con el número que debemos analizar y otra de salida con el texto de resultado que vamos a mostrar por pantalla.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+Scanner teclado = new Scanner(System.in);  // Recuerda que debes hacer import.util.Scanner al principio de todo
+int numero;
+String resultado;</code></pre>
+</div>
+</div>
+<p>Tras esto, habría que pedir por teclado un número entero (entrada de datos):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Primera parte. Entrada de datos
+System.out.print("Introduzca un número entero: ");
+numero = teclado.nextInt();</code></pre>
+</div>
+</div>
+<p>Una vez que tengamos el dato de entrada, llevaríamos a cabo el análisis de ese dato para obtener un resultado (procesamiento). En este caso, en lugar de escribir inmediatamente en pantalla cuando averigüemos si es 0, 1, 2, etc. lo que hacemos es almacenar en la variable <code>resultado</code> el texto que queremos mostrar por pantalla sin llegar a escribirlo.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Segunda parte. Procesamiento: calculamos un resultado a partir de los valores de entrada
+switch (numero) {
+    case 0:
+        resultado= "cero";
+        break;
+    case 1:
+        resultado= "uno";
+        break;
+    case 2:
+        resultado= "dos";
+        break;
+    default:
+        resultado= "otro";        
+}</code></pre>
+</div>
+</div>
+<p>Y finalmente mostraríamos por pantalla el resultado final (salida de resultados):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Tercera parte. Salida de resultados
+System.out.println (resultado);</code></pre>
+</div>
+</div>
+<p>El programa completo, juntándolo todo e incluyendo todos los elementos de nuestra plantilla "estándar" de programa, podría quedar más o menos así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.util.Scanner;
+
+public class EjemplosSwitch {
+
+    public static void main(String[] args) {
+
+        // Declaración de variables
+        Scanner teclado = new Scanner(System.in);  
+        int numero;
+        String resultado;
+
+        // Entrada de datos
+        System.out.print("Introduzca un número entero: ");
+        numero = teclado.nextInt();
+
+        // Procesamiento
+        switch (numero) {
+            case 0:
+                resultado = "cero";
+                break;
+            case 1:
+                resultado = "uno";
+                break;
+            case 2:
+                resultado = "dos";
+                break;
+            default:
+                resultado = "otro";
+        }
+
+        // Salida de resultados
+        System.out.println("El número introducido es: " + resultado);
+
+    }
+}</code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="33_estructuras_condicionales_anidadas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

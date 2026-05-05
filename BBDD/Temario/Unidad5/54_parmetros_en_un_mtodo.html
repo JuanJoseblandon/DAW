@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.4.- Parámetros en un método | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-23"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li><a href="4_atributos.html" class="daddy">4.- Atributos</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_mtodos.html" class="current-page-parent daddy">5.- Métodos</a>
+   <ul>
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li id="active"><a href="54_parmetros_en_un_mtodo.html" class="active daddy">5.4.- Parámetros en un método</a>
+      <ul>
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="541_listas_de_parmetros_variables.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5.4.- Parámetros en un método</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id36">
+<div class="iDevice emphasis0">
+<div id="ta36_73" class="block iDevice_content">
+<div class="elemento_derecha"> </div>
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="checklist-1622517_640.png" alt="Lista de comprobación con ítems marcados" title="Checklist" style="float: right;" width="200" height="200" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/lista-de-comprobaci%C3%B3n-portapapeles-1622517/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de 472301 en Pixabay (se abre en una nueva ventana).">472301</a> <span class="license"><span class="sep">(</span><span class="license"><span class="sep"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep"></span></span></span></span><span class="sep">)</span></span></div>
+</div>
+<p>La lista de parámetros de un método se coloca tras el nombre del método. Esta lista estará constituida por pares de la forma <code>"&lt;tipoParametro&gt; &lt;nombreParametro&gt;"</code>. Cada uno de esos pares estará separado por comas y la lista completa estará encerrada entre paréntesis:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">&lt;tipo&gt; nombreMetodo ( &lt;tipo_1&gt; &lt;nombreParametro_1&gt;, &lt;tipo_2&gt; &lt;nombreParametro_2&gt;, ..., &lt;tipo_n&gt; &lt;nombreParametro_n&gt; )</code>
+</pre>
+</div>
+<p>Si se trata de un método que no recibe parámetros, es decir,  la lista de parámetros está vacía, tan solo aparecerán los paréntesis, pero éstos deben aparecer siempre:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">&lt;tipo&gt; nombreMetodo ( )</code>
+</pre>
+</div>
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG06_CONT_R28_Subprograma.png" alt="Diagrama de funcionamiento de un subprograma. Se distingue la Entrada con unos parámetros, el Proceso que es una subrutina o función, y la Salida con un valor de retorno." title="Subprograma." style="float: right;" width="240" height="248" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-sa" title="Accder a los términos de la licencia CC BY-SA (se abre en una nueva ventana)" href="http://creativecommons.org/licenses/by-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-sa</span></a> <a title="Acceder a la web descarga de la imagen de Josell7 en Wiki Commons (se abre en una nueva ventana)." href="http://es.wikipedia.org/wiki/Archivo:Subprograma.svg" target="_blank">Josell7</a></div>
+</div>
+<p>A la hora de declarar un método, debes tener en cuenta lo siguiente:</p>
+<ul class="lista_verificacion">
+<li>puedes incluir cualquier cantidad de parámetros. Se trata de una decisión del programador, pudiendo ser incluso una lista vacía;</li>
+<li>los parámetros podrán ser de cualquier tipo (tipos primitivos, referencias, objetos, <span lang="en">arrays</span>, <abbr title="etcétera.">etc.</abbr>);</li>
+<li>no está permitido que el nombre de una variable local del método coincida con el nombre de un parámetro;</li>
+<li>no puede haber dos parámetros con el mismo nombre. Se produciría ambigüedad;</li>
+<li>si el nombre de algún parámetro coincide con el nombre de un atributo de la clase, éste será "ocultado" por el parámetro. Es decir, al indicar ese nombre en el código del método estarás haciendo referencia al parámetro y no al atributo. Para poder acceder al atributo tendrás que hacer uso del operador de autorreferencia <code>this</code>, que verás un poco más adelante;</li>
+<li>en <span lang="en">Java</span> el<strong> paso de parámetros es siempre por valor</strong>, excepto en el caso de los tipos referenciados (por ejemplo los objetos) en cuyo caso se está pasando efectivamente una referencia. La referencia (el objeto en sí mismo) no podrá ser cambiada pero sí elementos de su interior (atributos) a través de sus métodos o por acceso directo si se trata de un miembro público.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id149">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta149_128" class="block iDevice_content">
+<p>Puedes echar un vistazo al artículo general sobre paso de parámetros a métodos en los manuales de <span lang="en">Oracle </span>sobre <span lang="en">Java</span>:<a class="html" title="Acceder al artículo del manual de Java de Oracle en el que se describe el paso de información a los métodos (En inglés. Se abre en una ventana nueva)." href="http://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html" target="_blank"><span lang="en">Passing Information to a Method or a Constructor.</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id232">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta232_128" class="block iDevice_content">
+<p><span lang="en">Si consultas otras fuentes podrás observar que cuando se habla del paso de parámetros se alude a los <strong><span lang="en">conceptos de paso por valor y paso por referencia</span></strong>. Debes saber que <strong>en Java el paso de cualquier parámetro se hace siempre por valor</strong>, por tanto no vamos a entrar a explicar esa distinción. Ahora bien, cuando el parámetro no es de tipo primitivo (es una referencia), aunque la referencia no pueda ser cambiada, sí podría cambiarse el contenido (atributos de un objeto o elementos de un array) al que apunta la referencia. En ese sentido se podría intentar simular un paso por referencia.</span></p>
+<p>Aquí tienes algunos enlaces que pueden resultarte de interés por si estás interesado en profundizar en el tema:</p>
+<ul class="lista_verificacion">
+<li><a href="https://es.wikipedia.org/wiki/Argumento_(inform%C3%A1tica)" title="Acceder a un artículo en la Wikipedia sobre el concepto de argumento de una subrutina o método (se abre en una nueva ventana)." target="_blank" class="html">Artículo en la Wikipedia sobre el paso de argumentos</a>, donde se explica la diferencia entre el paso por valor y el paso por referencia.</li>
+<li><a href="https://stackoverflow.com/questions/373419/whats-the-difference-between-passing-by-reference-vs-passing-by-value" title="Acceder a un Artículo en Stackoverflow &quot;What's the difference between passing by reference vs. passing by value?&quot; (En inglés. Se abre en una nueva ventana)" target="_blank" class="html">Artículo en <em>Stackoverflow</em> "<em>What's the difference between passing by reference vs. passing by value?"</em></a></li>
+<li><a href="https://codingornot.com/cuando-se-utiliza-paso-por-referencia-y-cuando-paso-por-valor" title="Accecer a un artículo en la web codingornot.com &quot;¿Cuándo se utiliza «paso por referencia» y cuándo «paso por valor»? (se abre en una nueva ventana)" class="html">Artículo en la web <em>codingornot.com</em> "¿Cuándo se utiliza «paso por referencia» y cuándo «paso por valor»?</a>"</li>
+</ul>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id150">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta150_148" class="block story iDevice_content">
+<p>En nuestro proyecto de diseño e implementación de la clase <code>Vehiculo</code>, hemos estado pensando en algunos métodos que podrían resultar útiles y por ahora tenemos los siguientes:</p>
+<table class="tabla" style="width: 100%;" summary="Tabla con posibles nombres de métodos para la clase Vehiculo y una breve descripción" border="1"><caption>Ejemplos de nombres de métodos para la clase <code>Vehiculo</code></caption>
+<tbody>
+<tr><th scope="col">Posible nombre del método</th><th scope="col">Descripción</th></tr>
+<tr>
+<td><code>getNivelDeposito</code></td>
+<td>Devuelve la cantidad de combustible que queda en el depósito del vehículo.</td>
+</tr>
+<tr>
+<td><code>arrancar</code></td>
+<td>Arranca el motor del vehículo.</td>
+</tr>
+<tr>
+<td><code>parar</code></td>
+<td>Para el motor del vehículo.</td>
+</tr>
+<tr>
+<td><code>repostar</code></td>
+<td>Introduce una cantidad determinada de combustible en el depósito del vehículo.</td>
+</tr>
+<tr>
+<td><code>isArrancado</code></td>
+<td>Indica si el vehículo está arrancado o no.</td>
+</tr>
+<tr>
+<td><code>recorrerTrayecto</code></td>
+<td>Recorre un determinado trayecto con el vehículo.</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>Ahora nos falta decidir para cada uno de estos métodos, si tiene parámetros o no y, en caso afirmativo, cuántos y de qué tipo sería cada uno.</p>
+</div>
+<div id="taquesQuestion0b150" class="block iDevice_content">
+<p>Realiza un análisis en el que decidas, para cada uno de los métodos de la tabla anterior y teniendo en cuenta la función que van a realizar, qué parámetros serían los apropiados.</p>
+</div>
+<form name="feedback-form-quesFeedback0b150" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b150text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b150" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b150" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Tendremos que ir método por método e ir reflexionando acerca de su función y qué parámetros serían necesarios recibir desde fuera (al ser invocados) para que puedan llevar a cabo su tarea apropiadamente:</p>
+<ul>
+<li class="lista_verificacion">método <code>getNivelDeposito</code>. En este caso se trata de un método que nos proporciona información del objeto y que no lleva a cabo realmente ninguna acción, simplemente devuelve un valor, pero no recibe información alguna. Por tanto no tendrá parámetros, aunque sí devolverá un valor de tipo <code>double</code> (el nivel actual de combustible);</li>
+<li class="lista_verificacion">método <code>arrancar</code>. Éste sí es un método que va a realizar una acción: encender el motor del vehículo. Lo más probable es que no devuelva ningún valor (cuando pides "arrancar" el vehículo estás solicitando que se lleve a cabo una acción, no estás pidiendo información). Sin embargo, al igual que en el caso anterior, tampoco requiere que se le pase ningún valor a través de un parámetro, pues simplemente quieres arrancar el vehículo. Por tanto, tampoco tendrá parámetros y tampoco devolverá nada (<code>void</code>);</li>
+<li class="lista_verificacion">método <code>parar</code>. Este método es similar al anterior. Realiza una acción, no devuelve ningún valor y no requiere que se le pase ninguna información a través de parámetros pues su acción es clara y no necesita matizaciones ni parametrizaciones. Tampoco devolverá ningún valor (<code>void</code>);</li>
+<li class="lista_verificacion">método <code>repostar</code>. En este caso sí es necesario como mínimo un dato: la <strong>cantidad de combustible</strong> (litros) que se desea repostar. Es decir, necesita un parámetro de entrada para poder llevar a cabo la acción apropiadamente. Necesitará <strong>un parámetro</strong> de tipo <strong>real</strong> (<code>double</code>) y no devolverá ningún valor (<code>void</code>);</li>
+<li class="lista_verificacion">método <code>isArrancado</code>. Aquí tenemos nuevamente un método que lo que hace es devolver información y no realizar una acción. En este caso no es necesario proporcionar ningún valor al método a través de parámetros, pues está clara la información que se va a dar: si el motor del vehículo está arrancado o no, es decir, el estado del motor. Podría devolver en este caso un tipo <code>boolean</code>;</li>
+<li class="lista_verificacion">método <code>recorrerTrayecto</code>. En este caso tenemos un método que va a llevar a cabo una acción (recorrer una determinada distancia). Por tanto, necesitará <strong>un parámetro</strong>: la <strong>distancia</strong> que se desea recorrer (kilómetros), la cual será de tipo <strong>real</strong> (<code>double</code>). Respecto a lo que devuelve el método, en este caso no sería necesario que devolviera ningún valor (<code>void</code>), pues simplemente se lleva a cabo una acción.</li>
+</ul>
+<p>Una vez realizado este análisis, que es bastante razonable, se puede observar que existen otras formas de plantear la situación y que resultarían igual de razonables. Por ejemplo:</p>
+<ul>
+<li class="lista_verificacion">en el método <code>arrancar</code>, podría darse el caso de que por las especificaciones que nos hubieran dado, nos interesara saber si la acción de arrancar se ha podido llevar a cabo o no, en cuyo caso podría ser útil que se devolviera un <code>boolean</code> (<code>true</code> si se ha arrancado, <code>false</code> si ha habido cualquier problema que lo haya impedido, como pueda ser que el depósito de combustible esté vacío, o que haya un fallo en el motor). En nuestro análisis inicial hemos supuesto que esa información no nos interesa de momento, así que lo hemos dejado como <code>void</code>. Pero como puedes observar, no es la única posibilidad ni tiene por qué ser la mejor. Tan solo se trata de que sea la que más nos interese dependiendo de cómo queramos que se utilice ese método, lo que se nos haya especificado en el equipo de desarrollo o cualquier otra consideración que se nos pueda ocurrir;</li>
+<li class="lista_verificacion">para el método <code>parar</code> podríamos plantearnos exactamente lo mismo que para el método <code>arrancar</code>;</li>
+<li class="lista_verificacion">para el método <code>recorrerTrayecto</code> podríamos hacer que devolviera un <code>double</code> indicando la distancia real que se ha podido recorrer, por si no coincide con la que se ha intentado recorrer. Imagina, por ejemplo, que se ha agotado el combustible antes de recorrer el trayecto completamente.</li>
+</ul>
+<p class="lista_verificacion">La cuestión es hacerte ver que no hay una manera "única" ni "sagrada" de plantearse la interacción con un método (qué parámetros recibe y qué valores devuelve) sino que se trata de algo que tendremos que analizar y sopesar dependiendo del uso que queramos darle a cada método. Nosotros vamos a escoger la primera opción, pero los ejemplos la segunda no tendrían por qué ser incorrectos.</p></div>
+</form>
+<div id="taquesQuestion1b150" class="block iDevice_content">
+<p>A partir de ese análisis, escribe cómo quedaría la cabecera de cada uno de esos métodos teniendo en cuenta que deseamos que sean todos ellos <strong>públicos</strong> (accesibles desde cualquier objeto de cualquier paquete).</p>
+</div>
+<form name="feedback-form-quesFeedback1b150" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b150text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b150" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b150" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Una vez que ya tenemos claro qué parámetros y de qué tipo va a tener cada método, tan solo hay que declararlos usando la sintaxis de <span lang="en">Java</span>:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">[private | protected | public] [static] [abstract] [final] [native] [synchronized]
+&lt;tipo&gt; &lt;nombreMetodo&gt; ( [&lt;lista_parametros&gt;] ) [throws &lt;lista_excepciones&gt;]</code>
+</pre>
+</div>
+<p>Por tanto la cabecera de cada uno de los métodos quedaría más o menos así:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">
+public double getNivelDeposito()         // Sin parámetros, devuelve un número real
+public void arrancar()                   // Sin parámetros, no devuelve nada
+public void parar()                      // Sin parámetros, no devuelve nada
+public void repostar (double cantidad)   // Un parámetro: cantidad de litros a repostar (real). No devuelve nada
+public boolean isArrancado()             // Sin parámetros, devuelve un boolean (verdadero o falso)
+public void recorrerTrayecto (double distancia)  // Un parámetro: distancia a recorrer (real). No devuelve nada
+</code>
+</pre>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="541_listas_de_parmetros_variables.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

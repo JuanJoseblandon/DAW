@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3.- Expresiones regulares en Java (II): búsquedas. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-88"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_expresiones_regulares.html" class="current-page-parent daddy">3.- Expresiones regulares.</a>
+   <ul>
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="active no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="321_el_mtodo_matches_de_la_clase_string.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.3.- Expresiones regulares en Java (II): búsquedas.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id366">
+<div class="iDevice emphasis0">
+<div id="ta366_154" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="analysis-g786905732_640.jpg" alt="Lupa aumentando palabras en un texto" title="Lupa" style="float: right;" width="240" height="160" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/an%c3%a1lisis-lupa-examen-burocracia-2840166/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Gerd Altmann en Pixabay (se abre en una nueva ventana).">Gerd Altmann</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>El método matches de la clase <code>Matcher</code> nos permite comprobar si una cadena encaja exactamente o no con un determinado patrón. Pero esta clase nos ofrece un conjunto de métodos con bastantes más posibilidades a la hora analizar la forma en la que la cadena ha encajado con un patrón. Veamos algunos de ellos:</p>
+<ul class="lista_verificacion">
+<li><strong><span style="font-size: medium;"><code>matches()</code></span></strong>, que devolverá <strong><span style="font-size: medium;"><code>true</code></span></strong> si toda la cadena (de principio a fin) encaja con el patrón o <strong><span style="font-size: medium;"><code>false</code></span></strong> en caso contrario;</li>
+<li><strong><span style="font-size: medium;"><code>lookingAt()</code></span></strong>, que devolverá <strong><span style="font-size: medium;"><code>true</code></span></strong> si el patrón se ha encontrado al principio de la cadena. A diferencia del método <strong><span style="font-size: medium;"><code>matches()</code></span></strong>, la cadena podrá contener al final caracteres adicionales a los indicados por el patrón, sin que ello suponga un problema;</li>
+<li><strong><span style="font-size: medium;"><code>find()</code></span></strong>, que devolverá <strong><span style="font-size: medium;"><code>true</code></span></strong> si el patrón existe en algún lugar la cadena (no necesariamente toda la cadena debe coincidir con el patrón) y <strong><span style="font-size: medium;"><code>false</code></span></strong> en caso contrario, pudiendo tener más de una coincidencia. Para obtener la posición exacta donde se ha producido la coincidencia con el patrón podemos usar los métodos <strong><span style="font-size: medium;"><code>start()</code></span></strong> y <strong><span style="font-size: medium;"><code>end()</code></span></strong>, para saber la posición inicial y final donde se ha encontrado. Una segunda invocación del método <strong><span style="font-size: medium;"><code>find()</code></span></strong> irá a la segunda coincidencia (si existe), y así sucesivamente. Podemos reiniciar el método <strong><span style="font-size: medium;"><code>find()</code></span></strong>, para que vuelva a comenzar por la primera coincidencia, invocando el método <strong><span style="font-size: medium;"><code>reset()</code></span></strong>.</li>
+</ul>
+<p>Como puedes observar ya no se trata simplemente de poder comprobar si un texto cumple exactamente un determinado patrón o requisito, sino que también podríamos comprobar si lo cumplen una o varias partes del texto. Veamos un ejemplo:</p>
+<p style="text-align: center;"><em>Comprobar si en un determinado texto aparecen números enteros, cuántos y en qué posición.</em></p>
+<p>Lo primero que tendríamos que hacer sería diseñar la expresión regular para representar números enteros. Una forma sencilla de hacerlo podría ser "<strong><span style="font-size: medium;"><code>[0-9]+</code></span></strong>". Si queremos, podríamos complicarlo un poco más si queremos evitar que puedan tener ceros a la izquierda. Eso ya dependería del problema concreto que tuviéramos que resolver.</p>
+<p>Una vez que tenemos clara la expresión regular, habría que aplicarla al texto que deseamos analizar y a partir de ahí empezar a usar el método <strong><span style="font-size: medium;"><code>find</code></span></strong> en un bucle hasta que nos devuelva <strong><span style="font-size: medium;"><code>false</code></span></strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Suponemos que la variable "texto" contiene el texto que se desea analizar
+
+Pattern patron = Pattern.compile("[0-9]+");   // Patrón de búsqueda
+Matcher acoplamiento = patron.matcher(texto); // Texto donde buscar o "acoplar"
+boolean patronEcontrado; // Si el patron ha sido encontrado
+
+int numVeces= 0; // Contador para saber cuántas veces aparece el patrón
+do {           
+    patronEncontrado= acoplamiento.find(); // Buscamos el patrón en el texto
+    if ( patronEncontrado ) {  // Si lo encontramos, lo contabilizamos, ubicamos y extraemos
+        numVeces++;
+        inicio= acoplamiento.start();
+        fin= acoplamiento.end();
+        System.out.printf  ("%2d.- Patrón numérico encontrado. Ubicado entre las posiciones %d y %d: %s\n",
+                numVeces, inicio, fin, texto.substring(inicio, fin));
+    }
+} while (patronEncontrado);
+
+if (numVeces == 0) {
+    System.out.println ("Patrón numérico entero no encontrado en el texto.");
+} else {
+    System.out.printf ("Encontrado %d veces.", numVeces);
+}</code></pre>
+</div>
+</div>
+<p>En este ejemplo, si el texto de entrada hubiera sido "<em>Este número 220 es mayor que el 200, pero menor que el 300.</em>", el resultado debería haber sido algo como:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Este número 220 es mayor que el 200, pero menor que el 300.
+ 1.- Patrón numérico encontrado. Ubicado entre las posiciones 12 y 15: 220
+ 2.- Patrón numérico encontrado. Ubicado entre las posiciones 32 y 35: 200
+ 3.- Patrón numérico encontrado. Ubicado entre las posiciones 55 y 58: 300
+Encontrado 3 veces.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id367">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-367_55">
+<form name="multi-select-form-367_55" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion367_55" class="block question iDevice_content">
+<p><strong>&iquest;En cu&aacute;les de las siguientes opciones se cumple el patr&oacute;n "</strong><code>A.\\d+</code><strong>"?</strong></p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op367_550" class="sr-av"><a href="#answer-367_58">Opción 1</a></label><input type="checkbox" id="op367_550" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-367_58"><div id="taans367_58" class="block iDevice_content">
+<p>"<code>GA-99</code>" si utilizamos el m&eacute;todo <code>find()</code>.</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-367_550" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op367_551" class="sr-av"><a href="#answer-367_122">Opción 2</a></label><input type="checkbox" id="op367_551" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-367_122"><div id="taans367_122" class="block iDevice_content">
+<p>"<code>GAX99</code>" si utilizamos el m&eacute;todo <code>lookingAt()</code>.</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-367_551" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op367_552" class="sr-av"><a href="#answer-367_124">Opción 3</a></label><input type="checkbox" id="op367_552" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-367_124"><div id="taans367_124" class="block iDevice_content">
+<p>"<code>AX99-</code>" si utilizamos el m&eacute;todo <code>matches()</code>.</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-367_552" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op367_553" class="sr-av"><a href="#answer-367_126">Opción 4</a></label><input type="checkbox" id="op367_553" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-367_126"><div id="taans367_126" class="block iDevice_content">
+<p>"<code>A99</code>" si utilizamos el m&eacute;todo <code>matches()</code>.</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-367_553" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-367_55" /> 
+</p>
+</div>
+<section id="f367_55" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback367_55" class="feedback iDevice_content">
+<p>Recuerda que el m&eacute;todo <code>find()</code> busca el patr&oacute;n en cualquier lugar de la cadena, el m&eacute;todo <code>matches()</code> busca el patr&oacute;n en toda la cadena, y el m&eacute;todo <code>lookingAt()</code> al principio de la cadena.</p>
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-367_58" class="right">Correcto</a></li>
+<li><a href="#answer-367_122" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-367_124" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-367_126" class="right">Correcto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id368">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta368_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b368" class="block iDevice_content">
+<p>Escribe un programa en Java que reciba un texto por teclado y contabilice <strong>cuántas palabras hay que empiecen por mayúscula</strong>, en qué <strong>posición</strong> se encuentra ubicada cada palabra y de <strong>qué palabra</strong> se trata.</p>
+<p>Un ejemplo de ejecución podría ser el siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>BÚSQUEDA DE PATRÓN EN TEXTO
+---------------------------
+Introduzca texto donde buscar:
+El padre de Laura se llama Antonio y su hermana Gracia. Juan es el mayor. El menor es Rodrigo. A las dos horas llegaron.
+ 1.- Palabra en mayúscula encontrada. Ubicada entre las posiciones 0 y 2: El
+ 2.- Palabra en mayúscula encontrada. Ubicada entre las posiciones 12 y 17: Laura
+ 3.- Palabra en mayúscula encontrada. Ubicada entre las posiciones 27 y 34: Antonio
+ 4.- Palabra en mayúscula encontrada. Ubicada entre las posiciones 48 y 54: Gracia
+ 5.- Palabra en mayúscula encontrada. Ubicada entre las posiciones 56 y 60: Juan
+ 6.- Palabra en mayúscula encontrada. Ubicada entre las posiciones 74 y 76: El
+ 7.- Palabra en mayúscula encontrada. Ubicada entre las posiciones 86 y 93: Rodrigo
+ 8.- Palabra en mayúscula encontrada. Ubicada entre las posiciones 95 y 96: A
+Encontradas 8 palabras.</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b368" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b368text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b368" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b368" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Como siempre, lo primero que debemos hacer es construir una expresión regular que nos pueda servir y que sea lo más sencilla posible. Por ejemplo, quizá podría servirnos algo como "<strong><span style="font-size: medium;"><code>[A-Z][a-z]*</code></span></strong>".</p>
+<p>A partir de ahí, podemos usar como modelo el ejemplo que hemos visto:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+// Constantes
+// Variables de entrada
+String texto;
+
+// Variables de salida
+boolean patronEncontrado;
+int inicio = 0, fin = 0;
+
+// Variables auxiliares
+String textoPatron = "[A-Z][a-z]*";
+Pattern patron; // Patrón numérico entero
+Matcher acoplamiento;
+int numVeces;
+
+// Objeto Scanner para petición de datos de entrada
+Scanner teclado = new Scanner(System.in);
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("BÚSQUEDA DE PATRÓN EN TEXTO");
+System.out.println("---------------------------");
+System.out.println("Introduzca texto donde buscar:");
+texto = teclado.nextLine();
+
+//----------------------------------------------
+//     Procesamiento + Salida de Resultados
+//----------------------------------------------
+patron = Pattern.compile(textoPatron);
+acoplamiento = patron.matcher(texto);
+
+numVeces = 0;
+do {
+    patronEncontrado = acoplamiento.find();
+    if (patronEncontrado) {
+        numVeces++;
+        inicio = acoplamiento.start();
+        fin = acoplamiento.end();
+        System.out.printf("%2d.- Palabra en mayúscula encontrada. Ubicada entre las posiciones %d y %d: %s\n",
+                numVeces, inicio, fin, texto.substring(inicio, fin));
+    }
+} while (patronEncontrado);
+
+if (numVeces == 0) {
+    System.out.println("No se han encontrado en el texto palabras que empiecen en mayúscula.");
+} else {
+    System.out.printf("Encontradas %d palabras.", numVeces);
+}
+</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="321_el_mtodo_matches_de_la_clase_string.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

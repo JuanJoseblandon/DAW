@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.5.2.- Lenguaje SQL (II) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Gestión de bases de datos: relacionales y orientadas a objetos. Persistencia de objetos</a></li>
+   <li class="current-page-parent"><a href="1_bases_de_datos_relacionales.html" class="current-page-parent daddy">1.- Bases de datos relacionales</a>
+   <ul>
+      <li><a href="11_el_desfase_objetorelacional.html" class="no-ch">1.1.- El desfase objeto-relacional</a></li>
+      <li><a href="12_jdbc.html" class="no-ch">1.2.- JDBC</a></li>
+      <li><a href="13__conectores_o_drivers.html" class="no-ch">1.3.-  Conectores o Drivers</a></li>
+      <li><a href="14_instalacin_de_la_base_de_datos.html" class="no-ch">1.4.- Instalación de la base de datos</a></li>
+      <li class="current-page-parent"><a href="15_creacin_de_las_tablas_en_una_base_de_datos.html" class="current-page-parent daddy">1.5.- Creación de las tablas en una base de datos</a>
+      <ul>
+         <li><a href="151_lenguaje_sql_i.html" class="no-ch">1.5.1.- Lenguaje SQL (I)</a></li>
+         <li id="active"><a href="152_lenguaje_sql_ii.html" class="active no-ch">1.5.2.- Lenguaje SQL (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="16_establecimiento_de_conexiones.html" class="daddy">1.6.- Establecimiento de conexiones</a>
+      <ul class="other-section">
+         <li><a href="161_configurar_un_conector_jdbc_en_un_proyecto_netbeans.html" class="no-ch">1.6.1.- Configurar un conector JDBC en un proyecto NetBeans</a></li>
+         <li><a href="162_registrar_el_conector_jdbc.html" class="no-ch">1.6.2.- Registrar el conector JDBC</a></li>
+      </ul>
+      </li>
+      <li><a href="17_ejecucin_de_consultas_sobre_la_base_de_datos.html" class="daddy">1.7.- Ejecución de consultas sobre la base de datos</a>
+      <ul class="other-section">
+         <li><a href="171_adicin_de_informacin.html" class="no-ch">1.7.1.- Adición de información</a></li>
+         <li><a href="172_recuperacin_de_informacin_i.html" class="daddy">1.7.2.- Recuperación de información (I)</a>
+         <ul class="other-section">
+            <li><a href="1712_recuperacin_de_informacin_ii.html" class="no-ch">1.7.1.2.- Recuperación de información (II)</a></li>
+         </ul>
+         </li>
+         <li><a href="173_actualizacin_de_informacin.html" class="no-ch">1.7.3.- Actualización de información</a></li>
+         <li><a href="174_borrado_de_informacin.html" class="no-ch">1.7.4.- Borrado de información</a></li>
+         <li><a href="175_cierre_de_conexiones.html" class="no-ch">1.7.5.- Cierre de conexiones</a></li>
+         <li><a href="176_excepciones_en_jdbc.html" class="no-ch">1.7.6.- Excepciones en JDBC</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="2_persistencia_de_objetos.html" class="daddy">2.- Persistencia de objetos</a>
+   <ul class="other-section">
+      <li><a href="21_qu_son_las_bases_de_datos_orientadas_a_objetos.html" class="no-ch">2.1.- ¿Qué son las bases de datos orientadas a objetos?</a></li>
+      <li><a href="22_qu_es_el_mapeado_de_objetos.html" class="no-ch">2.2.- ¿Qué es el mapeado de objetos?</a></li>
+      <li><a href="23_cmo_empiezo_a_usar_jpa.html" class="no-ch">2.3.- ¿Cómo empiezo a usar JPA?</a></li>
+      <li><a href="24_unidades_de_persistencia_i.html" class="daddy">2.4.- Unidades de persistencia (I)</a>
+      <ul class="other-section">
+         <li><a href="241_unidades_de_persistencia_ii.html" class="no-ch">2.4.1.- Unidades de persistencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="25_modelo_de_datos_en_jpa.html" class="daddy">2.5.- Modelo de datos en JPA</a>
+      <ul class="other-section">
+         <li><a href="251_entidades.html" class="no-ch">2.5.1.- Entidades</a></li>
+         <li><a href="252_atributos.html" class="no-ch">2.5.2.- Atributos</a></li>
+         <li><a href="253_relaciones_entre_entidades.html" class="no-ch">2.5.3.- Relaciones entre entidades</a></li>
+         <li><a href="254_relaciones_uno_a_uno.html" class="no-ch">2.5.4.- Relaciones uno a uno</a></li>
+         <li><a href="255_relaciones_uno_a_muchos.html" class="no-ch">2.5.5.- Relaciones uno a muchos</a></li>
+      </ul>
+      </li>
+      <li><a href="26_operaciones_crud_con_jpa.html" class="daddy">2.6.- Operaciones CRUD con JPA</a>
+      <ul class="other-section">
+         <li><a href="261_persistir_y_leer.html" class="no-ch">2.6.1.- Persistir y leer</a></li>
+         <li><a href="262__actualizar_y_borrar_instancias.html" class="no-ch">2.6.2.-  Actualizar y borrar instancias</a></li>
+      </ul>
+      </li>
+      <li><a href="27_jpql_i.html" class="daddy">2.7.- JPQL (I)</a>
+      <ul class="other-section">
+         <li><a href="271_jpql_ii.html" class="no-ch">2.7.1.- JPQL (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="151_lenguaje_sql_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="16_establecimiento_de_conexiones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.5.2.- Lenguaje SQL (II)</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id20">
+<div class="iDevice emphasis0">
+<div id="ta20_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 192px;"><img src="PROG11_CONT_R11_01_SQL.jpg" width="192" height="120" alt="Texto en letras azules sobre fondo blanco, que reza: “SQL”." title="SQL" style="float: right;" />
+<div class="figcaption"><span class="author">Elaboración propia.</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></div>
+</div>
+<p>La primera fase del trabajo con cualquier base de datos comienza con sentencias <acronym title="Data Definition Language." lang="en">DDL</acronym>, puesto que antes de poder almacenar y recuperar información debemos definir las estructuras donde agrupar la información. Las estructuras básicas con las que trabaja <acronym title=" Structured Query Language." lang="en">SQL</acronym> son las tablas.</p>
+<p>Como hemos visto antes, una tabla es un conjunto de celdas agrupadas en filas y columnas donde se almacenan elementos de información.</p>
+<p>Antes de llevar a cabo la creación de una tabla conviene planificar: nombre de la tabla, nombre de cada columna, tipo y tamaño de los datos almacenados en cada columna, información adicional, restricciones, <abbr title="etcétera.">etc.</abbr></p>
+<p>Hay que tener en cuenta también ciertas restricciones en la formación de los nombres de las tablas: longitud. Normalmente, aunque dependen del sistema gestor, suele tener una longitud máxima de 30 caracteres, no puede haber nombres de tabla duplicados, deben comenzar con un carácter alfabético, permitir caracteres alfanuméricos y el guión bajo '_', y normalmente no se distingue entre mayúsculas y minúsculas.</p>
+<p>Veamos cómo sería un ejemplo de <acronym title="Data Definition Language." lang="en">DDL</acronym> para crear una tabla, concretamente la tabla <code>PRODUCTO </code>del mini punto de venta:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>CREATE TABLE IF NOT EXISTS PRODUCTO(
+    ID BIGINT NOT NULL PRIMARY KEY auto_increment,
+    BARCODE VARCHAR(24) NOT NULL,
+    NOMBRE VARCHAR(200) NOT NULL,
+    PRECIO DOUBLE NOT NULL
+);</code></pre>
+</div>
+</div>
+<p>En el ejemplo anterior creamos la tabla <code>PRODUCTO</code>, solo si no existe previamente, además el campo <code>ID</code> sería la clave primaria (<code>PRIMARY KEY</code>). El campo <code>ID</code> además es autoincremental, es decir, es una secuencia que cada vez que se inserte un registro se incrementará automáticamente, algo muy habitual en las bases de datos.</p>
+<p>Pongamos ahora otro ejemplo, también relacionado con el mini punto de venta. En este caso, sería la tabla que contendría los tickets:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>CREATE TABLE IF NOT EXISTS TICKET (
+    ID BIGINT NOT NULL PRIMARY KEY auto_increment,
+    FECHA DATE NOT NULL,
+    HORA TIME NOT NULL,
+    TICKETCERRADO BOOLEAN NOT NULL  
+);</code></pre>
+</div>
+</div>
+<p>En la tabla anterior, la clave primaria es igual que en la tabla <code>PRODUCTO</code>. Aparece información sobre la fecha y la hora del ticket, y un boolean que indicará si el ticket está cerrado o no.</p>
+<p>Por último veamos como podría ser la última tabla del mini punto de venta, la tabla <code>LINEATICKET</code>:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>CREATE TABLE IF NOT EXISTS LINEATICKET(
+    ID BIGINT NOT NULL PRIMARY KEY auto_increment,
+    CANTIDAD INTEGER NOT NULL,
+    PRECIOVENTA DOUBLE NOT NULL,
+    PRODUCTO_ID BIGINT,
+    TICKET_ID BIGINT,
+    FOREIGN KEY(PRODUCTO_ID) REFERENCES PUBLIC.PRODUCTO(ID) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY(TICKET_ID) REFERENCES PUBLIC.TICKET(ID) ON UPDATE CASCADE ON DELETE CASCADE    
+);   
+</code></pre>
+</div>
+</div>
+<p><span style="font-size: 1em;">La tabla </span><code>LINEATICKET</code><span style="font-size: 1em;"> contiene cada una de las líneas del ticket; como ya sabes, un ticket puede contener varios productos. Los campos </span><code>PRODUCTO_ID</code><span style="font-size: 1em;"> y </span><code>TICKET_ID</code><span style="font-size: 1em;"> conectarán esta línea de ticket con el ticket al que pertenece y con el producto en cuestión.</span></p>
+<p>Como habrás observado en las tablas anteriores, cada campo tiene asociado un tipo de dato: <code>INTEGER</code>, <code>BIGINT</code>, <code>DATE</code>, <code>TIME</code>, <code>BOOLEAN</code>, <code>VARCHAR</code>, <abbr title="etcétera">etc</abbr>. A la hora de almacenar dicha información en <span lang="en">Java</span>, tendrás que tener en cuenta las siguientes equivalencias:</p>
+<ul class="lista_verificacion">
+<li>El tipo de dato <code>INTEGER</code> en <acronym title="Structured Query Language" lang="en">SQL</acronym> equivaldría al tipo <code>int</code> en <span lang="en">Java</span>.</li>
+<li>El tipo de dato <code>BIGINT</code> en <acronym title="Structured Query Language" lang="en">SQL</acronym> equivaldría al tipo <code>long</code> en <span lang="en">Java</span>.</li>
+<li>El tipo de dato <code>DOUBLE</code> en <acronym title="Structured Query Language" lang="en">SQL</acronym> equivaldría al tipo <code>double</code> en <span lang="en">Java</span>.</li>
+<li>El tipo de dato <code>VARCHAR</code> en <acronym title="Structured Query Language" lang="en">SQL</acronym> equivaldría al tipo <code>String</code> en <span lang="en">Java</span>, pero tienes que tener en cuenta que <code>VARCHAR</code> tiene un tamaño limitado, mientras que un <code>String</code> no. Por ejemplo, <code>"VARCHAR(30)"</code> sería una cadena de hasta 30 caracteres. Así, que a la hora de insertar datos en una base de datos relacional, debes tener en cuenta que la longitud del <code>String</code> en <span lang="en">Java</span> no debería superar al tamaño límite del <code>VARCHAR</code> en la base de datos.</li>
+<li>El tipo de dato <code>DATE</code> en <acronym title="Structured Query Language" lang="en">SQL</acronym> equivaldría al tipo <code>java.sql.Date</code> (no debe usarse <code>java.util.Date</code> ni <code>java.time.LocalDate</code>). <code>java.sql.Date</code> puede convertirse rápidamente a <code>java.time.LocalDate</code>.</li>
+<li>El tipo de dato <code>TIME</code> en <acronym title="Structured Query Language" lang="en">SQL</acronym> equivaldría al tipo <code>java.sql.Time</code> (no debe usarse <code>java.util.Time</code> ni <code>java.time.LocalTime</code>). Nuevamente, <code>java.sql.Time</code> puede convertirse rápidamente a <code>java.time.LocalTime</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdIdevice em_iDevice em_iDevice_reflexionfpd" id="id127">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta127_119" class="block iDevice_content">
+<p>En la tabla <code>PRODUCTO</code> la clave primaria es el atributo <code>ID</code>, sin embargo, el código de barras parece una buena clave primaria. ¿Por qué crees que se ha decidido usar el atributo <code>ID</code> como clave primaria y no el código de barras?</p>
+</div>
+<form name="feedback-form-127" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedback127text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-127" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-127" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div id="ta127_120" class="block iDevice_content">
+<p>La respuesta es simple, en muchos casos se venden productos que no tienen código de barras, ya sean productos físicos (como una simple bolsa pequeña de plástico) o servicios (como envolver para regalo).</p>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdIdevice em_iDevice em_iDevice_reflexionfpd" id="id128">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta128_119" class="block iDevice_content">
+<p>En la tabla <code>LINEATICKET</code> se almacena el precio de venta del producto, pero dicho precio ya está en la tabla <code>PRODUCTO</code>. ¿Por qué crees que se duplica dicho valor?</p>
+</div>
+<form name="feedback-form-128" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedback128text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-128" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-128" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div id="ta128_120" class="block iDevice_content">
+<p>La razón es simple, el precio de un producto puede cambiar a lo largo del tiempo, pero un ticket que se emitió en el pasado tiene que tener exactamente el precio con el que se vendío dicho producto en el pasado.</p>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id140">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta140_128" class="block iDevice_content">
+<p>En la siguiente página de la documentación de <span lang="en">MySQL</span> puedes ver una tabla completa de equivalencias de tipos de datos en la base de datos y tipos de datos <span lang="en">Java</span>:</p>
+<p style="text-align: center;"><a href="https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-type-conversions.html" title="Acceder a página web con información sobre equivalencia entre tipos de datos (en inglés). (Se abre en una nueva ventana)" class="html" target="_blank"><span lang="en">Equivalencia de tipos de datos entre <span style="text-align: center;" lang="en">MySQL</span> y <span style="text-align: center;" lang="en">Java.</span></span></a></p>
+<p style="text-align: center;"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="151_lenguaje_sql_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="16_establecimiento_de_conexiones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.- El lenguaje de programación Java | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-16"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="5_el_lenguaje_de_programacin_java.html" class="active daddy">5.- El lenguaje de programación Java</a>
+   <ul>
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="44_lenguajes_interpretados.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="51_breve_historia.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.- El lenguaje de programación Java</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id42">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta42_66" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="019.png" alt="Una llave dorada vuela hacia su cerradura." title="La llave con la que abrir puertas." style="float: left;" width="196" height="128" /></div>
+<div class="elemento_centrado credenciales">Stockbyte. Uso educativo no comercial</div>
+<div class="elemento_centrado credenciales">para plataformas p&uacute;blicas de Formaci&oacute;n</div>
+<div class="elemento_centrado credenciales">Profesional a distancia.CD-DVD Num. ECD001</div>
+</div>
+<p><strong>Ada</strong> indica a <strong>Juan </strong>y <strong>Mar&iacute;a</strong> que el lenguaje elegido para sus desarrollos va a ser <span lang="en">Java</span>.</p>
+<p>La flexibilidad, facilidad de aprendizaje, similitud con algunos lenguajes que ya conocen y su capacidad para adaptarse a cualquier plataforma, hacen que sea ideal para producir las nuevas aplicaciones de <strong>BK Programaci&oacute;n</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id118">
+<div class="iDevice emphasis0">
+<div id="ta118_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG01_CONT_R12_logojava.jpg" alt="Logotipo del lenguaje Java" title="Lenguaje Java." class="elemento_derecha" style="float: right;" height="192" width="128" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="CC by-nc-sa" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a>&nbsp;<a title="rob patrick" href="https://www.flickr.com/photos/alkalinezoo/3595562784/" target="_blank">rob patrick</a></div>
+</div>
+<p><span lang="en">Java</span> es un lenguaje sencillo de aprender, con una sintaxis parecida a la de <abbr title="C plus plus." lang="en">C++</abbr>, pero en la que se han eliminado elementos complicados y que pueden originar errores. <span lang="en">Java</span> es orientado a objetos, con lo que elimina muchas preocupaciones al programador y permite la utilizaci&oacute;n de gran cantidad de bibliotecas ya definidas, evitando reescribir c&oacute;digo que ya existe. Es un lenguaje de programaci&oacute;n creado para satisfacer nuevas necesidades que los lenguajes existentes hasta el momento no eran capaces de solventar.</p>
+<p>Una de las principales virtudes de <span lang="en">Java</span> es su <strong>independencia del hardware</strong>, ya que el c&oacute;digo que se genera es v&aacute;lido para cualquier plataforma. Este c&oacute;digo ser&aacute; ejecutado sobre una m&aacute;quina virtual denominada <strong>M&aacute;quina Virtual Java</strong> (<acronym title="M&aacute;quina Virtual Java">MVJ</acronym> o <acronym title="Java Virtual  Machine" lang="en">JVM</acronym> &ndash; <span title="M&aacute;quina Virtual Java" lang="en">Java Virtual Machine</span>), que interpretar&aacute; el c&oacute;digo convirti&eacute;ndolo a c&oacute;digo espec&iacute;fico de la plataforma que lo soporta. De este modo el programa se escribe una &uacute;nica vez y puede hacerse funcionar en cualquier lugar. Por eso, ese es el lema del lenguaje: <strong><em>&ldquo;<span title="Escrito una vez, ejecutable en cualquier lugar" lang="en">Write once, run everywhere</span>&rdquo;.</em></strong></p>
+<p>Antes de que apareciera <span lang="en">Java</span>, el lenguaje <span lang="en">C</span> era uno de los m&aacute;s extendidos por su versatilidad. Pero cuando los programas escritos en <span lang="en">C</span> aumentaban de volumen, su manejo comenzaba a complicarse. Mediante las t&eacute;cnicas de programaci&oacute;n estructurada y programaci&oacute;n modular se consegu&iacute;an reducir estas complicaciones, pero no era suficiente.</p>
+<p>Fue entonces cuando la Programaci&oacute;n Orientada a Objetos (<acronym title="Programaci&oacute;n  Orientada a Objetos">POO</acronym>) entra en escena, aproximando notablemente la construcci&oacute;n de programas al pensamiento humano y haciendo m&aacute;s sencillo todo el proceso. Los problemas se dividen en objetos que tienen propiedades e interact&uacute;an con otros objetos, de este modo, el programador puede centrarse en cada objeto para programar internamente los elementos y funciones que lo componen.</p>
+<p>Las caracter&iacute;sticas principales de lenguaje <span lang="en">Java</span> se resumen a continuaci&oacute;n:</p>
+<ul class="lista_verificacion">
+<li>El c&oacute;digo generado por el compilador <span lang="en">Java</span> es independiente de la arquitectura.</li>
+<li>Est&aacute; totalmente orientado a objetos.</li>
+<li>Su sintaxis es similar a <span lang="en">C</span> y <abbr title="C plus plus." lang="en">C++</abbr>.</li>
+<li>Es distribuido, preparado para aplicaciones <a class="glosario">TCP/IP<span><em>TCP/IP</em>Familia de protocolos de Internet. Es un conjunto de protocolos de red en los que se basa Internet y que permiten la transmisi&oacute;n de datos entre redes de ordenadores.</span></a>.</li>
+<li>Dispone de un amplio conjunto de bibliotecas.</li>
+<li>Es robusto, realizando comprobaciones del c&oacute;digo en tiempo de compilaci&oacute;n y de ejecuci&oacute;n.</li>
+<li>La seguridad est&aacute; garantizada, ya que las aplicaciones <span lang="en">Java</span> no acceden a zonas delicadas de memoria o de sistema.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id119">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(icon_debesconocerfpd.png)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta119_48" class="block iDevice_content">
+<p>Obtén una descripción detallada de las características reseñadas anteriormente a través del siguiente artículo:</p>
+<div class="enlace_centrado"><a class="html" title="Características ampliadas del lenguaje Java." href="http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_Java/Caracter%C3%ADsticas_del_lenguaje" target="_blank"> Características detalladas del lenguaje Java</a></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="44_lenguajes_interpretados.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="51_breve_historia.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Anexo I.- Formateado de cadenas en Java. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-99"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="anexo_i_formateado_de_cadenas_en_java.html" class="active no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_ii_ejercicios_resueltos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Anexo I.- Formateado de cadenas en Java.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id318">
+<div class="iDevice emphasis0">
+<div id="ta318_73" class="block iDevice_content">
+<p><a title="anexo_i_formateado_de_cadenas_en_java.html" name="anexo_i_formateado_de_cadenas_en_java.html"></a></p>
+<p class="texto_centrado"><strong>Sintaxis de las cadenas de formato y uso del método </strong><code>format()</code><strong>.</strong></p>
+<p>En Java, el método estático <code>format()</code> de la clase <code>String</code> permite formatear los datos que se muestran al usuario o a la usuaria de la aplicación. El método <code>format()</code> tiene los siguientes argumentos:</p>
+<ul class="lista_verificacion">
+<li><strong>Cadena de formato</strong>. Cadena que especifica cómo será el formato de salida; en ella se mezclará texto normal con especificadores de formato, que indicarán cómo se deben formatear los datos.</li>
+<li><strong>Lista de argumentos</strong>. Variables que contienen los datos que se formatearán. Tiene que haber tantos argumentos como especificadores de formato haya en la cadena de formato.</li>
+</ul>
+<p>Los especificadores de formato comienzan siempre por "<span style="font-size: medium;"><strong><code>%</code></strong></span>", es lo que se denomina un carácter de escape (carácter que sirve para indicar que lo que hay a continuación no es texto normal, sino algo especial que debe ser interpretado de una determinada manera). El especificador de formato debe llevar como mínimo el símbolo "<strong><span style="font-size: medium;"><code>%</code></span></strong>" y un carácter que indica la conversión a realizar, por ejemplo "<code>%d</code>".</p>
+<p> </p>
+<p>La conversión se indica con un simple carácter, e indica al método <code>format()</code> cómo debe ser formateado el argumento. Dependiendo del tipo de dato podemos usar unas conversiones u otras. Veamos las conversiones más utilizadas:</p>
+<table class="tabla" summary="Tabla que contiene las conversiones más utilizadas a la hora de formatear cadenas en Java con el método estático format. La tabla muestra una primera columna que indica el tipo de la conversión, una segunda columna que indica cómo es el especificador de formato para dicha conversión, una tercera columna que indica los tipos de datos que se pueden utilizar como argumento, una cuarta columna con un ejemplo de utilización y una quinta con el resultado de la ejecución del ejemplo."><caption>Listado de conversiones más utilizadas y ejemplos.</caption>
+<thead>
+<tr><th scope="col">Tipo de conversión</th><th scope="col">Especificación de formato</th><th scope="col">Tipos de datos aplicables</th><th scope="col">Ejemplo</th><th scope="col">Resultado del ejemplo</th></tr>
+</thead>
+<tbody>
+<tr>
+<td scope="row">Valor lógico o booleano.</td>
+<td><span style="font-size: small;"><strong>"<span style="font-size: medium;"><code>%b</code></span>" </strong><span style="font-size: x-small;">o<span style="font-size: medium;"><strong> "<code>%B</code>"</strong></span></span></span></td>
+<td><strong><span style="font-size: medium;"><code>Boolean</code></span></strong> (cuando se usan otros tipos de datos siempre lo formateará escribiendo<strong><span style="font-size: medium;"> <code>true</code></span></strong>).</td>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>boolean b=true;
+String d= String.format("Resultado: %b", b);
+System.out.println (d);</code></pre>
+</div>
+</div>
+</td>
+<td>
+<p><strong><span style="font-size: small;"><code>true</code></span></strong></p>
+</td>
+</tr>
+<tr>
+<td scope="row">Cadena de caracteres.</td>
+<td><strong><span style="font-size: medium;">"<code>%s</code>"</span></strong> o <strong><span style="font-size: medium;">"<code>%S</code>"</span></strong></td>
+<td>Cualquiera, se convertirá el objeto a cadena si es posible (invocando el método <span style="font-size: medium;"><code>toString()</code></span>).</td>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String cad="hola mundo";
+String d= String.format("Resultado: %s", cad);
+System.out.println (d);</code></pre>
+</div>
+</div>
+</td>
+<td>
+<p><code>hola mundo</code></p>
+</td>
+</tr>
+<tr>
+<td scope="row">Entero decimal</td>
+<td><span style="font-size: medium;"><strong>"<code>%d</code>"</strong></span></td>
+<td>Un tipo de dato entero.</td>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int i=10;
+String d= String.format("Resultado: %d", i);
+System.out.println (d);</code></pre>
+</div>
+</div>
+</td>
+<td>
+<p><code>10</code></p>
+</td>
+</tr>
+<tr>
+<td scope="row">Número en notación científica</td>
+<td><strong><span style="font-size: small;">"<span style="font-size: medium;"><code>%e</code></span>" o "<span style="font-size: medium;"><code>%E</code></span>"</span></strong></td>
+<td>Flotantes simples o dobles.</td>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>double i=10.5;
+String d= String.format("Resultado: %E", i);
+System.out.println (d);</code></pre>
+</div>
+</div>
+</td>
+<td>
+<p><code>1.050000E+01</code></p>
+</td>
+</tr>
+<tr>
+<td scope="row">Número decimal</td>
+<td><strong><span style="font-size: small;">"<span style="font-size: medium;"><code>%f</code></span>"</span></strong></td>
+<td>Flotantes simples o dobles.</td>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>float i = 10.5f;
+String d = String.format("Resultado: %f", i);
+System.out.println (d);</code></pre>
+</div>
+</div>
+</td>
+<td>
+<p><code>10,500000</code></p>
+</td>
+</tr>
+<tr>
+<td scope="row">Número en notación científica o decimal (lo más corto)</td>
+<td><strong><span style="font-size: small;">"<span style="font-size: medium;"><code>%g</code></span>" o "<code>%G</code>"</span></strong></td>
+<td>Flotantes simples o dobles. El número se mostrará como decimal o en notación científica dependiendo de lo que sea mas corto.</td>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>double i=10.5;
+String d= String.format("Resultado: %g", i);
+System.out.println (d);</code></pre>
+</div>
+</div>
+</td>
+<td>
+<p><code>10.5000</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Ahora que ya hemos visto alguna de las conversiones existentes (las más importantes), veamos algunos modificadores que se le pueden aplicar a las conversiones, para ajustar como queremos que sea la salida. Los modificadores se sitúan entre el carácter de escape ("<span style="font-size: medium;"><strong><code>%</code></strong></span>") y la letra que indica el tipo de conversión (<code>d, f, g</code>, <abbr title="etcétera.">etc.</abbr>).</p>
+<p>Podemos especificar, por ejemplo, el número de caracteres que tendrá como mínimo la salida de una conversión. Si el dato mostrado no llega a ese ancho en caracteres, se rellenará con espacios (salvo que se especifique lo contrario):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>%[Ancho]Conversión</code></pre>
+</div>
+</div>
+<p>El hecho de que esté entre corchetes significa que es opcional. Si queremos por ejemplo que la salida genere al menos 5 caracteres (poniendo espacios delante) podríamos ponerlo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String.format ("%5d",10);</code></pre>
+</div>
+</div>
+<p>Se mostrará el "<code>10</code>" pero también se añadirán 3 espacios delante para rellenar. Este tipo de modificador se puede usar con cualquier conversión.</p>
+<p>Cuando se trata de conversiones de tipo numéricas con decimales, solo para tipos de datos que admitan decimales, podemos indicar también la precisión, que será el número de decimales mínimos que se mostrarán:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>%[Ancho][.Precisión]Conversión</code></pre>
+</div>
+</div>
+<p></p>
+<p>Como puedes ver, tanto el ancho como la precisión van entre corchetes, los corchetes no hay que ponerlos, solo indican que son modificaciones opcionales. Si queremos, por ejemplo, que la salida genere 3 decimales como mínimo, podremos ponerlo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String.format ("%.3f",4.2f);</code></pre>
+</div>
+</div>
+<p>Como el número indicado como parámetro solo tiene un decimal, el resultado se completará con ceros por la derecha, generando una cadena como la siguiente: "<code>4,200</code>".</p>
+<p>Una cadena de formato puede contener varios especificadores de formato y varios argumentos. Veamos un ejemplo de una cadena con varios especificadores de formato:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String np = "Lavadora";
+int u = 10 ;
+
+float ppu = 302.4f ;
+
+float p = u*ppu ;
+
+String output = String.format("Producto: %s; Unidades: %d; Precio por unidad: %.2f €; Total: %.2f €", np, u, ppu, p);
+
+System.out.println(output);</code></pre>
+</div>
+</div>
+<p>Cuando el orden de los argumentos es un poco complicado, porque se reutilizan varias veces en la cadena de formato los mismos argumentos, se puede recurrir a los índices de argumento. Se trata de especificar la posición del argumento a utilizar, indicando la posición del argumento (el primer argumento sería el 1 y no el 0) seguido por el símbolo del dólar ("<code>$</code>"). El índice se ubicaría al comienzo del especificador de formato, después del porcentaje, por ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int i=10;
+int j=20;
+
+String d = String.format("%1$d multiplicado por %2$d (%1$dx%2$d) es %3$d",i,j,i*j) ;
+System.out.println(d) ;</code>
+</pre>
+</div>
+</div>
+<p>El ejemplo anterior mostraría por pantalla la cadena "<code>10 multiplicado por 20 (10x20) es 200</code>". Los índices de argumento se pueden usar con todas las conversiones, y es compatible con otros modificadores de formato (incluida la precisión).</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id319">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta319_47" class="block iDevice_content">
+<p>Si quieres profundizar en los especificadores de formato puedes acceder a la siguiente página (en inglés), donde encontrarás información adicional acerca de la sintaxis de los especificadores de formato en <span lang="en">Java</span>:</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a información adicional sobre los especificadores de formato." href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Formatter.html#syntax" target="_blank">Sintaxis de los especificadores de formato.</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_ii_ejercicios_resueltos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

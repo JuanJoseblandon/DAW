@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>13.- Comentarios | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-71"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li id="active"><a href="13_comentarios.html" class="active no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="12_conversin_de_tipo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_i_listado_de_ides.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">13.- Comentarios</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id187">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta187_66" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG02_Caso_Juan.jpg" alt="Programador trabajando con su ordenador. Vista frontal." title="Programador." style="float: right;" height="112" width="200" /></div>
+<div class="elemento_centrado credenciales">Ministerio de Educaci&oacute;n. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">Elaboraci&oacute;n propia.</div>
+</div>
+<p><strong>Juan </strong>ha podido comprobar los avances que ha hecho <strong>Mar&iacute;a</strong> con la programaci&oacute;n. Ya domina todos los aspectos b&aacute;sicos sobre sintaxis, estructura de un programa, variables y tipos de datos. <strong>Ada</strong> le acaba de comunicar que van a sumarse al proyecto dos personas m&aacute;s, <strong>Ana</strong> y <strong>Carlos</strong> que est&aacute;n haciendo las pr&aacute;cticas en la empresa, vienen del ciclo de Desarrollo de Aplicaciones Multiplaforma y Desarrollo de Aplicaciones Web, respectivamente.</p>
+<p>&mdash;Al principio de cada programa indicaremos una breve descripci&oacute;n y el autor. En operaciones complicadas podr&iacute;amos a&ntilde;adir un comentario, les ayudar&aacute; a entender mejor qu&eacute; es lo que hace &mdash;indica <strong>Juan</strong>.</p>
+<p>&mdash;De acuerdo &mdash;comenta <strong>Mar&iacute;a</strong>&mdash;, y podemos ir metiendo los comentarios de la herramienta esa que me comentaste, <strong>Javadoc</strong>, para que se cree una documentaci&oacute;n a&uacute;n m&aacute;s completa.</p>
+<p>&mdash; &iexcl;Aj&aacute;! , pues &iexcl;manos a la obra!</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id188">
+<div class="iDevice emphasis0">
+<div id="ta188_73" class="block iDevice_content">
+<p>Los comentarios son muy importantes a la hora de describir qué hace un determinado programa. A lo largo de la unidad los hemos utilizado para documentar los ejemplos y mejorar la comprensión del código. Para lograr ese objetivo, es normal que cada programa comience con unas líneas de comentario que indiquen, al menos, una breve descripción del programa, el autor o autora del mismo y la última fecha en que se ha modificado.</p>
+<p>Todos los lenguajes de programación disponen de alguna forma de introducir comentarios en el código. En el caso de <span lang="en">Java</span>, nos podemos encontrar los siguientes tipos de comentarios:</p>
+<ul class="lista_verificacion">
+<li><strong>Comentarios de una sola línea</strong>. Utilizaremos el delimitador <strong><span style="font-size: medium;"><code>//</code></span></strong> para introducir comentarios de sólo una línea.</li>
+</ul>
+<div class="highlighted-code language-java" style="width: 23.05em;">
+<pre><code>// comentario de una sola línea</code>	
+</pre>
+</div>
+<ul class="lista_verificacion">
+<li><strong>Comentarios de múltiples líneas</strong>. Para introducir este tipo de comentarios, utilizaremos una barra inclinada y un asterisco (<code>/*</code>), al principio del párrafo y un asterisco seguido de una barra inclinada (<code>*/</code>) al final del mismo. Aunque no es necesario poner asteriscos al comienzo de cada nueva línea dentro del comentario, suele hacerse para que de esa forma quede visualmente delimitado qué líneas abarca el comentario. De esta forma, en el ejemplo siguiente se ve cómo suele ponerse el comentario primero... y luego se repite con lo que sería  estrictamente necesario</li>
+</ul>
+<div class="highlighted-code language-java" style="width: 19.75em;">
+<pre><code>/* Esto es un comentario 
+ * de varias líneas  */
+
+/* Esto es otro comentario 
+ de varias líneas */</code></pre>
+</div>
+<ul class="lista_verificacion">
+<li><strong>Comentarios Javadoc</strong>. Utilizaremos los delimitadores /** y */. Al igual que con los comentarios tradicionales, el texto entre estos delimitadores será ignorado por el compilador. Este tipo de comentarios se emplean para generar documentación automática del programa. A través del programa <strong><span style="font-size: medium;"><code>javadoc</code></span></strong>, incluido en <span lang="en">Java</span> <acronym title="Standard Edition. " lang="en">SE</acronym> , se recogen todos estos comentarios y se llevan a un documento en formato <strong><span style="font-size: medium;"><code>.html</code></span></strong>. Al igual que en los comentarios de múltiples líneas, no serían necesarios los asteriscos  iniciales para la segunda, tercera y cuarta líneas del comentario siguiente.</li>
+</ul>
+<p> </p>
+<div class="highlighted-code language-java" style="width: 38.45em;">
+<pre><code>/**  Comentario de documentación.
+ * Javadoc extrae los comentarios del código y
+ * genera un archivo html a partir de este tipo de comentarios
+ */</code>
+</pre>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id209">
+<div class="iDevice emphasis_reflexionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h1 class="iDeviceTitle">Reflexiona</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta209_40" class="block iDevice_content">
+<p>Una buena pr&aacute;ctica de programaci&oacute;n es a&ntilde;adir en la &uacute;ltima llave que delimita cada bloque de c&oacute;digo, un comentario indicando a qu&eacute; clase o m&eacute;todo pertenece esa llave.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id190">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta190_47" class="block iDevice_content">
+<p>Si quieres ir familiarizándote con la información que hay en la web de <span lang="en">Oracle</span>, en el siguiente enlace puedes encontrar más información sobre la herramienta <code>Javadoc</code> incluida en el <span lang="en">Kit</span> de Desarrollo de <span lang="en">Java</span> <acronym title="Standard Edition. " lang="en">SE</acronym> (en inglés):</p>
+<div class="enlace_centrado"><a class="html" title="Acceder a la página de la herramienta Javadoc.  " href="http://download.oracle.com/javase/6/docs/technotes/guides/javadoc/index.html" target="_blank"> Página oficial de Oracle sobre la herramienta Javadoc</a></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="12_conversin_de_tipo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_i_listado_de_ides.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

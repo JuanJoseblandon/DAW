@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.6.- Operaciones CRUD con JPA </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-106"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Gestión de bases de datos: relacionales y orientadas a objetos. Persistencia de objetos</a></li>
+   <li><a href="1_bases_de_datos_relacionales.html" class="daddy">1.- Bases de datos relacionales</a>
+   <ul class="other-section">
+      <li><a href="11_el_desfase_objetorelacional.html" class="no-ch">1.1.- El desfase objeto-relacional</a></li>
+      <li><a href="12_jdbc.html" class="no-ch">1.2.- JDBC</a></li>
+      <li><a href="13__conectores_o_drivers.html" class="no-ch">1.3.-  Conectores o Drivers</a></li>
+      <li><a href="14_instalacin_de_la_base_de_datos.html" class="no-ch">1.4.- Instalación de la base de datos</a></li>
+      <li><a href="15_creacin_de_las_tablas_en_una_base_de_datos.html" class="daddy">1.5.- Creación de las tablas en una base de datos</a>
+      <ul class="other-section">
+         <li><a href="151_lenguaje_sql_i.html" class="no-ch">1.5.1.- Lenguaje SQL (I)</a></li>
+         <li><a href="152_lenguaje_sql_ii.html" class="no-ch">1.5.2.- Lenguaje SQL (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="16_establecimiento_de_conexiones.html" class="daddy">1.6.- Establecimiento de conexiones</a>
+      <ul class="other-section">
+         <li><a href="161_configurar_un_conector_jdbc_en_un_proyecto_netbeans.html" class="no-ch">1.6.1.- Configurar un conector JDBC en un proyecto NetBeans</a></li>
+         <li><a href="162_registrar_el_conector_jdbc.html" class="no-ch">1.6.2.- Registrar el conector JDBC</a></li>
+      </ul>
+      </li>
+      <li><a href="17_ejecucin_de_consultas_sobre_la_base_de_datos.html" class="daddy">1.7.- Ejecución de consultas sobre la base de datos</a>
+      <ul class="other-section">
+         <li><a href="171_adicin_de_informacin.html" class="no-ch">1.7.1.- Adición de información</a></li>
+         <li><a href="172_recuperacin_de_informacin_i.html" class="daddy">1.7.2.- Recuperación de información (I)</a>
+         <ul class="other-section">
+            <li><a href="1712_recuperacin_de_informacin_ii.html" class="no-ch">1.7.1.2.- Recuperación de información (II)</a></li>
+         </ul>
+         </li>
+         <li><a href="173_actualizacin_de_informacin.html" class="no-ch">1.7.3.- Actualización de información</a></li>
+         <li><a href="174_borrado_de_informacin.html" class="no-ch">1.7.4.- Borrado de información</a></li>
+         <li><a href="175_cierre_de_conexiones.html" class="no-ch">1.7.5.- Cierre de conexiones</a></li>
+         <li><a href="176_excepciones_en_jdbc.html" class="no-ch">1.7.6.- Excepciones en JDBC</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_persistencia_de_objetos.html" class="current-page-parent daddy">2.- Persistencia de objetos</a>
+   <ul>
+      <li><a href="21_qu_son_las_bases_de_datos_orientadas_a_objetos.html" class="no-ch">2.1.- ¿Qué son las bases de datos orientadas a objetos?</a></li>
+      <li><a href="22_qu_es_el_mapeado_de_objetos.html" class="no-ch">2.2.- ¿Qué es el mapeado de objetos?</a></li>
+      <li><a href="23_cmo_empiezo_a_usar_jpa.html" class="no-ch">2.3.- ¿Cómo empiezo a usar JPA?</a></li>
+      <li><a href="24_unidades_de_persistencia_i.html" class="daddy">2.4.- Unidades de persistencia (I)</a>
+      <ul class="other-section">
+         <li><a href="241_unidades_de_persistencia_ii.html" class="no-ch">2.4.1.- Unidades de persistencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="25_modelo_de_datos_en_jpa.html" class="daddy">2.5.- Modelo de datos en JPA</a>
+      <ul class="other-section">
+         <li><a href="251_entidades.html" class="no-ch">2.5.1.- Entidades</a></li>
+         <li><a href="252_atributos.html" class="no-ch">2.5.2.- Atributos</a></li>
+         <li><a href="253_relaciones_entre_entidades.html" class="no-ch">2.5.3.- Relaciones entre entidades</a></li>
+         <li><a href="254_relaciones_uno_a_uno.html" class="no-ch">2.5.4.- Relaciones uno a uno</a></li>
+         <li><a href="255_relaciones_uno_a_muchos.html" class="no-ch">2.5.5.- Relaciones uno a muchos</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="26_operaciones_crud_con_jpa.html" class="active daddy">2.6.- Operaciones CRUD con JPA</a>
+      <ul>
+         <li><a href="261_persistir_y_leer.html" class="no-ch">2.6.1.- Persistir y leer</a></li>
+         <li><a href="262__actualizar_y_borrar_instancias.html" class="no-ch">2.6.2.-  Actualizar y borrar instancias</a></li>
+      </ul>
+      </li>
+      <li><a href="27_jpql_i.html" class="daddy">2.7.- JPQL (I)</a>
+      <ul class="other-section">
+         <li><a href="271_jpql_ii.html" class="no-ch">2.7.1.- JPQL (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="255_relaciones_uno_a_muchos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="261_persistir_y_leer.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.6.- Operaciones CRUD con JPA</h1></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id163">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta163_147" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 250px;"><img src="fear-4208702_640.jpg" alt="Imagen que ilustra a una persona nerviosa." title="Nervios" style="float: right;" width="250" height="154" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/miedo-p%C3%BAblica-hablando-etapa-susto-4208702/" target="_blank" class="author" title="Acceder a la imagen  &quot;Nervios&quot;, de &quot;mohamed Hassan&quot;, en Pixabay. (Se abre en una nueva ventana)">mohamed Hassan</a> <span class="sep">(</span><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Licencia Pixabay</a><span class="sep">)</span></div>
+</div>
+<p><strong>Ada</strong> hoy está contenta, el cliente está a punto de firmar el contrato. Pero les ha pedido una última cosa, conocer de primera mano a quien se va a encargar del proyecto. Quieren mantener una charla con <strong>María</strong> y con <strong>Juan</strong>, y con otros miembros de la plantilla, para conocer su experiencia programando. <strong>Ada</strong> está contenta, pero <strong>Juan</strong> y <strong>María</strong> están un tanto nerviosos por la situación.</p>
+<p>Por lo visto, el cliente va a traer a una asesora, experta en desarrollo de aplicaciones, para que evalúe al equipo de desarrollo. Es normal que <strong>Juan</strong> y <strong>María</strong> se sientan intimidados. <strong>Juan</strong> le comenta a <strong>María</strong>:</p>
+<p><span>—</span>No se cómo puedes estar programando tan tranquila. Sabes que mañana nos entrevistará la asesora, estoy muy nervioso, ¿tú no?</p>
+<p><strong><span>—</span>Juan</strong>, lo único que podemos hacer ahora es acumular cuanta más experiencia mejor. Quiero terminar la parte donde se guarda el <span lang="en">ticket</span> en el almacén de datos. Prefiero centrarme en esto, así se me olvida un poco lo de mañana.</p>
+<p><span>—</span>Tienes razón <span>—</span>contesta <strong>Juan<span>—</span></strong>, voy a hacer lo mismo, así me sentiré más seguro para la reunión de mañana.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id93">
+<div class="iDevice emphasis0">
+<div id="ta93_154" class="block iDevice_content">
+<div class="exe-figure exe-image float-left license-CC-BY-SA" style="width: 250px;"><img src="data-2723105_640.jpg" alt="Imagen que muestra un espiral de datos." title="Datos." width="250" height="166" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/datos-conjunto-de-datos-palabra-2723105/" target="_blank" class="author" title="Acceder a la imagen  &quot;Datos&quot;, de &quot;geralt&quot;, en Pixabay. (Se abre en una nueva ventana)">geralt</a> <span class="sep">(</span><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Licencia Pixabay</a><span class="sep">)</span></div>
+</div>
+<p><br />¿Recuerdas qué son las operaciones <acronym title="Create, Read, Update and Delete" lang="en">CRUD</acronym> vistas con anterioridad?</p>
+<p>Pues eso vamos a hacer ahora con <acronym title="Java Persistence API" lang="en">JPA</acronym>: crear, leer, actualizar y borrar datos de un almacén de datos. </p>
+<p>Para realizar estas operaciones tan fundamentales en <acronym title="Java Persistence API" lang="en">JPA</acronym> necesitaremos el <code>EntityManager</code> del que se habló en apartados anteriores. Una vez creado el modelo de datos <acronym title="Java Persistence API" lang="en">JPA</acronym>, será bastante simple realizar estas operaciones, pero tendremos que tener en cuenta un par de conceptos primero.</p>
+<p>Lo primero que tienes que tener en cuenta es que muchas de las operaciones anteriores es conveniente realizarlas dentro de lo que denominamos una <strong>transacción</strong>. Lo cual tiene enormes ventajas.</p>
+<div class="destacado">
+<p><strong>Una transacción consiste en un grupo de operaciones que se realizan a la vez para garantizar que la información del almacén de datos tenga coherencia.</strong></p>
+</div>
+<p>Esto, en términos prácticos, significa que:</p>
+<ul class="lista_verificacion">
+<li>Cuando vayamos a realizar cualquier operación debemos primero <strong>iniciar la transacción</strong>.</li>
+<li>Después, indicamos el <strong>conjunto de acciones a realizar</strong>: borrar, crear, actualizar o leer tantas veces como necesitemos.</li>
+<li>Y por último, es necesario indicar que queremos <strong>confirmar las operaciones</strong> o bien <strong>deshacer los cambios</strong>.</li>
+</ul>
+<p>Y esto se traduce en que, cuando vayamos a realizar una operación con <acronym title="Java Persistence API" lang="en">JPA</acronym> es conveniente seguir la siguiente estructura:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>        EntityManager em = ...; //creación del entity manager (visto anteriormente)
+<br />        em.getTransaction().begin(); //Inicio de la transacción.
+        
+        //... conjunto de operaciones a realizar ...
+        
+        em.getTransaction().commit(); //Confirmar las operaciones        </code></pre>
+</div>
+</div>
+<p>En caso de que, a lo largo del código, se determine que la operación no debe realizarse y que deben deshacerse los cambios, en vez de <code>commit()</code> tendremos que usar el método <code>rollback()</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>        em.getTransaction().rollback(); //Deshacer las operaciones     </code></pre>
+</div>
+</div>
+<p>Lo segundo que tienes que tener en cuenta es que una instancia de entidad tiene cuatro estados diferentes. Una instancia de entidad solo puede estar en uno de los siguientes estados:</p>
+<ul class="lista_verificacion">
+<li>Una instancia de entidad puede ser <strong>nueva</strong> (<strong></strong><span lang="en"><strong>new</strong></span>). Esto ocurre cuando creamos, por primera vez, la instancia de una entidad que antes no existía. El hecho de crear una instancia de dicha entidad, no quiere decir que se vaya a almacenar directamente. Por ejemplo: 
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Producto p=new Producto("Cuchara Elegance", 3.49, "8480000145895"));</code></pre>
+</div>
+</div>
+</li>
+<li>Una instancia de entidad puede estar <strong>gestionada</strong> (<strong></strong><span lang="en"><strong><span lang="en">managed</span></strong></span>). Esto significa que el <code>EntityManager</code> tiene almacenada internamente la referencia a la instancia de entidad y cualquier cambio a la misma puede ser volcado a la base de datos en el siguiente <code>commit()</code>. Si una instancia de entidad está gestionada se puede decir que dicha instancia de entidad esta "conectada" al <code>EntityManager</code>. <span style="background-color: #ffff00;"></span></li>
+<li>Una instancia de entidad puede estar <strong>desligada</strong> (<strong></strong><span lang="en"><strong><span lang="en">detached</span></strong></span>). Cuando una instancia de entidad está desligada significa que el <code>EntityManager</code> ha dejado de referenciarla internamente. En otras palabras, la instancia de entidad en cuestión está "desconectada" del <code>EntityManager</code>. Viene a ser lo contrario a <strong>gestionada</strong>.</li>
+<li>Una instancia de entidad puede estar <strong>borrada</strong> (<strong></strong><span lang="en"><strong><span lang="en">removed</span></strong></span>). Cuando una instancia de entidad está borrada se ha eliminado del almacén de datos, y además, se ha desconectado del <code>EntityManager</code>. Eso sí, puede que para alguna parte de nuestro programa dicha información exista en memoria, porque haya alguna referencia a la misma en otra parte de nuestro código, pero a ojos de <acronym title="Java Persistence API" lang="en">JPA</acronym> es información eliminada.</li>
+</ul>
+<div class="destacado">
+<p><strong>Al conjunto de instancias de entidad gestionadas (<span lang="en">estado managed</span>) por un <code>EntityManager</code> se les denomina <em>contexto de persistencia</em> (<span lang="en">persistence context</span>). </strong></p>
+</div>
+<p>Ahora todos estos conceptos te sonarán un poco raros, pero en la práctica, solo implica realizar las operaciones de una forma concreta. Échale un vistazo a los siguientes apartados, y verás que realmente es más sencillo de lo que parece.</p>
+<div class="destacado">
+<p style="text-align: center;"><strong>Para saber si una entidad está siendo gestionada puedes usar el método <code>contains</code> del <code>EntityManager</code>.</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id171">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-171_141" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion171_141" class="block question iDevice_content">
+<p><strong>Elige la opción correcta para completar la siguiente frase. </strong></p>
+<p><strong>Una instancia de entidad será volcada al almacén de datos al hacer un <code>commit</code> ... </strong></p>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i171_144" class="sr-av"><a href="#answer-171_144">Opción 1</a></label><input type="radio" name="option171_141" id="i171_144" class="exe-radio-option exe-radio-option-0-4-171_141-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-171_144"><a name="answer-171_144"></a>
+<div id="taans171_144" class="block iDevice_content">
+<p>Si está desligada al <code>EntityManager</code>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i171_6894" class="sr-av"><a href="#answer-171_6894">Opción 2</a></label><input type="radio" name="option171_141" id="i171_6894" class="exe-radio-option exe-radio-option-1-4-171_141-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-171_6894"><a name="answer-171_6894"></a>
+<div id="taans171_6894" class="block iDevice_content">
+<p>Si está gestionada por el <code>EntityManager</code>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i171_6897" class="sr-av"><a href="#answer-171_6897">Opción 3</a></label><input type="radio" name="option171_141" id="i171_6897" class="exe-radio-option exe-radio-option-2-4-171_141-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-171_6897"><a name="answer-171_6897"></a>
+<div id="taans171_6897" class="block iDevice_content">
+<p>Al crearse.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i171_6900" class="sr-av"><a href="#answer-171_6900">Opción 4</a></label><input type="radio" name="option171_141" id="i171_6900" class="exe-radio-option exe-radio-option-3-4-171_141-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-171_6900"><a name="answer-171_6900"></a>
+<div id="taans171_6900" class="block iDevice_content">
+<p>Al estar en memoria.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b171_141" class="feedback js-hidden"><a name="sa0b171_141"></a>
+<div id="taf171_144" class=" iDevice_content">
+<p><strong>Incorrecto</strong>. Es justo lo contrario, si la instancia de la entidad está desligada no se enviará al almacén de datos.</p>
+</div>
+</div>
+<div id="sa1b171_141" class="feedback js-hidden"><a name="sa1b171_141"></a>
+<div id="taf171_6894" class=" iDevice_content">
+<p><strong>Correcto</strong>. Así es, si la instancia de la entidad está gestionada se modificará o creará en el almacén de datos.</p>
+</div>
+</div>
+<div id="sa2b171_141" class="feedback js-hidden"><a name="sa2b171_141"></a>
+<div id="taf171_6897" class=" iDevice_content">
+<p><strong>Incorrecto</strong>. No por crear una entidad, esta se almacena directamente en el almacén de datos.</p>
+</div>
+</div>
+<div id="sa3b171_141" class="feedback js-hidden"><a name="sa3b171_141"></a>
+<div id="taf171_6900" class=" iDevice_content">
+<p><strong>Incorrecto</strong>. Una instancia de entidad es como cualquier instancia de cualquier clase, si no es gestionada por el <code>EntityManager</code> no se almacenará en el almacén de datos..</p>
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-171_144">Incorrecto</a><span> (<a href="#sa0b171_141">Retroalimentación</a>)</span></li>
+<li><a href="#answer-171_6894">Opción correcta</a><span> (<a href="#sa1b171_141">Retroalimentación</a>)</span></li>
+<li><a href="#answer-171_6897">Incorrecto</a><span> (<a href="#sa2b171_141">Retroalimentación</a>)</span></li>
+<li><a href="#answer-171_6900">Incorrecto</a><span> (<a href="#sa3b171_141">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="255_relaciones_uno_a_muchos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="261_persistir_y_leer.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

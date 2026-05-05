@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3.- Añadir un manejador de evento </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-94"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Interfaces gráficas de usuario</a></li>
+   <li><a href="1_arquitectura_de_javafx.html" class="no-ch">1.- Arquitectura de JavaFX</a></li>
+   <li><a href="2_estructura_de_una_aplicacin.html" class="daddy">2.- Estructura de una aplicación</a>
+   <ul class="other-section">
+      <li><a href="21_grafo_de_escena.html" class="no-ch">2.1.- Grafo de escena</a></li>
+      <li><a href="22_instalar_sdk.html" class="no-ch">2.2.- Instalar SDK</a></li>
+      <li><a href="23_primer_ejemplo.html" class="no-ch">2.3.- Primer ejemplo</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_eventos.html" class="current-page-parent daddy">3.- Eventos</a>
+   <ul>
+      <li><a href="31_modelo_de_gestin_de_eventos.html" class="no-ch">3.1.- Modelo de gestión de eventos</a></li>
+      <li><a href="32_tipos_de_eventos.html" class="no-ch">3.2.- Tipos de eventos</a></li>
+      <li id="active"><a href="33_aadir_un_manejador_de_evento.html" class="active no-ch">3.3.- Añadir un manejador de evento</a></li>
+   </ul>
+   </li>
+   <li><a href="4_css.html" class="daddy">4.- CSS</a>
+   <ul class="other-section">
+      <li><a href="41_introduccin.html" class="no-ch">4.1.- Introducción</a></li>
+      <li><a href="42_hoja_de_estilo_por_defecto.html" class="no-ch">4.2.- Hoja de estilo por defecto</a></li>
+      <li><a href="43_hoja_de_estilo_especfica_de_la_escena.html" class="no-ch">4.3.- Hoja de estilo específica de la escena</a></li>
+      <li><a href="44_hoja_de_estilo_especfica_del_padre.html" class="no-ch">4.4.- Hoja de estilo específica del padre</a></li>
+      <li><a href="45_estilo_especfico_en_componente.html" class="no-ch">4.5.- Estilo específico en componente</a></li>
+   </ul>
+   </li>
+   <li><a href="5_layout_panes.html" class="daddy">5.- Layout panes</a>
+   <ul class="other-section">
+      <li><a href="51_absolute_layout.html" class="no-ch">5.1.- Absolute layout</a></li>
+      <li><a href="52_hbox.html" class="no-ch">5.2.- HBox</a></li>
+      <li><a href="53_vbox.html" class="no-ch">5.3.- VBox</a></li>
+      <li><a href="54_borderpane.html" class="no-ch">5.4.- BorderPane</a></li>
+      <li><a href="55_anchorpane.html" class="no-ch">5.5.- AnchorPane</a></li>
+      <li><a href="56_stackpane.html" class="no-ch">5.6.- StackPane</a></li>
+      <li><a href="57_flowpane.html" class="no-ch">5.7.- FlowPane</a></li>
+      <li><a href="58_tilepane.html" class="no-ch">5.8.- TilePane</a></li>
+      <li><a href="59_gridpane.html" class="no-ch">5.9.- GridPane</a></li>
+   </ul>
+   </li>
+   <li><a href="6_controles_ui.html" class="daddy">6.- Controles UI</a>
+   <ul class="other-section">
+      <li><a href="61_label_etiqueta_y_textfield_campo_de_texto.html" class="no-ch">6.1.- Label (Etiqueta) y TextField (Campo de texto)</a></li>
+      <li><a href="62_button_botn.html" class="daddy">6.2.- Button (Botón)</a>
+      <ul class="other-section">
+         <li><a href="621_aadir_imagenicono_a_botn.html" class="no-ch">6.2.1.- Añadir imagen/icono a botón</a></li>
+         <li><a href="622_validar_entrada.html" class="no-ch">6.2.2.- Validar entrada</a></li>
+      </ul>
+      </li>
+      <li><a href="63_men.html" class="no-ch">6.3.- Menú</a></li>
+      <li><a href="64_menubutton.html" class="no-ch">6.4.- MenuButton</a></li>
+      <li><a href="65_checkbox.html" class="no-ch">6.5.- CheckBox</a></li>
+      <li><a href="66_radiobutton_radiobotn.html" class="no-ch">6.6.- RadioButton (Radiobotón)</a></li>
+      <li><a href="67_combobox.html" class="daddy">6.7.- ComboBox</a>
+      <ul class="other-section">
+         <li><a href="671_seleccionar_un_valor.html" class="no-ch">6.7.1.- Seleccionar un valor</a></li>
+      </ul>
+      </li>
+      <li><a href="68_listview_lista.html" class="daddy">6.8.- ListView (Lista)</a>
+      <ul class="other-section">
+         <li><a href="681_obtener_valor_seleccionado.html" class="no-ch">6.8.1.- Obtener valor seleccionado</a></li>
+         <li><a href="682_seleccionar_varios_elementos.html" class="no-ch">6.8.2.- Seleccionar varios elementos.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="7_javafx_fxml.html" class="daddy">7.- JavaFX FXML</a>
+   <ul class="other-section">
+      <li><a href="71_javafx_scene_builder.html" class="no-ch">7.1.- JavaFX Scene Builder</a></li>
+      <li><a href="72_estructura_de_un_proyecto_fxml.html" class="daddy">7.2.- Estructura de un proyecto FXML</a>
+      <ul class="other-section">
+         <li><a href="721_el_fichero_fxml.html" class="no-ch">7.2.1.- El fichero .fxml</a></li>
+         <li><a href="722_controlador.html" class="no-ch">7.2.2.- Controlador</a></li>
+         <li><a href="723_clase_principal.html" class="no-ch">7.2.3.- Clase principal</a></li>
+         <li><a href="724_ejemplo_javafx_con_scene_builder_y_netbeans.html" class="no-ch">7.2.4.- Ejemplo JavaFX con Scene Builder y NetBeans</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="8_paso_de_informacin_entre_ventanas.html" class="daddy">8.- Paso de información entre ventanas</a>
+   <ul class="other-section">
+      <li><a href="81_paso_de_informacin_entre_ventanas_usando_fxml.html" class="no-ch">8.1.- Paso de información entre ventanas usando FXML</a></li>
+      <li><a href="82_paso_de_informacin_entre_ventanas_usando_fxml_ii.html" class="no-ch">8.2.- Paso de información entre ventanas usando FXML (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="9_grficos.html" class="daddy">9.- Gráficos</a>
+   <ul class="other-section">
+      <li><a href="91_ejemplo_diagrama_de_quesos.html" class="no-ch">9.1.- Ejemplo: diagrama de quesos</a></li>
+   </ul>
+   </li>
+   <li><a href="10_imagen_audio_y_vdeo.html" class="daddy">10.- Imagen, audio y vídeo</a>
+   <ul class="other-section">
+      <li><a href="101_imagen.html" class="no-ch">10.1.- Imagen</a></li>
+      <li><a href="102_audio.html" class="no-ch">10.2.- Audio</a></li>
+      <li><a href="103_vdeo.html" class="no-ch">10.3.- Vídeo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_lambda.html" class="no-ch">Anexo I.- Lambda</a></li>
+   <li><a href="anexo_ii_atributos_tipo_property.html" class="no-ch">Anexo II.- Atributos tipo Property</a></li>
+   <li><a href="anexo_iii_ejemplo_de_aplicacin.html" class="no-ch">Anexo III.- Ejemplo de aplicación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="32_tipos_de_eventos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_css.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.3.- Añadir un manejador de evento</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id289">
+<div class="iDevice emphasis0">
+<div id="ta289_69" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-copyright" style="width: 191px;"><a href="estructuraStageSceneNode.png" target="_blank"><img src="estructuraStageSceneNode_mini.png" alt="Esquema de estructura de aplicación" title="Estructura de aplicación" class="imagen_ampliable" style="float: right;" width="191" height="200" /></a><figcaption class="figcaption"><span class="author">José Javier Bermúdez Hernández</span>.
+<div class="elemento_centrado credenciales">Uso educativo-nc. Captura de pantalla de</div>
+<span class="license"><span class="sep">aplicación JavaFX</span></span></figcaption></figure>
+<p>Veamos, mediante un ejemplo, cómo trabajar con eventos. En concreto, vamos a ver una sencilla aplicación que tenga un botón, que al pulsar escriba por consola "Hola mundo".</p>
+<p>Creamos un nuevo proyecto Java y le damos un nombre, por ejemplo: "Hola Mundo".</p>
+<p>El código que escribimos en la clase <code>HolaMundo</code> realmente será muy básico y es el siguiente:</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id290">
+<div class="iDevice emphasis0">
+<div id="ta290_69" class="block iDevice_content">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>
+package holamundo;
+
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+/**
+ * Escribir hola mundo por consola cuando se pulse el botón de la ventana.
+ * 
+ * @author JJBH
+ */
+public class HolaMundo extends Application {
+    
+    @Override
+    public void start(Stage primaryStage) {
+        
+        // Crear botón
+        Button btn = new Button();
+        // Texto del botón
+        btn.setText("Escribir 'Hola mundo'");
+        // Crear manejador de evento para la acción que se debe hacer al clicar
+        // sobre el botón.
+        btn.setOnAction(new EventHandler&lt;ActionEvent&gt;() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                // Escribir por consola
+                System.out.println("¡Hola mundo!");
+            }
+        });
+        
+        // Crear un panel
+        StackPane root = new StackPane();
+        // Añadir el botón al panel.
+        root.getChildren().add(btn);
+        // Crear la escena
+        Scene scene = new Scene(root, 300, 250);
+        // Dar título al escenario
+        primaryStage.setTitle("Hola mundo.");
+        // Añadir la escena al escenario
+        primaryStage.setScene(scene);
+        // Mostrar el escenario
+        primaryStage.show();
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
+    
+}
+
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id291">
+<div class="iDevice emphasis0">
+<div id="ta291_69" class="block iDevice_content">
+<p>Como podemos observar en esta aplicación: La función principal de un botón es <strong>provocar una acción cuando sea pulsado</strong>. Se utiliza el método <code>setOnAction</code> de la clase <code>Button</code> para definir lo que ocurrirá cuando el usuario haga click en el botón. Podemos ver en el ejemplo, que en este caso será escribir por consola: <code>Hello World!</code>.</p>
+<p><code>ActionEvent</code> es un tipo de evento procesado por <code>EventHandler</code>. Un objeto <code>EventHandler</code> proporciona el <strong>método manejador</strong> para procesar una acción disparada para un botón. En el código anterior vemos cómo sobrescribir el método <code>handle</code>, de manera que cuando el usuario pulse el botón se muestre el texto indicado.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id292">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta292_66" class="block iDevice_content">
+<p>Por lo tanto, podr&iacute;amos resumir los pasos para manejar eventos en JavaFX en los siguientes tres:</p>
+<p><strong>1. Crear una fuente de evento (<span lang="en">event source</span>).</strong></p>
+<p>Una fuente de evento es un control, como por ejemplo un bot&oacute;n, que puede generar eventos. Por regla general, se declara la variable que hace referencia a la fuente de evento como un campo privado de clase, fuera del m&eacute;todo <code>start</code>:</p>
+<p>&nbsp;<code> private Button btn;</code></p>
+<p>&nbsp;Creamos el bot&oacute;n en el m&eacute;todo <code>start</code>:</p>
+<pre style="margin: 0; line-height: 125%;">Button btn <span style="color: #333333;">=</span> <span style="color: #008800; font-weight: bold;">new</span> Button<span style="color: #333333;">();</span>
+
+btn<span style="color: #333333;">.</span><span style="color: #0000cc;">setText</span><span style="color: #333333;">(</span><span style="background-color: #fff0f0;">"Escribir 'Hola mundo'"</span><span style="color: #333333;">);</span> <br /><br /></pre>
+<p><strong>&nbsp;</strong></p>
+<p><strong>2. Crear un manejador de evento (<span lang="en">event handler</span>).</strong></p>
+<p>Para crear un manejador de evento, debemos crear un objeto que implemente el <span lang="en">interface</span> <code>EventHandler</code> y proporcionar una implementaci&oacute;n para el m&eacute;todo <span lang="en"><code>handle</code></span>.</p>
+<p>&nbsp;</p>
+<p><strong>3. Registrar el manejador de evento en la fuente del evento.</strong></p>
+<p>De este modo, el m&eacute;todo <span lang="en"><code>handle</code></span> ser&aacute; invocado cuando ocurra el evento.</p>
+<p>Cualquier componente que sirve como fuente de evento proporciona un m&eacute;todo que permite registrar manejadores de evento para escuchar eventos. As&iacute;, por ejemplo, un control <code>Button</code> nos proporciona un m&eacute;todo <code>setOnAction</code> que nos deja registrar un manejador de evento para la acci&oacute;n a realizar.</p>
+<pre style="margin: 0; line-height: 125%;"><span style="color: #888888;">        // Crear manejador de evento para la acci&oacute;n que se debe hacer al clicar sobre el bot&oacute;n y registrarlo en la fuente de evento.</span>
+        btn<span style="color: #333333;">.</span><span style="color: #0000cc;">setOnAction</span><span style="color: #333333;">(</span><span style="color: #008800; font-weight: bold;">new</span> EventHandler<span style="color: #333333;">&lt;</span>ActionEvent<span style="color: #333333;">&gt;()</span> <span style="color: #333333;">{</span>
+            
+            <span style="color: #555555; font-weight: bold;">@Override</span>
+            <span style="color: #008800; font-weight: bold;">public</span> <span style="color: #333399; font-weight: bold;">void</span> <span style="color: #0066bb; font-weight: bold;">handle</span><span style="color: #333333;">(</span>ActionEvent event<span style="color: #333333;">)</span> <span style="color: #333333;">{</span>
+                <span style="color: #888888;">// Escribir por consola</span>
+                System<span style="color: #333333;">.</span><span style="color: #0000cc;">out</span><span style="color: #333333;">.</span><span style="color: #0000cc;">println</span><span style="color: #333333;">(</span><span style="background-color: #fff0f0;">"&iexcl;Hola mundo!"</span><span style="color: #333333;">);</span>
+            <span style="color: #333333;">}</span>
+        <span style="color: #333333;">});</span></pre>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="32_tipos_de_eventos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_css.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

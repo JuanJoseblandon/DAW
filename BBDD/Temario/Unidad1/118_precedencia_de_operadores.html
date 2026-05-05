@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.8.- Precedencia de operadores | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-69"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li class="current-page-parent"><a href="11_operadores_y_expresiones.html" class="current-page-parent daddy">11.- Operadores y expresiones</a>
+   <ul>
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li id="active"><a href="118_precedencia_de_operadores.html" class="active no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="117_trabajo_con_cadenas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_conversin_de_tipo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.8.- Precedencia de operadores</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id227">
+<div class="iDevice emphasis0">
+<div id="ta227_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG02_CONT_R36_Precedencia.jpg" alt="Imagen que muestra el orden estándar en la precedencia de las expresiones arimtéticas." title="Precedencia de operadores" style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-sa" title="CC by-sa" href="http://creativecommons.org/licenses/by-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-sa</span></a> <a title="HB" href="https://commons.wikimedia.org/wiki/File:Order_of_operations.svg" target="_blank">HB</a></div>
+</div>
+<p>El orden de precedencia de los operadores determina la secuencia en que deben realizarse las operaciones cuando en una expresión intervienen operadores de distinto tipo.</p>
+<p>Las reglas de precedencia de operadores que utiliza <span lang="en">Java</span> coinciden con las reglas de las expresiones del álgebra convencional. Por ejemplo:</p>
+<ul class="lista_verificacion">
+<li>La multiplicación, división y resto de una operación se evalúan primero. Si dentro de la misma expresión tengo varias operaciones de este tipo, empezaré evaluándolas de izquierda a derecha.</li>
+<li>La suma y la resta se aplican después que las anteriores. De la misma forma, si dentro de la misma expresión tengo varias sumas y restas empezaré evaluándolas de izquierda a derecha.</li>
+</ul>
+<p>A la hora de evaluar una expresión es necesario tener en cuenta la <strong>asociatividad</strong> de los operadores. La asociatividad indica qué operador se evalúa antes, en condiciones de igualdad de precedencia. Los operadores de asignación, el operador condicional (<code>?:</code>), los operadores incrementales (<code>++, --</code>) y el casting son asociativos por la derecha. El resto de operadores son asociativos por la izquierda, es decir, que se empiezan a calcular en el mismo orden en el que están escritos: de izquierda a derecha. Por ejemplo, en la expresión siguiente:</p>
+<div class="highlighted-code language-java" style="width: 11.5em;">
+<pre><code>10 / 2 * 5</code>
+</pre>
+</div>
+<p> </p>
+<p>Realmente la operación que se realiza es <code>(10 / 2 ) * 5</code>, porque ambos operadores, división y multiplicación, tienen igual precedencia y por tanto se evalúa primero el que antes nos encontramos por la izquierda, que es la división. El resultado de la expresión es <code>25</code>. Si fueran asociativos por la derecha, puedes comprobar que el resultado sería diferente, primero multiplicaríamos <code>2 * 5</code> y luego dividiríamos entre <code>10</code>, por lo que el resultado sería 1. En esta otra expresión:</p>
+<div class="highlighted-code language-java" style="width: 13.15em;">
+<pre><code>x = y = z = 1</code>
+</pre>
+</div>
+<p>Realmente la operación que se realiza es <code>x = (y = (z = 1))</code>. Primero asignamos el valor de <code>1</code> a la variable <code>z</code>, luego a la variable <code>y</code>, para terminar asignando el resultado de esta última asignación a <code>x</code>. Si el operador asignación fuera asociativo por la izquierda esta operación no se podría realizar, ya que intentaríamos asignar a <code>x</code> el valor de <code>y</code>, pero <code>y</code> aún no habría sido inicializada.</p>
+<p>En la tabla se detalla el orden de precedencia y la asociatividad de los operadores que hemos comentado en este apartado. Los operadores se muestran de mayor a menor precedencia.</p>
+<table class="tabla" summary="Cuadro o tabla de quince filas por tres columnas, de título &quot;Orden de precedencia de operadores en Java&quot;, de modo que para operador se indica su tipo y la asociatividad. Los operadores se encuentran en orden de mayor a menor precedencia. Debe ser leída en columnas de izquierda a derecha y de arriba abajo. "><caption>Orden de precedencia de operadores en Java</caption>
+<thead>
+<tr><th scope="col">Operador</th><th scope="col">Tipo</th><th scope="col">Asociatividad</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>++ -- </code></span></strong></td>
+<td style="text-align: center;">Unario, notación postfija</td>
+<td style="text-align: center;">Derecha</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>++ -- + -</code></span></strong><br /><strong><span style="font-size: medium;"> <code>(cast) ! ~ </code></span></strong></td>
+<td style="text-align: center;">Unario, notación prefija</td>
+<td style="text-align: center;">Derecha</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>* / % </code></span></strong></td>
+<td style="text-align: center;">Aritméticos</td>
+<td style="text-align: center;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>+ - </code></span></strong></td>
+<td style="text-align: center;">Aritméticos</td>
+<td style="text-align: center;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>&lt;&lt; &gt;&gt; &gt;&gt;&gt; </code></span></strong></td>
+<td style="text-align: center;">Bits</td>
+<td style="text-align: center;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>&lt; &lt;= &gt; &gt;=</code></span></strong></td>
+<td style="text-align: center;">Relacionales</td>
+<td style="text-align: center;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>== != </code></span></strong></td>
+<td style="text-align: center;">Relacionales</td>
+<td style="text-align: center;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>&amp; </code></span></strong></td>
+<td style="text-align: center;">Lógico, Bits</td>
+<td style="text-align: center;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>^ </code></span></strong></td>
+<td style="text-align: center;">Lógico, Bits</td>
+<td style="text-align: center;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>| </code></span></strong></td>
+<td style="text-align: center;">Lógico, Bits</td>
+<td style="text-align: center;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>&amp;&amp; </code></span></strong></td>
+<td style="text-align: center;">Lógico</td>
+<td style="text-align: center;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>|| </code></span></strong></td>
+<td style="text-align: center;">Lógico</td>
+<td style="text-align: center;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>?: </code></span></strong></td>
+<td style="text-align: center;">Operador condicional</td>
+<td style="text-align: center;">Derecha</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>= += -= *=</code></span></strong><br /><strong><span style="font-size: medium;"> <code>/= %= </code></span></strong></td>
+<td style="text-align: center;">Asignación</td>
+<td style="text-align: center;">Derecha</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionfpdIdevice em_iDevice em_iDevice_reflexionfpd" id="id216">
+<div class="iDevice emphasis_reflexionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h1 class="iDeviceTitle">Reflexiona</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta216_38" class="block iDevice_content">
+<p>&iquest;Crees que es una buena pr&aacute;ctica de programaci&oacute;n utilizar par&eacute;ntesis en expresiones aritm&eacute;ticas complejas, a&uacute;n cuando no sean necesarios?</p>
+</div>
+<form name="feedback-form-216" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedback216text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-216" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-216" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div id="ta216_39" class="block iDevice_content">
+<p>Probablemente acertaste. El uso de par&eacute;ntesis, incluso cuando no son necesarios, puede hacer m&aacute;s f&aacute;cil de leer las expresiones aritm&eacute;ticas complejas.</p>
+<p>No obstante, usar de forma exhaustiva los par&eacute;ntesis como si no existieran las reglas de precedencia de operadores puede hacer que las expresiones se alarguen y se hagan m&aacute;s inc&oacute;modas de manejar de forma innecesaria.</p>
+<p>En el t&eacute;rmino medio est&aacute; la virtud.</p>
+</div>
+</section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id203">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta203_149" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b203" class="block iDevice_content">
+<p>Dada la variable <code>d1</code> tipo <code>double</code> inicializada a <code>10</code> y la variable <code>d2</code> también tipo <code>double</code> inicializada a <code>20</code>, realiza las siguientes operaciones aritméticas y muestra el resultado por pantalla:</p>
+<ol class="lista_esquema">
+<li>Restamos <code>4</code> al doble de <code>d1</code>.</li>
+<li>Restamos <code>4</code> a <code>d1</code> y calculamos el doble.</li>
+<li>Sumamos <code>2</code> a <code>d1</code> y dividimos por <code>12</code>, a todo ello sumamos <code>d2</code>.</li>
+<li>Dividimos <code>d2</code> entre <code>d1</code>, y todo ello dividido entre <code>2</code>.</li>
+<li>Dividimos <code>d2</code> entre la mitad de <code>d1</code>.</li>
+<li>Restamos a <code>d2</code> un cuarto de <code>d1</code>.</li>
+<li>Restamos <code>d1</code> a <code>d2</code>, y todo ello lo dividimos entre <code>4</code>.</li>
+<li>Dividimos <code>d2</code> entre <code>d1</code>, y todo ello lo multiplicamos por <code>2</code>.</li>
+<li>Dividimos <code>d2</code> entre el doble de <code>d1</code>.</li>
+<li>Restamos al doble de <code>d2</code> un cuarto de <code>d1</code>.</li>
+<li>Multiplicamos <code>d2</code> por <code>100</code> menos <code>d1</code>.</li>
+<li>Multiplicamos <code>d2</code> por <code>50</code> mas <code>d1</code>, y todo ello lo dividimos por <code>10</code>.</li>
+</ol>
+<p>En este ejercicio es importante que intentes minimizar el uso de paréntesis, usándolos solo cuando sean necesarios.</p>
+<p>El resultado que debería aparecer por pantalla debería ser similar al siguiente:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Ej1: 16.0
+Ej2: 12.0
+Ej3: 21.0
+Ej4: 1.0
+Ej5: 4.0
+Ej6: 17.5
+Ej7: 2.5
+Ej8: 4.0
+Ej9: 1.0
+Ej10: 37.5
+Ej11: 1800.0
+Ej12: 120.0</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b203" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b203text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b203" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b203" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Una solución posible sería:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class EjercicioPrecedenciaOperadores {
+     public static void main(String[] args) {
+        double d1=10, d2=20;
+        double calc;
+        //Restamos 4 al doble de d1.
+        calc=d1*2 - 4;
+        System.out.println("Ej1: "+calc);
+        
+        //Restamos 4 a d1 y calculamos el doble.
+        calc=(d1-4)*2;
+        System.out.println("Ej2: "+calc);
+        
+        //Sumamos 2 a d1 y dividimos por 12, a todo ello sumamos d2.
+        calc=(d1+2)/12 + d2;
+        System.out.println("Ej3: "+calc);
+
+        //Dividimos d2 entre d1, y todo ello dividido entre 2.
+        calc=d2/d1/2;
+        System.out.println("Ej4: "+calc);                
+        
+        //Dividimos d2 entre la mitad de d1.
+        calc=d2/(d1/2);
+        System.out.println("Ej5: "+calc);                
+        
+        //Restamos a d2 un cuarto de d1.
+        calc=d2-d1/4;
+        System.out.println("Ej6: "+calc);                
+        
+        //Restamos d1 a d2, y todo ello lo dividimos entre 4.
+        calc=(d2-d1)/4;
+        System.out.println("Ej7: "+calc);
+        
+        //Dividimos d2 entre d1, y todo ello lo multiplicamos por 2.
+        calc=d2/d1*2;
+        System.out.println("Ej8: "+calc);
+        
+        //Dividimos d2 entre el doble de d1.
+        calc=d2/(d1*2);
+        System.out.println("Ej9: "+calc);        
+        
+        //Restamos al doble de d2 un cuarto de d1.
+        calc=d2*2 - d1/4;
+        System.out.println("Ej10: "+calc);
+        
+        //Multiplicamos d2 por 100 menos d1.
+        calc=d2 * (100 - d1);
+        System.out.println("Ej11: "+calc);
+        
+        //Multiplicamos d2 por 50 mas d1, y todo ello lo dividimos por 10.
+        calc=d2 * (50 + d1) / 10;
+        System.out.println("Ej12: "+calc);
+        
+    }
+}</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="117_trabajo_con_cadenas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_conversin_de_tipo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

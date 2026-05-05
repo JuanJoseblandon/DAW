@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.- Conjuntos de pares clave/valor o diccionarios | Estructuras de datos internas (memoria) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-61"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructuras de datos internas (memoria)</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos internas (memoria)</a></li>
+   <li><a href="1_clases_y_mtodos_genricos_i.html" class="daddy">1.- Clases y métodos genéricos (I)</a>
+   <ul class="other-section">
+      <li><a href="11_clases_y_mtodos_genricos_ii.html" class="no-ch">1.1.- Clases y métodos genéricos (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="2__introduccin_a_las_colecciones.html" class="no-ch">2.-  Introducción a las colecciones</a></li>
+   <li><a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="daddy">3.- Conjuntos (I).  ¿Qué son y cómo se declaran? HashSet</a>
+   <ul class="other-section">
+      <li><a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="no-ch">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</a></li>
+      <li><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="no-ch">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</a></li>
+      <li><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="no-ch">3.3.- Conjuntos (IV). Combinando datos de varias colecciones</a></li>
+      <li><a href="34_conjuntos_v_ordenando_sus_elementos.html" class="no-ch">3.4.- Conjuntos (V). Ordenando sus elementos</a></li>
+      <li><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="no-ch">3.5.- Conjuntos (VI). Ejemplos de uso.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_listas_i_definicin_y_diferencias_con_los_conjuntos.html" class="daddy">4.- Listas (I). Definición y diferencias con los conjuntos</a>
+   <ul class="other-section">
+      <li><a href="41_listas_ii_cmo_se_usan.html" class="no-ch">4.1.- Listas (II). ¿Cómo se usan?</a></li>
+      <li><a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="no-ch">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</a></li>
+      <li><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="no-ch">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="active daddy">5.- Conjuntos de pares clave/valor o diccionarios</a>
+   <ul>
+      <li><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="no-ch">5.1.- Recorrido de los elementos de un diccionario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="daddy">6.- Iteradores (I). ¿Qué son y cómo se usan?</a>
+   <ul class="other-section">
+      <li><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="no-ch">6.1.- Iteradores (II). ¿Qué características debemos considerar?</a></li>
+   </ul>
+   </li>
+   <li><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="daddy">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</a>
+   <ul class="other-section">
+      <li><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="no-ch">7.1.- Algoritmos (II). Ordenando los elementos de la colección</a></li>
+      <li><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="no-ch">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</a></li>
+      <li><a href="73_algoritmos_iv_operaciones_agregadas.html" class="daddy">7.3. Algoritmos (IV). Operaciones agregadas</a>
+      <ul class="other-section">
+         <li><a href="731_operaciones_de_reduccin.html" class="no-ch">7.3.1. Operaciones de reducción</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I. Ejercicios resueltos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.- Conjuntos de pares clave/valor o diccionarios</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id169">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta169_66" class="block iDevice_content">
+<div class="exe-figure exe-image float-left license-pd" style="width: 200px;"><img src="IdeaBombilla.jpg" alt="Bombilla con un filamento que forma la palabra idea." title="¡Idea!, se me encendió la bombilla" width="200" height="200" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/idea-bombilla-ilustraci%C3%B3n-1289871/" target="_blank" class="author" title="Acceder a la imagen &quot;¡Idea!, se me encendió la bombilla, de Alexas_Fotos en Pixabay. (Se abre en una nueva ventana)" rel="noopener">Alexas_Fotos </a><span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" target="_blank" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" rel="noopener">Licencia Pixabay</a>)</span></span></div>
+</div>
+<p><strong>Juan</strong> se quedó pensativo después de la conversación con <strong>Ana</strong>. <strong>Ana</strong> se fue a su puesto a seguir trabajando, pero él se quedó dándole vueltas al asunto...</p>
+<p>—Sí que está bien preparada <strong>Ana</strong>, me ha puesto en jaque y no sabía qué responder.</p>
+<p>El hecho de no poder ayudar a <strong>Ana</strong> le frustró un poco.</p>
+<p>De repente, apareció <strong>María</strong>. Entonces <strong>Juan</strong> aprovecha el momento para preguntar con más detalle acerca del trabajo de <strong>Ana</strong>. <strong>María</strong> se lo cuenta y de repente, se le enciende una bombilla a <strong>Juan</strong>:</p>
+<p>—Vale, creo que puedo ayudar a <strong>Ana</strong> en algo, le aconsejaré usar <strong>diccionarios</strong> y le explicaré cómo se usan.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id170">
+<div class="iDevice emphasis0">
+<div id="ta170_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 300px;"><img src="Diccionario.jpg" alt="Foto de un grueso diccionario de español jurídico." title="Diccionario" width="300" height="360" />
+<div class="figcaption"><a href="https://commons.wikimedia.org/w/index.php?curid=50839044" target="_blank" class="author" title="Acceder a la imagen &quot;Diccionario&quot; de Real Academia Española, en Wikimedia Commons. (Se abre en una nueva ventana)" rel="noopener">Real Academia Española. </a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Creative Commons BY-SA. (Se abre en una nueva ventana)" rel="noopener">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+<p>¿Cómo almacenarías los datos de un diccionario?</p>
+<p>Tenemos por un lado cada palabra y por otro su significado. Para resolver este problema existe precisamente un tipo de <a href="#tbc4d4d16-3cec-c930-1d09-26ee976f35d6" id="linkbc4d4d16-3cec-c930-1d09-26ee976f35d6" class="exe-tooltip definition-tt titled-tt" title="Array asociativo. | Ver la definición">array asociativo</a>: los <strong>diccionarios</strong> o <strong>maps</strong> que permiten almacenar pares de valores conocidos como  <strong>pares clave-valor</strong>. La clave se utiliza para acceder al valor, como una entrada de un diccionario permite acceder a su definición.</p>
+<p>En <span lang="en">Java</span> existe la interfaz <code>java.util.Map</code> que define los métodos que deben tener los mapas, y existen tres implementaciones principales de dicha interfaz:</p>
+<ul class="lista_verificacion">
+<li><code>java.util.HashMap</code><code></code></li>
+<li><code>java.util.TreeMap</code></li>
+<li><code>java.util.LinkedHashMap</code>.</li>
+</ul>
+<p>¿Te suenan? Claro que sí. Cada una de ellas, respectivamente, tiene características similares a <code>HashSet</code>, <code>TreeSet</code> y <code>LinkedHashSet</code>, tanto en funcionamiento interno como en rendimiento.</p>
+<p>Los <strong>maps utilizan clases genéricas</strong> para dar extensibilidad y flexibilidad, y permiten definir un tipo base para la clave, y otro tipo diferente para el valor. Veamos un ejemplo de cómo crear un map, que es extensible a los otros dos tipos de maps:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>HashMap&lt;String,Integer&gt; t=new HashMap&lt;String,Integer&gt;();</code></pre>
+</div>
+</div>
+<p>El mapa anterior permite usar cadenas como claves y almacenar de forma asociada a cada clave, un número entero. Veamos los métodos principales de la interfaz <code>Map</code>, disponibles en todas las implementaciones. En los ejemplos, <code>V</code> es el tipo base usado para el valor y <code>K</code> el tipo base usado para la clave:</p>
+<table class="tabla" summary="Tabla que muestra los métodos principales de los mapas. En la primera columna aparecen el listado de métodos y en la segunda una breve descripción de cada uno de ellos. "><caption>Métodos principales de los mapas.</caption>
+<thead>
+<tr><th scope="col">Método.</th><th scope="col">Descripción.</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row"><code>V put(K key, V value) </code></th>
+<td>Inserta un par de objetos clave (<code>key</code>) y valor (<code>value</code>) en el mapa. Si la llave ya existe en el mapa, entonces devolverá el valor asociado que tenía antes, si la clave no existía, entonces devolverá <code>null</code>.</td>
+</tr>
+<tr><th scope="row"><code>V get(Object key)</code></th>
+<td>Obtiene el valor asociado a una clave ya almacenada en el mapa. Si no existe la clave, devolverá <code>null</code>.</td>
+</tr>
+<tr><th scope="row"><code>V remove(Object key)</code></th>
+<td>Elimina la clave y el valor asociado. Devuelve el valor asociado a la clave, por si lo queremos utilizar para algo, o <code>null</code>, si la clave no existe.</td>
+</tr>
+<tr><th scope="row"><code>boolean containsKey(Object key)</code></th>
+<td>Devolverá <code>true</code> si el mapa tiene almacenada la clave pasada por parámetro, <code>false</code> en cualquier otro caso.</td>
+</tr>
+<tr><th scope="row"><code>boolean containsValue(Object value)</code></th>
+<td>Devolverá <code>true</code> si el mapa tiene almacenado el valor pasado por parámetro, <code>false</code> en cualquier otro caso.</td>
+</tr>
+<tr><th scope="row"><code>int size()</code></th>
+<td>Devolverá el número de pares clave y valor almacenado en el mapa.</td>
+</tr>
+<tr><th scope="row"><code>boolean isEmpty()</code></th>
+<td>Devolverá <code>true</code> si el mapa está vacío, <code>false</code> en cualquier otro caso.</td>
+</tr>
+<tr><th scope="row"><code>void clear()</code></th>
+<td>Vacía el mapa.</td>
+</tr>
+</tbody>
+</table>
+<div id="tbc4d4d16-3cec-c930-1d09-26ee976f35d6" class="exe-tooltip-text">
+<p>Es un tipo de <span lang="en">array</span> que en vez de permitir el acceso por posición numérica, permite el acceso a los elementos almacenados en base a un valor diferente, numérico o no, pero que no hace referencia a su posición, sino al contenido almacenado. Podríamos, por ejemplo, almacenar los datos de una persona y acceder a dichos datos en base a su número de documento de identidad. El número del documento sería la clave que permitiría acceder al resto de la información.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id171">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta171_151" class="block iDevice_content">
+<p><strong>Al igual que pasa con las colecciones anteriores (listas y conjuntos), puedes crear un map de la siguiente forma:</strong></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Map&lt;String,Integer&gt; miMapa=new HashMap&lt;String,Integer&gt;();</code></pre>
+</div>
+</div>
+<p><strong>En vez de usar <code>HashMap</code> como tipo para la variable (<code>HashMap miMapa</code> por ejemplo), puedes usar <code>Map</code> (por ejemplo: <code>Map miMapa</code>). Esto puedes hacerlo porque  <code>HashMap </code>es una implementación de la interfaz <code>Map</code>, y lo mismo es aplicable para el resto de implementaciones de <strong><code>Map</code></strong>: <code>LinkedHashMap</code>, <code>TreeMap</code>, <abbr title="etcétera">etc</abbr>. Esta será la forma más habitual y recomendable de declarar un diccionario o map.<br /></strong></p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ClozefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id172">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta172_41" class="block instructions iDevice_content">
+<strong>Completa el siguiente código para que al final se muestre el número 40 por pantalla:</strong>
+
+</section>
+<section class="activity" id="activity-172_42"><form name="cloze-form-172_42" action="#" class="activity-form cloze-activity-form"><div id="cloze172_42"><input type="hidden" name="clozeFlag172_42.strictMarking" id="clozeFlag172_42.strictMarking" value="false"/>
+<input type="hidden" name="clozeFlag172_42.checkCaps" id="clozeFlag172_42.checkCaps" value="false"/>
+<input type="hidden" name="clozeFlag172_42.instantMarking" id="clozeFlag172_42.instantMarking" value="false"/>
+<p>
+<code>HashMap< String,</code> <label for="clozeBlank172_42.0" class="sr-av">Rellenar huecos (1):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank172_42.0" style="width:6ch" /><span style="display:none" id="clozeAnswer172_42.0">JXUwMDBiJXUwMDI3JXUwMDA2JXUwMDFiJXUwMDA3JXUwMDA5
+</span> <code> > datos=new </code> <label for="clozeBlank172_42.1" class="sr-av">Rellenar huecos (2):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank172_42.1" style="width:7ch" /><span style="display:none" id="clozeAnswer172_42.1">JXUwMDEwJXUwMDI5JXUwMDEyJXUwMDFiJXUwMDI1JXUwMDJjJXUwMDEx
+</span> <code>< String,String >();</code><br/>
+<code>datos.</code> <label for="clozeBlank172_42.2" class="sr-av">Rellenar huecos (3):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank172_42.2" style="width:3ch" /><span style="display:none" id="clozeAnswer172_42.2">JXUwMDI4JXUwMDA1JXUwMDAx
+</span> <code>("A","44");</code><br/>
+<code>System.out.println(Integer.</code> <label for="clozeBlank172_42.3" class="sr-av">Rellenar huecos (4):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank172_42.3" style="width:8ch" /><span style="display:none" id="clozeAnswer172_42.3">JXUwMDI4JXUwMDExJXUwMDEzJXUwMDAxJXUwMDE2JXUwMDJjJXUwMDI3JXUwMDFh
+</span> <code>(datos.</code> <label for="clozeBlank172_42.4" class="sr-av">Rellenar huecos (5):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank172_42.4" style="width:3ch" /><span style="display:none" id="clozeAnswer172_42.4">JXUwMDNmJXUwMDAyJXUwMDEx
+</span> <code> ("</code>  <label for="clozeBlank172_42.5" class="sr-av">Rellenar huecos (6):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank172_42.5" style="width:1ch" /><span style="display:none" id="clozeAnswer172_42.5">JXUwMDE5
+</span>  <code>"))-</code> <label for="clozeBlank172_42.6" class="sr-av">Rellenar huecos (7):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank172_42.6" style="width:1ch" /><span style="display:none" id="clozeAnswer172_42.6">JXUwMDZj
+</span> <code>);</code>
+</p>
+<div class="block iDevice_buttons"><p><input class="button" type="submit" name="submit172_42" value="Enviar"  id="submit172_42" />
+<input type="button" name="restart172_42" value="Reiniciar" style="display:none" id="restart172_42" onclick="$exe.cloze.restart('172_42')" />
+ <input type="button" name="172_42showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton172_42" onclick="$exe.cloze.fillInputs('172_42')" />
+<span class="js-hidden js-warning">Habilitar JavaScript</span></p></div><div id="clozeScore172_42"></div></div></form></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id17">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta17_148" class="block story iDevice_content">
+<p><strong>Rellenando y recorriendo Maps</strong></p>
+</section>
+<section id="taquesQuestion0b17" class="block iDevice_content">
+<p>1. Rellena una estructura de tipo Map o diccionario (o array asociativo) donde las claves sean números enteros y los valores sean días de la semana aleatorios (valores de tipo <code>DayOfWeek</code>). Las claves serán los números enteros del 0 al 4.</p>
+<p>A continuación, muestra el contenido del diccionario de dos formas:</p>
+<ol>
+<li>Utilizando el método <code>toSTring</code> de la implementación de la clase <code>Map</code> que hayas elegido (con que lo intentes mostrar por pantalla con <code>print</code> o <code>printf</code> se llamará explícitamente).</li>
+<li>Mediante un bucle que vaya recorriendo las claves desde 0 hasta 4 y mostrando el valor asociado a cada clave.</li>
+</ol>
+<p>Un posible resultado podría ser el siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Map donde las claves son los enteros de 0 a 4 y los elementos asociados a cada clave son valores aleatorios de tipo DayOfWeek.
+
+1.Mostramos el contenido usando toString:
+Contenido del map: {0=MONDAY, 1=FRIDAY, 2=SUNDAY, 3=FRIDAY, 4=MONDAY}
+
+2. Mostramos el contenido recorriendo cada clave mediante un bucle:
+0 -&gt; MONDAY
+1 -&gt; FRIDAY
+2 -&gt; SUNDAY
+3 -&gt; FRIDAY
+4 -&gt; MONDAY</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b17" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b17text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b17" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b17" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>El código para crear y rellenar el map podría ser el siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaramos e instanciamos para el objeto estructura map
+Map&lt;Integer, DayOfWeek&gt; mapDias = new HashMap&lt;&gt;();
+
+// Rellenamos el map con cinco elementos donde las claves son enteros y los valores DayOfWeek
+for (int contador=0 ; contador&lt; 5; contador++ ) {
+    DayOfWeek diaAleatorio = DayOfWeek.of(1+(int)(Math.random()*7));
+    mapDias.put(contador, diaAleatorio);
+}
+</code></pre>
+</div>
+</div>
+<p>El código para mostrar el contenido del map podría ser algo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println ("Mostramos el contenido del map usando toString:");
+System.out.printf ("Contenido del map: %s\n", mapDias);
+
+System.out.println ("Mostramos el contenido map recorriendo sus claves:");
+for (int contador=0; contador&lt;5; contador++) {
+    System.out.printf ("%s -&gt; %s\n", contador, mapDias.get(contador));
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b17" class="block iDevice_content">
+<p>2. Este <code>Map</code> no parece aportar mucho con respecto a los arrays o las colecciones de tipo <code>List</code>. En el fondo es como una lista donde las claves son como las posiciones numéricas (de 0 en adelante). Ahora bien, ¿qué ventaja podríamos sacar a este <code>Map</code> o diccionario con claves numéricas con relación a un array o a una estructura de tipo <code>List</code>?</p>
+</section>
+<form name="feedback-form-quesFeedback1b17" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b17text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b17" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b17" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Si vamos a usar un map simplemente para asociar a los valores enteros 0, 1, 2, 3, ... un determinado valor (del tipo de objeto que sea), la verdad es que eso ya lo teníamos resuelto con las estructuras de tipo <code>List</code> e incluso con los arrays.</p>
+<p>La potencia de un diccionario o map donde las claves sean de tipo <code>Integer</code> es que no tenemos por qué definir un valor para toda la secuencia numérica desde un valor inicial 0 hasta un valor final. Podríamos, por ejemplo, empezar por el 3 y luego ir de cuatro en cuatro o incluso solamente tener valores asociados para determinadas claves arbitrarias. Por ejemplo:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>    3 -&gt; Azul
+    7 -&gt; Verde
+   11 -&gt; Rojo
+15002 -&gt; Naranja</code></pre>
+</div>
+</div>
+<p>Esto ya no es tan sencillo de hacer con estructuras de tipo <code>List</code> o array. Para intentar simular algo similar podríamos:</p>
+<ol>
+<li>Tener elementos desde 0 hasta 15002. Eso sería una auténtica locura: tener una lista o array de 15003 elementos con la mayoría de ellos con valor nulo.</li>
+<li>Disponer de dos listas o dos arrays para simular el map: la primera estructura guardaría las claves (3, 7, 11, 15002, <abbr title="etcétera">etc.</abbr>). La segunda almacenaría los valores ("Azul", "Verde", "Rojo", "Naranja", <abbr title="etcétera">etc.</abbr>).</li>
+</ol>
+<p>La segunda solución parece algo más razonable que la primera, pero aún así el uso del map resulta mucho más útil y sencillo.</p></section>
+</form>
+<section id="taquesQuestion2b17" class="block iDevice_content">
+<p>3. Teniendo en cuenta la reflexión anterior, prepara una estructura de tipo map en la que las claves sean números enteros y los valores asociados sean cadenas de caracteres con el nombre del número es español. Los únicos valores que utilizaremos como clave serán los números primos entre 2 y 20:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code> 2 -&gt; "dos"
+ 3 -&gt; "tres"
+ 5 -&gt; "cinco"
+ 7 -&gt; "siete"
+11 -&gt; "once"
+13 -&gt; "trece"
+17 -&gt; "diecisiete"
+19 -&gt; "diecinueve"</code></pre>
+</div>
+</div>
+<p>De esta manera tendremos una estructura con únicamente ocho elementos y no veinte.</p>
+<p>Si utilizas una estructura de tipo <code>HashMap</code>, obtendremos algo del estilo:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Contenido del map: {17=diecisiete, 2=dos, 3=tres, 19=diecinueve, 5=cinco, 7=siete, 11=once, 13=trece}
+</code></pre>
+</div>
+</div>
+<p>Si utilizamos una estructura de tipo <code>TreeMap</code>, obtendremos algo como:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Contenido del map: {2=dos, 3=tres, 5=cinco, 7=siete, 11=once, 13=trece, 17=diecisiete, 19=diecinueve}
+</code></pre>
+</div>
+</div>
+<p></p>
+</section>
+<form name="feedback-form-quesFeedback2b17" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b17text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b17" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback2b17" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>La declaración e instanciación, tanto si se trata de un <code>HashMap</code> como de un <code>TreeMap</code>, será más o menos igual:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Map&lt;Integer, String&gt; mapPrimos = new TreeMap&lt;&gt;();</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Map&lt;Integer, String&gt; mapPrimos = new HashMap&lt;&gt;();</code></pre>
+</div>
+</div>
+<p>Incluso también podríamos haberlo hecho con un <code>LinkedHashMap</code>:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>Map&lt;Integer, String&gt; mapPrimos = new LinkedHashMap&lt;&gt;();</code></pre>
+</div>
+</div>
+<p>Y el relleno sería exactamente igual:<br /><br /></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>mapPrimos.put (2, "dos");
+mapPrimos.put (3, "tres");
+mapPrimos.put (5, "cinco");
+mapPrimos.put (7, "siete");
+mapPrimos.put (11, "once");
+mapPrimos.put (13, "trece");
+mapPrimos.put (17, "diecisiete");
+mapPrimos.put (19, "diecinueve");</code></pre>
+</div>
+</div>
+<p>La diferencia entre las estructuras sería:</p>
+<ol>
+<li>en el caso de <code>HashMap</code>, las claves se almacenan en un <code>HashSet</code> y por tanto las claves no tendrán ningún tipo de orden;</li>
+<li>en el caso de <code>TreeMap</code>, las claves se almacenan en un <code>TreeSet</code> y por tanto las claves estarán ordenadas (en función del criterio de ordenación que tengan las claves del <code>Map</code>);</li>
+<li>en el caso de <code>LinkedHashMap</code>, las claves se almacenan en un <code>LinkedHashSet</code> y por tanto las claves estarán clasificadas en el orden de inserción.</li>
+</ol></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id20">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta20_148" class="block story iDevice_content">
+<p><strong>Maps con claves no numéricas</strong></p>
+<p>Hasta ahora hemos trabajado con estructuras de tipo <code>Map</code> donde las claves o índices eran valores enteros, bien de manera continua (empezando por 0 y terminando en un valor final, usando todos los valores intermedios), bien de manera irregular (usando tan solo algunos valores enteros concretos).</p>
+<p>Aunque en el segundo caso, ya se trata de un uso mucho más potente que el caso de los simples índices de un array o una lista, la potencia de los maps, diccionarios o arrays asociativos va mucho más allá: <strong>lo habitual es que las claves o índices no sean números enteros sino cadenas de caracteres, fechas o cualquier otro tipo de objeto que se nos ocurra y cuyos valores puedan servirnos como claves o índices para asociarlos a otros objetos</strong>.</p>
+</section>
+<section id="taquesQuestion0b20" class="block iDevice_content">
+<p>Crea una estructura de tipo <code>Map</code> cuyas <strong>claves</strong> sean <strong>cadenas de caracteres</strong> (objetos de tipo <code>String</code>) y los <strong>valores</strong> sean de tipo <strong>real</strong> (por ejemplo objetos de tipo <code>Double</code>).</p>
+<p>Los pares clave-valor que va a contener la estructura van a ser los siguientes (el diámetro de los planetas del sistema solar):</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>"Mercurio" -&gt; 4878
+"Venus" -&gt; 12100
+"Tierra" -&gt; 12756
+"Marte" -&gt; 6787
+"Júpiter" -&gt; 142984
+"Saturno" -&gt; 120536
+"Urano" -&gt; 51108
+"Neptuno" -&gt; 49538</code></pre>
+</div>
+</div>
+<p>Crea tres estructuras de tipo <code>Map</code> con esa información: una de tipo <code>HashMap</code>, otra de tipo <code>LinkedHashMap</code>y finalmente otra de tipo <code>TreeMap</code>. Muestra su contenido por pantalla y observa las diferencias. Funcionalmente se trata del mismo tipo de estructuras (tienen todos los métodos a los que obliga la interfaz <code>Map</code>), pero algunas de ellas ofrecen alguna funcionalidad extra desde el punto de vista de la ordenación de sus claves. ¿Sabrías deducir cuál?</p>
+</section>
+<form name="feedback-form-quesFeedback0b20" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b20text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b20" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b20" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>La declaración de las tres estructuras es prácticamente igual. Se trata de maps o conjuntos de pares clave-valor (o diccionarios o array asociativos) donde las claves son de tipo <code>String</code> y los valores de tipo <code>Double</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Map&lt;String, Double&gt; hashMapPlanetas = new HashMap&lt;&gt;();
+Map&lt;String, Double&gt; linkedHashPlanetas = new LinkedHashMap&lt;&gt;();
+Map&lt;String, Double&gt; treeMapPlanetas = new TreeMap&lt;&gt;();</code></pre>
+</div>
+</div>
+<p>El relleno es también idéntico. Mostramos uno de ellos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>hashMapPlanetas.put ("Mercurio", 4878.0);
+hashMapPlanetas.put ("Venus", 12100.0);
+hashMapPlanetas.put ("Tierra", 12756.0);
+hashMapPlanetas.put ("Marte", 6787.0);
+hashMapPlanetas.put ("Júpiter", 142984.0);
+hashMapPlanetas.put ("Saturno", 120536.0);
+hashMapPlanetas.put ("Urano", 51108.0);
+hashMapPlanetas.put ("Neptuno", 49538.0);</code></pre>
+</div>
+</div>
+<p>Y la salida por pantalla:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println("Mostramos el contenido de los map usando toString:");
+System.out.printf("Contenido del HashMap: %s\n", hashMapPlanetas);
+System.out.printf("Contenido del LinkedHashMap: %s\n", linkedHashPlanetas);
+System.out.printf("Contenido del TreeMap: %s\n", treeMapPlanetas);</code></pre>
+</div>
+</div>
+<p>Debería dar el siguiente resultado:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Mostramos el contenido de los map usando toString:
+Contenido del HashMap: {Saturno=120536.0, Marte=6787.0, Venus=12100.0, Urano=51108.0, Neptuno=49538.0, Júpiter=142984.0, Mercurio=4878.0, Tierra=12756.0}
+Contenido del LinkedHashMap: {Mercurio=4878.0, Venus=12100.0, Tierra=12756.0, Marte=6787.0, Júpiter=142984.0, Saturno=120536.0, Urano=51108.0, Neptuno=49538.0}
+Contenido del TreeMap: {Júpiter=142984.0, Marte=6787.0, Mercurio=4878.0, Neptuno=49538.0, Saturno=120536.0, Tierra=12756.0, Urano=51108.0, Venus=12100.0}
+</code></pre>
+</div>
+</div>
+<p>En el caso del <code>HashMap</code> <strong>no habrá ningún orden</strong> (se utilizó un conjunto basado en una función hash o "resumen" utilizada para llevar a cabo accesos directos de la clave al valor).</p>
+<p>En el caso del <code>LinkedHashMap</code> <strong>el orden será el de inserción en la estructura</strong> (se utilizó un conjunto o set basado en una lista enlazada).</p>
+<p>En el caso del <code>TreeMap</code> <strong>el orden será el de los objetos de la clave</strong>, que son de tipo <code>String</code> y la forma de ordenar o comparar objetos <code>String</code> es mediante el <strong>orden lexicográfico</strong>.</p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id38">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta38_128" class="block iDevice_content">
+<p>Si tienes curiosidad sobre cómo funcionan las <strong>estructuras de pares clave-valor</strong> en <strong>otros lenguajes de programación</strong>, aquí tienes algunos ejemplos<strong></strong>:</p>
+<ul>
+<li class="lista_verificacion"><a href="https://ellibrodepython.com/diccionarios-en-python" title="Acceder a la página &quot;Diccionarios en Python&quot; (se abre en una ventana nueva)." target="_blank" class="html">Diccionarios en Python</a>.</li>
+<li class="lista_verificacion"><a href="https://www.php.net/manual/es/language.types.array.php" title="Acceder a la página &quot;Arrays en PHP&quot; (se abre en una nueva ventana)" target="_blank" class="html">Arrays asociativos en PHP</a>.</li>
+<li class="lista_verificacion"><a href="https://lenguajejs.com/javascript/set-map/que-es-map-weakmap/" title="Acceder a la página &quot;Maps en Javascript&quot; (se abre en una nueva ventana)" target="_blank" class="html">Maps en Javascript</a>.</li>
+<li class="lista_verificacion"><a href="https://www.freecodecamp.org/espanol/news/c-map-explicado-con-ejemplos/" title="Acceder a la página &quot;Maps en C++&quot; (se abre en una nueva ventana)" target="_blank" class="html">Maps en C++</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

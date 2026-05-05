@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.- Iteradores (I). ¿Qué son y cómo se usan? | Estructuras de datos internas (memoria) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-62"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructuras de datos internas (memoria)</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos internas (memoria)</a></li>
+   <li><a href="1_clases_y_mtodos_genricos_i.html" class="daddy">1.- Clases y métodos genéricos (I)</a>
+   <ul class="other-section">
+      <li><a href="11_clases_y_mtodos_genricos_ii.html" class="no-ch">1.1.- Clases y métodos genéricos (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="2__introduccin_a_las_colecciones.html" class="no-ch">2.-  Introducción a las colecciones</a></li>
+   <li><a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="daddy">3.- Conjuntos (I).  ¿Qué son y cómo se declaran? HashSet</a>
+   <ul class="other-section">
+      <li><a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="no-ch">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</a></li>
+      <li><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="no-ch">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</a></li>
+      <li><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="no-ch">3.3.- Conjuntos (IV). Combinando datos de varias colecciones</a></li>
+      <li><a href="34_conjuntos_v_ordenando_sus_elementos.html" class="no-ch">3.4.- Conjuntos (V). Ordenando sus elementos</a></li>
+      <li><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="no-ch">3.5.- Conjuntos (VI). Ejemplos de uso.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_listas_i_definicin_y_diferencias_con_los_conjuntos.html" class="daddy">4.- Listas (I). Definición y diferencias con los conjuntos</a>
+   <ul class="other-section">
+      <li><a href="41_listas_ii_cmo_se_usan.html" class="no-ch">4.1.- Listas (II). ¿Cómo se usan?</a></li>
+      <li><a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="no-ch">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</a></li>
+      <li><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="no-ch">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</a></li>
+   </ul>
+   </li>
+   <li><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="daddy">5.- Conjuntos de pares clave/valor o diccionarios</a>
+   <ul class="other-section">
+      <li><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="no-ch">5.1.- Recorrido de los elementos de un diccionario</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="active daddy">6.- Iteradores (I). ¿Qué son y cómo se usan?</a>
+   <ul>
+      <li><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="no-ch">6.1.- Iteradores (II). ¿Qué características debemos considerar?</a></li>
+   </ul>
+   </li>
+   <li><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="daddy">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</a>
+   <ul class="other-section">
+      <li><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="no-ch">7.1.- Algoritmos (II). Ordenando los elementos de la colección</a></li>
+      <li><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="no-ch">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</a></li>
+      <li><a href="73_algoritmos_iv_operaciones_agregadas.html" class="daddy">7.3. Algoritmos (IV). Operaciones agregadas</a>
+      <ul class="other-section">
+         <li><a href="731_operaciones_de_reduccin.html" class="no-ch">7.3.1. Operaciones de reducción</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I. Ejercicios resueltos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.- Iteradores (I). ¿Qué son y cómo se usan?</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id176">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta176_66" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 300px;"><img src="Mapa_Key-value.jpg" alt="Mapa sobre el que hay una llave y una lupa." title="Buscar el valor asociado a la llave en el mapa" width="300" height="200" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/mapa-vacaciones-de-viaje-conducir-2789052/" target="_blank" class="author" title="Acceder a la imagen &quot;Buscar el valor asociado a la llave en el mapa&quot; de stevepb en Pixabay. (Se abre en una nueva ventana)" rel="noopener">stevepb</a> <span>(</span><a href="https://pixabay.com/es/service/license/" target="_blank" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" rel="noopener">Licencia Pixabay</a><span>)</span></div>
+</div>
+<p><strong>Juan</strong> se acercó a la mesa de <strong>Ana</strong> y le dijo:</p>
+<p>—<strong>María</strong> me ha contado la tarea que te ha encomendado y he pensado que quizás te convendría usar mapas en algunos casos. Por ejemplo, para almacenar los datos del pedido asociados con una etiqueta: nombre, dirección, fecha, <acronym title="etcétera.">etc.</acronym> Así creo que te será más fácil encontrar la información de un pedido concreto (valor) asociado a esa etiqueta (clave, o llave).</p>
+<p>—La verdad es que pensaba almacenar los datos del pedido en una clase especial llamada <code>Pedido</code>. No tengo ni idea de qué son los mapas —dijo <strong>Ana</strong>—, supongo que son como las listas. ¿Tienen iteradores?</p>
+<p>—Según me ha contado <strong>María,</strong> no necesitas hacer tanto, no es necesario crear una clase específica para los pedidos. Y respondiendo a tu pregunta, los mapas no tienen iteradores, pero hay una solución... Te explico.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id177">
+<div class="iDevice emphasis0">
+<div id="ta177_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-left license-pd" style="width: 300px;"><img src="Iterador.jpg" alt="Iustración de una lista de verificación con todos los elementos marcados como procesados." title="Iterador: todos procesados." width="300" height="200" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/distrito-anillo-ronda-gancho-2470306/" target="_blank" class="author" title="Acceder a la imagen &quot;Iterador: todos procesados&quot;m de geralt, en Pixabay. (Se abre en una nueva ventana)" rel="noopener">geralt</a> <span>(</span><a href="https://pixabay.com/es/service/license/" target="_blank" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" rel="noopener">Licencia Pixabay</a><span>)</span></div>
+</div>
+<p>¿Qué son los iteradores realmente?</p>
+<p>Son un mecanismo que nos permite recorrer todos los elementos de una colección de forma secuencial, sencilla y segura. Los mapas, como <strong>no derivan</strong> de la interfaz <code>Collection</code> realmente, no tienen iteradores, pero como veremos, existe un truco interesante.</p>
+<p>Los iteradores permiten recorrer las colecciones de dos formas: <strong>bucles <span lang="en">for-each</span></strong> (existentes en <span lang="en">Java</span> a partir de la versión 1.5) <strong>y a través de un bucle convencional creando un iterador</strong>. Como los bucles <strong><span lang="en">for-each</span></strong> ya los hemos visto antes y ha quedado patente su simplicidad, nos vamos a centrar en el otro método, especialmente útil en versiones antiguas de <span lang="en">Java</span>. Ahora la pregunta es: ¿cómo se crea un iterador? Pues invocando el método "<code>iterator()</code>" de cualquier colección. Veamos un ejemplo (en el ejemplo <code>t</code> es una colección cualquiera):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Iterator&lt;Integer&gt; it=t.iterator();</code></pre>
+</div>
+</div>
+<p>Fíjate que se ha especificado un parámetro para el tipo de dato genérico en el iterador (poniendo <code>"&lt;Integer&gt;</code>" después de <code>Iterator</code>). Esto es porque los iteradores son también clases genéricas, y es necesario especificar el tipo base que al que apuntará el iterador. Si no se especifica el tipo base del iterador, igualmente nos permitiría recorrer la colección, pero retornará objetos tipo <code>Object</code> (clase de la que derivan todas las clases), con lo que nos veremos obligados a forzar la conversión de tipo.</p>
+<p>Para recorrer y gestionar la colección, el iterador ofrece tres métodos básicos:</p>
+<ul class="lista_verificacion">
+<li><code>boolean hasNext()</code>. Devolverá <code>true </code>si le quedan más elementos a la colección por visitar. <code>false</code> en caso contrario.</li>
+<li><code>E next()</code>. Devolverá el siguiente elemento de la colección, si no existe siguiente elemento, lanzará una excepción (<code>NoSuchElementException</code> para ser exactos), con lo que conviene chequear primero si el siguiente elemento existe (para eso disponemos del método anterior).</li>
+<li><code>remove()</code>. Elimina de la colección el último elemento retornado en la última invocación de <code>next()</code> (no es necesario pasárselo por parámetro). <strong>¡Cuidado! Si <code>next()</code> no ha sido invocado todavía, saltará una incómoda excepción</strong>. Por eso, lo primero que debe hacerse antes de un <code>remove</code> es siempre un <code>next </code>(y antes de un <code>next</code>, un <code>hasNext</code> ).</li>
+</ul>
+<p>¿Cómo recorreríamos una colección con estos métodos? Pues de una forma muy sencilla. Un simple bucle mientras (<code>while</code>) con la condición <code>hasNext()</code> nos permite hacerlo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>while (it.hasNext()) { // Mientras que haya un siguiente elemento al que apunte el iterador, seguiremos en el bucle
+      Integer numero=it.next(); // Escogemos el siguiente elemento
+      if (numero%2==0) it.remove();  //Si es considerad oportuno, podemos eliminar el elemento extraído de la lista
+}</code></pre>
+</div>
+</div>
+<p>¿Qué elementos contendría la lista después de ejecutar el bucle? Efectivamente, solo los números impares.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id178">
+<div class="iDevice emphasis_reflexionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Reflexiona</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta178_40" class="block iDevice_content">
+<p>Las listas permiten acceso posicional a través de los métodos <code>get()</code> y <code>set()</code>, y acceso secuencial a través de iteradores.</p>
+<p>¿Cuál es para ti la forma más cómoda de recorrer todos los elementos? ¿Un <strong>acceso posicional</strong> a través un bucle "<code>for (i=0;i&lt;lista.size();i++)</code>" o un <strong>acceso secuencial</strong> usando un bucle "<code>while (iterador.hasNext())</code>"?</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id26">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta26_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b26" class="block iDevice_content">
+<p>Escribe un programa en Java que rellene una colección de tipo <code>List</code> con diez números enteros aleatorios entre 1 y 5. A continuación recórrelos utilizando un iterador.</p>
+<p>El resultado podría ser algo como:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Recorremos la estructura con un iterador
+ 5  2  5  4  5  2  1  2  3  5 </code></pre>
+</div>
+</div>
+<p></p>
+</section>
+<form name="feedback-form-quesFeedback0b26" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b26text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b26" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b26" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>La creación y rellenado de la lista ya lo hemos hecho en otras ocasiones:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Lista de enteros
+List&lt;Integer&gt; listaAleatorios = new LinkedList&lt;&gt;();
+
+// Añadimos elementos a la lista
+System.out.println();
+for (int contador=0; contador&lt;10; contador++) {
+    int numAleatorio = 1+ (int)(Math.random()*5);
+    listaAleatorios. add (numAleatorio);
+}
+System.out.println ("Lista creada y rellena.");</code></pre>
+</div>
+</div>
+<p>El recorrido con el iterador estaría basado en la condición <code>iterador.hasNext()</code> e iríamos recorriendo los elementos de la lista mediante el uso del método <code>iterador.next()</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println("Recorremos la estructura con un iterador");
+Iterator&lt;Integer&gt; iterador = listaAleatorios.iterator();  // Obtenemos un iterador para la lista
+while ( iterador.hasNext() ) {  // Mientras "haya siguiente" seguimos avanzando
+    Integer elemento = iterador.next();  // Obtenemos el siguiente elemento al que apunta el iterador
+    System.out.printf ("%2d ", elemento );
+}
+System.out.println();
+System.out.println();</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b26" class="block iDevice_content">
+<p>Recorre ahora la misma lista de las otras dos formas que ya conocías:</p>
+<ol>
+<li>Mediante un <strong>bucle <code>foreach</code></strong>.</li>
+<li>Mediante un <strong>bucle convencional</strong> utilizando un <strong>índice</strong> entero para las posiciones de la lista.</li>
+</ol>
+<p>El primer método podrás utilizarlo para cualquier tipo de estructura, sea lista (<code>List</code>) o conjunto (<code>Set</code>). El segundo solo podrás usarlo para estructuras que tengan "posición" (listas).</p>
+<p>El resultado obtenido debería ser el mismo que si se recorre usando un bucle <strong>convencional con un iterador</strong>:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Recorremos la estructura con un iterador
+ 5  2  5  4  5  2  1  2  3  5 
+
+Recorremos la estructura con un foreach
+ 5  2  5  4  5  2  1  2  3  5 
+
+Recorremos la estructura con un for convencional (con índices)
+ 5  2  5  4  5  2  1  2  3  5 </code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback1b26" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b26text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b26" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b26" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Ambos tipos de recorridos ya los hemos realizado  en otras ocasiones:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println("Recorremos la estructura con un foreach");
+for ( Integer elemento :  listaAleatorios ) {
+    System.out.printf ("%2d ", elemento );
+}
+System.out.println();
+System.out.println();
+
+System.out.println("Recorremos la estructura con un for convencional (con índices)");
+for ( int i= 0; i&lt;listaAleatorios.size() ; i++ ) {
+    Integer elemento = listaAleatorios.get(i);
+    System.out.printf ("%2d ", elemento );
+}
+System.out.println();</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.1.- Paso de información entre ventanas usando FXML </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-87"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Interfaces gráficas de usuario</a></li>
+   <li><a href="1_arquitectura_de_javafx.html" class="no-ch">1.- Arquitectura de JavaFX</a></li>
+   <li><a href="2_estructura_de_una_aplicacin.html" class="daddy">2.- Estructura de una aplicación</a>
+   <ul class="other-section">
+      <li><a href="21_grafo_de_escena.html" class="no-ch">2.1.- Grafo de escena</a></li>
+      <li><a href="22_instalar_sdk.html" class="no-ch">2.2.- Instalar SDK</a></li>
+      <li><a href="23_primer_ejemplo.html" class="no-ch">2.3.- Primer ejemplo</a></li>
+   </ul>
+   </li>
+   <li><a href="3_eventos.html" class="daddy">3.- Eventos</a>
+   <ul class="other-section">
+      <li><a href="31_modelo_de_gestin_de_eventos.html" class="no-ch">3.1.- Modelo de gestión de eventos</a></li>
+      <li><a href="32_tipos_de_eventos.html" class="no-ch">3.2.- Tipos de eventos</a></li>
+      <li><a href="33_aadir_un_manejador_de_evento.html" class="no-ch">3.3.- Añadir un manejador de evento</a></li>
+   </ul>
+   </li>
+   <li><a href="4_css.html" class="daddy">4.- CSS</a>
+   <ul class="other-section">
+      <li><a href="41_introduccin.html" class="no-ch">4.1.- Introducción</a></li>
+      <li><a href="42_hoja_de_estilo_por_defecto.html" class="no-ch">4.2.- Hoja de estilo por defecto</a></li>
+      <li><a href="43_hoja_de_estilo_especfica_de_la_escena.html" class="no-ch">4.3.- Hoja de estilo específica de la escena</a></li>
+      <li><a href="44_hoja_de_estilo_especfica_del_padre.html" class="no-ch">4.4.- Hoja de estilo específica del padre</a></li>
+      <li><a href="45_estilo_especfico_en_componente.html" class="no-ch">4.5.- Estilo específico en componente</a></li>
+   </ul>
+   </li>
+   <li><a href="5_layout_panes.html" class="daddy">5.- Layout panes</a>
+   <ul class="other-section">
+      <li><a href="51_absolute_layout.html" class="no-ch">5.1.- Absolute layout</a></li>
+      <li><a href="52_hbox.html" class="no-ch">5.2.- HBox</a></li>
+      <li><a href="53_vbox.html" class="no-ch">5.3.- VBox</a></li>
+      <li><a href="54_borderpane.html" class="no-ch">5.4.- BorderPane</a></li>
+      <li><a href="55_anchorpane.html" class="no-ch">5.5.- AnchorPane</a></li>
+      <li><a href="56_stackpane.html" class="no-ch">5.6.- StackPane</a></li>
+      <li><a href="57_flowpane.html" class="no-ch">5.7.- FlowPane</a></li>
+      <li><a href="58_tilepane.html" class="no-ch">5.8.- TilePane</a></li>
+      <li><a href="59_gridpane.html" class="no-ch">5.9.- GridPane</a></li>
+   </ul>
+   </li>
+   <li><a href="6_controles_ui.html" class="daddy">6.- Controles UI</a>
+   <ul class="other-section">
+      <li><a href="61_label_etiqueta_y_textfield_campo_de_texto.html" class="no-ch">6.1.- Label (Etiqueta) y TextField (Campo de texto)</a></li>
+      <li><a href="62_button_botn.html" class="daddy">6.2.- Button (Botón)</a>
+      <ul class="other-section">
+         <li><a href="621_aadir_imagenicono_a_botn.html" class="no-ch">6.2.1.- Añadir imagen/icono a botón</a></li>
+         <li><a href="622_validar_entrada.html" class="no-ch">6.2.2.- Validar entrada</a></li>
+      </ul>
+      </li>
+      <li><a href="63_men.html" class="no-ch">6.3.- Menú</a></li>
+      <li><a href="64_menubutton.html" class="no-ch">6.4.- MenuButton</a></li>
+      <li><a href="65_checkbox.html" class="no-ch">6.5.- CheckBox</a></li>
+      <li><a href="66_radiobutton_radiobotn.html" class="no-ch">6.6.- RadioButton (Radiobotón)</a></li>
+      <li><a href="67_combobox.html" class="daddy">6.7.- ComboBox</a>
+      <ul class="other-section">
+         <li><a href="671_seleccionar_un_valor.html" class="no-ch">6.7.1.- Seleccionar un valor</a></li>
+      </ul>
+      </li>
+      <li><a href="68_listview_lista.html" class="daddy">6.8.- ListView (Lista)</a>
+      <ul class="other-section">
+         <li><a href="681_obtener_valor_seleccionado.html" class="no-ch">6.8.1.- Obtener valor seleccionado</a></li>
+         <li><a href="682_seleccionar_varios_elementos.html" class="no-ch">6.8.2.- Seleccionar varios elementos.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="7_javafx_fxml.html" class="daddy">7.- JavaFX FXML</a>
+   <ul class="other-section">
+      <li><a href="71_javafx_scene_builder.html" class="no-ch">7.1.- JavaFX Scene Builder</a></li>
+      <li><a href="72_estructura_de_un_proyecto_fxml.html" class="daddy">7.2.- Estructura de un proyecto FXML</a>
+      <ul class="other-section">
+         <li><a href="721_el_fichero_fxml.html" class="no-ch">7.2.1.- El fichero .fxml</a></li>
+         <li><a href="722_controlador.html" class="no-ch">7.2.2.- Controlador</a></li>
+         <li><a href="723_clase_principal.html" class="no-ch">7.2.3.- Clase principal</a></li>
+         <li><a href="724_ejemplo_javafx_con_scene_builder_y_netbeans.html" class="no-ch">7.2.4.- Ejemplo JavaFX con Scene Builder y NetBeans</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="8_paso_de_informacin_entre_ventanas.html" class="current-page-parent daddy">8.- Paso de información entre ventanas</a>
+   <ul>
+      <li id="active"><a href="81_paso_de_informacin_entre_ventanas_usando_fxml.html" class="active no-ch">8.1.- Paso de información entre ventanas usando FXML</a></li>
+      <li><a href="82_paso_de_informacin_entre_ventanas_usando_fxml_ii.html" class="no-ch">8.2.- Paso de información entre ventanas usando FXML (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="9_grficos.html" class="daddy">9.- Gráficos</a>
+   <ul class="other-section">
+      <li><a href="91_ejemplo_diagrama_de_quesos.html" class="no-ch">9.1.- Ejemplo: diagrama de quesos</a></li>
+   </ul>
+   </li>
+   <li><a href="10_imagen_audio_y_vdeo.html" class="daddy">10.- Imagen, audio y vídeo</a>
+   <ul class="other-section">
+      <li><a href="101_imagen.html" class="no-ch">10.1.- Imagen</a></li>
+      <li><a href="102_audio.html" class="no-ch">10.2.- Audio</a></li>
+      <li><a href="103_vdeo.html" class="no-ch">10.3.- Vídeo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_lambda.html" class="no-ch">Anexo I.- Lambda</a></li>
+   <li><a href="anexo_ii_atributos_tipo_property.html" class="no-ch">Anexo II.- Atributos tipo Property</a></li>
+   <li><a href="anexo_iii_ejemplo_de_aplicacin.html" class="no-ch">Anexo III.- Ejemplo de aplicación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="8_paso_de_informacin_entre_ventanas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="82_paso_de_informacin_entre_ventanas_usando_fxml_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.1.- Paso de información entre ventanas usando FXML</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id196">
+<div class="iDevice emphasis0">
+<div id="ta196_69" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-CC-BY" style="width: 200px;"><img src="javafx.png" alt="JavaFX" title="JavaFX" style="float: right;" width="200" height="148" /><figcaption class="figcaption"><a href="https://www.flickr.com/photos/doglotion/2533151875/in/photolist-4RR4Nk-6h9Mg2-hga9f4-59ktPe-MQA6D-MQB2i-KxHLh-KxPwz-7AJqGs-5J3pTU-5J3p5N-5J3qaU-5HY7QX-66Gheu-5HY8nK-7p7UP6-8pszgk-9VbrgX-h1CmbY-h1ChoY-5HY8rz-5HY7p6-5J3qnJ-MQAaV-66GhfN-5J3q6y-5J3q45-5HY7F6-5HY7KV-egEe9S-5HY8A4-MQAAi-7pcf7q-7p8L2H-7p8z9a-7pc7sS-7pcyZq-8psmtr-7pcj8b-78jN4d-gdmBsz-8HPLXq-nsYzpM-gqknfj-gqk2Ls-go3EY1-gqkC9e-gqjUud-gqkrTM-6vUYrm" target="_blank" class="author">Andre Charland</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank" title="Creative Commons BY">CC BY</a><span class="sep">)</span></span></figcaption></figure>
+<p>En condiciones normales lo que haríamos sería crear un proyecto JavaFX eligiendo <code>JavaFX FMXL Application</code> que generaría un proyecto con tres archivos. Pero como se comentó anteriormente, con la versión con la que trabajamos actualmente, el asistente de NetBeans falla al intentar generar la plantilla inicial de un proyecto Java FXML, por lo que tendríamos de nuevo que trabajar a partir de la plantilla que proporcionamos en el apartado de estructura del proyecto en FXML.</p>
+<p>Podemos entonces renombrar los ficheros de la plantilla, de manera que tengamos los ficheros siguientes para tener  lo que toca al modelo, la vista y el controlador, nombrado así:</p>
+<ul class="lista_verificacion">
+<li><code>ComunicaVentanas.java</code>: donde se ejecuta el programa.</li>
+<li><code>Principal.fxml</code>: constituye la vista de nuestro programa.</li>
+<li><code>PrincipalController.java</code>: es el controlador de la vista.</li>
+</ul>
+<p>La idea en esta aplicación va a ser tener esta ventana principal con un botón para crear una nueva persona y otro botón para listar las personas. Al darle al botón de dar de alta una persona, se abrirá una nueva ventana donde se pedirá el nombre de la persona y cuando se vaya a cerrar esa ventana de alta, al pulsar el botón aceptar, en la ventana principal recogeremos el objeto persona creado en la ventana de alta y lo añadiremos a una lista de personas que gestionaremos desde el programa principal.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public void start(Stage stage) {
+   Parent root = FXMLLoader.load(getClass().getResource("Principal.fxml"));
+ 
+   Scene scene = new Scene(root);
+ 
+   stage.setScene(scene);
+   stage.show();
+ }</code></pre>
+</div>
+</div>
+<p>Este código que genera el asistente carga la vista por defecto. Se crea en un elemento <code>parent</code> pero nosotros vamos a utilizar un panel de tipo <code>AnchorPane</code> para acomodar los controles que usemos en nuestra interfaz de usuario. Modificaremos entonces el código para tener acceso al controlador de la vista. Y entonces así podremos enviar parámetros a los métodos que definiremos en el controlador. Mediante el método <code>setProgramaPrincipal()</code> creamos la comunicación entre el controlador y el programa principal.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class ComunicaVentanas extends Application {
+    
+    private Stage stagePrincipal;
+        
+    // Nombre de la ventana de la vista
+    private final String VENTANA_PRINCIPAL = "Principal.fxml" ;
+    private final String VENTANA_ALTA = "AltaPersona.fxml" ;
+    
+    
+    @Override
+    public void start(Stage stagePrincipal) throws Exception {
+        this.stagePrincipal = stagePrincipal;
+        mostrarVentanaPrincipal();
+
+    }
+
+    
+    /**
+     * Cargar la ventana principal. Tenemos acceso al controlador de la vista.
+     * Así podemos enviar parámetros a los métodos que definiremos en el
+     * controlador. En este caso será el método setProgramaPrincipal(), 
+     * con este método creamos la comunicación entre el controlador y el
+     * programa principal.
+     */
+    private void mostrarVentanaPrincipal() {
+        AnchorPane panelRaiz ;
+        try {
+            // Recoger el grafo resultante.
+            FXMLLoader loader = new FXMLLoader(ComunicaVentanas.class.getResource(VENTANA_PRINCIPAL));
+            // Carga la jerarquía de objetos desde un documento FXML.
+            panelRaiz = (AnchorPane) loader.load() ;
+            
+            // Añadir el panel a la escena
+            Scene scene = new Scene(panelRaiz) ;
+            // Establecer el título del escenario
+            stagePrincipal.setTitle("Ventana Principal") ;
+            // Añadir la escena al escenario
+            stagePrincipal.setScene(scene) ;
+            
+            // Obtener el controlador asociado
+            PrincipalController controller = loader.getController();
+            controller.setProgramaPrincipal(this);
+            // Mostrar ventana
+            stagePrincipal.show();
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+    }</code></pre>
+</div>
+</div>
+<p>Ahora podemos echar un vistazo al código que debe ir en nuestro controlador, de momento:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class PrincipalController implements Initializable {
+
+    // La referencia al programa principal se tiene en esta variable de tipo
+    // Principal. La declaramos privado para que solo se pueda acceder desde 
+    // este controlador. 
+    private ComunicaVentanas ProgramaPrincipal;
+
+    // Un elemento clave a destacar en JavaFX es la notación @FXML, que sirve
+    // para indicar al código que el elemento tiene referencia en el 
+    // archivo FXML de la vista (Principal.fxml).
+    @FXML
+    private void nuevaVentana(ActionEvent event) {
+        // Aquí pondremos la llamada para cargar la ventana de alta
+    }
+    
+    
+    public void setProgramaPrincipal(ComunicaVentanas ProgramaPrincipal) {
+        this.ProgramaPrincipal = ProgramaPrincipal;
+    }
+
+  
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }
+}</code></pre>
+</div>
+</div>
+<p>La referencia a nuestro programa principal se tiene en la variable de tipo <code>ComunicaVentanas</code> a la que llamamos <code>ProgramaPrincial</code> y está declarada de forma privada para que sólo se pueda acceder desde el controlador. De esta forma, podemos trabajar con diferentes ventanas y enviar parámetros, datos o valores entre las ventanas.<br /><br />Es importante fijarse en la anotación <code>@FXML</code>, que sirve para indicarle al código que el elemento tiene referencia en el archivo FXML de la vista. </p>
+<p>En principio, en la vista principal tendremos lo que podemos ver en código (aunque gráficamente se ve puede ver con <span lang="en">Scene Builder</span>), en el fichero <code>Principal.fxml</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;?import java.lang.*?&gt;
+&lt;?import java.util.*?&gt;
+&lt;?import javafx.scene.*?&gt;
+&lt;?import javafx.scene.control.*?&gt;
+&lt;?import javafx.scene.layout.*?&gt;
+
+&lt;AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" 
+     xmlns:fx="http://javafx.com/fxml/1" 
+      xmlns="http://javafx.com/javafx/8" fx:controller="comunicaventanas.PrincipalController"&gt;
+    &lt;children&gt;
+        &lt;Label fx:id="label" layoutX="126" layoutY="60" minHeight="16" minWidth="69" 
+                 text="Principal de personas" /&gt;
+        &lt;Button fx:id="button" layoutX="126" layoutY="90" onAction="#nuevaVentana" 
+                 text="Crear persona" /&gt;
+    &lt;/children&gt;
+&lt;/AnchorPane&gt;</code></pre>
+</div>
+</div>
+<p>Como vemos en este código el elemento <code>Button</code> tiene en su atributo <code>onAction</code> la referencia hacia nuestro método <code>nuevaVentana</code> en el controlador. Para invocar la nueva ventana, la ventana que será de alta de personas, ahora debemos modificar nuestro programa principal <code>Principal.java</code> y agregamos el siguiente código:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>    /**
+     * Muestra la ventana secundaria, la ventana para dar de alta.
+     */
+    protected void mostrarVentanaAltaPersona() {
+        try {
+            // Recoger el grafo resultante.
+            FXMLLoader loader = new FXMLLoader(ComunicaVentanas.class.getResource(VENTANA_ALTA));
+            // Crear un panel contenedor
+            AnchorPane panel = (AnchorPane) loader.load();
+            // Crear nueva ventana
+            Stage ventana = new Stage() ;
+            // Título de la ventana
+            ventana.setTitle("Alta de una persona");
+            // Especifica el propietario de esta ventana.
+            ventana.initOwner(stagePrincipal);
+            
+            // Añadir panel a la escena
+            Scene scene = new Scene(panel);
+            ventana.setScene(scene);
+            // Obtener el controlador asociado
+            AltaPersonaController controller = loader.getController();
+            controller.setStagePrincipal(ventana);
+            // Hacemos la ventana modal
+            ventana.initModality(Modality.WINDOW_MODAL);
+            // Mostrar la ventana
+            ventana.show();
+
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+    }</code></pre>
+</div>
+</div>
+<p>Y en el controlador, rellenamos el contenido del método <code>nuevaVentana</code> invocando el método que acabamos de ver:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@FXML
+private void nuevaVentana(ActionEvent event) {
+     ProgramaPrincipal.mostrarVentanaAltaPersona() ;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="8_paso_de_informacin_entre_ventanas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="82_paso_de_informacin_entre_ventanas_usando_fxml_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

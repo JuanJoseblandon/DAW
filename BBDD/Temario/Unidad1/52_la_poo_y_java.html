@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.2.- La POO y Java | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-19"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_el_lenguaje_de_programacin_java.html" class="current-page-parent daddy">5.- El lenguaje de programación Java</a>
+   <ul>
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li id="active"><a href="52_la_poo_y_java.html" class="active no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="51_breve_historia.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.2.- La POO y Java</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id47">
+<div class="iDevice emphasis0">
+<div id="ta47_73" class="block iDevice_content">
+<p>En <span lang="en">Java</span>, los datos y el c&oacute;digo (funciones o m&eacute;todos) se combinan en entidades llamadas <strong>objetos</strong>. El objeto tendr&aacute; un <strong>comportamiento</strong> (su c&oacute;digo interno) y un <strong>estado</strong> (los datos). Los objetos permiten la reutilizaci&oacute;n del c&oacute;digo y pueden considerarse, en s&iacute; mismos, como piezas reutilizables en m&uacute;ltiples proyectos distintos. Esta caracter&iacute;stica permite reducir el tiempo de desarrollo de <span lang="en">software</span>.</p>
+<p>Por simplificar un poco las cosas, un programa en <span lang="en">Java</span> ser&aacute; como una representaci&oacute;n teatral en la que debemos preparar primero cada personaje, definir sus caracter&iacute;sticas y qu&eacute; va a saber hacer. Cuando esta fase est&eacute; terminada, la obra se desarrollar&aacute; sacando personajes a escena y haci&eacute;ndoles interactuar.</p>
+<p>Al emplear los conceptos de la Programaci&oacute;n Orientada a Objetos (<acronym title="Programaci&oacute;n Orientada a Objetos.">POO</acronym>), <span lang="en">Java</span> incorpora las tres caracter&iacute;sticas propias de este paradigma:</p>
+<ul class="lista_verificacion">
+<li><strong> <a class="glosario">Encapsulaci&oacute;n<span><em>Encapsulaci&oacute;n</em>En programaci&oacute;n modular y m&aacute;s espec&iacute;ficamente en programaci&oacute;n orientada a objetos, se denomina as&iacute; al ocultamiento de los datos y elementos internos de un objeto. S&oacute;lo se puede modificar un objeto a trav&eacute;s de las operaciones definidas para &eacute;ste.</span></a>,</strong></li>
+<li><strong><a class="glosario">Herencia<span><em>Herencia</em>Mecanismo que permite derivar una clase de otra, de manera que extienda su funcionalidad.</span></a>,</strong></li>
+<li><strong><a class="glosario">Polimorfismo<span><em>Polimorfismo</em>Capacidad para que varias clases derivadas de una antecesora utilicen un mismo m&eacute;todo de forma diferente. Podemos crear dos clases distintas: Pez y Ave que heredan de la superclase Animal. La clase Animal tiene el m&eacute;todo abstracto mover que se implementa de forma distinta en cada una de las subclases (peces y aves se mueven de forma distinta).</span></a>.</strong></li>
+</ul>
+<p>Los patrones o tipos de objetos se denominan <a class="glosario">clases<span><em>Clase</em>Es una construcci&oacute;n que se utiliza como un modelo (o plantilla) para crear objetos de ese tipo. El modelo describe el estado y el comportamiento que todos los objetos de la clase comparten.</span></a> y los objetos que utilizan estos patrones o pertenecen a dichos tipos, se identifican con el nombre de <a class="glosario">instancias<span><em>Instancia</em>Una instancia se produce con la creaci&oacute;n de un objeto perteneciente a una clase (se dice que se instancia la clase). El objeto que se crea tiene los atributos, propiedades y m&eacute;todos de la clase a la que pertenece. Los objetos y sus caracter&iacute;sticas se usan en la construcci&oacute;n de programas, ya sea como contenedores de datos o como partes funcionales del programa. </span></a>. Pero, no hay que alarmarse, estos conceptos se ver&aacute;n m&aacute;s adelante en sucesivas unidades.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="PROG01_CONT_R14_ventajas_POO.png" target="_blank"><img src="PROG01_CONT_R14_ventajas_POO_miniatura.png" alt="Esquema que muestra las ventajas de la programaci&oacute;n orientada a objetos. El trabajo colaborativo, el reparto del trabajo y la reutilizaci&oacute;n del c&oacute;digo son las principales ventajas resaltadas en cuadros de color naranja. En verde aparecen dos consecuencias asociadas a la reutilizaci&oacute;n del c&oacute;digo: reducci&oacute;n de costes humanos/tiempo y mayor calidad en los desarrollos." class="imagen_ampliable" style="vertical-align: middle;" title="Ventajas de la Programaci&oacute;n Orientada a Objetos." width="188" height="132" /></a></div>
+<div class="elemento_centrado credenciales">Ministerio de Educaci&oacute;n. Uso educativo-nc. Elaboraci&oacute;n propia.</div>
+</div>
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG01_CONT_R15_poo.jpg" alt="Varios bloques Lego interconectados entre s&iacute;." title="Programaci&oacute;n Orientada a Objetos" class="elemento_derecha" style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc0" title="Dominio p&uacute;blico" href="http://creativecommons.org/publicdomain/zero/1.0/deed.es" target="_blank"><span class="transparente">Dominio p&uacute;blico</span></a>&nbsp;<a title="Priwo" href="http://commons.wikimedia.org/wiki/File:LEGO-02.jpg" target="_blank">Priwo</a></div>
+</div>
+<p>&nbsp;</p>
+<p>Otro ejemplo para seguir aclarando ideas, piensa en los bloques de juegos de construcci&oacute;n. Suponemos que conoces los cubos de pl&aacute;stico en varios colores y tama&ntilde;os. Por una de sus caras disponen de peque&ntilde;os conectores circulares y en otra de sus caras peque&ntilde;os orificios en los que pueden conectarse otros bloques, con el objetivo principal de permitir construir formas m&aacute;s grandes. Si usas diferentes piezas del lego puedes construir aviones, coches, edificios, <abbr title="etc&eacute;tera.">etc</abbr>. Si te fijas bien, cada pieza es un objeto peque&ntilde;o que puede unirse con otros objetos para crear objetos m&aacute;s grandes.</p>
+<p>Pues bien, aproximadamente as&iacute; es como funciona la programaci&oacute;n dirigida a objetos: unimos elementos peque&ntilde;os para construir otros m&aacute;s grandes. Nuestros programas estar&aacute;n formados por muchos componentes (objetos) independientes y diferentes; cada uno con una funci&oacute;n determinada en nuestro <span lang="en">software</span> y que podr&aacute; comunicarse con los dem&aacute;s de una manera predefinida.</p>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="51_breve_historia.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

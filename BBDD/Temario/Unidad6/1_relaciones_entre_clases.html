@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.- Relaciones entre clases. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li id="active"><a href="1_relaciones_entre_clases.html" class="active daddy">1.- Relaciones entre clases.</a>
+   <ul>
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="11_composicin_agregacin_asociacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.- Relaciones entre clases.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id1">
+<div class="iDevice emphasis0">
+<div id="ta1_73" class="block iDevice_content">
+<div class="elemento_derecha"><img alt="Esquema de la relación del ser humano con el medio ambiente (sol, plantas, animales, etc.) y la obtención de energía." class="elemento_derecha" src="PROG07_CONT_R02_Energia.jpg" style="width: 160px; height: 240px;" title="Energía." width="160" height="240" /> <figcaption class="figcaption">
+<div class="elemento_centrado credenciales">ITE. Félix Vallés Calvo. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">idITE=152093.</div>
+</figcaption></div>
+<p>Cuando estudiaste el concepto de clase, ésta fue descrita como una especie de mecanismo de definición (plantillas), en el que se basaría el entorno de ejecución a la hora de construir un objeto: un <strong>mecanismo de definición de objetos</strong>.</p>
+<p>Por tanto, a la hora de diseñar un conjunto de clases para modelar el conjunto de información cuyo tratamiento se desea automatizar, es importante establecer apropiadamente las posibles relaciones que puedan existir entre unas clases y otras.</p>
+<p>En algunos casos es posible que no exista relación alguna entre unas clases y otras, pero lo más habitual es que sí la haya: una clase puede ser una <a href="#tba24b69a-5374-7de6-b0fb-87bfc41a4d38" id="linkba24b69a-5374-7de6-b0fb-87bfc41a4d38" title="Especialización | Ver la definición" class="exe-tooltip definition-tt titled-tt"><strong>especialización</strong></a> de otra, o bien una <a href="#t3f6ed979-11db-98b3-9f98-c5d09392ff87" id="link3f6ed979-11db-98b3-9f98-c5d09392ff87" title="Generalización | Ver la definición" class="exe-tooltip definition-tt titled-tt"><strong>generalización</strong></a>, o una clase contiene en su interior objetos de otra, o una clase utiliza a otra, <abbr title="etcétera">etc</abbr>. Es decir, que entre unas clases y otras habrá que definir cuál es su relación (si es que existe alguna).</p>
+<p>Se pueden distinguir diversos tipos de relaciones entre clases:</p>
+<ul class="lista_verificacion">
+<li><strong>Clientela</strong> o <strong>uso</strong>. Cuando una clase emplea objetos de otra clase (por ejemplo, al pasarlos como parámetros a través de un método o al declarar objetos como variables locales dentro del cuerpo de un método).</li>
+<li><strong>Composición</strong>, <strong>agregación</strong>, <strong>asociación</strong>. Cuando alguno de los atributos de una clase es una referencia a un objeto de otra clase. Dependiendo de la dependencia entre el objeto "contenedor" y el "contenido" se puede hablar de unos casos u otros. En el caso de la <strong>composición</strong> entendemos que la existencia de los objetos contenidos es imprescindible para que pueda existir el objeto contenedor, de manera que se suelen instanciar en el constructor de la clase contenedora; mientras que si se trata de objetos que el objeto contendor puede incluir, pero también puede no hacerlo, se suele hablar de <strong>agregación</strong>. Además, en este caso, el objeto contenido podría existir de manera independiente a la existencia del objeto contenido. En el caso de la <strong>asociación</strong>, se trata de objetos que pueden existir de manera independiente, aunque en un momento dado pueden tener que algún tipo de relación entre ellos.</li>
+<li><strong>Anidamiento</strong>. Cuando se definen clases en el interior de otra clase. Se trataría de un tipo muy específico de composición en la que no solo ya la dependencia entre los objetos interiores y contenedores es muy fuerte, sino que incluso la definición de la clase interior solo existe dentro de la clase contenedora. Este tipo de relación es muy dependiente de la implementación del lenguaje con el que se vaya a trabajar (Java, <abbr title="C más más">C++</abbr>, Ruby, <span lang="en">Python</span>, <abbr title="etcétera">etc</abbr>.).</li>
+<li><strong>Herencia</strong>. Cuando una clase comparte determinadas características con otra (clase base), añadiéndole alguna funcionalidad específica (especialización). A esto será a lo que nos dedicaremos durante la mayor parte de la unidad.</li>
+</ul>
+<p>La relación de <strong>clientela</strong> la llevas utilizando desde que has empezado a programar en Java, pues desde tu clase principal (clase con método <strong><code>main</code></strong>) has estado declarando, creando y utilizando objetos de otras clases. Por ejemplo: si usas un objeto <strong><code>String</code></strong> dentro de la clase principal de tu programa, éste será cliente de la clase <strong><code>String</code></strong> (como sucederá con prácticamente cualquier programa que se escriba en Java). Es la relación fundamental y más habitual entre clases (la utilización de unas clases por parte de otras) y, por supuesto, la que más vas a utilizar tú también. De hecho, llevas haciéndolo desde que aprendiste a trabajar con objetos.</p>
+<div class="elemento_izquierda"><img alt="Grupo de tres toneles de madera." class="elemento_izquierda" src="PROG07_CONT_R03_Toneles.jpg" style="width: 200px; height: 156px;" title="Toneles." /> <figcaption class="figcaption">
+<div class="elemento_centrado credenciales">ITE. Félix Vallés Calvo. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">idITE=152018.</div>
+</figcaption></div>
+<p>La relación de <strong>composición</strong> es posible que ya la hayas tenido en cuenta si has definido clases que contenían (tenían como atributos) otros objetos en su interior, lo cual es bastante frecuente. Por ejemplo, si implementas una clase donde alguno de sus atributos es una fecha (un objeto de tipo <strong><code>LocalDate</code></strong>) ya se está produciendo una relación de tipo <strong>composición</strong> (tu clase “tiene” una fecha, es decir, está compuesta por un objeto <strong><code>LocalDate</code></strong> y por algunos elementos más).</p>
+<p>La relación de <strong>anidamiento</strong> (o <strong>anidación</strong>) es quizá menos usual, pues implica declarar unas clases dentro de otras (<strong>clases internas</strong> o <strong>anidadas</strong>). En algunos casos puede resultar útil para tener un nivel más de <a href="#td9561cea-2f16-ad0b-3c1d-ea34ebf05d94" id="linkd9561cea-2f16-ad0b-3c1d-ea34ebf05d94" title="Encapsulamiento o Encapsulación | Ver la definición" class="exe-tooltip definition-tt titled-tt"><strong>encapsulamiento</strong></a> y <a href="#tf08b236b-902a-debb-e720-c5695a80483a" id="linkf08b236b-902a-debb-e720-c5695a80483a" title="Ocultación | Ver la definición" class="exe-tooltip definition-tt titled-tt"><strong>ocultación</strong></a> de información. Un ejemplo típico de anidamiento es el de las <strong>clases anónimas</strong>, que suelen utilizarse en contextos donde hay que definir <strong>manejadores de eventos,</strong> como puede ser el caso de las <strong>interfaces gráficas de usuario</strong>.</p>
+<p>En el caso de la relación de <strong>herencia</strong> se trata de unas clases que derivan de otras. Un ejemplo en el que se produce habitualmente es en el caso de los objetos que forman parte de las <strong>interfaces gráficas</strong>, donde un componente hereda propiedades de sus ascendientes. Más delante lo verás al declarar componentes gráficos que hereden de algún otro componente (<strong><code>JFrame</code></strong>, <strong><code>JDialog</code></strong>, etc.).</p>
+<p>Podría decirse que tanto la <strong>composición</strong> como la <strong>anidación</strong> son casos particulares de <strong>clientela</strong>, pues en realidad en todos esos casos una clase está haciendo uso de otra (al contener atributos que son objetos de la otra clase, al definir clases dentro de otras clases, al utilizar objetos en el paso de parámetros, al declarar variables locales utilizando otras clases, <abbr title="etcétera.">etc.</abbr>).</p>
+<p>A lo largo de la unidad, irás viendo distintas posibilidades de implementación de clases haciendo uso de estas relaciones, centrándonos especialmente en el caso de la <strong>herencia</strong>, que es la que permite establecer las relaciones más complejas y enriquecedoras.</p>
+<div id="tba24b69a-5374-7de6-b0fb-87bfc41a4d38" class="exe-tooltip-text">
+<p>Relación entre dos clases donde una de ellas (la subclase) es una versión más especializada que la otra (la superclase), compartiendo características en común pero añadiendo ciertas características específicas que la especializan. El punto de vista inverso sería la <strong>generalización</strong>.</p>
+</div>
+<div id="t3f6ed979-11db-98b3-9f98-c5d09392ff87" class="exe-tooltip-text">
+<p>Relación entre dos clases donde una de ellas (la superclase) es una versión más genérica que la otra (la subclase), compartiendo características en común pero sin las propiedades específicas que caracterizan a la subclase. El punto de vista inverso sería la especialización.</p>
+</div>
+<div id="td9561cea-2f16-ad0b-3c1d-ea34ebf05d94" class="exe-tooltip-text">
+<p>Consiste en el ocultamiento del estado de un objeto (de sus datos miembro o atributos) de manera que sólo se puede cambiar mediante las operaciones (métodos) definidas para ese objeto. Cada objeto está aislado del exterior de manera que se protegen los datos contra su modificación por quien no tenga derecho a acceder a ellos, eliminando efectos secundarios y colaterales no deseados. Este modo de proceder permite que el usuario de una clase pueda obviar la implementación de los métodos y propiedades para concentrarse sólo en cómo usarlos. Por otro lado se evita que el usuario pueda cambiar su estado de manera imprevista e incontrolada.</p>
+</div>
+<div id="tf08b236b-902a-debb-e720-c5695a80483a" class="exe-tooltip-text">
+<p>Es el efecto que se consigue gracias a la encapsulación: se evita la visibilidad de determinados miembros de una clase al resto del código del programa para de ese modo comunicarse con los objetos de la clase únicamente a través de su interfaz (métodos).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id3">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-3_60" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion3_60" class="block question iDevice_content">
+<strong>¿Cuál crees que será la relación entre clases más habitual?</strong>
+
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i3_63" class="sr-av"><a href="#answer-3_63">Opción 1</a></label><input type="radio" name="option3_60" id="i3_63" class="exe-radio-option exe-radio-option-0-4-3_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-3_63"><a name="answer-3_63"></a>
+<div id="taans3_63" class="block iDevice_content">
+Clientela.
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i3_77" class="sr-av"><a href="#answer-3_77">Opción 2</a></label><input type="radio" name="option3_60" id="i3_77" class="exe-radio-option exe-radio-option-1-4-3_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-3_77"><a name="answer-3_77"></a>
+<div id="taans3_77" class="block iDevice_content">
+Anidación o anidamiento.
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i3_80" class="sr-av"><a href="#answer-3_80">Opción 3</a></label><input type="radio" name="option3_60" id="i3_80" class="exe-radio-option exe-radio-option-2-4-3_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-3_80"><a name="answer-3_80"></a>
+<div id="taans3_80" class="block iDevice_content">
+Herencia.
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i3_83" class="sr-av"><a href="#answer-3_83">Opción 4</a></label><input type="radio" name="option3_60" id="i3_83" class="exe-radio-option exe-radio-option-3-4-3_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-3_83"><a name="answer-3_83"></a>
+<div id="taans3_83" class="block iDevice_content">
+Entre las clases no existen relaciones. Son entidades aisladas en el sistema y sin relaciones con el exterior.
+
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b3_60" class="feedback js-hidden"><a name="sa0b3_60"></a>
+<div id="taf3_63" class=" iDevice_content">
+¡Así es! ¡Enhorabuena! Todas las clases hacen uso unas de otras.
+
+</div>
+</div>
+<div id="sa1b3_60" class="feedback js-hidden"><a name="sa1b3_60"></a>
+<div id="taf3_77" class=" iDevice_content">
+Incorrecto. Aunque pueden existir definiciones de unas clases dentro de otras, no es lo más habitual.
+
+</div>
+</div>
+<div id="sa2b3_60" class="feedback js-hidden"><a name="sa2b3_60"></a>
+<div id="taf3_80" class=" iDevice_content">
+¡Has fallado! Aunque la herencia es una de las relaciones más habituales entre clases, existen otro tipo de relaciones aún más habituales.
+
+</div>
+</div>
+<div id="sa3b3_60" class="feedback js-hidden"><a name="sa3b3_60"></a>
+<div id="taf3_83" class=" iDevice_content">
+¡Falso! Entre las clases de un programa existen siempre multitud de relaciones.
+
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-3_63">Opción correcta</a><span> (<a href="#sa0b3_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-3_77">Incorrecto</a><span> (<a href="#sa1b3_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-3_80">Incorrecto</a><span> (<a href="#sa2b3_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-3_83">Incorrecto</a><span> (<a href="#sa3b3_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="11_composicin_agregacin_asociacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

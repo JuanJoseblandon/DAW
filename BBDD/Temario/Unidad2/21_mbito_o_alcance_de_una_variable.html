@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.- Ámbito o alcance de una variable. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-52"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li class="current-page-parent"><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="current-page-parent daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul>
+      <li id="active"><a href="21_mbito_o_alcance_de_una_variable.html" class="active no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructuras_de_seleccin_o_condicionales.html" class="daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul class="other-section">
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li><a href="34_estructura_selectiva_mltiple_switch_i.html" class="daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul class="other-section">
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul class="other-section">
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li><a href="45_estructura_repetitiva_for_i.html" class="daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul class="other-section">
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul class="other-section">
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="2_estructura_secuencial_sentencias_y_bloques.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_estructuras_de_seleccin_o_condicionales.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.1.- Ámbito o alcance de una variable.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id168">
+<div class="iDevice emphasis0">
+<div id="ta168_154" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 189px;"><img src="geometry-1044090_640.jpg" alt="Mosaico de fórmulas geométricas y físicas" title="Cálculos" style="float: right;" width="180" height="118" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/geometr%C3%ADa-matem%C3%A1ticas-volumen-1044090/" title="Acceder a la web de descarga de la imagen de Gerd Altmann en Pixabay (se abre en una nueva ventana)" target="_blank" class="author"><span class="author">Gerd Altmann</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Hasta el momento habrás podido observar que las variables siempre se definen dentro de un bloque (entre llaves { ... } ). Por ahora no hemos tenido mucho problema porque la estructura de todos nuestros programas hasta el momento tenía un único bloque dentro de un mecanismo llamado <code>main</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class ProgramaEjemplo {
+
+    public static void main(String[] args) {
+        ...
+
+        // Aquí dentro, entre las llaves, estamos escribiendo el código de nuestros programas... 
+
+        ... 
+    }
+
+}</code></pre>
+</div>
+</div>
+<p>Más adelante, cuando aprendamos a implementar <strong>métodos</strong> dentro de una clase, volveremos a ver este tema con más profundidad al estudiar las variables locales, pero dado que a partir de ahora vamos a empezar a utilizar más de un bloque dentro de nuestros programas, es importante que introduzcamos el concepto de <strong>ámbito, contexto o alcance de una variable</strong> (también conocido como <em><span lang="en">scope</span></em>). El ámbito de una variable es la zona de código en la que esa variable "existe", es decir, donde puede ser utilizada tanto para obtener su valor como para cambiarlo (suponiendo que no haya sido definida como constante <code>final</code>).</p>
+<p><strong>Ese ámbito está definido por el bloque encerrado entre llaves donde ha sido declarada la variable</strong>. En el momento en que esa llave se cierre, la variable será eliminada y cualquier sentencia que intente hacer referencia a ella será considerada como un error, pues esa variable ya no existe, de manera que no podréis compilar ni ejecutar ese programa.</p>
+<p>Dado que en cuanto comencemos a trabajar con las estructuras de control no secuenciales (las condicionales y las repetitivas) vamos a tener un montón de bloques, algunos de ellos unos dentro de otros y en otros casos en bloques independientes, vamos a ver un ejemplo de bloques donde se vayan creando y destruyendo variables para que observéis cómo funciona. Tened en cuenta que cualquier variable declarada dentro de un bloque (inicio de la llave "{") dejará de existir en cuanto se cierre el bloque (fin de la llave "}") donde fue declarada.</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class ProgramaEjemploBloques {
+
+    public static void main(String[] args) {
+        // Bloque principal (0)
+        int num1;
+        num1 = 10;
+
+        System.out.println("En bloque principal (0)");
+        System.out.println("num1= " + num1);
+        System.out.println();
+        {
+            // Bloque 0.1
+            System.out.println("En bloque 0.1");
+            int num2;
+            num1++;
+            num2 = 20;
+            System.out.println("num1= " + num1);
+            System.out.println("num2= " + num2);
+            System.out.println();
+        }
+        System.out.println("En bloque principal (0)");
+        System.out.println("num1= " + num1);
+        //System.out.println("num2= " + num2); // Error
+        System.out.println();
+        {
+            // Bloque 0.2
+            System.out.println("En bloque 0.2");
+            int num2;
+            num1++;
+            num2 = 20;
+            System.out.println("num1= " + num1);
+            System.out.println("num2= " + num2);
+            System.out.println();
+            {
+                // Bloque 0.2.1
+                System.out.println("En bloque 0.2.1");
+                int num3 = 30;
+                num1++;
+                num2++;
+                System.out.println("num1= " + num1);
+                System.out.println("num2= " + num2);
+                System.out.println("num3= " + num3);
+                System.out.println();
+            }
+            System.out.println("En bloque 0.2");
+            System.out.println("num1= " + num1);
+            System.out.println("num2= " + num2);
+            //System.out.println("num3= " + num3);// Error
+            System.out.println();
+        }
+        System.out.println("En bloque principal (0)");
+        System.out.println("num1= " + num1);
+        //System.out.println("num2= " + num2);// Error
+        //System.out.println("num3= " + num3);// Error
+        System.out.println();
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id169">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta169_148" class="block story iDevice_content">
+<p>Fijándote en el código anterior, dado que se trata de un programa donde todo el flujo es secuencial (cada sentencia se ejecuta una detrás de otra) te debería resultar sencillo intuir cuál va a ser el resultado de su ejecución, ¿verdad?</p>
+</div>
+<div id="taquesQuestion0b169" class="block iDevice_content">
+<p>Intenta escribir en un papel, sin ejecutar el programa, cuál crees que sería el resultado de la ejecución del programa anterior.</p>
+</div>
+<form name="feedback-form-quesFeedback0b169" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b169text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b169" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b169" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La ejecución debería dar como resultado algo similar a lo siguiente:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>En bloque principal (0)
+num1= 10
+
+En bloque 0.1
+num1= 11
+num2= 20
+
+En bloque principal (0)
+num1= 11
+
+En bloque 0.2
+num1= 12
+num2= 20
+
+En bloque 0.2.1
+num1= 13
+num2= 21
+num3= 30
+
+En bloque 0.2
+num1= 13
+num2= 21
+
+En bloque principal (0)
+num1= 13</code></pre>
+</div>
+</div>
+<p></p></div>
+</form>
+<div id="taquesQuestion1b169" class="block iDevice_content">
+<p>Ahora bien, ¿por qué crees que las sentencias de las líneas 23, 48, 53 y 54 han sido marcadas como errores?</p>
+<p>¿Qué explicación darías para el caso de la <strong>línea 23</strong>?</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println("num2= " + num2);</code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback1b169" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b169text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b169" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b169" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En el caso de la <strong>línea 23</strong> debemos tener en cuenta que la variable <code>num2</code> fue declarada en la línea 19, dentro del bloque "etiquetado" como 0.1 (abierto en la línea 11), de manera que en cuanto ese bloque se cierre (línea 20), cualquier variable que hubiera sido declarada en su interior dejará de tener sentido en el resto del programa, salvo que sea de nuevo declarada. Por tanto, si se intenta acceder a esa variable fuera del bloque, el compilador de Java nos indicaría que se está produciendo un error léxico (una palabra que no conoce porque no es ni una palabra del lenguaje Java ni ninguna variable declarada por nosotros en ese ámbito).</p></div>
+</form>
+<div id="taquesQuestion2b169" class="block iDevice_content">
+<p>¿Y para el caso de la <strong>línea 48</strong>?</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println("num3= " + num3);</code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback2b169" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b169text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b169" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b169" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso se trata de una variable declarada dentro del bloque que hemos "identificado" como 0.2.1. Sin embargo, ese bloque se cerró en la línea 44, de manera que cualquier intento de acceso a esa variable en cualquier otra parte del programa que no sea en el interior del bloque nos producirá un error de compilación, nuevamente un error de tipo léxico (una palabra o símbolo "desconocido").</p>
+<p></p></div>
+</form>
+<div id="taquesQuestion3b169" class="block iDevice_content">
+<p>¿Y respecto a la línea 53?</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println("num2= " + num2);</code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback3b169" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b169text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b169" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback3b169" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Aquí nos vuelve a suceder lo mismo que con la <strong>línea 23</strong>: <code>num2</code> es una variable que no existe en el contexto o ámbito del bloque principal (o bloque 0), de manera que se trata del acceso una variable desconocida y que producirá un error léxico al intentar compilar.</p>
+<p>En este caso hemos tenido dos contextos anteriores (bloques 0.1 y 0.2) donde sí ha existido una variable que se llamaba así, pero no en el contexto o ámbito del bloque 0, donde esa variable no está declarada y por tanto no existe. Fíjate que los nombres de variable pueden repetirse en ámbitos diferentes, pues en realidad se trata de variables diferentes (son "creadas" al iniciarse el ámbito o bloque y "destruidas" al cerrarse).</p>
+<p>Lo que no puedes tener es variables que cuyo nombre coincida con el nombre de otra variable dentro de un bloque mayor en el que se encuentre incluido. Es decir, dentro del bloque 0.1 no puedes tener una variable que se llame <code>num1</code>, pues el bloque 0.1 está dentro del bloque 0 y por tanto ya existe una variable llamada <code>num1</code>. Sin embargo en el bloque 0.2 sí has podido declarar una variable <code>num2</code> porque ni en ese bloque ni en cualquier otro bloque más amplio en el que se encuentre incluido existe una variable con ese nombre. Es decir, cuanto más "pequeño" o "específico" sea el contexto (esté dentro de más llaves), más posibilidades hay de que tengamos más variables declaradas, mientras que cuanto más amplio sea (menos llaves), menos declaraciones de variables habrá.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="2_estructura_secuencial_sentencias_y_bloques.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_estructuras_de_seleccin_o_condicionales.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

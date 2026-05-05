@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.- Uso de la composición (I). Preservación de la ocultación en los getters. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_composicin.html" class="current-page-parent daddy">2.- Composición.</a>
+   <ul>
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li id="active"><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="active daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul>
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="21_sintaxis_de_la_composicin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id15">
+<div class="iDevice emphasis0">
+<div id="ta15_73" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="x-ray-g0b6e3236a_640.jpg" alt="Radiografía de una mano." title="Radiografía." class="elemento_izquierda" width="166" height="200" /></div>
+<div class="elemento_centrado credenciales"><a href="https://pixabay.com/es/photos/radiograf%C3%ADa-tratamiento-m%C3%A9dico-brazo-1704855/" title="Enlace a la web de descarga de com329329 (se abre en una nueva ventana)." target="_blank">com329329</a> (Licencia de contenido)</div>
+</div>
+<p>Como ya has observado, la relación de <strong>composición</strong> no tiene más misterio a la hora de implementarse que simplemente declarar <strong>atributos</strong> de las clases que necesites dentro de la clase que estés diseñando.</p>
+<p>Ahora bien, cuando escribas clases que contienen objetos de otras clases (lo cual será lo más habitual) deberás tener un poco de precaución con aquellos métodos que devuelvan información acerca de los <strong>atributos</strong> de la clase (métodos “<strong>obtenedores</strong>” o de tipo <strong><span lang="en">get</span></strong>).</p>
+<p>Como ya viste en la unidad dedicada a la creación de clases, lo normal suele ser declarar los <strong>atributos</strong> como <strong>privados</strong> (o <strong>protegidos</strong>, como veremos un poco más adelante) para ocultarlos a los posibles <strong>clientes</strong> de la clase (otros objetos que en el futuro harán uso de la clase). Para que otros objetos puedan acceder a la información contenida en los <strong>atributos, </strong>o al menos a una parte de ella, deberán hacerlo a través de <strong>métodos que sirvan de interfaz</strong>, de manera que sólo se podrá tener acceso a aquella información que el creador de la clase haya considerado oportuna. Del mismo modo, los <strong>atributos</strong> solamente serán modificados desde los métodos de la clase, que decidirán cómo y bajo qué circunstancias deben realizarse esas modificaciones. Con esa metodología de acceso se tenía perfectamente separada la parte de manipulación interna de los atributos de la <strong>interfaz</strong> con el exterior.</p>
+<p>Hasta ahora los métodos de tipo <strong><span lang="en">get</span> </strong>devolvían <strong>tipos primitivos</strong>, es decir, copias del contenido (a veces con algún tipo de modificación o de formato) que había almacenado en los <strong>atributos</strong>, pero los atributos seguían “a salvo” como elementos privados de la clase. Pero, a partir de este momento, al tener objetos dentro de las clases y no solo tipos primitivos, es posible que en un determinado momento interese devolver un <strong>objeto completo</strong>.</p>
+<p>Ahora bien, cuando vayas a devolver un objeto habrás de obrar con mucha precaución. Si en un método de la clase devuelves directamente un objeto que es un atributo, estarás ofreciendo directamente una <strong>referencia</strong> a un objeto atributo que probablemente has definido como privado. ¡De esta forma estás <strong>volviendo a hacer público un atributo que inicialmente era</strong> privado!</p>
+<p>Para evitar ese tipo de situaciones (ofrecer al exterior referencias a objetos privados que podrían ser modificados) puedes optar por diversas alternativas, procurando siempre evitar la devolución directa de un atributo que sea un objeto:</p>
+<ul class="lista_verificacion">
+<li>una opción podría ser devolver siempre tipos primitivos;</li>
+<li>otra alternativa podría ser la de obligar a que los objetos contenidos que vayan a ser devueltos sean de clases inmutables, con lo cual, aunque se tenga acceso a ellos, no podrán ser modificados;</li>
+<li>dado que lo anterior no siempre es posible, o como mínimo poco práctico, otra posibilidad es crear un nuevo objeto que sea una copia del atributo que quieres devolver y utilizar ese objeto como valor de retorno. Es decir, <strong>crear una copia del objeto</strong> especialmente para devolverlo. De esta manera, el código cliente de ese método podrá manipular a su antojo ese nuevo objeto, pues no será una referencia al atributo original, sino un nuevo objeto con el mismo contenido.</li>
+</ul>
+<p>Por último, debes tener en cuenta que es posible que en algunos casos sí se necesite realmente la referencia al atributo original (algo muy habitual en el caso de atributos estáticos). En tales casos, no habrá problema en devolver directamente el atributo para que el código llamante (o código cliente) haga el uso que estime oportuno de él. Será responsabilidad del programador que haga la llamada para obtener el objeto contenido el uso o modificación que haga de sus atributos.</p>
+<p class="destacado"><strong>Debes evitar por todos los medios la devolución de un atributo que sea una referencia a un objeto modificable (estarías dando directamente una referencia al atributo, visible y manipulable desde fuera), salvo que se trate de un caso en el que deba ser así.</strong></p>
+<p>Para entender estas situaciones un poco mejor, podemos volver al objeto <strong><code>Rectangulo</code></strong> y observar sus nuevos métodos de tipo <strong><span lang="en">get</span></strong>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id16">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicios resueltos</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta16_67" class="block story iDevice_content">
+<p><strong>Getters de la clase <code>Rectangulo</code></strong></p>
+</div>
+<div id="taquesQuestion0b16" class="block iDevice_content">
+<p>Dada la clase <code>Rectangulo</code>, escribe sus nuevos métodos <code>getVertice1</code> y <code>getVertice2</code> para que devuelvan los vértices inferior izquierdo y superior derecho del rectángulo (objetos de tipo <code>Punto</code>), teniendo en cuenta su nueva estructura de atributos (dos objetos de la clase <code>Punto</code>, en lugar de cuatro elementos de tipo <code>double</code>).<strong> </strong></p>
+</div>
+<form name="feedback-form-quesFeedback0b16" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b16text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b16" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b16" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Los métodos de obtención de vértices devolverán objetos de la clase <strong><code>Punto</code></strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public Punto getVertice1 () {
+     return this.vertice1;
+}
+ 
+public Punto getVertice2 () {
+     return this.vertice2;
+}</code></pre>
+</div>
+</div>
+<p>Esto funcionaría perfectamente, pero deberías tener cuidado con este tipo de métodos que devuelven directamente una referencia a un objeto atributo que probablemente has definido como privado. Estás de alguna manera haciendo público un atributo que fue declarado como privado.</p>
+<p>Para evitar que esto suceda bastaría con crear un nuevo objeto que fuera una copia del atributo que se desea devolver (en este caso un objeto de la clase <strong><code>Punto</code></strong>).</p>
+<p></p></div>
+</form>
+<div id="taquesQuestion1b16" class="block iDevice_content">
+<p>Si al resolver el anterior ejercicio, simplemente hemos devuelto una referencia a los objetos <strong><code>vertice1</code></strong> o <strong><code>vertice2</code></strong>, hemos de tener en cuenta que, de alguna manera, estamos haciendo público un atributo que fue declarado como privado y que podría ser susceptible de modificación desde fuera de la clase, sin ningún control desde ningún método. Si no nos importa que eso pueda suceder, aquí habría terminado nuestra labor.</p>
+<p>Ahora bien, si deseamos evitar que pueda producirse esa situación, ¿qué podríamos hacer?</p>
+</div>
+<form name="feedback-form-quesFeedback1b16" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b16text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b16" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b16" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso, en los métodos de devolución de los vértices podría crearse un nuevo objeto que fuera una copia del atributo que se desea devolver (en este caso objetos de la clase <strong><code>Punto</code></strong>).</p>
+<p>Aquí tienes algunas posibilidades:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Alternativa 1
+public Punto getVertice1 () {  // Creación de un nuevo punto replicando los atributos del punto original
+     double x, y;
+     Punto p;
+     x = this.vertice1.getX();
+     y = this.vertice1.getY();
+     p = new Punto (x,y);   
+ 
+     return p;
+}
+ 
+// Alternativa 2
+public Punto getVertice1 () { // Utilizando el constructor copia de Punto (si es que está definido)
+     Punto p;
+     p = new Punto (this.vertice1); // Uso del constructor copia
+     return p; 
+}</code></pre>
+</div>
+</div>
+<p>De esta manera, se devuelve un punto totalmente nuevo que podrá ser manipulado sin ningún temor por parte del código cliente de la clase, pues es una copia para él y que puede modificar a su antojo.</p>
+<p>Para el método <strong><code>getVertice2</code></strong> sería exactamente igual.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id95">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta95_148" class="block story iDevice_content">
+<p><strong>Getters de la clase <code>CasaDomotica</code></strong></p>
+</div>
+<div id="taquesQuestion0b95" class="block iDevice_content">
+<p>Dada la clase <code>CasaDomotica</code>, escribe sus métodos <code>getBombilla1</code> y <code>getBombilla2</code> para que devuelvan las referencias a los objetos de tipo <code>Bombilla</code> que contiene un objeto del tipo <code>CasaDomotica</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback0b95" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b95text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b95" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b95" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Si no nos queremos complicar la vida, podemos simplemente devolver (<code>return</code>) las referencias a los objetos <code>Bombilla</code> y los métodos podrían quedar tan simples como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>
+public Bombilla getBombilla1 () {
+     return this.bombilla1;
+}
+ 
+public Bombilla getBombilla2 () {
+     return this.bombilla2;
+}
+</code></pre>
+</div>
+</div>
+<p>Ahora bien, esas bombillas podrían ser manipuladas (por ejemplo, ser encendidas o apagadas) desde código que estuviera escrito desde fuera de la clase. Si nuestra intención es que eso pueda ocurrir, entonces esta implementación es la que necesitamos.</p></div>
+</form>
+<div id="taquesQuestion1b95" class="block iDevice_content">
+<div id="taquesQuestion1b16" class="block iDevice_content">
+<p>Como sucedía en el ejercicio de los objetos de tipo <code>Rectangulo</code> y sus componentes de tipo <code>Punto</code>, si simplemente hemos devuelto una referencia a los objetos <strong><code>bombilla1</code></strong> o <strong><code>bombilla2</code></strong>, hemos de tener en cuenta que, nuevamente, estamos permitiendo que esos objetos puedan ser manipulados desde fuera de su objeto "contenedor". Es decir, que estamos volviendo a hacer público un atributo que fue declarado como privado y que podría ser susceptible de modificación desde fuera de la clase, sin ningún control desde ningún método. Si no nos importa que eso pueda suceder, aquí habría finalizado nuestra tarea.</p>
+<p>Ahora bien, si deseamos evitar que pueda producirse esa situación, ¿qué podríamos hacer?</p>
+</div>
+</div>
+<form name="feedback-form-quesFeedback1b95" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b95text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b95" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b95" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Para evitar que se puedan manipular las bombillas originales contenidas en un objeto de tipo <strong><code>CasaDomotica</code></strong>, en los métodos de devolución de las bombillas podría crearse un nuevo objeto que fuera una copia del atributo que se desea devolver (en este caso objetos de la clase <strong><code>Bombilla</code></strong>). Ese objeto sería el que sería devuelto por el método getter:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public Punto getBombilla1 () { // Utilizando el constructor copia de Bombilla (si es que está definido)
+     return new Bombilla (this.bombilla1); // Uso del constructor copia
+}</code></pre>
+</div>
+</div>
+<p>Para el método <strong><code>getBombilla2</code></strong> sería exactamente igual.</p></div>
+</form>
+<div id="taquesQuestion2b95" class="block iDevice_content">
+<p>Supongamos que ahora deseamos implementar también los métodos <strong><code>getId</code></strong> y <strong><code>getFechaConstruccion</code></strong> para obtener el <strong>identificador de la vivienda</strong> y su <strong>fecha de construcción</strong> respectivamente, ¿cómo podríamos hacerlo? ¿Nos encontraríamos ante una situación similar a la anterior? ¿Podrían esos valores del objeto ser manipulados desde el exterior del mismo?</p>
+</div>
+<form name="feedback-form-quesFeedback2b95" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b95text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b95" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b95" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Dado que el <strong>identificador</strong> de la casa es un objeto de tipo <strong><code>String</code></strong> y la <strong>fecha de construcción</strong> un objeto de tipo <strong><code>LocalDate</code></strong> y ambos son instancias de <strong>clases inmutables</strong>, en este caso no sería necesario devolver ninguna copia, pues el contenido de esos objetos jamás podrá ser modificado:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public String getId () {
+     return this.id;
+}
+ 
+public LocalDate getFechaConstruccion () {
+     return this.fechaConstruccion;
+}</code></pre>
+</div>
+</div>
+<p>En estos casos, aunque se devuelve la referencia al atributo original del objeto contenedor, como el objeto al que apunta esa referencia es un <strong>objeto inmutable</strong> (su contenido no puede ser modificado), no hay necesidad de llevar a cabo ninguna copia. No existe la posibilidad de ningún efecto colateral en otra parte del código, puesto que el contenido al que apunta esa referencia no podrá ser alterado. Esa fecha y esa cadena que se devuelven no pueden ser cambiadas. Pueden obtenerse otras nuevas a partir de ellas, pero serán objetos nuevos que se alojarán en otra zona de la memoria.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="21_sintaxis_de_la_composicin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

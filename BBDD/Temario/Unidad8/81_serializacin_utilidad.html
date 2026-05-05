@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.1.- Serialización: utilidad. | PROG07_Contenidos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="Juan Antonio Reina" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-25"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">PROG07_Contenidos</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos externas (ficheros).</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1.- Introducción.</a>
+   <ul class="other-section">
+      <li><a href="11_excepciones.html" class="no-ch">1.1.- Excepciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_concepto_de_flujo.html" class="no-ch">2.- Concepto de flujo.</a></li>
+   <li><a href="3_clases_relativas_a_flujos.html" class="daddy">3.- Clases relativas a flujos.</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplo_comentado_de_una_clase_con_flujos.html" class="no-ch">3.1.- Ejemplo comentado de una clase con flujos.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4.- Flujos.</a>
+   <ul class="other-section">
+      <li><a href="41_flujos_predefinidos_entrada_y_salida_estndar.html" class="no-ch">4.1.- Flujos predefinidos. Entrada y salida estándar.</a></li>
+      <li><a href="42_flujos_predefinidos_entrada_y_salida_estndar_ejemplo.html" class="no-ch">4.2.- Flujos predefinidos. Entrada y salida estándar. Ejemplo.</a></li>
+      <li><a href="43_flujos_basados_en_bytes.html" class="no-ch">4.3.- Flujos basados en bytes.</a></li>
+      <li><a href="44_flujos_basados_en_caracteres.html" class="no-ch">4.4.- Flujos basados en caracteres.</a></li>
+      <li><a href="45_rutas_de_los_ficheros.html" class="no-ch">4.5.- Rutas de los ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_trabajando_con_ficheros.html" class="daddy">5.- Trabajando con ficheros.</a>
+   <ul class="other-section">
+      <li><a href="51_escritura_y_lectura_de_informacin_en_ficheros.html" class="no-ch">5.1.- Escritura y lectura de información en ficheros.</a></li>
+      <li><a href="52_ficheros_binarios_y_ficheros_de_texto_i.html" class="daddy">5.2.- Ficheros binarios y ficheros de texto (I).</a>
+      <ul class="other-section">
+         <li><a href="521_ficheros_binarios_y_ficheros_de_texto_ii.html" class="no-ch">5.2.1.- Ficheros binarios y ficheros de texto (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="53_modos_de_acceso_registros.html" class="no-ch">5.3.- Modos de acceso. Registros.</a></li>
+      <li><a href="54_acceso_secuencial.html" class="no-ch">5.4.- Acceso secuencial.</a></li>
+      <li><a href="55_acceso_aleatorio.html" class="no-ch">5.5.- Acceso aleatorio.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_aplicaciones_del_almacenamiento_de_informacin_en_ficheros.html" class="no-ch">6.- Aplicaciones del almacenamiento de información en ficheros.</a></li>
+   <li><a href="7_utilizacin_de_los_sistemas_de_ficheros.html" class="daddy">7.- Utilización de los sistemas de ficheros.</a>
+   <ul class="other-section">
+      <li><a href="71_clase_file.html" class="no-ch">7.1.- Clase File.</a></li>
+      <li><a href="72_interface_filenamefilter.html" class="no-ch">7.2.- Interface FilenameFilter.</a></li>
+      <li><a href="73_creacin_y_eliminacin_de_ficheros_y_directorios.html" class="no-ch">7.3.- Creación y eliminación de ficheros y directorios.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="8_almacenamiento_de_objetos_en_ficheros_persistencia_serializacin.html" class="current-page-parent daddy">8.- Almacenamiento de objetos en ficheros. Persistencia. Serialización.</a>
+   <ul>
+      <li id="active"><a href="81_serializacin_utilidad.html" class="active no-ch">8.1.- Serialización: utilidad.</a></li>
+   </ul>
+   </li>
+   <li><a href="9_tratamiento_de_documentos_estructurados_xml.html" class="daddy">9.- Tratamiento de documentos estructurados XML.</a>
+   <ul class="other-section">
+      <li><a href="91_qu_es_un_documento_xml.html" class="no-ch">9.1.- ¿Qué es un documento XML?</a></li>
+      <li><a href="92_libreras_para_procesar_documentos_xml_i_convertir_el_archivo__xml_a_rbol_dom.html" class="daddy">9.2.- Librerías para procesar documentos XML (I). Convertir el archivo  XML a árbol DOM</a>
+      <ul class="other-section">
+         <li><a href="921_libreras_para_procesar_documentos_xml_ii_transformar_el_rbol__dom_en_archivo__xml.html" class="no-ch">9.2.1.- Librerías para procesar documentos XML (II). Transformar el árbol  DOM en archivo  XML.</a></li>
+      </ul>
+      </li>
+      <li><a href="93_manipulacin_de_documentos_xml_i_obtener_el_elemento_raz_y_buscar_un_elemento.html" class="daddy">9.3.- Manipulación de documentos XML (I). Obtener el elemento raíz, y buscar un elemento.</a>
+      <ul class="other-section">
+         <li><a href="931_manipulacin_de_documentos_xml_ii_obtener_y_procesar_la_lista_de_hijos_y_aadir_uno_nuevo.html" class="no-ch">9.3.1.- Manipulación de documentos XML (II). Obtener y procesar la lista de hijos y añadir uno nuevo.</a></li>
+         <li><a href="932_manipulacin_de_documentos_xml_iii_eliminar_un_hijo_y_modificar_un_elemento_texto.html" class="no-ch">9.3.2.- Manipulación de documentos XML (III). Eliminar un hijo y modificar un elemento texto.</a></li>
+         <li><a href="933_manipulacin_de_documentos_xml_iv_manejar_atributos_de_un_elemento.html" class="no-ch">9.3.3.- Manipulación de documentos XML (IV). Manejar atributos de un elemento.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="8_almacenamiento_de_objetos_en_ficheros_persistencia_serializacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="9_tratamiento_de_documentos_estructurados_xml.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">8.1.- Serialización: utilidad.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id62">
+<div class="iDevice emphasis0">
+<div id="ta62_73" class="block iDevice_content">
+<p><img alt="Letras en rojo en las que se lee serializable." class="elemento_derecha" src="PROG08_CONT_R33_serializable.jpg" title="Serializable." /></p>
+<p>La serializaci&oacute;n en Java se desarroll&oacute; para utilizarse con <a class="glosario">RMI<span><em>RMI</em>Permite a un objeto en una m&aacute;quina virtual invocar m&eacute;todos de otro objeto en otra m&aacute;quina virtual, que podr&iacute;a estar perfectamente en otro ordenador diferente, enviando par&aacute;metros y devolviendo valores a trav&eacute;s de Internet.</span></a>. <acronym title="Remote Method Invocation" lang="en">RMI</acronym> necesitaba un modo de convertir los par&aacute;metros necesarios a enviar a un objeto en una m&aacute;quina remota, y tambi&eacute;n para devolver valores desde ella, en forma de flujos de bytes. Para datos primitivos es f&aacute;cil, pero para objetos m&aacute;s complejos no tanto, y ese mecanismo es precisamente lo que proporciona la serializaci&oacute;n.</p>
+<p>El m&eacute;todo <code>writeObject</code> se utiliza para guardar un objeto a trav&eacute;s de un flujo de salida. El objeto pasado a <code>writeObject</code> debe implementar el interfaz <code>Serializable</code>.</p>
+<div class="codigo elemento_centrado" style="width: 39.55em;">
+<div class="texto_izquierda">
+<pre><code>FileOutputStream fisal = new FileOutputStream(&ldquo;cadenas.out&rdquo;);</code>
+</pre>
+<pre><code>ObjectOutputStream oos = new ObjectOutputStream(fisal);</code>
+</pre>
+<pre><code>Oos.writeObject();</code>
+</pre>
+</div>
+</div>
+<p>La serializaci&oacute;n de objetos se emplea tambi&eacute;n en la arquitectura de componentes software <span lang="en">JavaBean</span>. Las clases bean se cargan en herramientas de construcci&oacute;n de software visual, como NetBeans. Con la paleta de dise&ntilde;o se puede personalizar el bean asignando fuentes, tama&ntilde;os, texto y otras propiedades.</p>
+<p>Una vez que se ha personalizado el bean, para guardarlo, se emplea la serializaci&oacute;n: se almacena el objeto con el valor de sus campos en un fichero con extensi&oacute;n .ser, que suele emplazarse dentro de un fichero <code>.jar</code>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id69">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta69_63" class="block story iDevice_content">
+<p>A continuaci&oacute;n, puedes ver el c&oacute;digo de un ejemplo muy ilustrativo sobre serializaci&oacute;n. Supongamos que tenemos una clase <code>Persona</code>, con una subclase <code>Socio</code>, que tiene a su vez varias subclases. Por simplificar, supondremos dos: <code>SocioTitularFamiliar</code> y <code>SocioTitularIndividual</code>. Ahora se me presenta la necesidad de guardar un array con socios en un fichero, para posteriormente recuperarlo, &iquest;c&oacute;mo lo hago?</p>
+</div>
+<div id="taquesQuestion0b69" class="block iDevice_content">
+
+</div>
+<form name="feedback-form-quesFeedback0b69" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b69text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b69" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b69" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Pues en primer lugar lo que tengo que asegurarme es de que la superclase, <code>Persona</code>, implemente el <span lang="en">interface</span> <code>Serializable</code>:</p>
+<p><code>public abstract class Persona implements Serializable</code></p>
+<p>Y ahora, podemos almacenar objetos de este tipo en fichero. Para simplificar, se pone un sencillo ejemplo, supuesto un array de &uacute;nicamente dos posiciones, creamos un objeto de cada subclase que metemos en el array. F&iacute;jate en el c&oacute;digo, que el array se guarda "de una tacada", no hay que ir recorri&eacute;ndolo y guardado cada elemento del mismo. Adem&aacute;s, observa tambi&eacute;n que puedes guardar el array y a continuaci&oacute;n datos de otro tipo, en el mismo fichero.</p>
+<p>&nbsp;</p>
+<div class="codigo elemento_centrado" style="width: 107.2em;">
+<div class="texto_izquierda">
+<pre><code>        // Declaramos el array de dos posiciones</code></pre>
+<pre><code>        Socio[] socios = new Socio[2];</code></pre>
+<pre>&nbsp;</pre>
+<pre><code>        // Creamos un socio de un tipo</code></pre>
+<pre><code>        SocioTitularFamiliar socTF = new SocioTitularFamiliar("Antonio", 25, 2, "Taxista", "50222333Q", </code></pre>
+<pre><code>            "2222-3333-30-1111111111", 3, 1998, 4) ;</code></pre>
+<pre>&nbsp;</pre>
+<pre><code>        // Lo metemos al array</code></pre>
+<pre><code>        socios[0] = socTF ;</code></pre>
+<pre>&nbsp;</pre>
+<pre><code>        // Creamos ahora un socio de otro tipo, de otra subclase</code></pre>
+<pre><code>        SocioTitularIndividual socTI = new SocioTitularIndividual("Filomeno a mi pesar", 33, 1.3f, "Bombero", "22333444F", </code></pre>
+<pre><code>            "2222-3333-30-1111111111", 2, 2001) ;</code></pre>
+<pre>&nbsp;</pre>
+<pre><code>        // Lo metemos al array tambi&eacute;n</code></pre>
+<pre><code>        socios[1] = socTI ;</code></pre>
+<pre>&nbsp;</pre>
+<pre><code>        // Recorro el array para comprobar que todo va bien</code></pre>
+<pre><code>        int contador ;</code></pre>
+<pre><code>        Socio socio ;</code></pre>
+<pre><code>        for (contador= 0; contador &lt; socios.length; contador++) {</code></pre>
+<pre><code>            socio = socios[contador] ;</code></pre>
+<pre><code>            if (socio instanceof SocioTitularFamiliar)</code></pre>
+<pre><code>                ES.msgln("El de la posici&oacute;n " + contador + " es familiar");</code></pre>
+<pre><code>            else</code></pre>
+<pre><code>                ES.msgln("El de la posici&oacute;n " + contador + " no es familiar");</code></pre>
+<pre><code>        }</code></pre>
+<pre>&nbsp;</pre>
+<pre>&nbsp;</pre>
+<pre><code>        // Ahora pruebo a escribir el array en un fichero de disco</code></pre>
+<pre><code>        try{</code></pre>
+<pre><code>            // Abrir fichero para escribir en el, en la ruta que me interesa</code></pre>
+<pre><code>            FileOutputStream fichero = new FileOutputStream(new File (GestionSocios.rutayFichero));</code></pre>
+<pre><code>            ObjectOutputStream ficheroSalida;</code></pre>
+<pre><code>            ficheroSalida = new ObjectOutputStream(fichero);</code></pre>
+<pre><code>            // Escribo el array en el fichero</code></pre>
+<pre><code>            ficheroSalida.writeObject(socios);</code></pre>
+<pre><code>            // Tambi&eacute;n escribo dos datos que me interesan</code></pre>
+<pre><code>            ficheroSalida.writeInt(SocioTitularFamiliar.getNumeroSocios());</code></pre>
+<pre><code>            ficheroSalida.writeInt(SocioTitularIndividual.getNumeroSocios());</code></pre>
+<pre>&nbsp;</pre>
+<pre><code>            // Cerramos el fichero</code></pre>
+<pre><code>            ficheroSalida.close();</code></pre>
+<pre>&nbsp;</pre>
+<pre><code>            ES.msgln("El archivo " + GestionSocios.rutayFichero + " guardado con &eacute;xito...");</code></pre>
+<pre><code>        }catch (FileNotFoundException fnfe){</code></pre>
+<pre><code>            ES.msgln("Error: El fichero no existe. ");</code></pre>
+<pre><code>        }catch (IOException ioe){</code></pre>
+<pre><code>            ES.msgln("Error: fall&oacute; la escritura en el fichero " + GestionSocios.rutayFichero);</code></pre>
+<pre><code>         }</code></pre>
+<pre>&nbsp;</pre>
+<pre>&nbsp;</pre>
+<pre>&nbsp;</pre>
+<pre><code>         // Pruebo ahora a poner a null el array e intento recuperar de fichero</code></pre>
+<pre><code>         socios = null ;</code></pre>
+<pre>&nbsp;</pre>
+<pre><code>         try{</code></pre>
+<pre><code>             // Abrimos el fichero para lectura</code></pre>
+<pre><code>             FileInputStream fichero = new FileInputStream(new File (GestionSocios.rutayFichero));</code></pre>
+<pre><code>             ObjectInputStream ficheroEntrada = new ObjectInputStream(fichero) ;</code></pre>
+<pre>&nbsp;</pre>
+<pre><code>             // Recuperar el objeto array del fichero</code></pre>
+<pre><code>             socios  = (Socio[]) ficheroEntrada.readObject(); </code></pre>
+<pre>&nbsp;</pre>
+<pre><code>             for (contador= 0; contador &lt; socios.length; contador++) {</code></pre>
+<pre><code>                socio = socios[contador] ;</code></pre>
+<pre><code>                if (socio instanceof SocioTitularFamiliar)</code></pre>
+<pre><code>                    ES.msgln("El de la posici&oacute;n " + contador + " es familiar");</code></pre>
+<pre><code>                else</code></pre>
+<pre><code>                    ES.msgln("El de la posici&oacute;n " + contador + " no es familiar");</code></pre>
+<pre><code>             }</code></pre>
+<pre>&nbsp;</pre>
+<pre><code>             // Leemos tambi&eacute;n y en el mismo orden que los guardamos, el resto de datos           </code></pre>
+<pre><code>             SocioTitularFamiliar.setNumeroSocios(ficheroEntrada.readInt());</code></pre>
+<pre><code>             SocioTitularIndividual.setNumeroSocios(ficheroEntrada.readInt());</code></pre>
+<pre><code>             // Cerrar el fichero</code></pre>
+<pre><code>            ficheroEntrada.close();</code></pre>
+<pre><code>            ES.msgln("El Archivo " + GestionSocios.rutayFichero + " se ha cargado con &eacute;xito....");</code></pre>
+<pre>&nbsp;</pre>
+<pre><code>        }catch (ClassNotFoundException cnfe){</code></pre>
+<pre><code>            ES.msgln("No se pudo acceder a la clase adecuada para revertir la Serializaci&oacute;n al leer del fichero.");</code></pre>
+<pre><code>        }catch (FileNotFoundException fnfe){</code></pre>
+<pre><code>            ES.msgln("El fichero " + GestionSocios.rutayFichero + " no existe.");</code></pre>
+<pre><code>        }catch (IOException ioe){</code></pre>
+<pre><code>            ES.msgln("Error de Entrada/Salida: Fall&oacute; la lectura del fichero. La aplicaci&oacute;n sigue funcionando sin haber cargado los datos del archivo, para permitir crearlo de nuevo.");</code></pre>
+<pre><code>        }</code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id63">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta63_47" class="block iDevice_content">
+<p>En este enlace a puedes ver un v&iacute;deo en el que se crea una aplicaci&oacute;n sobre serializaci&oacute;n. No est&aacute; hecha con <span lang="en">NetBeans</span>, sino con Eclipse, pero eso no presenta ning&uacute;n inconveniente.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado titulo">Serializaci&oacute;n</div>
+</div>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><iframe src="https://www.youtube.com/embed/4eU6WMOVMh4" frameborder="0" width="560" height="315"></iframe></div>
+<div class="credenciales elemento_centrado"><a title="Resumen textual alternativo para &quot;Ejemplo de aplicaci&oacute;n con serializaci&oacute;n en Java&quot;" href="PROG08_Descripcion_Video_SerializacionJava.html">Resumen textual alternativo</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="8_almacenamiento_de_objetos_en_ficheros_persistencia_serializacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="9_tratamiento_de_documentos_estructurados_xml.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

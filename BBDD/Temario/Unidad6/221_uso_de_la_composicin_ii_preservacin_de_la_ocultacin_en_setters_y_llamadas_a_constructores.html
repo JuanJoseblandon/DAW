@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_composicin.html" class="current-page-parent daddy">2.- Composición.</a>
+   <ul>
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li class="current-page-parent"><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="current-page-parent daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul>
+         <li id="active"><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="active no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_clases_anidadas_o_internas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id17">
+<div class="iDevice emphasis0">
+<div id="ta17_73" class="block iDevice_content">
+<p>Otro factor que debes considerar, a la hora de escribir clases que contengan como atributos objetos de otras clases, es su comportamiento a la hora de instanciarse. Durante el proceso de creación de un objeto (<strong>constructor</strong>) de la clase contenedora habrá que tener en cuenta también la creación (llamadas a <strong>constructores</strong>) de aquellos objetos que son contenidos.</p>
+<p class="destacado"><strong>El constructor de la clase contenedora debe invocar a los constructores de las clases de los objetos contenidos.</strong></p>
+<div class="elemento_derecha"><img alt="Grúa demoledora del Windsor." class="elemento_derecha" src="PROG07_CONT_R15_Excavadora.jpg" style="width: 180px; height: 192px;" title="Excavadora." width="180" height="270" /> <figcaption class="figcaption">
+<div class="elemento_centrado credenciales">ITE. Luana Fischer Ferreira. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">idITE=149925.</div>
+</figcaption></div>
+<p>En este caso hay que tener cuidado con las referencias a <strong>objetos que se pasan como parámetros</strong> para rellenar el contenido de los atributos. Es conveniente hacer una copia de esos objetos y utilizar esas copias para los atributos pues si se utiliza la referencia que se ha pasado como parámetro, <strong>el código cliente de la clase podría tener acceso a ella sin necesidad de pasar por la interfaz de la clase</strong> (volveríamos a dejar abierta una <strong>puerta pública</strong> a algo que quizá sea privado).</p>
+<p>Además, si el <strong>objeto parámetro</strong> que se pasó al <strong>constructor</strong> formaba parte de otro objeto, esto podría ocasionar un desagradable efecto colateral si esos objetos son modificados en el futuro desde el código cliente de la clase, ya que no sabes de dónde provienen esos objetos, si fueron creados especialmente para ser usados por el nuevo objeto creado o si pertenecen a otro objeto que podría modificarlos más tarde. Es decir, correrías el riesgo de estar “compartiendo” esos objetos con otras partes del código, sin ningún tipo de control de acceso y con las nefastas consecuencias que eso podría tener: cualquier cambio de ese objeto afectaría a partes del programa supuestamente independientes, que entienden ese objeto como suyo.</p>
+<p class="destacado"><strong>En el fondo los objetos no son más que variables de tipo referencia a la zona de memoria en la que se encuentra toda la información del objeto en sí mismo. Esto es, puedes tener un único objeto y múltiples referencias a él. Pero sólo se trata de un objeto, y cualquier modificación desde una de sus referencias afectaría a todas las demás, pues estamos hablando del mismo objeto.</strong></p>
+<p>Recuerda también que sólo se crean objetos cuando se llama a un constructor (uso de <strong><code>new</code></strong>) o bien cuando se invocan métodos que sabemos positivamente que devuelven nuevas instancias de objetos. Si realizas asignaciones o pasos de parámetros, no se están copiando o pasando copias de los objetos, sino simplemente de las referencias, y por tanto se tratará siempre del mismo objeto.</p>
+<p>Se trata de un efecto similar al que sucedía en los métodos de tipo <strong><span lang="en">get</span></strong>, pero en este caso en sentido contrario. Es decir, en lugar de que nuestra clase “regale” al exterior uno de sus atributos objeto mediante una referencia, en esta ocasión se “adueña” de un parámetro objeto que probablemente pertenezca a otro objeto y que es posible que en el futuro haga uso de él.</p>
+<p>Para entender mejor estos posibles efectos podemos continuar con el ejemplo de la clase <strong><code>Rectangulo</code></strong> que contiene en su interior dos objetos de la clase <strong><code>Punto</code></strong>. En los constructores del rectángulo habrá que incluir todo lo necesario para crear dos instancias de la clase <strong><code>Punto</code></strong> evitando las referencias a parámetros (haciendo copias).</p>
+<p>Del mismo modo, si nuestra clase dispone de métodos <strong>set</strong> que reciben como parámetros referencias a objetos, se producirá exactamente el mismo fenómeno: si no se realiza una copia del objeto al que se hace referencia, es posible que ese objeto en el futuro pueda ser modificado desde fuera de la clase.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id18">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta18_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b18" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b18" class="block iDevice_content">
+<p>Si se declaran dos variables referencias a objeto <code>a</code> y <code>b</code> de la clase <code>X</code>, ambas son instanciadas mediante un constructor, y posteriormente se realiza la asignación <code>a=b</code>, el contenido de <code>a</code> será una copia del contenido de <code>b</code>, perdiéndose los valores iniciales de <code>a</code>. ¿Verdadero o Falso?<strong> </strong></p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b18"><input type="radio" name="option0b18" id="true0b18" class="exe-radio-option exe-radio-option-0-2-0b18-truefalse" /> Verdadero</label> 
+<label for="false0b18"><input type="radio" name="option0b18" id="false0b18" class="exe-radio-option exe-radio-option-1-2-0b18-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b18" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b18-result" class="wrong">Falso</strong></p>
+<p>No es as&iacute;. La variable <code>a</code> se habr&aacute; convertido en una referencia al mismo objeto al que apunta la variable <code>b</code>, pues no se ha hecho una copia de <code>b</code>. Ahora se tendr&aacute;n dos variables referencia (<code>a</code> y <code>b</code>) a un mismo objeto (el que fue inicialmente instanciado y asignado a la variable <code>b</code>). Por otro lado, el objeto al que apuntaba la variable&nbsp;<code>a</code> s&iacute; se habr&aacute; perdido y el recolector de basura se encargar&aacute; de destruirlo cuando lo considere oportuno (salvo que existieran otras referencias a &eacute;l).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id19">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta19_67" class="block story iDevice_content">
+<p><strong>Constructores de la clase <code>Rectangulo</code></strong>.</p>
+<p>Vamos a intentar rescribir los constructores de la clase <code>Rectangulo</code> teniendo en cuenta ahora no solamente su nueva estructura de atributos (dos referencias a objetos de la clase <code>Punto</code>, en lugar de cuatro valores de tipo <code>double</code>), sino también considerando que si se reciben referencias a objeto como parámetros, es posible que nos interese realizar una copia de estos.</p>
+</div>
+<div id="taquesQuestion0b19" class="block iDevice_content">
+<p>1. Implementa un <strong>constructor sin parámetros</strong> que haga que los valores iniciales de las esquinas del rectángulo sean (0,0) y (1,1).</p>
+</div>
+<form name="feedback-form-quesFeedback0b19" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b19text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b19" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b19" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Durante el proceso de creación de un objeto (<strong>constructor</strong>) de la <strong>clase contenedora</strong> (en este caso <strong><code>Rectangulo</code></strong>) hay que tener en cuenta también la creación (llamada a <strong>constructores</strong>) de aquellos objetos que son contenidos (en este caso objetos de la clase <strong><code>Punto</code></strong>).</p>
+<p>En el caso de este <strong>constructor</strong>, habrá que crear dos objetos de la clase <strong><code>Punto</code></strong> con las coordenadas (0,0) y (1,1) y asignarlos a los atributos correspondientes (<strong><code>vertice1</code></strong> y <strong><code>vertice2</code></strong>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public Rectangulo () {
+     this.vertice1 = new Punto (0,0);
+     this.vertice2 = new Punto (1,1);
+}
+</code></pre>
+</div>
+</div>
+<p>En este caso, dado que no se pasa ningún valor como parámetro, no hay que plantearse la necesidad de hacer ninguna copia de nada.</p></div>
+</form>
+<div id="taquesQuestion1b19" class="block iDevice_content">
+<p>2. Implementa un <strong>constructor con cuatro parámetros</strong>, <code>x1</code>, <code>y1</code>, <code>x2</code>, <code>y2</code>, que cree un rectángulo con los vértices (x1, y1) y (x2, y2).</p>
+</div>
+<form name="feedback-form-quesFeedback1b19" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b19text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b19" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b19" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Para este segundo <strong>constructor</strong> habrá que crear dos puntos con las coordenadas <strong><code>x1</code></strong>, <strong><code>y1</code></strong>, <strong><code>x2</code></strong>, <strong><code>y2</code> </strong>que han sido pasadas como parámetros:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public Rectangulo (double x1, double y1, double x2, double y2) {
+     this.vertice1 = new Punto (x1, y1);
+     this.vertice2 = new Punto (x2, y2);
+}
+</code></pre>
+</div>
+</div>
+<p>En este caso, dado que no se pasa ninguna referencia a un objeto como parámetro, tampoco hay que plantearse la necesidad de hacer ninguna copia de ningún objeto.</p></div>
+</form>
+<div id="taquesQuestion2b19" class="block iDevice_content">
+<p>3. Implementa un <strong>constructor con dos parámetros</strong>, <code>punto1</code> y <code>punto2</code>, que rellene los valores iniciales de los atributos del rectángulo con los valores proporcionados a través de los parámetros.</p>
+</div>
+<form name="feedback-form-quesFeedback2b19" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b19text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b19" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b19" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso puedes utilizar directamente los dos puntos que se pasan como parámetros para construir los vértices del rectángulo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public Rectangulo (Punto vertice1, Punto vertice2) {
+     this.vertice1 = vertice1;
+     this.vertice2 = vertice2;
+}
+</code></pre>
+</div>
+</div>
+<p>Ahora bien, esto podría ocasionar un <strong>efecto colateral</strong> no deseado si esos objetos de tipo <strong><code>Punto</code> </strong>son modificados en el futuro desde el código cliente del <strong>constructor</strong>, por ejemplo, desde un programa principal. No sabemos si esos puntos fueron creados especialmente para ser usados por el rectángulo o si pertenecen a otro objeto que podría modificarlos más tarde.</p>
+<p>Si no nos interesa que pueda producirse este efecto, quizá fuera recomendable crear, dentro del código del constructor, dos nuevos objetos <code>Punto</code> a imagen y semejanza de los puntos que se han pasado como parámetros. Serán esos puntos los que se utilizarán como atributos del rectángulo. Nuestra implementación será de una manera u otra dependiendo de lo que nos interese o de lo que se nos haya indicado en las especificaciones de diseño.</p>
+<p>Si finalmente optamos por llevar a cabo esa copia, podríamos hacerlo de varias formas. Aquí tienes dos posibilidades:</p>
+<ol type="1" start="1">
+<li>Llamar al <strong>constructor</strong> de la clase <strong><code>Punto</code> </strong>con los valores de los atributos (x, y).</li>
+<li>Llamar al <strong>constructor copia</strong> de la clase <strong><code>Punto</code></strong>, si es que se dispone de él.</li>
+</ol>
+<p>Aquí tienes las dos posibles versiones:</p>
+<p>1. <strong>Constructor</strong> que “extrae” los atributos de los parámetros y crea nuevos objetos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>
+public Rectangulo (Punto vertice1, Punto vertice2) {
+     this.vertice1 = new Punto ( vertice1.getX(), vertice1.getY() );
+     this.vertice2 = new Punto ( vertice2.getX(), vertice2.getY() );
+}
+</code></pre>
+</div>
+</div>
+<p>2. <strong>Constructor</strong> que crea los nuevos objetos mediante el <strong>constructor copia</strong> de los parámetros:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public Rectangulo (Punto vertice1, Punto vertice2) {
+     this.vertice1 = new Punto (vertice1);
+     this.vertice2 = new Punto (vertice2);
+}
+</code></pre>
+</div>
+</div>
+<p>En este segundo caso puedes observar la utilidad de los <strong>constructores de copia</strong> a la hora de tener que <strong>clonar</strong> objetos (algo muy habitual en las inicializaciones).</p></div>
+</form>
+<div id="taquesQuestion3b19" class="block iDevice_content">
+<p>4. Implementa un <strong>constructor con dos parámetros</strong>, <code>base</code> y <code>altura</code>, que cree un rectángulo donde el vértice inferior derecho esté ubicado en la posición (0,0) y que tenga una base y una altura tal y como indican los dos parámetros proporcionados.</p>
+</div>
+<form name="feedback-form-quesFeedback3b19" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b19text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b19" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback3b19" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Para el caso de un <strong>constructor</strong> que recibe como parámetros la base y la altura, habrá que crear sendos vértices, de tipo <code>Punto</code>, con valores (0,0) y (0 + base, 0 + altura), o lo que es lo mismo: (0,0) y (base, altura).</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public Rectangulo (double base, double altura) {
+     this.vertice1= new Punto (0,0);
+     this.vertice2= new Punto (base, altura);
+}
+</code></pre>
+</div>
+</div>
+<p>En este caso tampoco se recibe como parámetro ninguna referencia a objeto, de manera que no es necesario llevar a cabo ninguna copia.</p></div>
+</form>
+<div id="taquesQuestion4b19" class="block iDevice_content">
+<p>5. Implementa un <strong>constructor copia</strong> a partir de otro objeto <code>Rectangulo</code> ya existente.</p>
+</div>
+<form name="feedback-form-quesFeedback4b19" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback4b19text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback4b19" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback4b19" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso, si directamente utilizáramos los valores obtenidos por los getters <strong><code>getVertice1</code></strong> y <strong><code>getVertice2</code></strong>, volveríamos a tener el problema de que los dos rectángulos "compartirían" esos dos puntos y cualquier cosa que se le haga a esos puntos en alguno de los dos rectángulos, afectará a los puntos del otro. Eso sucedería si hiciéramos algo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Constructor copia
+public Rectangulo (Rectangulo r) {
+    this.vertice1 = r.getVertice1();
+    this.vertice2 = r.getVertice2();
+}</code></pre>
+</div>
+</div>
+<p>Si realmente eso es lo que queremos, podemos optar por esa implementación. Pero normalmente lo deseable será que cada rectángulo contenga sus puntos de manera independiente a los vértices de otros rectángulos. Para ello tendríamos que <strong>clonar</strong> los atributos <strong><code>vertice1</code></strong> y <strong><code>vertice2</code> </strong>del objeto <strong>r</strong> que se ha pasado como parámetro para evitar tener que compartir esos atributos en los dos rectángulos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Constructor copia
+public Rectangulo (Rectangulo r) {
+    this.vertice1 = new Punto (r.getVertice1() );
+    this.vertice2 = new Punto (r.getVertice2() );
+}
+</code></pre>
+</div>
+</div>
+<p>Puedes ver todas estas implementaciones juntas en el siguente anexo:</p>
+<p style="text-align: center;"><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" title="Enlace al Anexo I (se abre en una nueva ventana)." target="_blank" class="html">Anexo I.- Elaboración de los constructores de la clase <code>Rectangulo</code>.</a></p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id94">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta94_148" class="block story iDevice_content">
+<p><strong>Constructores de la clase <code>CasaDomotica</code></strong></p>
+</div>
+<div id="taquesQuestion0b94" class="block iDevice_content">
+<p>1. Dada la clase <code>CasaDomotica</code>, que ya introdujimos en secciones anteriores, implementa un <strong>constructor</strong> que reciba <strong>cuatro parámetros</strong>: una <strong>cadena de identificación</strong> (<code>String</code>), una fecha de construcción (<code>LocalDate</code>) y dos bombillas (<strong><code>Bombilla</code></strong>).</p>
+<p>Valora las diferentes posibilidades que tienes a la hora de llevar a cabo la implementación y qué consecuencias tendrían.</p>
+</div>
+<form name="feedback-form-quesFeedback0b94" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b94text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b94" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b94" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Una manera inmediata de implementar el constructor podría ser mediante la asignación directa de los parámetros recibidos a los atributos correspondientes:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public CasaDomotica (String id, LocalDate fechaConstruccion, Bombilla b1, Bombilla b2) {
+     this.id = id;
+     this.fechaConstruccion = fechaConstruccion;
+     this.bombilla1 = b1;
+     this.bombilla2 = b2;
+}
+</code></pre>
+</div>
+</div>
+<p>En cuanto a los parámetros <code>id</code> y <code>fechaConstruccion</code>, no hay ningún problema, pues se trata de referencias a objetos de clases inmutables. Es decir, que su contenido no va a poder ser modificado nunca, ni desde dentro ni desde fuera de la clase. No existe la posibilidad de ningún efecto colateral en otra parte del código, puesto que el contenido al que apunta esa referencia no podrá ser alterado. Esa fecha y esa cadena que se devuelven no pueden ser cambiadas. Como ya hemos visto en otras ocasiones, pueden obtenerse otras nuevas a partir de ellas, pero serán objetos nuevos que se alojarán en otra zona de la memoria.</p>
+<p>Ahora bien, en el caso de los parámetros que son referencias a objetos de tipo <code>Bombilla</code>, la cosa cambia, pues si asignamos directamente esas referencias a los atributos del objeto, esas bombillas podrían ser manipuladas (por ejemplo, ser encendidas o apagadas) desde código que estuviera escrito desde fuera de la clase. Si no nos importa que esto puede suceder o incluso puede que nos interese que sea así, entonces esta implementación es la que nos vendría bien.</p>
+<p>Si, por el contrario, no nos interesa que pueda producirse este efecto, entonces lo recomendable sería crear, dentro del código del constructor, dos nuevos objetos <code>Bombilla</code> a imagen y semejanza de las bombillas que se han pasado como parámetros. Serán esas bombillas las que se utilizarán como atributos de la casa. Nuestra implementación será de una manera u otra dependiendo de lo que nos interese o de lo que se nos haya indicado en las especificaciones de diseño.</p>
+<p>Si finalmente optamos por llevar a cabo esa copia, podríamos hacerlo de varias formas. Aquí tienes dos alternativas:</p>
+<ol type="1" start="1">
+<li>Llamar al <strong>constructor</strong> de la clase <strong><code>Bombilla</code> </strong>con los valores de los atributos de las bombillas que se han pasado como parámetros para realizar réplicas de esos objetos.</li>
+<li>Llamar al <strong>constructor copia</strong> de la clase <strong><code>Bombilla</code></strong>, si es que se dispone de él.</li>
+</ol>
+<p>Aquí tienes las dos posibles versiones:</p>
+<p>1. <strong>Constructor</strong> que “extrae” los atributos de los parámetros de tipo <code>Bombilla</code> y crea nuevos objetos <code>Bombilla</code>. En este caso, basta con obtener la potencia de la bombilla:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public CasaDomotica (String id, LocalDate fechaConstruccion, Bombilla b1, Bombilla b2) {
+     this.id = id;
+     this.fechaConstruccion = fechaConstruccion;
+     this.bombilla1 = new Bombilla (b1.getPotencia());
+     this.bombilla2 = new Bombilla (b2.getPotencia());
+}</code></pre>
+</div>
+</div>
+<p>2. <strong>Constructor</strong> que crea los nuevos objetos mediante el <strong>constructor copia</strong> de las bombillas pasadas como parámetros:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public CasaDomotica (String id, LocalDate fechaConstruccion, Bombilla b1, Bombilla b2) {
+     this.id = id;
+     this.fechaConstruccion = fechaConstruccion;
+     this.bombilla1 = new Bombilla (b1);
+     this.bombilla2 = new Bombilla (b2);
+}
+</code></pre>
+</div>
+</div></div>
+</form>
+<div id="taquesQuestion1b94" class="block iDevice_content">
+<p>2. Supongamos ahora que la clase <code>CasaDomotica</code> en lugar de tener dos atributos de tipo <code>Bombilla</code>, tiene como atributo un array de referencias a objetos de tipo <code>Bombilla</code>. Será en el constructor cuando ese array se rellene en función de la cantidad de parámetros de tipo Bombilla se reciban. Esto significa que el constructor tendrá ahora una lista de parámetros variable de tipo <code>Bombilla</code>. ¿Cómo lo implementarías?</p>
+</div>
+<form name="feedback-form-quesFeedback1b94" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b94text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b94" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b94" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso, lo primero que tenemos que hacer es modificar los atributos de la clase para que en lugar de tener dos atributos <code>Bombilla</code>, se tenga un atributo de tipo array de bombillas (o mejor, dicho array de referencias a objetos de tipo <code>Bombilla</code>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class CasaDomotica {
+
+    // Atributos de objeto
+    private String id;
+    private LocalDate fechaConstruccion;
+    private final Bombilla[] arrayBombillas;
+    . . .</code></pre>
+</div>
+</div>
+<p>Una vez hecho esto, pasamos a implementar el constructor, que tendrá que indicar en su cabecera que recibe una lista de parámetros de tamaño variable de referencias a objetos <code>Bombilla</code>. ¿Recuerdas cómo se hacía?</p>
+<p>Teníamos que utilizar los puntos suspensivos de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public CasaDomotica(String id, LocalDate fechaConstruccion, Bombilla... bombillas) {</code></pre>
+</div>
+</div>
+<p>Los parámetros <code>id</code> y <code>fechaConstruccion</code> permanecen igual, pero sustituimos los parámetros <code>b1</code> y <code>b2</code> por la lista variable. A partir de ahí, el parámetro bombillas es como si fuera un array de elementos de tipo <code>Bombilla</code>. Si optamos por utilizar directamente esas referencias (sin hacer réplicas), con las consecuencias que ello tiene, el constructor podría quedar así;</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public CasaDomotica (String id, LocalDate fechaConstruccion, Bombilla... bombillas) {
+     this.id = id;
+     this.fechaConstruccion = fechaConstruccion;
+     this.arrayBombillas= new Bombilla[bombillas.length];  // Reservamos espacio para el array de bombillas en el objeto CasaDomotica
+     for (int i=0 ; i&lt;arrayBombillas.length ; i++) {
+          this.arrayBombillas[i] = bombillas[i];  // Asignamos directamente la misma referencia a objeto bombilla
+     }
+}</code></pre>
+</div>
+</div>
+<p>Además, en lugar de reservar espacio para el array y hacer las copias de las referencias manualmente, podría usarse la herramienta <code>Arrays.copyOf</code> para "ahorrarnos" el <code>new</code> del array y el bucle de asignación a cada celda. Podría hacerse del siguiente modo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>     // Creamos un array que sea una réplica del array de parámetros
+     this.arrayBombillas= Arrays.copyOf (bombillas, bombillas.length); </code></pre>
+</div>
+</div>
+<p>Si, por el contrario, decidimos hacer una réplica de cada objeto bombilla recibido como parámetro, entonces tendríamos que hacer algo como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public CasaDomotica (String id, LocalDate fechaConstruccion, Bombilla... bombillas) {
+     this.id = id;
+     this.fechaConstruccion = fechaConstruccion;
+     this.arrayBombillas= new Bombilla[bombillas.length];  // Reservamos espacio para el array de bombillas en el objeto CasaDomotica
+     for (int i=0 ; i&lt;arrayBombillas.length ; i++) {
+          this.arrayBombillas[i] = new Bombilla (bombillas[i]);  // Asignamos una réplica de cada objeto bombilla
+     }
+}</code></pre>
+</div>
+</div>
+<p>En este caso no podríamos usar la herramienta <code>Arrays.copyOf</code> para replicar el array con los parámetros variables recibidos pues se generaría un nuevo array cuyas celdas contendrían el mismo valor de referencia a objeto que las originales (referencias a los mismos objetos de tipo bombilla) y no a nuevos objetos.Aquí sí que habría que hacer las copias "manualmente".</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_clases_anidadas_o_internas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

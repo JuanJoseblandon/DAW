@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.8.- La clase Object en Java. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-19"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_herencia.html" class="current-page-parent daddy">3.- Herencia.</a>
+   <ul>
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li id="active"><a href="38_la_clase_object_en_java.html" class="active no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="39_herencia_mltiple.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3.8.- La clase Object en Java.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id49">
+<div class="iDevice emphasis0">
+<div id="ta49_73" class="block iDevice_content">
+<p><img alt="Palabra 'Object!' encerrada en un óvalo verde claro." class="elemento_derecha" src="PROG07_CONT_R32_Object.png" style="width: 200px; height: 116px;" title="Object." /></p>
+<p>Todas las clases en <span lang="en">Java</span> son descendientes (directos o indirectos) de la clase <strong><code>Object</code></strong>. Esta clase define los <strong>estados y comportamientos básicos que deben tener todos los objetos</strong>. Entre estos comportamientos, se encuentran:</p>
+<ul class="lista_verificacion">
+<li>La posibilidad de compararse.</li>
+<li>La capacidad de convertirse a cadenas.</li>
+<li>La habilidad de devolver la clase del objeto.</li>
+</ul>
+<p>Entre los métodos que incorpora la clase <strong><code>Object</code></strong>, y que por tanto hereda cualquier clase en <span lang="en">Java</span>, tienes:</p>
+<table class="tabla" summary="Esta tabla muestra los principales métodos disponibles para la clase java.lang.Object."><caption>Principales métodos de la clase <code>Object</code></caption>
+<thead>
+<tr><th scope="col">Método</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row"><code> Object () </code></th>
+<td>Constructor.</td>
+</tr>
+<tr><th scope="row"><code>clone ()</code></th>
+<td>Método <strong>clonador</strong>: crea y devuelve una copia del objeto ("clona" el objeto).</td>
+</tr>
+<tr><th scope="row"><code>boolean equals (Object obj)</code></th>
+<td>Indica si el objeto pasado como parámetro es igual a este objeto.</td>
+</tr>
+<tr><th scope="row"><code>void finalize ()</code></th>
+<td>Método llamado por el <strong>recolector de basura</strong> cuando éste considera que no queda ninguna referencia a este objeto en el entorno de ejecución.</td>
+</tr>
+<tr><th scope="row"><code>int hashCode ()</code></th>
+<td>Devuelve un <a href="#t8f87c969-fb62-def5-5d94-0c48364ee009" id="link8f87c969-fb62-def5-5d94-0c48364ee009" title="Código hash o función hash. | Ver la definición" class="exe-tooltip definition-tt titled-tt"><strong>código hash</strong></a> para el objeto.</td>
+</tr>
+<tr><th scope="row"><code>toString ()</code></th>
+<td>Devuelve una representación del objeto en forma de <strong><code>String</code></strong>.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>La clase <strong><code>Object</code></strong> representa la <strong>superclase</strong> que se encuentra en la cúspide de la <strong>jerarquía de herencia</strong> en Java. Cualquier clase (incluso las que tú implementes) acaban heredando de ella.</p>
+<div class="elemento_centrado"><a title="Ampliar imagen &quot;Jerarquía de clases en Java&quot;. (Se abre en una nueva ventana)" href="PROG07_CONT_R33_JerarquiaClasesJava.jpg" target="_blank"> <img alt="Jerarquía de clases en la que se puede distinguir a la superclase de todas las clases en Java (clase Object) y a algunas clases que heredan directamente de ella." class="imagen_ampliable elemento_centrado" src="PROG07_CONT_R33_JerarquiaClasesJava_miniatura.gif" style="width: 196px; height: 156px;" title="Jerarquía de clases en Java." /></a> <a href="https://www.oracle.com/java/technologies/object-oriented.html" target="_blank" class="author">Oracle</a> <span class="license"><span class="sep">(</span>Todos los derechos reservados<span class="sep">)</span></span></div>
+<div id="t8f87c969-fb62-def5-5d94-0c48364ee009" class="exe-tooltip-text">
+<p>Los <span lang="en">hash</span> o funciones de resumen son algoritmos que crean a partir de una entrada (por ejemplo un texto o un archivo) una salida alfanumérica de longitud normalmente fija. Esa cadena de salida representa un resumen de toda la información que la función ha recibido como entrada. A partir de los datos de la entrada se crea una cadena que solo puede volverse a crear con esos mismos datos. Por eso se dice a veces que es algo así como una especie de "firma" o "resumen" de esos datos.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id50">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta50_47" class="block iDevice_content">
+<p>Para obtener más información sobre la clase <strong><code>Object</code></strong>, sus métodos y propiedades, puedes consultar la documentación de la <acronym title="Application Programming Interface." lang="en">API</acronym> de <strong>Java </strong>en el sitio web de Oracle.</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a información sobre la clase Object en la documentación de la API de Java. (Se abre en una nueva ventana)" href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" target="_blank">Documentación de la clase <strong><code>Object</code></strong>.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id51">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta51_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b51" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b51" class="block iDevice_content">
+<p><strong> Toda clase <span lang="en">Java </span>tiene un método </strong><strong><code>toString()</code> y un método </strong><strong><code>finalize()</code>. ¿Verdadero o Falso? </strong></p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b51"><input type="radio" name="option0b51" id="true0b51" class="exe-radio-option exe-radio-option-0-2-0b51-truefalse" /> Verdadero</label> 
+<label for="false0b51"><input type="radio" name="option0b51" id="false0b51" class="exe-radio-option exe-radio-option-1-2-0b51-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b51" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b51-result" class="right">Verdadero</strong></p>
+<p>Dado que la clase <strong><code>Object</code></strong> tiene esos métodos y puesto que cualquier clase <span lang="en"></span><span lang="en"><span lang="en">Java</span> </span>tiene como superclase (más o menos directa) a la clase <strong><code>Object</code></strong>, cualquier clase <span lang="en"></span><span lang="en"><span lang="en">Java</span> </span>heredará esos métodos.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="39_herencia_mltiple.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

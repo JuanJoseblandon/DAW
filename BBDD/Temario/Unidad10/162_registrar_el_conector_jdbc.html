@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.6.2.- Registrar el conector JDBC </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Gestión de bases de datos: relacionales y orientadas a objetos. Persistencia de objetos</a></li>
+   <li class="current-page-parent"><a href="1_bases_de_datos_relacionales.html" class="current-page-parent daddy">1.- Bases de datos relacionales</a>
+   <ul>
+      <li><a href="11_el_desfase_objetorelacional.html" class="no-ch">1.1.- El desfase objeto-relacional</a></li>
+      <li><a href="12_jdbc.html" class="no-ch">1.2.- JDBC</a></li>
+      <li><a href="13__conectores_o_drivers.html" class="no-ch">1.3.-  Conectores o Drivers</a></li>
+      <li><a href="14_instalacin_de_la_base_de_datos.html" class="no-ch">1.4.- Instalación de la base de datos</a></li>
+      <li><a href="15_creacin_de_las_tablas_en_una_base_de_datos.html" class="daddy">1.5.- Creación de las tablas en una base de datos</a>
+      <ul class="other-section">
+         <li><a href="151_lenguaje_sql_i.html" class="no-ch">1.5.1.- Lenguaje SQL (I)</a></li>
+         <li><a href="152_lenguaje_sql_ii.html" class="no-ch">1.5.2.- Lenguaje SQL (II)</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="16_establecimiento_de_conexiones.html" class="current-page-parent daddy">1.6.- Establecimiento de conexiones</a>
+      <ul>
+         <li><a href="161_configurar_un_conector_jdbc_en_un_proyecto_netbeans.html" class="no-ch">1.6.1.- Configurar un conector JDBC en un proyecto NetBeans</a></li>
+         <li id="active"><a href="162_registrar_el_conector_jdbc.html" class="active no-ch">1.6.2.- Registrar el conector JDBC</a></li>
+      </ul>
+      </li>
+      <li><a href="17_ejecucin_de_consultas_sobre_la_base_de_datos.html" class="daddy">1.7.- Ejecución de consultas sobre la base de datos</a>
+      <ul class="other-section">
+         <li><a href="171_adicin_de_informacin.html" class="no-ch">1.7.1.- Adición de información</a></li>
+         <li><a href="172_recuperacin_de_informacin_i.html" class="daddy">1.7.2.- Recuperación de información (I)</a>
+         <ul class="other-section">
+            <li><a href="1712_recuperacin_de_informacin_ii.html" class="no-ch">1.7.1.2.- Recuperación de información (II)</a></li>
+         </ul>
+         </li>
+         <li><a href="173_actualizacin_de_informacin.html" class="no-ch">1.7.3.- Actualización de información</a></li>
+         <li><a href="174_borrado_de_informacin.html" class="no-ch">1.7.4.- Borrado de información</a></li>
+         <li><a href="175_cierre_de_conexiones.html" class="no-ch">1.7.5.- Cierre de conexiones</a></li>
+         <li><a href="176_excepciones_en_jdbc.html" class="no-ch">1.7.6.- Excepciones en JDBC</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="2_persistencia_de_objetos.html" class="daddy">2.- Persistencia de objetos</a>
+   <ul class="other-section">
+      <li><a href="21_qu_son_las_bases_de_datos_orientadas_a_objetos.html" class="no-ch">2.1.- ¿Qué son las bases de datos orientadas a objetos?</a></li>
+      <li><a href="22_qu_es_el_mapeado_de_objetos.html" class="no-ch">2.2.- ¿Qué es el mapeado de objetos?</a></li>
+      <li><a href="23_cmo_empiezo_a_usar_jpa.html" class="no-ch">2.3.- ¿Cómo empiezo a usar JPA?</a></li>
+      <li><a href="24_unidades_de_persistencia_i.html" class="daddy">2.4.- Unidades de persistencia (I)</a>
+      <ul class="other-section">
+         <li><a href="241_unidades_de_persistencia_ii.html" class="no-ch">2.4.1.- Unidades de persistencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="25_modelo_de_datos_en_jpa.html" class="daddy">2.5.- Modelo de datos en JPA</a>
+      <ul class="other-section">
+         <li><a href="251_entidades.html" class="no-ch">2.5.1.- Entidades</a></li>
+         <li><a href="252_atributos.html" class="no-ch">2.5.2.- Atributos</a></li>
+         <li><a href="253_relaciones_entre_entidades.html" class="no-ch">2.5.3.- Relaciones entre entidades</a></li>
+         <li><a href="254_relaciones_uno_a_uno.html" class="no-ch">2.5.4.- Relaciones uno a uno</a></li>
+         <li><a href="255_relaciones_uno_a_muchos.html" class="no-ch">2.5.5.- Relaciones uno a muchos</a></li>
+      </ul>
+      </li>
+      <li><a href="26_operaciones_crud_con_jpa.html" class="daddy">2.6.- Operaciones CRUD con JPA</a>
+      <ul class="other-section">
+         <li><a href="261_persistir_y_leer.html" class="no-ch">2.6.1.- Persistir y leer</a></li>
+         <li><a href="262__actualizar_y_borrar_instancias.html" class="no-ch">2.6.2.-  Actualizar y borrar instancias</a></li>
+      </ul>
+      </li>
+      <li><a href="27_jpql_i.html" class="daddy">2.7.- JPQL (I)</a>
+      <ul class="other-section">
+         <li><a href="271_jpql_ii.html" class="no-ch">2.7.1.- JPQL (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="161_configurar_un_conector_jdbc_en_un_proyecto_netbeans.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="17_ejecucin_de_consultas_sobre_la_base_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.6.2.- Registrar el conector JDBC</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id25">
+<div class="iDevice emphasis0">
+<div id="ta25_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG11_CONT_R15_libros.jpg" alt="Libros antiguos sobre un estante." title="Libros" style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by" title="Acceder a la licencia CC BY (Se abre en una nueva ventana)" href="http://creativecommons.org/licenses/by/3.0/deed.es" target="_blank"><span class="transparente">CC by</span></a> <a title=" Acceder a la imagen &quot;Libros&quot; de &quot;Bruno Cordioli&quot; en Flickr. (Se abre en una nueva ventana)" href="http://www.flickr.com/photos/br1dotcom/4166144897/" target="_blank"> Bruno Cordioli</a></div>
+</div>
+<p>A la hora de empezar a escribir código, ¿sabes si necesitas registrar el conector <acronym title="Java Database Connectivity." lang="en">JDBC</acronym>? Como se comentó en apartados anteriores, es necesario registrar el conector <acronym title="Java Database Connectivity." lang="en">JDBC</acronym> si estamos trabajando con una versión de <acronym title="Java Database Connectivity." lang="en">JDBC</acronym> anterior a la <acronym title="cuatro punto cero">4.0</acronym>.</p>
+<p>En la práctica, es fácil saber cuándo tienes que registrar el conector, dado que solo las versiones anteriores a <acronym title="uno punto seis">1.6</acronym> del <acronym title="Java Delopment Kit">JDK</acronym> tienen una versión de <acronym title="Java Database Connectivity." lang="en">JDBC</acronym> inferior a la <acronym title="cuatro punto cero">4.0</acronym>. Esto quiere decir que:</p>
+<p class="destacado"><strong>Solo tienes que registrar el conector si vas a usar un <acronym title="Java Development Kit" lang="en">JDK</acronym> anterior a 1.6. Versiones actuales como<strong> <acronym title="Java Development Kit" lang="en">JDK</acronym> </strong>1.7, <strong> <acronym title="Java Development Kit" lang="en">JDK</acronym> </strong>8 y posteriores, no necesitan registrar el conector, pero como se verá a continuación es una buena práctica.<br /></strong></p>
+<p>Para registrar el controlador primero, hay que consultar la documentación del conector que vamos a utilizar para conocer el nombre de la clase que hay que emplear, dado que cada conector es diferente.</p>
+<p>En el caso del conector para <span lang="en">MySQL</span> la clase en cuestión es <code>com.mysql.cj.jdbc.Driver</code>. Se trata de una clase que implementa la interfaz <code>java.sql.Driver</code> definida por <acronym title="Java Database Connectivity." lang="en">JDBC</acronym>, y que es la interfaz que todo conector debe implementar. Dicha clase ya compilada se encontrará obviamente dentro de la librería <code>.jar</code> que instalamos en el paso anterior.</p>
+<p>Las líneas de código necesarias para registrar el conector son tan sencillas como las siguientes:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>boolean driverCargado=false;
+String driver="com.mysql.cj.jdbc.Driver";
+try {
+      Class.forName(driver).newInstance();
+      driverCargado=true;
+} catch (ClassNotFoundException e) {
+      err.printf("No se encuentra el driver de la base de datos (%s)\n",driver);
+} catch (InstantiationException ex) {
+      err.printf("No se ha podido iniciar el driver de la base de datos (%s)\n",driver);
+} catch (IllegalAccessException ex) {
+      err.printf("No se ha podido iniciar el driver de la base de datos (%s)\n",driver);
+}
+
+if (driverCargado) {
+
+// podemos continuar, el driver se ha cargado correctamente
+
+}</code></pre>
+</div>
+</div>
+<p>Una vez cargado el conector, es posible hacer una conexión al <acronym title="Sistema Gestor de Bases de Datos">SGBD</acronym>. Fíjate que el proceso de carga puede producir hasta tres tipos de excepciones diferentes, hay que tener especial cuidado con eso, dado que el programa no debería continuar en caso de que dichas excepciones se produjeran.</p>
+<p>Por último, toca hablar un poco de la distribución de la aplicación al cliente final. Los proyectos que hemos creado hasta ahora, donde hemos incluido la librería del conector al proyecto para poder desarrollar y probar nuestra aplicación, no generan proyectos listos para ejecutar en un cliente final. ¿Por qué? Por que el archivo <code>.jar</code> generado para nuestra aplicación no incluye en su interior el conector. </p>
+<p>¿Y esto que significa? Significa que debemos copiar también el conector <acronym title="Java Database Connectivity." lang="en">JDBC</acronym> en la máquina del cliente como parte del proceso de instalación. Como parte del proceso de instalación debemos, o bien añadir al <code>CLASSPATH</code> la localización del archivo <code>.jar</code> del conector, o bien indicar a la hora de ejecutar la aplicación donde está el archivo <code>.jar</code> del conector. Un ejemplo de esto último sería el siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>java -cp UT10_ProyectoBaseMySQL.jar;librerias\mysql-connector-java-8.0.20.jar ejemplo.Aplicacion</code></pre>
+</div>
+</div>
+<p>En el código anterior el conector estaría en una carpeta llamada <code>librerias</code>.</p>
+<div class="destacado">
+<p><strong>Aunque el proceso de registro del conector no es necesario en muchos casos, es una buena práctica por dos motivos:</strong></p>
+<ul class="lista_verificacion">
+<li><strong>El primero es por asegurar compatibilidad con versiones anteriores del </strong><acronym title="Java Development Kit" lang="en">JDK</acronym><strong>, dado que en muchas ocasiones no sabemos que versión del </strong><acronym title="Java Development Kit" lang="en">JDK</acronym><strong> se usará en el cliente final.</strong></li>
+<li><strong style="font-size: 1em;">El segundo es para controlar situaciones como la anterior. Si al ejecutar la aplicación en el cliente no se encuentra el conector, porque no se ha configurado bien el <code>CLASSPATH</code> o porque al ejecutar la aplicación no se ha indicado donde está la librería del conector, podremos mostrar por pantalla un mensaje amigable y evitar así una incómoda excepción.</strong></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id160">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta160_63" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b160" class="block iDevice_content">
+<p>¿Cómo sería el código necesario para registrar el conector <acronym title="Java Database Connectivity">JDBC</acronym> para la base de datos H2? Seguro que sabes hacerlo, consulta primero la documentación de H2 para hacerlo:</p>
+<p style="text-align: center;"><a href="http://www.h2database.com/html/tutorial.html#connecting_using_jdbc" title="Acceder a la documentación de como conectar con H2 usando JDBC (en inglés). (Se abre en una nueva ventana)" target="_blank" class="html" hreflang="en">Conectar a una base de datos H2 usando <acronym title="Java Database Connectivity">JDBC</acronym>.</a></p>
+</div>
+<form name="feedback-form-quesFeedback0b160" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b160text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b160" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b160" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>El código es idéntico al antes mostrado, solo cambia la clase a indicar, que en este caso, sería <code>org.h2.Driver</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>boolean driverCargado=false;
+String driver="org.h2.Driver";
+try {
+      Class.forName(driver).newInstance();
+      driverCargado=true;
+} catch (ClassNotFoundException e) {
+      err.printf("No se encuentra el driver de la base de datos (%s)\n",driver);
+} catch (InstantiationException ex) {
+      err.printf("No se ha podido iniciar el driver de la base de datos (%s)\n",driver);
+} catch (IllegalAccessException ex) {
+      err.printf("No se ha podido iniciar el driver de la base de datos (%s)\n",driver);
+}
+
+if (driverCargado) {
+
+// podemos continuar, el driver se ha cargado correctamente
+
+}</code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="161_configurar_un_conector_jdbc_en_un_proyecto_netbeans.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="17_ejecucin_de_consultas_sobre_la_base_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

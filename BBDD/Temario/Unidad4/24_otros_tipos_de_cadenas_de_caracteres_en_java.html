@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.4.- Otros tipos de cadenas de caracteres en Java. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-78"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li class="current-page-parent"><a href="2__cadenas_de_caracteres.html" class="current-page-parent daddy">2.-  Cadenas de caracteres.</a>
+   <ul>
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li id="active"><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="active no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="23_la_clase_stringtokenizer_en_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_expresiones_regulares.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.4.- Otros tipos de cadenas de caracteres en Java.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id324">
+<div class="iDevice emphasis0">
+<div id="ta324_73" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="chain-gac851c430_640.jpg" alt="Tres cadenas concurrentes" title="Cadenas" style="float: right;" width="240" height="176" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/cadena-estructura-metal-s%c3%admbolo-4140780/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de klickblick en Pixabay (se abre en una nueva ventana).">klickblick</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p style="text-align: justify;" align="left">Probablemente, el principal problema de los objetos <code>String</code> en Java es su alto consumo de memoria. Por tanto, cuando realizamos un programa que realiza muchísimas operaciones con cadenas, es necesario optimizar el uso de memoria.</p>
+<p>¿Cuál crees que es la razón de ese alto consumo de memoria? Recuerda que en Java, los objetos de la clase <code>String</code> son objetos inmutables, lo cual significa, entre otras cosas, que cada vez que creamos un <code>String</code>, o un literal de <code>String</code>, se crea un nuevo objeto que nuevamente no es modificable.</p>
+<p>Para evitar estos problemas de rendimiento, o bien para simplificar en algunos casos, Java proporciona la clase <code>StringBuilder</code>, cuyos objetos sí son <a href="#tcef8929b-94f6-107a-802d-63355ee82ea9" id="linkcef8929b-94f6-107a-802d-63355ee82ea9" class="exe-tooltip definition-tt">mutables</a>, permitiendo una mayor optimización de la memoria. También existe la clase <code>StringBuffer</code>, pero consume mayores recursos al estar pensada para programas <a href="#tf90ce143-23a1-bf5f-3fa3-4fd21c3af68e" id="linkf90ce143-23a1-bf5f-3fa3-4fd21c3af68e" class="exe-tooltip definition-tt titled-tt">multi-hilo</a>, por lo que en nuestro caso nos centraremos en la primera.</p>
+<p align="left">Pero, ¿en qué se diferencia <code>StringBuilder</code> de la clase <code>String</code>? Pues básicamente en que la clase <code>StringBuilder</code> permite modificar la cadena que contiene, mientras que la clase <code>String</code> no. Como ya se ha indicado en anteriores ocasiones, siempre que se realice una operación sobre un objeto <code>String</code>, se genera una nueva instancia de la clase <code>String</code>.</p>
+<p align="left">Veamos un pequeño ejemplo de uso de esta clase. En el ejemplo que vas a ver, se parte de una cadena con errores que modificaremos para ir haciéndola legible. Lo primero que tenemos que hacer es crear la instancia de esta clase. Se puede inicializar de muchas formas, por ejemplo, partiendo de un literal de cadena:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>StringBuilder strb=new StringBuilder ("Hoal Muuundo");</code>
+</pre>
+</div>
+</div>
+<p align="left">Y ahora, usando los métodos <code>append</code> (insertar al final), <code>insert</code> (insertar una cadena o carácter en una posición específica), <code>delete</code> (eliminar los caracteres que hay entre dos posiciones) y <code>replace</code> (reemplazar los caracteres que hay entre dos posiciones por otros diferentes), rectificaremos la cadena anterior y la haremos correcta:</p>
+<ol>
+<li><strong><span style="font-size: medium;"><code>strb.delete(6,8);</code></span></strong> Eliminamos las <strong><span style="font-size: medium;">'<code>uu</code>'</span></strong> que sobran en la cadena. La primera <strong><span style="font-size: medium;">'<code>u</code>'</span></strong> que sobra está en la posición 6 (no olvides contar el espacio), y la última <strong><span style="font-size: medium;">'<code>u</code>'</span></strong> a eliminar está en la posición 7. Para eliminar dichos caracteres de forma correcta hay que pasar como primer argumento la posición 6 (posición inicial) y como segundo argumento la posición 8 (posición contigua al último carácter a eliminar), dado que la posición final no indica el último carácter a eliminar, sino el carácter justo posterior al último que hay que eliminar (igual que ocurría con el método <strong><span style="font-size: medium;"><code>substring()</code></span></strong>).</li>
+<li><span style="font-size: medium;"><strong><code>strb.append ("!");</code></strong></span> Añadimos al final de la cadena el símbolo de cierre de exclamación.</li>
+<li><strong><span style="font-size: medium;"><code>strb.insert (0,"¡");</code> </span></strong>Insertamos en la posición 0, el símbolo de apertura de exclamación.</li>
+<li><strong><span style="font-size: medium;"><code>strb.replace (3,5,"la");</code></span></strong> Reemplazamos los caracteres 'al' situados entre la posición inicial 3 y la posición final 4, por la cadena <strong><span style="font-size: medium;">'<code>la</code>'</span></strong>. En este método ocurre igual que en los métodos <strong><span style="font-size: medium;"><code>delete()</code></span></strong> y <strong><span style="font-size: medium;"><code>substring()</code></span></strong>, en vez de indicar como posición final la posición 4, se debe indicar justo la posición contigua, es decir 5.</li>
+</ol>
+<p align="left"><code>StringBuilder</code> proporciona muchos métodos similares a los de la clase <code>String</code> (<code>charAt, indexOf, lenght, substring, replace,</code> <abbr title="etcétera.">etc.</abbr>), aunque no todos, pues se trata de clases diferentes.</p>
+<div id="tcef8929b-94f6-107a-802d-63355ee82ea9" class="exe-tooltip-text">
+<p>Es lo contrario a un objeto inmutable. Son objetos que, una vez creados, se puede modificar su contenido sin problema.</p>
+</div>
+<div id="tf90ce143-23a1-bf5f-3fa3-4fd21c3af68e" class="exe-tooltip-text">
+<p>Se trata de aplicaciones que ejecutan varias líneas de ejecución simultáneamente y que necesitan acceder a datos compartidos. Cuando varias líneas de ejecución, cada una a su ritmo, necesitan acceder a datos compartidos, hay que tener mucho cuidado para que los datos que manejan no sean incoherentes.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id325">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(icon_debesconocerfpd.png)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta325_48" class="block iDevice_content">
+<p>En las siguientes páginas puedes encontrar más información (en inglés) sobre como utilizar la clase <code>StringBuilder</code>:</p>
+<p class="enlace_centrado"><a class="html" title="Enlace al apartado sobre la clase StringBuilder en el tutorial oficial de Oracle para Java (se abre en una nueva ventana)." href="http://download.oracle.com/javase/tutorial/java/data/buffers.html" target="_blank">The <code>StringBuilder</code> Class.</a></p>
+<p class="enlace_centrado"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/StringBuilder.html" title="Enlace a la documentación de la API para la clase StringBuilder (se abre en una nueva ventana)." target="_blank" class="html">Documentación javadoc de la clase <code>StringBuilder</code></a>.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id326">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-326_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion326_60" class="block question iDevice_content">
+<p><strong>Rotar una cadena hacia la izquierda es poner simplemente el primer car&aacute;cter al final, y retroceder el resto una posici&oacute;n. Despu&eacute;s de unas cuantas rotaciones hacia la izquierda la cadena queda igual. &iquest;Cu&aacute;l de las siguientes expresiones servir&iacute;a para hacer una rotaci&oacute;n hacia la izquierda (rotar solo una posici&oacute;n)?</strong></p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i326_63" class="sr-av"><a href="#answer-326_63">Opción 1</a></label><input type="radio" name="option326_60" id="i326_63" class="exe-radio-option exe-radio-option-0-4-326_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-326_63"><div id="taans326_63" class="block iDevice_content">
+<p><code>strb.delete (0,1); strb.append(strb.charAt(0));</code></p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i326_111" class="sr-av"><a href="#answer-326_111">Opción 2</a></label><input type="radio" name="option326_60" id="i326_111" class="exe-radio-option exe-radio-option-1-4-326_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-326_111"><div id="taans326_111" class="block iDevice_content">
+<p><code>strb.append(strb.charAt(0));strb.delete(0, 1);</code></p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i326_114" class="sr-av"><a href="#answer-326_114">Opción 3</a></label><input type="radio" name="option326_60" id="i326_114" class="exe-radio-option exe-radio-option-2-4-326_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-326_114"><div id="taans326_114" class="block iDevice_content">
+<p><code>strb.append(strb.charAt(0));strb.delete(0);</code></p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i326_117" class="sr-av"><a href="#answer-326_117">Opción 4</a></label><input type="radio" name="option326_60" id="i326_117" class="exe-radio-option exe-radio-option-3-4-326_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-326_117"><div id="taans326_117" class="block iDevice_content">
+<p><code>strb.append(strb.charAt(1));strb.delete(1,2);</code></p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b326_60" class="feedback js-hidden">
+<div id="taf326_63" class=" iDevice_content">
+<p>No es correcto. No puedes eliminar el primer car&aacute;cter y luego intentar insertarlo al final (ya lo has borrado y no existe, estar&iacute;as insertando el "nuevo" primero, que ser&iacute;a el "antiguo" segundo).</p>
+</div>
+</section>
+<section id="sa1b326_60" class="feedback js-hidden">
+<div id="taf326_111" class=" iDevice_content">
+<p>Correcto, muy bien.</p>
+</div>
+</section>
+<section id="sa2b326_60" class="feedback js-hidden">
+<div id="taf326_114" class=" iDevice_content">
+<p>Incorrecto. El m&eacute;todo <code>delete</code> necesita dos par&aacute;metros.</p>
+</div>
+</section>
+<section id="sa3b326_60" class="feedback js-hidden">
+<div id="taf326_117" class=" iDevice_content">
+<p>Incorrecto. La primera posici&oacute;n no es la 1, sino la 0.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-326_63">Incorrecto</a><span> (<a href="#sa0b326_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-326_111">Opción correcta</a><span> (<a href="#sa1b326_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-326_114">Incorrecto</a><span> (<a href="#sa2b326_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-326_117">Incorrecto</a><span> (<a href="#sa3b326_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice em_iDevice_recomendacionfpd" id="id327">
+<div class="iDevice emphasis_recomendacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_recomendacionfpd.png)"><h1 class="iDeviceTitle">Recomendación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta327_46" class="block iDevice_content">
+<p><span class="resaltado_inline">Observaciones de rendimiento</span></p>
+<p style="text-align: justify;">Java puede realizar ciertas optimizaciones en las que se involucran objetos <code>String </code>(como hacer referencia a un objeto <code>String</code> desde múltiples variables), ya que sabe que estos objetos no cambiarán. Si los datos no van a cambiar, debemos usar objetos <code>String</code> (y no <code>StringBuilder</code>).</p>
+<p style="text-align: justify;">En los programas que llevan a cabo modificaciones de cadenas con frecuencia (concatenaciones, extracciones, <abbr title="etcétera">etc</abbr>.) a menudo es más eficiente implementar las modificaciones con la clase <code>StringBuilder</code>.</p>
+<p style="text-align: justify;">Por otro lado, el proceso de incrementar en forma dinámica la capacidad de un objeto <code>StringBuilder</code> puede requerir una cantidad importante de tiempo. La ejecución de un gran número de estas operaciones puede degradar el rendimiento de una aplicación. Si un objeto <code>StringBuilder</code> va a aumentar su tamaño en forma considerable, tal vez varias veces, puede que sea buena idea establecer una alta capacidad desde un principio (cuando se instancie el objeto en el constructor).</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id328">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta328_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b328" class="block iDevice_content">
+<p>Intenta resolver el ejercicio ya planteado anteriormente sobre los <strong>palíndromos</strong>, pero utilizando ahora objetos de tipo <code>StringBuilder</code>.</p>
+</section>
+<form name="feedback-form-quesFeedback0b328" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b328text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b328" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b328" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Si echamos un vistazo a la documentación de la clase <code>StringBuilder</code>, podremos observar que disponemos de un método que no ofrecía la clase <code>String</code> y que podría resultarnos muy útil. Se trata del método <code>reverse</code>.</p>
+<p>Con este método podríamos obtener la cadena inversa a la cadena leída desde teclado y ya simplemente tendríamos que hacer la comparación. El programa completo podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String cadenaEntrada;
+String cadenaInversa;
+boolean esPalindromo;
+Scanner teclado= new Scanner (System.in);
+
+// Entrada de datos
+System.out.print ("Introduzca cadena: ");
+cadenaEntrada= teclado.nextLine();
+
+// Procesamiento
+// 1. Calculamos la cadena inversa con el método reverse de StringBuilder
+cadenaInversa= new StringBuilder(cadenaEntrada).reverse().toString();
+
+// 2. Comparamos la cadena original con la cadena inversa
+esPalindromo= cadenaEntrada.equalsIgnoreCase(cadenaInversa);
+
+// Salida de resultados
+System.out.println ("La cadena " + (esPalindromo?"sí":"no") + " es palíndromo.");</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="23_la_clase_stringtokenizer_en_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_expresiones_regulares.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

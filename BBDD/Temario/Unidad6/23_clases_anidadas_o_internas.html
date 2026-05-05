@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.3.- Clases anidadas o internas. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_composicin.html" class="current-page-parent daddy">2.- Composición.</a>
+   <ul>
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="23_clases_anidadas_o_internas.html" class="active no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_herencia.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.3.- Clases anidadas o internas.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id21">
+<div class="iDevice emphasis0">
+<div id="ta21_73" class="block iDevice_content">
+<div class="elemento_derecha"><a title="Ampliar imagen &quot;Taxonomía de clases&quot;. (Se abre en una nueva ventana)" href="PROG07_CONT_R17_TaxonomiaClases.jpg" target="_blank"> <img alt="Representación de la taxonomía de clases en Java." class="imagen_ampliable elemento_derecha" src="PROG07_CONT_R17_TaxonomiaClases_miniatura.jpg" style="width: 192px; height: 140px;" title="Taxonomía de Clases." width="192" height="140" /></a> <figcaption class="figcaption">
+<div class="elemento_centrado credenciales">Oracle. Todos los derechos reservados.</div>
+</figcaption></div>
+<p>En algunos lenguajes, es posible definir una clase dentro de otra clase (<strong>clases internas</strong>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class ClaseContenedora {
+     // Cuerpo de la clase
+     . . .
+     class ClaseInterna {
+          // Cuerpo de la clase interna
+          . . .
+     }
+}</code></pre>
+</div>
+</div>
+<p>Se pueden distinguir varios tipos de <strong>clases internas</strong>:</p>
+<ul class="lista_verificacion">
+<li><strong>Clases internas estáticas</strong> (o <strong>clases anidadas</strong>), declaradas con el modificador <strong><code>static</code></strong>.</li>
+<li><strong>Clases internas miembro</strong>, conocidas habitualmente como <strong>clases internas</strong>. Declaradas al máximo nivel de la clase contenedora y no estáticas.</li>
+<li><strong>Clases internas locales</strong>, que se declaran en el interior de un bloque de código (normalmente dentro de un método).</li>
+<li><strong>Clases anónimas</strong>, similares a las internas locales, pero sin nombre (sólo existirá un objeto de ellas y, al no tener nombre, no tendrán constructores). Se suelen usar en la <strong>gestión de eventos</strong> en las <strong>interfaces gráficas</strong>.</li>
+</ul>
+<p><span style="font-size: 1em;">Aquí tienes algunos ejemplos:</span></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class ClaseContenedora {
+…
+     static class ClaseAnidadaEstatica {
+…
+     }
+     class ClaseInterna {
+…
+     }</code></pre>
+</div>
+</div>
+<p>Las <strong>clases anidadas</strong>, como miembros de una clase que son (miembros de <strong><code>claseExterna</code></strong>), pueden ser declaradas con los modificadores <strong><code>public</code></strong>, <strong><code>protected</code></strong>, <strong><code>private</code></strong> o <strong>de paquete</strong>, como el resto de miembros.</p>
+<p>Las <strong>clases internas</strong> (no estáticas) tienen acceso a otros miembros de la clase dentro de la que está definida aunque sean privados (se trata en cierto modo de un miembro más de la clase), mientras que las anidadas (estáticas) no.</p>
+<p>Las <strong>clases internas</strong> se utilizan en algunos casos para:</p>
+<ul class="lista_verificacion">
+<li><strong>Agrupar</strong> clases que sólo tiene sentido que existan en el entorno de la clase en la que han sido definidas, de manera que se oculta su existencia al resto del código.</li>
+<li>Incrementar el nivel de <strong>encapsulación</strong> y <strong>ocultamiento</strong>.</li>
+<li>Proporcionar un <strong>código fuente más legible y fácil de mantener</strong> (el código de las <strong>clases internas</strong> y <strong>anidadas</strong> está más cerca de donde es usado).</li>
+</ul>
+<p>En <span lang="en">Java</span> es posible definir <strong>clases internas</strong> y <strong>anidadas</strong>, permitiendo todas esas posibilidades. Aunque para los ejemplos con los que vas a trabajar no las vas a necesitar por ahora.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id22">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta22_47" class="block iDevice_content">
+<p>Si quieres ampliar un poco más sobre las clases internas, puedes echar un vistazo a la siguiente presentación:</p>
+<div class="enlace_centrado"><a class="pdf" title="Descargar documento que explica el funcionamiento de las clases internas en Java. Se abre en una nueva ventana pdf 32 KB [pdf - 31.6 KB]" href="PROG07_CONT_R18_01_ClasesInternas.pdf" target="_blank">Clases internas.</a><span class="exe-link-data file-size"> (pdf - 31.6 <abbr title="KiloBytes" lang="en">KB</abbr>)</span> </div>
+<p class="enlace_centrado" style="text-align: left;">También puedes consultar los siguientes artículos sobre clases anidadas, internas, locales y anónimas en la documentación oficial de Java (en inglés):</p>
+<p class="enlace_centrado"><a class="html" title="Acceder al artículo 'Nested Classes', de la documentación de Oracle sobre Java (Se abre en una nueva ventana)." href="https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html" target="_blank"><span class="lista_verificacion" lang="en">Oracle Java Documentation - Nested classes.</span></a></p>
+<p class="enlace_centrado"><span class="lista_verificacion" lang="en"><a class="html" title="Acceder al artículo 'Nested Classes', del tutorial de Java de W3Schools (Se abre en una nueva ventana)." href="https://www.w3schools.com/java/java_inner_classes.asp" target="_blank"><span class="lista_verificacion" lang="en">W3Schools - Nested classes.</span></a></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_herencia.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

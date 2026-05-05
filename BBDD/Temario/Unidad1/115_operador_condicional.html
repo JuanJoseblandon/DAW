@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.5.- Operador condicional | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-64"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li class="current-page-parent"><a href="11_operadores_y_expresiones.html" class="current-page-parent daddy">11.- Operadores y expresiones</a>
+   <ul>
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li id="active"><a href="115_operador_condicional.html" class="active no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="114_operadores_lgicos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="116_operadores_de_bits.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.5.- Operador condicional</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id178">
+<div class="iDevice emphasis0">
+<div id="ta178_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a href="PROG02_CONT_R28_opcondicional.png" target="_blank"><img src="PROG02_CONT_R28_opcondicional_miniatura.png" alt="Diagrama de flujo del operador condicional." title="Operador condicional." class="imagen_ampliable" style="float: right;" width="192" height="136" /></a></div>
+<div class="elemento_centrado credenciales">Ministerio de Educación. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">Elaboración propia.</div>
+</div>
+<p>El <strong>operador condicional</strong> “<code>? :</code>” sirve para <strong>evaluar una condición y devolver un resultado u otro</strong> en función de si es verdadera o falsa dicha condición. Es el único <strong>operador ternario</strong> de <span lang="en">Java</span>, y como tal, <strong>necesita tres operandos</strong> para formar una expresión.</p>
+<ul class="lista_verificacion">
+<li>El <strong>primer operando</strong> se sitúa <strong>a la izquierda del símbolo de interrogación</strong> (<code>?</code>), y siempre será una <strong>expresión booleana</strong>, también llamada condición.</li>
+<li>El <strong>siguiente operando</strong> se sitúa <strong>a la derecha del símbolo de interrogación</strong> (<code>?</code>) y <strong>antes de los dos puntos</strong> (<code>:</code>), y es el <strong>valor que devolverá el operador condicional si la condición es verdadera</strong>.</li>
+<li>El <strong>tercer y último operando</strong>, que aparece <strong>después de los dos puntos</strong> (<code>:</code>), es la <strong>expresión cuyo resultado se devolverá si la condición evaluada es falsa</strong>.</li>
+</ul>
+<table class="tabla" summary="Cuadro o tabla de dos filas por dos columnas, de título &quot;Operadores de condicional en Java&quot;, que indica cómo es una expresión en Java utilizando el operador condicional ?:. Debe ser leída en columnas de izquierda a derecha y de arriba abajo. "><caption>Operador condicional en Java</caption>
+<thead>
+<tr><th scope="col">Operador</th><th scope="col">Expresión en Java</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>? :</code></td>
+<td style="text-align: center;"><code>condición ? exp1 : exp2</code></td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Por ejemplo, en la expresión:</p>
+<div class="highlighted-code language-java">
+<pre><code>(x&gt;y) ? x : y ;</code>
+</pre>
+</div>
+<p>Se evalúa la condición de si <code>x</code> es mayor que <code>y</code>. En caso afirmativo se devuelve el valor de la variable <code>x</code>, y en caso contrario se devuelve el valor de <code>y</code>. Se trata de una manera muy elegante de calcular el <strong>máximo</strong> de esos dos valores.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id212">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta212_128" class="block iDevice_content">
+<p>El operador condicional se puede sustituir por la sentencia <code>if-then-else</code> que veremos en la siguiente unidad sobre las <strong>estructuras de control</strong>, de la que viene a ser una versión abreviada muy útil para algunos casos, permitiendo hacer operaciones potentes con una única sentencia bastante simple. Por ejemplo, la línea anterior de ejemplo, devuelve el mayor de los dos números que se comparan, de una manera sintética y elegante, aunque lo mismo se podría haber hecho usando una sentencia <code>if-then-else.</code></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper CitasparapensarfpdIdevice em_iDevice em_iDevice_citasparapensarfpd" id="id179">
+<div class="iDevice emphasis_citasparapensarfpd" >
+<header class="iDevice_header" style="background-image:url(icon_citasparapensarfpd.png)"><h1 class="iDeviceTitle">Citas para pensar</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta179_49" class="block iDevice_content">
+<blockquote>
+<p>La buena escritura debe ser concisa. Una oraci&oacute;n no debe contener palabras innecesarias, un p&aacute;rrafo no debe contener oraciones innecesarias.</p>
+<cite><strong><span class="elemento_derecha" lang="en">William Strunk, Jr.</span></strong></cite></blockquote>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id199">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta199_149" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b199" class="block iDevice_content">
+<p>El siguiente código generará un número aleatorio entre 0 y 100 (aunque el 100 no estará incluido):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//d contendrá un número aleatorio entre 0 y 100.
+double d=Math.random()*100;</code></pre>
+</div>
+</div>
+<p>Usando exclusivamente el operador condicional, junto con operadores de relación, lógicos y de asignación, escribe un código en Java que muestre por pantalla si el número aleatorio generado está entre los rangos siguientes:</p>
+<ul class="lista_verificacion">
+<li><code>d</code> está entre <code>0</code> y <code>20</code>, <code>20</code> no incluido.</li>
+<li><code>d</code> está entre <code>20</code> y <code>50</code>, ambos incluidos.</li>
+<li><code>d</code> está entre <code>50</code> y <code>75</code>, ninguno incluido.</li>
+<li><code>d</code> está entre <code>75</code> y <code>100</code>, ambos incluidos.</li>
+</ul>
+</section>
+<form name="feedback-form-quesFeedback0b199" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b199text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b199" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b199" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Una solución posible podría ser:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class EjercicioOperadorCondicional {
+     public static void main(String[] args) {
+         //d contendrá un número aleatorio entre 0 y 100.
+         double d= Math.random() * 100;
+         
+         String cadena;
+         // Comprobamos si d está entre 0 y 20, 20 no incluido.         
+         cadena= (d&lt;20) ? "Sí está entre 0 y 20." : "No está entre 0 y 20.";
+         System.out.println (cadena);
+         // Comprobamos si d está entre 20 y 50, ambos incluidos.         
+         cadena= (d&gt;=20 &amp;&amp; d&lt;=50) ? "Sí está entre 20 y 50." : "No está entre 20 y 50.";
+         System.out.println (cadena);
+         // Comprobamos si d está entre 50 y 75, ninguno incluido.         
+         cadena= (d&gt;50 &amp;&amp; d&lt;75) ? "Sí está entre 50 y 75." : "No está entre 50 y 75.";
+         System.out.println (cadena);
+         // Comprobamos si d está entre 75 y 100, ambos incluidos.         
+         cadena= (d&gt;=75 &amp;&amp; d&lt;=100) ? "Sí está entre 75 y 100" : "No está entre 75 y 100.";
+         System.out.println (cadena);
+         // Mostramos el número aleatorio
+         System.out.println ("El número aleatorio es:" + d);
+    }
+}</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id175">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta175_63" class="block story iDevice_content">
+<p>Sabemos si un número es <strong>par</strong> o <strong>impar</strong> (<strong>divisible entre dos</strong>) si <strong>el resto de la división entera</strong> de ese número entre dos es <strong>cero</strong> o <strong>uno</strong>.</p>
+</section>
+<section id="taquesQuestion0b175" class="block iDevice_content">
+<p>Escribe un programa en Java que pida un número entero al usuario e indique si ese número es <strong>par o impar</strong>.</p>
+</section>
+<form name="feedback-form-quesFeedback0b175" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b175text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b175" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b175" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Dado que dependiendo de que el número sea par o impar habrá que mostrar un texto diferente por pantalla (<code>"par"</code> o <code>"impar"</code>), podríamos utilizar el operador condicional (<code>?</code>) para decidir qué mensaje se va a mostrar:</p>
+<p><code>String mensajeResultado = (numero % 2 == 0) ? "par" : "impar";</code></p>
+<p>Por tanto, el programa que realice todo el proceso podría quedar así:</p>
+<div class="highlighted-code language-java line-numbers">
+<pre><code>import java.util.Scanner;
+
+public class CalcularParImpar {
+   public static void main(String args[]) {
+      Scanner scanner = new Scanner(System.in);
+      int numero;
+      String mensajeResultado;
+ 	  
+      System.out.print("Introduce un número entero: ");
+      numero = scanner.nextInt();
+      mensajeResultado = (numero % 2 == 0) ? "par" : "impar" ;
+      System.out.println ("El número es " + mensajeResultado);
+   }
+}</code></pre>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="114_operadores_lgicos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="116_operadores_de_bits.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

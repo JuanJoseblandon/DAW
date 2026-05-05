@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.2.- Operaciones básicas con cadenas de caracteres (II). | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-72"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li class="current-page-parent"><a href="2__cadenas_de_caracteres.html" class="current-page-parent daddy">2.-  Cadenas de caracteres.</a>
+   <ul>
+      <li class="current-page-parent"><a href="21_operaciones_con_cadenas_de_caracteres.html" class="current-page-parent daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul>
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li id="active"><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="active no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id294">
+<div class="iDevice emphasis0">
+<div id="ta294_85" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="mental-health-g3ba15b1cf_640.jpg" alt="Letras en el juego Scrabble" title="Letras" style="float: right;" width="240" height="160" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/salud-mental-fichas-de-madera-2019924/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Wokandapix en Pixabay (se abre en una nueva ventana).">Wokandapix</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Continuamos estudiando algunas de las operaciones básicas que se pueden llevar a cabo con esta estructura de datos. ¿Cómo puedo <strong>comprobar si dos cadenas son iguales</strong> (tienen el <strong>mismo contenido</strong>)? ¿Se pueden realizar <strong>comparaciones sin tener en cuenta las mayúsculas y las minúsculas</strong>? ¿Existe la posibilidad de <strong>pasar todo el contenido de un texto a mayúsculas o a minúsculas</strong>? En la siguiente tabla puedes observar algunas operaciones adicionales a las que llevamos vistas hasta el momento. En todos los ejemplos expuestos, las variables <code>cad1</code> y <code>cad2</code> son cadenas ya existentes.</p>
+<table class="tabla" summary="Tabla que expone alguno de los métodos más importantes de la clase String. En la primera columna aparece un ejemplo en el que se usa el método, en la segunda columna una descripción que explica para que sirve dicho método."><caption>Algunos métodos básicos de la clase <strong><code>String</code></strong>.</caption>
+<thead>
+<tr><th scope="col">Método</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td scope="row"><span style="font-size: medium;"><strong><code>cad1.compareTo(cad2)</code></strong></span></td>
+<td>Permite comparar dos cadenas entre sí lexicográficamente. Retornará 0 si son iguales, un número menor que cero si la cadena (<strong><span style="font-size: medium;"><code>cad1</code></span></strong>) es anterior en orden alfabético a la que se pasa por argumento (<strong><span style="font-size: medium;"><code>cad2</code></span></strong>), y un número mayor que cero si la cadena es posterior en orden alfabético.</td>
+</tr>
+<tr>
+<td scope="row"><span style="font-size: medium;"><strong><code>cad1.equals(cad2)</code></strong></span></td>
+<td>Cuando se compara si dos cadenas son iguales, no se debe usar el operador de comparación "<strong><span style="font-size: medium;"><code>==</code></span></strong>", sino el método <span style="font-size: medium;"><strong><code>equals()</code></strong></span>. Retornará <strong><span style="font-size: medium;"><code>true</code></span></strong> si son iguales, y <strong><span style="font-size: medium;"><code>false</code></span></strong> si no lo son.</td>
+</tr>
+<tr>
+<td scope="row"><span style="font-size: medium;"><strong><code>cad1.compareToIgnoreCase(cad2)<br /> cad1.equalsIgnoreCase(cad2)</code></strong></span></td>
+<td>El método <strong><span style="font-size: medium;"><code>compareToIgnoreCase()</code></span></strong> funciona igual que el método <strong><span style="font-size: medium;"><code>compareTo()</code></span></strong>, pero ignora las mayúsculas y las minúsculas a la hora de hacer la comparación. Las mayúsculas van antes en orden alfabético que las minúsculas, por lo que hay que tenerlo en cuenta. El método <span style="font-size: medium;"><strong><code>equalsIgnoresCase()</code></strong></span> es igual que el método <strong><span style="font-size: medium;"><code>equals()</code></span></strong> pero sin tener en cuenta las minúsculas.</td>
+</tr>
+<tr>
+<td scope="row"><span style="font-size: medium;"><strong><code>cad1.toLowerCase()</code></strong></span></td>
+<td>Genera una copia de la cadena con todos los caracteres a minúscula.</td>
+</tr>
+<tr>
+<td scope="row"><span style="font-size: medium;"><strong><code>cad1.toUpperCase()</code></strong></span></td>
+<td>Genera una copia de la cadena con todos los caracteres a mayúsculas.</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id295">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta295_151" class="block iDevice_content">
+<p>Para comparar dos cadenas en Java (objetos de tipo <strong><code>String</code></strong>) se deben utilizar métodos de comparación de objetos (<code>equals</code>) o bien métodos específicos que proporcione la clase <strong><code>String</code></strong> (<code>equalsIgnoreCase</code>, <code>CompareTo</code>, <code>compareToIgnoreCase</code>), pero nunca el operador <strong><code>==</code></strong>.</p>
+<p></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id296">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta296_128" class="block iDevice_content">
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta136_129" class="block iDevice_content">
+<p style="text-align: justify;">Como ya vimos en la unidad dedicada a los objetos, si utilizamos el operador<span> </span><code>== </code>para comparar variables de tipo referencia (referencias a objetos) estaremos cometiendo una incorrección. ¿Por qué? Recuerda que  <code>==</code> compara las referencias para determinar si se refieren al mismo objeto (misma zona de memoria), no a si dos objetos tienen el mismo contenido.</p>
+<p>Si se comparan dos objetos idénticos con <code>==</code>, pero se trata distintos objetos en memoria, es decir, diferentes referencias, el resultado será <code>false</code>. Si vas a comparar objetos <strong>para determinar si tienen el mismo contenido</strong>, se debe utilizar el método <code>equals</code> o similares (<code>compareTo</code>).</p>
+<p>Ahora bien, para el caso de objetos de tipo <code>String</code> es probable que en muchas ocasiones el operador <code>==</code> también funcione, pues, como ya hemos comentado anteriormente, Java almacena una única vez valores idénticos de literales de cadena.<strong></strong></p>
+<p><strong>¿Significa esto que podemos usar el operador <code>==</code> para comparar objetos de tipo <code>String</code>? La respuesta es no</strong>, pues aunque muchas veces pueda funcionar, nunca tendremos la garantía de que sea así y, además, <strong>no es la manera correcta de comparar objetos, aunque en algún caso específico pudiera funcionar</strong>.</p>
+<p>Puedes profundizar sobre este tema echándole un vistazo a alguna de las siguientes referencias:</p>
+<ul>
+<li class="lista_verificacion"><a href="https://www.campusmvp.es/recursos/post/java-comparacion-de-cadenas-literales-clases-repositorio-de-cadenas.aspx" title="Enlace al artículo &quot;Java: ¿Por qué no me funciona la comparación de cadenas? Literales, clases y el repositorio de cadenas&quot; (se abre en una nueva ventana)" target="_blank" class="html">Java: ¿Por qué no me funciona la comparación de cadenas? Literales, clases y el repositorio de cadenas</a></li>
+<li class="lista_verificacion"><a href="https://www.baeldung.com/java-string-pool" title="Enlace al artículo &quot;Guide to Java String Pool&quot; (se abre en una nueva ventana)" target="_blank" class="html">Guide to Java String Pool</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id297">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto: palíndromos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta297_148" class="block story iDevice_content">
+<p>Un <strong>palíndromo</strong> es una palabra o expresión que se lee igual de izquierda a derecha que de derecha a izquierda, como por ejemplo "<em>Ana</em>", "<em>salas</em>", "<em>reconocer</em>" o "<em>No deseo ese don</em>".</p>
+</section>
+<section id="taquesQuestion0b297" class="block iDevice_content">
+<p>Escribe un programa que lea desde teclado una cadena que <strong>solo pueda contener letras</strong> (mayúsculas o minúsculas, sin contar con la eñe). Mientras que la cadena introducida contenga algo que no sean letras, habrá que volver a solicitarla. Una vez la cadena cumpla las reglas, habrá que comprobar si se trata de un palíndromo o no.</p>
+<p>A la hora de llevar a cabo la comprobación, no deberían importar mayúsculas y minúsculas.</p>
+<p>Una primera forma de intentar resolver este problema podría ser ir comparando letra a letra, ¿cómo lo harías?</p>
+</section>
+<form name="feedback-form-quesFeedback0b297" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b297text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b297" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b297" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>La primera parte del programa (garantizar que la entrada introducida son solo letras) podemos realizarla de manera similar a como ya hemos resuelto otros problemas anteriormente.</p>
+<p>La comprobación de que cada carácter es o no una letra puedes hacerla al menos de dos formas posibles:</p>
+<ol>
+<li>comparando cada carácter con los límites de las minúsculas y las mayúsculas:
+<div class="highlighted-code language-java">
+<div>
+<pre><code>palabraValida= letra&gt;='A' &amp;&amp; letra&lt;='Z' || letra&gt;='a' &amp;&amp; letra&lt;='z';</code></pre>
+</div>
+</div>
+</li>
+<li>utilizando algunas de las herramientas (métodos estáticos) de la clase <code>Character</code>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>palabraValida= Character.isLetter(letra);</code></pre>
+</div>
+</div>
+</li>
+</ol>
+<p>En la primera opción deben evaluarse primero los <strong>AND</strong> (<code>&amp;&amp;</code>) y luego el operador <strong>OR</strong> (<code>||</code>). Sin embargo, no hemos utilizado paréntesis, ¿sabes por qué?</p>
+<p>Cualquiera de las dos formas es correcta. Si elegimos, por ejemplo, la primera forma, el código de entrada de datos quedaría de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Scanner teclado= new Scanner (System.in);
+String palabra;
+boolean palabraValida = true;
+do {
+    System.out.println("Introduzca una única palabra formada solo por letras (mayúsculas o minúsculas)");
+    palabra = teclado.nextLine();
+    palabraValida= true;
+    for ( int i=0; i&lt;palabra.length() &amp;&amp; palabraValida ; i++ ) {
+        char letra= palabra.charAt(i);
+        palabraValida= letra&gt;='A' &amp;&amp; letra&lt;='Z' || letra&gt;='a' &amp;&amp; letra&lt;='z'; // Comprobamos si el carácter es una letra
+    }        
+} while (!palabraValida);
+System.out.println ("Palabra válida.");</code></pre>
+</div>
+</div>
+<p>Una vez que tenemos en la variable <code>palabra</code> un texto donde tan únicamente hay letras (una combinación de mayúsculas y minúsculas), es ahora cuando comienza nuestro trabajo para verificar si se trata efectivamente de un palíndromo.</p>
+<p>Una manera de enfocar el problema podría ser ir recorriendo la cadena carácter a carácter y comparando cada elemento con su elemento "simétrico". Es decir, comparar el carácter de la primera posición con el de la última posición, el de la segunda con la penúltima y así sucesivamente hasta llegar a la mitad del texto. ¿Por qué hasta la mitad? Porque la otra mitad ya la habremos comprobado dado que estamos comparando los caracteres de la primera mitad con los de la segunda.</p>
+<p>Si alguna de esas comprobaciones "falla" (no son el mismo carácter), sabremos que el texto no es un palíndromo. Si llegamos hasta el final sin encontrar ninguna diferencia entre cada carácter y su simétrico, sabremos que se trata de un palíndromo.</p>
+<p>Ese conjunto de verificaciones podríamos realizarlo con un bucle. Utilizaremos un contador <code>i</code> que irá desde 0 hasta la mitad de la longitud del texto (<code>palabra.length()/2</code>) y compararemos cada carácter de la posición <code>i</code> con el de la posición <code>(palabra.length()-1) - i</code>. Recuerda siempre que <strong>la primera posición de una cadena es la 0</strong> y <strong>la última posición es la longitud menos uno</strong> (<code>length()-1</code>). Para registrar si test ha tenido éxito o no, podemos usar una variable de tipo <code>boolean</code>. Teniendo todo esto en cuenta, el bucle podría quedar de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>boolean esPalindromo= true;
+for (int i=0 ; i&lt;palabra.length()/2 ; i++) {  // Recorremos hasta la mitad del texto (no es necesario llegar hasta el final)
+    if ( palabra.charAt(i) != palabra.charAt(palabra.length()-1-i) ) {  // Comparamos cada carácter con su "simétrico"
+        esPalindromo= false;  // Si alguna comprobación "falla" ya no será palíndromo
+    }
+}</code></pre>
+</div>
+</div>
+<p>(ten en cuenta que en estos casos estamos comparando valores de tipo primitivo <code>char</code> y sí debe usarse el operador <code>==</code> o bien <code>!=</code>)</p>
+<p>Al final del bucle, la variable <code>esPalindromo</code> nos indicará si el texto es palíndromo o no. Si nunca se ha entrado en el <code>if</code>, su valor será <code>true</code> (su valor inicial). Con que se haya entrado una sola vez, el valor será <code>false</code>. Eso significa que en el momento que se produzca un "fallo" (que dos letras no sean iguales), ya sabremos que no se cumple la condición de palíndromo y, por tanto, no sería necesario seguir realizando comprobaciones, pudiéndonos salir del bucle. Para ello podríamos añadir a la condición de continuidad del bucle una condición adicional donde se tengan en cuenta las anteriores comprobaciones. Es decir, que la cabecera del bucle <code>for</code> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for (int i=0 ; i&lt;palabra.length()/2 &amp;&amp; esPalindromo; i++) {</code></pre>
+</div>
+</div>
+<p>Y el bucle completo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>boolean esPalindromo = true;
+for (int i=0 ; i&lt;palabra.length()/2 &amp;&amp; esPalindromo; i++) {
+    if ( palabra.charAt(i) != palabra.charAt(palabra.length()-1-i) ) {
+        esPalindromo = false;
+    }
+}</code></pre>
+</div>
+</div>
+<p>Incluso podríamos eliminar la sentencia <code>if</code> y utilizar la condición directamente para almacenarla en la variable <code>boolean</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>boolean esPalindromo = true;
+for (int i=0 ; i&lt;palabra.length()/2 &amp;&amp; esPalindromo; i++) {
+    esPalindromo = palabra.charAt(i) == palabra.charAt(palabra.length()-1-i);
+}</code></pre>
+</div>
+</div>
+<p>Ahora bien, la verificación que hacemos no es completamente correcta, pues en el enunciado del ejercicio nos han indicado que no se deben tener en cuenta mayúsculas y minúsculas. Por ejemplo, en el texto "<em>Reconocer</em>", el carácter 'R' y el carácter 'r' deberían ser considerados iguales, y así con el resto de letras. Tal y como hemos diseñado nuestro test, eso no lo estamos teniendo en cuenta. ¿Cómo podríamos hacerlo?</p>
+<p>Para llevar a cabo esa comparación no nos sirve el operador <code>==</code>, que solo va a devolver <code>true</code> si ambos caracteres son exactamente iguales. Por tanto, debemos idear algún mecanismo que tenga en cuenta la posibilidad de que una letra sea la versión en mayúscula y otra la versión en minúscula y en tal caso considerarlas "iguales". Para ello tenemos varias opciones:</p>
+<ol>
+<li>llevar a cabo operaciones de resta o suma sobre el carácter para "convertirlo" en mayúscula o minúscula a la hora de hacer la comparación;</li>
+<li>utilizar alguna herramienta de la clase <code>Character</code> que permita hacer esa conversión de una manera más sencilla.</li>
+</ol>
+<p>Para llevar a cabo la primera opción podríamos hacer cálculos como:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>int distancia = 'a' - 'A';
+char car1 = palabra.charAt(i);
+char car2 = palabra.charAt(palabra.length()-1-i);
+esPalindromo = car1==car2 || car1-distancia==car2 || car1+distancia==car2;</code></pre>
+</div>
+</div>
+<p>¿Cómo funciona ese fragmento de código? Veámoslo paso a paso:<br /><br /></p>
+<ul class="lista_verificacion">
+<li>en la primera línea, calculamos la distancia en caracteres que hay entre la 'a' minúscula y la 'A' mayúscula: 'a' - 'A'. Esa es la distancia que hay entre cualquier letra minúscula (que están después de las mayúsculas en el código <acronym title="American Standard Code for Information Interchange">ASCII</acronym>/Unicode) y su equivalente en mayúscula. Es la cantidad que tendremos que sumar a una mayúscula para obtener su equivalente en minúscula o bien que restar a una minúscula para lo contrario;</li>
+<li>en la segunda y tercera línea guardamos en variables los caracteres que iremos comparando en cada iteración del bucle, para que la siguiente expresión no sea una línea tan larga;</li>
+<li>en la cuarta línea es donde hacemos la comparación entre caracteres. Consideraremos que los dos caracteres son iguales si se da una de las siguientes condiciones:
+<ul>
+<li>los dos caracteres son exactamente iguales;</li>
+<li>el primero pasado a mayúsculas coincide con el segundo (por si el primero estuviera en minúscula y el segundo en mayúscula);</li>
+<li>el primero pasado a minúsculas coincide con el segundo (por si el primero estuviera en mayúscula y el segundo en minúscula).</li>
+</ul>
+</li>
+</ul>
+<p>Si alguna de esas tres condiciones es verdadera (por eso se unen con un <strong>OR</strong>), entonces las dos letras son iguales, sin importar mayúsculas o minúsculas. Si ninguna de las tres es verdadera, entonces consideraremos que las letras no son iguales y el texto ya no será palíndromo.</p>
+<p>El único fallo que podríamos pensar que quizá podría tener esta comprobación sería si sucediera algo como:</p>
+<ul>
+<li class="lista_verificacion">el primer carácter fuera mayúscula y el segundo no fuera una letra, sino un carácter tal que restando la distancia al primero coincidiera con él (caracteres por encima de las mayúsculas, con código más bajo);</li>
+<li class="lista_verificacion">si el primer carácter fuera minúscula y el segundo no fuera una letra, sino un carácter tal que sumando la distancia al primero coincidiera con él (caracteres por debajo de las minúsculas, con código mayor).</li>
+</ul>
+<p>Pero ninguna de esas dos circunstancias va a ser posible porque en la entrada de datos habremos garantizado que todo lo que hay en el texto son letras (o mayúsculas o bien minúsculas).</p>
+<p>Por tanto, el bucle completo para la comprobación podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>boolean esPalindromo = true;        
+for (int i=0 ; i&lt;palabra.length()/2 &amp;&amp; esPalindromo; i++) {
+    int distancia = 'a' - 'A';
+    char car1 = palabra.charAt(i);
+    char car2 = palabra.charAt(palabra.length()-1-i);
+    esPalindromo = car1==car2 || car1-distancia==car2 || car1+distancia==car2;
+}</code></pre>
+</div>
+</div>
+<p>En este caso, hemos creado las variables intermedias <code>car1</code> y <code>car2</code> para no tener que escribir tantas veces en el código expresiones como <code>palabra.charAt(i)</code> o <code>palabra.charAt(palabra.length()-1-i)</code>, haciendo más legible el código y evitando tener que calcular una y otra vez el mismo carácter.</p>
+<p>Si esta forma nos parece muy complicada, podemos optar la segunda posibilidad: <strong>utilizar las herramientas (métodos estáticos) que nos proporciona la clase <code>Character</code></strong>. En este caso podríamos, por ejemplo, pasar los dos caracteres a mayúscula (mediante <code>Character.toLowerCase</code>) o minúscula (mediante <code>Character.toUpperCase</code>) y entonces llevar a cabo la comparación. Es decir, que podríamos haber hecho:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>esPalindromo =  Character.toLowerCase(palabra.charAt(i)) == Character.toLowerCase(palabra.charAt(palabra.length()-1-i));
+</code></pre>
+</div>
+</div>
+<p>O bien, si decidimos pasar los caracteres a mayúscula (método <code>Character.toUpperCase</code>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>esPalindromo =  Character.toUpperCase(palabra.charAt(i)) == Character.toUpperCase(palabra.charAt(palabra.length()-1-i));</code></pre>
+</div>
+</div>
+<p>(recuerda una vez más que en estos casos estamos comparando valores de tipo primitivo <code>char</code> y sí debe usarse el operador <code>==</code>)</p>
+<p>En tal caso, el bucle de verificación habría quedado así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>esPalindromo= true;        
+for (int i=0 ; i&lt;palabra.length()/2 &amp;&amp; esPalindromo; i++) {
+    esPalindromo =  Character.toLowerCase(palabra.charAt(i)) == Character.toLowerCase(palabra.charAt(palabra.length()-1-i));
+}</code></pre>
+</div>
+</div>
+<p>Y el programa completo podría quedar de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Entrada de datos: texto que contenga únicamente letras
+Scanner teclado= new Scanner (System.in);
+String palabra;
+boolean palabraValida = true;
+do {
+    System.out.println("Introduzca una única palabra formada solo por letras (mayúsculas o minúsculas)");
+    palabra = teclado.nextLine();
+    palabraValida= true;
+    for ( int i=0; i&lt;palabra.length() &amp;&amp; palabraValida ; i++ ) {
+        char letra= palabra.charAt(i);
+        // Comprobamos si el carácter es realmente una letra
+        //palabraValida= letra&gt;='A' &amp;&amp; letra&lt;='Z' || letra&gt;='a' &amp;&amp; letra&lt;='z';  // Primera opción
+        palabraValida= Character.isLetter(letra);  // Segunda opción
+    }        
+} while (!palabraValida);
+
+// Procesamiento: comprobación de palíndromo
+boolean esPalindromo= true;        
+for (int i=0 ; i&lt;palabra.length()/2 &amp;&amp; esPalindromo; i++) {
+    esPalindromo =  Character.toUpperCase(palabra.charAt(i)) == Character.toUpperCase(palabra.charAt(palabra.length()-1-i));
+}
+
+// Salida de resultados: indicamos si es o no palíndromo
+System.out.printf ("Es palíndromo: %s\n", esPalindromo ? "sí" : "no");</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b297" class="block iDevice_content">
+<p>Otra posible forma de resolver el problema podría ser mediante la generación de un segundo texto, que sea la inversa del primero, y a continuación compararlos. Si los dos son iguales, se trata de un palíndromo. Si no lo son, entonces no es un palíndromo. ¿Cómo lo llevarías a cabo?</p>
+</section>
+<form name="feedback-form-quesFeedback1b297" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b297text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b297" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b297" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Una manera sencilla de <strong>generar la inversa de una cadena</strong> es recorrerla carácter a carácter e ir construyendo una segunda cadena concatenando cada carácter al principio de lo que se lleva ya generado. Es decir, hacer algo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String palabraInvertida = "";
+for (int i=0 ; i&lt;palabra.length() ; i++) {
+    palabraInvertida = palabra.charAt(i) + palabraInvertida; // Vamos concatenando "por la izquierda"
+}</code></pre>
+</div>
+</div>
+<p>En este caso, dado que se está concatenando (operador <code>+</code>) un valor de tipo <code>char</code> (lo que devuelve el método <code>charAt</code>) con un <code>String</code>, Java realizará de manera automática una conversión del <code>char</code> a un <code>String</code> de un solo carácter. Se aplica el mismo principio que cuando se intentaba concatenar un valor numérico (<code>int</code>, <code>double</code>, <abbr title="etcétera">etc.</abbr>) con una cadena, donde el valor numérico se transformaba automáticamente en un <code>String</code> para poder llevar a cabo la concatenación.</p>
+<p>Una vez que tenemos la cadena invertida, ya solamente queda compararlas. Ahora bien, recuerda que no debemos utilizar el operador <code>==</code>, sino alguno de los operadores de comparación que proporciona la clase <code>String</code>: <code>equals</code>, <code>compareTo</code>, <code>equalsIgnoreCase</code>, <code>compareIgnoreCase</code>.</p>
+<p>Por ejemplo, podríamos intentar hacer la siguiente comprobación:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>esPalindromo =  palabra.equals(palabraInvertida)</code></pre>
+</div>
+</div>
+<p>O bien:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>esPalindromo =  palabra.compareTo(palabraInvertida) == 0</code></pre>
+</div>
+</div>
+<p>El problema es que si tenemos letras mayúsculas y/o minúsculas mezcladas, debemos tener en cuenta que esos métodos de comparación llevan a cabo comparaciones "estrictas" y casos como el texto "<em>Reconocer</em>" no sería reconocido como palíndromo, pues <code>"Reconocer".equals("reconoceR")</code> devolverá <code>false</code> y <code>"Reconocer".compareTo("reconoceR")</code> devolverá un número distinto de cero.</p>
+<p>Para resolverlo podríamos emplear los métodos de tipo "<code>IgnoreCase</code>" donde no se tienen en cuenta mayúsculas y minúsculas (se considera, por ejemplo, que los caracteres 'r' y 'R' son iguales). Por tanto, para la comprobación deberíamos utilizar el método <code>equalsIgnoreCase</code> o el método <code>compareIgnoreCase</code>.</p>
+<p>Por ejemplo, podríamos intentar hacer la siguiente comprobación:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>esPalindromo =  palabra.equalsIgnoreCase(palabraInvertida)</code></pre>
+</div>
+</div>
+<p>O bien:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>esPalindromo =  palabra.compareToIgnoreCase(palabraInvertida) == 0</code></pre>
+</div>
+</div>
+<p>En consecuencia, el resultado final podría quedar como algo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String palabraInvertida = "";
+for (int i=0 ; i&lt;palabra.length() ; i++) {
+    palabraInvertida = palabra.charAt(i) + palabraInvertida; // Vamos concatenando "por la izquierda"
+}
+esPalindromo =  palabra.equalsIgnoreCase(palabraInvertida);</code></pre>
+</div>
+</div>
+<p>Otra posibilidad habría sido convertir ambas cadenas (<code>palabra</code> y <code>palabraInvertida</code>) a mayúsculas o a minúsculas. Por ejemplo, si pasamos las dos a mayúsculas:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>palabra = palabra.toUpperCase();
+palabraInvertida = palabraInvertida.toUpperCase();
+</code></pre>
+</div>
+</div>
+<p>Entonces sí podríamos haber usado directamente <code>equals</code> o bien <code>compareTo</code>. Por ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>esPalindromo = palabra.equals(palabraInvertida);</code></pre>
+</div>
+</div>
+<p>Y el conjunto podría quedar como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String palabraInvertida = "";
+for (int i=0 ; i&lt;palabra.length() ; i++) {
+    palabraInvertida = palabra.charAt(i) + palabraInvertida; // Vamos concatenando "por la izquierda"
+}
+palabra = palabra.toUpperCase();  // todo el contenido de la palabra está en mayúsculas
+palabraInvertida = palabraInvertida.toUpperCase();  // todo el contenido de la palabra invertida está en mayúsculas
+esPalindromo = palabra.equals(palabraInvertida); // Ya no es necesario el equalsIgnoreCase</code></pre>
+</div>
+</div>
+<p>Cualquiera de las alternativas es válida siempre que seamos coherentes y tengamos claro qué es lo que estamos haciendo.</p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

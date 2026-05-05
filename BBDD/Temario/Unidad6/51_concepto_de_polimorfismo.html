@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.1.- Concepto de polimorfismo. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-53"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_polimorfismo_y_ligadura_dinmica.html" class="current-page-parent daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul>
+      <li id="active"><a href="51_concepto_de_polimorfismo.html" class="active no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="5_polimorfismo_y_ligadura_dinmica.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="52_ligadura_dinmica.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5.1.- Concepto de polimorfismo.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id131">
+<div class="iDevice emphasis0">
+<div id="ta131_73" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="PROG07_CONT_R67_CristalesPolimorficos.jpg" alt="Prismas de cristales con diversas formas y con muchas caras. " title="Cristales Polimórficos." style="float: left;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="CC by-nc-sa" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a> <a title="Acceder a la web de descarga de la imagen de dominiqueb. (Se abre en una nueva ventana)" href="https://www.flickr.com/photos/dominiqueb/4117279307/" target="_blank">dominiqueb</a></div>
+</div>
+<p>El <strong>polimorfismo</strong> consiste en la capacidad de poder utilizar una referencia a un objeto de una determinada clase como si fuera de otra clase (en concreto una <strong>subclase</strong>). Es una manera de decir que una clase podría tener varias (poli) formas (morfismo).</p>
+<p>Un método "<strong>polimórfico</strong>" ofrece la posibilidad de ser distinguido (saber a qué clase pertenece) en <strong>tiempo de ejecución</strong> en lugar de en <strong>tiempo de compilación</strong>. Para poder hacer algo así es necesario utilizar métodos que pertenecen a una <strong>superclase</strong> y que en cada <strong>subclase</strong> se implementan de una forma en particular. En <strong>tiempo de compilación</strong> se invocará al método sin saber exactamente si será el de una subclase u otra (pues se está invocando al de la <strong>superclase</strong>). Sólo en <strong>tiempo de ejecución</strong> (una vez instanciada una u otra <strong>subclase</strong>) se conocerá realmente qué método (de qué <strong>subclase</strong>) es el que finalmente va a ser invocado.</p>
+<p>Esta forma de trabajar te va a permitir hasta cierto punto "desentenderte" del tipo de objeto <strong>específico</strong> (<strong>subclase</strong>) para centrarte en el tipo de objeto <strong>genérico</strong> (<strong>superclase</strong>). De este modo podrás manipular objetos hasta cierto punto "desconocidos" en tiempo de compilación y que sólo durante la ejecución del programa se sabrá exactamente de qué tipo de objeto (<strong>subclase</strong>) se trata.</p>
+<p class="destacado"><strong>El <em>polimorfismo </em>ofrece la <em>posibilidad de que toda referencia a un objeto de una superclase pueda tomar la forma de una referencia a un objeto de una de sus subclase</em>s. Esto te va a permitir escribir programas que procesen objetos de clases que formen parte de la misma jerarquía como si todos fueran objetos de sus <em>superclases</em>.</strong></p>
+<p class="destacado"><strong>El <em>polimorfismo</em> puede llevarse a cabo tanto con<em> superclases </em>(abstractas o no) como con <em>interfaces.</em></strong></p>
+<p>Dada una <strong>superclase</strong> <strong>X</strong>, con un método <strong>m</strong>, y dos <strong>subclases</strong> <strong>A</strong> y <strong>B</strong>, que redefinen ese método <strong>m</strong>, podrías declarar un objeto <strong>O</strong> de tipo <strong>X</strong> que durante la <strong>ejecución</strong> podrá ser de tipo <strong>A</strong> o de tipo <strong>B</strong> (algo desconocido en <strong>tiempo de compilación</strong>). Es decir, podemos tener declarada una referencia <strong>O</strong> de tipo <strong>X</strong> en tiempo de compilación, que en tiempo de ejecución podrá acabar apuntando a un objeto concreto de tipo <strong>A</strong> o de tipo <strong>B</strong>, ya que todo objeto de las subclases "lleva dentro" un objeto de la superclase, que puede ser apuntado sin problemas con la referencia de la superclase. Esto significa que  al invocarse el método <strong>m</strong> de <strong>X</strong> (<strong>superclase</strong>), se estará en realidad invocando al método <strong>m</strong> de <strong>A</strong> o de <strong>B</strong> (alguna de sus <strong>subclases</strong>), sin que sepamos cuál hasta que llegue ese momento a la hora de ejecutar el programa. Por ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de una referencia a un objeto de tipo X
+ClaseX obj;  // Objeto de tipo X (superclase)
+...
+ 
+// Zona del programa donde se instancia un objeto de tipo A (subclase) y se le asigna a la referencia obj.
+ 
+// La variable obj adquiere la forma de la subclase A. (Todo objeto A lleva dentro un objeto de su superclase ClaseX)
+obj = new ClaseA ();
+...
+ 
+// Otra zona del programa.
+ 
+// Aquí se instancia un objeto de tipo B (subclase) y se le asigna a la referencia obj.
+ 
+// La variable obj adquiere la forma de la subclase B. (Todo objeto A lleva dentro un objeto de su superclase ClaseX)
+obj = new ClaseB ();
+...
+ 
+// Zona donde se utiliza el método m sin saber realmente qué subclase se está utilizando.
+ 
+// (Sólo se sabrá durante la ejecución del programa)
+obj.m ()  // Llamada al método m (sin saber si será el método m de A o de B). Se asociará o "ligará" al m() adecuado
+          //durante la ejecución, que será cuando se sabrá si obj apunta a un objeto tipo A o tipo B. (por eso se llama ligadura dinámica).
+...</code></pre>
+</div>
+</div>
+<p><span style="font-size: 1em;">Imagina que estás trabajando con las clases </span><code>Alumno </code><span style="font-size: 1em;">y </span><code>Profesor</code><span style="font-size: 1em;"> y que en determinada zona del código podrías tener objetos, tanto de un tipo como de otro, pero eso sólo se sabrá según vaya discurriendo la ejecución del programa. En algunos casos, es posible que un determinado objeto pudiera ser de la clase </span><code>Alumno </code><span style="font-size: 1em;">y en otros de la clase </span><code>Profesor</code><span style="font-size: 1em;">, pero en cualquier caso serán objetos de la clase </span><code>Persona</code><span style="font-size: 1em;">. Eso significa que la llamada a un método de la clase </span><code>Persona</code><span style="font-size: 1em;"> (por ejemplo </span><code>getContenidoString</code><span style="font-size: 1em;">) en realidad será en unos casos a un método (con el mismo nombre) de la clase </span><code>Alumno </code><span style="font-size: 1em;">y en otros, a un método (con el mismo nombre también) de la clase </span><code>Profesor</code><span style="font-size: 1em;">. Esto será posible hacerlo gracias a la </span><strong style="font-size: 1em;">ligadura dinámica</strong><span style="font-size: 1em;">.</span></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id132">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta132_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b132" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b132" class="block iDevice_content">
+<strong>El </strong><strong>polimorfismo
+ofrece la </strong><strong>posibilidad de que toda
+referencia a un objeto de una clase A pueda tomar la forma de una referencia a
+un objeto de cualquier otra clase B. ¿Verdadero o Falso?
+</strong>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b132"><input type="radio" name="option0b132" id="true0b132" class="exe-radio-option exe-radio-option-0-2-0b132-truefalse" /> Verdadero</label> 
+<label for="false0b132"><input type="radio" name="option0b132" id="false0b132" class="exe-radio-option exe-radio-option-1-2-0b132-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b132" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b132-result" class="wrong">Falso</strong></p>
+No es exactamente así. Para que eso pueda
+suceder la clase B debe ser subclase de A. En cualquier otro caso no
+funcionaría.
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id107">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta107_148" class="block story iDevice_content">
+<p><strong>Arrays de dispositivos domóticos</strong></p>
+<p>Recuperando la jerarquía de clases de dispositivos domóticos con la que hemos trabajado previamente, podríamos disponer de un array de referencias a objetos del tipo <span style="font-size: 1em;"></span><code>Dispostivo</code> mediante la siguiente declaración:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Dispositivo[] arrayDispositivos;</code></pre>
+</div>
+</div>
+<p>En ese array, las referencias a las que apunte cada posición serán a objetos que podrán ser de distinto tipo. Se tratará de objetos que sean especializaciones o clases derivadas de <span style="font-size: 1em;"></span><code>Dispositivo</code>, como por ejemplo <span style="font-size: 1em;"></span><code>Bombilla</code> o <code>Cerradura</code>.</p>
+</div>
+<div id="taquesQuestion0b107" class="block iDevice_content">
+<p>Escribe el código necesario para <strong>reservar espacio para cuatro dispositivos en el array</strong> anterior y asignar a las dos primeras posiciones <strong>dos referencias a sendos objetos de tipo </strong><code>Cerradura</code> que tendrás que instanciar previamente. A continuación, realiza algo similar para <strong>otros dos objetos de tipo <code>Bombilla</code></strong>, asignando sus referencias a las otras dos posiciones.</p>
+</div>
+<form name="feedback-form-quesFeedback0b107" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b107text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b107" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b107" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La reserva de espacio para el array sería algo como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>arrayDispositivos= new Dispositivo[4];</code></pre>
+</div>
+</div>
+<p>En este caso se ha reservado memoria para cuatro referencias a objetos de tipo <code>Dispostivo</code>, que no sabemos qué tipos de dispositivo serán. Por el momento lo que tendríamos sería un array de cuatro elementos con valores <strong><code>NULL</code></strong>.</p>
+<p>La creación de objetos <code>Cerradura</code> y <strong><code>Bombilla</code></strong><code></code>, y su asignación al array podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>arrayDispositivos[0] = new Cerradura ("cerradura 1", 1);
+arrayDispositivos[1] = new Cerradura ("cerradura 2", 2);
+arrayDispositivos[2] = new Bombilla ("bombilla 1", 1);
+arrayDispositivos[3] = new Bombilla ("bombilla 2", 2);</code></pre>
+</div>
+</div>
+<p>Más adelante, el contenido de la posición 0 podría cambiar y apuntar a un objeto de tipo <code>Bombillaa</code> o <strong><code>Persiana</code></strong> y esa estructura seguiría siendo válida.</p>
+<p>En cada posición del array hay una referencia a un objeto de tipo <code>Dispostivo</code>, pero que puede ser una instancia de un objeto de tipo <strong><code>Bombilla</code></strong><code></code>, <code>Cerradura</code>, <strong><code>Persiana</code></strong>, <abbr title="etcétera">etc</abbr>. Eso es lo que llamamos <strong>polimorfismo</strong>. Una variable de tipo <code>Dispostivo</code>, en diferentes momentos, puede hacer referencia a objetos de tipo diferente, todos ellos siempre especializaciones (clases derivadas) de la clase que ha sido declarada (en este caso <code>Dispostivo</code>).</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="5_polimorfismo_y_ligadura_dinmica.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="52_ligadura_dinmica.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

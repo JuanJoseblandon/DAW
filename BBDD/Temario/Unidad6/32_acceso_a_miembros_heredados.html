@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.2.- Acceso a miembros heredados. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_herencia.html" class="current-page-parent daddy">3.- Herencia.</a>
+   <ul>
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li id="active"><a href="32_acceso_a_miembros_heredados.html" class="active no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="31_sintaxis_de_la_herencia.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3.2.- Acceso a miembros heredados.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id29">
+<div class="iDevice emphasis0">
+<div id="ta29_73" class="block iDevice_content">
+<p>Como ya has visto anteriormente, no es posible acceder a miembros <strong>privados</strong> de una superclase. Para poder acceder a ellos podrías pensar en hacerlos <strong>públicos</strong>, pero entonces estarías dando la opción de acceder a ellos a cualquier objeto externo y es probable que tampoco sea eso lo deseable. Para ello se inventó el modificador <strong><code>protected</code></strong> (<strong>protegido</strong>) que permite el <strong>acceso desde clases heredadas</strong>, pero no desde fuera de las clases (estrictamente hablando, desde fuera del <strong>paquete</strong>), que serían como miembros <strong>privados</strong>.</p>
+<p>En la unidad dedicada a la utilización de clases ya estudiaste los posibles modificadores de acceso que podía tener un miembro: <strong>sin modificador</strong> (acceso <strong>de paquete</strong>), <strong>público</strong>, <strong>privado</strong> o <strong>protegido</strong>. Aquí tienes de nuevo el resumen:</p>
+<table class="tabla" summary="Esta tabla muestra un resumen de los niveles de accesibilidad a los miembros de una clase en función de los modificadores de acceso. En la cabecera vertical aparecen los distintos modificadores de acceso (sin modificador, public, private, protected) y en la horizontal las distintas zonas de código desde las que se puede tener acceso (desde la misma clase, desde una clase descendiente (subclase), desde el mismo paquete o desde otro paquete)."><caption>Cuadro de niveles accesibilidad a los atributos de una clase</caption>
+<thead>
+<tr>
+<th scope="col" style="width: 217px;"> </th>
+<th scope="col" style="width: 160px;">Misma clase</th>
+<th scope="col" style="width: 260px;">
+<p>Cualquier clase o subclase del</p>
+<p>mismo paquete</p>
+</th>
+<th scope="col" style="width: 189px;">
+<p>Cualquier subclase de otro paquete</p>
+</th>
+<th scope="col" style="width: 188px;">
+<p>Cualquier clase </p>
+<p>de otro paquete</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="center">
+<th scope="row" style="width: 217px;"><code>public<code></code></code></th>
+<td style="width: 160px;">X</td>
+<td style="width: 260px;">X</td>
+<td style="width: 189px;">X</td>
+<td style="width: 188px;">X</td>
+</tr>
+<tr align="center">
+<th scope="row" style="width: 217px;"><code>protected</code></th>
+<td style="width: 160px;">X</td>
+<td style="width: 260px;">X</td>
+<td style="width: 189px;">X</td>
+<td style="width: 188px;"> </td>
+</tr>
+<tr align="center">
+<th scope="row" style="width: 217px;">Sin modificador (paquete)</th>
+<td style="width: 160px;">X</td>
+<td style="width: 260px;">X</td>
+<td style="width: 189px;"> </td>
+<td style="width: 188px;"> </td>
+</tr>
+<tr align="center">
+<th scope="row" style="width: 217px;"><code>private</code></th>
+<td style="width: 160px;">X</td>
+<td style="width: 260px;"> </td>
+<td style="width: 189px;"> </td>
+<td style="width: 188px;"> </td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Si en el ejemplo anterior de la clase <strong><code>Persona</code></strong> se hubieran definido sus atributos como <strong><code>private</code></strong>:</p>
+<div style="width: 50%; float: right;">
+<div class="elemento_centrado"><a title="Ampliar imagen &quot;Jerarquía Persona - Profesor - Alumno&quot;. (Se abre en una nueva ventana)" href="PROG07_CONT_R23_JerarquiaPersonaProfesorAlumno.png" target="_blank" rel="noopener"> <img title="JerarquiaPersonaProfesorAlumno." class="imagen_ampliable elemento_centrado" style="width: 200px; height: 78px;" alt="Esquema que muestra una estructura jerárquica de herencia con una superclase (Persona) y dos subclases (Profesor y Alumno)." src="PROG07_CONT_R23_JerarquiaPersonaProfesorAlumno_miniatura.PNG" /></a></div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Persona {
+     private String nombre;
+     private String apellidos;
+     . . .
+}</code></pre>
+</div>
+</div>
+<p>Al definir la clase <strong><code>Alumno</code></strong> como heredera de <strong><code>Persona</code></strong>, no habrías tenido acceso a esos atributos, pudiendo ocasionar un grave problema de operatividad al intentar manipular esa información. Por tanto, en estos casos lo más recomendable habría sido declarar esos atributos como <strong><code>protected</code></strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Persona {
+     protected String nombre;
+     protected String apellidos;
+     . . .
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id30">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicios resueltos</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta30_67" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b30" class="block iDevice_content">
+<p>Rescribe las clases <code>Alumno</code> y <code>Profesor</code> utilizando el modificador <code>protected</code> para sus atributos del mismo modo que se ha hecho para su superclase <code>Persona</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback0b30" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b30text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b30" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b30" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<ol>
+<li>
+<p><strong>Clase <code>Alumno</code>.</strong></p>
+<p>Se trata simplemente de añadir el modificador de acceso <strong><code>protected</code> </strong>a los nuevos atributos que añade la clase.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Alumno extends Persona {
+     protected String grupo;
+     protected double notaMedia;
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Clase <code>Profesor</code>.</strong></p>
+<p>Exactamente igual que en la clase <strong><code>Alumno</code></strong>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Profesor extends Persona {
+     protected String especialidad;
+     protected double salario;
+}</code></pre>
+</div>
+</div>
+</li>
+</ol></div>
+</form>
+<div id="taquesQuestion1b30" class="block iDevice_content">
+<p>Rescribe la clase <code>Dispositivo</code>, definida en ejercicios anteriores, utilizando el modificador <code>protected</code> para que todos sus atributos sean visibles desde sus clases derivadas.</p>
+</div>
+<form name="feedback-form-quesFeedback1b30" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b30text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b30" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b30" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Basta con utilizar nuevamente el modificador <code>protected</code> en lugar de <code>private</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Dispositivo {
+
+    // Atributos de objeto 
+    protected final int id;
+    protected final String descripcion;
+    protected int ubicacion;
+    . . .</code></pre>
+</div>
+</div>
+<p><br /><br /></p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice em_iDevice_recomendacionfpd" id="id97">
+<div class="iDevice emphasis_recomendacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_recomendacionfpd.png)"><h2 class="iDeviceTitle">Recomendación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta97_131" class="block iDevice_content">
+<p>Si no existe un buen motivo para que una clase derivada pueda manipular directamente un atributo de una clase superclase, suele ser más seguro declarar ese atributo como <strong>privado</strong>. Además, siempre se puede implementar en la superclase un <strong>método de manipulación del atributo</strong> y declararlo como <strong>protegido</strong>, en lugar de declarar el atributo como protegido.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="31_sintaxis_de_la_herencia.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

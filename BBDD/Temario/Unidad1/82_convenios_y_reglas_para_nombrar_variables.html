@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.2.- Convenios y reglas para nombrar variables | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-50"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="8_variables_e_identificadores.html" class="current-page-parent daddy">8.- Variables e identificadores</a>
+   <ul>
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li id="active"><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="active no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="81_identificadores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="83_palabras_reservadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.2.- Convenios y reglas para nombrar variables</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id141">
+<div class="iDevice emphasis0">
+<div id="ta141_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG02_CONT_R06_Estilo.jpg" alt="Imagen con las palabras: estilo, normas, nombres, variables e identificadores flotando sobre un fondo de color." title="Estilo." style="float: right;" height="160" width="160" /></div>
+<div class="elemento_centrado credenciales">Flor Moncada A&ntilde;&oacute;n. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">Elaboraci&oacute;n propia.</div>
+</div>
+<p>A la hora de nombrar un identificador existen una serie de <strong>normas de estilo</strong> de uso generalizado,&nbsp; que se aceptan por convenio, aunque no son obligatorias, y que de hecho se usan en la mayor parte del c&oacute;digo <span lang="en">Java, lo que ayuda a entender m&aacute;s r&aacute;pidamente <a class="glosario">la sem&aacute;ntica<span><em>Sem&aacute;ntica. </em>En este contexto, el significado asociado a un identificador concreto, que nos permite saber si se trata de una constante, de una variable, si pertenece a una clase o a un objeto de esa clase, etc. Hay toda una serie de significados asociados a un identificador que se hacen expl&iacute;citos si usamos correctamente los convenios de formaci&oacute;n de identificadores. </span></a> de cada identificador</span>. Estas reglas para la nomenclatura de variables son las siguientes:</p>
+<ul class="lista_verificacion">
+<li><strong>Java distingue las may&uacute;sculas de las min&uacute;sculas</strong>. Por ejemplo, <strong><span style="font-size: medium;"><code>Alumno</code></span></strong> y <strong><span style="font-size: medium;"><code>alumno</code></span></strong> son variables diferentes.</li>
+<li><strong>No se suelen utilizar identificadores que comiencen con &laquo;</strong><span style="font-size: medium;"><strong><code>$</code></strong></span><strong>&raquo; o &laquo;<code>_</code>&raquo;</strong><strong>,</strong> adem&aacute;s el s&iacute;mbolo del d&oacute;lar, por convenio, no se utiliza nunca para identificadores que define el usuario (aunque lo usa internamente el lenguaje para crear ciertas clases que genera autom&aacute;ticamente, pero de eso no nos tenemos que ocupar ni preocupar al programar).</li>
+<li><strong>No se puede utilizar el valor booleano</strong> (<strong><span style="font-size: large;"><code>true</code></span></strong> o <strong><span style="font-size: medium;"><code>false</code></span></strong>) <strong>ni el valor nulo</strong> (<strong><span style="font-size: medium;"><code>null</code></span></strong>).</li>
+<li>Los <strong>identificadores deben ser lo m&aacute;s descriptivos posibles</strong>. Es mejor usar palabras completas en vez de abreviaturas cr&iacute;pticas. As&iacute; nuestro c&oacute;digo ser&aacute; m&aacute;s f&aacute;cil de leer y comprender. En muchos casos tambi&eacute;n har&aacute; que nuestro c&oacute;digo se autodocumente. Por ejemplo, si tenemos que darle el nombre a una variable que almacena los datos de un cliente ser&iacute;a recomendable que la misma se llamara algo as&iacute; como <strong><span style="font-size: medium;"><code>FicheroClientes</code></span></strong> o <strong><span style="font-size: medium;"><code>ManejadorCliente</code></span></strong>, y no algo poco descriptivo como <strong><span style="font-size: medium;"><code>Cl33</code></span></strong>., por m&aacute;s que <span lang="en">Java</span> lo considere correcto.</li>
+</ul>
+<p>Adem&aacute;s de estas restricciones, en la siguiente tabla puedes ver otras convenciones, que no siendo obligatorias, s&iacute; son recomendables a la hora de crear identificadores en <span lang="en">Java</span>.</p>
+<table class="tabla" summary="Cuadro o tabla de cinco filas por tres columnas, de t&iacute;tulo &quot;Convenciones sobre identificadores en Java&quot;, de modo que para cada tipo de identificador se indica la forma de nombrarlo y un ejemplo de uso. Debe ser le&iacute;da en columnas de izquierda a derecha y de arriba abajo. "><caption>Convenciones sobre identificadores en <span lang="en">Java</span></caption>
+<thead>
+<tr><th scope="col">Identificador</th><th scope="col">Convenci&oacute;n</th><th scope="col">Ejemplo</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><span style="font-size: small;">Nombre de variable.</span></td>
+<td><span style="font-size: small;">Comienza por letra min&uacute;scula, y si est&aacute; formado por varias palabras,&nbsp; se colocan juntas y todas las siguientes a partir de la segunda comenzar&aacute;n por may&uacute;sculas para ayudar a identificar visualmente d&oacute;nde comienza cada nueva palabra a pesar de que no haya espacios.&nbsp;</span></td>
+<td><strong><span style="font-size: medium;"><code>numAlumnosMatriculados, suma</code></span></strong></td>
+</tr>
+<tr>
+<td><span style="font-size: small;">Nombre de constante.</span></td>
+<td><span style="font-size: small;">Con todas sus letras en may&uacute;sculas, separando las palabras con el gui&oacute;n bajo, y adem&aacute;s por convenio el gui&oacute;n bajo no se utiliza en ning&uacute;n otro sitio.</span></td>
+<td><strong><span style="font-size: medium;"><code>TAM_MAX, PI</code></span></strong></td>
+</tr>
+<tr>
+<td><span style="font-size: small;">Nombre de una clase.</span></td>
+<td><span style="font-size: small;">Comienza por letra may&uacute;scula.</span></td>
+<td><strong><span style="font-size: medium;"><code>String, MiTipo</code></span></strong></td>
+</tr>
+<tr>
+<td>
+<p><span style="font-size: small;">Nombre de funci&oacute;n o m&eacute;todo.<br /></span></p>
+<p>&nbsp;</p>
+</td>
+<td><span style="font-size: small;">Un nombre de una funci&oacute;n o de un&nbsp;<a class="glosario">m&eacute;todo<span><em>M&eacute;todo</em>Es un conjunto de instrucciones en un programa a las que se les da un nombre, de forma que en cualquier otra parte del programa donde aparezca ese nombre del m&eacute;todo, el compilador se encarga de desplegar todas las instrucciones que lleva asociadas y las ejecuta en el orden que est&eacute; especificado en su interior. </span></a> comienza con letra min&uacute;scula. Sigue en realidad la misma nomenclatura que cualquier variable y se distingue que se trata de un&nbsp; m&eacute;todo o funci&oacute;n porque obligatoriamente debe ir seguido de par&eacute;ntesis, que enmarcan la lista de <a class="glosario">par&aacute;metros<span><em>Par&aacute;metro. </em>Un valor que se le pasa a una funci&oacute;n o un m&eacute;todo para que haga algo con &eacute;l. Siguiendo una analog&iacute;a matem&aacute;tica, una funci&oacute;n f(x)=2x establece que con el par&aacute;metro formal x que se le pasa debe hacer una operaci&oacute;n matem&aacute;tica, multiplic&aacute;ndolo por dos, y devolviendo el resultado. As&iacute;, si ejecuto la funci&oacute;n pas&aacute;ndole como par&aacute;metro actual un 3, f(3) multiplicar&aacute; 2 por 3 y me dar&aacute; como valor de vuelta un 6. </span></a> que se le dan al m&eacute;todo para trabajar. El par&eacute;ntesis es obligado aunque no se le pase ning&uacute;n par&aacute;metro. <br /></span></td>
+<td><strong><span style="font-size: medium;"><code>modificaValor(), obtieneValor()</code></span></strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id142">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-142_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion142_60" class="block question iDevice_content">
+<p><strong>Elige la opci&oacute;n correcta. Un identificador es una secuencia de uno o m&aacute;s s&iacute;mbolos <span lang="en">Unicode</span> que cumple que.... :</strong></p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i142_63" class="sr-av"><a href="#answer-142_63">Opción 1</a></label><input type="radio" name="option142_60" id="i142_63" class="exe-radio-option exe-radio-option-0-4-142_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-142_63"><div id="taans142_63" class="block iDevice_content">
+<p>Todos los identificadores han de comenzar con una letra, el car&aacute;cter subrayado (<code>_</code>) o el car&aacute;cter d&oacute;lar (<code>$</code>).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i142_80" class="sr-av"><a href="#answer-142_80">Opción 2</a></label><input type="radio" name="option142_60" id="i142_80" class="exe-radio-option exe-radio-option-1-4-142_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-142_80"><div id="taans142_80" class="block iDevice_content">
+<p>No puede incluir el car&aacute;cter espacio en blanco.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i142_83" class="sr-av"><a href="#answer-142_83">Opción 3</a></label><input type="radio" name="option142_60" id="i142_83" class="exe-radio-option exe-radio-option-2-4-142_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-142_83"><div id="taans142_83" class="block iDevice_content">
+<p>Puede tener cualquier longitud, no hay tama&ntilde;o m&aacute;ximo.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i142_86" class="sr-av"><a href="#answer-142_86">Opción 4</a></label><input type="radio" name="option142_60" id="i142_86" class="exe-radio-option exe-radio-option-3-4-142_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-142_86"><div id="taans142_86" class="block iDevice_content">
+<p>Todas las respuestas anteriores son correctas.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b142_60" class="feedback js-hidden">
+<div id="taf142_63" class=" iDevice_content">
+<p>Incorrecto, existen m&aacute;s condiciones.</p>
+</div>
+</section>
+<section id="sa1b142_60" class="feedback js-hidden">
+<div id="taf142_80" class=" iDevice_content">
+<p>Incorrecta, sigue intent&aacute;ndolo.</p>
+</div>
+</section>
+<section id="sa2b142_60" class="feedback js-hidden">
+<div id="taf142_83" class=" iDevice_content">
+<p>No es la &uacute;nica respuesta correcta.</p>
+</div>
+</section>
+<section id="sa3b142_60" class="feedback js-hidden">
+<div id="taf142_86" class=" iDevice_content">
+<p>&iexcl;Exacto! Adem&aacute;s, se desaconseja el uso del s&iacute;mbolo d&oacute;lar, y el gui&oacute;n bajo pr&aacute;cticamente s&oacute;lo se utiliza para separar palabras en identificadores de constantes.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-142_63">Incorrecto</a><span> (<a href="#sa0b142_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-142_80">Incorrecto</a><span> (<a href="#sa1b142_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-142_83">Incorrecto</a><span> (<a href="#sa2b142_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-142_86">Opción correcta</a><span> (<a href="#sa3b142_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id204">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta204_43" class="block iDevice_content">
+<p>Te recomendamos consultar los tutoriales que nos ofrece el propio lenguaje <span lang="en">Java</span> para resolver cualquier duda que te vaya surgiendo. En concreto, resulta interesante ir a las fuentes para ver las reglas de formación de identificadores para variables, <abbr title="etcétera.">etc</abbr>. Por eso te recomendamos que veas el apartado <span lang="en">Variables - Naming</span>, del siguiente enlace al tutorial de Java sobre los conceptos básicos del lenguaje. Está en inglés, pero reiteramos que es muy importante que te vayas acostumbrando a consultar documentación técnica en inglés.</p>
+<p style="text-align: center;"> <a class="html" title="Acceder al tutorial de Java que trata (en inglés) las reglas de formación de nombres para variables. " href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html" target="_blank">Nombrando variables</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="81_identificadores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="83_palabras_reservadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.-  Cadenas de caracteres. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-69"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li id="active"><a href="2__cadenas_de_caracteres.html" class="active daddy">2.-  Cadenas de caracteres.</a>
+   <ul>
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_operaciones_con_cadenas_de_caracteres.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.-  Cadenas de caracteres.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id329">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta329_66" class="block iDevice_content">
+<figure class="exe-figure exe-image float-left license-pd" style="width: 192px;"><img style="float: left;" alt="Persona utilizando un ordenador de mano." class="elemento_derecha" src="PROG05_CONT_R003_pedido_pda_160222.jpg" title="Ordenador de mano." width="192" height="144" /><figcaption class="figcaption">Ministerio de Educación.<span class="license"><span class="sep">(</span><span class="license"><span class="custom-license">Uso educativo-nc. Elaboración propia</span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p><strong>Ana</strong> está asustada, le acaban de asignar una nueva tarea y está pensando qué métodos le ayudarían a buscar cadenas de caracteres que empiecen por unos caracteres determinados. Por ejemplo, la lista de más abajo presenta apellidos de personas que empiezan por "<code>Garc</code>":</p>
+<p>Por tanto, <strong>Ana</strong> podrá obtener las personas que necesite la aplicación del cliente, según los caracteres que le interese buscar al usuario de la aplicación:</p>
+<p><code>"Garcés Pérez"<br /> "García López"<br /> "García Pineda"<br /> "García Piquillo"<br /></code></p>
+<p>Como puedes observar, también podría interesar buscar solo aquellas personas en cuyos apellidos aparezcan los caracteres <code>"Pi"</code>, para apellidos como Pineda o Piquillo.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id330">
+<div class="iDevice emphasis0">
+<div id="ta330_73" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="chain-gb608c4af1_640.jpg" alt="Fotografía que muestra la imagen de una cadena." title="Cadena." style="float: right;" width="240" height="159" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/cadena-seguridad-metal-planchar-3481377/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de analogicus en Pixabay (se abre en una nueva ventana).">analogicus</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Probablemente, una de las herramientas que más utilizarás cuando estés trabajando con cualquier lenguaje de programación son las cadenas de caracteres. Las cadenas de caracteres son estructuras de almacenamiento que permiten guardar una secuencia de caracteres de casi cualquier longitud. Y la pregunta ahora es, ¿qué es un carácter?</p>
+<p>En Java, y en todo lenguaje de programación, y por ende, en todo sistema informático, los caracteres se <a href="#tfd71eaeb-9e76-f6ff-e4cd-669ae920e02f" id="linkfd71eaeb-9e76-f6ff-e4cd-669ae920e02f" class="exe-tooltip definition-tt titled-tt">codifican</a> mediante secuencias de bits que representan a los símbolos usados en la comunicación escrita humana. Estos símbolos pueden ser letras, números, símbolos matemáticos e incluso <a href="#tb9596653-f94c-60b3-2ca3-a20d3cc48710" id="linkb9596653-f94c-60b3-2ca3-a20d3cc48710" class="exe-tooltip definition-tt titled-tt">ideogramas</a> y <a href="#t37cdb004-be3d-a8c0-a363-6328c9ee5787" id="link37cdb004-be3d-a8c0-a363-6328c9ee5787" class="exe-tooltip definition-tt titled-tt">pictogramas</a>.</p>
+<div id="tb9596653-f94c-60b3-2ca3-a20d3cc48710" class="exe-tooltip-text">
+<p>Imagen, ilustración o dibujo que en algunos idiomas puede tener un significado y que pueden ser leídos, como por ejemplo los ideogramas del egipcio antiguo, del chino o del japonés.</p>
+</div>
+<div id="t37cdb004-be3d-a8c0-a363-6328c9ee5787" class="exe-tooltip-text">
+<p>Signo, generalmente a modo de dibujo, que representa una idea, un símbolo común o una figura real. Un ejemplo de pictograma son los emoticonos, con ellos se expresan emociones.</p>
+</div>
+<div id="tfd71eaeb-9e76-f6ff-e4cd-669ae920e02f" class="exe-tooltip-text">
+<p>La codificación es la representación interna de cada carácter dentro de un ordenador. Cada símbolo usado en la comunicación humana tiene que traducirse en una serie de unos y ceros que puedan almacenarse en el ordenador, dado que un símbolo, como tal, no puede almacenarse. Después será el software del ordenador el encargado de transformar el código binario en una representación gráfica reconocible por el ser humano. Las codificaciones más extendidas son ASCII, ISO 885915, y la más usada hoy día, UTF-8, recogida dentro las codificaciones del estándar Unicode (UTF8, UTF-16 y UTF-32).</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id331">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta331_47" class="block iDevice_content">
+<p>Si quieres, puedes profundizar en la codificación de caracteres leyendo el siguiente artículo de la Wikipedia.</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a artículo de la wikipedia sobre la codificación de caracteres. Se abre en una nueva ventana" href="http://es.wikipedia.org/wiki/Codificación_de_caracteres" target="_blank">Codificación de caracteres.</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id332">
+<div class="iDevice emphasis0">
+<div id="ta332_73" class="block iDevice_content">
+<p style="text-align: justify;">La forma más habitual de ver escrita una cadena de caracteres es como un literal de cadena. Consiste simplemente en una secuencia de caracteres entre comillas dobles, por ejemplo: "<code>Ejemplo de cadena de caracteres</code>".</p>
+<p style="text-align: justify;" align="left">En Java, los literales de cadena son en realidad instancias de la clase <code>String</code>, lo cual quiere decir que, por el mero hecho de escribir un literal en el código de nuestro programa, se creará una instancia de dicha clase. Es como si hiciéramos un <code>new</code> sin tener que escribirlo explícitamente.</p>
+<p style="text-align: justify;" align="left">Esto da mucha flexibilidad, puesto que permite crear cadenas de muchas formas diferentes, pero obviamente consume mucha memoria. La forma más habitual es crear una cadena partiendo de un literal:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String cad = "Ejemplo de cadena";</code></pre>
+</div>
+</div>
+<p style="text-align: justify;" align="left">En este caso, el literal de cadena situado a la derecha del igual es en realidad una instancia de la clase <code>String</code>. Al realizar esta asignación hacemos que la variable <code>cad</code> se convierta en una referencia al objeto ya creado. Es el único caso (junto con los tipos "envoltorio" en los que puede pasar algo parecido) que nos ofrece Java de poder "crear" objetos sin tener que usar el operador <code>new</code>. Eso es posible gracias a que los objetos de tipo <code>String</code> tienen la opción de poderse escribir como "literales" (valores), del mismo tipo que sucede con los ocho tipos primitivos (<code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>char</code>, <code>boolean</code>). En este caso, para que el compilador de Java sepa que se trata de un valor literal de tipo <code>String</code>, se utilizan las comillas dobles, del mismo modo que se utilizan las simples para los literales de tipo <code>char</code>, el punto decimal para los de tipo <code>double</code> o el sufijo <code>L</code> para los de tipo <code>long</code>. Esta manera "especial" que tiene el lenguaje Java de tratar a los objetos de la clase <code>String</code> es debido a que se trata de un tipo tan utilizado que en su momento los diseñadores del lenguaje permitieron que se pudiera trabajar con él casi como si se tratara de un tipo primitivo del lenguaje, aunque no lo sea (se trata de objetos a los que se accede a través de una variable de tipo referencia, como sucede con cualquier objeto, tal y como hemos visto en la unidad anterior). En otros lenguajes directamente se ha optado porque sea parte los tipos disponibles en lenguaje y no de un elemento que se incorpora a partir de una biblioteca o librería.</p>
+<p>Otra forma de crear una cadena es usando el operador <code>new</code> y un constructor, que sería la forma "estándar" de crear cualquier objeto. Para el ejemplo anterior sería algo como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String cad = new String ("Ejemplo de cadena");</code></pre>
+</div>
+</div>
+<p style="text-align: justify;" align="left">De hecho, esto es lo que en realidad Java "entiende" cuando hacemos la asignación sin hacer el <code>new</code>. Pero recuerda, esta "omisión" de la llamada al constructor con el operador <code>new</code> solo podemos hacerlo con los objetos <code>String</code>, donde sí existe un modo de poder escribir un valor constante (literal) de ese tipo en el código del programa. Para el resto de objetos que inicialices en tus programas (<code>Rectangle</code>, <code>Color</code>, <code>LocalDate</code>, <code>StringBuilder</code>, <acronym title="etcétera">etc.</acronym>) tendrás que utilizar llamadas al constructor o bien métodos estáticos de tipo "fábrica", tal y como hemos visto en la unidad anterior.</p>
+<p style="text-align: justify;" align="left">Cuando se originan las cadenas de esta manera, se realiza una copia en memoria de la cadena pasada por parámetro. La nueva instancia de la clase <code>String</code> hará referencia, por tanto, a la copia de la cadena, y no al original. Es decir, que en el ejemplo anterior, Java estará internamente creando dos objetos instancia de la clase <code>String</code>:</p>
+<ul>
+<li align="left" class="lista_verificacion">uno por el hecho de haber escrito entre comillas un texto (un literal de tipo <code>String</code>), que hace que automáticamente se reserve memoria para un objeto de tipo <code>String</code>;</li>
+<li align="left" class="lista_verificacion">otro por el hecho de llamar al constructor de <code>String</code> mediante el operador <code>new</code>, donde se recibirá como parámetro el texto entre comillas y, por tanto, el nuevo objeto <code>String</code> contendrá el mismo valor (el texto entre comillas) que el primer objeto.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionfpdIdevice em_iDevice em_iDevice_reflexionfpd" id="id333">
+<div class="iDevice emphasis_reflexionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h1 class="iDeviceTitle">Reflexiona</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta333_38" class="block iDevice_content">
+<p>Fíjate en la siguiente línea de código, ¿cuántas instancias de la clase <code>String</code> crees que se llegan a crear?</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String cad="Ejemplo de cadena 1"; cad="Ejemplo de cadena 2"; cad=new String("Ejemplo de cadena 3");</code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-333" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedback333text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-333" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-333" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div id="ta333_39" class="block iDevice_content">
+<p align="left">Analizando detalladamente del código, podemos observar que ocurre lo siguiente:</p>
+<ol>
+<li align="left">la primera instancia es la que se crea con el literal de cadena "<code>Ejemplo de cadena 1</code>", a la cual apuntará la variable <code>cad</code> una vez se lleve a cabo la asignación;</li>
+<li align="left">el segundo literal, "<code>Ejemplo de cadena 2</code>", da lugar a una instancia distinta a la anterior, con diferente valor, a la cual volverá a apuntar la variable <code>cad</code> una vez realizada la segunda asignación;</li>
+<li align="left">el tercer literal, "<code>Ejemplo de cadena 3</code>", es otra instancia de <code>String</code> diferente;</li>
+<li align="left">por último, al crear una nueva instancia de la clase <code>String</code> a través del operador <code>new</code>, se debería crear un nuevo objeto <code>String</code> copiando para ello el contenido de la cadena que se le pasa por parámetro, con lo que aquí tenemos la cuarta instancia de un objeto <code>String</code> y a la cual apuntará nuevamente la variable <code>cad</code> tras la ejecución del tercer operador de asignación.</li>
+</ol>
+<p>Ahora bien, para los puntos 3 y 4, dado que las dos cadenas (la que se escribe como literal entre comillas en el código como la que se debe crear al llamar al constructor mediante el operador <code>new</code>) son idénticas (mismo valor o contenido), Java, por eficiencia, realmente solo crea en memoria una única instancia con ese valor, para que pueda ser utilizado por todas las variables o literales que hagan referencia a él.</p>
+<p>Por tanto, aunque se produzcan cuatro procesos de "instanciación" de objetos <code>String</code> (tres de manera implícita a través de literales y uno de forma explícita mediante la llamada al constructor y el operador <code>new</code>), el cuarto no va a dar lugar a una "réplica" del tercero, sino que, por eficiencia, Java hará que directamente apunte a la zona de memoria donde se encuentre el tercero.</p>
+</div>
+</section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id334">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta334_128" class="block iDevice_content">
+<p>Dado que los objetos de tipo <code>String</code> son inmutables (no pueden modificarse), Java trata a todos los literales de cadena con el mismo contenido como un solo objeto <code>String</code> que tiene muchas referencias. Es decir, que aunque tengamos varias variables de tipo <code>String</code>, si todas ellas hacen referencia al mismo valor (mismo texto), Java almacenará una única vez ese valor de cadena en una única zona de memoria y todas las variables apuntarán a esa misma zona de memoria. De ese modo el texto "repetido" se almacena una única vez, pues no puede cambiar.</p>
+<p>Eso no significa que una variable de tipo <code>String</code> no pueda modificar el valor al que apunta, pues bastaría con hacer una nueva asignación a esa variable. Lo que significa es que el valor al que se apunta no puede ser modificado por tratarse de un objeto inmutable. Si, por ejemplo, tres variables <code>String</code> contienen (o, mejor dicho, "apuntan") a un mismo valor y a una de ellas se le asigna un nuevo valor de cadena diferente, esa variable dejará de apuntar al lugar común de las otras dos y apuntará a otra zona de memoria donde se encontrará el nuevo valor de texto. Pero las otras dos variables continuarán apuntando al mismo sitio (el valor antiguo).</p>
+<p>Aquí tienes algunos artículos interesantes sobre este tema por si quieres profundizar en ello:</p>
+<ul>
+<li class="lista_verificacion"><a href="https://programmerclick.com/article/8111766660/" title="Enlace al artículo &quot;¿Por qué String es inmutable en Java?&quot; (se abre en una nueva ventana)" target="_blank" class="html">Programación.Click - ¿Por qué <code>String</code> es inmutable en Java?</a></li>
+<li class="lista_verificacion"><a href="https://www.baeldung.com/java-string-immutable" title="Enlace al artículo &quot;Why is String inmutable in Java?&quot; (se abre en una nueva ventana)" target="_blank" class="html">Baeldung - Why String is Immutable in Java?</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_operaciones_con_cadenas_de_caracteres.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

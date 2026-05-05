@@ -1,0 +1,901 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.2.- Métodos abstractos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-23"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_clases_abstractas.html" class="current-page-parent daddy">4.- Clases abstractas.</a>
+   <ul>
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li id="active"><a href="42_mtodos_abstractos.html" class="active no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="41_declaracin_de_una_clase_abstracta.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_clases_y_mtodos_finales.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.2.- Métodos abstractos.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id59">
+<div class="iDevice emphasis0">
+<div id="ta59_73" class="block iDevice_content">
+<p>Un <a href="#td5632ffc-786b-1d12-889d-8314451da4f9" id="linkd5632ffc-786b-1d12-889d-8314451da4f9" title="Método abstracto | Ver la definición" class="exe-tooltip definition-tt titled-tt"><strong>método abstracto</strong></a> es un método cuya implementación no se define, sino que se declara únicamente su <strong>interfaz</strong> (cabecera) para que su cuerpo sea implementado más adelante en una <strong>clase derivada</strong>.</p>
+<div class="elemento_centrado"><img alt="Cuadro abstracto de Joan Miró." class="elemento_centrado" src="PROG07_CONT_R39_Abstracto2.jpg" style="width: 132px; height: 200px;" title="Abstracto 2." /> <figcaption class="figcaption">
+<div class="elemento_centrado credenciales">ITE. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">idITE=120523.</div>
+</figcaption></div>
+<p>Un método se declara como abstracto mediante el uso del modificador <code>abstract</code> (como en las <strong>clases abstractas</strong>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>[modificador_acceso] abstract  &lt;tipo&gt; &lt;nombreMetodo&gt; ([parámetros]) [excepciones]; </code></pre>
+</div>
+</div>
+<p>Fíjate en que deben acabar con <strong>punto y coma</strong>, pues no tienen contenido (no hay apertura ni cierre de llaves) y, por tanto, será la manera de indicar que hemos terminado de declarar el método.</p>
+<p>Estos métodos tendrán que ser <strong>obligatoriamente redefinidos</strong> (en realidad “definidos”, pues aún no tienen contenido) en las <strong>clases derivadas</strong>. Si al implementar una <strong>clase derivada</strong> se considera oportuno que se debe dejar algún <strong>método abstracto sin implementar</strong>, esa <strong>clase derivada</strong> tenderá que declarase también como una <strong>clase abstracta</strong>.</p>
+<p class="destacado"><strong>Cuando una clase contiene un <em>método abstracto</em> tiene que declararse como <em>abstracta</em> obligatoriamente.</strong></p>
+<p><a title="Ampliar imagen &quot;jerarquía para la clase Empleado&quot;. (Se abre en una nueva ventana)" href="PROG07_CONT_R40_JerarquiaEmpleados.png" target="_blank"> <img alt="Esquema que muestra una estructura jerárquica de herencia con una superclase (Empleado) y tres subclases (EmpleadoFijo, EmpleadoTemporal y EmpleadoComercial)." class="imagen_ampliable elemento_derecha" src="PROG07_CONT_R40_JerarquiaEmpleados_miniatura.PNG" style="width: 188px; height: 84px;" title="Jerarquía para la clase Empleado." /></a></p>
+<p>Imagina que tienes una clase <code>Empleado</code> genérica para diversos tipos de empleado y tres <strong>clases derivadas</strong>: <code>EmpleadoFijo</code> (tiene un salario fijo más ciertos complementos), <code>EmpleadoTemporal</code> (salario fijo más otros complementos diferentes) y <code>EmpleadoComercial</code> (una parte de salario fijo y unas comisiones por cada operación). La clase <code>Empleado</code> podría contener un <strong>método abstracto</strong> <code>calcularNomina</code>, pues sabes que ese método será necesario para cualquier tipo de empleado (todo empleado cobra una nómina). Sin embargo, el cálculo en sí de la nómina será diferente si se trata de un empleado fijo, un empleado temporal o un empleado comercial, y será dentro de las clases especializadas de <code>Empleado</code> (<code>EmpleadoFijo</code>¸ <code>EmpleadoTemporal</code>, <code>EmpleadoComercial</code>) donde se implementen de manera específica el cálculo de las mismas.</p>
+<p>Debes tener en cuenta al trabajar con métodos abstractos:</p>
+<ul class="lista_verificacion">
+<li>Un <strong>método abstracto</strong> implica que la clase a la que pertenece tiene que ser <strong>abstracta</strong>, pero eso no significa que todos los métodos de esa clase tengan que ser abstractos.</li>
+<li>Un <strong>método abstracto</strong> no puede ser <strong>privado</strong> (no se podría implementar, dado que las <strong>clases derivadas</strong> no tendrían acceso a él).</li>
+<li>Los <strong>métodos abstractos</strong> no pueden ser <strong>estáticos</strong>, pues los <strong>métodos estáticos</strong> no pueden ser redefinidos (y los <strong>métodos abstractos</strong> necesitan ser redefinidos).</li>
+</ul>
+<div id="td5632ffc-786b-1d12-889d-8314451da4f9" class="exe-tooltip-text">
+<p>Un método abstracto en <span lang="en">Java</span> es un método declarado en una clase para el cual esa clase no proporciona la implementación. Si una clase dispone de al menos un método abstracto se dice que es una clase abstracta. Toda clase que herede (sea subclase) de una clase abstracta debe implementar todos los métodos abstractos de su superclase o bien volverlos a declarar como abstractos (y por tanto también sería abstracta). Para declarar un método abstracto en <span lang="en">Java</span> se utiliza el modificador <code>abstract</code>.</p>
+<p>La gran utilidad de incluir en la superclase un método abstracto es que estamos obligando a las clases que deriven de ella a que implementen su propia versión del método. Es decir, cualquier clase derivada (salvo que sea a su vez abstracta) estará obligada a implementar un determinado "comportamiento" asociado a ese método.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id60">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta60_47" class="block iDevice_content">
+<p>Puedes echar un vistazo a este v&iacute;deo en el se explica el funcionamiento de las <strong>clases abstractas</strong> y se muestra un ejemplo de creaci&oacute;n y utilizaci&oacute;n:</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><object type="application/x-shockwave-flash" data="https://www.youtube.com/v/1gYSk9VfUHM?version=3&amp;hl=es_ES&amp;rel=0" width="300" height="200"><param name="src" value="https://www.youtube.com/v/1gYSk9VfUHM?version=3&amp;hl=es_ES&amp;rel=0" /><param name="play" value="false" /><param name="scale" value="exactfit" /></object></div>
+<div class="credenciales elemento_centrado"><a title="Resumen textual alternativo para &quot;Clases abstractas en Java&quot;" href="PROG07_Descripcion_Video_Clases_abstractas_en_Java.html">Resumen textual alternativo</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id62">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta62_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b62" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b62" class="block iDevice_content">
+<p><strong>Todos métodos de una clase abstracta tienen que ser también abstractos. ¿Verdadero o Falso?</strong></p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b62"><input type="radio" name="option0b62" id="true0b62" class="exe-radio-option exe-radio-option-0-2-0b62-truefalse" /> Verdadero</label> 
+<label for="false0b62"><input type="radio" name="option0b62" id="false0b62" class="exe-radio-option exe-radio-option-1-2-0b62-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b62" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b62-result" class="wrong">Falso</strong></p>
+<p>Una <strong>clase abstracta</strong> puede contener <strong>métodos abstractos</strong>, pero también <strong>métodos que estén completamente definidos</strong> (<strong>no abstractos</strong>). Incluso podría darse el caso de que una clase abstracta no contenga ningún método abstracto.</p>
+<p>Lo que sí es cierto es que <strong>si una clase contiene algún método abstracto, entonces tendrá que ser obligatoriamente una clase abstracta</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id115">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta115_121" class="block iDevice_content">
+<p><strong>¿Puede asimilarse la herencia en la Programación Orientada a Objetos como la herencia patrimonial de las personas?</strong></p>
+<p>Pues hasta cierto punto podemos verlo así: se heredan tanto el <strong>"patrimonio"</strong> (atributos, métodos ya implementados, <abbr title="etcétera">etc</abbr>.) como las <strong>"deudas"</strong> (métodos abstractos, que "debemos" implementar obligatoriamente en las clases derivadas que no sean abstractas).</p>
+<p>Podemos entender entonces los <strong>métodos abstractos como "deudas" o "compromisos" que contrae una clase abstracta y que cualquier clase que herede de ella (y que no sea abstracta) tendrá la obligación de "pagar" (en este caso implementar)</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id61">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta61_67" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b61" class="block iDevice_content">
+<p>Basándote en la jerarquía de clases <code>Persona</code>, <code>Alumno</code>, <code>Profesor</code>, crea un método abstracto llamado <code>saludar</code> para la clase <code>Persona</code>. Dependiendo del tipo de persona (alumno o profesor) el método <code>saludar</code> tendrá que devolver un <code>String</code> con un saludo de alguno de estos dos tipos:</p>
+<ul class="lista_verificacion">
+<li>"<em>Hola, soy el alumno xxx y estoy en el grupo yyy</em>",</li>
+<li>"<em>Hola, mi nombre es profesor xxx y soy de la especialidad zzz</em>",</li>
+</ul>
+<p>donde xxx serán su nombre y apellidos, yyy el grupo del alumno y zzz la especialidad del profesor. Esto implica que habrá que hacer implementaciones específicas en cada clase derivada.</p>
+<p>Una vez hecho esto, implementa completamente las tres clases (con todos sus atributos y métodos) y utilízalas en un pequeño programa de ejemplo que cree un objeto de tipo <code>Alumno</code> y otro de tipo <code>Profesor</code>, los rellene con información y muestre parte de esa información en la pantalla a través del método <code>saludar</code>.<strong> </strong></p>
+</div>
+<form name="feedback-form-quesFeedback0b61" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b61text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b61" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b61" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Dado que el método <code>saludar</code> no va a ser implementado en la clase <strong><code>Persona</code></strong>, será declarado como <strong>abstracto</strong> y no se incluirá su implementación:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Declaración del método abstracto saludar de la clase Persona.
+ * Este método en realidad no es instanciable pues aquí no se implementa.
+ * @return String que representaría el saludo de una Persona
+ */
+protected abstract String saludar (); </code></pre>
+</div>
+</div>
+<p>Recuerda que el simple hecho de que la clase <strong><code>Persona </code></strong>contenga un método abstracto hace que sea clase sea abstracta (y deberá indicarse como tal en su declaración): <br /><strong><code>public <span style="color: #3366ff;">abstract</span> class Persona</code></strong>.</p>
+<p>Al incluir en su interfaz al método abstracto <code>saludar</code>, estamos <strong>garantizando</strong> que cualquier tipo de <code>Persona</code> que podamos incorporar en el futuro (además de <code>Alumno<code></code></code> y <code>Profesor</code> podríamos tener, por ejemplo, <code>Conserje</code>, <code>Administrativo</code> o <code>Inspector</code>) <strong>deberá disponer obligatoriamente</strong> de un método <code>saludar</code>, así que estamos obligando a que tenga ese comportamiento. Si en el futuro apareciera una nueva clase <code>Inspector</code>, estamos seguros de que dispondrá de su propia versión del método saludar, es decir, obligamos a que toda <code>Persona</code> herede el comportamiento <code>saludar</code>.</p>
+<p>En el caso de la clase <strong><code>Alumno</code></strong> habrá que hacer una implementación específica del método <strong><code>saludar</code> </strong>y lo mismo para el caso de la clase <strong><code>Profesor</code></strong>.</p>
+<ol>
+<li>
+<p><strong>Método <code>saludar</code> para la clase <code>Alumno</code>.<br /></strong></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Redefinición del método abstracto saludar de la clase Persona
+ * en la clase Alumno
+ * @return String que representa el saludo de un Alumno
+ */
+public String saludar () {
+    StringBuilder resultado= new StringBuilder ();
+    resultado.append("Hola, soy el alumno ").append(this.nombre).append(" ");
+    resultado.append(this.apellidos).append(" y estoy en el grupo ").append(this.grupo);
+
+    return resultado.toString();
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Método <strong><code>saludar</code></strong> para la clase <code>Profesor</code>.</strong></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Redefinición del método abstracto saludar de la clase Persona
+ * en la clase Profesor
+ * @return String que representa el saludo de un Profesor
+ */
+public String saludar () {
+    StringBuilder resultado= new StringBuilder ();
+    resultado.append("Hola, mi nombre es profesor ").append(this.nombre).append(" ");
+    resultado.append(this.apellidos).append(" y soy de la especialidad de ").append(this.especialidad);
+
+    return resultado.toString();
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Programa de ejemplo de uso.</strong></p>
+<p>Un pequeño programa de ejemplo de uso del método <strong><code>saludar</code></strong> en estas dos clases podría ser:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de objetos
+Alumno alumno;
+Profesor profesor;
+ 
+// Creación de objetos (llamada a constructores)
+alumno= new Alumno ("Juan", "Torres", LocalDate.parse ("1995-03-22"), "1DAM-B", 7.5);
+profesor= new Profesor  ("Antonio", "Campos", LocalDate.parse ("1975-08-16"), "Electricidad", 2000);
+ 
+// Utilización del método saludar
+System.out.println (alumno.saludar());
+System.out.println (profesor.saludar());</code></pre>
+</div>
+</div>
+<p><span style="font-size: 1em;">Puedes descargar del siguiente enlace un ejemplo completo en el que se declara la clase </span><strong style="font-size: 1em;"><code>Persona</code></strong><span style="font-size: 1em;"> como </span><strong style="font-size: 1em;">abstracta</strong><span style="font-size: 1em;"> y con el </span><strong style="font-size: 1em;">método abstracto</strong><span style="font-size: 1em;"> </span><strong style="font-size: 1em;"><code>saludar</code></strong><span style="font-size: 1em;">. Sus subclases </span><strong style="font-size: 1em;"><code>Alumno</code></strong><span style="font-size: 1em;"> y </span><strong style="font-size: 1em;"><code>Profesor</code></strong><span style="font-size: 1em;"> redefinen ese método especializándolo para cada una de ellas.</span></p>
+</li>
+</ol>
+<div class="enlace_centrado"><a class="paquete" title="Descargar archivo que contiene el proyecto EjemploClaseAbstractaPersona. Se abre en una nueva ventana zip 21 KB [zip - 19.88 KB]" href="EjemploClaseAbstractaPersona.zip" target="_blank">Proyecto EjemploClaseAbstractaPersona.</a><span class="exe-link-data file-size"> (zip - 19.88 <abbr title="KiloBytes" lang="en">KB</abbr>)</span> </div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id105">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta105_148" class="block story iDevice_content">
+<p><strong>Jerarquía de clases de piezas de ajedrez</strong></p>
+<p><a href="DiagramaClasesAjedrez01.png" title="Enlace a imagen de la jerarquía de clases de piezas de ajedrez (se abre en una nueva ventana)" target="_blank" class="imagen_ampliable"><img src="DiagramaClasesAjedrez01.png" alt="Diagrama en el que aparece la clase abstracta PiezaAjedrez y cómo heredan de ella las piezas del juego del ajedrez: peón, torre, caballo, alfil, rey, dama" width="416" height="240" /></a></p>
+<p>Vamos a implementar una jerarquía de clases para representar las piezas del juego del ajedrez.</p>
+</div>
+<div id="taquesQuestion0b105" class="block iDevice_content">
+<p>La clase <code>PiezaAjedrez</code> representa de manera genérica una pieza cualquiera del juego del ajedrez. Contiene tres atributos de objeto:</p>
+<ul class="lista_verificacion">
+<li><strong>color: texto</strong>, con valor "<em>blanco</em>" o "<em>negro</em>",<strong> inmutable;</strong></li>
+<li><strong>fila</strong>: <strong>número entero</strong> entre uno y ocho, <strong>mutable</strong>;</li>
+<li><strong>columna</strong>: <strong>número entero</strong> entre uno y ocho, <strong>mutable</strong>.</li>
+</ul>
+<p>Definiremos un <strong>constructor</strong> básico que recibirá el valor inicial de esos tres atributos, comprobará si son válidos y, en caso afirmativo, asignará les ese valor. En caso contrario se lanzará una <strong>excepción</strong>.</p>
+<p>Además de esos atributos, también incluirá un par de métodos genéricos:</p>
+<ul class="lista_verificacion">
+<li><code>esMovible</code>, que recibirá como parámetros una <strong>fila</strong> y una <strong>columna</strong> y devolverá <code>true</code> si la pieza puede moverse a esa nueva ubicación o <code>false</code> si no es posible<strong>;</strong></li>
+<li><code>mover</code>, que también recibirá como parámetros una <strong>fila</strong> y una <strong>columna</strong> e intentará mover la pieza a esa nueva ubicación. Si no es posible ejecutar el movimiento, se lanzará una <strong>excepción</strong>.</li>
+</ul>
+<p><strong>Estos métodos tendrán que ser irremediablemente abstractos</strong>, pues las reglas de movimiento de cada tipo pieza es diferente y tendrán que ser implementadas en sus clases descendientes (<code>Peon</code>, <code>Torre</code>, <code>Alfil</code>, <code>Rey</code>, <abbr title="etcétera">etc</abbr>.). Y, obviamente, la clase <code>PiezaAjedrez</code> tendrá que ser abstracta.</p>
+<p>Implementa en Java la clase <code>PiezaAjedrez</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback0b105" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b105text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b105" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b105" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Empezamos declarando la <strong>cabecera de la clase y sus atributos</strong>. El atributo que almacena el <strong>color</strong> puede declarar privado, pues una vez que se asigne no podrá volver a cambiar de valor (lo declararemos <code>final</code>). Para acceder a él se puede implementar un <code>getter</code>.</p>
+<p>Respecto a los atributros que almacenarán la <strong>ubicación</strong> (fila y columna), si los declaramos privados, las clases que hereden de esta clase base no podrán modificarlos cuando ejecuten un movimiento. Por otro lado, si se declaran públicos, cualquier zona de código externa (por ejemplo, un programa principal), podría modificar esos atributos sin ningún control, lo cual sería un grave problema de seguridad en el código. Una solución razonable podría ser declarar esos dos atributos como <code>protected</code>, de manera que las clases que hereden de <code>PiezaAjedrez</code> puedan acceder a esos atributos. Otra opción podría ser dejarlos como privados e implementar dos <code>setter</code> que fueran <code>protected</code>. En el fondo es más o menos lo mismo.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public abstract class PiezaAjedrez {
+
+    // Atributos de objeto
+    private final String color;
+    protected int fila;
+    protected int columna;
+    . . .</code></pre>
+</div>
+</div>
+<p>Ahora, tocaría implementar el <strong>constructor</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>    // Constructor
+    public PiezaAjedrez (String color, int fila, int columna) throws IllegalArgumentException {
+        String msgError = null;
+        if (!"blanco".equalsIgnoreCase(color) &amp;&amp; !"negro".equalsIgnoreCase(color)) {
+            msgError = String.format ("Color incorrecto: %s", color);
+        } else if ( fila&lt;1 || fila&gt;8 || columna&lt;1 || columna&gt; 8) {
+            msgError = String.format ("Ubicación incorrecta: (%d, %d)", 
+                    fila, columna);
+        }
+        if (msgError != null) { // Si algún parámetro no es válido, desencadenamos una excepción
+            throw new IllegalArgumentException (msgError);
+        }
+        // Si todo ha ido bien, inicializamos atributos
+        this.color = color;
+        this.fila = fila;
+        this.columna = columna;
+    }
+</code></pre>
+</div>
+</div>
+<p>También podemos implementar los <code>getter</code> de esos tres atributos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>    // Getters
+    public String getColor () {
+        return this.color;
+    }
+    
+    public int getFila() {
+        return this.fila;
+    }
+
+    public int getColumna() {
+        return this.columna;
+    }
+</code></pre>
+</div>
+</div>
+<p>Y, finalmente, declarar los métodos abstractos <code>esMovible</code> y <code>mover</code>, que no podremos implementar (serán <strong>abstractos</strong>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>    public abstract boolean esMovible (int fila, int columna) ;
+    
+    public abstract void mover (int fila, int columna) throws IllegalStateException ;
+</code></pre>
+</div>
+</div>
+<p>Y poco más podemos hacer por el momento en esta clase, pues es tan genérica que el resto de acciones deberán implementarse en clases derivadas más específicas.</p></div>
+</form>
+<div id="taquesQuestion1b105" class="block iDevice_content">
+<p>Sabiendo que la <strong>torre</strong> del juego del ajedrez puede desplazarse un número indeterminado de casillas en <strong>vertical</strong> o en <strong>horizontal</strong>, implementa la clase <code>Torre</code>, decendiente de <code>PiezaAjedrez</code>, donde tendrás que codificar de manera específica los métodos <code>esMovible</code> y <code>mover</code>. Además, también tendrás que escribir el código de un <strong>constructor</strong> que reciba como parámetros el <strong>color</strong>, así como la <strong>ubicación</strong> (fila y columna) inicial.</p>
+</div>
+<form name="feedback-form-quesFeedback1b105" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b105text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b105" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b105" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En la cabecera de la clase habrá que indicar que se trata de una clase que hereda de <code>PiezaAjedrez</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Torre extends PiezaAjedrez {
+    . . .</code></pre>
+</div>
+</div>
+<p>Por el momento no harán falta más atributos adicionales. Le bastan con los que hereda de su clase base. Tampoco necesitará implementar ningún <code>getter</code>.</p>
+<p>Respecto al <strong>constructor</strong>, dado que inicialmente no contamos con atributos adicionales, habíra que hacer lo mismo que se hace en el constructor de la clase padre. Bastaría, por tanto, con hacer una <strong>llamada al constructor de la clase base</strong> (llamada a <code>super()</code>) para que haga todo ese trabajo por nosotros y evitemos volver a escribir ese código de manera redundancia. Esta es una de las ventajas de la <strong>herencia</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public Torre (String color, int fila, int columna) throws IllegalArgumentException  {
+    // Llamamos al constructor de la clase padre
+    super (color, fila, columna);
+}
+</code></pre>
+</div>
+</div>
+<p>Para implementar el método <code>esMovible</code> habrá que tener en cuenta las <strong>reglas de movimiento de la torre</strong> en el ajedrez:</p>
+<ul class="lista_verificacion">
+<li>puede moverse a cualquier <strong>casilla en horitonzal</strong>;</li>
+<li>o bien, puede moverse a cualquier <strong>casilla en vertical</strong>. Pero no a la vez en horizontal y vertical.</li>
+</ul>
+<p>Además de eso, debemos tener en cuenta, de manera general, que</p>
+<ol>
+<li>tiene que efectuarse movimiento (<strong>no puede quedarse en el mismo sitio</strong>);</li>
+<li><strong>no puede salirse del tablero</strong>. La ubicación (fila y columna) no puede salirse de las coordenadas (1,1) a (8,8).</li>
+</ol>
+<p>Considerando todo esto, el método <code>esMovible</code> podría quedar implementado de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Override
+public boolean esMovible (int fila, int columna) {
+    boolean resultado;
+    if (fila == this.getFila() &amp;&amp; columna == this.getColumna() ) {
+        // No se ha producido movimiento
+        resultado = false;
+    } else if ( fila&lt;1 || fila&gt;8 || columna&lt;1 || columna&gt;8 ) {
+        // Nos salimos del tablero
+        resultado = false;
+    } else if ( fila != this.getFila() &amp;&amp; columna == this.getColumna() ) {
+        // Se ha producido movimiento vertical (en la fila y no en la columna)
+        resultado = true;
+    } else if ( fila == this.getFila() &amp;&amp; columna != this.getColumna() ) {
+        // Se ha producido movimiento horizontal (en la columna y no en la fila)
+        resultado = true;            
+    } else {
+        // Se ha producido cualquier otro tipo de movimiento (prohibido)
+        resultado = false;
+    }
+
+    return resultado;
+}</code></pre>
+</div>
+</div>
+<p>Con el método <code>esMovible</code> implementado, la codificación del método <code>mover</code> quedará muy sencilla:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Override
+public void mover (int fila, int columna) throws IllegalStateException {
+    if (!this.esMovible(fila, columna)) {
+        // Si no es movible, se hace saltar una excepción
+        throw new IllegalStateException (
+                String.format ("Movimiento no permitido: (%d,%d) -&gt; (%d,%d)",
+                        this.getFila(), this.getColumna(),
+                        fila, columna));
+    }
+    // Si es movible, procedemos a modificar la posición de la pieza
+    this.fila = fila;
+    this.columna = columna;
+}</code></pre>
+</div>
+</div></div>
+</form>
+<div id="taquesQuestion2b105" class="block iDevice_content">
+<p>Probemos ahora a implementar la clase <code>Rey</code>, teniendo en cuenta que las reglas de movimiento del rey en el ajedrez indican que puede moverse una única casilla pero hacia cualquier dirección (horizontal, vertical o diagonal). Tendremos que implementar nuevamente:</p>
+<ol>
+<li><strong>constructor</strong>;</li>
+<li>método <code>esMovible</code>;</li>
+<li>método <code>mover</code>.</li>
+</ol>
+</div>
+<form name="feedback-form-quesFeedback2b105" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b105text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b105" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b105" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La <strong>cabecera de la clase</strong> y el <strong>constructor</strong> son prácticamente iguales a las de la clase <code>Torre</code> que ya hemos implementado:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Rey extends PiezaAjedrez {
+    
+    public Rey (String color, int fila, int columna) throws IllegalArgumentException  {
+        // Llamamos al constructor de la clase padre
+        super (color, fila, columna);
+    }</code></pre>
+</div>
+</div>
+<p>Para implementar el método <code>esMovible</code> habrá que tener en cuenta las <strong>reglas de movimiento del rey</strong> en el ajedrez:</p>
+<ul class="lista_verificacion">
+<li>puede saltar a cualquier casilla adyacente una posición, es decir, que puede avanzar o retroceder <strong>una única casilla</strong> en <strong>vertical</strong>, <strong>horizontal</strong> o <strong>diagonal</strong>;</li>
+</ul>
+<p>Además de eso, debemos tener en cuenta, de manera general, que</p>
+<ol>
+<li>tiene que efectuarse movimiento (<strong>no puede quedarse en el mismo sitio</strong>);</li>
+<li><strong>no puede salirse del tablero</strong>. La ubicación (fila y columna) no puede salirse de las coordenadas (1,1) a (8,8).</li>
+</ol>
+<p>Considerando todo esto, el método <code>esMovible</code> podría quedar implementado de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Override
+public boolean esMovible (int fila, int columna) {
+    boolean resultado;
+    if (fila == this.getFila() &amp;&amp; columna == this.getColumna() ) {
+        // No se ha producido movimiento
+        resultado = false;
+    } else if ( fila&lt;1 || fila&gt;8 || columna&lt;1 || columna&gt;8 ) {
+        // Nos salimos del tablero
+        resultado = false;
+    } else if ( Math.abs(fila-this.getFila())&gt;=1 || Math.abs(columna-this.getColumna())&gt;=1 ) {
+        // Se ha producido movimiento de una casilla hacia algún lado
+        // (o vertical u horizontal o ambas)
+        resultado = true;
+    } else {
+        // Se ha producido cualquier otro tipo de movimiento (prohibido)
+        resultado = false;
+    }
+
+    return resultado;
+}</code></pre>
+</div>
+</div>
+<p>Si hemos implementado bien el método anterior, el método mover podría quedar exactamente igual que en la clase <code>Torre</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Override
+public void mover (int fila, int columna) throws IllegalStateException {
+    if (!this.esMovible(fila, columna)) {
+        // Si no es movible, se hace saltar una excepción
+        throw new IllegalStateException (
+                String.format ("Movimiento no permitido: (%d,%d) -&gt; (%d,%d)",
+                        this.getFila(), this.getColumna(),
+                        fila, columna));
+    }
+    // Si es movible, procedemos a modificar la posición de la pieza
+    this.fila = fila;
+    this.columna = columna;
+}</code></pre>
+</div>
+</div>
+<p>Que el código de ese método sea exactamente igual en la clase <code>Torre</code> y en la clase <code>Rey</code> nos hace intuir que va a suceder lo mismo en el resto de clases. Eso es algo que debemos evitar y podríamos plantearnos incluir esta implementación directamente en la clase base (<code>PiezaAjedrez</code>) para escribirlo únicamente una vez y evitar así la redundancia de código, que es una de las princpales ventajas que nos ofrece la herencia.</p></div>
+</form>
+<div id="taquesQuestion3b105" class="block iDevice_content">
+<p>Cuando se planteó inicialmente la jerarquía de clases para las piezas de ajedrez, se consideró que el método <code>mover</code> debería ser abstracto, pues la ejecución del movimiento dependería de las reglas de movimiento de cada pieza.</p>
+<p>Por otro lado, al implementar las clases hijas, hemos separado dos funcionalidades:</p>
+<ol>
+<li>la <strong>comprobación de si un movimiento es posible</strong> (implementado en el método <code>esMovible</code> de cada subclase), que comprueba si un determinado movimiento es posible de acuerdo con las reglas de cada pieza en concreto;</li>
+<li>la <strong>ejecución del movimiento en sí</strong> (método <code>mover</code>), que simplemente llama al método anterior para saber si la pieza se puede mover y posteriormente, si en efecto el movimiento es posible, modifica los atributos de ubicación.</li>
+</ol>
+<p>Esto hace que <strong>el código del método <code>mover</code> sea exactamente el mismo en todas las clases derivadas de <code>PiezaAjedrez</code></strong>. Y, en consecuencia, podríamos plantearnos trasladar el código de ese método a la clase base, dado que siempre es el mismo y evitamos tener que escribirlo seis veces (una para cada pieza específica). <strong>La clase <code>mover</code> dejaría entonces de ser abstracta</strong> y desaparecería su implementación en cada una de las clases derivadas.</p>
+<p>Implementa esta mejora en las clases <strong><code>PiezaAjedrez</code></strong>, <strong><code>Torre</code></strong> y <strong><code>Rey</code></strong>.</p>
+</div>
+<form name="feedback-form-quesFeedback3b105" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b105text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b105" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback3b105" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En el caso de la clase <strong><code>PiezaAjedrez</code></strong>, se trataría de implementar el método <code>mover</code> en lugar de dejarlo como abstracto. Bastaría con copiar el código implementado en cualquiera de las clases derivadas (<strong><code>Torre</code></strong> o <strong><code>Rey</code></strong>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public abstract class PiezaAjedrez {
+
+    // Atributos de objeto
+    private final String color;
+    protected int fila;
+    protected int columna;
+    
+    // Constructor (queda igual)
+    . . .
+
+    // Getters (quedan igual)
+    . . .
+
+    // Método "genérico" de movimiento de pieza
+    // Requiere necesariamente que en las clases derivadas se implemente
+    // el método esMovible
+    public void mover (int fila, int columna) throws IllegalStateException {
+        if (!this.esMovible(fila, columna)) {
+            // Si no es movible, se hace saltar una excepción
+            throw new IllegalStateException (
+                    String.format ("Movimiento no permitido: (%d,%d) -&gt; (%d,%d)",
+                            this.getFila(), this.getColumna(),
+                            fila, columna));
+        }
+        // Si es movible, procedemos a modificar la posición de la pieza
+        this.fila = fila;
+        this.columna = columna;
+    }
+
+    
+    // Métodos abstractos (deben ser implementados por las clases derivadas que sean instanciables)
+    public abstract boolean esMovible (int fila, int columna) ;
+
+}</code></pre>
+</div>
+</div>
+<p>Ahora esta clase tendrá únicamente un método abstracto: <code>esMovible</code>, que deberá ser implementado en cualquier clase derivada que sea instanciable para que lo que se hace dentro del método <code>mover</code> tenga sentido (se está invocando a un método que aún no existe).</p>
+<p>Por otro lado, en los casos de las clases <strong><code>Torre</code></strong> y <strong><code>Rey</code></strong>, su código quedará simplificado al eliminar de ellas el método <code>esMovible</code>, que será directamente heredado de su clase base <strong><code>PiezaAjedrez</code></strong>.</p>
+<p>La clase <strong><code>Torre</code></strong> quedaría así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Torre extends PiezaAjedrez {
+    
+    public Torre (String color, int fila, int columna) throws IllegalArgumentException  {
+        // Llamamos al constructor de la clase padre
+        super (color, fila, columna);
+    }
+    
+    @Override
+    public boolean esMovible (int fila, int columna) {
+        boolean resultado;
+        if (fila == this.getFila() &amp;&amp; columna == this.getColumna() ) {
+            // No se ha producido movimiento
+            resultado = false;
+        } else if ( fila&lt;1 || fila&gt;8 || columna&lt;1 || columna&gt;8 ) {
+            // Nos salimos del tablero
+            resultado = false;
+        } else if ( fila != this.getFila() &amp;&amp; columna == this.getColumna() ) {
+            // Se ha producido movimiento vertical (en la fila y no en la columna)
+            resultado = true;
+        } else if ( fila == this.getFila() &amp;&amp; columna != this.getColumna() ) {
+            // Se ha producido movimiento horizontal (en la columna y no en la fila)
+            resultado = true;            
+        } else {
+            // Se ha producido cualquier otro tipo de movimiento (prohibido)
+            resultado = false;
+        }
+        
+        return resultado;
+    }
+    
+}
+</code></pre>
+</div>
+</div>
+<p>Se queda tan solo con el <strong>constructor</strong> y su implementación específica del método <code>esMovible</code>, eliminando el método <code>mover</code>, que será común para todas las piezas.<br /><br /></p>
+<p>Lo mismo sucederá con la clase <strong><code>Rey</code></strong>, que quedaría así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Rey extends PiezaAjedrez {
+    
+    public Rey (String color, int fila, int columna) throws IllegalArgumentException  {
+        // Llamamos al constructor de la clase padre
+        super (color, fila, columna);
+    }
+    
+    @Override
+    public boolean esMovible (int fila, int columna) {
+        boolean resultado;
+        if (fila == this.getFila() &amp;&amp; columna == this.getColumna() ) {
+            // No se ha producido movimiento
+            resultado = false;
+        } else if ( fila&lt;1 || fila&gt;8 || columna&lt;1 || columna&gt;8 ) {
+            // Nos salimos del tablero
+            resultado = false;
+        } else if ( Math.abs(fila-this.getFila())&gt;=1 || Math.abs(columna-this.getColumna())&gt;=1 ) {
+            // Se ha producido movimiento de una casilla hacia algún lado
+            // (o vertical u horizontal o ambas)
+            resultado = true;
+        } else {
+            // Se ha producido cualquier otro tipo de movimiento (prohibido)
+            resultado = false;
+        }
+
+        return resultado;
+    }
+    
+}</code></pre>
+</div>
+</div>
+<p></p>
+<p></p></div>
+</form>
+<div id="taquesQuestion4b105" class="block iDevice_content">
+<p>En nuestra continua inspección del código por evitar redundancias habrás observado también que hay una parte "común" en el código del método <strong><code>esMovible</code></strong> de <strong><code>Torre</code></strong> y <code>Rey</code>: las comprobaciones de que en efecto se ejecuta un movimiento y de que no nos salimos del tablero. Esas comprobaciones van a ser exactamente idénticas para cualquier pieza de ajedrez. ¿Cómo podríamos ahorrarnos la repetición de todo ese código redundante?</p>
+<p>La respuesta es sencilla: trasladar esas comprobaciones comunes a la clase base, es decir, al método <strong><code>esMovible</code></strong> de la clase <strong><code>PiezaAjedrez</code></strong>. De este modo se podría hacer una invocación al método homónimo (método con el mismo nombre) de la clase base o superclase (<strong><code>super</code></strong>) desde el método <strong><code>esMovible</code></strong> de cada clase derivada. Es decir, ejecutar la llamada <strong><code>super.esMovible</code></strong> desde cada método <strong><code>esMovible</code></strong> de cada pieza y posteriormente realizar las comprobaciones específicas de la pieza.</p>
+<p>Implementa esta nueva mejora en las clases <strong><code>PiezaAjedrez</code></strong>, <strong><code>Torre</code></strong> y <strong><code>Rey</code></strong>.</p>
+</div>
+<form name="feedback-form-quesFeedback4b105" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback4b105text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback4b105" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback4b105" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>El código de comprobaciones "genéricas" incluido en los métodos <strong><code>esMovible</code></strong> de las piezas es:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (fila == this.getFila() &amp;&amp; columna == this.getColumna() ) {
+    // No se ha producido movimiento
+    resultado = false;
+} else if ( fila&lt;1 || fila&gt;8 || columna&lt;1 || columna&gt;8 ) {
+    // Nos salimos del tablero
+    resultado = false;
+}
+</code></pre>
+</div>
+</div>
+<p>Este es el código "genérico" que tendremos que trasladar al método <code>esMovible</code> de la clase <code>PiezaAjedrez</code>.</p>
+<p>Esto hará que el método <code>esMovible</code> deje de ser también abstracto, pues hemos encontrado una parte de código de comprobación que no depende de cada pieza, sino que es genérica para cualquier pieza. Por tanto, eliminamos el modificador <code>abstract</code> que habíamos incluido al principio. El método <code>esMovible</code> de la clase <code>PiezaAjedrez</code> quedará entonces:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public boolean esMovible(int fila, int columna) {  // Este método ya no es abstracto
+    boolean resultado = true;
+    if (fila == this.getFila() &amp;&amp; columna == this.getColumna()) {
+        // No se ha producido movimiento
+        resultado = false;
+    } else if (fila &lt; 1 || fila &gt; 8 || columna &lt; 1 || columna &gt; 8) {
+        // Nos salimos del tablero
+        resultado = false;
+    }
+    return resultado;
+}</code></pre>
+</div>
+</div>
+<p>Y la clase completa quedaría más o menos así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public abstract class PiezaAjedrez {
+
+    // Atributos de objeto
+    private final String color;
+    protected int fila;
+    protected int columna;
+
+    // Constructor
+    public PiezaAjedrez(String color, int fila, int columna) throws IllegalArgumentException {
+        String msgError = null;
+        if (!"blanco".equalsIgnoreCase(color) &amp;&amp; !"negro".equalsIgnoreCase(color)) {
+            msgError = String.format("Color incorrecto: %s", color);
+        } else if (fila &lt; 1 || fila &gt; 8 || columna &lt; 1 || columna &gt; 8) {
+            msgError = String.format("Ubicación incorrecta: (%d, %d)",
+                    fila, columna);
+        }
+        if (msgError != null) { // Si algún parámetro no es válido, desencadenamos una excepción
+            throw new IllegalArgumentException(msgError);
+        }
+        // Si todo ha ido bien, inicializamos atributos
+        this.color = color.toUpperCase();
+        this.fila = fila;
+        this.columna = columna;
+    }
+
+    // Getters
+    public String getColor() {
+        return this.color;
+    }
+
+    public int getFila() {
+        return this.fila;
+    }
+
+    public int getColumna() {
+        return this.columna;
+    }
+
+    // Método "genérico" de movimiento de pieza
+    // Requiere necesariamente que en las clases derivadas se implemente
+    // el método esMovible
+    public void mover(int fila, int columna) throws IllegalStateException {
+        if (!this.esMovible(fila, columna)) {
+            // Si no es movible, se hace saltar una excepción
+            throw new IllegalStateException(
+                    String.format("Movimiento no permitido: (%d,%d) -&gt; (%d,%d)",
+                            this.getFila(), this.getColumna(),
+                            fila, columna));
+        }
+        // Si es movible, procedemos a modificar la posición de la pieza
+        this.fila = fila;
+        this.columna = columna;
+    }
+
+    // Parte genérica de comprobaciones que debe cumplirse para el movimiento de 
+    // cualquier pieza
+    public boolean esMovible(int fila, int columna) {
+        boolean resultado = true;
+        if (fila == this.getFila() &amp;&amp; columna == this.getColumna()) {
+            // No se ha producido movimiento
+            resultado = false;
+        } else if (fila &lt; 1 || fila &gt; 8 || columna &lt; 1 || columna &gt; 8) {
+            // Nos salimos del tablero
+            resultado = false;
+        }
+        return resultado;
+    }
+
+}</code></pre>
+</div>
+</div>
+<p>En el caso de las clases derivadas (<code>Torre</code>, <code>Rey</code>, etc.) eliminaríamos esa parte de código y nos limitaríamos a utilizar el método <code>esMovible</code> del padre mediante una llamada usando <code>super</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Comprobaciones genéricas (se produce movimiento y no nos salimos del tablero)
+resultado = super.esMovible (fila, columna);
+</code></pre>
+</div>
+</div>
+<p>De esta manera, el código de <code>esMovible</code> para la clase <code>Torre</code> quedaría así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Override
+public boolean esMovible (int fila, int columna) {
+    boolean resultado;
+    // Comprobaciones genéricas (se produce movimiento y no nos salimos del tablero)
+    resultado = super.esMovible (fila, columna);
+    if (resultado) {
+        // Si superan las comprobaciones genéricas, 
+        // pasamos a las comprobaciones específicas de esta pieza
+        if ( fila != this.getFila() &amp;&amp; columna == this.getColumna() ) {
+            // Se ha producido movimiento vertical (en la fila y no en la columna)
+            resultado = true;
+        } else if ( fila == this.getFila() &amp;&amp; columna != this.getColumna() ) {
+            // Se ha producido movimiento horizontal (en la columna y no en la fila)
+            resultado = true;            
+        } else {
+            // Se ha producido cualquier otro tipo de movimiento (prohibido)
+            resultado = false;
+        }
+    }
+
+    return resultado;
+}</code></pre>
+</div>
+</div>
+<p>Y de forma similar, el código de <code>esMovible</code> para la clase <code>Rey</code> podría ser algo como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Override
+public boolean esMovible(int fila, int columna) {
+    boolean resultado;
+    // Comprobaciones genéricas (se produce movimiento y no nos salimos del tablero)
+    resultado = super.esMovible(fila, columna);
+    if (resultado) {
+        // Si superan las comprobaciones genéricas, 
+        // pasamos a las comprobaciones específicas de esta pieza
+        if (Math.abs(fila - this.getFila()) &gt;= 1 || Math.abs(columna - this.getColumna()) &gt;= 1) {
+            // Se ha producido movimiento de una casilla hacia algún lado
+            // (o vertical u horizontal o ambas)
+            resultado = true;
+        } else {
+            // Se ha producido cualquier otro tipo de movimiento (prohibido)
+            resultado = false;
+        }
+    }
+    return resultado;
+}</code></pre>
+</div>
+</div>
+<p>Esta sería la manera óptima de implementar esta funcionalidad. Finalmente, <strong>nos hemos quedado sin métodos abstractos porque ha validado la pena implementar código genérico en la clase abstracta, pero esto no siempre tiene por qué ser así</strong>. Habrá ocasiones en las que no podamos escribir ni una sola línea de código de algunos métodos que obligatoriamente tendrán que implementar las clases derivadas. En esos casos habrá que declararlos como abstractos. Si, posteriormente, al implementar las clases derivadas, observamos que existen comportamientos comunes en algunos de esos métodos, siempre podemos trasladar ese comportamiento a los métodos de la clase base y que dejen de ser abstractos. Eso lo iremos viendo según vayamos detallando el código de nuestra jerarquía de clases y no siempre es fácil verlo desde el principio. Dependerá mucho del diseño inicial que se haya realizado del proyecto y de los posteriores requerimientos que se nos puedan ir haciendo.</p>
+<p></p>
+<p></p></div>
+</form>
+<div id="taquesQuestion5b105" class="block iDevice_content">
+<p>Como conclusión práctica de este ejemplo, podríamos decir que en muchas ocasiones pasaremos de tener la necesidad de declarar métodos abstractos en la clase base y observar cuál sería su utilidad a finalmente no necesitarlos para evitar la redundancia de código según se vayan implementando clases derivadas. Esto no significa que haya que evitar los métodos abstractos o que siempre tenga que haber al menos uno cada vez que clasifiquemos una clase como abstracta. Todo esto dependerá siempre de las circunstancias de nuestra implementación y de cómo vaya evolucionando nuestro código y los requerimientos que se nos vayan haciendo.</p>
+<p>Por último, ya solo nos quedaría la implementación del resto de piezas (<code>Peon</code>, <code>Caballo</code>, <code>Alfil</code>, <code>Reina</code>) teniendo en cuenta todo el trabajo anterior.</p>
+</div>
+<form name="feedback-form-quesFeedback5b105" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback5b105text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback5b105" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback5b105" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Este es el trabajo que dejamos pendiente para que implementes tú y lo compartas en el foro para discutirlo con el resto de compañeros y compañeras.</p>
+<p>Además de eso, si te ves con tiempo y ganas, también te retamos a que te plantees cómo se podría simplificar el código de los <code>if-else</code> en las comprobaciones de los métodos <code>esMovible</code> para intentar generar una única salida de tipo <code>boolean</code> a partir de las comprobaciones lógicas y evitar el uso de la variable local <code>resultado</code>.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="41_declaracin_de_una_clase_abstracta.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_clases_y_mtodos_finales.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

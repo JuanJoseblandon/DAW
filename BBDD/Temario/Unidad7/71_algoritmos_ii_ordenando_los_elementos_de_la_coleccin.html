@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.1.- Algoritmos (II). Ordenando los elementos de la colección | Estructuras de datos internas (memoria) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-65"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructuras de datos internas (memoria)</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos internas (memoria)</a></li>
+   <li><a href="1_clases_y_mtodos_genricos_i.html" class="daddy">1.- Clases y métodos genéricos (I)</a>
+   <ul class="other-section">
+      <li><a href="11_clases_y_mtodos_genricos_ii.html" class="no-ch">1.1.- Clases y métodos genéricos (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="2__introduccin_a_las_colecciones.html" class="no-ch">2.-  Introducción a las colecciones</a></li>
+   <li><a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="daddy">3.- Conjuntos (I).  ¿Qué son y cómo se declaran? HashSet</a>
+   <ul class="other-section">
+      <li><a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="no-ch">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</a></li>
+      <li><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="no-ch">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</a></li>
+      <li><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="no-ch">3.3.- Conjuntos (IV). Combinando datos de varias colecciones</a></li>
+      <li><a href="34_conjuntos_v_ordenando_sus_elementos.html" class="no-ch">3.4.- Conjuntos (V). Ordenando sus elementos</a></li>
+      <li><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="no-ch">3.5.- Conjuntos (VI). Ejemplos de uso.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_listas_i_definicin_y_diferencias_con_los_conjuntos.html" class="daddy">4.- Listas (I). Definición y diferencias con los conjuntos</a>
+   <ul class="other-section">
+      <li><a href="41_listas_ii_cmo_se_usan.html" class="no-ch">4.1.- Listas (II). ¿Cómo se usan?</a></li>
+      <li><a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="no-ch">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</a></li>
+      <li><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="no-ch">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</a></li>
+   </ul>
+   </li>
+   <li><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="daddy">5.- Conjuntos de pares clave/valor o diccionarios</a>
+   <ul class="other-section">
+      <li><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="no-ch">5.1.- Recorrido de los elementos de un diccionario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="daddy">6.- Iteradores (I). ¿Qué son y cómo se usan?</a>
+   <ul class="other-section">
+      <li><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="no-ch">6.1.- Iteradores (II). ¿Qué características debemos considerar?</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="current-page-parent daddy">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</a>
+   <ul>
+      <li id="active"><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="active no-ch">7.1.- Algoritmos (II). Ordenando los elementos de la colección</a></li>
+      <li><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="no-ch">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</a></li>
+      <li><a href="73_algoritmos_iv_operaciones_agregadas.html" class="daddy">7.3. Algoritmos (IV). Operaciones agregadas</a>
+      <ul class="other-section">
+         <li><a href="731_operaciones_de_reduccin.html" class="no-ch">7.3.1. Operaciones de reducción</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I. Ejercicios resueltos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.1.- Algoritmos (II). Ordenando los elementos de la colección</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id179">
+<div class="iDevice emphasis0">
+<div id="ta179_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 300px;"><img src="OrdenandoLetras.jpg" alt="Montón de piezas con forma de letras desordenadas y tumbadas, y entre ellas, de pie, las letras A, B y C, en orden." title="Ordenando  el desorden." width="300" height="200" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/alfabeto-a-b-c-carta-aprender-leer-1219546/" target="_blank" class="author" title="Acceder a la imagen &quot;Ordenando el desorden&quot; de geralt en Pixabay. (Se abre en una nueva ventana)">geralt</a><span> </span><span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" target="_blank" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" rel="noopener">Licencia Pixabay</a><span>)</span></span></span></div>
+</div>
+<p>En <span lang="en">Java</span> hay dos mecanismos para cambiar la forma en la que los elementos se ordenan. ¿Recuerdas la tarea que <strong>Ada</strong> pidió a <strong>Ana</strong>?</p>
+<p>Así es, <strong>Ada</strong> pidió a <strong>Ana</strong> que los artículos del pedido aparecieran ordenados por código de artículo. Imagina que tienes los artículos almacenados en una lista llamada "<code>articulos</code>", y que cada artículo se almacena en la siguiente clase (fíjate que el código de artículo es una cadena y no un número):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class Articulo {
+    public String codigoArticulo; // Código de artículo
+    public String descripcion; // Descripción del artículo.
+    public int cantidad; // Cantidad a proveer del artículo.
+}</code></pre>
+</div>
+</div>
+<p>La <strong>primera forma</strong> de ordenar consiste en crear una clase que implemente la interfaz <code>java.util.Comparator</code>, lo que supone implementar el método <code>compare()</code> definido en dicha interfaz. Esto se explicó en el apartado de conjuntos, al explicar el <code>TreeSet</code>, así que no vamos a profundizar en ello. No obstante, el comparador para ese caso podría ser así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class ComparadorArticulos implements Comparator&lt;Articulo&gt;{
+    @Override
+    public int compare(Articulo articulo1, Articulo articulo2) { 
+       return articulo1.codigoArticulo.compareTo(articulo2.codigoArticulo);
+    }
+}</code></pre>
+</div>
+</div>
+<p>Una vez creada esta clase, ordenar los elementos es muy sencillo, simplemente se pasa como segundo parámetro del método <code>sort()</code> una instancia del comparador creado:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Collections.sort(articulos, new comparadorArticulos());</code></pre>
+</div>
+</div>
+<p>La <strong>segunda forma</strong> es quizás más sencilla cuando se trata de objetos cuya ordenación no existe de forma natural, pero requiere modificar la clase <code>Articulo</code>. Consiste en hacer que los objetos que se meten en la lista o <span lang="en">array</span> implementen la interfaz <code>java.util.Comparable</code>. <strong>Todos los objetos que implementan la interfaz <code>Comparable</code> son "ordenables" y se puede invocar el método <code>sort</code>() sin indicar un comparador para ordenarlos</strong>. La interfaz <code>Comparable</code> solo requiere implementar el método <code>compareTo()</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class Articulo implements Comparable&lt;Articulo&gt;{
+    public String codigoArticulo;
+    public String descripcion;
+    public int cantidad;
+ 
+    @Override
+    public int compareTo(Articulo articulo) { 
+         return codigoArticulo.compareTo(articulo.codigoArticulo); 
+    }
+}</code></pre>
+</div>
+</div>
+<p>Del ejemplo anterior se pueden resaltar dos cosas importantes: que la interfaz <code>Comparable</code> es genérica y que para que funcione sin problemas es conveniente indicar el tipo base sobre el que se permite la comparación (en este caso, el objeto <code>Articulo</code> debe compararse consigo mismo), y que el método <code>compareTo()</code> solo admite un parámetro, dado que comparará el objeto con el que se pasa por parámetro.</p>
+<p>El funcionamiento del método <code>compareTo()</code> es el mismo que el método <code>compare()</code> de la interfaz <code>Comparator</code>: si el objeto que se pasa por parámetro es igual al objeto ha llamado al método, se tendría que devolver  0; si es menor o anterior, se debería retornar un número menor que cero; si es mayor o posterior, se debería retornar un número mayor que 0.</p>
+<p>Ordenar ahora la lista de artículos es sencillo, fíjate que fácil: "<code>Collections.sort(articulos);</code>"</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id180">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-180_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion180_60" class="block question iDevice_content">
+<p><strong>Si tienes que ordenar los elementos de una lista de tres formas diferentes, &iquest;cu&aacute;l de los m&eacute;todos anteriores es m&aacute;s conveniente?</strong></p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i180_63" class="sr-av"><a href="#answer-180_63">Opción 1</a></label><input type="radio" name="option180_60" id="i180_63" class="exe-radio-option exe-radio-option-0-2-180_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-180_63"><div id="taans180_63" class="block iDevice_content">
+<p>Usar comparadores, a trav&eacute;s de la interfaz <code>java.util.Comparator</code>.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i180_94" class="sr-av"><a href="#answer-180_94">Opción 2</a></label><input type="radio" name="option180_60" id="i180_94" class="exe-radio-option exe-radio-option-1-2-180_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-180_94"><div id="taans180_94" class="block iDevice_content">
+<p>Implementar la interfaz <code>Comparable</code> en el objeto almacenado en la lista.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b180_60" class="feedback js-hidden">
+<div id="taf180_63" class=" iDevice_content">
+<p>Efectivamente, creas tres comparadores, uno para cada forma de ordenar la lista.</p>
+</div>
+</section>
+<section id="sa1b180_60" class="feedback js-hidden">
+<div id="taf180_94" class=" iDevice_content">
+<p>No es la mejor forma, solo podr&iacute;as ordenar los elementos de una forma, ya que s&oacute;lo puedes incluir un &uacute;nico m&eacute;todo <code>compareTo()</code> en dicha clase, que ni siquiera se puede sobrecargar, ya que s&oacute;lo admite como par&aacute;metro un objeto del tipo base de la lista,&nbsp; que se comparar&aacute; con el que hace la llamada al m&eacute;todo.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-180_63">Opción correcta</a><span> (<a href="#sa0b180_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-180_94">Incorrecto</a><span> (<a href="#sa1b180_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id32">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta32_148" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 189px;"><img src="canned-food-570114_640.jpg" alt="Estantería con diversos productos de alimentación enlatados" title="Productos" style="float: right;" width="180" height="120" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/alimentos-enlatados-latas-570114/" title="Acceder a la web de descarga de la imagen de PublicDomainArchive en Pixabay (se abre en una nueva ventana)" target="_blank" class="author"><span class="author">PublicDomainArchive</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Dada la clase <code>Producto</code>, vamos a implementar un programa en Java donde se cree una lista de objetos de este tipo para a continuación rellenarla y ordenarla en función de diferentes criterios.</p>
+<p>A partir de ahí, tendrás que implementar tres clases que implementen la interfaz <code>Comparator</code> que te permitan ordenar esa lista en función de tres criterios diferentes: <strong>nombre</strong>, <strong>fecha de caducidad</strong> y <strong>precio</strong> del producto.</p>
+</section>
+<section id="taquesQuestion0b32" class="block iDevice_content">
+<p>Para empezar, aquí tienes el código de la clase <code>Producto</code>:</p>
+</section>
+<form name="feedback-form-quesFeedback0b32" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b32text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b32" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b32" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+
+/**
+ * Clase Producto. Contiene la información de un producto.
+ * @author profe
+ */
+public class Producto {
+    private final String nombre;
+    private final LocalDate caducidad;
+    private final double precio;
+    private static final DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern ("dd/MM/yyyy");
+    
+    public Producto(String nombre, LocalDate caducidad, double precio)
+    {
+        this.caducidad=caducidad;
+        this.nombre=nombre;
+        this.precio= precio;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public LocalDate getCaducidad() {
+        return this.caducidad;
+    }
+    
+    public double getPrecio() {
+        return this.precio;
+    }
+      
+    @Override
+    public String toString() {
+        return String.format ("{%-10s, %s, %.2f}", 
+
+                this.getNombre(),
+                this.getCaducidad().format(formatoFecha),
+                this.getPrecio());
+    }
+}</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b32" class="block iDevice_content">
+<p><strong>1. Creación y rellenado de la lista de productos</strong></p>
+<p>Empezamos implementando un programa en Java donde se cree una lista de objetos de tipo <code>Producto</code> para a continuación rellenarla con la siguiente información y en el siguiente orden: <code></code><code></code></p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre class="  language-markup"><code class="  language-markup">1. {sardinas  , 31/12/2023, 1,50}
+2. {caballa   , 25/12/2023, 1,70}
+3. {navajas   , 01/01/2021, 2,40}
+4. {mejillones, 11/01/2022, 2,10}</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback1b32" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b32text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b32" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b32" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+List&lt;Producto&gt; listaProductos = new LinkedList&lt;&gt;();
+
+//----------------------------------------------
+//               Entrada de datos 
+//----------------------------------------------
+System.out.println("ORDENACIÓN DE PRODUCTOS");
+System.out.println("-----------------------");
+
+// Rellenamos la lista con los productos indicados en el enunciado
+listaProductos.add (new Producto ("sardinas", LocalDate.of(2023, 12, 31), 1.50) );
+listaProductos.add (new Producto ("caballa", LocalDate.of(2023, 12, 25), 1.70) );
+listaProductos.add (new Producto ("navajas", LocalDate.of(2021, 1, 1), 2.40) );
+listaProductos.add (new Producto ("mejillones", LocalDate.of(2022, 1, 11), 2.10) );
+
+System.out.printf("Contenido inicial de la lista:\n");
+mostrarListaProductos (listaProductos);
+</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Método que recorre una lista de productos y los muestra cada uno en una línea
+static void mostrarListaProductos (List&lt;Producto&gt; listaProductos) {
+    int contador=1;
+    for (Producto elemento: listaProductos) {
+        System.out.printf ("%d. %s\n", contador++, elemento);
+    }        
+}</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+<section id="taquesQuestion2b32" class="block iDevice_content">
+<p><strong>2. Escribe un comparador productos basándonos en el nombre del producto</strong></p>
+<p>Codifica la clase <code>ComparadorProductosPorNombre</code>, que implemente la interfaz <code>Comparator</code>, y que nos permitirá comparar objetos de tipo <code>Producto</code> en función del atributo <code>nombre</code>.</p>
+</section>
+<form name="feedback-form-quesFeedback2b32" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b32text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b32" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback2b32" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class ComparadorProductosPorNombre implements Comparator&lt;Producto&gt; {
+    @Override
+    public int compare (Producto p1, Producto p2) {
+       return p1.getNombre().compareTo (p2.getNombre());
+    }
+}</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion3b32" class="block iDevice_content">
+<p><strong>3. Escribe un comparador productos basándonos en la fecha de caducidad del producto</strong></p>
+<p>Codifica la clase <code>ComparadorProductosPorCaducidad</code>, que implemente la interfaz <code>Comparator</code>, y que nos permitirá comparar objetos de tipo <code>Producto</code> en función del atributo <strong>fecha de caducidad</strong>.</p>
+</section>
+<form name="feedback-form-quesFeedback3b32" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b32text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b32" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback3b32" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class ComparadorProductosPorCaducidad implements Comparator&lt;Producto&gt; {
+    @Override
+    public int compare (Producto p1, Producto p2) {
+       return p1.getCaducidad().compareTo (p2.getCaducidad());
+    }
+}</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion4b32" class="block iDevice_content">
+<p><strong>4. Escribe un comparador productos basándonos en el precio del producto</strong></p>
+<p>Codifica la clase <code>ComparadorProductosPorPrecio</code>, que implemente la interfaz <code>Comparator</code>, y que nos permitirá comparar objetos de tipo <code>Producto</code> en función del atributo del atributo <code>precio</code>.</p>
+</section>
+<form name="feedback-form-quesFeedback4b32" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback4b32text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback4b32" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback4b32" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class ComparadorProductosPorPrecio implements Comparator&lt;Producto&gt; {
+    @Override
+    public int compare (Producto p1, Producto p2) {        
+       return Double.valueOf(p1.getPrecio()).compareTo(p2.getPrecio());
+    }
+}</code></pre>
+</div>
+</div>
+<p>Esa sería la forma más corta y sencilla de resolver el problema, aunque habría muchas más formas posibles. Dado que se trata de comparar dos números reales, tendríamos, entre otras, las siguientes alternativas:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Alternativa 1: Aprovechando haciendo un casting expícito a una clase Double ("boxing manual")
+return ((Double)(p1.getPrecio())).compareTo (p2.getPrecio());  </code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Alternativa 2: Creando objetos Double y comparándolos
+Double valor1= articulo1.getPrecio();
+Double valor2 = articulo2.getPrecio();
+return valor1.compareTo(valor2);</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Alternativa 3: usando el método estático compare de la clase Double
+return Double.compare(p1.getPrecio(), p2.getPrecio());</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Alternativa 4: Usando if/elseif/else 
+int resultado;
+
+if (p1.getPrecio() == p2.getPrecio())
+   resultado= 0;
+else if (p1.getPrecio() &lt; p2.getPrecio())
+   resultado= -1;
+else
+   resultado= 1;
+
+return resultado;</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Alternativa 5: Usando un doble operador condicional (? :) en lugar del if/elseif/else
+return p1.getPrecio() == p2.getPrecio() ?  0 : 
+      p1.getPrecio() &lt;  p2.getPrecio() ? -1 : 1; */</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion5b32" class="block iDevice_content">
+<p><strong>5. Ordenación de la lista de productos basándonos en cada uno de los criterios implementados</strong></p>
+<p>Una vez que disponemos de tres criterios de clasificación de productos nos faltaría llevar a cabo las siguientes acciones:</p>
+<ol>
+<li>llevar a cabo la <strong>ordenación de la lista</strong> utilizando el comparador por <strong>nombre</strong>;</li>
+<li>recorrer de nuevo la lista y <strong>mostrar cada elemento</strong> en una línea diferente;</li>
+<li>llevar a cabo una <strong>nueva ordenación de la lista</strong> utilizando el comparador por <strong>fecha de caducidad</strong>;</li>
+<li>volver a recorrer la lista y <strong>mostrar nuevamente sus elementos</strong> ordenados con el nuevo criterio;</li>
+<li>realizar una <strong>última ordenació</strong>n utilizando el comparador por <strong>precio</strong>;</li>
+<li><strong>mostrar por última</strong> vez el contenido de la lista ordenada por este tercer criterio.</li>
+</ol>
+<p>La salida por pantalla de todas estas acciones debería tener el siguiente aspecto:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>ORDENACIÓN DE PRODUCTOS
+-----------------------
+Contenido inicial de la lista:
+1. {sardinas  , 31/12/2023, 1,50}
+2. {caballa   , 25/12/2023, 1,70}
+3. {navajas   , 01/01/2021, 2,40}
+4. {mejillones, 11/01/2022, 2,10}
+
+Ordenación de la lista por nombre de producto:
+1. {caballa   , 25/12/2023, 1,70}
+2. {mejillones, 11/01/2022, 2,10}
+3. {navajas   , 01/01/2021, 2,40}
+4. {sardinas  , 31/12/2023, 1,50}
+
+Ordenación de la lista por caducidad de producto:
+1. {navajas   , 01/01/2021, 2,40}
+2. {mejillones, 11/01/2022, 2,10}
+3. {caballa   , 25/12/2023, 1,70}
+4. {sardinas  , 31/12/2023, 1,50}
+
+Ordenación de la lista por precio de producto:
+1. {sardinas  , 31/12/2023, 1,50}
+2. {caballa   , 25/12/2023, 1,70}
+3. {mejillones, 11/01/2022, 2,10}
+4. {navajas   , 01/01/2021, 2,40}</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback5b32" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback5b32text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback5b32" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback5b32" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Dado que vamos a tener que mostrar el contenido de la lista tres veces, podemos implementar un método "herramienta" para mostrar el contenido de la lista:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Método que recorre una lista de productos y los muestra cada uno en una línea
+static void mostrarListaProductos (List&lt;Producto&gt; listaProductos) {
+    int contador=1;
+    for (Producto elemento: listaProductos) {
+        System.out.printf ("%d. %s\n", contador++, elemento);
+    }        
+}</code></pre>
+</div>
+</div>
+<p>Una vez que dispongamos de ese método, las acciones de ordenación y mostrado por pantalla podrían quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.printf ("\nOrdenación de la lista por nombre de producto:\n");
+Collections.sort(listaProductos, new ComparadorProductosPorNombre() );
+mostrarListaProductos (listaProductos);
+
+System.out.printf ("\nOrdenación de la lista por caducidad de producto:\n");
+Collections.sort(listaProductos, new ComparadorProductosPorCaducidad() );
+mostrarListaProductos (listaProductos);
+
+System.out.printf ("\nOrdenación de la lista por precio de producto:\n");
+Collections.sort(listaProductos, new ComparadorProductosPorPrecio() );
+mostrarListaProductos (listaProductos);</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

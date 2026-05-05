@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.4.- Sobrecarga de constructores | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-36"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li><a href="4_atributos.html" class="daddy">4.- Atributos</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li><a href="5_mtodos.html" class="daddy">5.- Métodos</a>
+   <ul class="other-section">
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_constructores.html" class="current-page-parent daddy">6.- Constructores</a>
+   <ul>
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li id="active"><a href="64_sobrecarga_de_constructores.html" class="active daddy">6.4.- Sobrecarga de constructores</a>
+      <ul>
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="63_lanzando_exepciones_desde_los_constructores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">6.4.- Sobrecarga de constructores</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id193">
+<div class="iDevice emphasis0">
+<div id="ta193_154" class="block iDevice_content">
+<p>Habrá ocasiones en las que puede que te interese disponer de más de un constructor porque no siempre necesitemos pasarle la misma cantidad de parámetros. Imagina por ejemplo el caso de la clase <code>Rectangulo</code> que ya hemos usado en ocasiones anteriores. Podríamos definir un primer constructor donde se pasaran todos los valores iniciales de los atributos de objeto:</p>
+<div class="highlighted-code language-java">
+<pre><code>public Rectangulo (double x1, double y1, double x2, double y2, String nombre, String color) throws IllegalArgumentException {
+  // Comprobación de que los valores de entrada son válidos
+
+  if (x1&gt;=x2 || y1&gt;y2)  // Comprobación de que la ubicación no es inconsistente (x1,y1) debe estar a la izquierda y por debajo de (x2,y2)
+      throw new IllegalArgumentException (
+	    String.format ("El vértice (x1,y1)=(%.2f,%.2f) debe estar a la izquierda y por debajo del (x2,y2)=(%.2f,%.2f)", 
+	    x1, y1, x2, y2)
+      );
+  if ( nombre == null || nombre.isEmpty() )  // Comprobación de que el nombre no es null ni vacío
+      throw new IllegalArgumentException ("nombre null o vacío");
+  if ( color== null || color.isEmpty() )  // Comprobación de que el color no es null ni vacío
+      throw new IllegalArgumentException ("color null o vacío");
+
+  // Una vez que se ha garantizado que todos los valores de entrada son apropiados, puede continuar el proceso de instanciación
+  // del objeto
+    
+  // Asignación de valores iniciales a los atributos de estado
+  this.x1= x1;
+  this.y1= y1;
+  this.x2= x2;
+  this.y2= y2;
+  this.nombre= nombre;
+  this.color= color;  
+  
+  // Actualización de atributos de clase por el hecho de crearse un nuevo rectángulo
+  Rectangulo.cantidadRectangulos++;  // Incrementamos la cantidad de rectángulos creados  
+}</code>
+</pre>
+</div>
+<div class="exe-figure exe-image license-pd position-center" style="width: 280px;"><img src="cabinet-157891_640.png" alt="Conjunto interminable de armarios archivadores de cuatro cajones" title="Cabinet" width="280" height="140" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/gabinete-de-datos-cajones-arcones-157891/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de OpenClipart-Vectors en Pixabay (se abre en una nueva ventana).">OpenClipart-Vectors</a> <span class="license"><span class="sep">(</span><span class="license"><span class="license"><span class="license"><span class="license"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span></span></span></span></span><span class="sep"></span></span><span class="sep"></span></span><span class="sep"></span></span><span class="sep"></span></span><span class="sep">)</span></span></div>
+</div>
+<p>Sin embargo, puede ser que también nos interesara disponer de un constructor al que sólo le pasáramos las coordenadas de ubicación. Pero entonces, ¿qué valor inicial podríamos asignarle al nombre y al color? Podría decidirse disponer de unos valores por omisión para esos casos. Si se toma esa decisión es recomendable incluir atributos de clase constantes que almacenen esos valores para evitar tener que escribir literales dentro de nuestro código. De este modo, si algún día se decide modificar esos valores por omisión, tan tolo habrá que cambiarlos en la declaración de esos atributos y no habrá que estar realizando cambios el resto del código. Es la filosofía conocida como: "<em>escríbelo una vez, úsalo muchas</em>" ("<em></em><span lang="en"><em>write it once, use multiple times</em></span>").</p>
+<p>Para ello entonces podríamos definir esos dos nuevos atributos:</p>
+<div class="highlighted-code language-java">
+<pre><code>public class Rectangulo {
+  // ATRIBUTOS DE CLASE: sólo habrá un atributo (común para todos los objetos) parar representar estas características
+  // -----------------------------------------------------------------------------------------------------------------
+
+  // Atributos de clase constantes. Representan características "inmutables" de la clase,
+  // como por ejemplo restricciones, valores informativos, valores por omisión (default), etc.
+  public final static String NOMBRE_DEFAULT = "Anónimo";  // Nombre que se asignará por omisión si no se proporciona uno
+  public final static double COLOR_DEFAULT =  "negro";    // Color  que se asignará por omisión si no se proporciona uno
+  
+  ... 
+  
+}</code>
+</pre>
+</div>
+<p>Y usaremos esos valores para asignarlos a los atributos <code>nombre</code> y <code>color</code> en la versión del constructor que no recibe esos dos parámetros:</p>
+<div class="highlighted-code language-java">
+<pre><code>public Rectangulo (double x1, double y1, double x2, double y2) throws IllegalArgumentException {
+  ...
+  
+  this.nombre= NOMBRE_DEFAULT;
+  this.color= COLOR_DEFAULT; 
+  ...  
+}</code>
+</pre>
+</div>
+<p>Ahora bien, ¿tenemos que escribir otra vez todo el código del constructor cambiando únicamente esas dos líneas? ¿Tendremos que escribir otra vez todas las sentencias de comprobación de los parámetros y todas las instrucciones de asignación de valores inciales a los atributos? No parece muy razonable, ¿verdad? Sobre todo después de haber dicho que íbamos a intentar seguir una filosofía del tipo "<em>escríbelo una vez, úsalo muchas</em>". Repetir código en nuestras clases para supuestamente hacer lo mismo o algo muy parecido es muy peligroso, pues si más adelante hay que realizar algún cambio, tendrás que aplicar esa modificación a todos los sitios donde ese cambio afecte.</p>
+<p>Por ejemplo, imagínate que has escrito tres o cuatro constructores en los cuales repites una y otra vez una buena parte de las comprobaciones y las asignaciones con ligeras variaciones y posteriormente descubres que te has confundido en alguna de esas comprobaciones. Tendrías que corregir ese error en todos los sitios donde aparezca. Si sólo apareciera en un sitio y el resto de constructores lo reutilizaran, sólo tendrías que arreglarlo una vez. Esto, además de ahorrarte mucho tiempo y dolores de cabeza, te evita el peligro de que no llegues a corregir el fallo en todos los lugares donde se ha repetido, quedando en algunas zonas del código arreglado y en otras sin arreglar. Imagínate el lío que podría producirse y cómo se incrementaría el tiempo que necesitarías para implementar tu clase cada vez que descubrieras un pequeño error.</p>
+<p>Muy bien, una vez que tenemos claro que <strong>debemos evitar siempre que sea posible el código redundante</strong>, viene el momento de preguntarnos si es posible hacerlo en el caso de los constructores en Java. ¿Proporciona el lenguaje algún mecanismo para poder llamar a un constructor desde otro constructor?</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id196">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta196_151" class="block iDevice_content">
+<p><strong>Efectivamente sí se puede llamar a un constructor de una clase desde otro constructor de la misma clase. Ésa es la función del método <code>this()</code>, que dentro de un constructor sirve para hacer una llamada al constructor de la misma clase cuya lista de argumentos coincida con los que se le pasan a<code> this()</code>. La única restricción es que, de invocar a <code>this()</code> dentro de un constructor, ésta tiene que ser obligatoriamente la primera sentencia del nuevo constructor.</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="63_lanzando_exepciones_desde_los_constructores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

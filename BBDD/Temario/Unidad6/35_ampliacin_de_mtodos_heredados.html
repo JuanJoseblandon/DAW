@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.5.- Ampliación de métodos heredados. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-16"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_herencia.html" class="current-page-parent daddy">3.- Herencia.</a>
+   <ul>
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li id="active"><a href="35_ampliacin_de_mtodos_heredados.html" class="active no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="34_redefinicin_de_mtodos_heredados.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="36_constructores_y_herencia_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3.5.- Ampliación de métodos heredados.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id41">
+<div class="iDevice emphasis0">
+<div id="ta41_73" class="block iDevice_content">
+<div class="elemento_izquierda"><img title="Flechas." class="elemento_izquierda" style="width: 128px; height: 192px;" alt="Indicador de 'chaparrón con granizo pequeño'." src="PROG07_CONT_R29_Flechas.gif" /> <figcaption class="figcaption">
+<div class="elemento_centrado credenciales">ITE. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">idITE=168860.</div>
+</figcaption></div>
+<p>Hasta ahora, has visto que para <strong>redefinir</strong> o <strong>sustituir</strong> un <strong>método</strong> de una <strong>superclase</strong> es suficiente con crear otro método en la <strong>subclase</strong> que tenga el mismo nombre que el método que se desea <strong>sobrescribir</strong>. Pero, en otras ocasiones, puede que lo que necesites no sea sustituir completamente el comportamiento del método de la superclase, sino simplemente <strong>ampliarlo</strong>.</p>
+<p>Para poder hacer esto necesitas poder <strong>preservar el comportamiento antiguo</strong> (el de la <strong>superclase</strong>) y <strong>añadir el nuevo</strong> (el de la <strong>subclase</strong>). Para ello, puedes invocar desde el método “<strong>ampliador</strong>” de la <strong>clase derivada</strong> al método “<strong>ampliado</strong>” de la clase superior (teniendo ambos métodos el mismo nombre). ¿Cómo se puede conseguir eso? Puedes hacerlo mediante el uso de la referencia <strong><code>super</code></strong>.</p>
+<p>La palabra reservada <strong><code>super</code></strong> es una referencia a la <strong>clase padre</strong> de la clase en la que te encuentres en cada momento (es algo similar a <strong><code>this</code></strong>, que representaba una referencia a la <strong>clase actual</strong>). De esta manera, podrías invocar a cualquier método de tu <strong>superclase</strong> (si es que se tiene acceso a él).</p>
+<p>Por ejemplo, imagina que la clase <strong><code>Persona</code></strong> dispone de un método que permite mostrar el contenido de algunos datos personales de los objetos de este tipo (<strong>nombre</strong>, <strong>apellidos</strong>, e<abbr title="etcétera">tc.</abbr>). Por otro lado, la clase <strong><code>Alumno</code></strong> también necesita un método similar, pero que muestre también su información especializada (<strong>grupo</strong>, <strong>nota media</strong>, <abbr title="etcétera">etc.</abbr>). ¿Cómo podrías aprovechar el método de la <strong>superclase</strong> para no tener que volver a escribir su contenido en la subclase?</p>
+<p>Podría hacerse de una manera tan sencilla como la siguiente:</p>
+<div class="highlighted-code language-java line-numbers hightlight-11and12">
+<div>
+<pre><code>/**
+ * Representación en forma de String del contenido del objeto Alumno
+ * Aprovecha el método toString de la clase Persona mediante una llamada a
+ * super.toString(). Es decir, se está ampliando la funcionalidad de la clase
+ * Persona.
+ * @return Representación textual del contenido de un objeto Alumno
+*/
+@Override
+public String toString () {
+    
+    // Llamada al método “toString” (método "homónimo") de la superclase
+    String infoPadre = super.toString();
+
+    // A continuación añadimos la información “especializada” de esta subclase
+    return String.format ("%s\Grupo: %s\nNota media: %.2f",
+        infoPadre,
+        this.grupo, 
+        this.notaMedia);
+}</code></pre>
+</div>
+</div>
+<p>Este tipo de <strong>ampliaciones de métodos</strong> resulta especialmente útil en el caso de los <strong>constructores</strong>, donde se podría ir llamando a los <strong>constructores</strong> de cada <strong>superclase</strong> encadenadamente hasta el <strong>constructor</strong> de la clase en la <strong>cúspide de la jerarquía</strong> (el <strong>constructor</strong> de la clase <strong><code>Object</code></strong>). En el caso de los constructores se usa directamente el método <code>super() </code>para invocar al constructor de la superclase.</p>
+<p>El ejemplo anterior para el método <code>toString()</code> sirve para proporcionar una representación como <code>String</code> de los objetos de la clase. La parte que convierte en cadena los atributos comunes de la superclase la haría el método <code>toString()</code> de la superclase, por lo que dentro del método <code>toString()</code> de la subclase lo invocaríamos como <code>super.toString()</code>, y a la cadena que devuelve, le añadiríamos la conversión en cadena de los atributos específicos de la subclase.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id42">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta42_67" class="block story iDevice_content">
+<p><strong>Implementación del método <code>toString()</code> para la jerarquía <code>Persona</code>, <code>Alumno</code> y <code>Profesor</code></strong></p>
+</div>
+<div id="taquesQuestion0b42" class="block iDevice_content">
+<p>Dadas las clases <code>Persona</code>, <code>Alumno</code> y <code>Profesor</code>, define un método <code>toString()</code> para la clase <code>Persona</code> que muestre el contenido de los atributos (datos personales) de un objeto de la clase <code>Persona</code> con el siguiente formato:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>Nombre: &lt;nombre&gt;
+Apellidos: &lt;Apellidos&gt;
+Fecha de nacimiento: &lt;dd/mm/aaaa</code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback0b42" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b42text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b42" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b42" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La implementación del método <code>toString</code> de la clase <code>Persona</code> podría quedar así:<strong><br /></strong></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Representación en forma de String del contenido del objeto Persona
+ * @return String que representa el contenido del objeto Persona
+ */
+@Override
+public String toString() {
+    SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
+    String stringFecha= formatoFecha.format(this.fechaNacim.getTime());
+
+    return String.format (Nombre: %s\nApellidos: %s\nFecha de nacimiento: %s",
+        this.nombre, this.apellidos, this.stringFecha);
+
+} </code></pre>
+</div>
+</div></div>
+</form>
+<div id="taquesQuestion1b42" class="block iDevice_content">
+<p>Implementa ahora el método <code>toString</code> "especializado" para la clase <code>Profesor</code>, que “amplíe” la funcionalidad del método <code>toString</code> original de la clase <code>Persona</code>. El formato de la cadena devuelta debe ser el siguiente:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>Nombre: &lt;nombre&gt;
+Apellidos: &lt;Apellidos&gt;
+Fecha de nacimiento: &lt;dd/mm/aaaa&gt;
+Especialidad: &lt;especialidad&gt;
+Salario: &lt;salario&gt;</code></pre>
+</div>
+</div>
+<p>donde el salario debe tener una anchura de siete caracteres e incluir dos decimales.</p>
+</div>
+<form name="feedback-form-quesFeedback1b42" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b42text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b42" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b42" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Para implementar este método podemos seguir los siguientes pasos:</p>
+<ol>
+<li>primero llamamos al <strong>método homónimo</strong> (del mismo nombre, es decir, <strong><code>toString</code></strong>) de la superclase (<strong><code>Persona</code></strong>), es decir, invocamos <strong><code>super.toString()</code></strong>;</li>
+<li>a continuación <strong></strong>añadimos la <strong>funcionalidad específica</strong> para la <strong>subclase</strong> <strong><code>Profesor</code></strong>:</li>
+</ol>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Representación en forma de String del contenido del objeto Profesor
+ * Aprovecha el método toString de la clase Profesor mediante una llamada a
+ * super.toString(). Es decir, se está ampliando la funcionalidad de la clase
+ * Persona.
+ * @return String que representa el contenido del objeto Profesor
+ */    
+ @Override
+public String toString () {
+
+    // Llamada al método “toString” (método "homónimo") de la superclase
+    String infoPadre = super.toString();
+
+    // A continuación añadimos la información “especializada” de esta subclase
+    raeturn String.format ("%s\nEspecialidad: %s\nSalario: %7.2f euros",
+        infoPadre,
+        this.especialidad, 
+        this.salario);
+}</code></pre>
+</div>
+</div></div>
+</form>
+<div id="taquesQuestion2b42" class="block iDevice_content">
+<p>Por último, implementa el método <code>toString</code> de la clase <code>Alumno</code>, reutilizando también todo lo que ya se hace en el método homónimo (del mismo nombre) de su clase base (<code>Persona</code>). El formato de salida debería ser algo del estilo a:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>Nombre: &lt;nombre&gt;
+Apellidos: &lt;Apellidos&gt;
+Fecha de nacimiento: &lt;dd/mm/aaaa&gt;
+Grupo: &lt;grupo&gt;
+Nota media: &lt;nota media&gt;</code></pre>
+</div>
+</div>
+<p>donde la nota media debe tener dos decimales.</p>
+</div>
+<form name="feedback-form-quesFeedback2b42" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b42text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b42" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b42" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Sería algo similar a lo que se hace en <code>Profesor</code>, pero con los atributos específicos de la clase <code>Alumno</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Representación en forma de String del contenido del objeto Alumno
+ * Aprovecha el método toString de la clase Persona mediante una llamada a
+ * super.toString(). Es decir, se está ampliando la funcionalidad de la clase
+ * Persona.
+ * @return representación textual del contenido de un objeto Alumno
+ */
+@Override
+public String toString () {
+
+    return String.format ("%s\nGrupo: %s\nNota media: %6.2f",
+        super.toString(),
+        this.grupo,
+        this.notaMedia);
+}</code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id112">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta112_148" class="block story iDevice_content">
+<p><strong>Implementación del método <code>toString()</code> para la jerarquía <code>Dispositivo</code>, <code>Cerradura</code> y <code>Bombilla</code></strong></p>
+</div>
+<div id="taquesQuestion0b112" class="block iDevice_content">
+<p>Dadas las clases <code>Dispositivo</code>, <code>Cerradura</code> y <code>Bombill</code><code>a</code>, implementa un método <code>toString()</code> para la clase <code>Dispositivo</code> que muestre el contenido de sus atributos con el siguiente formato:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>tipo:XXX id:YYY descripción:"ZZZ" ubicación:VVV</code></pre>
+</div>
+</div>
+<p>El único valor que no se trata de un atributo del objeto es el "<em>tipo</em>" (XXX), que podrás obtenerlo mediante el método <code>getClass()</code> que tiene cualquier objeto en Java. Este método devuelve un objeto de tipo <code>Class</code>, que a su vez dispone de un método llamado <code>getSimpleName()</code> que devuelve un <code>String</code> con el nombre de la clase.  El resto de valores (YYY, ZZZ, VVV) serán los contenidos de sus atributos correspondientes.</p>
+<p>Por ejemplo, si para un objeto de la clase <code>Dispositivo</code> el tipo es <em>Dispositivo</em>, el <strong>identificador</strong> es 1, la <strong>descripción</strong> "<em>dispositivo de prueba</em>" y la ubicación 1, el contenido del <code>String</code> devuelto debería ser algo así:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>tipo:Dispositivo id:1 descripción:"dispositivo de prueba" ubicacion:1</code></pre>
+</div>
+</div>
+<p>Este método nunca será llamado directamente por un programa, pues es el método de una clase abstracta que no puede ser instanciada. Pero sí podrá ser reutilizado por otros métodos <code>toString</code> (homónimos) de clases que hereden de <code>Dispositivo</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback0b112" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b112text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b112" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b112" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p style="text-align: justify;">La implementación podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Override
+public String toString() {
+    return String.format("tipo:%-11s id:%d descripción:\"%s\" ubicacion:%d",
+            this.getClass().getSimpleName(), this.id, this.descripcion, this.ubicacion);
+}</code></pre>
+</div>
+</div>
+<p>Observa que se ha formateado para que el valor de cada atributo se muestre siempre mostrando un tamaño fijo y alineado a la izquierda, para que sea más cómoda de ver la salida cuando se listen varios objetos. Este espaciado es solo una sugerencia. Tú podrías no indicar ningún tamaño fijo, o uno diferente al que se muestra como ejemplo aquí, para mejorar la presentación en la salida de tus programas.</p></div>
+</form>
+<div id="taquesQuestion1b112" class="block iDevice_content">
+<p>Implementa ahora, el método <code>toString</code> para la clase <code>Cerradura</code>, cuyo formato debería ser:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>tipo:Cerradura id:YYY descripción:"ZZZ" ubicacion:VVV estado:EEE</code></pre>
+</div>
+</div>
+<p>donde EEE podrá ser "<em>abierta</em>" (si el atributo estado vale <code>false</code>) o "<em>cerrada</em>" si es <code>true</code>.<br /><br /></p>
+<p>Por ejemplo, una cerradura que esté <strong>abierta</strong> (estado "<em>abierta</em>" o <code>false</code>), con <strong>identificador</strong> 3, <strong>descripción</strong> "<em>cerradura de prueba</em>" y <strong>ubicación</strong> en la estancia 1, tendría una salida similar a la siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre class="  language-latex"><code class="  language-latex">tipo:Cerradura id:3 descripción:"cerradura de prueba" ubicacion:1 estado:abierta</code></pre>
+</div>
+</div>
+<p>En este caso, el método <code>toString </code>tendrá que devolver <strong>información específica</strong> sobre el objeto (<strong>estado</strong> de la cerradura: abierta o cerrada), pero también <strong>información genérica</strong> sobre sus <strong>atributos heredados</strong> de la clase base o superclase. Dado que la clase <code>Cerradura</code> es subclase de <code>Dispositivo</code>, y esta también dispone de atributos, debemos aprovechar todo lo que nos proporcione el método <code>toString</code> de la superclase para no tener que volver a escribirlo en la clase hija. Eso es <strong>fundamental en la herencia</strong> y uno de los <strong>pilares de la programación orientada objetos</strong>: reutilizar el código y procurar no volver a escribir ni una sola línea que se haya escrito ya.</p>
+<div id="taquesQuestion0b49" class="block iDevice_content">
+<p>¿Cómo podríamos implementar esta reescritura del método <code>toString</code> que lleva a cabo lo que realiza el <code>toString</code> de la clase padre y además hace "algo más"?</p>
+<p>Como ya hemos visto, se trata simplemente de hacer una llamada al <strong>método homónimo</strong> (con el mismo nombre) de la clase padre y utilizar parcial o completamente lo que nos devuelva para elaborar la nueva salida que debemos generar. ¿Cómo lo harías?</p>
+</div>
+</div>
+<form name="feedback-form-quesFeedback1b112" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b112text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b112" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b112" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p style="text-align: left;">Está claro que habrá que llamar al método <code>toString</code> de la clase padre (<code>Dispositivo</code>) mediante <code>super.toString()</code> y a partir de lo que devuelva ese método, transformarlo para añadirle la información específica que contiene el objeto de tipo <code>Cerradura</code>. En ningún caso deberíamos volver a escribir el código del método <code>toString</code> que ya esté escrito en la clase padre.</p>
+<p style="text-align: left;">Podríamos, por ejemplo, hacer algo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre class="  language-java"><code class="  language-java">@Override
+<span class="token keyword">public</span> String <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> String<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"%s estado:%s"</span><span class="token punctuation">,</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>estado <span class="token operator">?</span> <span class="token string">"abierta"</span> <span class="token operator">:</span> <span class="token string">"cerrada"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</div>
+</div>
+<p style="text-align: left;">De esa manera nuevamente podríamos aprovechar todo lo que ya se ha hecho en la superclase para no tener que volver a hacerlo en las clases hijas o derivadas.</p></div>
+</form>
+<div id="taquesQuestion2b112" class="block iDevice_content">
+<p>Por último, implementa el método <code>toString</code> para la clase <code>Bombilla</code>, cuyo formato debería ser:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre class="  language-latex"><code class="  language-latex">tipo:Bombilla: id:YYY descripción:"ZZZ" ubicacion:VVV estado:encendida|apagada int:UUU NVM:WWW</code></pre>
+</div>
+</div>
+<p>donde UUU representa la intensidad de la bombilla y WWW el número de veces que ha sido manipulada de manera efectiva.</p>
+<p>Un ejemplo de salida podría ser:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre class="  language-latex"><code class="  language-latex">tipo:Bombilla id:1 descripción:"bombilla 1" ubicacion:2 estado:encendida int:4 NVM:1</code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback2b112" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b112text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b112" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b112" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Habría que hacer algo muy similar al caso anterior, teniendo en cuenta esta vez los atributos específicos de la clase <code>Bombilla</code>:</p>
+<div class="highlighted-code language-js">
+<div>
+<pre><code>@Override
+public String toString() {
+    return String.format("%s estado:%s int:%d NVM:%d",
+            super.toString(), this.getEstado() ? "encendida" : "apagada",
+            this.intensidad, this.numVecesManipulada);
+}</code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="34_redefinicin_de_mtodos_heredados.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="36_constructores_y_herencia_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

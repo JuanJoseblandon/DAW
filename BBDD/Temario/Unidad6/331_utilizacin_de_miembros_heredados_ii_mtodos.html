@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3.1- Utilización de miembros heredados (II). Métodos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_herencia.html" class="current-page-parent daddy">3.- Herencia.</a>
+   <ul>
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li class="current-page-parent"><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="current-page-parent daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul>
+         <li id="active"><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="active no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="34_redefinicin_de_mtodos_heredados.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3.3.1- Utilización de miembros heredados (II). Métodos.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id34">
+<div class="iDevice emphasis0">
+<div id="ta34_73" class="block iDevice_content">
+<p>Del mismo modo que se heredan los <strong>atributos</strong>, también se heredan los <strong>métodos</strong>, convirtiéndose a partir de ese momento en otros <strong>métodos</strong> más de la <strong>clase derivada</strong>, junto a los que hayan sido definidos específicamente.</p>
+<p>En el ejemplo de la clase <strong><code>Persona</code></strong>, si dispusiéramos de métodos <strong><span lang="en">get</span></strong> y <strong><span lang="en">set</span></strong> para cada uno de sus tres atributos (<strong><code>nombre</code></strong>, <strong><code>apellidos</code></strong>, <strong><code>fechaNacimiento</code></strong>), tendrías seis métodos que podrían ser heredados por sus <strong>clases derivadas</strong>. Podrías decir entonces que la clase <strong><code>Alumno</code></strong>, derivada de <strong><code>Persona</code></strong>, tiene diez métodos:</p>
+<ul class="lista_verificacion">
+<li>
+<p>Seis por ser <strong><code>Persona</code></strong> (<strong><code>getNombre</code></strong>, <strong><code>getApellidos</code></strong>, <strong><code>getFechaNacimiento</code></strong>, <strong><code>setNombre</code></strong>, <strong><code>setApellidos</code></strong>, <strong><code>setFechaNacimiento</code></strong>).</p>
+</li>
+<li>
+<p>Oros cuatro más por ser <strong><code>Alumno</code></strong> (<strong><code>getGrupo</code></strong>, <strong><code>setGrupo</code></strong>, <strong><code>getNotaMedia</code></strong>, <strong><code>setNotaMedia</code></strong>).</p>
+</li>
+</ul>
+<p>Sin embargo, sólo tendrías que definir esos cuatro últimos (los <strong>específicos</strong>) pues los <strong>genéricos</strong> ya los has heredado de la <strong>superclase</strong>.</p>
+<p><a title="Ampliar imagen &quot;NetBeans. Clase Profesor 01&quot;, (Se abre en una nueva ventana)" href="PROG07_CONT_R26_NetbeansClaseProfesor01.png" target="_blank"> <img alt="Captura de la ventana de navegación de clases de Netbeans." class="imagen_ampliable elemento_centrado" src="PROG07_CONT_R26_NetbeansClaseProfesor01_miniatura.png" style="width: 200px; height: 84px;" title="Netbeans. Clase Profesor 01." /></a></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id35">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta35_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b35" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b35" class="block iDevice_content">
+<strong>En Java los métodos  heredados de una superclase deben volver a ser definidos en las subclases.  ¿Verdadero o Falso? 
+</strong>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b35"><input type="radio" name="option0b35" id="true0b35" class="exe-radio-option exe-radio-option-0-2-0b35-truefalse" /> Verdadero</label> 
+<label for="false0b35"><input type="radio" name="option0b35" id="false0b35" class="exe-radio-option exe-radio-option-1-2-0b35-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b35" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b35-result" class="wrong">Falso</strong></p>
+Los métodos heredados de la  superclase están disponibles en la subclase sin tener que hacer nada especial,  aunque es cierto, como verás más adelante, que pueden ser redefinidos o  ampliados (pero no es obligatorio).
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id36">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicios resueltos</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta36_67" class="block story iDevice_content">
+<p><strong>Implementación de <code>getters</code> en clases derivadas</strong></p>
+</div>
+<div id="taquesQuestion0b36" class="block iDevice_content">
+<p>Dadas las clases <code>Persona</code>, <code>Alumno</code> y <code>Profesor</code> que has utilizado anteriormente, implementa métodos <span lang="en">get</span> y <span lang="en">set</span> en la clase <code>Persona</code> para trabajar con sus tres atributos y en las clases <code>Alumno</code> y <code>Profesor</code> para manipular sus cinco atributos (tres heredados más dos específicos), teniendo en cuenta que los métodos que ya hayas definido para <code>Persona</code> van a ser heredados en <code>Alumno</code> y en <code>Profesor</code>.<strong> </strong></p>
+</div>
+<form name="feedback-form-quesFeedback0b36" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b36text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b36" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b36" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p class="enlace_centrado" style="text-align: left;">En el apartado <a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" title="Enlace al Anexo III (se abre en una nueva ventana)." target="_blank" class="html"><strong><em>Anexo <abbr title="Tres en numeración romana.">III</abbr>: Métodos para los atributos de las clases <code>Alumno</code> y <code>Profesor</code></em></strong></a>, puedes observar el proceso completo de elaboración de todos los métodos.<br /><br /> </p></div>
+</form>
+<div id="taquesQuestion1b36" class="block iDevice_content">
+<p>¿Cuántos métodos <code>getter</code> implementarías para la clase <code>Bombilla</code>? ¿Cómo los harías?</p>
+</div>
+<form name="feedback-form-quesFeedback1b36" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b36text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b36" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b36" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Dado que la clase <code>Bombilla</code> contiene únicamente dos atributos específicos (el resto de atributos los tiene por el hecho de ser una subclase de <code>Dispositivo</code> y por tanto también hereda sus <code>getter</code>), tan solo tendríamos que implementar dos métodos <code>getter</code>: <code>getIntensidad()</code> y <code>getNumVecesManipulada()</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public int getIntensidad() {
+    return this.intensidad;
+}
+
+public int getNumVecesManipulada() {
+    return this.numVecesManipulada;
+}</code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="34_redefinicin_de_mtodos_heredados.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.3.- Implementación de interfaces. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-48"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_interfaces.html" class="current-page-parent daddy">6.- Interfaces.</a>
+   <ul>
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li id="active"><a href="63_implementacin_de_interfaces.html" class="active daddy">6.3.- Implementación de interfaces.</a>
+      <ul>
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="62_definicin_de_interfaces.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">6.3.- Implementación de interfaces.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id118">
+<div class="iDevice emphasis0">
+<div id="ta118_73" class="block iDevice_content">
+<p>Como ya has visto, todas las clases que implementan una determinada <strong>interfaz</strong> están obligadas a proporcionar una <strong>definición (implementación) de los métodos de esa interfaz</strong>, adoptando el modelo de comportamiento propuesto por ésta.</p>
+<p>Dada una <strong>interfaz</strong>, cualquier clase puede especificar dicha <strong>interfaz</strong> mediante el mecanismo denominado <strong>implementación de interfaces</strong>. Para ello se utiliza la palabra reservada <code>implements</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class NombreClase implements NombreInterfaz {</code></pre>
+</div>
+</div>
+<p>De esta manera, la clase está diciendo algo así como "<strong>la interfaz indica los métodos que debo implementar, pero voy a ser yo (la clase) quien los implemente</strong>".</p>
+<p>Es posible indicar varios nombres de <strong>interfaces</strong> separándolos por comas:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class NombreClase implements NombreInterfaz1, NombreInterfaz2,... {</code></pre>
+</div>
+</div>
+<p>Cuando una clase implementa una <strong>interfaz</strong>, tiene que redefinir sus métodos nuevamente con <strong>acceso público</strong>. Con otro tipo de acceso se producirá un <strong>error de compilación</strong>. Es decir, que del mismo modo que no se podían restringir permisos de acceso en la <strong>herencia de clases</strong>, tampoco se puede hacer en la <strong>implementación de interfaces</strong>.</p>
+<p>Una vez implementada una <strong>interfaz</strong> en una clase, los métodos de esa interfaz tienen exactamente el mismo tratamiento que cualquier otro método, sin ninguna diferencia, pudiendo ser invocados, heredados, redefinidos, <abbr title="etcétera">etc.</abbr></p>
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG07_CONT_R55_Leon.jpg" alt="Dibujo de un león." title="Un león." style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by" title="CC by" href="http://creativecommons.org/licenses/by/3.0/deed.es" target="_blank"><span class="transparente">CC by</span></a> <a title="Fiona James" href="https://www.flickr.com/photos/dalekwidow/4297404633/" target="_blank">Fiona James</a></div>
+</div>
+<p>En el ejemplo de los depredadores, al definir la clase <code>Leon</code>, habría que indicar que implementa la <strong>interfaz</strong> <code>Depredador</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class Leon implements Depredador {</code></pre>
+</div>
+</div>
+<p>Y en su interior habría que implementar aquellos métodos que contenga la <strong>interfaz</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>void localizar (Animal presa) {
+// Implementación del método localizar para un león
+...
+} </code></pre>
+</div>
+</div>
+<p><span style="font-size: 1em;">En el caso de clases que pudieran ser a la vez <code>Depredador</code></span><span style="font-size: 1em;"> y <code>Presa</code></span><span style="font-size: 1em;">, tendrían que implementar ambas interfaces, como podría suceder con la clase <code>Rana</code></span><span style="font-size: 1em;">:</span></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class Rana implements Depredador, Presa {</code></pre>
+</div>
+</div>
+<p>Y en su interior habría que implementar aquellos métodos que contengan ambas <strong>interfaces</strong>, tanto las de <code>Depredador</code> (<code>localizar</code>, <code>cazar</code>, <abbr title="etcétera">etc.</abbr>) como las de <code>Presa</code> (<code>observar</code>, <code>huir</code>, <abbr title="etcétera">etc.</abbr>).</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id91">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-91_60" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion91_60" class="block question iDevice_content">
+<p><strong>¿Qué palabra reservada se utiliza en <span lang="en">Java</span> para indicar que una clase va a definir los métodos indicados por una interfaz?</strong></p>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i91_63" class="sr-av"><a href="#answer-91_63">Opción 1</a></label><input type="radio" name="option91_60" id="i91_63" class="exe-radio-option exe-radio-option-0-4-91_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-91_63"><a name="answer-91_63"></a>
+<div id="taans91_63" class="block iDevice_content">
+<code>implements. </code>
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i91_93" class="sr-av"><a href="#answer-91_93">Opción 2</a></label><input type="radio" name="option91_60" id="i91_93" class="exe-radio-option exe-radio-option-1-4-91_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-91_93"><a name="answer-91_93"></a>
+<div id="taans91_93" class="block iDevice_content">
+<code>uses</code><strong>.</strong>
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i91_96" class="sr-av"><a href="#answer-91_96">Opción 3</a></label><input type="radio" name="option91_60" id="i91_96" class="exe-radio-option exe-radio-option-2-4-91_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-91_96"><a name="answer-91_96"></a>
+<div id="taans91_96" class="block iDevice_content">
+<code>extends</code>.
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i91_99" class="sr-av"><a href="#answer-91_99">Opción 4</a></label><input type="radio" name="option91_60" id="i91_99" class="exe-radio-option exe-radio-option-3-4-91_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-91_99"><a name="answer-91_99"></a>
+<div id="taans91_99" class="block iDevice_content">
+Los métodos indicados
+por una <strong>interfaz</strong> no se definen en las clases pues sólo se pueden
+utilizar desde la propia <strong>interfaz</strong>.
+
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b91_60" class="feedback js-hidden"><a name="sa0b91_60"></a>
+<div id="taf91_63" class=" iDevice_content">
+¡Así es! ¡Enhorabuena!
+Se utiliza la palabra reservada <code>implement</code><strong>s</strong>
+seguida de las <strong>interfaces</strong> que se van a implementar separadas por comas.
+
+</div>
+</div>
+<div id="sa1b91_60" class="feedback js-hidden"><a name="sa1b91_60"></a>
+<div id="taf91_93" class=" iDevice_content">
+<p>Incorrecto. No existe esa palabra reservada en <span lang="en">Java</span>.</p>
+</div>
+</div>
+<div id="sa2b91_60" class="feedback js-hidden"><a name="sa2b91_60"></a>
+<div id="taf91_96" class=" iDevice_content">
+¡Has fallado! Esa
+palabra reservada se utiliza para indicar que una clase <strong>hereda</strong> (es <strong>subclase</strong>)
+de otra.
+
+</div>
+</div>
+<div id="sa3b91_60" class="feedback js-hidden"><a name="sa3b91_60"></a>
+<div id="taf91_99" class=" iDevice_content">
+¡No es así! Los métodos
+incluidos en una <strong>interfaz</strong> han de ser definidos por aquellas clases que <strong>implementen</strong>
+o lleven a cabo esa interfaz.
+
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-91_63">Opción correcta</a><span> (<a href="#sa0b91_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-91_93">Incorrecto</a><span> (<a href="#sa1b91_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-91_96">Incorrecto</a><span> (<a href="#sa2b91_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-91_99">Incorrecto</a><span> (<a href="#sa3b91_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id120">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta120_67" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b120" class="block iDevice_content">
+<p>Haz que las clases <code>Alumno</code> y <code>Profesor</code> (hijas de la clase <code>Persona</code>), vistas en ejemplos anteriores, implementen la interfaz <code>Imprimible</code> que se ha escrito en el ejercicio anterior.</p>
+</div>
+<form name="feedback-form-quesFeedback0b120" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b120text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b120" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b120" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Lo primero que podemos observar es que las clases <code>Alumno</code> y <code>Profesor</code> heredan (son "subclases") de la clase <code>Persona</code>. Si implementamos en la clase <code>Persona </code>el interfaz <code>Imprimible</code>, podremos "aprovechar" una buena parte de esa implementación en sus clases hijas.</p>
+<p>Esto no siempre tiene por qué ser así. Si las clases <code>Alumno</code> y <code>Profesor</code> no heredaran de la clase <code>Persona</code>, habría menos código "aprovechable", pero tampoco habría problema. Precisamente para eso sirven las <strong>interfaces</strong>: para implementar determinados comportamientos que no pertenecen a la estructura jerárquica de herencia en la que se encuentra una clase (de esta manera, clases que no tienen ninguna relación de herencia podrían compartir interfaz). </p>
+<p>Pero como en este caso sí podemos aprovechar que ambas clases son <strong>subclases</strong> de una misma <strong>superclase</strong> (heredan de la misma) podemos hacer que la interfaz <code>Imprimible</code> sea implementada directamente por la <strong>superclase</strong> (<code>Persona</code>) y de este modo ahorrarnos bastante código. Así no haría falta indicar explícitamente que <code>Alumno</code> y <code>Profesor</code> implementan la interfaz <code>Imprimible</code>, pues lo estarán haciendo de forma implícita al heredar de una clase que ya ha implementado esa interfaz (la clase <code>Persona</code>, que es padre de ambas). Recuerda que si no fuera así tanto <code>Alumno</code> como <code>Profesor</code> tendrían que implementar (palabra reservada <code>implements</code>) la interfaz <code>Imprimible </code>de forma explícita (tendrían que incluir <code><code>implements</code> Imprimible</code> en su definición).</p>
+<p>Una vez que los métodos de la <strong>interfaz</strong> estén implementados en la clase <code>Persona</code>, tan solo habrá que redefinir o ampliar los métodos de la <strong>interfaz</strong> para que se adapten a cada <strong>clase hija</strong> específica (<code>Alumno</code> o <code>Profesor</code>), ahorrándonos tener que escribir varias veces la parte de código que obtiene los atributos genéricos de la clase <code>Persona</code>.</p>
+<ol>
+<li><strong>Clase </strong><code>Persona</code><strong>.</strong>
+<p>Indicamos que se va a implementar la interfaz <code>Imprimible</code>:<br /><br /></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public abstract class Persona implements  Imprimible {
+...</code></pre>
+</div>
+</div>
+<p>Definimos el método <code>getNumAtributos</code> a la manera de como debe ser implementado para la clase <code>Persona</code>. Podría quedar, por ejemplo, así:<br /><br /></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public int getNumAtributos () {
+    // La clase persona tiene tres atributos
+    int resultado= 3;
+    return resultado;
+} </code></pre>
+</div>
+</div>
+<p><span style="font-size: 1em;">A continuación, definimos el método </span><code>getNombreAtributos</code><span style="font-size: 1em;">, que podría quedar de la siguiente manera:<br /><br /></span></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public String[] getNombreAtributos() {
+     String[] resultado= new String [3];
+     // Escribimos el nombre de los tres atributos en las posiciones del array
+     resultado[0]= "nombre";
+     resultado[1]= "apellidos";
+     resultado[2]= "poblacion";
+     return resultado;
+} </code></pre>
+</div>
+</div>
+<p><span style="font-size: 1em;">Ya sólo nos faltarían los métodos </span><code>getContenidoArray</code><span style="font-size: 1em;"> y </span><code>getContenidoString</code><span style="font-size: 1em;">:<br /></span></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public String[] getContenidoArray() {
+     String[] resultado= new String[3] ;
+     // Escribimos el contenido de los tres atributos en las posiciones del array
+     resultado[0]= this.nombre ;
+     resultado[1]= this.apellidos ;
+     resultado[2]= this.poblacion ;
+     return resultado ;
+} 
+
+public String getContenidoString() {
+     String[] arrayNombres = this.getNombreAtributos() ;
+     String[] arrayContenidos = this.getContenidoArray() ;
+     int numAtributos = this.getNumAtributos() ;
+     StringBuilder resultado = new StringBuilder();
+
+     // Llave de inicio
+     resultado.append("{") ;
+     // Grueso de los elementos de la lista (todos menos el último)
+     int i ;
+     for (i=0; i&lt;numAtributos-1; i++) {
+          resultado.append((arrayNombres[i] + "=" + arrayContenidos[i] + ", "));
+     }
+
+     // Último elemento (sin coma al final)
+     resultado.append((arrayNombres[numAtributos-1] + "=" + arrayContenidos[numAtributos-1]));
+     // Llave de de fin        
+     resultado.append("}") ;
+
+     return resultado.toString();
+} 
+ </code></pre>
+</div>
+</div>
+</li>
+<li><strong>Clase </strong><code>Alumno</code><strong>.</strong>
+<p>Esta clase hereda de la clase <code>Persona</code>, de manera que heredará los cuatro métodos anteriores que provienen de la implementación del interfaz <code>Imprimible</code>. Tan solo habrá que <strong>redefinirlos</strong> para que, aprovechando el código ya escrito en la <strong>superclase</strong>, se añada la funcionalidad específica que aporta esta <strong>subclase</strong>.<br /><br /></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Alumno extends Persona {
+... </code></pre>
+</div>
+</div>
+<p>Como puedes observar no ha sido necesario incluir el <code>implements Imprimible</code>, pues el <code>extends Persona</code> lo lleva implícito, dado que <code>Persona </code>ya implementaba ese <strong>interfaz</strong>. Lo que haremos entonces será llamar al método que estamos redefiniendo utilizando la referencia a la <strong>superclase </strong><code>super</code>.</p>
+<code> </code>
+<p>El método <code>getNumAtributos</code> podría quedar, por ejemplo, así:</p>
+<div class="highlighted-code language-java hightlight-3">
+<div>
+<pre><code> public int getNumAtributos () {
+   // La clase Alumno tiene dos atributos más los que tenga Persona
+   int resultado= super.getNumAtributos() + 2 ;
+   return resultado ;  
+} </code></pre>
+</div>
+</div>
+<p>Para el resto de métodos podríamos hacer algo similar, es decir, rescribir los métodos <code>getNombreAtributos</code> y <code>getContenidoArray</code> aprovechando todo lo que se hace y se calcula en la clase padre <code>Persona</code>:</p>
+<div class="highlighted-code language-java hightlight-4-7and19-21">
+<div>
+<pre><code>public String[] getNombreAtributos () {
+     String[] resultado = new String [this.getNumAtributos()] ;
+     String[] arrayNombresAtributosPersona = super.getNombreAtributos() ;
+     // Incluimos primero los nombres de los atributos de Persona
+     int i;
+     for (i=0; i&lt;arrayNombresAtributosPersona.length; i++)
+        resultado[i]= arrayNombresAtributosPersona[i];
+     // Incluimos a continuación los nombres de los atributos específicos de Alumno
+     resultado[i]= "grupo";
+     resultado[i+1]= "notaMedia";
+
+     return resultado;
+    }
+
+
+    public String[] getContenidoArray () {
+      String[] resultado= new String [this.getNumAtributos()];
+      String[] arrayAtributosPersona= super.getContenidoArray();
+      // Incluimos primero los atributos de Persona
+      int i;
+      for (i=0; i&lt;arrayAtributosPersona.length; i++)
+         resultado[i]= arrayAtributosPersona[i];
+      // Incluimos a continuación los atributos específicos de Alumno
+      resultado[i]= this.grupo ;
+      resultado[i+1]= Double.toString(this.notaMedia) ;
+
+      return resultado ;
+} </code></pre>
+</div>
+</div>
+<p>¿Y qué hacemos con el método <code>getContenidoString</code>? ¿Cómo lo implementamos? Pues en principio habría que hacer algo similar. Pero, si os fijáis, lo hemos hecho lo suficientemente genérico como para que ni siquiera hiciera falta rescribir el original de la clase base <code>Persona</code>, podría quedarse exactamente igual y podría "heredarse" directamente sin ser necesario "retocarlo" para su clase hija.</p>
+</li>
+<li><strong>Clase </strong><code>Profesor</code><strong>.</strong>
+<p>En este caso habría que proceder exactamente de la misma manera que con la clase <code>Alumno</code>: redefiniendo los métodos de la interfaz <code><span style="color: #0075be;"><strong>Imprimible </strong></span></code>para añadir la funcionalidad específica que aporta esta <strong>subclase</strong>.</p>
+<p>Desde el siguiente enlace puedes descargar un ejemplo completo en el que se implementa la <strong>interfaz</strong> <code>Imprimible</code> en la clase <code>Persona</code> y cómo sus subclases <code>Alumno</code> y <code>Profesor</code> redefinen los métodos de esa interfaz heredada de <code>Persona</code>.</p>
+</li>
+</ol>
+<div class="enlace_centrado"><a class="paquete" title="Descargar archivo que contiene el proyecto EjemploInterfazImprimible. Se abre en una nueva ventana [zip - 25.26 KB]" href="PROG07_CONT_R56_EjemploInterfazImprimible.1.zip" target="_blank">Proyecto EjemploInterfazImprimible.</a><span class="tamano"> (zip - 25.26 <abbr lang="en" title="KiloBytes">KB</abbr>)</span></div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id109">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta109_148" class="block story iDevice_content">
+<p><strong>Interfaz <code>Movible</code> en la jerarquía de piezas de ajedrez y otros tipos de piezas<br /></strong></p>
+<p>Dado que es posible que en el futuro podamos tener más tipos de piezas para distintos tipos de juego, quizá los métodos <code>esMovible</code> y <code>mover</code> de la clase <code>PiezaAjedrez</code>, que inicialmente fueron definidos como abstractos, podrían ser declarados dentro de una interfaz llamada, por ejemplo, <code>Movible</code>. De este modo, otras clases, no solo las hijas de la clase <code>PiezaAjedrez</code>, podrían implementar este comportamiento. Por ejemplo, podríamos encontrarnos con un esquema de este tipo donde se tienen en cuenta otras piezas para otros juegos de tablero, no solo el ajedrez:</p>
+<p><a href="PiezasTablero_DiagramaClases.png" title="Enlace a imagen de la jerarquía de clases de piezas de juego de tablero (se abre en una nueva ventana)" target="_blank" class="imagen_ampliable"><img src="PiezasTablero_DiagramaClases.png" alt="Esquema que muestra la relación jerárquica enre las clases de tipo pieza de juego de tablero" title="Piezas de juego de tablero" width="480" height="329" /></a></p>
+<p>De esta manera, podríamos dotar a la clase <code>PiezaDamas</code> de un comportamiento de movimiento (métodos <code>esMovible</code> y <code>mover</code>) que, sin embargo, seguirá otras reglas totalmente distintas. Por otro lado, otros tipos de piezas (por ejemplo las de los barquitos) no permitirán el movimiento y, por tanto, no implementarán la interfaz. Si hubiéramos trasladado los métodos <code>esMovible</code> y <code>mover</code> a la clase abstracta <code>PiezaTablero</code>, habríamos obligado a que la clase <code>PiezaBarquitos</code> dispusiera de esos métodos, lo cual no tiene mucho sentido.</p>
+</div>
+<div id="taquesQuestion0b109" class="block iDevice_content">
+<p>Declara la interfaz <code>Movible</code> que contenga los métodos <code>esMovible</code> y <code>mover</code>. Dado que se trata de una interfaz, serán <strong>métodos abstractos</strong>, aunque ya hemos visto que en Java existe la posibilidad de implementar métodos <code>default</code> dentro de las interfaces.</p>
+</div>
+<form name="feedback-form-quesFeedback0b109" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b109text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b109" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b109" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La interfaz <code>Movible</code> podría quedar así de sencilla:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public interface Movible {
+    
+    boolean esMovible (int fila, int columna);
+    void mover (int fila, int columna) throws IllegalStateException;
+    
+}</code></pre>
+</div>
+</div>
+<p>En el fondo, se parece mucho a una <strong>lista de métodos abstractos</strong> que pudiera haber en una clase abstracta. Sin embargo, la hemos sacado de cualquier clase para que ese comportamiento pueda ser compartido por clases que no tengan relación alguna de herencia entre sí. </p>
+<p>No es más que una lista de métodos que tendrán la obligación de escribir (implementar o codificar) aquellas clases que implementen esta interfaz. Ahora, habrá que ver qué clases deben implementar esta interfaz y cuáles no. </p></div>
+</form>
+<div id="taquesQuestion1b109" class="block iDevice_content">
+<p>Modifica ahora la clase <code>PiezaAjedrez</code> para que implemente (<code>implements</code>) esta interfaz. ¿Habrá que añadir el <code>implements</code> a sus clases hijas?</p>
+</div>
+<form name="feedback-form-quesFeedback1b109" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b109text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b109" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b109" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La cabecera de la clase <code>PiezaAjedrez</code> quedaría ahora como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public abstract class PiezaAjedrez implements Movible {
+     . . . </code></pre>
+</div>
+</div>
+<p>La única diferencia es que contiene el <code>implements</code> <code>Movible</code>. Dado que <code>PiezaAjedrez</code> es una <strong>clase abstracta</strong>, no existe la obligación de codificar los métodos <code>esMovible</code> y <code>mover</code>. Sin embargo, nosotros lo hemos hecho porque así "ahorramos" código a las clases hijas. Habrá otras ocasiones en las que una clase abstracta que implemente una interfaz, no codifique los métodos de esa interfaz y los deje "pendientes" para sus clases derivadas.</p>
+<p>Respecto a las clases hijas de <code>PiezaAjedrez</code>, no tendrán que incluir el <code>implements</code> <code>Movible</code>. Sería algo redundante, pues ya heredan esa "obligación" de su clase base.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="62_definicin_de_interfaces.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

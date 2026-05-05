@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones? | Estructuras de datos internas (memoria) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-64"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructuras de datos internas (memoria)</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos internas (memoria)</a></li>
+   <li><a href="1_clases_y_mtodos_genricos_i.html" class="daddy">1.- Clases y métodos genéricos (I)</a>
+   <ul class="other-section">
+      <li><a href="11_clases_y_mtodos_genricos_ii.html" class="no-ch">1.1.- Clases y métodos genéricos (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="2__introduccin_a_las_colecciones.html" class="no-ch">2.-  Introducción a las colecciones</a></li>
+   <li><a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="daddy">3.- Conjuntos (I).  ¿Qué son y cómo se declaran? HashSet</a>
+   <ul class="other-section">
+      <li><a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="no-ch">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</a></li>
+      <li><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="no-ch">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</a></li>
+      <li><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="no-ch">3.3.- Conjuntos (IV). Combinando datos de varias colecciones</a></li>
+      <li><a href="34_conjuntos_v_ordenando_sus_elementos.html" class="no-ch">3.4.- Conjuntos (V). Ordenando sus elementos</a></li>
+      <li><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="no-ch">3.5.- Conjuntos (VI). Ejemplos de uso.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_listas_i_definicin_y_diferencias_con_los_conjuntos.html" class="daddy">4.- Listas (I). Definición y diferencias con los conjuntos</a>
+   <ul class="other-section">
+      <li><a href="41_listas_ii_cmo_se_usan.html" class="no-ch">4.1.- Listas (II). ¿Cómo se usan?</a></li>
+      <li><a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="no-ch">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</a></li>
+      <li><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="no-ch">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</a></li>
+   </ul>
+   </li>
+   <li><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="daddy">5.- Conjuntos de pares clave/valor o diccionarios</a>
+   <ul class="other-section">
+      <li><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="no-ch">5.1.- Recorrido de los elementos de un diccionario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="daddy">6.- Iteradores (I). ¿Qué son y cómo se usan?</a>
+   <ul class="other-section">
+      <li><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="no-ch">6.1.- Iteradores (II). ¿Qué características debemos considerar?</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="active daddy">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</a>
+   <ul>
+      <li><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="no-ch">7.1.- Algoritmos (II). Ordenando los elementos de la colección</a></li>
+      <li><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="no-ch">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</a></li>
+      <li><a href="73_algoritmos_iv_operaciones_agregadas.html" class="daddy">7.3. Algoritmos (IV). Operaciones agregadas</a>
+      <ul class="other-section">
+         <li><a href="731_operaciones_de_reduccin.html" class="no-ch">7.3.1. Operaciones de reducción</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I. Ejercicios resueltos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id183">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta183_66" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="coffee-break-1177540_640.jpg" alt="Coffee Break" title="Reunión" width="240" height="167" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/coffee-break-conferencia-mujeres-1177540/" target="_blank" class="author" title="Acceder a la imagen de Cozendo en Pixabay. (Se abre en una nueva ventana)">Cozendo</a> <span>(</span><a href="https://pixabay.com/es/service/license/" target="_blank" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" rel="noopener">Licencia Pixabay</a><span>)</span></div>
+</div>
+<p><strong>Ada</strong> se acercó a preguntar a <strong>Ana </strong>cómo llevaba la tarea que le había encomendado<strong> <strong>María</strong></strong>. <strong>Ada</strong> era la jefa y <strong>Ana</strong> le tenía mucho respeto.  Era una tarea importante, así que prestó mucha atención.</p>
+<p><strong>Ana</strong> le enseñó el código que estaba elaborando, le dijo que en un principio había pensado crear una clase llamada <code>Pedido</code> para almacenar los datos del pedido, pero que <strong>Juan</strong> le recomendó usar mapas para almacenar los pares de valor y dato. Así que se decantó por usar mapas para ese caso. Le comentó también que para almacenar los artículos sí había creado una pequeña clase llamada <code>Articulo</code>. <strong>Ada</strong> le dio el visto bueno:</p>
+<p>—Pues <strong>Juan</strong> te ha recomendado de forma adecuada, no vas a necesitar hacer ningún procesamiento especial de los datos del pedido, solo convertirlos de un formato específico. Eso sí, sería recomendable que los artículos del pedido vayan ordenados por código de artículo —dijo <strong>Ada</strong>.</p>
+<p>—¿Ordenar los artículos? Vaya, que jaleo —respondió <strong>Ana</strong>.</p>
+<p>—Arriba ese ánimo mujer, si has usado listas es muy fácil, déjame ver tu código y te explicaré cómo hacerlo.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id184">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta184_148" class="block story iDevice_content">
+<p>A continuación te mostramos el código del ejemplo que procesaría los datos de un pedido que se recibe en un "archivo de texto" (simulado por un<span lang="en"> array</span> de <code>String</code>) guardándolos en un <code>Map</code>.</p>
+</section>
+<section id="taquesQuestion0b184" class="block iDevice_content">
+<p>Primero te mostramos el código del ejemplo, pulsando el botón de "Mostrar retroalimentación".</p>
+</section>
+<form name="feedback-form-quesFeedback0b184" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b184text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b184" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b184" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>package pruebas;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/* Clase que se encarga de procesar un pedido. 
+ * El archivo con el pedido lo simulamos mediante un array en el que cada elemento
+ * representa una línea del archivo a procesar. (De momento, no hemos visto ficheros en Java).
+ * De momento, en este ejercicio lo que nos interesa es la parte de procesamiento de 
+ * los datos usando 
+ */
+class Articulo {
+
+    public String codArticulo;
+    public String descripcion;
+    public int cantidad;
+}
+
+public class ProcesarArchivo {
+
+    /*
+ * Como todavía no hemos visto los archivos en Java, vamos a simular el archivo
+ * mediante un array, en el que cada elemento representa una línea del archivo de texto, 
+ * y todas en conjunto conforman el texto del pedido que habría que procesar.
+ * El ejemplo sería más realista si el texto del pedido se leyera desde un archivo. 
+ * Se podrá modificar cuando se vea la siguiente unidad dedicada al uso de archivos en Java.
+     */
+    private static final String[] PEDIDO = {
+        "## PEDIDO ##",
+        "Número de pedido: [ 20304 ]",
+        "Cliente: [ Muebles Bonitos S.A. ]",
+        "Código del cliente: [ 00293 ]",
+        "Dirección de factura: [ C/ De en frente, 11 ]",
+        "Dirección de entrega: [ C/ De al lado, 22 ]",
+        "Nombre del contacto: [ Elías ]",
+        "Teléfono del contacto: [ 987654321 ]",
+        "Correo electrónico del contacto: [ mail@mail1234.com ]",
+        "Fecha preferente de entrega: [ 19/11/2012 ]",
+        "Forma de pago: [ Transferencia ]",
+        "## ARTÍCULOS ##",
+        "[ Código Artículo | Descripción | Cantidad ]",
+        "[ 0001231 | Tuercas tipo 1 | 200 ]",
+        "[ 0001200 | Tornillos tipo 1 | 200 ]",
+        "[ 0002200 | Arandelas tipo 2 | 200 ]",
+        "Una línea claramente errónea",
+        "## FIN ARTÍCULOS ##",
+        "## FIN PEDIDO ##"
+    };
+
+    /* 
+     * Definimos las expresiones regulares que usaremos una y otra vez para
+     * cada línea del pedido. La expresión regular "seccion" permite detectar
+     * si hay un comienzo o fin de pedido, y la expresión "campo", permite detectar
+     * si hay un campo con información del pedido. 
+     */
+    static Pattern seccion = Pattern.compile("^##[ ]*(FIN)?[ ]*(PEDIDO|ARTÍCULOS)[ ]*##$");
+    static Pattern campo = Pattern.compile("^(.+):.*\\[(.*)\\]$");
+    static Pattern articulo = Pattern.compile("^\\[(.*)\\|(.*)\\|[ ]*([0-9]*)[ ]*\\]$");
+    static Pattern cabecera = Pattern.compile("\\[ Código Artículo \\| Descripción \\| Cantidad \\]");
+
+    public static void main(String[] args) {
+        ArrayList&lt;Articulo&gt; articulos = new ArrayList&lt;&gt;();
+        HashMap&lt;String, String&gt; datosPedido = new HashMap&lt;&gt;();
+
+        /* 1er paso: sería cargar el archivo para poder procesarlo línea a línea
+         * pero es algo que se supone hecho, ya lo tenemos en el "archivo" simulado
+         * por el array PEDIDO declarado al principio.
+         * Se continúa con el procesamiento línea a línea del texto incluido en 
+         * el pedido. 
+         */
+        for (String linea : PEDIDO) {
+            if (!procesarLinea(linea, datosPedido, articulos)) {
+                System.out.println("ERROR, línea no procesable: " + linea);
+            }
+            // A continuación, como comentario, otra forma de verlo, quizás más
+            // clara para alguien.
+//            boolean correcta=procesarLinea(linea, datosPedido, articulos);
+//            if (!correcta){
+//                System.out.println("ERROR, línea no procesable: " + linea);
+//            }
+        }
+
+        // Mostramos los datos del pedido para ver si son correctos.
+        for (String etiqueta : datosPedido.keySet()) {
+            System.out.println("Dato pedido--&gt;" + etiqueta + ":" + datosPedido.get(etiqueta));
+        }
+        // Mostramos los datos de los artículos para ver si son correctos.
+        for (Articulo art : articulos) {
+            System.out.print("&lt;artículo código='" + art.codArticulo + "' ");
+            System.out.print("descripción='" + art.descripcion + "' ");
+            System.out.println("cantidad='" + art.cantidad + "'&gt;");
+        }
+    }
+
+    /**
+     * Procesa una línea del archivo de pedido para detectar qué es y extraer la
+     * información que contiene.
+     *
+     * @param linea
+     * @param datosPedido Mapa en el que irá metiendo la información del pedido.
+     * La llave del mapa será el nombre del campo.
+     * @param articulos Lista en la que se irán metiendo los artículos del
+     * pedido.
+     * @return true si la línea contiene información que corresponde al formato
+     * esperado, false en caso contrario.
+     */
+    static boolean procesarLinea(String linea, Map&lt;String, String&gt; datosPedido,
+            List&lt;Articulo&gt; articulos) {
+        boolean resultado;
+
+        Matcher deteccionSeccion = seccion.matcher(linea);
+        Matcher deteccionCampo = campo.matcher(linea);
+        Matcher deteccionArticulo = articulo.matcher(linea);
+
+        Matcher deteccionCabecera = cabecera.matcher(linea);
+
+        /* Si el patrón coincide con el de un indicador de comienzo del pedido
+         * o de la sección con el listado de artículos, se ejecutará este trozo
+         * de cóigo, pues habrá encontrado el patrón. No hace nada,
+         * simplemente lo detecta para así no informar de algo raro.
+         */
+        if (deteccionSeccion.matches()) {
+            resultado = true;
+        } /* Si el patrón coincide con el de un campo con datos del pedido
+          entonces meterá tanto el campo como el valor en el mapa.
+         */ else if (deteccionCampo.matches()) {
+            datosPedido.put(deteccionCampo.group(1).trim().toLowerCase(),
+                    deteccionCampo.group(2).trim());
+            resultado = true;
+        } else if (deteccionCabecera.matches()) {
+            resultado = true;
+        } /* Si el patrón coincide con el de un artículo, entonces 
+          guardará los datos del pedido en una clase Articulo y lo meterá
+          en la lista de artículos.
+         */ else if (deteccionArticulo.matches()) {
+            Articulo n = new Articulo();
+            n.codArticulo = deteccionArticulo.group(1).trim();
+            n.descripcion = deteccionArticulo.group(2).trim();
+            n.cantidad = Integer.parseInt(deteccionArticulo.group(3));
+            articulos.add(n);
+            resultado = true;
+        } else {
+            resultado = false;
+        }
+        return resultado;
+    }
+}</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b184" class="block iDevice_content">
+<p>Y a continuación, la salida que produciría.</p>
+</section>
+<form name="feedback-form-quesFeedback1b184" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b184text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b184" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b184" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>run:
+ERROR, línea no procesable: Una línea claramente errónea
+Dato pedido--&gt;fecha preferente de entrega:19/11/2012
+Dato pedido--&gt;cliente:Muebles Bonitos S.A.
+Dato pedido--&gt;código del cliente:00293
+Dato pedido--&gt;nombre del contacto:Elías
+Dato pedido--&gt;dirección de factura:C/ De en frente, 11
+Dato pedido--&gt;número de pedido:20304
+Dato pedido--&gt;teléfono del contacto:987654321
+Dato pedido--&gt;correo electrónico del contacto:mail@mail1234.com
+Dato pedido--&gt;forma de pago:Transferencia
+Dato pedido--&gt;dirección de entrega:C/ De al lado, 22
+&lt;artículo código='0001231' descripción='Tuercas tipo 1' cantidad='200'&gt;
+&lt;artículo código='0001200' descripción='Tornillos tipo 1' cantidad='200'&gt;
+&lt;artículo código='0002200' descripción='Arandelas tipo 2' cantidad='200'&gt;
+BUILD SUCCESSFUL (total time: 0 seconds)</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id185">
+<div class="iDevice emphasis0">
+<div id="ta185_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 300px;"><img src="Ordenar.jpg" alt="Piezas con forma de letras diferentes, amontonadas y desordenadas, salvo las que forman la palabra ORDER sobre las demás." title="Ordenar" width="300" height="200" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/letras-reglamento-el-caos-mapas-5161496/" target="_blank" class="author" title="Acceder a la imagen &quot;Ordenar&quot; de geralt en Pixabay. (Se abre en una nueva ventana)" rel="noopener">geralt</a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" target="_blank" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" rel="noopener">Licencia Pixabay</a><span>)</span></span></span></div>
+</div>
+<p>La palabra algoritmo seguro que te suena, pero, ¿a qué se refiere en el contexto de las colecciones y de otras estructuras de datos?</p>
+<p>Las colecciones, los <span lang="en">arrays</span> e incluso las cadenas, tienen un conjunto de operaciones típicas asociadas que son habituales. Algunas de estas operaciones ya las hemos visto antes, pero otras no. Veamos para qué nos pueden servir estas operaciones:</p>
+<ul class="lista_verificacion">
+<li><strong>Ordenar</strong> listas y <span lang="en">arrays</span>.</li>
+<li><strong>Desordenar</strong> listas y <span lang="en">arrays</span>.</li>
+<li><strong>Búsqueda binaria</strong> en listas y <span lang="en">arrays</span>.</li>
+<li><strong>Conversión de arrays a listas y de listas a <span lang="en">array</span></strong>.</li>
+<li><strong>Partir cadenas</strong> y almacenar el resultado en un <span lang="en">array</span>.</li>
+</ul>
+<p>Estos algoritmos están en su mayoría recogidos como métodos estáticos de las <code>clases java.util.Collections</code> y <code>java.util.Arrays</code>, salvo los referentes a cadenas obviamente.</p>
+<p>Los algoritmos de ordenación ordenan los elementos en orden natural, siempre que <span lang="en">Java</span> sepa cómo ordenarlos. Como se explicó en el apartado de conjuntos, cuando se desea que la ordenación siga un orden diferente, o simplemente los elementos no son ordenables de forma natural, hay que facilitar un mecanismo para que se pueda producir la ordenación. Los tipos "ordenables" de forma natural son los enteros, las cadenas (orden alfabético) y las fechas, y por defecto su orden es ascendente.</p>
+<p>La clase <code>Collections</code> y la clase <code>Arrays</code> facilitan el método <code>sort()</code>, que permiten ordenar respectivamente listas y <span lang="en">arrays</span>. Los siguientes ejemplos ordenarían los números de forma ascendente (de menor a mayor):</p>
+<table class="tabla" summary="Tabla que muestra ejemplos de como ordenar un array y una lista usando los métodos estáticos sort de las clases Collections y Arrays."><caption>Ordenación natural en listas y arrays.</caption>
+<tbody>
+<tr><th scope="col">Ejemplo de ordenación de un <span lang="en">array</span> de números</th><th scope="col">Ejemplo de ordenación de una lista con números</th></tr>
+<tr>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Integer[] array={10,9,99,3,5};
+Arrays.sort(array);</code></pre>
+</div>
+</div>
+</td>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>ArrayList&lt;Integer&gt; lista=new ArrayList&lt;&gt;();
+lista.add(10);
+lista.add(9);
+lista.add(99);
+lista.add(3);
+lista.add(5);
+Collections.sort(lista);</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

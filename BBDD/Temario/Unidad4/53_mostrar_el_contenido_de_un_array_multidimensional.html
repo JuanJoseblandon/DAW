@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.3.- Mostrar el contenido de un array multidimensional. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-98"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_arrays_multidimensionales.html" class="current-page-parent daddy">5.- Arrays multidimensionales.</a>
+   <ul>
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li id="active"><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="active no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="52_inicializacin_de_arrays_multidimensionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.3.- Mostrar el contenido de un array multidimensional.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id401">
+<div class="iDevice emphasis0">
+<div id="ta401_154" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="blackboard-g0acc1b7b8_640.jpg" alt="Pizarra de tiza con cuadrículas." title="Pizarra." style="float: right;" width="240" height="160" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/pizarra-sal%c3%b3n-de-clases-escuela-470688/" target="_blank" class="author" title="Acceder a la web de descarga de la imagen de Clker-Free-Vector-Images en Pixabay. (Se abre en una nueva ventana)">Taken</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Para mostrar por pantalla un array de más de una dimensión o simplemente para realizar una representación textual que queramos almacenar en una cadena, tendremos que construir una <strong>estructura de bucles anidados</strong> que vayan recorriendo cada dimensión, uno dentro de otro. Necesitaremos por tanto un bucle por cada dimensión.</p>
+<p>Por ejemplo, para <strong>recorrer un array de dos dimensiones (bidimensional) regular (todas las filas tienen las mismas columnas)</strong>, podríamos hacer algo así:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span> numFilas<span class="token operator">=</span> tabla<span class="token punctuation">.</span>length<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// Tamaño de la primera dimensión (número de filas)</span>
+<span class="token keyword">int</span> numColumnas<span class="token operator">=</span> tabla<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// Tamaño de la segunda dimensión: número columnas en primera fila (igual para todas)</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> fila<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> fila<span class="token operator">&lt;</span>numFilas<span class="token punctuation">;</span> fila<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> columna<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> columna<span class="token operator">&lt;</span>numColumnas<span class="token punctuation">;</span> columna<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// Mostramos en elemento colocado en la posición [fila][columna]</span>
+        <span class="token comment" spellcheck="true">// o bien vamos concatenando fragmentos en una cadena de resultado final</span>
+    <span class="token punctuation">}</span>    
+<span class="token punctuation">}</span></code></pre>
+</div>
+<p>Ahora bien, si los elementos de la segunda dimensión (columnas de cada fila) no tienen todos el mismo tamaño (cada fila puede tener un número diferente de columnas) entonces tendremos que recorrer en cada caso un número de columnas diferente y deberemos consultar ese tamaño para cada fila (<code>nombreArray[fila].length</code>):</p>
+<div class="highlighted-code language-java">
+<pre class=" language-java"><code class=" language-java"><span class="token keyword">int</span> numFilas<span class="token operator">=</span> tabla<span class="token punctuation">.</span>length<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// Tamaño de la primera dimensión ()</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> fila<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> fila<span class="token operator">&lt;</span>numFilas<span class="token punctuation">;</span> fila<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">int</span> numColumnas<span class="token operator">=</span> tabla<span class="token punctuation">[</span>fila<span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// Tamaño de la segunda dimensión (potencialmente diferente para cada fila)</span>
+     <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> columna<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> columna<span class="token operator">&lt;</span>numColumnas<span class="token punctuation">;</span> columna<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// Mostramos en elemento colocado en la posición [fila][columna]</span>
+        <span class="token comment" spellcheck="true">// o bien vamos concatenando fragmentos en una cadena de resultado final</span>
+    <span class="token punctuation">}</span>    
+<span class="token punctuation">}</span></code></pre>
+</div>
+<p>Otra opción es no utilizar una variable para guardar los tamaños de cada dimensión y consultarlos con el atributo <code>length</code> cada vez que sea necesario, que suele ser lo más habitual:</p>
+<div class="highlighted-code language-java">
+<pre class=" language-java"><code class=" language-java"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> fila<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> fila<span class="token operator">&lt;</span>tabla<span class="token punctuation">.</span>length<span class="token punctuation">;</span> fila<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> columna<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> columna<span class="token operator">&lt;</span>tabla<span class="token punctuation">[</span>fila<span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> columna<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">.</span> <span class="token punctuation">.</span> <span class="token punctuation">.</span>
+        <span class="token punctuation">.</span> <span class="token punctuation">.</span> <span class="token punctuation">.</span>
+    <span class="token punctuation">}</span>    
+<span class="token punctuation">}</span></code></pre>
+</div>
+<p>¿Y qué ocurre si decidimos usar la herramienta <code>Arrays.toString</code>? En este caso la representación textual del array que devuelve este método puede resultarnos algo confusa pues devolverá una cadena con un aspecto similar al siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<pre class=" language-latex"><code class=" language-latex"><span class="token punctuation">[</span><span class="token punctuation">[</span>I@28d93b30, <span class="token punctuation">[</span>I@1b6d3586, . . . , <span class="token punctuation">[</span>I@1540e19d<span class="token punctuation">]</span></code></pre>
+</div>
+<p>¿Qué significado tiene esto? Ten en cuenta que cada elemento de este array es, a su vez, una referencia a un nuevo array (la siguiente dimensión). Sin embargo, para cada elemento no se nos muestra su contenido (otro array) sino el <code>hash</code> de esa referencia (una marca de identificación de la máquina virtual respecto a su almacenamiento). Si quisiéramos que esa referencia se "expandiera" y se mostrara también una representación textual de los elementos de cada subarray (segunda dimensión) podríamos usar <strong>otro método estático</strong> proporcionado por la clase <code>Arrays</code> llamado <code>deepToString</code>. Este método sí "profundizará" en todas las subdimensiones o subarrays y generará una representación textual de todas las subdimensiones, sean de los niveles que sean. Por ejemplo, para un array de dos dimensiones podría obtenerse un resultado de este estilo:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<pre class=" language-latex"><code class=" language-latex"><span class="token punctuation">[</span><span class="token punctuation">[</span>1, 2, 3<span class="token punctuation">]</span>, <span class="token punctuation">[</span>4, 5, 6, 7<span class="token punctuation">]</span>, . . . , <span class="token punctuation">[</span>50, 51, 52, 53<span class="token punctuation">]</span><span class="token punctuation">]</span></code></pre>
+</div>
+<p>Podemos observar que se abre un nuevo corchete para cada "subdimensión" o "subarray" que exista. Es decir, que para llegar a un elemento final (escalar) habrá que pasar por tantos corchetes como dimensiones existan. <strong>Para un array de tres dimensiones</strong> habría por tanto que pasar a través de tres corchetes para poder llegar a los elementos finales almacenados. Por ejemplo:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<pre class=" language-latex"><code class=" language-latex"><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token punctuation">[</span>1, 2<span class="token punctuation">]</span>, <span class="token punctuation">[</span>3<span class="token punctuation">]</span><span class="token punctuation">]</span>, <span class="token punctuation">[</span><span class="token punctuation">[</span>4<span class="token punctuation">]</span>, <span class="token punctuation">[</span>5<span class="token punctuation">]</span>, <span class="token punctuation">[</span>6, 7<span class="token punctuation">]</span><span class="token punctuation">]</span>, . . . , <span class="token punctuation">[</span><span class="token punctuation">[</span>50, 51<span class="token punctuation">]</span>, <span class="token punctuation">[</span>52, 53<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">]</span></code></pre>
+</div>
+<p>Aquí se puede observar que en la posición [0][0][0] hay almacenado un 1, en la [0][0][1] un 2, en la [0][1]0] un 3, en la [1][0][0] un 4, en la [1][1][0] un 5, en la [1][2][0] un 6, y así sucesivamente, tal y como se ha visto en el apartado anterior al explicar el funcionamiento de los arrays multidimensionales.</p>
+<p>Ahora, podemos ver un ejemplo donde se rellena primero y se muestra después el contenido de un array de dos dimensiones. En cada celda de este array se almacenará el valor de la suma de las posiciones de cada dimensión. Es decir, en la posición [0][0] se almacenará un 0, en la [0][1] un 1, en la [0][2] un 2, en la [1][0] un 1, en la [1][1] un 2, en la [0][3] un 3, y así sucesivamente.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>final int FILAS = 5 ;
+final int COLUMNAS = 3 ;
+
+// Declaramos el array y reservamos espacio para sus dos dimensiones
+int[][] arrayBidimensional = new int[FILAS][COLUMNAS];
+
+// Rellenamos el array 
+for (int i=0; i&lt; arrayBidimensional.length; i++)
+    for (int j=0;j&lt; arrayBidimensional[i].length;j++)
+        arrayBidimensional[i][j] = i + j  ;
+
+// Escribimos el contenido de cada celda del array usando dos bucles anidados
+for (int i=0; i&lt; arrayBidimensional.length; i++) {
+    for (int j=0;j&lt; arrayBidimensional[i].length;j++) {
+        System.out.print ("[" + i + "][" + j + "] = " + arrayBidimensional[i][j] + "    ") ;
+    }
+    System.out.println() ;
+}</code></pre>
+</div>
+</div>
+<p>El resultado final de este fragmento de código debería ser algo similar a lo siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>[0][0] = 0    [0][1] = 1    [0][2] = 2    
+[1][0] = 1    [1][1] = 2    [1][2] = 3    
+[2][0] = 2    [2][1] = 3    [2][2] = 4    
+[3][0] = 3    [3][1] = 4    [3][2] = 5    
+[4][0] = 4    [4][1] = 5    [4][2] = 6  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id402">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta402_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b402" class="block iDevice_content">
+<p>Implementa un programa en Java que:</p>
+<ol>
+<li>solicite al usuario el <strong>número de filas</strong> para un array de números enteros;</li>
+<li>solicite al usuario, una por una, el <strong>número de columnas que se desea que tenga cada fila</strong> (cada fila no tiene por qué tener el mismo número de columnas);</li>
+<li>según se vaya conociendo el rango de cada dimensión se vaya <strong>reservando espacio</strong> para esa dimensión o subdmensión;</li>
+<li>una vez creada la estructura completa, <strong>rellenarla con números enteros comenzando por 1</strong> e incrementando de uno en uno;</li>
+<li>una vez relleno el array completo, recorrerlo para <strong>mostrar por pantalla todo su contenido</strong> escribiendo el contenido de cada fila en una línea diferente;</li>
+<li>mostrar también el <strong>contenido del array</strong> usando los <strong>métodos estáticos</strong> de la clase <code>Arrays</code>:<ol>
+<li><code>Arrays.toString</code>;</li>
+<li><code>Arrays.deepToString</code>.</li>
+</ol></li>
+</ol>
+<p>Aquí tienes un posible ejemplo de ejecución:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<pre><code>Introduzca el número de filas en el array: 5
+Introduzca el número de columnas en la fila 0: 2
+Introduzca el número de columnas en la fila 1: 3
+Introduzca el número de columnas en la fila 2: 6
+Introduzca el número de columnas en la fila 3: 1
+Introduzca el número de columnas en la fila 4: 4
+
+El contenido del array es:
+1 2 
+3 4 5 
+6 7 8 9 10 11 
+12 
+13 14 15 16
+Contenido usando Arrays.toString: [[I@28d93b30, [I@1b6d3586, [I@4554617c, [I@74a14482, [I@1540e19d]
+Contenido usando Arrays.deepToString: [[1, 2], [3, 4, 5], [6, 7, 8, 9, 10, 11], [12], [13, 14, 15, 16]]</code></pre>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b402" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b402text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b402" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b402" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Para llevar a cabo la primera parte lo primero que habrá que hacer <strong>será reservar espacio para la primera dimensión del array</strong> (el <strong>número de filas</strong>) una vez que el usuario lo haya indicado, por ejemplo, a través de la variable <code>numFilas</code>:</p>
+<div class="highlighted-code language-java">
+<pre><code>int[][] array2D = new int[numFilas][];</code></pre>
+</div>
+<p>Si te fijas, hemos declarado el array como de dos dimensiones (dos pares de corchetes <code>[][]</code>) y si embargo al hacer el <code>new</code> tan solo hemos colocado una cantidad en la primera dimensión (número de filas), pues es la única que conocemos. La variable <code>array2D</code> es una variable de tipo referencia que apunta a una zona de memoria donde estará el array (una sucesión de elementos dispuestos uno tras otro en la memoria). Cada uno de esos elementos será a su vez una nueva referencia que apuntará a otro array (en este caso un array de <code>int</code>).</p>
+<p><strong>Una vez que conocemos el número de filas</strong>, podremos ir preguntando al usuario, una por una, cuántas columnas quiere que tenga cada fila y aprovechar para ir reservando espacio para cada una de ellas:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Crear la estructura de columnas para cada fila
+for (int fila = 0; fila &lt; array2D.length; fila++) {
+    System.out.printf("Introduzca el número de columnas en la fila %d: ", fila);
+    numColumnas = teclado.nextInt();
+    array2D[fila] = new int[numColumnas];  // Dimensionar las columas de esta fila
+}</code></pre>
+</div>
+</div>
+<p>Ten en cuenta aquí que <strong>cada elemento</strong> <strong><span style="font-size: medium;"><code>array2D[fila]</code></span></strong> es <strong>una referencia que apuntará a otro array</strong> de una cantidad de columnas determinada cuyo espacio en memoria se reservará con un nuevo <strong><span style="font-size: medium;"><code>new</code></span></strong>. La referencia que devuelva el operador <strong><span style="font-size: medium;"><code>new</code></span></strong> es lo que se almacenará en la posición fila del array de nombre <strong><span style="font-size: medium;"><code>array2D</code></span></strong> (<strong><span style="font-size: medium;"><code>array2D[fila]</code></span></strong>).</p>
+<p>Una vez que ya disponemos de la estructura completa con todos los elementos reservados en memoria, podemos comenzar a recorrerla y <strong>rellenarla de información mediante un doble bucle anidado</strong>:</p>
+<div class="highlighted-code language-java">
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>// Rellenar las celdas
+int numero = 1;
+for (int fila = 0; fila &lt; array2D.length; fila++) {
+    for (int columna = 0; columna &lt; array2D[fila].length; columna++) {
+        array2D[fila][columna] = numero;
+        numero++;
+    }
+}
+</code></pre>
+</div>
+</div>
+</div>
+<p>En este fragmento de código puedes observar que dado que cada elemento del array principal <code>array2D</code> (primera dimensión o primer par de corchetes) es una referencia a un nuevo array, cada uno de esos arrays (<code>array2D[0]</code>, <code>array2D[1]</code>, <abbr title="etcétera">etc.</abbr>) puede tener un tamaño diferente y podemos obtenerlo mediante <code>array2D[fila].length </code>(línea 4).</p>
+<p>Una vez que la tengamos rellena, podemos proceder a <strong>mostrar su contenido con otro doble bucle anidado</strong> similar al anterior:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// salida de resultados
+System.out.println("\nEl contenido del array es:");
+for (int fila = 0 ; fila &lt; array2D.length ; fila++) {
+    numColumnas = array2D[fila].length;  // Columnas de esta fila
+    for (int columna = 0 ; columna &lt; numColumnas ; columna++) {
+        System.out.print(array2D[fila][columna] + " ");
+    }
+    System.out.println(); // Una nueva la línea para mostrar cada fila
+}</code></pre>
+</div>
+</div>
+<p>Y por último <strong>mostramos el contenido del array</strong> usando los <strong>métodos estáticos</strong> que proporciona la clase no instanciable <strong><span style="font-size: medium;"><code>Arrays</code></span></strong> (métodos <strong><span style="font-size: medium;"><code>Arrays.toString</code></span></strong>  y <strong><span style="font-size: medium;"><code>Arrays.deepToString</code></span></strong>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.printf ("Contenido usando Arrays.toString: %s\n",Arrays.toString(array2D));
+System.out.printf ("Contenido usando Arrays.deepToString: %s\n",Arrays.deepToString(array2D));</code></pre>
+</div>
+</div>
+<p>Fíjate que si utilizamos simplemente <strong><span style="font-size: medium;"><code>toString</code></span></strong> nos quedamos únicamente en la primera dimensión y no se "profundiza" en el resto de dimensiones, por eso vemos simplemente las referencias a los otros arrays, pero no una representación textual de esos arrays. Sin embargo, si utilizamos <strong><span style="font-size: medium;"><code>deepToString</code></span></strong> sí obtenemos una representación textual del contenido de cada subarray.</p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id403">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta403_128" class="block iDevice_content">
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta146_128" class="block iDevice_content">
+<p>Puedes consultar toda la información sobre el método estático <code>Arrays.deepToString</code> en la documentación de la <acronym title="Application Programming Interface">API</acronym> de Java:</p>
+<p style="text-align: center;"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Arrays.html#deepToString(java.lang.Object%5B%5D)" title="Acceder al javadoc de la API de Java para la clase Arrays" target="_blank" class="html">Método deepToString de la clase Arrays</a>.</p>
+<p style="text-align: left;"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id404">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta404_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b404" class="block iDevice_content">
+<p>Implementa un programa en Java que:</p>
+<ol>
+<li>solicite al usuario el <strong>número de filas base</strong> para un array de caracteres (entre 3 y 10);</li>
+<li>se genere un array bidimensional de caracteres cuyo número de filas sea el doble de ese número de filas "base";</li>
+<li>la primera fila contendrá 1 solo elemento (una columna), la segunda 3 elementos (dos más que la anterior), la tercera 5  (dos más que la anterior) y así sucesivamente hasta el número de filas "base", a partir de esa fila, se repetirá otra fila con la misma cantidad de elementos y a continuación se irán teniendo filas con dos elementos menos cada vez, hasta la última fila que contendrá un único elemento;</li>
+<li>se rellenarán todas las posiciones de la misma fila con el mismo carácter: la primera fila con la letra 'A', la segunda con la 'B', la tercera con la 'C' y así sucesivamente;</li>
+<li>se mostrará el contenido del array usando <code>Arrays.deepToString</code>;</li>
+<li>se mostrará el contenido del array en forma de "tabla" usando un doble bucle que recorra primero filas y dentro de cada fila, cada una de las celdas (columnas).</li>
+</ol>
+<p>Un ejemplo de ejecución podría ser algo así:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>ARRAY 2D EN FORMA DE ROMBO
+--------------------------
+Introduzca el número de filas "base" (3-10): 3
+
+RESULTADO: ARRAY 2D EN FORMA DE ROMBO
+-------------------------------------
+
+Contenido del array usando Arrays.deepToString: [[A], [B, B, B], [C, C, C, C, C], [D, D, D, D, D], [E, E, E], [F]] 
+
+Contenido del array mostrado elemento a elemento (doble bucle): 
+A 
+B B B 
+C C C C C 
+D D D D D 
+E E E 
+F </code></pre>
+</div>
+</div>
+<p></p>
+</section>
+<form name="feedback-form-quesFeedback0b404" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b404text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b404" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b404" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Nuestro array será multidimensional, en este caso concreto bidimensional (dos pares de corchetes) cuyos elementos serán de tipo <code>char</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>char arrayRombo[][];</code></pre>
+</div>
+</div>
+<p>La parte de entrada de datos consiste simplemente en incluir una comprobación de rango junto con la captura de una excepción <code>InputMismatchException</code> por si se introdujera algún carácter no compatible con la representación textual de un número entero:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>numFilasBase = 0; // Valor inicial inválido
+do {
+    System.out.print("Introduzca el número de filas \"base\" (3-10): ");
+    try {
+        numFilasBase = teclado.nextInt();
+    } catch (InputMismatchException ex) {
+        teclado.nextLine(); // "Purgamos" lo que haya en el buffer
+    }
+} while (numFilasBase &lt; 3 || numFilasBase &gt; 10);</code></pre>
+</div>
+</div>
+<p>De esa manera, mientras no se introduzca un valor válido, se nos pedirá la entrada una y otra vez hasta que lo hagamos:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>ARRAY 2D EN FORMA DE ROMBO
+--------------------------
+Introduzca el número de filas "base" (3-10): x
+Introduzca el número de filas "base" (3-10): 0ç
+Introduzca el número de filas "base" (3-10): 11
+Introduzca el número de filas "base" (3-10): </code></pre>
+</div>
+</div>
+<p>Una vez que disponemos del número de filas "base", ya podemos reservar espacio para las filas del array. El número de filas será del doble de la cantidad "base" que se nos introduce:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Reservamos espacio para las filas del array
+arrayRombo = new char[numFilasBase * 2][];
+</code></pre>
+</div>
+</div>
+<p>Si te fijas, la segunda dimensión (segundo par de corchetes) permanece en blanco porque aún no sabemos cuántos elementos va a tener cada fila. No van a ser la misma cantidad (no va a ser una tablar "rectángular").</p>
+<p>Una vez que dispongamos de las filas, tendremos que recorrer cada una de ellas y reservar espacio para el conjunto de elementos char de cada una (reservar espacio para los elementos de cada fila). Dado que va a tener una forma de "rombo" (las primeras filas con pocos elementos y va creciendo hasta la mitad para luego ir decreciendo), podemos dividir la reserva de memoria en dos partes:</p>
+<ul class="lista_verificacion">
+<li>la <strong>creciente</strong>:</li>
+</ul>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Reservamos espacio para cada una de las filas del array hasta numFilasBase 
+// (creciendo)
+for (int i = 0; i &lt; numFilasBase; i++) {
+    arrayRombo[i] = new char[1 + 2 * i];
+}</code></pre>
+</div>
+</div>
+<ul class="lista_verificacion">
+<li>la <strong>decreciente</strong>:</li>
+</ul>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Reservamos espacio para cada una de las filas del array desde numFilasBase
+// (decreciendo)
+for (int i = 0; i &lt; numFilasBase; i++) {
+    arrayRombo[numFilasBase + i] = new char[1 + 2 * (numFilasBase - i - 1)];
+}</code></pre>
+</div>
+</div>
+<p>Una vez que contemos con la estructura del array completada, podemos rellenarla con los caracteres que se nos ha pedido (letras consecutivas por filas a partir de la 'A'):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Rellenamos todas las posiciones del array con letras consecutivas por filas
+for (int i = 0; i &lt; arrayRombo.length; i++) {
+    for (int j = 0; j &lt; arrayRombo[i].length; j++) {
+        arrayRombo[i][j] = (char) ('A' + i);
+    }
+}</code></pre>
+</div>
+</div>
+<p>Y ya solo nos quedaría mostrar por pantalla el contenido del array usando <code>Arrays.deepToString</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Mostramos el contenido del array con Arrays.deepToString
+System.out.printf("\nContenido del array usando Arrays.deepToString: %s \n", Arrays.deepToString(arrayRombo));
+</code></pre>
+</div>
+</div>
+<p>O bien elemento a elemento mediante dos bucles anidados:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Mostramos el contenido del array elemento a elemento con doble bucle
+System.out.println("\nContenido del array mostrado elemento a elemento (doble bucle): ");
+// Recorrido de filas
+for (int i = 0; i &lt; arrayRombo.length; i++) {
+    // Contenido de la fila dibujado en la misma línea
+    // Recorrido de columnas
+    for (int j = 0; j &lt; arrayRombo[i].length; j++) {
+        System.out.printf("%c ", arrayRombo[i][j]);
+    }
+    System.out.printf("\n");
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b404" class="block iDevice_content">
+<p>Una vez que hemos conseguido tener adecuadamente relleno el array y mostrar su contenido por pantalla, ¿crees que serías capaz de mostrarlo de una manera más estética dando la apariencia de "rombo" o "diamante"? La salida por pantalla podría tener entonces un aspecto similar al siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>     A 
+   B B B 
+ C C C C C 
+ D D D D D 
+   E E E 
+     F </code></pre>
+</div>
+</div>
+<p>¿Te ves capaz de intentarlo?</p>
+</section>
+<form name="feedback-form-quesFeedback1b404" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b404text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b404" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b404" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Una forma posible de generar esa salida podría consistir en <strong>ir escribiendo espacios  antes de cada fila</strong>, teniendo en cuenta que <strong>en las primeras filas habrá que escribir más espacios y en la última fila central (fila "base") no hará falta escribir ningún espacio</strong> y  a partir de ahí en sentido inverso: sin espacios al principio y creciendo el número de espacios antes de cada fila según se vaya avanzando. SI tenemos en cuenta la cantidad de elementos de cada fila que estamos pintando puede hacerse de una manera bastante sencilla.</p>
+<p>Aquí tenéis una propuesta para intentar darle esa forma geométrica a la salida siguiendo el planteamiento anterior:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Mostramos el contenido del array elemento a elemento con doble bucle y dibujando un rombo
+System.out.println(
+        "Contenido del array elemento a elemento (doble bucle) con inquietudes \"estéticas\": ");
+for (int i = 0; i &lt; arrayRombo.length; i++) {
+    // Espacios en blanco para dar forma de rombo
+    for (int j = 0; j &lt; (arrayRombo.length - arrayRombo[i].length); j++) {
+        System.out.print(" ");
+    }
+    // Contenido de la fila dibujado en la misma línea
+    // Recorrido de columnas
+    for (int j = 0; j &lt; arrayRombo[i].length; j++) {
+        System.out.printf("%c ", arrayRombo[i][j]);
+    }
+    System.out.printf("\n");
+}</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="52_inicializacin_de_arrays_multidimensionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

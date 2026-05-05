@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.1.- Label (Etiqueta) y TextField (Campo de texto) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-55"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Interfaces gráficas de usuario</a></li>
+   <li><a href="1_arquitectura_de_javafx.html" class="no-ch">1.- Arquitectura de JavaFX</a></li>
+   <li><a href="2_estructura_de_una_aplicacin.html" class="daddy">2.- Estructura de una aplicación</a>
+   <ul class="other-section">
+      <li><a href="21_grafo_de_escena.html" class="no-ch">2.1.- Grafo de escena</a></li>
+      <li><a href="22_instalar_sdk.html" class="no-ch">2.2.- Instalar SDK</a></li>
+      <li><a href="23_primer_ejemplo.html" class="no-ch">2.3.- Primer ejemplo</a></li>
+   </ul>
+   </li>
+   <li><a href="3_eventos.html" class="daddy">3.- Eventos</a>
+   <ul class="other-section">
+      <li><a href="31_modelo_de_gestin_de_eventos.html" class="no-ch">3.1.- Modelo de gestión de eventos</a></li>
+      <li><a href="32_tipos_de_eventos.html" class="no-ch">3.2.- Tipos de eventos</a></li>
+      <li><a href="33_aadir_un_manejador_de_evento.html" class="no-ch">3.3.- Añadir un manejador de evento</a></li>
+   </ul>
+   </li>
+   <li><a href="4_css.html" class="daddy">4.- CSS</a>
+   <ul class="other-section">
+      <li><a href="41_introduccin.html" class="no-ch">4.1.- Introducción</a></li>
+      <li><a href="42_hoja_de_estilo_por_defecto.html" class="no-ch">4.2.- Hoja de estilo por defecto</a></li>
+      <li><a href="43_hoja_de_estilo_especfica_de_la_escena.html" class="no-ch">4.3.- Hoja de estilo específica de la escena</a></li>
+      <li><a href="44_hoja_de_estilo_especfica_del_padre.html" class="no-ch">4.4.- Hoja de estilo específica del padre</a></li>
+      <li><a href="45_estilo_especfico_en_componente.html" class="no-ch">4.5.- Estilo específico en componente</a></li>
+   </ul>
+   </li>
+   <li><a href="5_layout_panes.html" class="daddy">5.- Layout panes</a>
+   <ul class="other-section">
+      <li><a href="51_absolute_layout.html" class="no-ch">5.1.- Absolute layout</a></li>
+      <li><a href="52_hbox.html" class="no-ch">5.2.- HBox</a></li>
+      <li><a href="53_vbox.html" class="no-ch">5.3.- VBox</a></li>
+      <li><a href="54_borderpane.html" class="no-ch">5.4.- BorderPane</a></li>
+      <li><a href="55_anchorpane.html" class="no-ch">5.5.- AnchorPane</a></li>
+      <li><a href="56_stackpane.html" class="no-ch">5.6.- StackPane</a></li>
+      <li><a href="57_flowpane.html" class="no-ch">5.7.- FlowPane</a></li>
+      <li><a href="58_tilepane.html" class="no-ch">5.8.- TilePane</a></li>
+      <li><a href="59_gridpane.html" class="no-ch">5.9.- GridPane</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_controles_ui.html" class="current-page-parent daddy">6.- Controles UI</a>
+   <ul>
+      <li id="active"><a href="61_label_etiqueta_y_textfield_campo_de_texto.html" class="active no-ch">6.1.- Label (Etiqueta) y TextField (Campo de texto)</a></li>
+      <li><a href="62_button_botn.html" class="daddy">6.2.- Button (Botón)</a>
+      <ul class="other-section">
+         <li><a href="621_aadir_imagenicono_a_botn.html" class="no-ch">6.2.1.- Añadir imagen/icono a botón</a></li>
+         <li><a href="622_validar_entrada.html" class="no-ch">6.2.2.- Validar entrada</a></li>
+      </ul>
+      </li>
+      <li><a href="63_men.html" class="no-ch">6.3.- Menú</a></li>
+      <li><a href="64_menubutton.html" class="no-ch">6.4.- MenuButton</a></li>
+      <li><a href="65_checkbox.html" class="no-ch">6.5.- CheckBox</a></li>
+      <li><a href="66_radiobutton_radiobotn.html" class="no-ch">6.6.- RadioButton (Radiobotón)</a></li>
+      <li><a href="67_combobox.html" class="daddy">6.7.- ComboBox</a>
+      <ul class="other-section">
+         <li><a href="671_seleccionar_un_valor.html" class="no-ch">6.7.1.- Seleccionar un valor</a></li>
+      </ul>
+      </li>
+      <li><a href="68_listview_lista.html" class="daddy">6.8.- ListView (Lista)</a>
+      <ul class="other-section">
+         <li><a href="681_obtener_valor_seleccionado.html" class="no-ch">6.8.1.- Obtener valor seleccionado</a></li>
+         <li><a href="682_seleccionar_varios_elementos.html" class="no-ch">6.8.2.- Seleccionar varios elementos.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="7_javafx_fxml.html" class="daddy">7.- JavaFX FXML</a>
+   <ul class="other-section">
+      <li><a href="71_javafx_scene_builder.html" class="no-ch">7.1.- JavaFX Scene Builder</a></li>
+      <li><a href="72_estructura_de_un_proyecto_fxml.html" class="daddy">7.2.- Estructura de un proyecto FXML</a>
+      <ul class="other-section">
+         <li><a href="721_el_fichero_fxml.html" class="no-ch">7.2.1.- El fichero .fxml</a></li>
+         <li><a href="722_controlador.html" class="no-ch">7.2.2.- Controlador</a></li>
+         <li><a href="723_clase_principal.html" class="no-ch">7.2.3.- Clase principal</a></li>
+         <li><a href="724_ejemplo_javafx_con_scene_builder_y_netbeans.html" class="no-ch">7.2.4.- Ejemplo JavaFX con Scene Builder y NetBeans</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="8_paso_de_informacin_entre_ventanas.html" class="daddy">8.- Paso de información entre ventanas</a>
+   <ul class="other-section">
+      <li><a href="81_paso_de_informacin_entre_ventanas_usando_fxml.html" class="no-ch">8.1.- Paso de información entre ventanas usando FXML</a></li>
+      <li><a href="82_paso_de_informacin_entre_ventanas_usando_fxml_ii.html" class="no-ch">8.2.- Paso de información entre ventanas usando FXML (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="9_grficos.html" class="daddy">9.- Gráficos</a>
+   <ul class="other-section">
+      <li><a href="91_ejemplo_diagrama_de_quesos.html" class="no-ch">9.1.- Ejemplo: diagrama de quesos</a></li>
+   </ul>
+   </li>
+   <li><a href="10_imagen_audio_y_vdeo.html" class="daddy">10.- Imagen, audio y vídeo</a>
+   <ul class="other-section">
+      <li><a href="101_imagen.html" class="no-ch">10.1.- Imagen</a></li>
+      <li><a href="102_audio.html" class="no-ch">10.2.- Audio</a></li>
+      <li><a href="103_vdeo.html" class="no-ch">10.3.- Vídeo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_lambda.html" class="no-ch">Anexo I.- Lambda</a></li>
+   <li><a href="anexo_ii_atributos_tipo_property.html" class="no-ch">Anexo II.- Atributos tipo Property</a></li>
+   <li><a href="anexo_iii_ejemplo_de_aplicacin.html" class="no-ch">Anexo III.- Ejemplo de aplicación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="6_controles_ui.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="62_button_botn.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.1.- Label (Etiqueta) y TextField (Campo de texto)</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id256">
+<div class="iDevice emphasis0">
+<div id="ta256_69" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-CC-BY" style="width: 196px;"><img src="label.jpg" alt="Etiqueta blanca con letras en rojo donde se lee Aqua Ammonia." title="Etiqueta" style="float: right;" width="196" height="200" /><figcaption class="figcaption"><a href="https://www.flickr.com/photos/hadesigns/2276724984/in/photolist-4tbP23-5g9dNZ-apkQ5k-pis6KD-qvK1k6-7Eh4Au-4nsSop-e4GL-4t7KPp-3b3tPQ-22qf85P-95caMe-szWzH-8tZwcm-ffn4k-q2zxez-b5wWzP-pRpRBe-7Xf2vm-QT3rRi-b5uJPV-rxPmUh-6RS8pZ-qvK22M-7Xf2y5-4socQB-qN7HRC-oAo6y-jBtMc-ceo7kf-js8pqs-9TqJaq-oXgUJL-apoyYj-ocQz5M-7xBnhV-69wTuV-7XbP7H-apx29X-57mCpY-q2qcDX-apoz8b-ou7741-223aBW-4SgZ5r-apoykq-xHpyH-ucUXW-apkQtv-qvCCKf" target="_blank" class="author">HA! Designs - Artbyheather</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank" title="Creative Commons BY">CC BY</a><span class="sep">)</span></span></figcaption></figure>
+<p><br />Una instancia de la clase <code>Label</code> representa un control de etiqueta. Este control consiste simplemente en una etiqueta que se utiliza para describir otro componente. Puede mostrar un texto, un icono o imagen o ambas cosas. Por lo general, una etiqueta se coloca al lado de (a la derecha o izquierda) o en la parte superior del nodo que describe. Una etiqueta no puede tener el foco, es decir, no se puede acceder a ella mediante la tecla <strong>Tab</strong> o el click del ratón.</p>
+<p>Un <code>TextField</code> es un control de entrada de texto. Hereda de la clase <code>TextInputControl</code>. Permite al usuario introducir una sola línea de texto plano. Si necesitamos un control para introducir más de una línea, entonces hay que recurrir al control <code>TextArea</code>.</p>
+<p>En un <code>TextField</code>, al definir tanto texto como contenido gráfico para un botón, se puede usar el método <code>setGraphicTextGap</code> para establecer el espacio entre ellos.<br /><br />Además, se puede variar la posición del contenido de la etiqueta dentro de su área de diseño mediante el método <code>setTextAlignment</code>. También puede definir la posición del gráfico en relación con el texto aplicando el método <code>setContentDisplay</code> y especificando una de las siguientes constantes de <code>ContentDisplay</code>: <code>LEFT</code>, <code>RIGHT</code>, <code>CENTER</code>, <code>TOP</code>, <code>BOTTOM</code>.</p>
+<p>Se puede utilizar el método <code>setPrefWidth</code> para indicar el tamaño del control. Así, dado un campo de texto llamado por ejemplo <code>ctex</code>, con <code>ctex.setPrefWidth(50)</code> le estaríamos dando una anchura de 50.</p>
+<p>En el siguiente ejemplo se puede ver el uso de etiquetas y campos de texto.</p>
+<p>Al principio se declaran un par de etiquetas donde se muestran mensajes al usuario. Se muestra también cómo emplear una imagen, una lupa que se muestra en la ventana como podrás ver cuando ejecutes el proyecto, que está más abajo para descargar.</p>
+<p>Cuando se introduce algo en el campo de texto y se pulsa la tecla <strong>Intro</strong>, se escribe mediante una etiqueta, llamada <code>etiqueta</code>, que el campo ha cambiado. Fíjate que eso se especifica mediante el método <code>setOnAction</code>.</p>
+<p>Debes observar también que para la etiqueta <code>labelNombre</code> establecemos manejadores, esta vez sin la notación lambda, para que se haga un <span lang="en">zoom</span> cuando con el puntero del ratón se acerque a ella, y se quite el <span lang="en">zoom</span> al alejarnos, al salir de ella.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Ejemplo de uso de etiquetas y campos de texto en JavaFX
+ * Se muestra también cómo se puede asociar una imagen a una etiqueta
+ * 
+ * @author JJBH
+ */
+public class EtiquetasyTexto extends Application {
+    
+    // Crear etiqueta
+    Label etiqueta = new Label("Escribe tu nombre en los campos de texto.");
+    // Crear etiqueta para el nombre
+    Label labelNombre = new Label("Nombre:") ;
+    
+    @Override
+    public void start(Stage primaryStage) {
+        
+        // Dar color a la etiqueta
+        etiqueta.setTextFill(Color.web("#0076a3"));
+        
+        // Obtener image y asoociarla a la etiqueta.
+        // (Estamos suponiendo que existe esa imagen, por lo que deberíamos
+        // capturar las excepciones que puedan surgir en este punto, por si no
+        // existiera, pero lo omitimos por claraida de este código.
+        Image image = new Image(getClass().getResourceAsStream("lupa.png"));
+        etiqueta.setGraphic(new ImageView(image));
+               
+
+        // Crear campos de texto
+        TextField campoNombre = new TextField();
+        TextField campoApellidos = new TextField();
+        // Ancho para mostraar 15 caracteres
+        campoNombre.setPrefColumnCount(15);
+        campoApellidos.setPrefColumnCount(15);
+        
+        // Establecer los manejadores ActionEvent para ambos campos de texto
+        campoNombre.setOnAction((ActionEvent e) -&gt; {
+            etiqueta.setText("Has cambiado el nombre");
+        });
+        campoApellidos.setOnAction((ActionEvent e) -&gt; {
+            etiqueta.setText("Has cambiado los apellidos");
+        });
+        
+        
+        // Para la etiqueta del nombre establecemos manejadores para que se
+        // haga un zoom, cuando con el ratón nos acerquemos a ella, y se quite
+        // el zoom al alejarnos, al salir de ella.
+        labelNombre.setOnMouseEntered(new EventHandler&lt;MouseEvent&gt;() {
+            @Override public void handle(MouseEvent e) {
+                labelNombre.setScaleX(1.5);
+                labelNombre.setScaleY(1.5);
+            }
+        });
+        labelNombre.setOnMouseExited(new EventHandler&lt;MouseEvent&gt;() {
+            @Override public void handle(MouseEvent e) {
+                labelNombre.setScaleX(1);
+                labelNombre.setScaleY(1);
+            }
+        });
+        
+        
+
+        // Crear un Gridpane
+        GridPane panel = new GridPane();
+        
+        // Añadir etiquetas y campos al GridPane
+        panel.addRow(0, etiqueta);
+        panel.addRow(1, labelNombre, campoNombre);
+        panel.addRow(2, new Label("Apellidos:"), campoApellidos);
+        
+        // Establecer el tamaño del panel
+        panel.setMinSize(350, 250);
+        // Establecer propiedades del GridPane
+        panel.setStyle("-fx-padding: 10;" +
+        "-fx-border-style: solid inside;" +
+        "-fx-border-width: 2;" +
+        "-fx-border-insets: 5;" +
+        "-fx-border-radius: 5;" +
+        "-fx-border-color: blue;");
+        
+        // Crear la escena
+        Scene scene = new Scene(panel);
+        
+        // Título de la ventana
+        primaryStage.setTitle("Etiquetas y campos de texto");
+        // Añadir la escena al escenario
+        primaryStage.setScene(scene);
+        // Mostrar el escenario
+        primaryStage.show();
+    }
+    
+    public static void main(String[] args) {
+        Application.launch(args);
+    }
+}</code></pre>
+</div>
+</div>
+<p>El proyecto puedes descargarlo de:</p>
+<p style="text-align: center;"><a class="paquete" title="Descargar el proyecto con el ejemplo de uso de los componentes etiqueta y texto [zip – 40 KB]" href="EtiquetasyTexto.1.zip" target="_blank">Ejemplo de uso de Label y TextField</a> <span class="tamano">(40 KB)</span></p>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="6_controles_ui.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="62_button_botn.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

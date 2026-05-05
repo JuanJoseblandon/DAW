@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.6.1. Constructores y herencia (II) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-59"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_herencia.html" class="current-page-parent daddy">3.- Herencia.</a>
+   <ul>
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li class="current-page-parent"><a href="36_constructores_y_herencia_i.html" class="current-page-parent daddy">3.6.- Constructores y herencia (I).</a>
+      <ul>
+         <li id="active"><a href="361_constructores_y_herencia_ii.html" class="active no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="36_constructores_y_herencia_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3.6.1. Constructores y herencia (II)</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id100">
+<div class="iDevice emphasis0">
+<div id="ta100_154" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="toolbox.png" alt="Caja de herramientas." title="Caja de herramientas" style="float: right;" width="240" height="239" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/caja-de-herramientas-instrumentos-29058/" target="_blank" class="author" title="Acceder a la imagen de Clker-Free-Vector-Images en Pixabay. (Se abre en una nueva ventana)">Clker-Free-Vector-Images</a> <span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Licencia Pixabay</a></span><span class="sep">)</span></div>
+</div>
+<p>En algunos casos es posible que las comprobaciones que se lleven a cabo a la hora de instanciar una clase derivada den lugar a que no pueda instanciarse finalmente el objeto, aunque las comprobaciones del constructor de la clase base sí hayan sido satisfactorias.</p>
+<p>Un ejemplo podría ser el que hemos visto del identificador único de los dispositivos domóticos. Imaginemos que intentamos instanciar un objeto de tipo <code>Bombilla</code> con los siguientes parámetros:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Bombilla b = new Bombilla ("b1", 5, -1);  // Descripción "b1", ubicación 5, intensidad inicial -1</code></pre>
+</div>
+</div>
+<p>Si recordamos el código de ese constructor con tres parámetros, sabremos que primero se hará una llamada a <code>super</code> (constructor de la superclase o clase base) con los dos primeros parámetros (valores <code>"b1</code>" y <code>5</code>), con los cuales no va a tener ningún problema y permitirán que se ejecute correctamente el constructor de la clase base (<code>Dispositivo</code>). Esto dará lugar a que el atributo de objeto <code>id</code> pase a valer 1 y que el atributo de clase <code>Dispositivo.nextId</code> pase a valer 2.</p>
+<p>Ahora bien, tras eso vendrá la parte de comprobación específica de la clase <code>Bombilla</code> y se observará que el parámetro <code>intensidadInicial</code>, con valor -1, no será válido, pues no se encuentra en el rango permitido. Eso hará que salte una excepción:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Exception in thread "main" java.lang.IllegalArgumentException: Intensidad inicial no válida: -1
+</code></pre>
+</div>
+</div>
+<p>Si el programa que lleva a cabo esta instanciación (llamada a <code>new</code>) está bien construido y, por tanto, ese fragmento de código está encerrado en un <code>try-catch</code>, no debería haber mayor problema desde el punto de vista del control de posibles errores. La cuestión está en que ahora el atributo <code>Dispositivo.nextId</code> vale 2 y no va a haber ningún dispositivo cuyo <code>id</code> sea 1, pues este "intento" de creación de una bombilla ha sido fallido y se ha "perdido" ese valor. Podemos verlo claramente si ejecutamos el siguiente fragmento de código:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int[] valoresPrueba = {-1, 0, 2, 12, 15, -1, 7, -5, 0, 9};
+for ( int intensidad : valoresPrueba ) {
+    try {
+        Bombilla b = new Bombilla("b1", 5, intensidad);
+        System.out.printf("Bombilla creada correctamente: %s\n", b.toString());
+    } catch (IllegalArgumentException ex) {
+        System.out.printf("Error: %s\n", ex.getMessage());
+    }
+}</code></pre>
+</div>
+</div>
+<p>Algunos de los valores de intensidad inicial son válidos y otros no. Eso hará que se "pierdan" valores posibles de <code>id</code>, pues el contenido del atributo <code>Dispositivo.nextId</code> se va incrementando en 1 con cada llamada al constructor independientemente de que finalmente llegue a instanciarse objeto o no. El resultado de la ejecución debería ser el siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Error: Intensidad inicial no válida: -1
+Bombilla creada correctamente: tipo:Bombilla  id:2 descripción:"b1" ubicación:5 estado:apagada int:0  NVM:0  
+Bombilla creada correctamente: tipo:Bombilla  id:3 descripción:"b1" ubicación:5 estado:encendida int:2  NVM:0  
+Error: Intensidad inicial no válida: 12
+Error: Intensidad inicial no válida: 15
+Error: Intensidad inicial no válida: -1
+Bombilla creada correctamente: tipo:Bombilla  id:7 descripción:"b1" ubicación:5 estado:encendida int:7  NVM:0  
+Error: Intensidad inicial no válida: -5
+Bombilla creada correctamente: tipo:Bombilla  id:9 descripción:"b1" ubicación:5 estado:apagada int:0  NVM:0  
+Bombilla creada correctamente: tipo:Bombilla  id:10 descripción:"b1" ubicación:5 estado:encendida int:9  NVM:0</code></pre>
+</div>
+</div>
+<p>Si esto no tiene mayor importancia para nuestra aplicación, no habrá que darle más vueltas. Se asume que no necesariamente tienen por qué existir todos los posibles <code>id</code> consecutivos y que se pueden "perder" algunos cuando se intenta crear objetos que luego no pueden llegar a ser instanciados por no cumplir los parámetros del constructor alguna condición necesaria.</p>
+<p>Si, por el contrario, no podemos perder posibles valores de <code>id</code> porque eso es importante para el funcionamiento de nuestra aplicación, entonces habría que idear alguna manera evitar esa "pérdida" que se produce. Una forma de plantearlo podría ser llevando a cabo primero las comprobaciones específicas en el constructor de la clase hija (<code>Bombilla</code>) y, si todo ha ido bien, entonces pasar al constructor de la superclase.:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public Dispositivo(String descripción, int ubicacion) throws IllegalArgumentException {
+    if (ubicacion &lt; Domotica.MIN_UBICACION || ubicacion &gt; Domotica.MAX_UBICACION) {
+        throw new IllegalArgumentException (String.format("Ubicación no válida: %d", ubicacion));
+    } else {
+        // Llamada al constructor de la superclase
+      
+        ...
+</code></pre>
+</div>
+</div>
+<p>¿Cuál es el problema ahora? Pues que esto en Java (y en muchos otros lenguajes orientados a objetos) esto no funciona porque si queremos hacer una invocación a <code>super()</code> (constructor de la superclase) dentro del constructor de una  clase derivada, lo primero que debemos hacer es esa llamada. No podemos hacer otra cosa antes. Por tanto, el fragmento de código anterior nunca va a compilar.</p>
+<p>¿Cómo podemos resolver esto entonces? Una posibilidad sería implementar un método "fábrica" o "pseudoconstructor" como los que vimos en la unidad anterior. Se trataba de métodos estáticos (no necesitaban un objeto para poder ser ejecutados) que "creaban" un objeto de su clase de una manera similar a un constructor, pero añadiendo algunas comprobaciones o funcionalidades extra. En realidad, en su interior deben contener obligatoriamente la llamada a un constructor, pero con la ventaja de que antes de realizar esa invocación, pueden llevar a cabo verificaciones de cualquier tipo sobre los parámetros recibidos. Eso nos permitiría implementar lo anterior sin errores de compilación.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id113">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta113_148" class="block story iDevice_content">
+<p><strong>Método fábrica para evitar la pérdida identificadores secuenciales</strong></p>
+</div>
+<div id="taquesQuestion0b113" class="block iDevice_content">
+<p>Dada la clase <code>Bombilla</code>, implementa un método <code>creaBombilla</code> con los mismos parámetros que el constructor de tres parámetros, que evite que se incremente el atributo estático <code>Dispositivo.nextId</code> si finalmente no es posible instanciar un objeto <code>Bombilla</code>.</p>
+<p>En este caso, la ejecución del siguiente fragmento de código:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for ( int intensidad : valoresPrueba ) {
+    try {
+        Bombilla b =Bombilla.creaBombilla( "b1", 5, intensidad);
+        System.out.printf("Bombilla creada correctamente: %s\n", b.toString());
+    } catch (IllegalArgumentException ex) {
+        System.out.printf("Error: %s\n", ex.getMessage());
+    }
+}</code></pre>
+</div>
+</div>
+<p>debería dar lugar a lo siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Error: Intensidad inicial no válida: -1
+Bombilla creada correctamente: tipo:Bombilla  id:1 descripción:"b1" ubicación:5 estado:apagada int:0  NVM:0  
+Bombilla creada correctamente: tipo:Bombilla  id:2 descripción:"b1" ubicación:5 estado:encendida int:2  NVM:0  
+Error: Intensidad inicial no válida: 12
+Error: Intensidad inicial no válida: 15
+Error: Intensidad inicial no válida: -1
+Bombilla creada correctamente: tipo:Bombilla  id:3 descripción:"b1" ubicación:5 estado:encendida int:7  NVM:0  
+Error: Intensidad inicial no válida: -5
+Bombilla creada correctamente: tipo:Bombilla  id:4 descripción:"b1" ubicación:5 estado:apagada int:0  NVM:0  
+Bombilla creada correctamente: tipo:Bombilla  id:5 descripción:"b1" ubicación:5 estado:encendida int:9  NVM:0  </code></pre>
+</div>
+</div>
+<p>donde podemos observar que no se pierde ningún valor de <code>id</code> aunque se intenten crear objetos <code>Bombilla</code> con valores erróneos.</p>
+</div>
+<form name="feedback-form-quesFeedback0b113" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b113text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b113" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b113" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La implementación del método fábrica podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public static Bombilla creaBombilla (String descripcion, int ubicacion, int intensidadInicial) throws IllegalArgumentException {
+    // Llevamos a cabo las comprobaciones específicas de esta clase
+    if (intensidadInicial&lt;Bombilla.MIN_INTENSIDAD || intensidadInicial&gt;Bombilla.MAX_INTENSIDAD) {
+        throw new IllegalArgumentException (String.format("Intensidad inicial no válida: %d", intensidadInicial));
+    }
+    // Si todo ha ido bien, entonces llamamos al constructor
+    return new Bombilla (descripcion, ubicacion, intensidadInicial);
+}</code></pre>
+</div>
+</div></div>
+</form>
+<div id="taquesQuestion1b113" class="block iDevice_content">
+<p>Una vez que hemos implementado ese método, ¿crees que deberíamos hacer algo respecto a su constructor equivalente? ¿Podríamos eliminar las comprobaciones específicas de él dado que ya se van a hacer en el método fábrica? ¿Deberíamos evitar que pudiera usar externamente, fuera de la clase? ¿Cómo harías todo esto?</p>
+</div>
+<form name="feedback-form-quesFeedback1b113" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b113text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b113" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b113" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En efecto, dado que las comprobaciones específicas sobre la intensidad inicial ya se van a llevar a cabo en el método fábrica, no tiene mucho sentido repetirlas en el constructor. Ahora bien, debemos evitar que el constructor pueda usarse desde fuera para que solo lo use el método fábrica (o algún otro método de dentro de la clase). Eso podemos resolverlo haciendo privado el constructor.</p>
+<p>El código del constructor podría quedar entonces así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>private Bombilla (String descripcion, int ubicacion, int intensidadInicial) throws IllegalArgumentException {
+    super(descripcion, ubicacion); // Primero llamamos al constructor de la superclase para realizar las comprobaciones e inicializaciones genéricas
+    // Si todo ha ido bien, entonces llevamos a cabo las asignaciones específicas    
+    this.intensidad= intensidadInicial;
+    this.numVecesManipulada = 0;
+}</code></pre>
+</div>
+</div>
+<p></p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id101">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta101_128" class="block iDevice_content">
+<p><strong>Patrones de diseño</strong></p>
+<p>Los patrones de diseño son técnicas para resolver problemas comunes en el desarrollo de software y otros ámbitos referentes al diseño de interacción o interfaces. Se trata de soluciones generales y reutilizables para algún problema común en el diseño de software. Es una descripción o plantilla que se puede aplicar a diferentes situaciones para resolver problemas específicos y mejorar la estructura, la flexibilidad y la eficiencia del software. El estudio de los patrones de diseño es algo que trasciende a los contenidos de esta unidad en particular y de este módulo en general. Simplemente, vamos a hacer referencia a ello como propuestas ingeniosas a problemas similares al anterior u otros que te podrás ir encontrando a lo largo de tu trayectoria profesional futura.</p>
+<p>Existen diversos patrones de diseño que puedan ayudar a mejorar la estructura y flexibilidad de nuestro código (<span lang="en"><em><span lang="en">factory method</span></em></span>, <em><span lang="en">abstract </span></em><span lang="en"><em><span lang="en">factory</span></em>, <em>builder</em></span>, <em><span lang="en">prototype</span></em>, <em><span lang="en">singleton</span></em>, <abbr title="etcétera">etc.</abbr>). Ahora bien, como ya hemos indicado, el estudio de los patrones de diseño trasciende a los contenidos de módulo y no los vamos a ver aquí. Si tienes interés en este tema puedes consultar las siguientes fuentes:</p>
+<ul>
+<li class="lista_verificacion"><a href="https://es.wikipedia.org/wiki/Patr%C3%B3n_de_dise%C3%B1o" title="Artículo en Wikipedia sobre patrones de diseño (se abre en una nueva ventana)." target="_blank" class="html">Artículo en Wikipedia sobre patrones de diseño</a>.</li>
+<li class="lista_verificacion"><a href="https://dev.to/gelopfalcon/los-7-patrones-de-diseno-de-software-mas-importantes-28l2" title="Artículo sobre los siete patrones de diseño más importantes (se abre en una nueva ventana)" target="_blank" class="html">Artículo sobre los siete patrones de diseño más importantes</a>.</li>
+</ul>
+<p><strong>El patrón de diseño <em>Factory Method</em></strong>:</p>
+<p>El patrón de diseño <em>Factory Method</em> es un patrón creacional que proporciona una interfaz para crear objetos, pero delega la responsabilidad de la creación de objetos a las clases derivadas o subclases. El objetivo principal de este patrón es permitir la creación de objetos sin especificar explícitamente la clase concreta del objeto que se va a crear. Esto proporciona flexibilidad y extensibilidad al diseño, ya que permite agregar nuevas subclases que implementan el método de creación sin afectar el código existente que utiliza el <em>Factory Method</em>. Centraliza en una clase constructora la creación de objetos de un subtipo de un tipo determinado, ocultando al usuario la casuística, es decir, la diversidad de casos particulares que se pueden prever, para elegir el subtipo que crear. Parte del principio de que las subclases determinan la clase a implementar.</p>
+<p>Este enfoque también podría haber sido una opción para intentar resolver el problema anterior sobre la "pérdida" de identificadores. Como hemos dicho, es algo que se sale fuera de los contenidos de este módulo, pero es interesante que conozcas la existencia de estas técnicas por si en el futuro te interesara profundizar más en este tema. Puedes encontrar más información sobre este patrón en concreto en:</p>
+<ul>
+<li class="lista_verificacion"><a href="https://es.wikipedia.org/wiki/Factory_Method_(patr%C3%B3n_de_dise%C3%B1o)" title="Artículo en Wikipedia sobre el patrón Factory Method (se abre en una nueva ventana)." target="_blank" class="html">Artículo en Wikipedia sobre el patrón <em><span lang="en">Factory Method</span></em></a>.</li>
+<li class="lista_verificacion"><a href="https://refactoring.guru/es/design-patterns/factory-method" title="Artículo en refactoring.guru sobre el patrón Factory Methodu (se abre en una nueva ventana)" target="_blank" class="html">Artículo en <em>refactoring.guru</em> sobre el patrón <em>Factory Method</em></a>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="36_constructores_y_herencia_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

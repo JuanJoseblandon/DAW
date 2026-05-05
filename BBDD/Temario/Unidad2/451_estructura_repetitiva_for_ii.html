@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.5.1.- Estructura repetitiva for (II). </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-33"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul class="other-section">
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructuras_de_seleccin_o_condicionales.html" class="daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul class="other-section">
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li><a href="34_estructura_selectiva_mltiple_switch_i.html" class="daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul class="other-section">
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="current-page-parent daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul>
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li class="current-page-parent"><a href="45_estructura_repetitiva_for_i.html" class="current-page-parent daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul>
+         <li id="active"><a href="451_estructura_repetitiva_for_ii.html" class="active no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul class="other-section">
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="45_estructura_repetitiva_for_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_estructuras_de_salto_incondicional.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.5.1.- Estructura repetitiva for (II).</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id95">
+<div class="iDevice emphasis0">
+<div id="ta95_69" class="block iDevice_content">
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a title="Imagen Ampliada para Diagrama de flujo de sentencia for. " href="Flujograma_for.png"><img src="Flujograma_for_miniatura.png" alt="Estructura repetitiva for. Flujograma. Se ve un rectángulo con la sentencia que asigna a la variable v el valor  v1. La flecha de flujo llega a un rombo en cuyo interior aparece la condición de que el valor de la variable v sea distinto de un valor vi. Si es qeu sí, se realizan las acciones que aparecen dentro de un rectángulo, y se actualiza el valor de v incrementándolo en 1, para volver la flecha de control de flujo al rombo con la condición antes mencionada para ser evaluada de nuevo. Si el resultado es que no, se termina. Junto a este diagrama de flujo, aparece otra representación, que en un exágono achatado contiene la inicialización de la variable que controla el bucle (v=v1), el valor final (vi) y el incremento en cada vuelta (1). la flecha de control de flujo baja hasta un recuadro que contiene las acciones a realizar, y vuelve la flecha al hexágono anterior, de donde sale otra flecha, que termina, y que es la que se tomará cuando v haya alcanzado el valor final vi." title="Diagramas de flujo sentencia for. " class="imagen_ampliable" style="float: right;" /></a></div>
+</div>
+<p>En las estructuras de tipo <code>for</code> en Java podemos prescindir de alguno de los tres elementos que la forman e incluso, podemos utilizar más de una variable contadora separando estas por comas. Se trata de algo que no usarás a menudo, pero que es bueno que al menos veas una vez por si te lo encuentras en código ya escrito.</p>
+<p>Veamos algunos ejemplos:</p>
+<p>1. Inicialización de más de una variable:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for (contador1=0, contador2=0 ; contador1 &lt;= 10 ; contador1++)</code></pre>
+</div>
+</div>
+<p>2. Condiciones  complejas donde se usan operadores lógicos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for (contador1=0 ; contador1 &lt;= 10 &amp;&amp; limite&lt;=10; contador1++) </code></pre>
+</div>
+</div>
+<p>3. Incremento o decremento de más de un contador:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for (contador1=0, contador2=0; contador1 &lt;= 10 &amp;&amp; contador2&lt;=10; contador1++, contador2++)</code></pre>
+</div>
+</div>
+<p>4. Ausencia de inicialización:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for ( ; contador1 &lt;= 10 ; contador1++)</code></pre>
+</div>
+</div>
+<p>5. Ausencia de inicializaciones y de incrementos o decrementos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for ( ; contador1 &lt;= 10 ; )</code></pre>
+</div>
+</div>
+<p>Y muchos otros ejemplos que se te puedan ocurrir. Lo que sí debes de tener en cuenta es que si omites alguno de sus componentes esa función deberá realizarse en otra parte del código. Por ejemplo, si omites la inicialización, la variable contador deberás inicializarla tú antes al valor adecuado para que el bucle funcione como tú quieres que lo haga. En otros casos, si omites el incremento/decremento, será tu responsabilidad en el cuerpo del bucle hacer que el contador pueda modificar su valor en algún momento para que el ciclo no sea infinito.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id145">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta145_63" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b145" class="block iDevice_content">
+<p>Al igual que se pedía en apartados anteriores, ahora vamos os vamos a pedir que realicéis el ejercicio de la tabla de multiplicar del número 7, pero usando un bucle una estructura repetitiva tipo <code>for</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback0b145" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b145text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b145" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b145" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Una posible solución del ejercicio podría ser la siguiente:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>/**
+ * Mostrar la tabla de 7 usando una estructura repetitiva for.
+ * @author Profesor
+ */
+public class RepetitivaFor {
+
+    /**
+     * En esta solución se utiliza la estructura repetitiva for para representar
+     * en pantalla la tabla de multiplicar del siete.
+     */
+    public static void main(String[] args) {
+        // Declaración e inicialización de variables
+        int numero = 7;
+        int contador;
+        int resultado = 0;
+
+        /* Paso 1. Mostrar la cabecera de la tabla */
+        System.out.println("Tabla de multiplicar del " + numero);
+        System.out.println(".............................. ");
+
+        /* Paso 2. Calcular la tabla de multiplicar del 7 usando un bucle for.        
+         * La cabecera del bucle incorpora la inicialización de la variable
+         * de control, la condición de multiplicación hasta el 10 y el
+         * incremento de dicha variable de uno en uno en cada iteración del bucle. 
+         * En este caso contador++ incrementará en una unidad el valor de 
+         * dicha variable.
+         */
+        for (contador = 1; contador &lt;= 10; contador++) {
+            resultado = contador * numero;
+            System.out.println(numero + " x " + contador + " = " + resultado);
+        }
+        
+        /* Nota: A través del operador + aplicado a cadenas de caracteres,         
+         * concatenamos los valores de las variables con las cadenas de
+         * caracteres que necesitamos para representar correctamente la
+         * salida de cada multiplicación.
+         */
+    }
+}</code></pre>
+</div>
+</div>
+<p> </p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id235">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Propuesto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta235_148" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b235" class="block iDevice_content">
+<p>Escribe en Java un programa que solicite un <strong>número n</strong> para calcular la <strong>tabla de multiplicar de ese número n</strong> usando un bucle tipo <code>for</code>.</p>
+</div>
+<div id="taquesQuestion1b235" class="block iDevice_content">
+<p>Una vez lo tengas hecho, añade a la entrada de datos una comprobación para que el número n introducido esté obligatoriamente entre 1 y 10. Si no es así, se volverá a solicitar el número hasta que esté dentro de ese rango.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id91">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-91_60" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion91_60" class="block question iDevice_content">
+<p><strong>Cuando construimos la cabecera de un bucle for, podemos prescindir de alguno de los tres elementos que la forman e incluso, podemos utilizar más de una variable contadora separando éstas por comas. Pero, ¿qué conseguiremos si construimos un bucle de la siguiente forma?</strong></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>for ( ; ; ){ //instrucciones }</code></pre>
+</div>
+</div>
+<div class="texto_izquierda"></div>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i91_63" class="sr-av"><a href="#answer-91_63">Opción 1</a></label><input type="radio" name="option91_60" id="i91_63" class="exe-radio-option exe-radio-option-0-3-91_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-91_63"><a name="answer-91_63"></a>
+<div id="taans91_63" class="block iDevice_content">
+<p align="justify">Un bucle infinito.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i91_116" class="sr-av"><a href="#answer-91_116">Opción 2</a></label><input type="radio" name="option91_60" id="i91_116" class="exe-radio-option exe-radio-option-1-3-91_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-91_116"><a name="answer-91_116"></a>
+<div id="taans91_116" class="block iDevice_content">
+<p align="justify">Nada, dar&aacute; un error.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i91_119" class="sr-av"><a href="#answer-91_119">Opción 3</a></label><input type="radio" name="option91_60" id="i91_119" class="exe-radio-option exe-radio-option-2-3-91_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-91_119"><a name="answer-91_119"></a>
+<div id="taans91_119" class="block iDevice_content">
+<p align="justify">Un bucle que se ejecutar&iacute;a una &uacute;nica vez.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b91_60" class="feedback js-hidden"><a name="sa0b91_60"></a>
+<div id="taf91_63" class=" iDevice_content">
+<p align="justify">Efectivamente. La construcci&oacute;n de la cabecera del bucle ha prescindido de cada una de las partes t&iacute;picas (inicializaci&oacute;n, condici&oacute;n e iteraci&oacute;n), pero al mantener los puntos y comas en los lugares adecuados, el conjunto de instrucciones que pudieran incluirse en el cuerpo del bucle estar&aacute;n ejecut&aacute;ndose eternamente.</p>
+</div>
+</div>
+<div id="sa1b91_60" class="feedback js-hidden"><a name="sa1b91_60"></a>
+<div id="taf91_116" class=" iDevice_content">
+<p align="justify">Incorrecto. La sintaxis es v&aacute;lida y lo que estar&iacute;amos creando es un bucle infinito.</p>
+</div>
+</div>
+<div id="sa2b91_60" class="feedback js-hidden"><a name="sa2b91_60"></a>
+<div id="taf91_119" class=" iDevice_content">
+<p align="justify">Incorrecto. Al no existir inicialización, condición ni iteración, estaríamos construyendo un bucle infinito.</p>
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-91_63">Opción correcta</a><span> (<a href="#sa0b91_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-91_116">Incorrecto</a><span> (<a href="#sa1b91_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-91_119">Incorrecto</a><span> (<a href="#sa2b91_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice em_iDevice_recomendacionfpd" id="id135">
+<div class="iDevice emphasis_recomendacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_recomendacionfpd.png)"><h2 class="iDeviceTitle">Recomendación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta135_46" class="block iDevice_content">
+<p><strong>Error com&uacute;n de programaci&oacute;n</strong></p>
+<ul class="lista_verificacion">
+<li>Utilizar un operador relacional incorrecto o un valor final incorrecto de un contador de ciclo en la condici&oacute;n de continuaci&oacute;n de ciclo de una instrucci&oacute;n de repetici&oacute;n puede producir un error por desplazamiento en 1.</li>
+<li>Utilizar comas en vez de los dos signos de punto y coma requeridos en el encabezado de una instrucci&oacute;n <code>for </code>es un error de sintaxis.</li>
+<li>Cuando se declara la variable de control de una instrucci&oacute;n <code>for</code> en la secci&oacute;n de inicializaci&oacute;n del encabezado del <code>for</code>, si se utiliza la variable de control fuera del cuerpo <code>for</code> se produce un error de compilaci&oacute;n.</li>
+<li>Colocar un punto y coma inmediatamente a la derecha del par&eacute;ntesis derecho del encabezado de un&nbsp;<code>for</code> convierte el cuerpo de ese&nbsp;<code>for</code> en una instrucci&oacute;n vac&iacute;a. Por lo general, se trata de un error l&oacute;gico.</li>
+<li>No utilizar el operador relacional apropiado en la condici&oacute;n de continuaci&oacute;n de un ciclo que cuente en forma regresiva (como usar <code>i &lt;= 1</code> en lugar de <code>i &gt;= 1 </code>en un ciclo que cuente en forma regresiva hasta llegar a 1) es generalmente un error l&oacute;gico.</li>
+</ul>
+<p><strong>Buena pr&aacute;ctica de programaci&oacute;n</strong></p>
+<ul class="lista_verificacion">
+<li>Utilizar el valor final en la condici&oacute;n de una instrucci&oacute;n de una instrucci&oacute;n <code>for</code> (o <code>while</code>) con el operador relacional &lt;= nos ayuda a evitar errores por desplazamiento en 1. Por ejemplo, para un ciclo que imprime valores del 1 al 10, la condici&oacute;n de continuaci&oacute;n del ciclo debe ser contador &lt;= 10, en vez de contador &lt; 10 (lo cual produce un error por desplazamiento en uno) o contador &lt; 11 (que es correcto). Muchos programadores prefieren el llamado conteo con base 0, en el cual para contar 10 veces, contador se inicializar&iacute;a a cero y la prueba de continuaci&oacute;n del ciclo ser&iacute;a contador &lt; 10.</li>
+<li>Limita el tama&ntilde;o de los encabezados de las instrucciones de control a una sola l&iacute;nea, si es posible.</li>
+</ul>
+<p><strong>Notas para prevenir errores</strong></p>
+<ul class="lista_verificacion">
+<li>Los ciclos infinitos ocurren cuando la condici&oacute;n de continuaci&oacute;n del ciclo en una instrucci&oacute;n de repetici&oacute;n nunca se vuelve false. Para evitar esta situaci&oacute;n en un ciclo controlado por un contador, debes asegurarte que la variable de control se incremente (o decremente) durante cada iteraci&oacute;n del ciclo.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id236">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicios Resueltos</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta236_148" class="block story iDevice_content">
+<p>Vamos a intentar resolver algunos de los ejercicios planteados en apartados anteriores utilizando la estructura de tipo <code>for</code>.</p>
+</div>
+<div id="taquesQuestion0b236" class="block iDevice_content">
+<p>1. Escribe un programa en Java que muestre por pantalla una cuenta atrás que vaya de diez en diez, comenzando en 100 y terminando en 0.</p>
+<p>La salida debería ser algo similar a lo siguiente:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Cuenta atrás desde 100 hasta 0, de 10 en 10.
+100 90 80 70 60 50 40 30 20 10 0 </code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback0b236" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b236text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b236" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b236" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println ("Cuenta atrás desde 100 hasta 0, de 10 en 10.");
+for (int contador=100; contador&gt;=0; contador -=10 ) { 
+    System.out.print (contador + " ");
+}
+System.out.println ();</code></pre>
+</div>
+</div></div>
+</form>
+<div id="taquesQuestion1b236" class="block iDevice_content">
+<p>2. Escribe un programa en Java que solicite un número natural positivo n y calcule y muestre por pantalla el valor de su factorial n!</p>
+<p>Aquí tienes un ejemplo de una posible ejecución:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Introduzca un número n para calcular su factorial: 6
+El factorial n! es 720.</code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback1b236" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b236text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b236" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b236" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+// ------------------------
+Scanner teclado = new Scanner(System.in);  
+int numero;            // Entrada
+int productoAcumulado; // acumulador
+
+// Entrada de datos
+// ----------------
+System.out.print ("Introduzca un número n para calcular su factorial: ");
+numero = teclado.nextInt();
+
+// Procesamiento
+// -------------
+          // Iniciamos contador
+productoAcumulado=1;  // Iniciamos acumulador (no puede iniciarse a cero porque es multiplicativo)
+// Recorremos números desde inicio hasta fin
+for (int contador= 1 ; contador &lt;= numero; contador++) {
+    productoAcumulado *= contador;  // Vamos acumulando productos
+}
+
+// Salida de resultados
+// --------------------
+System.out.println ("El factorial n! es " + productoAcumulado + ".");
+System.out.println ();</code></pre>
+</div>
+</div></div>
+</form>
+<div id="taquesQuestion2b236" class="block iDevice_content">
+<p>3. Escribe un programa en Java que solicite un número natural positivo n y calcule y muestre por pantalla su número de cifras aplicando el proceso de cálculo que consiste en ir diviendo entre 10 hasta que se obtenga cero como cociente. Recuerda que debes trabajar con números enteros y no reales.</p>
+<p>Aquí tienes un ejemplo de una posible ejecución:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Introduzca el número n para calcular su número de cifras: 29000
+El número de cifras de n es 5.</code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback2b236" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b236text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b236" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b236" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+// ------------------------
+Scanner teclado = new Scanner(System.in);  
+int numero;     // Entrada
+int numCifras;  // contador (para ir "contando" las cifras)
+
+// Entrada de datos
+// ----------------
+System.out.print ("Introduzca el número n para calcular su número de cifras: ");
+numero = teclado.nextInt();
+
+// Procesamiento
+// -------------
+numCifras= 0;      
+// Vamos dividiendo mientras el residuo sea mayor que cero
+for (int residuo=numero; residuo &gt; 0 ; residuo /= 10) {
+    numCifras++;  // Incrementamos el contador por cada vez que se pueda dividir
+}
+
+// Salida de resultados
+// --------------------
+System.out.println ("El número de cifras de n es " + numCifras + ".");
+System.out.println ();</code></pre>
+</div>
+</div>
+<p><br /><br /></p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id237">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta237_128" class="block iDevice_content">
+<p>Junto a la estructura <code>for</code>, tenemos la estructura <code>for/in</code> o <code>foeach</code>, que también se considera un bucle controlado por contador. Este bucle es una mejora incorporada desde la versión 5.0. de <span lang="en">Java</span>, por lo que no funcionará en versiones más antiguas del lenguaje.</p>
+<p>Este tipo de bucles permite realizar recorridos <strong>sobre <code><span lang="en">arrays</span></code> y colecciones de objetos</strong>. Los <code><span lang="en">arrays</span></code> son colecciones de variables que tienen el mismo tipo y se referencian por un nombre común junto a un índice que indica el lugar que ocupa el elemento dentro del <code><span lang="en">array</span></code>. Veremos este tipo de bucles más especializados a partir de la unidad 4.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="45_estructura_repetitiva_for_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_estructuras_de_salto_incondicional.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

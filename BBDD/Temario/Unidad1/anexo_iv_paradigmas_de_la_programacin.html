@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Anexo IV.- Paradigmas de la programación | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li id="active"><a href="anexo_iv_paradigmas_de_la_programacin.html" class="active no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="anexo_iii_ejercicios_resueltos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Anexo IV.- Paradigmas de la programación</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id8">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta8_66" class="block iDevice_content">
+<figure class="exe-figure exe-image float-left license-copyright" style="width: 200px;"><img src="people-g1b2bce7fb_640.jpg" alt="Mesa de reuniones con diversas personas, una de ellas con un portátil" title="Reunión" style="float: left;" width="200" height="133" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/gente-negocio-cita-1979261/" target="_blank" class="author">089photoshootings</a> <span class="license"><span class="sep">Pixabay License.</span></span></figcaption></figure>
+<p><strong><br />Ada</strong> comenta con <strong>Juan </strong>y <strong>María </strong>los distintos enfoques para el desarrollo de programas que han existido a lo largo de la historia de la programación, destacando que todos van a tener que “renovar” su forma de pensar, si quieren comenzar a utilizar un lenguaje moderno que les permita construir programas adaptados a las nuevas necesidades de sus clientes.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id9">
+<div class="iDevice emphasis0">
+<div id="ta9_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG01_CONT_R04_crucecaminos.jpg" alt="Aparece una se&ntilde;al rural de diferentes caminos fabricada en madera." title="M&uacute;ltiples caminos" style="float: right;" height="124" width="200" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-sa" title="CC by-sa" href="http://creativecommons.org/licenses/by-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-sa</span></a>&nbsp;<a title="barraquito" href="http://commons.wikimedia.org/wiki/File:Cruce_de_caminos-El_Hierro.jpg" target="_blank">barraquito</a></div>
+</div>
+<p>&iquest;Cu&aacute;ntas formas existen de hacer las cosas?</p>
+<p>Supongo que estar&aacute;s pensando: varias o incluso, muchas.</p>
+<p>Pero cuando se establece un patr&oacute;n para la creaci&oacute;n de aplicaciones nos estamos acercando al significado de la palabra paradigma.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id10">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta10_70" class="block iDevice_content">
+<p><strong>Paradigma de programaci&oacute;n:</strong></p>
+<p>Es un modelo b&aacute;sico para el dise&ntilde;o y la implementaci&oacute;n de programas. Este modelo determinar&aacute; c&oacute;mo ser&aacute; el proceso de dise&ntilde;o y la estructura final del programa.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id11">
+<div class="iDevice emphasis0">
+<div id="ta11_73" class="block iDevice_content">
+<p>El paradigma representa un enfoque particular o filosofía para la construcción de <span lang="en">software</span>. Cada uno tendrá sus ventajas e inconvenientes, será más o menos apropiado, pero no es correcto decir que exista uno mejor que los demás.</p>
+<p>Puedes ver un resumen de los diferentes paradigmas de programación en el siguiente documento:</p>
+<p class="enlace_centrado"><a class="pdf" title="Descargar documento sobre paradigmas [pdf - 596 KB]" href="PROG01_CONT_R05_paradigmas.pdf" target="_blank">Paradigmas de programación </a><span class="tamano">(596 KB)</span></p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"></div>
+</div>
+<p>Como habrás podido apreciar, existen múltiples paradigmas, incluso puede haber lenguajes de programación que no se clasifiquen únicamente dentro de uno de ellos. Un lenguaje como <a class="glosario">Smalltalk<span><em>Smalltalk</em>Lenguaje de programación que permite realizar tareas de computación mediante la interacción con un entorno de objetos virtuales. Metafóricamente, se puede considerar que Smalltalk es un mundo virtual donde viven objetos que se comunican mediante el envío de mensajes.</span></a> es un lenguaje basado en el paradigma orientado a objetos. El lenguaje de programación <a class="glosario">Scheme<span><em>Scheme</em>Lenguaje de programación funcional, dialecto de Lisp. Desarrollado en la década de los setenta. Scheme proporciona el mínimo número posible de nociones primitivas, construyendo todo lo demás a partir de un reducido número de abstracciones. Scheme ofrece también gestión automática de memoria. Las listas son la estructura de datos básica del lenguaje, que también ofrece arrays entre sus tipos predefinidos.</span></a>, en cambio, soporta sólo programación funcional. <a class="glosario">Python<span><em>Python</em>Lenguaje de programación de alto nivel, cuya filosofía hace hincapié en una sintaxis limpia y que favorezca un código legible. Es multiparadigma, ya que soporta orientación a objetos, programación imperativa y programación funcional. Es un lenguaje interpretado y está fuertemente tipado. Es multiplataforma.</span></a> soporta múltiples paradigmas.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id12">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta12_47" class="block iDevice_content">
+<p>Te proponemos el siguiente enlace en el que encontrarás información adicional sobre los diferentes paradigmas de programación.</p>
+<div class="enlace_centrado"><a class="html" title="Acceder al artículo sobre paradigmas y lenguajes de programación." href="https://www.infor.uva.es/~cvaca/asigs/docpar/intro.pdf"> Paradigmas de programación y lenguajes</a></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id13">
+<div class="iDevice emphasis0">
+<div id="ta13_73" class="block iDevice_content">
+<p>&iquest;Cu&aacute;l es el objetivo que se busca con la aplicaci&oacute;n de los diferentes enfoques?</p>
+<p>Fundamentalmente:</p>
+<ul class="lista_verificacion">
+<li><strong>reducir la dificultad para el mantenimiento</strong> de las aplicaciones,</li>
+<li><strong>mejorar el rendimiento</strong> del programador y, en general,</li>
+<li><strong>mejorar la productividad y calidad</strong> de los programas.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id14">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-14_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion14_60" class="block question iDevice_content">
+<p><strong>&iquest;En qu&eacute; paradigma de programaci&oacute;n podr&iacute;amos enmarcar el lenguaje de programaci&oacute;n <span lang="en">Java</span>?</strong></p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i14_63" class="sr-av"><a href="#answer-14_63">Opción 1</a></label><input type="radio" name="option14_60" id="i14_63" class="exe-radio-option exe-radio-option-0-3-14_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-14_63"><div id="taans14_63" class="block iDevice_content">
+<p>Programaci&oacute;n Estructurada.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i14_85" class="sr-av"><a href="#answer-14_85">Opción 2</a></label><input type="radio" name="option14_60" id="i14_85" class="exe-radio-option exe-radio-option-1-3-14_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-14_85"><div id="taans14_85" class="block iDevice_content">
+<p>Programaci&oacute;n Declarativa.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i14_88" class="sr-av"><a href="#answer-14_88">Opción 3</a></label><input type="radio" name="option14_60" id="i14_88" class="exe-radio-option exe-radio-option-2-3-14_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-14_88"><div id="taans14_88" class="block iDevice_content">
+<p>Programaci&oacute;n Orientada a Objetos.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b14_60" class="feedback js-hidden">
+<div id="taf14_63" class=" iDevice_content">
+<p>No, <span lang="en">Java</span> permite trabajar con una filosof&iacute;a m&aacute;s potente que la programaci&oacute;n estructurada.</p>
+</div>
+</section>
+<section id="sa1b14_60" class="feedback js-hidden">
+<div id="taf14_85" class=" iDevice_content">
+<p>No, la programaci&oacute;n declarativa se encarga de describir el problema y no las sentencias para su soluci&oacute;n.</p>
+</div>
+</section>
+<section id="sa2b14_60" class="feedback js-hidden">
+<div id="taf14_88" class=" iDevice_content">
+<p>S&iacute;, <span lang="en">Java</span> emplea la filosof&iacute;a de ver el mundo como objetos que tienen propiedades y m&eacute;todos que les permiten interactuar entre ellos.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-14_63">Incorrecto</a><span> (<a href="#sa0b14_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-14_85">Incorrecto</a><span> (<a href="#sa1b14_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-14_88">Opción correcta</a><span> (<a href="#sa2b14_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="anexo_iii_ejercicios_resueltos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

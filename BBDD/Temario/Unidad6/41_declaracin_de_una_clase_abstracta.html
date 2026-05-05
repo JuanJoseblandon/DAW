@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.1.- Declaración de una clase abstracta. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-22"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_clases_abstractas.html" class="current-page-parent daddy">4.- Clases abstractas.</a>
+   <ul>
+      <li id="active"><a href="41_declaracin_de_una_clase_abstracta.html" class="active no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="4_clases_abstractas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_mtodos_abstractos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.1.- Declaración de una clase abstracta.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id56">
+<div class="iDevice emphasis0">
+<div id="ta56_73" class="block iDevice_content">
+<p>Ya has visto que una <strong>clase abstracta</strong> es una clase que no se puede instanciar, es decir, que no se pueden crear objetos a partir de ella. La idea es permitir que otras clases deriven de ella, proporcionando un <strong>modelo genérico</strong> y algunos <strong>métodos de utilidad general</strong>.</p>
+<div class="elemento_centrado"><img alt="Obra artística (arte abstracto)." class="elemento_centrado" src="PROG07_CONT_R38_Abstracto1.jpg" style="width: 200px; height: 132px;" title="Abstracto 1." /> <figcaption class="figcaption">
+<div class="elemento_centrado credenciales">ITE. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">idITE=110246.</div>
+</figcaption></div>
+<p>Las <strong>clases abstractas</strong> se declaran mediante el modificador <strong><code>abstract</code></strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>[modificador_acceso] abstract class nombreClase  [herencia] [interfaces] {
+     . . . 
+}</code></pre>
+</div>
+</div>
+<p><strong>Una clase puede contener en su interior métodos declarados como <code>abstract</code></strong> (métodos para los cuales solamente se indica la cabecera, pero no se proporciona su implementación). En tal caso, la clase tendrá que ser necesariamente también <strong><code>abstract</code></strong>. Esos métodos tendrán que ser posteriormente implementados en sus <strong>clases derivadas</strong>.</p>
+<p>Por otro lado, una <strong>clase abstracta</strong> también puede contener <strong>métodos totalmente implementados</strong> (<strong>no abstractos</strong>), los cuales serán heredados por sus <strong>clases derivadas</strong> y podrán ser utilizados sin necesidad de definirlos (pues ya están implementados).</p>
+<p>Cuando trabajes con <strong>clases abstractas</strong> debes tener en cuenta:</p>
+<ul class="lista_verificacion">
+<li>Una <strong>clase abstracta</strong> solo puede usarse para crear nuevas clases derivadas. No se puede hacer un <code>new</code> de una <strong>clase abstracta</strong>. Se produciría un <strong>error de compilación</strong>.</li>
+<li>Una <strong>clase abstracta</strong> puede contener <strong>métodos totalmente definidos</strong> (<strong>no abstractos</strong>) y <strong>métodos sin definir</strong> (<strong>métodos abstractos</strong>).</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id57">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta57_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b57" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b57" class="block iDevice_content">
+<p>
+<strong>
+Puede llamarse al  constructor de una </strong><strong>clase abstracta mediante el operador </strong><strong><code>new</code>. ¿Verdadero o Falso? 
+</strong>
+</p>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b57"><input type="radio" name="option0b57" id="true0b57" class="exe-radio-option exe-radio-option-0-2-0b57-truefalse" /> Verdadero</label> 
+<label for="false0b57"><input type="radio" name="option0b57" id="false0b57" class="exe-radio-option exe-radio-option-1-2-0b57-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b57" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b57-result" class="wrong">Falso</strong></p>
+<p>
+Una <strong>clase abstracta</strong> no puede ser  instanciada y por tanto no puede llamarse a su constructor mediante el uso de <strong><code>new</code></strong> para crear un nuevo objeto basado en ella (es  en cierto modo una clase “sin terminar”). Se produciría un <strong>error de  compilación</strong>.
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id104">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicios Resueltos</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta104_148" class="block story iDevice_content">
+<p><strong>Definiendo como abstractas las clases base que nunca vamos a instanciar</strong></p>
+</div>
+<div id="taquesQuestion0b104" class="block iDevice_content">
+<p>Basándote en la jerarquía de clases de ejemplo (<code>Persona</code>, <code>Alumno</code>, <code>Profesor</code>), que ya has utilizado en otras ocasiones, modifica lo que consideres oportuno para que <code>Persona</code> sea, a partir de ahora, una clase abstracta (no instanciable) y las otras dos clases sigan siendo clases derivadas de ella, pero sí instanciables.</p>
+</div>
+<form name="feedback-form-quesFeedback0b104" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b104text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b104" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b104" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso lo único que habría que hacer es añadir el modificador <strong><code>abstract</code></strong> a la declaración de la clase <strong><code>Persona</code></strong>. El resto de la clase permanecería igual y las clases <strong><code>Alumno</code></strong> y <strong><code>Profesor</code></strong> no tendrían por qué sufrir ninguna modificación.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public abstract class Persona {
+        protected String nombre;
+        protected String apellidos;
+        protected LocalDate fechaNacimiento;
+        ...
+}</code></pre>
+</div>
+</div>
+<p>A partir de ahora no podrán existir objetos de la clase <code>Persona</code>. El compilador devolvería un <strong>error</strong> si se intenta hacer un <code>new</code> de un objeto <code>Persona</code>.</p></div>
+</form>
+<div id="taquesQuestion1b104" class="block iDevice_content">
+<p>Haz algo similar para el caso de la clase <code>Dispositivo</code>, de la cual heredarían <code>Bombilla</code>, <code>Cerradura</code>, <abbr title="etcétera">etc</abbr>.</p>
+</div>
+<form name="feedback-form-quesFeedback1b104" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b104text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b104" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b104" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Nuevamente, se trata de añadir el modificador <strong><code>abstract</code></strong> a la declaración de la clase <code>Dispositivo</code>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public abstract class Dispositivo {
+        . . . </code></pre>
+</div>
+</div>
+<p>A partir de ese momento, no podremos hacer en nuestro código un <code>new</code> de un objeto <code>Dispositivo</code>.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id58">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta58_67" class="block story iDevice_content">
+<p><strong>Clases abstractas en la <acronym title="Application Programming Interface">API</acronym> de <span lang="en">Java</span></strong></p>
+</div>
+<div id="taquesQuestion0b58" class="block iDevice_content">
+<p> Localiza en la documentación de la <acronym title="Application programming interface" lang="en">API</acronym> de <span lang="en">Java</span> algún ejemplo de clase abstracta.</p>
+</div>
+<form name="feedback-form-quesFeedback0b58" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b58text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b58" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b58" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Existen una gran cantidad de <strong>clases abstractas</strong> en la <acronym title="Application Programming Interface">API</acronym> de <span lang="en">Java</span>. Aquí tienes algunos ejemplos:</p>
+<ul class="lista_verificacion">
+<li>
+<p>La clase <strong><code>InputStream</code></strong> (paquete <strong><code>java.io</code></strong>)</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public abstract class InputStream
+extends Object
+implements Closeable</code></pre>
+</div>
+</div>
+</li>
+</ul>
+<ul class="lista_verificacion">
+<li>
+<p>La clase <strong><code>AbstractList</code></strong> (paquete <strong><code>java.util</code></strong>)</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public abstract class AbstractList&lt;E&gt; 
+extends AbstractCollection&lt;E&gt; 
+implements List&lt;E&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+<ul class="lista_verificacion">
+<li>
+<p>La clase <code>SocketFactory</code> (paquete <strong><code>javax.net</code></strong>)</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public abstract class SocketFactory 
+extends Object</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>La clase <strong><code>AbstractButton</code></strong> (paquete <strong><code>javax.swing</code></strong>)</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public abstract class AbstractButton 
+extends JComponent
+implements ItemSelectable, SwingConstants</code></pre>
+</div>
+</div>
+</li>
+</ul>
+<ul class="lista_verificacion">
+<li>
+<p>La clase <strong><code>MessageDigest</code></strong> (paquete <strong><code>java.security</code></strong>)</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public abstract class MessageDigest 
+extends MessageDigestSpi</code></pre>
+</div>
+</div>
+</li>
+</ul></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="4_clases_abstractas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_mtodos_abstractos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

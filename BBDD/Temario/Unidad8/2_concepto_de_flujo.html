@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.- Concepto de flujo. | PROG07_Contenidos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="Juan Antonio Reina" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">PROG07_Contenidos</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos externas (ficheros).</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1.- Introducción.</a>
+   <ul class="other-section">
+      <li><a href="11_excepciones.html" class="no-ch">1.1.- Excepciones.</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="2_concepto_de_flujo.html" class="active no-ch">2.- Concepto de flujo.</a></li>
+   <li><a href="3_clases_relativas_a_flujos.html" class="daddy">3.- Clases relativas a flujos.</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplo_comentado_de_una_clase_con_flujos.html" class="no-ch">3.1.- Ejemplo comentado de una clase con flujos.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4.- Flujos.</a>
+   <ul class="other-section">
+      <li><a href="41_flujos_predefinidos_entrada_y_salida_estndar.html" class="no-ch">4.1.- Flujos predefinidos. Entrada y salida estándar.</a></li>
+      <li><a href="42_flujos_predefinidos_entrada_y_salida_estndar_ejemplo.html" class="no-ch">4.2.- Flujos predefinidos. Entrada y salida estándar. Ejemplo.</a></li>
+      <li><a href="43_flujos_basados_en_bytes.html" class="no-ch">4.3.- Flujos basados en bytes.</a></li>
+      <li><a href="44_flujos_basados_en_caracteres.html" class="no-ch">4.4.- Flujos basados en caracteres.</a></li>
+      <li><a href="45_rutas_de_los_ficheros.html" class="no-ch">4.5.- Rutas de los ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_trabajando_con_ficheros.html" class="daddy">5.- Trabajando con ficheros.</a>
+   <ul class="other-section">
+      <li><a href="51_escritura_y_lectura_de_informacin_en_ficheros.html" class="no-ch">5.1.- Escritura y lectura de información en ficheros.</a></li>
+      <li><a href="52_ficheros_binarios_y_ficheros_de_texto_i.html" class="daddy">5.2.- Ficheros binarios y ficheros de texto (I).</a>
+      <ul class="other-section">
+         <li><a href="521_ficheros_binarios_y_ficheros_de_texto_ii.html" class="no-ch">5.2.1.- Ficheros binarios y ficheros de texto (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="53_modos_de_acceso_registros.html" class="no-ch">5.3.- Modos de acceso. Registros.</a></li>
+      <li><a href="54_acceso_secuencial.html" class="no-ch">5.4.- Acceso secuencial.</a></li>
+      <li><a href="55_acceso_aleatorio.html" class="no-ch">5.5.- Acceso aleatorio.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_aplicaciones_del_almacenamiento_de_informacin_en_ficheros.html" class="no-ch">6.- Aplicaciones del almacenamiento de información en ficheros.</a></li>
+   <li><a href="7_utilizacin_de_los_sistemas_de_ficheros.html" class="daddy">7.- Utilización de los sistemas de ficheros.</a>
+   <ul class="other-section">
+      <li><a href="71_clase_file.html" class="no-ch">7.1.- Clase File.</a></li>
+      <li><a href="72_interface_filenamefilter.html" class="no-ch">7.2.- Interface FilenameFilter.</a></li>
+      <li><a href="73_creacin_y_eliminacin_de_ficheros_y_directorios.html" class="no-ch">7.3.- Creación y eliminación de ficheros y directorios.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_almacenamiento_de_objetos_en_ficheros_persistencia_serializacin.html" class="daddy">8.- Almacenamiento de objetos en ficheros. Persistencia. Serialización.</a>
+   <ul class="other-section">
+      <li><a href="81_serializacin_utilidad.html" class="no-ch">8.1.- Serialización: utilidad.</a></li>
+   </ul>
+   </li>
+   <li><a href="9_tratamiento_de_documentos_estructurados_xml.html" class="daddy">9.- Tratamiento de documentos estructurados XML.</a>
+   <ul class="other-section">
+      <li><a href="91_qu_es_un_documento_xml.html" class="no-ch">9.1.- ¿Qué es un documento XML?</a></li>
+      <li><a href="92_libreras_para_procesar_documentos_xml_i_convertir_el_archivo__xml_a_rbol_dom.html" class="daddy">9.2.- Librerías para procesar documentos XML (I). Convertir el archivo  XML a árbol DOM</a>
+      <ul class="other-section">
+         <li><a href="921_libreras_para_procesar_documentos_xml_ii_transformar_el_rbol__dom_en_archivo__xml.html" class="no-ch">9.2.1.- Librerías para procesar documentos XML (II). Transformar el árbol  DOM en archivo  XML.</a></li>
+      </ul>
+      </li>
+      <li><a href="93_manipulacin_de_documentos_xml_i_obtener_el_elemento_raz_y_buscar_un_elemento.html" class="daddy">9.3.- Manipulación de documentos XML (I). Obtener el elemento raíz, y buscar un elemento.</a>
+      <ul class="other-section">
+         <li><a href="931_manipulacin_de_documentos_xml_ii_obtener_y_procesar_la_lista_de_hijos_y_aadir_uno_nuevo.html" class="no-ch">9.3.1.- Manipulación de documentos XML (II). Obtener y procesar la lista de hijos y añadir uno nuevo.</a></li>
+         <li><a href="932_manipulacin_de_documentos_xml_iii_eliminar_un_hijo_y_modificar_un_elemento_texto.html" class="no-ch">9.3.2.- Manipulación de documentos XML (III). Eliminar un hijo y modificar un elemento texto.</a></li>
+         <li><a href="933_manipulacin_de_documentos_xml_iv_manejar_atributos_de_un_elemento.html" class="no-ch">9.3.3.- Manipulación de documentos XML (IV). Manejar atributos de un elemento.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="11_excepciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_clases_relativas_a_flujos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.- Concepto de flujo.</h1></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id6">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_66" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="EIN_PPAA_CASO_R05_JuanCuerpo_FOT.jpg" alt="Antonio de pie y de perfil, con los brazos flexionados a media altura." title="Antonio de perfil." style="float: left;" width="200" height="140" /></div>
+<div class="elemento_centrado credenciales">Ministerio de Educaci&oacute;n.</div>
+<div class="elemento_centrado credenciales">Uso educativo-nc. Elaboraci&oacute;n propia.</div>
+</div>
+<p><strong>Antonio</strong> est&aacute; estudiando un poco antes de irse a dormir. Se ha tomado un vaso de leche con cacao y est&aacute; repasando el concepto de flujo o <code>stream</code> en<span> Java</span>. Entenderlo al principio, cuando lo estudi&oacute; por primera vez, le cost&oacute; un poco, pero ya lo entiende a la perfecci&oacute;n y piensa que si le sale alguna pregunta en el examen de la semana que viene, sobre esto, seguro que la va a acertar.</p>
+<p>Pensar en el flujo de datos como un chorro de agua que fluye por una tuber&iacute;a le ha sido de gran ayuda: los datos son&nbsp; como el agua, de forma que lo que se introduce por la entrada (fuente de datos), va obteni&eacute;ndose en la salida (aplicaci&oacute;n) en el mismo orden que se introdujo, para el caso de un flujo de entrada.</p>
+<p>Aunque tambi&eacute;n podemos habilitar una tuber&iacute;a que lleve el agua en sentido contrario, desde la aplicaci&oacute;n a la salida (destino de datos), para el caso de un flujo de salida. Lo que no vamos a tener es una tuber&iacute;a (un flujo)&nbsp; en la que el agua (los datos) pueda circular en los dos sentidos .</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id7">
+<div class="iDevice emphasis0">
+<div id="ta7_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a title="Ampliar imagen." href="PROG08_CONT_R04_flujos_Esquema.png"><img alt="Esquema en el que se ve una entidad rectangular fuente y otro programa, y entre medias una l&iacute;nea que representa un flujo de lectura. M&aacute;s abajo lo mismo pero a la izquierda pone Programa y a la derecha Destino, y entre las dos una l&iacute;nea que representa un flujo de escritura. " class="imagen_ampliable" src="PROG08_CONT_R04_flujos_Esquema_miniatura.png" title="Flujos" width="200" height="140" /></a></div>
+</div>
+<p>La clase <code>Stream</code> representa un flujo o corriente de datos, es decir, un conjunto secuencial de <span lang="en">bytes</span>, como puede ser un archivo, un dispositivo de entrada/salida (en adelante <abbr title="Entrada/Salida">E/S</abbr>), memoria, un conector <acronym title="Transmission Control Protocol/Internet Protocol" lang="en">TCP/IP</acronym> (Protocolo de Control de Transmisi&oacute;n/Protocolo de Internet), <abbr title="etc&eacute;tera. ">etc.</abbr></p>
+<p>Cualquier programa realizado en<span lang="en"> Java</span> que necesite llevar a cabo una operaci&oacute;n de entrada/salida lo har&aacute; a trav&eacute;s de un <code>stream</code>.</p>
+<p>Un flujo es una abstracci&oacute;n de aquello que produzca o consuma informaci&oacute;n. Es una entidad l&oacute;gica.</p>
+<p>Las clases y m&eacute;todos de <abbr title="Entrada/Salida">E/S</abbr> que necesitamos emplear son las mismas <strong>independientemente del dispositivo con el que estemos actuando</strong>, luego, el n&uacute;cleo de <span lang="en">Java</span>, sabr&aacute; si tiene que tratar con el teclado, el monitor, un sistema de archivos o un <span lang="en">socket</span> de red liberando al programador de tener que saber con qui&eacute;n est&aacute; interactuando.</p>
+<p>La vinculaci&oacute;n de un flujo al dispositivo f&iacute;sico la hace el sistema de entrada y salida de <span lang="en">Java.</span></p>
+<p>En resumen, ser&aacute; el flujo el que tenga que comunicarse con el sistema operativo concreto y "entend&eacute;rselas" con &eacute;l. De esta manera<strong>, no tenemos que cambiar absolutamente nada en nuestra aplicaci&oacute;n</strong>, que va a ser independiente tanto de los dispositivos f&iacute;sicos de almacenamiento como del sistema operativo sobre el que se ejecuta. Esto es <strong>primordial en un lenguaje multiplataforma y tan altamente portable</strong> como <span lang="en">Java.</span></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id8">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-8_60" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion8_60" class="block question iDevice_content">
+<p><strong>Se&ntilde;ala la opci&oacute;n correcta:</strong></p>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i8_63" class="sr-av"><a href="#answer-8_63">Opción 1</a></label><input type="radio" name="option8_60" id="i8_63" class="exe-radio-option exe-radio-option-0-4-8_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-8_63"><a name="answer-8_63"></a>
+<div id="taans8_63" class="block iDevice_content">
+<p>La clase <code>Stream</code> puede representar, al instanciarse, a un archivo.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i8_92" class="sr-av"><a href="#answer-8_92">Opción 2</a></label><input type="radio" name="option8_60" id="i8_92" class="exe-radio-option exe-radio-option-1-4-8_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-8_92"><a name="answer-8_92"></a>
+<div id="taans8_92" class="block iDevice_content">
+<p>Si programamos en <span lang="en">Java</span>, hay que tener en cuenta el sistema operativo cuando tratemos con flujos, pues var&iacute;a su tratamiento debido a la diferencia de plataformas.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i8_95" class="sr-av"><a href="#answer-8_95">Opción 3</a></label><input type="radio" name="option8_60" id="i8_95" class="exe-radio-option exe-radio-option-2-4-8_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-8_95"><a name="answer-8_95"></a>
+<div id="taans8_95" class="block iDevice_content">
+<p>La clase <code>Keyboard</code> es la que debemos utilizar al leer flujos de teclado.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i8_98" class="sr-av"><a href="#answer-8_98">Opción 4</a></label><input type="radio" name="option8_60" id="i8_98" class="exe-radio-option exe-radio-option-3-4-8_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-8_98"><a name="answer-8_98"></a>
+<div id="taans8_98" class="block iDevice_content">
+<p>La vinculaci&oacute;n de un flujo al dispositivo f&iacute;sico la hace el <span lang="en">hardware</span> de la m&aacute;quina.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b8_60" class="feedback js-hidden"><a name="sa0b8_60"></a>
+<div id="taf8_63" class=" iDevice_content">
+<p>&iexcl;Exacto!</p>
+</div>
+</div>
+<div id="sa1b8_60" class="feedback js-hidden"><a name="sa1b8_60"></a>
+<div id="taf8_92" class=" iDevice_content">
+<p>&iexcl;No! Es indiferente.</p>
+</div>
+</div>
+<div id="sa2b8_60" class="feedback js-hidden"><a name="sa2b8_60"></a>
+<div id="taf8_95" class=" iDevice_content">
+<p>&iexcl;Incorrecto! Es la clase <code>Stream</code>.</p>
+</div>
+</div>
+<div id="sa3b8_60" class="feedback js-hidden"><a name="sa3b8_60"></a>
+<div id="taf8_98" class=" iDevice_content">
+<p>&iexcl;Incorrecto! Lo hace el sistema de <abbr title="Entrada/Salida">E/S</abbr> de <span lang="en">Java</span>.</p>
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-8_63">Opción correcta</a><span> (<a href="#sa0b8_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-8_92">Incorrecto</a><span> (<a href="#sa1b8_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-8_95">Incorrecto</a><span> (<a href="#sa2b8_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-8_98">Incorrecto</a><span> (<a href="#sa3b8_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="11_excepciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_clases_relativas_a_flujos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

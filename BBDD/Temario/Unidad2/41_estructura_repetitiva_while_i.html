@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.1.- Estructura repetitiva while (I). </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul class="other-section">
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructuras_de_seleccin_o_condicionales.html" class="daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul class="other-section">
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li><a href="34_estructura_selectiva_mltiple_switch_i.html" class="daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul class="other-section">
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="current-page-parent daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul>
+      <li id="active"><a href="41_estructura_repetitiva_while_i.html" class="active daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul>
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li><a href="45_estructura_repetitiva_for_i.html" class="daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul class="other-section">
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul class="other-section">
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="411_estructura_repetitiva_while_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.1.- Estructura repetitiva while (I).</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id30">
+<div class="iDevice emphasis0">
+<div id="ta30_73" class="block iDevice_content">
+<p>En la siguiente imagen puedes ver un diagrama de flujo que representa el funcionamiento de este tipo de estructura repetitiva.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a title="Diagrama de flujo de sentencia while." href="PROG03_CONT_R07_diagramawhile.jpg"><img alt="Bajo un rombo verde en el que se lee &ldquo;Expresion&rdquo; aparecen dos rect&aacute;ngulos, uno verde con la palabra &ldquo;verdadero&rdquo; y otro debajo azul con la palabra &ldquo;secuencia&rdquo;. De este &uacute;ltimo parte una flecha que vuelve hacia arriba para apuntar hacia el rombo. A la derecha del rombo aparece la palabra &ldquo;falso&rdquo; inscrita en un rect&aacute;ngulo rojo, del que parte una flecha hacia abajo representando el final del bucle." class="imagen_ampliable" src="PROG03_CONT_R07_diagramawhile_miniatura.jpg" style="width: 160px; height: 168px;" title="Diagrama de flujo de sentencia while." /></a></div>
+</div>
+<p>El bucle <code>while</code> es la primera&nbsp; <strong>estructura de repetici&oacute;n controlada por sucesos</strong> que vamos a estudiar. La utilizaci&oacute;n de este bucle responde al planteamiento de la siguiente pregunta:</p>
+<p style="text-align: center;"><span class="destacado_inline">&iquest;Qu&eacute; podemos hacer si lo &uacute;nico que sabemos es que se han de repetir un conjunto de instrucciones mientras se cumpla una determinada condici&oacute;n?</span></p>
+<p>La caracter&iacute;stica fundamental de este tipo de estructura repetitiva estriba en ser <strong>&uacute;til en aquellos casos en los que las instrucciones que forman el cuerpo del bucle podr&iacute;a ser necesario ejecutarlas o no</strong>.</p>
+<p>Es decir, en el bucle <code>while</code> siempre se evaluar&aacute; la condici&oacute;n que lo controla, y si dicha condici&oacute;n es cierta, el cuerpo del bucle se ejecutar&aacute; una vez, y se seguir&aacute; ejecutando mientras la condici&oacute;n sea cierta. Pero si en la evaluaci&oacute;n inicial de la condici&oacute;n &eacute;sta no es verdadera, el cuerpo del bucle no se ejecutar&aacute;.</p>
+<p>Es imprescindible que en el interior del bucle <code>while</code> se realice alguna acci&oacute;n que modifique la condici&oacute;n que controla la ejecuci&oacute;n del mismo, en caso contrario estar&iacute;amos ante un bucle infinito, que es algo que se debe evitar siempre.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id103">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<div id="actitity-103_51">
+<form name="multi-select-form-103_51" action="#" class="activity-form multi-select-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion103_51" class="block question iDevice_content">
+<p><strong>De las afirmaciones siguientes, marca las que te parezcan correctas.</strong></p>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op103_510" class="sr-av"><a href="#answer-103_54">Opción 1</a></label><input type="checkbox" id="op103_510" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-103_54"><a name="answer-103_54"></a>
+<div id="taans103_54" class="block iDevice_content">
+<p>Cualquier problema que se pueda resolver con estructuras tipo <code>for</code> tambi&eacute;n es posible resolverlo con estructuras tipo <code>while</code>.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-103_510" style="display:none"></div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op103_511" class="sr-av"><a href="#answer-103_191">Opción 2</a></label><input type="checkbox" id="op103_511" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-103_191"><a name="answer-103_191"></a>
+<div id="taans103_191" class="block iDevice_content">
+<p>Los ciclos <code>while</code> son adecuados para aquellos casos en los que sabemos que las instrucciones del cuerpo del bucle se deben ejecutar al menos una vez.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-103_511" style="display:none"></div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op103_512" class="sr-av"><a href="#answer-103_193">Opción 3</a></label><input type="checkbox" id="op103_512" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-103_193"><a name="answer-103_193"></a>
+<div id="taans103_193" class="block iDevice_content">
+<p>Para casos en los que sabemos exactamente cu&aacute;ntas veces debe ejecutarse el&nbsp; bloque de sentencias contenido del ciclo, <code>while</code> es mucho m&aacute;s adecuado que <code>for</code>, porque&nbsp; aunque hace lo mismo, permite presentar el c&oacute;digo de una manera m&aacute;s simple y clara.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-103_512" style="display:none"></div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op103_513" class="sr-av"><a href="#answer-103_195">Opción 4</a></label><input type="checkbox" id="op103_513" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-103_195"><a name="answer-103_195"></a>
+<div id="taans103_195" class="block iDevice_content">
+<p>Los ciclos <code>while</code> requieren que dentro de las sentencias del bucle haya alguna que modifique el valor de la condici&oacute;n que controla el bucle.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-103_513" style="display:none"></div>
+</div>
+</div>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-103_51" /> 
+</p>
+</div>
+<div id="f103_51" class="js-hidden js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+
+<div id="tafeedback103_51" class="feedback iDevice_content">
+<ul class="lista_verificacion">
+<li>Cualquier problema que requiera solventarse usando ciclos, se podr&iacute;a resolver tanto usando ciclos <code>for</code>, como <code>while</code>, como <code>do-while</code>.</li>
+<li>Los ciclos <code>while</code> son adecuasos para casos en los que puede que las instrucciones del bucle no haya que ejecutarlas, porque la condici&oacute;n de salida del mismo sea cierta cuando se comprueba por primera vez, justo antes de la ejecuci&oacute;n de las sentencias.</li>
+<li>Los ciclos <code>for</code> son los m&aacute;s adecuados justo para casos en los que se conoce cu&aacute;ntas iteraciones deben realziarse.</li>
+<li>Los ciclos <code>while</code>, como todos los ciclos en realidad, necesitan que en alg&uacute;n momento se modifique la condici&oacute;n de salida, para evitar caer en bucles infinitos.</li>
+</ul>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-103_54" class="right">Correcto</a></li>
+<li><a href="#answer-103_191" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-103_193" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-103_195" class="right">Correcto</a></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id212">
+<div class="iDevice emphasis0">
+<div id="ta212_85" class="block iDevice_content">
+<p>¿Cómo se implementa esta estructura en Java? En la siguiente tabla se muestra tanto la sintaxis como el funcionamiento de esta estructura (ciclo <code>while</code>) en el lenguaje <span lang="en">Java</span>.</p>
+<table class="tabla" summary="En esta tabla se muestra la sintaxis de la estructura repetitiva while, tanto con una única sentencia, como con un bloque de ellas."><caption>Estructura repetitiva <code>while</code>.</caption>
+<tbody>
+<tr><th scope="col"><strong>Sintaxis para el caso de una sola sentencia en el cuerpo del bucle <code>while</code></strong></th><th scope="col"> <strong>Sintaxis para el caso de un bloque de sentencias en el cuerpo del bucle <code>while</code></strong></th></tr>
+<tr>
+<td>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>while (condición)
+   sentencia;
+</code></pre>
+</div>
+</div>
+</td>
+<td>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>while (condición) {
+    sentencia_1;
+    . . .
+    sentencia_n;
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2"><strong>Funcionamiento:</strong>
+<ul class="lista_verificacion">
+<li>Mientras la condición sea cierta, el bucle se repetirá, ejecutando las instrucciones de su interior (una o varias). En el momento en el que la condición no se cumpla, el control del flujo del programa pasará a la siguiente instrucción que exista justo detrás del bucle<code> while</code>.</li>
+<li>La condición se evaluará siempre al principio, y podrá darse el caso de que las instrucciones contenidas en él no lleguen a ejecutarse nunca si no se satisface la condición de partida.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id213">
+<div class="iDevice emphasis0">
+<div id="ta213_85" class="block iDevice_content">
+<p>Veamos un ejemplo. Imagina un programa que queremos que muestre por pantalla los números del 1 al 5. Inicialmente podríamos pensar en escribir cinco sentencias de escritura por pantalla:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println (1);
+System.out.println (2);
+System.out.println (3);
+System.out.println (4);
+System.out.println (5);</code></pre>
+</div>
+</div>
+<p>Pero claro, basta pensar que si hubiéramos tenido que escribir los números del 1 al 500 no parece una solución nada razonable tener que escribir quinientas veces esas líneas en nuestro programa. Precisamente para esto sirven los bucles. Podríamos declarar una variable de tipo entero que fuera almacenando el número que queremos mostrar en pantalla e implementar un bucle cuya condición de "continuidad" fuera "<em>mientras el número esté por debajo de 5, incluido el propio 5</em>". A esa variable de tipo entero podríamos darle el valor inicial 1 y podríamos ir incrementándola en una unidad dentro del cuerpo del bucle. De este modo, cuando superara el valor 5 (y llegara a valer 6) ya no se entraría en el cuerpo del bucle (la evaluación de la condición sería <code>false</code>) y el programa continuaría justo por la siguiente sentencia después del cuerpo del bucle.</p>
+<p>Veámoslo paso a paso:</p>
+<p>1.- Inicialización de la variable entera que iremos mostrando por pantalla:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int numero=1;</code></pre>
+</div>
+</div>
+<p>2.- Cabecera de bucle while con su comprobación: "<em>mientras el número sea menor o igual que cinco</em>":</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>while ( numero&lt;=5 ) </code></pre>
+</div>
+</div>
+<p>3.- Cuerpo del bucle while donde se muestre el valor de la variable y a continuación se incremente en uno:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>{
+    System.out.println (numero);
+    numero++;
+}</code></pre>
+</div>
+</div>
+<p>Dado que el cuerpo tiene más de una sentencia necesitas escribir el bloque entre llaves. Si tan solo hubiera una línea podrías haber omitido las llaves. Por ejemplo, si hubieras usado el operador "post-incremento" dentro del propio <code>println</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println (numero++);  // Esta línea es equivalente a las dos líneas anteriores y ya no son necesrias las llaves de bloque</code></pre>
+</div>
+</div>
+<p>Uniéndolo todo nos podría quedar algo como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int numero=1;
+while ( numero&lt;=5 ) {
+    System.out.println (numero);
+    numero++;
+}</code></pre>
+</div>
+</div>
+<p>O bien así (si lo hacemos todo en una única línea):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int numero=1;
+while ( numero&lt;=5 )
+    System.out.println (numero++);</code></pre>
+</div>
+</div>
+<p>Y el resultado que obtendríamos por pantalla quedaría de la siguiente manera:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>1
+2
+3
+4
+5</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id214">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta214_148" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b214" class="block iDevice_content">
+<p>Escribe un programa que solicite dos números por teclado (inicio y fin, donde inicio debería ser menor o igual que fin) y muestre por pantalla todos los números que van desde inicio hasta fin, todos en una misma línea.</p>
+<p>Aquí tienes un ejemplo de una posible ejecución del programa:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Introduzca el inicio: 4
+Introduzca el fin: 12
+
+Secuencia de números desde 4 hasta 12
+4 5 6 7 8 9 10 11 12 </code></pre>
+</div>
+</div>
+<p></p>
+<p></p>
+</div>
+<form name="feedback-form-quesFeedback0b214" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b214text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b214" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b214" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Aquí tienes una muestra de cómo podría quedar tu programa:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+Scanner teclado = new Scanner(System.in);  
+int inicio, fin, numero;
+
+// Entrada de datos
+System.out.print ("Introduzca el inicio: ");
+inicio = teclado.nextInt();
+
+System.out.print("Introduzca el fin: ");
+fin = teclado.nextInt();
+
+// Procesamiento y salida de resultados
+System.out.println ("\nSecuencia de números desde " + inicio + " hasta " + fin);
+numero= inicio;
+while (numero &lt;= fin) {
+    System.out.print (numero + " ");
+    numero++;
+}
+System.out.println ();</code></pre>
+</div>
+</div>
+<p>O bien, si usas el operador de post-incremento en la misma línea de escritura por pantalla:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>while (numero &lt;= fin) 
+    System.out.print (numero++ + " ");</code></pre>
+</div>
+</div>
+<p>Recuerda que en este caso te interesa usar el operador post-incremento pues primero queremos que se muestre el valor de la variable por pantalla y después se realice el incremento. Si hubiera utilizado el operador pre-incremento haciendo lo siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>while (numero &lt;= fin) 
+    System.out.print (++numero + " ");</code></pre>
+</div>
+</div>
+<p>¿Qué crees que sucedería?</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="411_estructura_repetitiva_while_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

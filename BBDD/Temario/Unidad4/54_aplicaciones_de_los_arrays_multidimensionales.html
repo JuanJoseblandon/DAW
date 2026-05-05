@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.4.- Aplicaciones de los arrays multidimensionales. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-103"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_arrays_multidimensionales.html" class="current-page-parent daddy">5.- Arrays multidimensionales.</a>
+   <ul>
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li id="active"><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="active no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_i_formateado_de_cadenas_en_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.4.- Aplicaciones de los arrays multidimensionales.</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id0">
+<div class="iDevice emphasis0">
+<div id="ta0_85" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 180px;"><img src="rubiks-cube-g9ce30c013_640.png" alt="Cubo de Rubik" title="Rubik" style="float: right;" width="180" height="205" /><figcaption class="figcaption"><a href="https://pixabay.com/es/vectors/cubo-de-rubik-cubo-juego-152372/" target="_blank" class="author" title="Acceder a la web de descarga de la imagen de OpenClipart-Vectors en Pixabay. (Se abre en una nueva ventana)">OpenClipart-Vectors</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Hasta el momento hemos trabajado con arrays de una y dos dimensiones, junto con algún ejemplo de tres. Pero hemos de tener en cuenta que es posible crear arrays de cuatro, cinco o más dimensiones. Se seguiría el mismo procedimiento.</p>
+<p>Los <strong>arrays de una dimensión</strong> son fáciles de imaginar: una lista de elementos del mismo tipo. Los de <strong>dos dimensiones</strong> también, aunque aquí ya podemos imaginarlos de dos formas diferentes:</p>
+<ol>
+<li>como un array donde cada componente del array es a su vez una referencia a otro array, donde cada uno de esos subarrays no tienen por qué ser del mismo tamaño (un array bidimensional "irregular"). Esa es la definición más precisa y real;</li>
+<li>como una "tabla" con filas y columnas. En este caso la "irregularidad" podría indicarse diciendo que cada fila no tiene por qué tener la misma cantidad de celdas o columnas. La primera dimensión del array es donde te puedes "mover" por filas (imaginamos el array en "vertical"), mientras que la segunda dimensión del array es un nuevo subarray para cada fila. En esta segunda coordenada sería donde te podrías "mover" por columnas (imaginamos varios subarrays en "horizontal", uno para cada casilla del array vertical).</li>
+</ol>
+<p>Algunos ejemplos de situaciones donde nos podría interesar hacer uso de arrays bidimensionales podrían ser:</p>
+<ul>
+<li class="lista_verificacion">estructuras matemáticas matriciales (<strong>matrices</strong>), con las que se puede operar: sumar matrices, multiplicar matrices, calcular el determinante de una matriz, diagonalizar, <abbr title="etcétera">etc</abbr>.;</li>
+<li class="lista_verificacion">Almacenamiento y representación de <strong>imágenes</strong>. Cada celda sería un píxel (un color);</li>
+<li class="lista_verificacion"><strong>mapas</strong> geográficos, topográficos, de juegos <abbr title="etcétera">etc</abbr>. donde se utilizan cuadrículas;</li>
+<li class="lista_verificacion"><strong>juegos</strong> donde sea necesario un tablero, cuadrícula, mapa, etc. (crucigramas, sopas de letras, ajedrez, damas, barquitos, buscaminas, <abbr title="etcétera">etc</abbr>.);</li>
+<li class="lista_verificacion">estructuras jerárquicas de dos niveles. Por ejemplo, un array donde cada elemento de la primera dimensión represente una comunidad autónoma, apuntando a un nuevo array donde cada elemento será un String con el nombre de cada una de las provincias de esa comunidad autónoma. De ese modo, la primera dimensión del array tendrá tamaño 17, mientras que para los arrays de la segunda dimensión, cada uno tendrá un tamaño diferente dependiendo de la cantidad de provincias que haya en cada comunidad. En el caso de Andalucía será ocho, dos para Extremadura, cuatro para Cataluña, una para Murcia, <abbr title="etcétera">etc</abbr>.</li>
+<li class="lista_verificacion">el ejercicio de las conjugaciones. Un array de tres elementos cada uno de los cuales es otro array con cada conjugación.</li>
+</ul>
+<p class="lista_verificacion">El problema puede empezar a complicarse cuando hablamos de arrays tridimensionales, donde estamos hablando ya de tres niveles. Todavía podemos imaginarlos como una figura 3D, pero ya puede costarnos un poco más. Por eso lo mejor es siempre utilizar la primera forma de entender los arrays de varias dimensiones: como arrays cuyos elementos apuntan a arrays cuyos elementos a su vez también apuntan a arrays de algún tipo de elemento. Algunos casos donde nos podría venir bien disponer de arrays tridimensionales podrían ser:</p>
+<ul>
+<li class="lista_verificacion">almacenamiento y representación de <strong>figuras geométricas en el espacio</strong> (tridimensionales), como si estuvieran formadas por pequeños cubos o dados;</li>
+<li class="lista_verificacion"><strong>registros de información "jerárquicos" </strong>de hasta<strong> tres niveles</strong>. Por ejemplo: guardar un registro temperaturas en un día para cada hora: podría pensarse en un array de una dimensión con 24 celdas de tipo real (una por hora). Si queremos ampliarlo para guardar para todos los días de un mes, podríamos pensar en un array de dos dimensiones de 30x24. Si queremos guardar todo el año (doce meses): un array de 3 dimensiones 12x30x24. Es más, dado que no todos los meses tienen 30 días, podríamos pensar en un array "irregular", si es que vale la pena;</li>
+<li class="lista_verificacion"><strong>mapas de juegos</strong> donde existan varios "planos" o "niveles" de altura. Es decir, como si tuviéramos varios pisos o tableros uno sobre otro;</li>
+<li class="lista_verificacion"><strong>estructuras matemáticas n-dimensionales</strong> (vectores, matrices, tensores, espacios vectoriales, etc.).</li>
+</ul>
+<p class="lista_verificacion">Es a partir de la cuarta dimensión cuando ya empieza a ser complicado imaginar un array de manera gráfica. Es entonces cuando debemos utilizar la primera forma de imaginar los arrays: como estructuras jerárquicas de distintos niveles, donde el número de niveles será el número de dimensiones del array. Esa manera de representar un array podrá admitir cualquier número de dimensiones sin suponer un problema para nuestra imaginación. Simplemente, se tratará de tener que codificar más o menos bucles para ir recorriendo cada una de las jerarquías (dimensiones) de la estructura (array). En general, se tratará de <strong>registros de información "jerárquicos" de hasta n-niveles</strong>. Veamos un par de ejemplos de estructuras "n-dimensionales", donde n sería de cuatro en adelante.</p>
+<ul>
+<li class="lista_verificacion">guardar un registro de temperaturas:
+<ul>
+<li class="lista_verificacion">en un día para cada hora: array de una dimensión con 24 celdas (una por hora) de tipo real;</li>
+<li class="lista_verificacion">si queremos guardar para todos los días del mes: array de 2 dimensiones de 30x24;</li>
+<li class="lista_verificacion">si queremos almacenar todos los meses del año: array de tres dimensiones: 12x30x24;</li>
+<li class="lista_verificacion">si queremos disponer del registro de los últimos 100 años: array de cuatro dimensiones: 100x12x30x24;</li>
+<li class="lista_verificacion">si además queremos guardar esa información para 10 ciudades -&gt; array de cinco dimensiones con 10x100x12x30x24 celdas;</li>
+<li class="lista_verificacion">y así sucesivamente: países, continentes, <abbr title="etcétera">etc</abbr>.;</li>
+</ul>
+</li>
+<li class="lista_verificacion"> llevar a cabo un conteo de vehículos que pasan por una calle: por horas (24), por días (30), por meses (12), por calles (xx), por ciudades (yy), por países (zz), <abbr title="etcétera">etc</abbr>.</li>
+</ul>
+<p>Nosotros, por el momento, no vamos a ir más allá de la tercera dimensión. De hecho, lo habitual será trabajar con arrays de solamente una o de dos dimensiones, pero debes tener en cuenta que en el futuro, durante tu vida profesional, es probable que tengas que enfrentarte con estructuras mucho más complejas. También veremos más adelante, en unidades posteriores, que la mayoría de los lenguajes de programación incorporan herramientas mucho más sofisticadas y más sencillas de utilizar que los arrays para poder trabajar con estructuras complejas: listas, pilas, colas, conjuntos, diccionarios, árboles, grafos, <abbr title="etcétera">etc</abbr>.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id2">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta2_148" class="block story iDevice_content">
+<p>En español, las formas verbales personales que representan una acción se construyen a partir de la raíz o lexema del infinitivo del verbo (que termina en "ar", "er" o "ir") añadiéndole una desinencia o sufijo que dependerá del tiempo verbal (presente de indicativo, pretérito imperfecto de subjuntivo, <abbr title="etcétera">etc</abbr>.) así como de la persona (primera persona del sigular, segunda del plural, <abbr title="etcétera">etc</abbr>.).</p>
+<p>Por ejemplo, ante el verbo "comer", sabemos que la segunda persona del singular ("tú") del presente de indicativo le correspondería la forma "comes".</p>
+</section>
+<section id="taquesQuestion0b2" class="block iDevice_content">
+<p>Escribe un programa en Java que solicite un <strong>verbo regular</strong> en castellano (en infinitivo) y lo conjugue en <strong>presente de indicativo</strong>, indicando cada una de las <strong>seis personas</strong> (primera, segunda y tercera persona del singular y del plural: yo, tú, él/ella, nosotros/as, vosotros/as y ellos/as).</p>
+<p>Para ello, utiliza <strong>tres arrays</strong> para almacenar las desinencias personales de cada <strong>conjugación</strong>, que son:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String[] conjugacion1= {"o", "as", "a", "amos", "áis", "an"};
+String[] conjugacion2= {"o", "es", "e", "emos", "éis", "en"};
+String[] conjugacion3= {"o", "es", "e", "imos",  "ís", "en"};</code></pre>
+</div>
+</div>
+<p>Y un cuarto array para los <strong>pronombres personales</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String[] pronombres= {"yo", "tú", "él/ella", "nosotros/as", "vosotros/as", "ellos/as"};</code></pre>
+</div>
+</div>
+<p>Un ejemplo de salida del programa podría ser algo como:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>PROGRAMA PARA CONJUGAR VERBOS REGULARES
+---------------------------------------
+Introduzca verbo regular: comer
+
+RESULTADO
+---------
+Conjugación en presente de indicativo del verbo comer: 
+yo como
+tú comes
+él/ella come
+nosotros/as comemos
+vosotros/as coméis
+ellos/as comen</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b2" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b2text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b2" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b2" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Suponiendo que la entrada de datos ya está hecha y se ha leído sobre la variable verbo, el procesamiento podría quedar como algo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int longVerbo= verbo.length();
+String raiz= verbo.substring(0, longVerbo-2);
+String terminacion= verbo.substring(longVerbo-2);
+String resultado= "";
+switch (terminacion) {
+    case "ar":
+        for (int i=0; i&lt;pronombres.length; i++)
+            resultado += pronombres[i] + " " + raiz + conjugacion1[i] + "\n";
+        break;
+
+    case "er":
+        for (int i=0; i&lt;pronombres.length; i++)
+            resultado += pronombres[i] + " " + raiz + conjugacion2[i] + "\n";
+        break;
+
+    case "ir":
+        for (int i=0; i&lt;pronombres.length; i++)
+            resultado += pronombres[i] + " " + raiz + conjugacion3[i] + "\n";
+        break;
+}</code></pre>
+</div>
+</div>
+<p>y la salida de resultados sería simplemente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println ();
+System.out.println ("RESULTADO");
+System.out.println ("---------");
+System.out.println ("Conjugación en presente de indicativo del verbo " + verbo + ": ");
+System.out.println (resultado);</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b2" class="block iDevice_content">
+<p>Intenta ahora simplificar el programa mediante la creación de un único array de dos dimensiones para almacenar todas las desinencias de las tres conjugaciones.</p>
+</section>
+<form name="feedback-form-quesFeedback1b2" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b2text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b2" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b2" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Podríamos escribir "a mano" el array de dos dimensiones con toda la información de las tres conjugaciones haciendo algo como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String[][] conjugacion= { {"o", "as", "a", "amos", "áis", "an"}, 
+                          {"o", "es", "e", "emos", "éis", "en"}, 
+                          {"o", "es", "e", "imos",  "ís", "en"} 
+                        };</code></pre>
+</div>
+</div>
+<p>Pero otra forma de hacerlo, aprovechando los arrays que ya teníamos construidos, podría ser:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String[] conjugacion1= {"o", "as", "a", "amos", "áis", "an"};
+String[] conjugacion2= {"o", "es", "e", "emos", "éis", "en"};
+String[] conjugacion3= {"o", "es", "e", "imos",  "ís", "en"};
+
+String[][] conjugacion= {conjugacion1, conjugacion2, conjugacion3};</code></pre>
+</div>
+</div>
+<p>Dado que los elementos de la primera dimensión de un array son "referencias" a otros arrays, no debería haber problema.</p>
+<p>A partir de aquí se trataría de hacer algo muy similar a lo que se hizo en el caso anterior, pero aprovechando que hay una única estructura para hacer un único bucle:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int longVerbo= verbo.length();
+String raiz= verbo.substring(0, longVerbo-2);
+String terminacion= verbo.substring(longVerbo-2);
+resultado= "";
+int conj=0;
+switch (terminacion) {
+    case "ar":
+        conj= 0;                
+        break;
+
+    case "er":
+        conj= 1;                
+        break;
+
+    case "ir":
+        conj= 2;                
+        break;
+}
+for (int i=0; i&lt;pronombres.length; i++) {
+    resultado += pronombres[i] + " " + raiz + conjugacion[conj][i] + "\n";
+}</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_i_formateado_de_cadenas_en_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.- Errores, pruebas y depuración de programas. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-26"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul class="other-section">
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructuras_de_seleccin_o_condicionales.html" class="daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul class="other-section">
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li><a href="34_estructura_selectiva_mltiple_switch_i.html" class="daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul class="other-section">
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul class="other-section">
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li><a href="45_estructura_repetitiva_for_i.html" class="daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul class="other-section">
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="active daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul>
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="52_etiquetas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="61_depuracin_de_cdigo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">6.- Errores, pruebas y depuración de programas.</h1></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id69">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta69_66" class="block iDevice_content">
+<p><img alt="Programadora codificando un programa frente a una pantalla de ordenador." class="elemento_derecha" src="Servicios_de_Internet_02.jpg" title="Mar&iacute;a creando un m&eacute;todo." height="112" width="200" /></p>
+<p><strong>Ada</strong> y <strong>Juan </strong>ya conocen las capacidades del depurador que incorpora el entorno <span lang="en">NetBeans</span> y van a ense&ntilde;ar a <strong>Mar&iacute;a</strong> las ventajas de utilizarlo.</p>
+<p>-Puedes depurar tus programas haciendo dos cosas: creando <strong><span lang="en">breakpoints</span></strong> o haciendo ejecuciones paso a paso-, le comenta <strong>Juan</strong>.</p>
+<p><strong>Mar&iacute;a</strong>, que estaba codificando un nuevo m&eacute;todo, se detiene un momento y pregunta:</p>
+<p>-Entonces, &iquest;cuando el programa llega al <span lang="en">breakpoint </span>podr&eacute; saber qu&eacute; valor tiene una variable determinada?</p>
+<p>-Efectivamente, <strong>Mar&iacute;a</strong>, y podr&aacute;s saber el valor de aquellas que t&uacute; decidas. De este modo a trav&eacute;s de los puntos de ruptura y de las ejecuciones paso a paso podr&aacute;s descubrir d&oacute;nde puede haber errores en tus programas. Conocer bien las herramientas que el depurador nos ofrece es algo que puede ahorrarnos mucho trabajo-, aporta <strong>Ada.</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id70">
+<div class="iDevice emphasis0">
+<div id="ta70_73" class="block iDevice_content">
+<p>La <strong>depuración de programas</strong> es el proceso por el cual <strong>se identifican y corrigen errores de programación</strong>. Generalmente, en el argot de programación se utiliza la palabra <span lang="en">debugging</span>, que significa localización y eliminación de bichos (<span lang="en">bugs</span>) o errores de programa. A través de este proceso se descubren los errores y se identifica qué zonas del programa los producen.</p>
+<p>Hay tres etapas por las que un programa pasa cuando este es desarrollado y que pueden generar errores:</p>
+<ul class="lista_verificacion">
+<li><strong>Compilación:</strong> una vez que hemos terminado de escribir un programa, solemos pasar generalmente cierto tiempo eliminando errores de compilación para que el código pueda ejecutarse. Una vez que el programa es liberado de los errores de compilación, obtendremos de él algunos resultados visibles, pero quizá no haga aún lo que queremos.</li>
+<li><strong>Enlazado:</strong> todos los programas hacen uso de utilidades (clases, métodos, funciones, <abbr title="etcétera">etc</abbr>.) creadas específicamente para ese programa junto con otras que forman parte de bibliotecas o librerías que ya existían previamente. En el caso de Java, estas utilidades son enlazadas (<em><span lang="en">linked</span></em>) solo cuando son llamadas, durante el proceso de ejecución. Pero cuando el programa es compilado, se realizan comprobaciones para saber si esas utilidades existen y sus parámetros son correctos en número y tipo. Así que, los errores de enlazado y de compilación son detectados antes de la fase de ejecución.</li>
+<li><strong>Ejecución:</strong> cuando el programa entra en ejecución, es muy frecuente que este no funcione como se esperaba. De hecho, es normal que el programa falle. Algunos errores serán detectados automáticamente y el programador será informado, nos referimos a errores como acceder a una parte de un <span lang="en">array</span> que no existe (error de índices), por ejemplo. Otros son más sutiles y dan lugar simplemente a comportamientos no esperados, debido a la existencia de errores ocultos (<span lang="en">bugs</span>) en el programa. De ahí los términos <em><span lang="en">bug</span></em> y <em><span lang="en">debugging</span></em>. El problema de la depuración es que los síntomas de un posible error son generalmente poco claros, hay que recurrir a una labor de investigación para encontrar la causa.</li>
+</ul>
+<p>Durante la <strong>fase de compilación</strong> estamos aún escribiendo código o bien ya lo hemos terminado de escribir, pero aún no hemos probado a ejecutar el programa. En esta fase los errores que podemos encontrar serán de tipo:</p>
+<ul>
+<li class="lista_verificacion"><strong>Léxico</strong>: uso de palabras o identificadores no reconocidos por el lenguaje Java, o que no forman parte de las bibliotecas utilizadas, ni tampoco son elementos definidos en el propio programa (por ejemplo nombres de variables). Algunos ejemplos de estos fallos son:
+<ul>
+<li class="lista_verificacion">cuando te confundes al escribir una instrucción (por ejemplo <code>wile</code> en lugar de <code>while</code>);</li>
+<li class="lista_verificacion">cuando te equivocas al escribir el nombre de una variable (por ejemplo <code>cotador</code> en lugar de <code>contador</code>) o intentas usar una variable que no ha sido declarada en ese contexto o bloque;</li>
+<li class="lista_verificacion">cuando intentas llamar a algún elemento de biblioteca indicando su nombre erróneamente (por ejemplo si escribes <code>System.out.prtln()</code>, que no existe, en lugar de <code>System.out.println()</code>, que sí existe).</li>
+</ul>
+</li>
+<li class="lista_verificacion"><strong>Sintáctico</strong>: estructuración errónea del código sin seguir las reglas del lenguaje. Algunos ejemplos podrían ser:
+<ul>
+<li class="lista_verificacion">no cerrar apropiadamente todos los paréntesis que se han abierto en una expresión aritmética;</li>
+<li class="lista_verificacion">no cerrar apropiadamente todos los bloques que se han abierto (llaves) y en el orden apropiado;</li>
+<li class="lista_verificacion">no finalizar las sentencias con el carácter punto y coma.</li>
+</ul>
+</li>
+<li class="lista_verificacion"><strong>Semántico</strong>: aplicación de operaciones que no tienen sentido en el lenguaje. Algunos de estos fallos podrían ser:<br />
+<ul>
+<li class="lista_verificacion">asignar a una variable entera un valor de tipo real. Se produciría una pérdida de precisión, así que el compilador no permite la compilación y nos obliga a realizar una conversión explícita (<span class="lista_verificacion" lang="en">casting</span>) para asegurarse de que es eso lo que realmente queremos hacer;</li>
+<li class="lista_verificacion">aplicar un operador a un tipo de dato que no corresponde (por ejemplo intentar aplicar el operador división "/" a un <code>boolean</code>).</li>
+</ul>
+</li>
+</ul>
+<p>Durante la fase de enlazado pueden producirse <strong>errores de integración</strong> a la hora de garantizar que todos los elementos que se usan en tu programa están disponibles. Por ejemplo si intentas usar la clase <code>Scanner</code> para leer del teclado y esa clase no está disponible, se produciría un error de enlazado y aunque el programa compile no puede llegar a generarse un archivo binario ejecutable final.</p>
+<p>Durante la fase de ejecución, una vez que el programa ha podido ser compilado, enlazado y ejcutándose. Pueden producirse esencialmente dos tipos de errores durante su funcionamiento:</p>
+<ul class="lista_verificacion">
+<li><strong>Errores de propiamente de ejecución</strong>, donde el sistema operativo (o en nuestro caso la máquina virtual de Java, que hace las veces de sistema operativo "virtual" de nivel superior) "abortará" la ejecución y el programa se interrumpirá abruptamente. Una situación muy poco deseable que debemos evitar a toda costa. Estos errores los intentaremos prever mediante la gestión de excepciones, que ya veremos más adelante. Algunas circunstancias típicas que pueden producir errores de ejecución son la división por cero, el intentar ir más allá de los límites de una cadena o un array, intentar acceder a un archivo que no existe o sobre el que no se tiene permiso, <abbr title="etcétera">etc</abbr>.</li>
+<li><strong>Errores lógicos</strong> de nuestro programa. Estos son los errores más difíciles de encontrar, pues el programa compila y se ejecuta perfectamente, pero no tiene el comportamiento que se esperaba de él. Eso suele ser debido a que aunque nos hemos confundido en la redacción de nuestro código, sigue siendo código correcto que no produce errores. Y dado que ni el compilador, ni la máquina virtual de Java, ni el sistema operativo son "adivinos", no saben que el programador se ha equivocado al implementar una determinada operación que está dando lugar a un resultado incorrecto. Ejemplos típicos de este tipo de fallos pueden ser:<br />
+<ul>
+<li>uso de un operador erróneo al realizar algún cálculo o llevar a cabo una comprobación. Por ejemplo, haber escrito el símbolo de suma (<code>+</code>) en lugar de el de multiplicación (<code>*</code>) a la hora de calcular algún resultado, o hacer una comparación usando el operador <code>&lt;=</code> cuando en realidad lo que necesitábamos usar era el <code>&lt;</code>;</li>
+<li>uso de una variable diferente a la que realmente hace falta al realizar cálculos o llevar a cabo comprobaciones. Por ejemplo, no usar la variable apropiada para comprobar si se debe continuar con un bucle o no;</li>
+<li>en casos en los que un bloque de código ser ejecutado repetidamente (bucle), colocar alguna de sus sentencias fuera del bucle, dando lugar a una ejecución correcta pero con resultados totalmente diferentes a los esperados.</li>
+</ul>
+</li>
+</ul>
+<p>Es para este último tipo de errores (errores "lógicos" o de la "lógica del programa") para los que la depuración es una herramienta esencial en el proceso de desarrollo, pues l<strong>os errores de compilación y enlazado son sencillos de detectar</strong>, ya que no llegamos a poder ejecutar el código y normalmente las herramientas nos indican con bastante precisión qué tipo de error se está produciendo. En el caso de los <strong>errores de ejecución</strong>, podemos intuir en qué parte del código se produce el error que hace que el programa aborte. En muchos casos incluso el error que indique la máquina virtual de Java (o el sistema operativo si se trata de un ejecutable binario "puro") nos dará la pista del fallo.</p>
+<p>Pero <strong>en los errores lógicos ya no es tan sencillo detectar el posible fallo</strong>, pues es posible que no siempre se produzca y que tan solo se dé bajo unas determinadas circunstancias. Además, aunque se produzca el fallo, el programa sigue funcionando sin problema, pues no se trata de un error que necesariamente produzca un malfuncionamiento del equipo sobre el que se está ejecutando. Simplemente se están generando resultados incorrectos de vez en cuando. Eso hace que puedan tardarse días o incluso meses en producirse y detectarse esos fallos, en algunos casos con la aplicación funcionando ya en producción.</p>
+<p>Para descubrir la existencia de este tipo de errores habrá que llevar a cabo una serie de <strong>pruebas sistemáticas</strong> sobre el programa. Estas pruebas se encargarán de comprobar si para cada una de las entradas que se introducen se producen las salidas esperadas. Habría por tanto que preparar una serie de casos de prueba, ejecutarlos y observar los resultados obtenidos. Si algunos de esos resultados no coinciden con lo obtenido, habremos descubierto un fallo en el programa. A partir de ese momento habrá que comenzar a buscarlo.</p>
+<p>La <strong>depuración de los programas</strong> nos permitirá detectar y corregir este tipo de fallos. Suelen requerir una cantidad de tiempo considerable en comparación con el tiempo dedicado a la primera codificación del programa. Pero no te preocupes, es habitual que suceda así. A nadie le funciona un programa "a la primera" .</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id257">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona: ¿cómo se prueba un programa?</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta257_121" class="block iDevice_content">
+<p>Para realizar una adecuada <strong>prueba de un programa</strong> se requiere la <strong>confección de casos de prueba</strong> que permitan llevar a cabo una <strong>comprobación sistemática de todas sus opciones y posibilidades</strong>. Es necesario asegurarse de que todas las acciones del programa se llevan a cabo tal y como eran de esperar, es decir, tal y como están descritas en los documentos de análisis y especificación de la aplicación. Si el comportamiento del programa no es así, es que hay algo que no ha sido implementado correctamente por el equipo de desarrollo (los programadores).</p>
+<p>Este tipo de trabajo es hoy día una disciplina en sí misma y existen personas especializadas en realizar esta labor. No la suelen realizar los propios programadores, salvo que se trate de proyectos pequeños. Existen para ello los llamados "equipos de prueba" y forman parte del equipo de desarrollo, aunque no se dedican a programar. El trabajo de estas personas consiste en diseñar pruebas sistemáticas de manera independiente y paralela al trabajo de los programadores. Para ello se basarán en los documentos en los que se especifica cuál debe ser el comportamiento del programa. Es decir, tanto programadores como probadores parten del mismo material común: las especificaciones de la aplicación. Sin embargo unos se dedicarán a implementar código y otros a diseñar cómo probar posteriormente ese código.</p>
+<p>Una vez codificados los programas, el equipo de pruebas realiza las comprobaciones sistemáticas indicadas en los documentos (u otras herramientas de trabajo) que se hayan confeccionado y se descubran los posibles errores que se hayan podido cometer durante la fase de implementación. Esa información obtenida tras las pruebas es proporcionada al equipo de desarrollo para que localicen en qué parte de su código se han podido producir esos errores y, una vez encontrados, puedan ser corregidos. Es aquí donde entrará el juego el depurador para ayudar a los programadores a localizar los posibles fallos en la implementación.</p>
+<p>En este módulo (<em>Programación</em>) no se estudia cómo ha de llevarse a cabo este proceso de diseño (y posterior ejecución) de esas pruebas sistemáticas. Se ve algo sobre este tema en el módulo <em>Entornos de Desarollo</em>. En nuestro caso, nos conformaremos con "preparar" algunas pruebas genéricas para asegurarnos nosotros mismos que nuestros pequeños programas funcionan correctamente. En el caso de las tareas y otras actividades, normalmente se os proporcionarán algunos "ejemplos de ejecución" o "casos de prueba" suficientes para que podáis probar vuestros programas y aseguraros de que están funcionando tal y como deberían hacerlo. <strong>Recuerda siempre que el hecho de que un programa se ejecute no significa necesariamente que esté haciendo lo que nosotros queríamos que hiciera</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="52_etiquetas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="61_depuracin_de_cdigo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

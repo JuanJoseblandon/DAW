@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.2.- Lenguaje ensamblador | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li class="current-page-parent"><a href="4_lenguajes_de_programacin.html" class="current-page-parent daddy">4.- Lenguajes de programación</a>
+   <ul>
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li id="active"><a href="42_lenguaje_ensamblador.html" class="active no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="41_lenguaje_mquina.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_lenguajes_compilados.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.2.- Lenguaje ensamblador</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id34">
+<div class="iDevice emphasis0">
+<div id="ta34_73" class="block iDevice_content">
+<p>La evoluci&oacute;n del lenguaje m&aacute;quina fue el lenguaje ensamblador.</p>
+<p>Las instrucciones ya no son secuencias binarias, se sustituyen por c&oacute;digos de operaci&oacute;n que describen una operaci&oacute;n elemental del procesador. Es un lenguaje de bajo nivel, al igual que el lenguaje m&aacute;quina, ya que dependen directamente del <span lang="en">hardware</span> donde son ejecutados.</p>
+<p class="destacado"><strong>Mnemot&eacute;cnico:</strong> son palabras especiales, que sustituyen largas secuencias de ceros y unos, utilizadas para referirse a diferentes operaciones disponibles en el juego de instrucciones que soporta cada m&aacute;quina en particular.</p>
+<p>En ensamblador, cada instrucci&oacute;n (mnemot&eacute;cnico) se corresponde a una instrucci&oacute;n del procesador. En la siguiente tabla se muestran algunos ejemplos.</p>
+<table class="tabla" summary="Esta tabla muestra un ejemplo de tres operaciones y su equivalencia en lenguaje ensamblador. "><caption>Algunas operaciones y su mnemot&eacute;cnico en lenguaje Ensamblador.</caption>
+<thead>
+<tr><th scope="col">Operaci&oacute;n</th><th scope="col">Lenguaje Ensamblador</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">MULTIPLICAR</th>
+<td style="text-align: center;">MUL</td>
+</tr>
+<tr><th scope="row">DIVIDIR</th>
+<td style="text-align: center;">DIV</td>
+</tr>
+<tr><th scope="row">MOVER</th>
+<td style="text-align: center;">MOV</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>En el siguiente gr&aacute;fico puedes ver parte de un programa escrito en lenguaje ensamblador. En color rojo se ha resaltado el c&oacute;digo m&aacute;quina en <a class="glosario">hexadecimal<span><em>Hexadecimal</em>Sistema num&eacute;rico en base 16, esto significa que contiene 16 s&iacute;mbolos &uacute;nicos para representar datos: los n&uacute;meros del 0 al 9 y las letras de la A a la F.</span></a>, en magenta el c&oacute;digo escrito en ensamblador y en azul, las direcciones de memoria donde se encuentra el c&oacute;digo.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="PROG01_CONT_R10_ensamblador.jpg"><img src="PROG01_CONT_R10_ensamblador_miniatura.jpg" alt="Fragmento de c&oacute;digo escrito en ensamblador con su equivalente en hexadecimal y las direcciones de memoria donde est&aacute; alojado. En color rojo se ha resaltado el c&oacute;digo m&aacute;quina en hexadecimal, en magenta el c&oacute;digo escrito en ensamblador y en azul, las direcciones de memoria donde se encuentra el c&oacute;digo." title="Lenguaje ensamblador." class="imagen_ampliable" style="vertical-align: middle;" /></a></div>
+<div class="elemento_centrado credenciales"><a class="cc0" title="Dominio p&uacute;blico" href="http://creativecommons.org/publicdomain/zero/1.0/deed.es" target="_blank"><span class="transparente">Dominio p&uacute;blico</span></a>&nbsp;<a title="German" href="http://commons.wikimedia.org/wiki/File:Codigo_de_maquina.png" target="_blank">German</a></div>
+</div>
+<p>&nbsp;</p>
+<p>Pero aunque ensamblador fue un intento por aproximar el lenguaje de los procesadores al lenguaje humano, presentaba <strong>m&uacute;ltiples dificultades</strong>:</p>
+<ul class="lista_verificacion">
+<li>Los programas <strong>segu&iacute;an dependiendo directamente del <span lang="en">hardware</span></strong> que los soportaba.</li>
+<li>Los programadores <strong>ten&iacute;an que conocer detalladamente la m&aacute;quina</strong> sobre la que programaban, ya que deb&iacute;an hacer un uso adecuado de los recursos de dichos sistemas.</li>
+<li><strong>La lectura, interpretaci&oacute;n o modificaci&oacute;n</strong> de los programas segu&iacute;a presentando <strong>dificultades</strong>.</li>
+</ul>
+<p>Todo programa escrito en lenguaje ensamblador necesita de un intermediario, que realice la traducci&oacute;n de cada una de las instrucciones que componen su c&oacute;digo al lenguaje m&aacute;quina correspondiente. Este intermediario es el <strong>programa ensamblador</strong>. El programa original escrito en lenguaje ensamblador constituye el <strong>c&oacute;digo fuente</strong> y el programa traducido al lenguaje m&aacute;quina se conoce como <strong>programa objeto</strong> que ser&aacute; directamente ejecutado por la computadora.</p>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="41_lenguaje_mquina.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_lenguajes_compilados.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

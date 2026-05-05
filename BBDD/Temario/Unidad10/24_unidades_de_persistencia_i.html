@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.4.- Unidades de persistencia (I) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-91"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Gestión de bases de datos: relacionales y orientadas a objetos. Persistencia de objetos</a></li>
+   <li><a href="1_bases_de_datos_relacionales.html" class="daddy">1.- Bases de datos relacionales</a>
+   <ul class="other-section">
+      <li><a href="11_el_desfase_objetorelacional.html" class="no-ch">1.1.- El desfase objeto-relacional</a></li>
+      <li><a href="12_jdbc.html" class="no-ch">1.2.- JDBC</a></li>
+      <li><a href="13__conectores_o_drivers.html" class="no-ch">1.3.-  Conectores o Drivers</a></li>
+      <li><a href="14_instalacin_de_la_base_de_datos.html" class="no-ch">1.4.- Instalación de la base de datos</a></li>
+      <li><a href="15_creacin_de_las_tablas_en_una_base_de_datos.html" class="daddy">1.5.- Creación de las tablas en una base de datos</a>
+      <ul class="other-section">
+         <li><a href="151_lenguaje_sql_i.html" class="no-ch">1.5.1.- Lenguaje SQL (I)</a></li>
+         <li><a href="152_lenguaje_sql_ii.html" class="no-ch">1.5.2.- Lenguaje SQL (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="16_establecimiento_de_conexiones.html" class="daddy">1.6.- Establecimiento de conexiones</a>
+      <ul class="other-section">
+         <li><a href="161_configurar_un_conector_jdbc_en_un_proyecto_netbeans.html" class="no-ch">1.6.1.- Configurar un conector JDBC en un proyecto NetBeans</a></li>
+         <li><a href="162_registrar_el_conector_jdbc.html" class="no-ch">1.6.2.- Registrar el conector JDBC</a></li>
+      </ul>
+      </li>
+      <li><a href="17_ejecucin_de_consultas_sobre_la_base_de_datos.html" class="daddy">1.7.- Ejecución de consultas sobre la base de datos</a>
+      <ul class="other-section">
+         <li><a href="171_adicin_de_informacin.html" class="no-ch">1.7.1.- Adición de información</a></li>
+         <li><a href="172_recuperacin_de_informacin_i.html" class="daddy">1.7.2.- Recuperación de información (I)</a>
+         <ul class="other-section">
+            <li><a href="1712_recuperacin_de_informacin_ii.html" class="no-ch">1.7.1.2.- Recuperación de información (II)</a></li>
+         </ul>
+         </li>
+         <li><a href="173_actualizacin_de_informacin.html" class="no-ch">1.7.3.- Actualización de información</a></li>
+         <li><a href="174_borrado_de_informacin.html" class="no-ch">1.7.4.- Borrado de información</a></li>
+         <li><a href="175_cierre_de_conexiones.html" class="no-ch">1.7.5.- Cierre de conexiones</a></li>
+         <li><a href="176_excepciones_en_jdbc.html" class="no-ch">1.7.6.- Excepciones en JDBC</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_persistencia_de_objetos.html" class="current-page-parent daddy">2.- Persistencia de objetos</a>
+   <ul>
+      <li><a href="21_qu_son_las_bases_de_datos_orientadas_a_objetos.html" class="no-ch">2.1.- ¿Qué son las bases de datos orientadas a objetos?</a></li>
+      <li><a href="22_qu_es_el_mapeado_de_objetos.html" class="no-ch">2.2.- ¿Qué es el mapeado de objetos?</a></li>
+      <li><a href="23_cmo_empiezo_a_usar_jpa.html" class="no-ch">2.3.- ¿Cómo empiezo a usar JPA?</a></li>
+      <li id="active"><a href="24_unidades_de_persistencia_i.html" class="active daddy">2.4.- Unidades de persistencia (I)</a>
+      <ul>
+         <li><a href="241_unidades_de_persistencia_ii.html" class="no-ch">2.4.1.- Unidades de persistencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="25_modelo_de_datos_en_jpa.html" class="daddy">2.5.- Modelo de datos en JPA</a>
+      <ul class="other-section">
+         <li><a href="251_entidades.html" class="no-ch">2.5.1.- Entidades</a></li>
+         <li><a href="252_atributos.html" class="no-ch">2.5.2.- Atributos</a></li>
+         <li><a href="253_relaciones_entre_entidades.html" class="no-ch">2.5.3.- Relaciones entre entidades</a></li>
+         <li><a href="254_relaciones_uno_a_uno.html" class="no-ch">2.5.4.- Relaciones uno a uno</a></li>
+         <li><a href="255_relaciones_uno_a_muchos.html" class="no-ch">2.5.5.- Relaciones uno a muchos</a></li>
+      </ul>
+      </li>
+      <li><a href="26_operaciones_crud_con_jpa.html" class="daddy">2.6.- Operaciones CRUD con JPA</a>
+      <ul class="other-section">
+         <li><a href="261_persistir_y_leer.html" class="no-ch">2.6.1.- Persistir y leer</a></li>
+         <li><a href="262__actualizar_y_borrar_instancias.html" class="no-ch">2.6.2.-  Actualizar y borrar instancias</a></li>
+      </ul>
+      </li>
+      <li><a href="27_jpql_i.html" class="daddy">2.7.- JPQL (I)</a>
+      <ul class="other-section">
+         <li><a href="271_jpql_ii.html" class="no-ch">2.7.1.- JPQL (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="23_cmo_empiezo_a_usar_jpa.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="241_unidades_de_persistencia_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.4.- Unidades de persistencia (I)</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id66">
+<div class="iDevice emphasis0">
+<div id="ta66_154" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 250px;"><img src="jpa_vagon.png" alt="Imagen que muestra la interfaz gráfica de configuración de la unidad de persistencia en NetBeans con adornos." title="Configurar la unidad de persistencia en NetBeans." width="250" height="127" />
+<div class="figcaption"><span class="author">Salvador Romero Villegas. Elaboración propia.</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></div>
+</div>
+<p>Con <acronym title="Java Persistence API" lang="en">JPA</acronym> aparece un concepto nuevo muy importante, el concepto de <strong>unidad de persistencia</strong>. La idea de <acronym title="Java Persistence API" lang="en">JPA</acronym> es, como ya se ha explicado, poder almacenar de forma sencilla objetos (y la información que contienen) en un almacén de datos. Pero, ¿qué objetos podrán ser almacenables en dicho almacén? ¿Cómo indico qué objetos podrán ser almacenados y cuáles no? ¿Cómo indico en qué almacén de datos se deberán almacenar los objetos?</p>
+<p>Toda esa información es lo que llamamos la unidad de persistencia. Por tanto:</p>
+<ul class="lista_verificacion">
+<li>La<strong> unidad de persistencia incluye qué objetos serán persistentes</strong>. Estos objetos los llamaremos <strong>entidades</strong>.</li>
+<li>La <strong>unidad de persistencia incluye dónde persistirá la información</strong>, es decir, en qué base de datos.</li>
+<li>La <strong>unidad de persistencia incluye qué proveedor de persistencia se usará</strong>.</li>
+</ul>
+<p>Esta información se indica en dos lugares. En primer lugar, en el archivo <code>persistence.xml</code> donde indicaremos parte de la información, y el resto en nuestro código <span lang="en">Java</span>. Cada unidad de persistencia tendrá su propia sección en el archivo de configuración <code>persistence.xml</code>, por ejemplo:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"&gt;
+  &lt;persistence-unit name="EjemplosJPA" transaction-type="RESOURCE_LOCAL"&gt;
+    &lt;provider&gt;org.eclipse.persistence.jpa.PersistenceProvider&lt;/provider&gt;
+    &lt;class&gt;minipos.model.LineaTicket&lt;/class&gt;
+    &lt;class&gt;minipos.model.DireccionEnvio&lt;/class&gt;
+    &lt;class&gt;minipos.model.Producto&lt;/class&gt;
+    &lt;class&gt;minipos.model.Ticket&lt;/class&gt;
+  &lt;/persistence-unit&gt; 
+&lt;/persistence&gt;</code></pre>
+</div>
+</div>
+<p>Cada unidad de persistencia va definida con la etiqueta <code>&lt;persistence-unit&gt;...&lt;/persistence-unit&gt;</code>. En su interior, indicaremos qué configuración debe usarse para conectar a la base de datos, cuál será el proveedor de persistencia a usar, qué clases se podrán hacer persistentes, <abbr title="etcétera">etc</abbr>. Solo una porción de esta información debe indicarse aquí de forma obligatoria.</p>
+<p>En el ejemplo anterior, se especifica el proveedor de persistencia a usar (<code>&lt;provider&gt;...&lt;/provider&gt;</code>), aunque no es obligatorio (<span style="background-color: #ffffff;">si no lo indicamos buscará una implementación en el <code>CLASSPATH</code>).</span> Como proveedor de persistencia se ha usado <code>org.eclipse.persistence.jpa.PersistenceProvider</code>, lo cual nos dice que la implementación de <acronym title="Java Persistence API" lang="en">JPA</acronym> usada en ese caso es <span lang="en">EclipseLink</span>.</p>
+<p>Además del proveedor de persistencia, en el ejemplo anterior se indica qué objetos serán persistentes, a través de <strong><code>&lt;class&gt;...&lt;/class&gt;</code></strong>. Indicar las clases que podrán ser persistentes sí será obligatorio.</p>
+<p class="destacado"><strong>Lo mínimo que debemos indicar en la unidad de persistencia es su nombre  (<code>name="EjemplosJPA"</code>) y las clases que serán persistentes (<code>&lt;class&gt;...&lt;/class&gt;</code>). </strong><code></code></p>
+<p>Pero aquí faltarían cosas todavía para que <abbr title="Java Persistence API" lang="en">JPA</abbr> haga su magia.</p>
+<ul class="lista_verificacion">
+<li>¿Qué pasa con la información necesaria para conectar a la base de datos?</li>
+<li>¿Dónde se indica la <acronym title="Uniform Resource Locator" lang="en">URL</acronym> de conexión, el <span lang="en">driver</span>, el usuario, el <span lang="en">password</span>, <abbr title="etcétera">etc.</abbr>?</li>
+</ul>
+<p>La verdad es que podremos indicar dicha información en el archivo anterior o bien por medio del programa. Es decir, podemos completar la información de la unidad de persistencia usando etiquetas <acronym title="Extensible Markup Language" lang="en">XML</acronym> o bien desde nuestro código en <span lang="en">Java</span>, sin necesidad de modificar el <acronym title="Extensible Markup Language" lang="en">XML</acronym>.</p>
+<p>¿Y por dónde empiezo ahora?,  te preguntarás.</p>
+<p>Es sencillo: crea un archivo <code>persistence.xml</code> en la carpeta <code>META-INF</code> siguiendo el modelo anterior y échale un vistazo al ejemplo siguiente. <strong>Pero ¡cuidado!, no pongas todavía las clases a persistir (<code>&lt;class&gt;...&lt;/class&gt;</code>), eso lo haremos más adelante</strong>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id69">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta69_151" class="block iDevice_content">
+<p><strong>Una aplicación puede necesitar trabajar con datos de diferentes orígenes, por ejemplo, de diferentes bases de datos. Es por ello que podemos tener varias unidades de persistencia en un mismo archivo <code>persistence.xml</code>.</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id151">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header" style="background-image:url(icon_debesconocerfpd.png)"><h2 class="iDeviceTitle">Debes conocer</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta151_129" class="block iDevice_content">
+<p>A continuación te ofrecemos dos proyectos base <span lang="en">NetBeans</span> que utilizan <acronym title="Java Persistence API" lang="en">JPA</acronym> con H2 y <span lang="en">MySQL</span> respectivamente, y donde la información necesaria para acceder al almacén de datos se proporciona a través del archivo <code>persistence.xml</code>.</p>
+<p style="text-align: center;"><a href="UT10_ProyectoBase_JPA_H2_extra1.zip" class="paquete" title="Haz clic para descargar proyecto base 1 que utiliza JPA y H2.  Se abre en una nueva ventana [zip - 1.77 MB]" target="_blank">Proyecto base tipo 1 que usa <acronym title="Java Persistence API" lang="en">JPA</acronym> con una base de datos H2.</a><span class="exe-link-data file-size"> (zip - 1.77 <abbr title="MegaBytes" lang="en">MB</abbr>)</span></p>
+<p style="text-align: center;"><a href="UT10_ProyectoBase_JPA_MySQL_extra1.1.zip" title="Haz clic para descargar proyecto base 1 que utiliza JPA y MySQL. Se abre en una nueva ventana [zip - 2246995 B]" target="_blank" class="paquete">Proyecto base tipo 1 que usa <acronym title="Java Persistence API" lang="en">JPA</acronym> con una base de datos <span lang="en">MySQL</span>.</a><span class="exe-link-data file-size"> (zip - 2246995 <abbr title="Bytes" lang="en">B</abbr>)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id143">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta143_63" class="block story iDevice_content">
+<p>La configuración de acceso a la base de datos puede indicarse a través de propiedades en la unidad de persistencia. Fíjate en el siguiente ejemplo, pensado para acceder a una base de datos H2.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"&gt;
+  &lt;persistence-unit name="EjemplosJPA" transaction-type="RESOURCE_LOCAL"&gt;
+    &lt;provider&gt;org.eclipse.persistence.jpa.PersistenceProvider&lt;/provider&gt;
+    &lt;properties&gt;
+      &lt;property name="javax.persistence.jdbc.url" value="jdbc:h2:./mibasededatos.h2db"/&gt;
+      &lt;property name="javax.persistence.jdbc.user" value=""/&gt;
+      &lt;property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/&gt;
+      &lt;property name="javax.persistence.jdbc.password" value=""/&gt;
+      &lt;property name="javax.persistence.schema-generation.database.action" value="create"/&gt;
+    &lt;/properties&gt;
+  &lt;/persistence-unit&gt;
+&lt;/persistence&gt;
+
+</code></pre>
+</div>
+</div>
+</div>
+<div id="taquesQuestion0b143" class="block iDevice_content">
+<p>¿Serías capaz de modificar el ejemplo anterior para acceder a una base de datos <span lang="en">MySQL</span>?</p>
+</div>
+<form name="feedback-form-quesFeedback0b143" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b143text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b143" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b143" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Supongo que más o menos intuyes cómo deberías indicar la configuración necesaria para acceder a la base de datos, veamos cómo podría ser un ejemplo para <span lang="en">MySQL</span>:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"&gt;
+  &lt;persistence-unit name="EjemplosJPA" transaction-type="RESOURCE_LOCAL"&gt;
+    &lt;provider&gt;org.eclipse.persistence.jpa.PersistenceProvider&lt;/provider&gt;
+    &lt;properties&gt;
+      &lt;property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ut10?serverTimezone=UTC"/&gt;
+      &lt;property name="javax.persistence.jdbc.user" value="ut10"/&gt;
+      &lt;property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/&gt;
+      &lt;property name="javax.persistence.jdbc.password" value="ut10"/&gt;
+      &lt;property name="javax.persistence.schema-generation.database.action" value="create"/&gt;
+    &lt;/properties&gt;
+  &lt;/persistence-unit&gt;
+&lt;/persistence&gt;</code></pre>
+</div>
+</div>
+<p>El parámetro <code class="  language-markup"><span class="token tag"><span class="token attr-value">javax.persistence.schema-generation.database.action</span></span></code> con el valor <code class="  language-markup"><span class="token tag"><span class="token attr-value">create<span class="token punctuation"></span></span></span></code>, indicará a <acronym title="Java Persistence API" lang="en">JPA</acronym> que la base de datos debe crearse automáticamente si no existe.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="23_cmo_empiezo_a_usar_jpa.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="241_unidades_de_persistencia_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

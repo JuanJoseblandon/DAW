@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.6.- Operadores de bits | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-67"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li class="current-page-parent"><a href="11_operadores_y_expresiones.html" class="current-page-parent daddy">11.- Operadores y expresiones</a>
+   <ul>
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li id="active"><a href="116_operadores_de_bits.html" class="active no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="115_operador_condicional.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="117_trabajo_con_cadenas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.6.- Operadores de bits</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id103">
+<div class="iDevice emphasis0">
+<div id="ta103_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG02_CONT_R33_Bits.jpg" alt="S&iacute;mbolos de los operadores de desplazamientos de bits sobre un fondo de ceros y unos." title="Operadores de desplazamiento de bits." style="float: right;" height="160" width="186" /></div>
+<div class="elemento_centrado credenciales">Flor Moncada A&ntilde;&oacute;n. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">Elaboraci&oacute;n propia.</div>
+</div>
+<p>Los operadores a nivel de bits se caracterizan porque realizan operaciones sobre n&uacute;meros enteros (o <code>char</code>) en su representaci&oacute;n binaria, es decir, sobre cada d&iacute;gito binario.</p>
+<p>Aunque estos operadores no son de uso frecuente, sino m&aacute;s bien para aplicaciones muy espec&iacute;ficas, no est&aacute; de m&aacute;s que al menos sepas cu&aacute;les son. En la tabla tienes los operadores a nivel de bits que utiliza <span lang="en">Java</span>.</p>
+<table class="tabla" summary="Cuadro o tabla de siete filas por tres columnas, de t&iacute;tulo &quot;Operadores l&oacute;gicos en Java&quot;, de modo que para cada operador l&oacute;gico se indica c&oacute;mo se escribe en Java y su significado. Debe ser le&iacute;da en columnas de izquierda a derecha y de arriba abajo. "><caption>Operadores a nivel de bits en Java</caption>
+<thead>
+<tr><th scope="col">Operador</th><th scope="col">Ejemplo en Java</th><th scope="col">Significado</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>~</code></span></strong></td>
+<td style="text-align: center;"><strong><span style="font-size: medium;">~op</span></strong></td>
+<td><span style="font-size: medium;">Realiza el complemento binario de <code>op </code>(invierte el valor de cada bit)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>&amp;</code></span></strong></td>
+<td style="text-align: center;"><strong><span style="font-size: medium;">op1 &amp; op2</span></strong></td>
+<td><span style="font-size: medium;">Realiza la operaci&oacute;n <code>AND</code> binaria sobre <code>op1</code> y <code>op2</code></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>|</code></span></strong></td>
+<td style="text-align: center;"><strong><span style="font-size: medium;">op1 | op2</span></strong></td>
+<td><span style="font-size: medium;">Realiza la operaci&oacute;n <code>OR</code> binaria sobre <code>op1</code> y <code>op2</code></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>^</code></span></strong></td>
+<td style="text-align: center;"><strong><span style="font-size: medium;">op1 ^ op2</span></strong></td>
+<td><span style="font-size: medium;">Realiza la operaci&oacute;n <code>OR-exclusivo </code>(<code>XOR</code>) binaria sobre <code>op1</code> y <code>op2</code></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>&lt;&lt;</code></span></strong></td>
+<td style="text-align: center;"><strong><span style="font-size: medium;">op1 &lt;&lt; op2</span></strong></td>
+<td><span style="font-size: medium;">Desplaza <code>op2 </code>veces hacia la izquierda los bits de <code>op1</code></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>&gt;&gt;</code></span></strong></td>
+<td style="text-align: center;"><strong><span style="font-size: medium;">op1 &gt;&gt; op2</span></strong></td>
+<td><span style="font-size: medium;">Desplaza <code>op2</code> veces hacia la derecha los bits de<code> op1</code></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>&gt;&gt;&gt;</code></span></strong></td>
+<td style="text-align: center;"><strong><span style="font-size: medium;">op1 &gt;&gt;&gt; op2</span></strong></td>
+<td><span style="font-size: medium;">Desplaza <code>op2</code> (en positivo) veces hacia la derecha los bits de <code>op1</code></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id104">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta104_47" class="block iDevice_content">
+<p>Los operadores de bits raramente los vas a utilizar en tus aplicaciones de gestión. No obstante, si sientes curiosidad sobre su funcionamiento, puedes ver el siguiente enlace dedicado a este tipo de operadores:</p>
+<div class="enlace_centrado"><a class="html" title="Acceder a una web con información sobre operadores de bits." href="http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_Java/Operadores_de_bits" target="_blank"> Operadores de bits</a></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id200">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta200_149" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b200" class="block iDevice_content">
+<p>En el siguiente código, la variable <code>i</code> almacena el número <code>129</code>, pero en vez de darle valor con un literal decimal, se le ha dado con un literal binario:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>
+int i = 0b10000001;         
+System.out.println(Integer.toBinaryString(i));
+System.out.println(i);
+</code></pre>
+</div>
+</div>
+<p>En la segunda línea, se muestra el número <code>i</code> en binario por la salida estándar. Dado el código anterior, el objetivo es ampliar el código para conseguir lo siguiente:</p>
+<ol class="lista_esquema">
+<li>Modificando el valor de la variable <code>i</code> con la operación <code>OR </code>binaria, haz que muestre <code>10000011</code> (<code>131</code> en decimal).</li>
+<li>Partiendo del valor del paso 1, modifica el valor de la variable <code>i</code> con la operación <code>AND</code> binaria para que muestre <code>10000010</code> (<code>130</code> en decimal).</li>
+<li>Partiendo del valor del paso 2, modifica el valor de la variable <code>i</code> con el operador de desplazamiento de bits a la derecha, para que muestre <code>1000001</code> (<code>65</code> en decimal).</li>
+<li>Partiendo del valor del paso 3, modifica el valor de la variable <code>i</code> con el operador de desplazamiento de bits a la izquierda, para que muestre <code>1000001000</code> (<code>520</code> en decimal).</li>
+</ol>
+</section>
+<form name="feedback-form-quesFeedback0b200" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b200text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b200" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b200" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Una solución posible sería la siguiente:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class EjemploOperadoresDeBits {
+     public static void main(String[] args) {
+         //i contendrá el número 129.
+         int i = 0b10000001;         
+         System.out.println(Integer.toBinaryString(i));
+         
+         
+         i=i | 0b00000010;
+         System.out.println(Integer.toBinaryString(i));
+         System.out.println(i); //El valor de i ahora es 131
+         
+         i=i &amp; 0b10000010;
+         System.out.println(Integer.toBinaryString(i));
+         System.out.println(i); //El valor de i ahora es 130
+         
+         i=i &gt;&gt; 1;
+         System.out.println(Integer.toBinaryString(i));
+         System.out.println(i); //El valor de i ahora es 65
+         
+         i=i &lt;&lt; 3;
+         System.out.println(Integer.toBinaryString(i));
+         System.out.println(i); //El valor de i ahora es 520
+    }
+}</code></pre>
+</div>
+</div>
+<p>Si se ejecuta el programa debería obtenerse por pantalla algo similar a lo siguiente:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>10000001
+10000011
+131
+10000010
+130
+1000001
+65
+1000001000
+520</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="115_operador_condicional.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="117_trabajo_con_cadenas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

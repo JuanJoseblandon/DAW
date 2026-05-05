@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.2.1.- Estructura repetitiva do-while (II) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-37"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul class="other-section">
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructuras_de_seleccin_o_condicionales.html" class="daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul class="other-section">
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li><a href="34_estructura_selectiva_mltiple_switch_i.html" class="daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul class="other-section">
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="current-page-parent daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul>
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="42_estructura_repetitiva_dowhile_i.html" class="current-page-parent daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul>
+         <li id="active"><a href="421_estructura_repetitiva_dowhile_ii.html" class="active no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li><a href="45_estructura_repetitiva_for_i.html" class="daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul class="other-section">
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul class="other-section">
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="42_estructura_repetitiva_dowhile_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_concepto_de_contador.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.2.1.- Estructura repetitiva do-while (II)</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id108">
+<div class="iDevice emphasis0">
+<div id="ta108_69" class="block iDevice_content">
+<div class="elemento_derecha"></div>
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="checklist-1622517_640.png" alt="Lista de comprobación con ítems marcados" title="Checklist" style="float: right;" width="200" height="200" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/lista-de-comprobaci%C3%B3n-portapapeles-1622517/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de 472301 en Pixabay (se abre en una nueva ventana).">472301</a> <span class="license"><span class="sep">(</span><span class="license"><span class="sep"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep"></span></span></span></span><span class="sep">)</span></span></div>
+</div>
+<p>Si retomamos el ejemplo en el que se comprobaba la validez de los datos de entrada utilizando un bucle <code>while</code>, recordarás la pega que le poníamos de tener obligatoriamente que escribir dos veces las sentencias de lectura. Ese problema desaparece con la estructura <code>do-</code><code>while</code>, pues el cuerpo del bucle se va a ejecutar al menos una vez, ya que la comprobación no se hará hasta el final. En tal caso la entrada de datos con comprobación de validez nos podría quedar mucho más sencilla y compacta:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre class="  language-java"><code class="  language-java">System.out.println ("Debe introducir el incio y el fin.");
+do { // La primera vez siempre se entra en el cuerpo del bucle
+    System.out.println ("Tenga en cuenta el fin que no debe ser menor que el inicio: ");
+    System.out.print ("Introduzca el inicio: ");
+    inicio = teclado.nextInt();
+    System.out.print ("Introduzca el fin: ");
+    fin = teclado.nextInt();
+} while (inicio &gt; fin);  // Si la condición no se cumple, se vuelve a ejecutar el cuerpo del bucle
+System.out.println ("Entrada correcta.");
+</code></pre>
+</div>
+</div>
+<p>De esta manera evitamos tener que escribir una lectura de valores inicial antes de bucle y luego otra lectura exactamente igual en el cuerpo del bucle, por si hay que volver a introducir los valores una segunda vez (o una tercera, o una cuarta).</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id231">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta231_148" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b231" class="block iDevice_content">
+<p>Escribe un programa que solicite un número par, de tal modo que si no se introduce un número par vuelva a solicitarlo hasta que así sea.</p>
+</div>
+<form name="feedback-form-quesFeedback0b231" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b231text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b231" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b231" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Bastaría con incluir la solicitud del número dentro de un bucle <code>do-while</code> de manera que mientras el número introducido no sea par (divisible entre dos) se siga ejecutando el bucle una y otra vez:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+int numero; 
+
+// Entrada de datos con validación
+do {
+    System.out.print ("Introduzca un número par: ");
+    numero = teclado.nextInt();
+} while ( numero % 2 != 0 ); // Mientras el número no sea divisible entre 2 se repite el bucle
+System.out.println ("Entrada válida. Número " + numero);</code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id109">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-109_56" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion109_56" class="block question iDevice_content">
+<p><strong>En las sentencias <code>do-while</code> , &iquest;qu&eacute; hay que tener siempre presente?</strong></p>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i109_59" class="sr-av"><a href="#answer-109_59">Opción 1</a></label><input type="radio" name="option109_56" id="i109_59" class="exe-radio-option exe-radio-option-0-4-109_56-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-109_59"><a name="answer-109_59"></a>
+<div id="taans109_59" class="block iDevice_content">
+<p>La necesidad de duplicar el c&oacute;digo de las sentencias de control del bucle justo antes de entrar al mismo, de forma que se garantice as&iacute; que al menos se van a ejecutar una vez.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i109_214" class="sr-av"><a href="#answer-109_214">Opción 2</a></label><input type="radio" name="option109_56" id="i109_214" class="exe-radio-option exe-radio-option-1-4-109_56-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-109_214"><a name="answer-109_214"></a>
+<div id="taans109_214" class="block iDevice_content">
+<p>La necesidad de que dentro del cuerpo del bucle se incluya alguna sentencia que modifique la variable de control del ciclo, de forma que pueda verse alterado el valor de verdad de la condici&oacute;n que controla el bucle de tal manera que garanticemos que en alg&uacute;n momento se alcance la condici&oacute;n de salida, sin entrar en un bucle infinito.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i109_217" class="sr-av"><a href="#answer-109_217">Opción 3</a></label><input type="radio" name="option109_56" id="i109_217" class="exe-radio-option exe-radio-option-2-4-109_56-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-109_217"><a name="answer-109_217"></a>
+<div id="taans109_217" class="block iDevice_content">
+<p>La posibilidad de que el bucle no se ejecute nunca, por lo que la sentencia que modifique la variable de control del bucle debe ser previa al <code>do-while</code>, o de lo contrario estar&iacute;amos dejando la puerta abierta a que nunca se modificara esa sentencia, y por tanto, nunca se alcanzara la condici&oacute;n de salida, produciendo un bucle infinito, que es algo que siempre hay que evitar.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i109_220" class="sr-av"><a href="#answer-109_220">Opción 4</a></label><input type="radio" name="option109_56" id="i109_220" class="exe-radio-option exe-radio-option-3-4-109_56-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-109_220"><a name="answer-109_220"></a>
+<div id="taans109_220" class="block iDevice_content">
+<p>Las respuestas anteriores son todas incorrectas.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b109_56" class="feedback js-hidden"><a name="sa0b109_56"></a>
+<div id="taf109_59" class=" iDevice_content">
+<p>Incorrecto. No hay que duplicar esas sentencias, simplemente se entra siempre al bucle una primera vez, antes de haber comprobado la condici&oacute;n, por lo que queda garantizada la ejecuci&oacute;n al menos esa primera vez sin necesidad de duplicarlas.</p>
+</div>
+</div>
+<div id="sa1b109_56" class="feedback js-hidden"><a name="sa1b109_56"></a>
+<div id="taf109_214" class=" iDevice_content">
+<p>&iexcl;&iexcl;Correcto!! Presta atenci&oacute;n al detalle: no basta con una sentencia que modifique la variable de control del ciclo, ya que si ello no implica que la condici&oacute;n de salida se alcance en alg&uacute;n momento, estar&iacute;amos igualmente en un bucle infinito.</p>
+</div>
+</div>
+<div id="sa2b109_56" class="feedback js-hidden"><a name="sa2b109_56"></a>
+<div id="taf109_217" class=" iDevice_content">
+<p>Totalmente incorrecto. Me lo acabo de inventar... adem&aacute;s, si se trata de un bucle do-while, la posibilidad de que no se ejecute nunca, no existe.</p>
+</div>
+</div>
+<div id="sa3b109_56" class="feedback js-hidden"><a name="sa3b109_56"></a>
+<div id="taf109_220" class=" iDevice_content">
+<p>Incorrecto. No es as&iacute;, una de las tres s&iacute; que es correcta.</p>
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-109_59">Incorrecto</a><span> (<a href="#sa0b109_56">Retroalimentación</a>)</span></li>
+<li><a href="#answer-109_214">Opción correcta</a><span> (<a href="#sa1b109_56">Retroalimentación</a>)</span></li>
+<li><a href="#answer-109_217">Incorrecto</a><span> (<a href="#sa2b109_56">Retroalimentación</a>)</span></li>
+<li><a href="#answer-109_220">Incorrecto</a><span> (<a href="#sa3b109_56">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id150">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta150_63" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b150" class="block iDevice_content">
+<p>Al igual que se pedía en apartados anteriores, ahora vamos os vamos a pedir que realiceís el ejercicio de la tabla de multiplicar del número 7, pero usando un bucle <code>do-while</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback0b150" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b150text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b150" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b150" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Una solución posible es la siguiente:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>/**
+ * Mostrar la tabla de 7 usando una estructura repetitiva do-while.
+ *
+ * @author Profesor
+ */
+public class RepetitivaTipoDoWhile {
+
+    /**
+     * En esta solución se utiliza la estructura repetitiva while para
+     * representar en pantalla la tabla de multiplicar del siete.
+     */
+    public static void main(String[] args) {
+
+        // Declaración e inicialización de variables
+        int numero = 7;
+        int contador;
+        int resultado = 0;
+
+        /* Paso 1. Mostrar la cabecera de la tabla */
+        System.out.println("Tabla de multiplicar del " + numero);
+        System.out.println(".............................. ");
+
+        /* Paso 2. Calcular la tabla de multiplicar del 7 usando un bucle 
+         * do-while.        
+         * Al igual que ocurría en el bucle do-while, la variable contador 
+         * hay que inicializarla antes de entrar en el bucle, pero hay que tener
+         * en cuenta que el bucle se ejecutará al menos una vez. 
+         * Después, la variable contador se modifica dentro del bucle para que
+         * el bucle termine en algún momento y no se convierta en un bucle 
+         * infinito.
+         */ 
+        
+        contador = 1; //Inicializamos la variable contador antes de empezar el bucle
+        do {
+            resultado = contador * numero;
+            System.out.println(numero + " x " + contador + " = " + resultado);
+            //Modificamos el valor de la variable contadora, para hacer que el
+            //bucle pueda seguir iterando hasta llegar a finalizar (no hasta el infinito)
+            contador++;
+        } while (contador &lt;= 10); //Establecemos la condición del bucle  
+        
+    }
+}
+</code></pre>
+</div>
+</div>
+<p> </p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice em_iDevice_recomendacionfpd" id="id137">
+<div class="iDevice emphasis_recomendacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_recomendacionfpd.png)"><h2 class="iDeviceTitle">Recomendación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta137_46" class="block iDevice_content">
+<p><strong>Buena pr&aacute;ctica de programaci&oacute;n</strong></p>
+<p>Incluye siempre llaves en una instrucci&oacute;n <code>do-while</code>, a&uacute;n cuando estas no sean necesarias. Esto ayuda a eliminar ambig&uuml;edad entre las instrucciones <code>while</code> y <code>do-while</code> que contienen una sola instrucci&oacute;n.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id110">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta110_50" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b110" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b110" class="block iDevice_content">
+<p>Un bucle tipo <code>do-while</code>, que no contenga en su cuerpo ninguna sentencia capaz de modificar el valor de verdad de la condici&oacute;n que controla el ciclo,&nbsp; o bien se ejecuta una sola vez, o bien entra en un bucle infinito ejecut&aacute;ndose indefinidamente.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b110"><input type="radio" name="option0b110" id="true0b110" class="exe-radio-option exe-radio-option-0-2-0b110-truefalse" /> Verdadero</label> 
+<label for="false0b110"><input type="radio" name="option0b110" id="false0b110" class="exe-radio-option exe-radio-option-1-2-0b110-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b110" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b110-result" class="right">Verdadero</strong></p>
+<p>Es verdadero porque si no hay nada dentro del bucle que modifique el valor de la condici&oacute;n, cuando lleguemos a evaluarla ya habremos ejecutado las sentencias del mismo una vez, y pueden pasar dos cosas:</p>
+<ol class="lista_esquema">
+<li>Que la condici&oacute;n sea falsa, en cuyo caso hemos alcanzado la condici&oacute;n de salida, y no se ejecutar&aacute; ninguna vez m&aacute;s (pero ya se hab&iacute;a ejecutado una).</li>
+<li>Que la condici&oacute;n sea verdadera, en cuyo caso volver&aacute; ejecutarse de nuevo, pero como nada hay en esa iteraci&oacute;n que modifique el valor de la condici&oacute;n, al final de cada iteraci&oacute;n siempre vamos a encontrarnos con que sigue siendo verdadera, por lo que seguiremos repitiendo iteraci&oacute;n tras iteraci&oacute;n, &iexcl;&iexcl;hasta el infinito y m&aacute;s all&aacute;!!</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="42_estructura_repetitiva_dowhile_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_concepto_de_contador.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

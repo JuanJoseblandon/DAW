@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.7.- Objetos inmutables | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-54"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_atributos.html" class="current-page-parent daddy">4.- Atributos</a>
+   <ul>
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li id="active"><a href="47_objetos_inmutables.html" class="active no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li><a href="5_mtodos.html" class="daddy">5.- Métodos</a>
+   <ul class="other-section">
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="46_combinando_modificadores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_mtodos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.7.- Objetos inmutables</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id202">
+<div class="iDevice emphasis0">
+<div id="ta202_154" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="EndlessKnot03d.png" alt="El &quot;nudo infinito,&quot; símbolo de la eternidad, utilizado en el budismo tibetano. " title="Nudo infinito" style="float: right;" width="200" height="243" />
+<div class="figcaption"><a href="https://commons.wikimedia.org/wiki/File:EndlessKnot03d.png" target="_blank" class="author" title="Acceder a la web descarga de la imagen &quot;Nudo infinito&quot; de Rickjpelleg en Wiki Commons (se abre en una nueva ventana).">Rickjpelleg</a> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></div>
+</div>
+<p>En algunas ocasiones te has encontrado con clases de la <acronym title="Application Programming Interface" lang="en">API</acronym> de <span lang="en">Java</span> que se dice que son "inmutables", es decir, que los objetos instancia de esas clases no podían ser modificados. En realidad sería más apropiado hablar de <strong>objetos inmutables</strong>. Algunos ejemplos podrían ser:</p>
+<ul class="lista_verificacion">
+<li>la clase <code>String</code>, que almacena cadenas de caracteres,</li>
+<li>todas las <strong>clases envoltorio</strong> ("<em><span lang="en">wrapper</span></em>") de los tipos primitivos (<code>Byte</code>, <code>Short</code>, <code>Integer</code>, <code>Long</code>, <code>String</code>, <code>Float</code>, <code>Double</code>, <code>Boolean</code>, <code>Character</code>),</li>
+<li>las clases de manejo del tiempo <code>LocalDate</code>, <code>LocalTime</code> y <code>LocalDateTime</code>.</li>
+</ul>
+<p>En todos esos casos cada vez que se crea un objeto instancia de alguna de esas clases, el objeto no puede ser modificado. Si se lleva a cabo alguna operación con ellos que da lugar a alguna modificación se obtiene un nuevo objeto con esa modificación pero el objeto original permanece inalterado.</p>
+<p><strong>¿Cómo podemos nosotros implementar una clase que sea inmutable?</strong></p>
+<p>Para ello es necesario que absolutamente <strong>todos sus atributos sean inmutables</strong>, es decir, <strong>constantes</strong>. En el caso del lenguaje <span lang="en">Java</span>, tendrás que declarar todos sus atributos como <code>final</code>.</p>
+<p>Además, la propia clase deberá ser declarada como <code>final</code>. El significado de que una clase sea <code>final</code> lo veremos en la próxima unidad cuando estudiemos la herencia. Baste decir por el momento que si una clase es <code>final</code>, no se puede implementar otra clase que sea descendiente de ella (no permite la herencia).</p>
+<p>Por tanto, la estructura básica de una clase para que sea inmutable será:</p>
+<div class="highlighted-code language-java">
+<pre><code>public final class &lt;NombreClase&gt; { 
+  private final &lt;tipoAtributo1&gt; nombreAtributo1;
+  private final &lt;tipoAtributo2&gt; nombreAtributo2;
+  private final &lt;tipoAtributo3&gt; nombreAtributo3;
+  ...
+</code></pre>
+</div>
+<p>Todos los atributos <code>final</code> y la propia clase también <code>final</code>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id204">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta204_148" class="block story iDevice_content">
+<p>Además de los tradicionales dados de seis caras, existen otros dados con un número diferente de caras (cuatro, ocho, doce, <acronym title="etcétera">etc.</acronym>).</p>
+<div class="exe-figure exe-image position-center license-pd" style="width: 200px;"><img src="dice-25637_640.png" alt="Dos dados de seis caras de color rojo" title="Dados" width="200" height="125" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/dados-rojo-dos-juego-rodante-25637/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Clker-Free-Vector-Images en Pixabay (se abre en una nueva ventana).">Clker-Free-Vector-Images</a> <span class="license"><span class="sep">(</span><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep"></span></span><span class="sep">)</span></span></div>
+</div>
+</div>
+<div id="taquesQuestion0b204" class="block iDevice_content">
+<p>Implementa una clase <code>Dado</code> que pueda representar a dados cuyo número de caras no sea necesariamente seis. ¿Sería razonable plantearse los objetos de esta clase como <strong>objetos inmutables</strong>?</p>
+</div>
+<form name="feedback-form-quesFeedback0b204" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b204text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b204" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b204" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Puesto que no se nos ha dado más información, en principio el único dato que tenemos sobre un dado sería el número de caras que tiene. Podríamos entonces representar un objeto dado con un único <strong>atributo de tipo entero</strong> que contuviera el <strong>número de caras</strong> del dado. Es razonable pensar que una vez creado un dado no va a cambiar su número de caras y como no va a tener más atributos (al menos por el momento) parece razonable pensar que <strong>los objetos de tipo dado sean objetos inmutables</strong>. En tal caso declararemos la clase como todos sus atributos de objeto como <code>final</code>.</p>
+<div class="highlighted-code language-java">
+<pre><code>public final class Dado {
+  private final byte numeroCaras;
+}</code>
+</pre>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id205">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta205_135" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b205" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b205" class="block iDevice_content">
+<p><strong>Los objetos de la clase <code>Vehiculo</code>, que hemos definido en apartados anteriores, <em>son imutables</em>.</strong></p>
+</div>
+<div class="iDevice_hint">
+<h4 class="iDevice_hint_title">Sugerencia</h4>
+<div class="iDevice_hint_content js-hidden">
+<p>Podemos decir que los objetos de una determinada clase son inmutables si una vez que son creados, ya nunca va a cambiar su estado (ninguno de sus atributos se va a ver modificado). En el momento en que exista algún atributo susceptible de sufrir alguna modificación, ya no se puede hablar de un objeto inmutable.</p></div>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b205"><input type="radio" name="option0b205" id="true0b205" class="exe-radio-option exe-radio-option-0-2-0b205-truefalse" /> Verdadero</label> 
+<label for="false0b205"><input type="radio" name="option0b205" id="false0b205" class="exe-radio-option exe-radio-option-1-2-0b205-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b205" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b205-result" class="wrong">Falso</strong></p>
+<p>Los objetos de la clase <code>Vehiculo</code> disponen de <strong>atributos cuyo estado va a ir cambiando a lo largo del tiempo</strong> (<strong>estado del motor</strong>, <strong>nivel del depósito de combustible</strong>, <strong>kilómetros recorridos</strong>, <abbr title="etcétera">etc.</abbr>) por tanto no tiene sentido decir que son objetos inmutables. Son totalmente mutables o variables (o cambiantes).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id208">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta208_121" class="block iDevice_content">
+<p>Hemos definido un <strong>objeto inmutable</strong> como aquél cuyos <strong>atributos no pueden cambiar de valor una vez que el objeto es instanciado</strong>.</p>
+<p>¿Eso significa que si no incluyes el modificador <code>final</code> en la declaración de cada atributo los objetos no serán inmutables?</p>
+<p>Bueno, en teoría sus atributos son variables, pero si esos atributos son privados y ningún método los modifica, en la práctica también se trataría de una clase cuyos objetos son inmutables, pues sus atributos no van a cambiar nunca de valor.</p>
+<p>Ahora bien, <strong>si tienes claro que un atributo nunca va a cambiar una vez asignado un valor inicial, lo recomendable es que lo declares como <code>final</code></strong>. No es obligatorio pero sería lo más correcto y evitará posibles errores en el futuro que podrían traerte más de un dolor de cabeza. Si una vez que has añadido el modificador <code>final</code> a los atributos que van a ser constantes observas que todos los atributos son <strong><code>final</code></strong>, entonces podrás afirmar sin lugar a dudas que estás implementando una clase cuyos objetos serán inmutables.</p>
+<p>Recuerda que hemos decidido adoptar la "excepción" de nombrado "<em><span lang="en">lower camel case</span></em>" para los <strong>atributos <code>final</code> de objeto</strong> aunque estrictamente deberían nombrarse usando las mayúsculas.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="46_combinando_modificadores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_mtodos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

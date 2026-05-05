@@ -1,0 +1,725 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.6.- Combinando modificadores | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-51"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_atributos.html" class="current-page-parent daddy">4.- Atributos</a>
+   <ul>
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li id="active"><a href="46_combinando_modificadores.html" class="active no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li><a href="5_mtodos.html" class="daddy">5.- Métodos</a>
+   <ul class="other-section">
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="47_objetos_inmutables.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.6.- Combinando modificadores</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id143">
+<div class="iDevice emphasis0">
+<div id="ta143_154" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="funnel-147577_640.png" alt="Dibujo de un embudo donde entran varias flechas y sale sólo una" title="Embudo" class="cc0" style="float: right;" width="180" height="181" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/embudo-canalizar-combinar-147577/" target="_blank" class="author" title="Acceder a la imagen &quot;Embudo&quot; de &quot;OpenClipart-Vectors&quot; en Pixabay. (Se abre en una nueva ventana)">OpenClipart-Vectors</a> <span class="license"><span class="sep">(</span><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep">)</span></span></div>
+</div>
+<p>Una vez que hemos estudiado los modificadores más importantes, y dado que no todos son excluyentes entre sí, vamos a ver qué sentido o utilidad práctica podrían tener algunas de sus combinaciones. Recordemos la sintaxis completa de la declaración de un atributo teniendo en cuenta la lista de todos los modificadores:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">[private | protected | public] [static] [final] [transient] [volatile]<tipo><nombreatributo>;</nombreatributo></tipo></code></pre>
+</div>
+<p>Quitando <code>transient</code> y <code>volatile</code>, que en este curso no los vamos a utilizar, podríamos tener a la vez hasta tres modificadores:</p>
+<ul class="lista_verificacion">
+<li>un <strong>modificador de acceso</strong> (según queramos que la visibilidad del atributo sea <strong>de paquete</strong>, <strong>privada</strong>, "<strong>protegida</strong>" o <strong>pública</strong>),</li>
+<li>un <strong>modificador de contenido</strong> <code>final</code> (si queremos que el atributo no pueda cambiar de valor, es decir, que sea <strong>constante</strong> y no variable),</li>
+<li>un <strong>modificador de contenido</strong> <code>static</code> (si queremos que el atributo sea <strong>de clase</strong> y no de objeto).</li>
+</ul>
+<p>Las combinaciones más habituales de modificadores que nos vamos a encontrar son las siguientes:</p>
+<table class="tabla" style="width: 100%;" summary="Tabla con las combinaciones más habituales de los modificadores de acceso (private y public) y de contenido (final y static). Las columnas son Acceso, Mutabilidad, De objeto/de clase, Interpretación." border="1"><caption>Combinación de modificadores en los atributos de una clase<code></code></caption>
+<tbody>
+<tr><th scope="col">Acceso</th><th scope="col">Mutabilidad</th><th scope="col">De objeto/de clase</th><th scope="col">Interpretación</th></tr>
+<tr>
+<td><code>private</code></td>
+<td><code>final</code></td>
+<td></td>
+<td>Atributo de objeto constante y privado.</td>
+</tr>
+<tr>
+<td><code><code>private</code></code></td>
+<td><code></code></td>
+<td></td>
+<td>Atributo de objeto variable y privado.</td>
+</tr>
+<tr>
+<td><code><code><code>private</code></code></code></td>
+<td><code></code></td>
+<td><code>static</code></td>
+<td>Atributo de clase variable y privado.</td>
+</tr>
+<tr>
+<td><code><code>public</code></code></td>
+<td><code>final</code></td>
+<td><code>static</code></td>
+<td>Atributo de clase constante y público.</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-size: 1em;"></span></p>
+<p><span style="font-size: 1em;">Salvo el último caso, nosotros ya hemos visto algunos ejemplos de esas combinaciones para nuestra clase </span><code>Vehiculo</code><span style="font-size: 1em;">:</span></p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li><strong>atributos de objeto constantes y privados</strong>: <code>capacidadDeposito</code>, <code>consumoMedio</code>, <code>fechaMatriculacion</code>, <code>matricula</code>;</li>
+<li><strong>atributos de objeto variables y privados</strong>: <code>nivelDeposito</code>, <code>estadoMotor</code>, <code>kilometrosTotales</code>, <code>kilometrosParciales</code>;</li>
+<li><strong>atributos de clase variables y privados</strong>: <code>vehiculosCreados</code>, <code>kilometrosTotalesFlota</code>, <code>vehiculosArrancados</code>.</li>
+</ol>
+<p>Si te fijas, la visibilidad de todos esos atributos es <strong>privada</strong>. No nos interesa que desde fuera de la clase se pueda observar o manipular el valor de esos atributos que conforman las caracerísticas de cada objeto vehículo particular (o, en el caso de los estáticos, características de la clase en general). Lo habitual, como ya hemos reiterado en varias ocasiones, es que los atributos sean privados.</p>
+<p>El cuarto ejemplo de combinación de modificadores que se propone es el de <strong>atributos de clase constantes</strong>. ¿Qué utilidad podría tener disponer de atributos de clase constantes? Una vez más, volvemos a nuestro modelo de la clase vehículo: por ejemplo, podría interesarnos tener almacenada cuál es la <strong>máxima y mínima capacidad del depósito de combustible</strong> para un vehículo. Está claro que la capacidad no puede ser negativa, ni tampoco cero. Nos tocaría a nosotros como diseñadores o como programadores decidir cuál va a ser la mínima capacidad que voy a permitir para un depósito de combustible. Y si no se cumple esa condición, no deberíamos dejar que construyera ese objeto de tipo depósito (eso veremos cómo hacerlo en el apartado de los constructores). Y lo mismo podríamos hacer respecto a la máxima capacidad que pueda tener el depósito de combustible de un vehículo. Tendremos que establecer un máximo y no es razonable que ese máximo esté definido por el máximo número representable por el tipo <code>double</code>, que podrían ser trillones de litros (no tendría mucho sentido).</p>
+<p>Por tanto, podríamos declarar un par de <strong>atributos constantes</strong> que definan la <strong>máxima y mínima capacidad que puede tener el depósito de combustible para cualquier objeto de la clase </strong><code>Vehiculo</code> que pretendamos instanciar. Dado que es un valor independiente de cualquier objeto (son unos valores límite ya establecidos) parece más que justificado que se trate de atributos de clase y no de atributos de objeto. En consecuencia, ya tenemos nuestros dos primeros ejemplos de atributos constantes y de clase para nuestra clase <code>Vehiculo</code>:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">final double MINIMA_CAPACIDAD_DEPOSITO;  // Minima capacidad posible de un depósito de combustible (en litros)
+final double MAXIMA_CAPACIDAD_DEPOSITO;  // Máxima capacidad posible de un depósito de combustible (en litros)
+</code></pre>
+</div>
+<p>Dado que se trata de constantes cuyo valor se conoce ya en tiempo de compilación (no van a depender de ningún objeto), podemos asignarles valor a la vez que se realiza la declaración. Por ejemplo, podríamos considerar que un vehículo no puede tener un depósito con una capacidad inferior a 10.0 litros ni superior a 150.0 litros. En tal caso tendríamos:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">final double MINIMA_CAPACIDAD_DEPOSITO =  10.0; // Minima capacidad posible de un depósito de combustible (en litros)
+final double MAXIMA_CAPACIDAD_DEPOSITO = 150.0; // Máxima capacidad posible de un depósito de combustible (en litros)</code>
+</pre>
+</div>
+<p>Respecto a la <strong>visibilidad</strong> de estos atributos, se ha indicado que podría ser <strong>pública</strong>, algo que normalmente evitamos. ¿Por qué en este caso sí podría interesarnos que fueran atributos públicos? Pues porque se trata de <strong>valores límite que son de interés para otro programador que vaya a utilizar esta clase</strong>. De esta manera se podrá tener acceso a esos valores para evitar posibles errores a la hora de definir vehículos que no cumplan con esas restricciones. Por otro lado, al tratarse de atributos constantes, aunque se pueda tener acceso a su valor, no podrán ser modificados, por lo que no se corre ningún riesgo de integridad respecto al estado de los objetos. Es uno de los pocos casos en los que es positivo evitar la privacidad, pues estamos dando información útil al usuario de esta clase y además no pueden ser modificados.</p>
+<p>Por tanto, la declaración de estos atributos quedará finalmente como <strong>pública</strong>:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">public final double MINIMA_CAPACIDAD_DEPOSITO =  10.0;  // Minima capacidad posible de un depósito de combustible (litros) 
+public final double MAXIMA_CAPACIDAD_DEPOSITO = 150.0;  // Máxima capacidad posible de un depósito de combustible (litros)</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id144">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta144_148" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 160px;"><img src="growth-4822683_640.jpg" alt="Barra de crecimiento entre un mínimo y un máximo" title="Mínimo y máximo" style="float: right;" width="160" height="80" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/el-crecimiento-aumento-de-volumen-4822683/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Tumiso en Pixabay (se abre en una nueva ventana).">Tumisu</a> <span class="license"><span class="sep">(</span><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep"></span></span><span class="sep">)</span></span></div>
+</div>
+<p>Continuando con nuestro proyecto de clase para modelar vehículos, se ha considerado añadir los siguientes nuevos atributos:</p>
+<ul class="lista_verificacion">
+<li><strong>mínima capacidad del depósito de combustible para cualquier vehículo </strong>(10.0 litros),</li>
+<li><strong>máxima capacidad del depósito de combustible para cualquier vehículo </strong>(150.0 litros),</li>
+<li><strong>mínimo consumo medio de combustible para cualquier vehículo </strong>(1.0 litros/100<abbr title="kilómetros">km</abbr>),</li>
+<li><strong>máximo consumo medio de combustible para cualquier vehículo </strong>(18.0 litros/100<abbr title="kilómetros">km</abbr>).<strong></strong></li>
+</ul>
+</div>
+<div id="taquesQuestion0b144" class="block iDevice_content">
+<p>Lleva a cabo un análisis para cada uno de esos nuevos atributos en el que tendrás que decidir:</p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li>un<strong> identificador</strong> (<strong>nombre</strong> del atributo). Habrá que elegir un nombre representativo de la información que almacena;</li>
+<li>un<strong> tipo</strong>: entero, real, texto, <abbr title="etcétera">etc</abbr>. y la elección de un tipo <span lang="en">Java</span> apropiado;</li>
+<li>una<strong> visibilidad</strong>. Si va a ser visible desde cualquier clase, sólo desde el paquete, sólo desde la clase (modificador de acceso);</li>
+<li><strong>mutabilidad</strong>. Si va a ser constante durante toda la vida del objeto (modificador <code>final</code>) o podría cambiar con el tiempo;</li>
+<li>si se trata de un <strong>atributo de objeto o de clase</strong>.</li>
+</ol>
+</div>
+<form name="feedback-form-quesFeedback0b144" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b144text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b144" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b144" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Realizamos ese análisis para cada uno de los nuevos atributos:</p>
+<ul class="lista_verificacion">
+<li><strong>mínima capacidad del depósito de combustible para cualquier vehículo</strong>:
+<ul>
+<li>nombre: <code>MINIMA_CAPACIDAD_DEPOSITO</code>;</li>
+<li>tipo: representa una magnitud de litros o fracciones de litro. Lo apropiado es un <strong>número real</strong> (<code>double</code>);</li>
+<li>visibilidad: <strong>pública</strong>, accesible desde cualquier otra clase (se usará el modificador de acceso <code>public</code>). Es una constante de interés para ser observada desde fuera por el programador que utilice la clase, pues define restricciones que no deben saltarse;</li>
+<li>mutabilidad: <strong>constante</strong>, de hecho ya se nos proporciona el valor que va a tener siempre, <strong>10.0</strong>;</li>
+<li><strong>de clase</strong>, pues no tiene sentido que esta característica se repita en cada vehículo. Es una característica general de la clase, independientemente de la cantidad de objetos <code>Vehiculo</code> que existan. De hecho podría no existir ningún vehículo y esta característica seguiría teniendo sentido: tendría el valor <strong>10.0</strong>, pues define un límite inferior que no se puede sobrepasar;</li>
+</ul>
+</li>
+<li><strong>máxima capacidad del depósito de combustible para cualquier vehículo</strong>:
+<ul>
+<li>nombre: <code>MAXIMA_CAPACIDAD_DEPOSITO</code>;</li>
+<li>tipo: <strong>número real</strong> (<code>double</code>);</li>
+<li>visibilidad: <strong>pública</strong>;</li>
+<li>mutabilidad: <strong>constante</strong>, con valor <strong>150.0</strong>;</li>
+<li><strong>de clase</strong>;</li>
+</ul>
+</li>
+<li><strong>mínimo consumo medio de combustible para cualquier vehículo</strong>:
+<ul>
+<li>nombre: <code>MINIMO_CONSUMO_MEDIO</code>;</li>
+<li>tipo: representa una magnitud de litros por cada 100 kilómetros. Lo apropiado es un <strong>número real</strong> (<code>double</code>);</li>
+<li>visibilidad: <strong>pública</strong>;</li>
+<li>mutabilidad: <strong>constante</strong>, con valor <strong>1.0</strong>;</li>
+<li><strong>de clase</strong>;</li>
+</ul>
+</li>
+<li><strong>máximo consumo medio de combustible para cualquier vehículo</strong>:
+<ul>
+<li>nombre: <code>MAXIMO_CONSUMO_MEDIO</code>;</li>
+<li>tipo: <strong>número real </strong>(podríamos usar un <code>double</code>);</li>
+<li>visibilidad: <strong>pública</strong>;</li>
+<li>mutabilidad: <strong>constante</strong>, con valor <strong>18.0</strong>;</li>
+<li><strong>de clase</strong>.</li>
+</ul>
+</li>
+</ul></div>
+</form>
+<div id="taquesQuestion1b144" class="block iDevice_content">
+<p>Una vez realizado ese análisis, confecciona una <strong>tabla para representar estos nuevos atributos</strong> con las cinco columnas descriptivas que ya hemos realizado en otras ocasiones (nombre, tipo, visibilidad, mutabilidad, clase/objeto)<strong></strong></p>
+</div>
+<form name="feedback-form-quesFeedback1b144" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b144text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b144" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b144" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<table class="tabla" style="width: 100%;" summary="Tabla de cinco columnas que contiene para cada fila el nombre, el tipo, la visibilidad, la inmutabilidad y la estaticidad de un conjunto de atributos de la clase Vehiculo" border="1"><caption>Nuevos atributos de la clase <code>Vehiculo</code></caption>
+<tbody>
+<tr><th scope="col">Nombre</th><th scope="col">Tipo</th><th scope="col">Visibilidad</th><th scope="col">Mutabilidad</th><th scope="col">De objeto/de clase</th></tr>
+<tr>
+<td><code>MINIMA_CAPACIDAD_DEPOSITO</code></td>
+<td><code>double</code></td>
+<td>pública (<code>public</code>)</td>
+<td>constante (<code>final</code>)</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code>MAXIMA_CAPACIDAD_DEPOSITO</code></td>
+<td><code>double</code></td>
+<td>pública (<code>public</code>)</td>
+<td>constante (<code>final</code>)</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code><code>MINIMO_CONSUMO_MEDIO</code></code></td>
+<td><code>double</code></td>
+<td>pública (<code>public</code>)</td>
+<td>constante (<code>final</code>)</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code>MAXIMO_CONSUMO_MEDIO</code></td>
+<td><code>double</code></td>
+<td>pública (<code>public</code>)</td>
+<td>constante (<code>final</code>)</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+</tbody>
+</table></div>
+</form>
+<div id="taquesQuestion2b144" class="block iDevice_content">
+<p>A partir de la tabla anterior, escribe cómo quedaría que la clase <span lang="en">Java</span> <code>Vehiculo</code> con sus nuevos atributos.</p>
+</div>
+<form name="feedback-form-quesFeedback2b144" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b144text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b144" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b144" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p> Una vez que tenemos claro cómo van a ser estos nuevos atributos, los añadiríamos a nuestra clase <code>Vehiculo</code>:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">public final static double MINIMA_CAPACIDAD_DEPOSITO =  10.0;  // Minima capacidad del depósito de combustible para cualquier vehículo (en litros)
+public final static double MAXIMA_CAPACIDAD_DEPOSITO = 150.0;  // Máxima capacidad del depósito de combustible para cualquier vehículo (en litros)
+public final static double MINIMO_CONSUMO_MEDIO =        1.0;  // Minimo consumo medio de combustible para cualquier vehículo (en litros/100km)
+public final static double MAXIMO_CONSUMO_MEDIO =       18.0;  // Máximo consumo medio de combustible para cualquier vehículo (en litros/100km)
+</code></pre>
+</div>
+<p>Estos son los nuevos atributos que debemos integrar junto a todos los demás que ya habíamos definido en ejercicios anteriores.</p>
+<p>La clase <code>Vehiculo</code> con los nuevos atributos de clase constantes quedaría así:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">public class Vehiculo {
+
+  // ATRIBUTOS DE CLASE: sólo habrá un atributo (común para todos los objetos) parar representar estas características
+  // -----------------------------------------------------------------------------------------------------------------
+
+  // Atributos de clase constantes (representan características "inmutables" de la clase como por ejemplo restricciones o valores informativos)
+  public final static double MINIMA_CAPACIDAD_DEPOSITO =  10.0;  // Minima capacidad del depósito de combustible para cualquier vehículo (en litros)
+  public final static double MAXIMA_CAPACIDAD_DEPOSITO = 150.0;  // Máxima capacidad del depósito de combustible para cualquier vehículo (en litros)
+  public final static double MINIMO_CONSUMO_MEDIO =        1.0;  // Minimo consumo medio de combustible para cualquier vehículo (en litros/100km)
+  public final static double MAXIMO_CONSUMO_MEDIO =       18.0;  // Máximo consumo medio de combustible para cualquier vehículo (en litros/100km)
+
+  // Atributos de clase variables (representan información de la clase que es común e independiente de cualquier objeto Vehiculo en particular)
+  private static short  vehiculosCreados;           // Cantidad de vehículos creados hasta el momento
+  private static double kilometrosTotalesFlota;     // Cantidad de kilómetros recorridos por todos los vehículos creados hasta el momento
+  private static short  vehiculosArrancados;        // Cantidad de vehículos arrancados en este momento
+
+  // ATRIBUTOS DE OBJETO: cada vehículo tendrá su propio valor para representar estas características
+  // ------------------------------------------------------------------------------------------------
+
+  // Atributos de objeto constantes (representan características "inmutables" del vehículo)
+  private final double     capacidadDeposito;     // Capacidad del depósito de combustible del vehículo (en litros)
+  private final String     matricula;             // Matrícula del vehículo
+  private final LocalDate  fechaMatriculacion;    // Fecha de matriculación del vehículo 
+  private final double     consumoMedio;          // Consumo medio del vehículo (en litros/100km)
+
+  // Atributos de objeto variables (representan el estado del vehículo en un instante dado)
+  private boolean estadoMotor;             // Estado del motor del vehículo (arrancado o apagado)
+  private double  nivelDeposito;           // Nivel del depósito de combustible del vehículo (en litros)
+  private double  kilometrosTotales;       // Distancia total recorrida desde que fabricó el vehículo (en kilómetros)
+  private double  kilometrosParciales;     // Distancia recorrida desde que el vehículo se arrancó por última vez  (en kilómetros)
+}</code></pre>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id207">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta207_121" class="block iDevice_content">
+<p>En el ejemplo anterior acabas de ver que para algunos atributos <code>final</code> se ha usado el formato de mayúsculas y que para otros se ha optado por formato "<em><span lang="en">lower camel case</span></em>".</p>
+<p>Como ya comentamos en un ejercicio anterior, es habitual que cuando se trate de atributos constantes (<code>final</code>) se utilice para su nombrado o identificación:</p>
+<ul>
+<li class="lista_verificacion">el formato "<strong><em><span lang="en">lower camel case</span></em></strong>" cuando se trate de <strong>atributos de objeto</strong> (tanto si son <strong>variables</strong> como si son <strong>constantes</strong>). Es decir, que sería una excepción a la regla habitual de que todas las constantes deben identificarse usando mayúsculas;</li>
+<li class="lista_verificacion">el formato de <strong>mayúsculas con guiones</strong>, cuando se trate de <strong>atributos de clase constantes</strong>, que además normalmente serán atributos públicos, pues contendrán información sobre configuraciones, opciones, restricciones, <abbr title="etcétera">etc.</abbr>, que es interesante que sea visible desde fuera de la clase.</li>
+</ul>
+<p>En el caso de los <strong>atributos de clase variables</strong> está claro que se seguiría el formato "<em><span lang="en">lower camel case</span></em>" habitual, pues se trata de atributos variables.</p>
+<p>Una vez planteada esta observación es posible que te plantees: ¿debo seguir esta excepción en el nombrado o debo ser estricto y usar las mayúsculas para cualquier atributo que sea final? <strong>Nosotros recomendamos que para los atributos <code>final</code> que sean de objeto sigas la excepción (uso "<strong><em>lower camel case</em></strong>"), pues es la decisión que han tomado la mayoría de los programadores de <span lang="en">Java</span> y como están implementadas las clases de la <acronym title="Application Programming Interface" lang="en">API</acronym> de <span lang="en">Java</span></strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id271">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta271_128" class="block iDevice_content">
+<p>Acabamos de afirmar que las clases de la <strong><acronym title="Application Programming Interface" lang="en">API</acronym></strong> usan la notación "<em><span lang="en">lower camel case</span></em>" para el caso de <strong>atributos de objeto constantes</strong>. Aún es pronto para navegar por el código fuente de clases profesionales escritas en <span lang="en">Java</span>, pues contienen muchísimo código que todavía no entiendes. Pero por si tienes curiosidad, hemos escogido un par de ejemplos y los hemos aislado y simplificado para que puedas observar cómo en efecto no se usan las mayúsculas para los atributos de objeto (sean constantes o no).</p>
+<p><strong>Primer ejemplo: implementación de la clase <code>LocalTime</code> (<code>java.time.LocalTime</code>)</strong>, entre las líneas 217 y 229:</p>
+<div class="highlighted-code language-java">
+<pre><code>    private final byte hour;
+    private final byte minute;
+    private final byte second;
+    private final int nano;</code></pre>
+</div>
+<p>Aquí puedes ver cómo los desarrolladores de esta clase han optado por no usar las mayúsculas para estos <strong>atributos de objeto <span style="text-decoration: underline;">constantes</span> (<strong><code>final</code></strong>) privados</strong> (nadie fuera de la clase va a tener acceso a ellos) con los cuales se representa una hora (hora, minuto, segundo, nanosegundo).</p>
+<p>Puedes observar el código fuente completo en este enlace: <a href="https://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/time/LocalTime.java" title="Acceder al código fuente de la clase java.time.LocalTime del JDK de Java (se abre en una nueva ventana)." target="_blank" class="html">Código fuente de la clase <code>LocalTime</code></a>.</p>
+<p><strong>Segundo ejemplo: implementación de la clase <code>Integer</code> (<code>java.lang.Integer</code>)</strong>, en la línea 840:</p>
+<div class="highlighted-code language-java">
+<pre><code>    private final int value;
+</code></pre>
+</div>
+<p>Aquí también puedes ver cómo no se están utilizando las mayúsculas para un atributo <code>final</code> que es privado (ningún programador que use la clase lo verá) y representa parte del estado del objeto.</p>
+<p>Puedes observar el código fuente completo en este enlace: <a href="https://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/lang/Integer.java" title="Acceder al código fuente de la clase java.lang.Integer del JDK de Java (se abre en una nueva ventana)." target="_blank" class="html">Código fuente de la clase <code>Integer</code></a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id153">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta153_148" class="block story iDevice_content">
+<div class="elemento_derecha">
+<div class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 240px;"><img src="320px-Rectangle.svg.png" alt="Figura de un rectángulo indicando sus vértices" title="Rectángulo" width="240" height="127" />
+<div class="figcaption"><a href="https://commons.wikimedia.org/wiki/File:Rectangle.svg" target="_blank" class="author" title="Acceder a la web descarga de la imagen de XZise en Wiki Commons (se abre en una nueva ventana).">XZise</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a los términos de la licencia Creative Commons BY-SA">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+</div>
+<p>Deseamos implementar una clase que represente a un rectángulo en el plano (clase <strong><code>Rectangulo</code></strong>). Se ha pensado en almacenar la siguiente información para cada objeto de tipo rectángulo:</p>
+<ul class="lista_verificacion">
+<li>la <strong>ubicación</strong> del rectángulo en el plano,</li>
+<li>el <strong>color de relleno</strong> del rectángulo,</li>
+<li>el <strong>nombre</strong> del rectángulo,</li>
+<li>la <strong>cantidad de rectángulos</strong> que han sido creados hasta el momento.</li>
+</ul>
+</div>
+<div id="taquesQuestion0b153" class="block iDevice_content">
+<p>Teniendo en cuenta esas decisiones de diseño, lleva a cabo un análisis para decidir cuántos atributos necesitarías, qué identificadores les asignarías, de qué tipo serían, y qué otras características tendrían (visibilidad, mutabilidad, de objeto o de clase) confeccionando finalmente una <strong>tabla de atributos</strong> con las cinco columnas descriptivas (nombre, tipo, visibilidad, mutabilidad, clase/objeto).</p>
+</div>
+<form name="feedback-form-quesFeedback0b153" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b153text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b153" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b153" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Lllevamos a cabo el análisis para decidir cuáles serían los atributos más apropiados en función de la información que deseamos representar para cada rectángulo:</p>
+<ul>
+<li class="lista_verificacion"><strong>ubicación</strong>: con <strong>dos puntos</strong>, <strong>vértice inferior izquierdo (x<sub>1</sub>, y<sub>1</sub>)</strong> <code></code> y <strong>vértice superior derecho (x<sub>2</sub>, y<sub>2</sub>)</strong><code></code>, se puede definir perfectamente la ubicación de un rectángulo en el plano. Por tanto sería suficiente con <strong>cuatro atributos de tipo real</strong> para poder almacenar la ubicación. Podríamos definir entonces cuatro atributos de tipo <code>double</code> llamados <code>x1</code>, <code>y1</code>, <code>x2</code>, <code>y2</code>,</li>
+<li class="lista_verificacion">para el <strong>color</strong> podría usarse una <strong>cadena de caracteres</strong> (<code>String</code>) con el nombre del color,</li>
+<li class="lista_verificacion">para el <strong>nombre</strong> podría usarse también una <strong>cadena de caracteres</strong> (<code>String</code>),</li>
+<li class="lista_verificacion">respecto a la <strong>cantidad de rectángulos construidos</strong> hasta el momento, nos vendría bien un <strong>número entero</strong> (<code>int</code>). Por otro lado se trata de un atributo candidato a ser <strong>estático</strong> más que de objeto, pues con que se disponga de ese valor una sola vez para todos los posibles objetos creados es más que suficiente.</li>
+</ul>
+<p class="lista_verificacion">En cuanto la <strong>mutabilidad</strong> o inmutabilidad de estos atributos, en el caso de la cantidad de rectángulos construidos es obvio que debe ser variable (cada vez que se construya un nuevo rectángulo este atributo deberá incrementar su valor en uno). Respecto al resto de atributos, dado que en el enunciado no se ha indicado nada concreto, podríamos suponer que todos podrían cambiar de valor, por lo que no serán constantes sino <strong>variables</strong>. Por ejemplo, en el caso de la ubicación podríamos asumir que es posible que en el futuro pudiéramos querer desplazar el rectángulo a otra posición. En tal caso está claro que se trataría de atributos mutables o variables. Sin embargo, si se hubiera decidido que una vez que se ha creado un rectángulo no se puede modificar su posición, entonces deberían ser declarados como inmutables o constantes. Será una decisión de diseño dependiendo de la utilidad que vayan a tener esos objetos rectángulo en nuestro programa.</p>
+<p class="lista_verificacion">Sobre la <strong>visibilidad</strong> de estos atributos, seguiremos la norma habitual: <strong>privados</strong> salvo que se indique lo contrario. Tan solo en el caso de los atributos de clase constantes nos plantearíamos hacerlos públicos, como ya hemos visto en ejemplos anteriores en los que se almacenan datos sobre restricciones o informativos.</p>
+<p class="lista_verificacion">Respecto al debate de cuáles deberían ser <strong>de objeto</strong> y cuáles <strong>de clase</strong> (estáticos), parece claro que el único que debería ser de clase es el que contiene la cantidad de rectángulos construidos hasta el momento, que no tiene sentido que sea un valor que acompañe a cada rectángulo, sino que se trata de un valor general de la clase <code>Rectangulo</code>.</p>
+<p class="lista_verificacion">A partir de este análisis, ya podemos construir nuestra tabla de atributos:</p>
+<table class="tabla" style="width: 100%;" summary="Tabla de cinco columnas que contiene para cada fila el nombre, el tipo, la visibilidad, la inmutabilidad y la estaticidad de un conjunto de atributos de la clase Rectangulo" border="1"><caption>Atributos de la clase <code>Rectangulo</code></caption>
+<tbody>
+<tr><th scope="col">Nombre</th><th scope="col">Tipo</th><th scope="col">Visibilidad</th><th scope="col">Mutabilidad</th><th scope="col">De objeto/de clase</th></tr>
+<tr>
+<td><code>x1</code></td>
+<td><code>double</code></td>
+<td>privada (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>y1</code></td>
+<td><code>double</code></td>
+<td>privada (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code><code>x2</code></code></td>
+<td><code>double</code></td>
+<td>privada (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>y2</code></td>
+<td><code>double</code></td>
+<td>privada (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td><code>String</code></td>
+<td>privada (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>nombre</code></td>
+<td><code><code>String</code></code></td>
+<td>privada (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>cantidadRectangulos</code></td>
+<td><code><code>int</code></code></td>
+<td>privada (<code>private</code>)</td>
+<td>variable</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+</tbody>
+</table></div>
+</form>
+<div id="taquesQuestion1b153" class="block iDevice_content">
+<p>A partir de la tabla de atributos que has confeccionado, escribe cómo podría quedar la clase <code>Rectangulo</code> en lenguaje <span lang="en">Java</span>.</p>
+</div>
+<form name="feedback-form-quesFeedback1b153" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b153text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b153" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b153" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La clase <code>Rectangulo</code> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">public class Rectangulo {
+  // ATRIBUTOS DE CLASE:
+  // Sólo habrá un atributo (común para todos los objetos) parar representar estas características
+  // ----------------------------------------------------------------------------------------------
+
+  // Atributos de clase variables
+  // (representan información de la clase que es común e independiente de cualquier objeto Rectangulo en particular)
+  private static int cantidadRectangulos;  // Cantidad de rectángulos creados hasta el momento
+
+
+  // ATRIBUTOS DE OBJETO:
+  // Cada rectángulo tendrá su propio valor para representar estas características
+  // ------------------------------------------------------------------------------
+
+  // Atributos de objeto variables (representan el estado del rectángulo en un instante dado)
+  private double x1;       // Coordenada x del vértice inferior izquierdo
+  private double y1;       // Coordenada y del vértice inferior izquierdo
+  private double x2;       // Coordenada x del vértice superior derecho
+  private double y2;       // Coordenada y del vértice superior derecho
+  private String color;    // Color de relleno
+  private String nombre;   // Nombre
+}</code></pre>
+</div>
+<p>Una vez más, fíjate en la importancia de documentar al máximo todos los detalles acerca de los atributos de la clase así como de asignarles identificadores que nos lo pongan fácil a la hora de entender lo que representan o se almacena en ellos. Será la mejor formar de facilitar la legibilidad del código.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id154">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta154_148" class="block story iDevice_content">
+<div id="ta153_148" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 160px;"><img src="pi-151602_640.png" alt="Letra griega pi mayúscula" title="Pi" style="float: right;" width="160" height="159" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/pi-matem%C3%A1ticas-constante-brillante-151602/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de OpenClipart-Vectors en Pixabay (se abre en una nueva ventana).">OpenClipart-Vectors</a> <span class="license"><span class="sep">(</span><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep">)</span></span><span class="sep"></span></span></div>
+</div>
+<p><br />Del mismo modo que en el ejercicio anterior se ha implementado una clase que representara a un rectángulo en el plano, se nos ha solicitado ahora representar una nueva figura geométrica plana: un <strong>círculo</strong>. En este caso los diseñadores nos han indicado que necesitan almacenar la siguiente información para representar objetos de este tipo:</p>
+<ul class="lista_verificacion">
+<li>al <strong>ubicación del centro</strong> del círculo;</li>
+<li>el <strong>radio</strong> del círculo;</li>
+<li>el <strong>color de relleno</strong> del círculo, que podrá ir cambiando a lo largo de la vida del objeto;</li>
+<li>el <strong>nombre</strong> del círculo, que una vez asignado al construirse, no podrá cambiar;</li>
+<li>la <strong>cantidad de círculos</strong> que han sido creados hasta el momento;</li>
+<li>el valor de la <strong>constante pi</strong> (<abbr title="pi">π)</abbr>, con una buena cantidad de cifras significativas para evitar escribir el literal 3,14159265... una y otra vez cada ocasión en la que haya que realizar cálculos de áreas y longitudes.</li>
+</ul>
+<p>También se nos ha indicado el que una vez creado un círculo, aunque podría desplazarse a otra ubicación, <strong>su tamaño no podrá ser modificado</strong>.</p>
+</div>
+</div>
+<div id="taquesQuestion0b154" class="block iDevice_content">
+<p>A partir de esas decisiones de diseño:</p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li>lleva a cabo el <strong>análisis</strong> para decidir cuántos <strong>atributos</strong> necesitarías, qué identificadores les asignarías, de qué tipo serían, y qué otras características tendrían (visibilidad, mutabilidad, de objeto o de clase);</li>
+<li>construye una <strong>tabla de atributos</strong> con las cinco columnas descriptivas (nombre, tipo, visibilidad, mutabilidad, clase/objeto);</li>
+<li><strong>implementa en <span lang="en">Java</span></strong> la clase <code>Circulo</code> con los atributos que se hayan decidido.</li>
+</ol>
+</div>
+<form name="feedback-form-quesFeedback0b154" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b154text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b154" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b154" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>El análisis para decidir los atributos necesarios es muy similar al que se ha tenido que realizar para la clase <code>Rectangulo</code>. Los tipos y los identificadores son muy parecidos. Las principales diferencias serían:</p>
+<ul>
+<li class="lista_verificacion">para la <strong>ubicación</strong> tan solo serán necesarias las coordenadas de un punto (el <strong>centro del círculo</strong>): <strong>dos atributos</strong> (<code>x</code>, <code>y</code>) de tipo <strong>real</strong> (<code>double</code>). Si deseamos que esta ubicación pueda cambiar a lo largo de la vida del círculo, tal y como se nos ha indicado en el enunciado, entonces esos atributos serán mutables o <strong>variables</strong>. Si no fuera así, entonces serían constantes o inmutables;</li>
+<li class="lista_verificacion">dado que nos han indicado que <strong>el tamaño del círculo no puede cambiar</strong>, está claro que su <strong>radio</strong> sí ha de ser inmutable o <strong>constante</strong> (<code>final</code>);</li>
+<li class="lista_verificacion">el <strong>nombre</strong> del círculo no podrá cambiar una vez que se le asigne un valor. Será por tanto <strong>constante</strong> (<code>final</code>);</li>
+<li class="lista_verificacion">el <strong>valor</strong> de <abbr title="pi">π</abbr> es obviamente una <strong>constante</strong> (<code>final</code>), y además no tiene sentido que se almacene su valor en cada objeto de tipo <code>Circulo</code>, pues siempre será el mismo y se trata más bien de una herramienta para cualquier objeto de la clase que de una información específica de objeto. Será por tanto un atributo <strong>estático o de clase</strong> (<code>static</code>). Además, dado que se trata de cierta información que puede resultar útil fuera de la clase y que no se corre peligro al hacerla pública (es constante), podría declararse como un atributo <strong>público</strong> (<code>public</code>).</li>
+</ul>
+<p class="lista_verificacion">A partir de esas conclusiones podemos construir nuestra tabla de atributos:</p>
+<table class="tabla" summary="Tabla de cinco columnas que contiene para cada fila el nombre, el tipo, la visibilidad, la inmutabilidad y la estaticidad de un conjunto de atributos de la clase Circulo" style="width: 100%;" border="1"><caption>Atributos de la clase <code>Circulo</code></caption>
+<tbody>
+<tr><th scope="col">Nombre</th><th scope="col">Tipo</th><th scope="col">Visibilidad</th><th scope="col">Mutabilidad</th><th scope="col">De objeto/de clase</th></tr>
+<tr>
+<td><code>x</code></td>
+<td><code>double</code></td>
+<td>privada (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td><code>double</code></td>
+<td>privada (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>radio</code></td>
+<td><code>double</code></td>
+<td>privada (<code>private</code>)</td>
+<td>constante (<code>final</code>)</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td><code>String</code></td>
+<td>privada (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>nombre</code></td>
+<td><code><code>String</code></code></td>
+<td>privada (<code>private</code>)</td>
+<td>constante (<code>final</code>)</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>cantidadCirculos</code></td>
+<td><code><code>int</code></code></td>
+<td>privada (<code>private</code>)</td>
+<td>variable</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code>PI</code></td>
+<td><code><code>double</code></code></td>
+<td>pública (<code>public</code>)</td>
+<td>constante (<code>final</code>)</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+</tbody>
+</table>
+<p class="lista_verificacion"></p>
+<p class="lista_verificacion">Y  continuación implementar la clase en lenguaje <span class="lista_verificacion" lang="en">Java</span>:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">public class Circulo {
+  // ATRIBUTOS DE CLASE: sólo habrá un atributo (común para todos los objetos) parar representar estas características
+  // -----------------------------------------------------------------------------------------------------------------
+
+  // Atributos de clase constantes
+  // (representan características "inmutables" de la clase como por ejemplo restricciones o valores informativos)
+  public final static double PI = 3.141592654  // Valor de la constante pi
+
+  // Atributos de clase variables
+  //(representan información de la clase que es común e independiente de cualquier objeto Circulo en particular)
+  private static int cantidadCirculos;  // Cantidad de círculos creados hasta el momento 
+
+
+  // ATRIBUTOS DE OBJETO: cada círculo tendrá su propio valor para representar estas características
+  // ------------------------------------------------------------------------------------------------
+
+  // Atributos de objeto constantes (representan características "inmutables" del círculo)
+  private final double radio;   // Radio del círculo
+  private final String nombre;  // Nombre del círculo
+
+
+  // Atributos de objeto variables (representan el estado del círculo en un instante dado)
+  private double x;      // Coordenada x del centro del círculo
+  private double y;      // Coordenada y del centro del círculo
+  private String color;  // Color de relleno del círculo
+}</code></pre>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="47_objetos_inmutables.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

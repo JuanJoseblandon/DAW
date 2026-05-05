@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.4.- Expresiones regulares en Java (III): agrupaciones. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-89"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_expresiones_regulares.html" class="current-page-parent daddy">3.- Expresiones regulares.</a>
+   <ul>
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li id="active"><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="active no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4__arrays.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.4.- Expresiones regulares en Java (III): agrupaciones.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id369">
+<div class="iDevice emphasis0">
+<div id="ta369_73" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="teamwork-g4e312966e_640.jpg" alt="Tres muñecos encajando piezas en puzzle." title="Puzzle" style="float: right;" width="240" height="129" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/trabajo-en-equipo-juntos-metas-3275561/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Alexas_Fotos en Pixabay (se abre en una nueva ventana).">Alexas_Fotos</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Como ya hemos visto, <strong>los paréntesis tienen un significado especial en las expresiones regulares</strong> (son <strong>metacaracteres</strong>): permiten establecer agrupaciones de un conjunto de símbolos. Por ejemplo, en la expresión "<code>(#[01]){2,3}</code>", el subpatrón "<code>#[01]</code>" representa cadenas como "<code>#0</code>" o "<code>#1</code>". Pero al encerrarlo entre paréntesis y añadir un cuantificador, lo que estamos indicando es que la misma secuencia se tiene que repetir entre dos y tres veces, con lo que las cadenas que admitiría serían del estilo a: "<code>#0#1</code>" o "<code>#0#1#0</code>".</p>
+<p>Pero los paréntesis tienen una función adicional, y es la de poder <strong>extraer grupos</strong>. <strong>Un grupo comienza cuando se abre un paréntesis y termina cuando se cierra el paréntesis</strong>. El establecimiento de grupos permite acceder de forma cómoda a las diferentes partes de una cadena cuando esta coincide con una expresión regular. <strong>En Java podemos extraer los distintos grupos de un texto que encaja con una expresión regular mediante el método </strong><code>group</code> de la clase <code>Matcher</code>. Vamos a verlo con un ejemplo:</p>
+<p>Imagina que debemos reconocer si una fecha cumple el formato <em><strong>dd/mm/aaaa</strong></em>, donde el año solo puede estar entre 2000 y 2099. Ya hemos construido expresiones regulares muy similares para expresar ese patrón. Por ejemplo, podríamos hacer: "<code>(3[01]|[12][0-9]|0[1-9])/(1[0-2]|0[1-9])/20[0-9]{2}</code>".</p>
+<p>Supongamos ahora que deseamos <strong>obtener por separado el día, el mes y el año</strong>. Podríamos entonces aislar cada uno de esos campos entre paréntesis para poder extraer esos grupos:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>"(3[01]|[12][0-9]|0[1-9])/(1[0-2]|0[1-9])/(20[0-9]{2})"</code></pre>
+</div>
+</div>
+<p>Para el caso del día y del mes, ya habíamos tenido que aislar los grupos para un correcto funcionamiento del disyuntor ('<code>|</code>'), así que solamente hemos necesitado encerrar entre paréntesis la parte del año.</p>
+<p>Para extraer cada uno de los grupos, basta con utilizar el método <code>group</code> sobre el objeto <code>Matcher</code>. Si se la pasa 1 como parámetro, se obtendrá una subcadena con el primer grupo, si se le pasa 2, el segundo, y así sucesivamente.</p>
+<p>Primero creamos los objetos patrón (<code>Pattern</code>) y acomplamiento (<code>Matcher</code>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Suponemos que la variable "texto" contiene el texto que se desea analizar
+
+Pattern patron = Pattern.compile("[0-9]+");   // Patrón de búsqueda
+Matcher acoplamiento = patron.matcher(texto); // Objeto que contiene el texto donde buscar o "acoplar"
+</code></pre>
+</div>
+</div>
+<p>A partir de ahí no tendríamos más que ir obteniendo cada uno de los grupos que proporciona el acoplamiento (objeto <code>Matcher</code>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (acoplamiento.matches()) {  // Solo debes extraer grupos si se produce acoplamiento
+    dia = acoplamiento.group(1);
+    mes = acoplamiento.group(2);
+    ano = acoplamiento.group(3);
+}</code></pre>
+</div>
+</div>
+<p>Usando los grupos, podemos obtener por separado el texto contenido en cada uno de los grupos. En el ejemplo anterior, en el patrón hay tres grupos: uno para el día (grupo 1), otro el mes (grupo 2), y otro para el año (grupo 3). Solo debes extraer grupos si se ha producido acoplamiento. Si no es así, la llamada al método <code>group</code> generará una excepción.</p>
+<p>Aquí tienes otro ejemplo en el que combinamos los agrupamientos con el uso del método <code>find</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Pattern p=Pattern.compile("([XY]?)([0-9]{8})([A-Za-z])");
+Matcher m=p.matcher("X123456789Z Y00110011M 999999T");
+while (m.find()) {
+   System.out.println("Letra inicial (opcional):" + m.group(1));
+   System.out.println("Número:" + m.group(2));
+   System.out.println("Letra NIF:" + m.group(3));
+}
+</code></pre>
+</div>
+</div>
+<p>En este caso también hay tres grupos en el patrón: uno para la letra inicial (grupo 1), otro para el número del <acronym title="Documento Nacional de Identidad.">DNI </acronym>o <acronym title="Número de Identificación de Extranjeros.">NIE</acronym> (grupo 2), y otro para la letra final o letra <acronym title="Número de Identificación Fiscal.">NIF</acronym> (grupo 3). Como además hemos empleado <code>find</code> en lugar de <code>matches</code>, podremos extraer los grupos para cada fragmento de texto en el cual se ha producido un acoplamiento.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id370">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta370_70" class="block iDevice_content">
+<p>Ten en cuenta que el primer grupo es el 1, y no el 0. Si intentas hacer <code>group(0)</code> obtendrás una cadena con <strong>toda la ocurrencia o coincidencia del patrón en la cadena</strong>, es decir, obtendrás la secuencia entera de símbolos que coincide con el patrón.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id371">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta371_47" class="block iDevice_content">
+<p>Con lo estudiado hasta ahora, ya puedes utilizar las expresiones regulares y sacarles partido casi que al máximo. Pero las expresiones regulares son un campo muy amplio, por lo que es muy aconsejable que amplíes tus conocimientos con el siguiente enlace:</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a tutorial de expresiones regulares en Java." href="http://download.oracle.com/javase/tutorial/essential/regex/" target="_blank">Tutorial de expresiones regulares en Java (en inglés).</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id372">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta372_148" class="block story iDevice_content">
+<p>Un almacén de ropa identifica sus productos siguiendo un código formado por números y letras, el cual permite reconocer el tipo de cliente al que van dirigidos, un identificador y su origen de fabricación. Su estructura es la siguiente:</p>
+<ul class="lista_verificacion">
+<li>una <strong>letra</strong> que indica el <strong>tipo de cliente</strong> ('<code>H</code>' - Hombre, '<code>M</code>' - Mujer o '<code>B</code>' - Bebé);</li>
+<li>un <strong>identificador</strong> de <strong>entre tres y siete dígitos numéricos</strong>;</li>
+<li>una <strong>letra</strong> que indica el <strong>origen de fabricación</strong> del producto: '<code>E</code>' (Europa) o '<code>A</code>' (Asia);</li>
+<li>un <strong>código de control</strong> (<strong>dos dígitos</strong>).</li>
+</ul>
+<p>Las letras solo pueden ser <strong>mayúsculas</strong>. Si hay alguna letra minúscula, el código se considera inválido.</p>
+</section>
+<section id="taquesQuestion0b372" class="block iDevice_content">
+<p>Escribe un programa en Java que permita detectar si una cadena cumple la estructura de un código textil. Y, en caso afirmativo, extraer en variables de tipo <code>String</code> el <strong>tipo de cliente</strong>, el <strong>identificador</strong>, el <strong>origen de fabricación</strong> y el <strong>código de control</strong>.</p>
+</section>
+<form name="feedback-form-quesFeedback0b372" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b372text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b372" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b372" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Lo primero que debemos hacer es construir la expresión regular. Para ello vamos definiendo cada uno de los subpatrones que debe contener:</p>
+<ol>
+<li>tipo de cliente: <code>"[HMB]"</code>;</li>
+<li>identificador de entre tres y siete dígitos: <code>"[0-9]{3,7}"</code>;</li>
+<li>origen del producto: <code>"[EA]"</code>;</li>
+<li>código de control: <code>"[0-9]{2}"</code>.</li>
+</ol>
+<p>Uniéndolo todo tendríamos: <code>"[HMB][0-9]{3,7}[EA][0-9]{2}"</code>.</p>
+<p>Ahora bien, como vamos a intentar extraer los distintos campos, tendremos que encerrar cada grupo que nos interese (tipo de cliente, identificador, <abbr title="etcétera">etc</abbr>.) entre paréntesis:<code></code></p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>"([HMB])([0-9]{3,7})([EA])([0-9]{2})"</code></pre>
+</div>
+</div>
+<p>A continuación, preparamos los objetos patrón y acoplamiento:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Suponemos que la variable "texto" contiene el texto que se desea analizar
+
+Pattern patron = Pattern.compile("([HMB])([0-9]{3,7})([EA])([0-9]{2})"); // Patrón de búsqueda
+Matcher acoplamiento = patron.matcher(texto); // Objeto que contiene el texto donde buscar o "acoplar"
+</code></pre>
+</div>
+</div>
+<p>Y, finalmente, si se produce acoplamiento ("<em></em><span lang="en"><em>match</em></span>"), extraemos cada fragmento:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String tipoCliente, identificador, origen, control;
+if (acoplamiento.matches()) {
+    tipoCliente = acoplamiento.group(1);
+    identificador = acoplamiento.group(2);
+    origen = acoplamiento.group(3);
+    control = acoplamiento.group(4);
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id5">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicios Resueltos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta5_148" class="block story iDevice_content">
+<p>En ejercicios anteriores ya hemos resuelto cómo analizar si un número romano es válido o no mediante una expresión regular y lo hemos implementado en Java. Ahora podríamos empezar a plantearnos cómo convertir ese número romano en un número en formato decimal.</p>
+<p></p>
+</section>
+<section id="taquesQuestion0b5" class="block iDevice_content">
+<p>1.- El primer paso para resolver ese problema consistiría en intentar <strong>"extraer" cada uno de los elementos del número romano</strong> en los siguientes grupos:</p>
+<ol>
+<li>unidades de millar (o <strong>millares</strong>);</li>
+<li><strong>centenas</strong>;</li>
+<li><strong>decenas</strong>;</li>
+<li><strong>unidades</strong>.</li>
+</ol>
+<p>¿Cómo podríamos obtener cada una de esas subcadenas? Un ejemplo de salida de un programa que realizara ese trabajo podría ser algo así:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Introduzca número romano (entre 0 y 3999): 
+(entendemos el 0 como la cadena vacía)
+MDCCLXXVIII
+
+RESULTADO
+---------
+Millares: M
+Centenas: DCC
+Decenas:  LXX
+Unidades: VIII</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b5" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b5text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b5" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b5" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Utilizando las operaciones y métodos de cadenas de caracteres para la clase <code>String</code> quizá podríamos resolver esta cuestión. Pero, si empleamos las herramientas de expresiones regulares que nos proporciona Java (clases <code>Pattern</code> y <code>Matcher</code>, junto con sus métodos), el problema será bastante más sencillo de resolver.</p>
+<p>Simplemente, tendríamos que "aislar" en grupos cada uno de los elementos que se nos piden (millares, centenas, decenas y unidades). Es decir, partiendo de la expresión regular de reconocimiento de romanos que ya construimos en su momento:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})</code></pre>
+</div>
+</div>
+<p>Solo nos faltaría "aislar" o "agrupar" con paréntesis aquellas partes que aún no estuvieran agrupadas:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>(M{0,3})(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})</code></pre>
+</div>
+</div>
+<p>Fíjate que tan solo ha sido necesario aislar la parte de los millares ("<code>(M{0,3})</code>"). El resto ya estaba agrupado mediante paréntesis para que el disyuntor ('<code>|</code>') funcionara correctamente.</p>
+<p>A partir de ahí sería bastante sencillo obtener cada uno de los grupos que se nos piden mediante el método <code>group</code> del objeto de tipo <code>Matcher</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (encaja) {
+    millares = acoplamiento.group(1);
+    centenas = acoplamiento.group(2);
+    decenas  = acoplamiento.group(3);
+    unidades = acoplamiento.group(4);
+}</code></pre>
+</div>
+</div>
+<p>Y finalmente mostrar esos resultados por pantalla:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (encaja) {
+    System.out.printf ("Millares: %s\n", millares);
+    System.out.printf ("Centenas: %s\n", centenas);
+    System.out.printf ("Decenas:  %s\n", decenas);
+    System.out.printf ("Unidades: %s\n", unidades);
+} else {
+    System.out.printf ("No es un número romano válido.");
+}
+</code></pre>
+</div>
+</div>
+<p>El programa completo podría quedar como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+// Constantes
+// Variables de entrada
+String numeroRomano;
+
+// Variables de salida
+boolean encaja;
+String unidades="", decenas="", centenas="", millares="";
+
+// Variables auxiliares
+String patronRomano = "(M{0,3})(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})";
+Pattern patron = Pattern.compile(patronRomano);
+Matcher acoplamiento;
+
+// Clase Scanner para petición de datos de entrada
+Scanner teclado = new Scanner(System.in);
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("PROGRAMA PARA RESOLVER NÚMEROS ROMANOS");
+System.out.println("--------------------------------------");
+System.out.println("Introduzca número romano (entre 0 y 3999): ");
+System.out.println("(entendemos el 0 como la cadena vacía)");
+numeroRomano = teclado.nextLine();
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+acoplamiento = patron.matcher(numeroRomano);
+encaja = acoplamiento.matches();
+if (encaja) {
+    millares  = acoplamiento.group(1);
+    centenas  = acoplamiento.group(2);
+    decenas   = acoplamiento.group(3);
+    unidades  = acoplamiento.group(4);
+}
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println();
+System.out.println("RESULTADO");
+System.out.println("---------");
+if (encaja) {
+    System.out.printf ("Millares: %s\n", millares);
+    System.out.printf ("Centenas: %s\n", centenas);
+    System.out.printf ("Decenas:  %s\n", decenas);
+    System.out.printf ("Unidades: %s\n", unidades);
+} else {
+    System.out.printf ("No es un número romano válido.");
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b5" class="block iDevice_content">
+<p>2.- El siguiente paso sería comenzar a estudiar cómo transformar o <strong>decodificar cada uno de esos grupos en números </strong>que posteriormente podamos sumar. Comencemos con el grupo más sencillo: los <strong>millares</strong>. ¿Cómo podríamos hacerlo?</p>
+</section>
+<form name="feedback-form-quesFeedback1b5" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b5text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b5" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b5" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>La transformación del grupo de texto de los millares a números es bastante sencilla. Se trata simplemente de ir sumando 1000 por cada carácter '<code>M</code>' que se encuentre:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int numero = 0;
+
+// Decodificamos millares
+String millares = acoplamiento.group(1);
+numero += millares.length() * 1000;
+</code></pre>
+</div>
+</div>
+<p>Este caso es muy sencillo pues el único carácter que puede aparecer en ese grupo es '<code>M</code>'.</p></section>
+</form>
+<section id="taquesQuestion2b5" class="block iDevice_content">
+<p>3.- El resto de casos ya no son tan inmediatos. ¿Cómo decodificarías las centenas?</p>
+</section>
+<form name="feedback-form-quesFeedback2b5" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b5text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b5" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback2b5" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>El caso de las centenas o "cientos" ya no es tan sencillo, pues nos pueden aparecer cadenas de muchos tipos. Concretamente las posibilidades son las siguientes:</p>
+<ul>
+<li class="lista_verificacion">la cadena vacía (si no hay centenas);</li>
+<li class="lista_verificacion">"<code>C</code>", "<code>CC</code>", "<code>CCC</code>", para 100, 200 y 300;</li>
+<li class="lista_verificacion">"<code>CD</code>", para 400;</li>
+<li class="lista_verificacion">"<code>D</code>", "<code>DC</code>", "<code>DCC</code>", "<code>DCCC</code>", para 500, 600, 700 y 800;</li>
+<li class="lista_verificacion">"<code>CM</code>", para 900.</li>
+</ul>
+<p>Los casos más "espinosos" parecen el de 400 ("<code>CD</code>") y 900 ("<code>CM</code>"). Son los casos en los cuales el carácter '<code>C</code>' resta en lugar de sumar. En el resto de situaciones, la aparición de una letra implica simplemente sumar su valor (100 para cada '<code>C</code>' y 500 si aparece una '<code>D</code>'). Sería lo primero que podríamos comprobar para tratarlos como una excepción y a continuación llevar a cabo sumas para el resto. Una posible forma de hacerlo podría ser la siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int numero = 0;
+
+. . .
+
+// Decodificamos centenas
+String centenas = acoplamiento.group(2);
+// Casos "CD" y "CM"
+if (centenas.length() == 2 &amp;&amp; centenas.charAt(0) == 'C' &amp;&amp; centenas.charAt(1) != 'C') {
+    switch (centenas.charAt(1)) {
+        case 'D': // "CD"
+            numero += 400;
+            break;
+        case 'M': // "CM"
+            numero += 900;
+            break;
+    }
+} else {  // Resto de casos: C, CC, CCC, D, DC, DCC,DCCC
+    for (int i=0 ; i &lt; centenas.length(); i++) {
+        switch (centenas.charAt(i)) {
+            case 'C':
+                numero += 100;
+                break;
+            case 'D':
+                numero += 500;
+                break;
+        }
+    }
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion3b5" class="block iDevice_content">
+<p>4.-  Teniendo en cuenta cómo has resuelto el apartado anterior, ¿cómo lo harías para las <strong>decenas</strong> y para las <strong>unidades</strong>?</p>
+</section>
+<form name="feedback-form-quesFeedback3b5" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b5text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b5" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback3b5" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>La metodología sería exactamente la misma.</p>
+<p>Para el caso de las decenas, los casos "espinosos" serían 40 ("<code>XL</code>") y 90 ("<code>XC</code>"):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Decodificamos decenas
+String decenas = acoplamiento.group(3);
+// Casos "XL" y "XC"
+if (decenas.length() == 2 &amp;&amp; decenas.charAt(0) == 'X' &amp;&amp; decenas.charAt(1) != 'X') {
+    switch (decenas.charAt(1)) {
+        case 'L': // "XL"
+            numero += 40;
+            break;
+        case 'C': // "XC"
+            numero += 90;
+            break;
+    }
+} else {  // Resto de casos: X, XX, XXX, L, LX, LXX, LXXX
+    for (int i=0 ; i &lt; decenas.length(); i++) {
+        switch (decenas.charAt(i)) {
+            case 'X':
+                numero += 10;
+                break;
+            case 'L':
+                numero += 50;
+                break;
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<p>Para las unidades serían 4 ("<code>IV</code>") y 9 ("<code>IX</code>"):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code> // Decodificamos unidades
+String unidades = acoplamiento.group(4);
+// Casos "IV" y "IX"
+if (unidades.length() == 2 &amp;&amp; unidades.charAt(0) == 'I' &amp;&amp; unidades.charAt(1) != 'I') {
+    switch (unidades.charAt(1)) {
+        case 'V': // "IV"
+            numero += 4;
+            break;
+        case 'X': // "IX"
+            numero += 9;
+            break;
+    }
+} else {  // Resto de casos: I, II, III, V, VI, VII, VIII
+    for (int i=0 ; i &lt; unidades.length(); i++) {
+        switch (unidades.charAt(i)) {
+            case 'I':
+                numero += 1;
+                break;
+            case 'V':
+                numero += 5;
+                break;
+        }
+    }
+}
+</code></pre>
+</div>
+</div>
+<p></p>
+<p></p></section>
+</form>
+<section id="taquesQuestion4b5" class="block iDevice_content">
+<p>5.- Uniendo todo lo anterior, escribe el <strong>programa completo que solicite un número romano y, una vez comprobada su validez, muestre por pantalla su valor en formato decimal</strong>.</p>
+<p>Un ejemplo de salida del programa podría ser:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>PROGRAMA PARA RESOLVER NÚMEROS ROMANOS
+--------------------------------------
+Introduzca número romano (entre 0 y 3999): 
+(entendemos el 0 como la cadena vacía)
+MDCCXCIX
+
+RESULTADO
+---------
+El número introducido es: 1799</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback4b5" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback4b5text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback4b5" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback4b5" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Uniendo todas las soluciones anteriores, podemos escribir el siguiente programa:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+// Constantes
+// Variables de entrada
+String numeroRomano;
+
+// Variables de salida
+boolean encaja;
+int numero = 0;
+
+// Variables auxiliares
+String patronRomano = "(M{0,3})(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})";
+Pattern patron = Pattern.compile(patronRomano);
+Matcher acoplamiento;
+
+// Clase Scanner para petición de datos de entrada
+Scanner teclado = new Scanner(System.in);
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("PROGRAMA PARA RESOLVER NÚMEROS ROMANOS");
+System.out.println("--------------------------------------");
+System.out.println("Introduzca número romano (entre 0 y 3999): ");
+System.out.println("(entendemos el 0 como la cadena vacía)");
+numeroRomano = teclado.nextLine();
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+acoplamiento = patron.matcher(numeroRomano);
+encaja = acoplamiento.matches();
+if (encaja) {
+    // Se trata de un número romano. Procedemos a "descifrarlo"
+
+    // Decodificamos millares
+    String millares = acoplamiento.group(1);
+    numero += millares.length() * 1000;
+
+    // Decodificamos centenas
+    String centenas = acoplamiento.group(2);
+    // Casos "CD" y "CM"
+    if (centenas.length() == 2 &amp;&amp; centenas.charAt(0) == 'C' &amp;&amp; centenas.charAt(1) != 'C') {
+        switch (centenas.charAt(1)) {
+            case 'D': // "CD"
+                numero += 400;
+                break;
+            case 'M': // "CM"
+                numero += 900;
+                break;
+        }
+    } else {  // Resto de casos: C, CC, CCC, D, DC, DCC,DCCC
+        for (int i=0 ; i &lt; centenas.length(); i++) {
+            switch (centenas.charAt(i)) {
+                case 'C':
+                    numero += 100;
+                    break;
+                case 'D':
+                    numero += 500;
+                    break;
+            }
+        }
+    }
+
+    // Decodificamos decenas
+    String decenas = acoplamiento.group(3);
+    // Casos "XL" y "XC"
+    if (decenas.length() == 2 &amp;&amp; decenas.charAt(0) == 'X' &amp;&amp; decenas.charAt(1) != 'X') {
+        switch (decenas.charAt(1)) {
+            case 'L': // "XL"
+                numero += 40;
+                break;
+            case 'C': // "XC"
+                numero += 90;
+                break;
+        }
+    } else {  // Resto de casos: X, XX, XXX, L, LX, LXX, LXXX
+        for (int i=0 ; i &lt; decenas.length(); i++) {
+            switch (decenas.charAt(i)) {
+                case 'X':
+                    numero += 10;
+                    break;
+                case 'L':
+                    numero += 50;
+                    break;
+            }
+        }
+    }
+
+    // Decodificamos unidades
+    String unidades = acoplamiento.group(4);
+    // Casos "IV" y "IX"
+    if (unidades.length() == 2 &amp;&amp; unidades.charAt(0) == 'I' &amp;&amp; unidades.charAt(1) != 'I') {
+        switch (unidades.charAt(1)) {
+            case 'V': // "IV"
+                numero += 4;
+                break;
+            case 'X': // "IX"
+                numero += 9;
+                break;
+        }
+    } else {  // Resto de casos: I, II, III, V, VI, VII, VIII
+        for (int i=0 ; i &lt; unidades.length(); i++) {
+            switch (unidades.charAt(i)) {
+                case 'I':
+                    numero += 1;
+                    break;
+                case 'V':
+                    numero += 5;
+                    break;
+            }
+        }
+    }
+}
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println();
+System.out.println("RESULTADO");
+System.out.println("---------");
+if (encaja) {
+    System.out.printf ("El número introducido es: %d\n", numero);
+} else {
+    System.out.printf ("No es un número romano válido.");
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion5b5" class="block iDevice_content">
+<p>6.- Generalizando lo que acabamos de hacer y utilizando el método <code>find</code>, ¿se te ocurre cómo podrías <strong>obtener todos los números romanos insertos en un texto</strong>? El programa, según fuera encontrando números romanos, podría ir incluyéndolos en una cadena de caracteres separados por comas y, a la vez, ir realizando las decodificaciones a números decimales e ir incluyéndolos en una segunda cadena, también separados por comas. El programa, una vez finalizada la búsqueda, podría mostrar las dos listas (dos cadenas de caracteres).</p>
+<p>Este podría ser un ejemplo de funcionamiento del programa:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>PROGRAMA PARA EXPLORAR TEXTOS CON NÚMEROS ROMANOS
+-------------------------------------------------
+Introduzca texto que puede contener números romanos (entre I y MMMCMXCIX): 
+I.-  El rey Alfonso X el sabio vivió en el siglo XIII, mientras que el rey Alfonso XII vivió en el siglo XIX.
+
+RESULTADO
+---------
+La lista de números romanos encontrados es: 
+I, X, XIII, XII, XIX
+La lista de números decodificados es: 
+1, 10, 13, 12, 19</code></pre>
+</div>
+</div>
+<p>Aquí tienes otro ejemplo más:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>PROGRAMA PARA EXPLORAR TEXTOS CON NÚMEROS ROMANOS
+-------------------------------------------------
+Introduzca texto que puede contener números romanos (entre I y MMMCMXCIX): 
+II.- Esta película es del año MCMXCVIII, es decir, del siglo XX. Estamos ahora en el sigo XXI.
+
+RESULTADO
+---------
+La lista de números romanos encontrados es: 
+II, MCMXCVIII, XX, XXI
+La lista de números decodificados es: 
+2, 1998, 20, 21</code></pre>
+</div>
+</div>
+<p></p>
+</section>
+<form name="feedback-form-quesFeedback5b5" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback5b5text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback5b5" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback5b5" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Para resolver este problema tendríamos que usar el método <code>find</code> en lugar de <code>match</code>. Pero en lugar de hacer un <code>if</code>, como hacemos con match, tendríamos que hacer un <code>while</code>, pues el patrón del número romano puede aparecer varias veces dentro del texto.</p>
+<p>Además, debemos tener en cuenta que el patrón que hemos diseñado para los números romanos admite la cadena vacía, así que cada vez que se realice un <code>find</code> debemos asegurarnos de que no se trata de una cadena vacía. Otra opción podría ser diseñar una expresión regular que no admitiera la cadena vacía como posible solución. Eso es algo más complicado y se escapa de las pretensiones de este ejercicio y, por el momento, de esta unidad. Por tanto, nos quedaremos por ahora con la primera alternativa aunque sea bastante menos eficiente.</p>
+<p>El programa final podría quedar del siguiente modo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+// Constantes
+// Variables de entrada
+String texto;
+
+// Variables de salida
+String listaNumerosRomanos = "";
+String listaNumeros = "";
+
+// Variables auxiliares
+String patronRomano = "(M{0,3})(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})";
+Pattern patron = Pattern.compile(patronRomano);
+Matcher acoplamiento;
+
+// Clase Scanner para petición de datos de entrada
+Scanner teclado = new Scanner(System.in);
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("PROGRAMA PARA EXPLORAR TEXTOS CON NÚMEROS ROMANOS");
+System.out.println("-------------------------------------------------");
+System.out.println("Introduzca texto que puede contener números romanos (entre I y MMMCMXCIX): ");
+texto = teclado.nextLine();
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+acoplamiento = patron.matcher(texto);
+
+while (acoplamiento.find() ) {
+    if (acoplamiento.group(0).length()&gt;0) {
+        // Hemos encontrado un número romano y no es la cadena vacía. Procedemos a "descifrarlo"
+        int numero= 0;
+
+        // Decodificamos millares
+        String millares = acoplamiento.group(1);
+        numero += millares.length() * 1000;
+
+        // Decodificamos centenas
+        String centenas = acoplamiento.group(2);
+        // Casos "CD" y "CM"
+        if (centenas.length() == 2 &amp;&amp; centenas.charAt(0) == 'C' &amp;&amp; centenas.charAt(1) != 'C') {
+            switch (centenas.charAt(1)) {
+                case 'D': // "CD"
+                    numero += 400;
+                    break;
+                case 'M': // "CM"
+                    numero += 900;
+                    break;
+            }
+        } else {  // Resto de casos: C, CC, CCC, D, DC, DCC,DCCC
+            for (int i=0 ; i &lt; centenas.length(); i++) {
+                switch (centenas.charAt(i)) {
+                    case 'C':
+                        numero += 100;
+                        break;
+                    case 'D':
+                        numero += 500;
+                        break;
+                }
+            }
+        }
+
+        // Decodificamos decenas
+        String decenas = acoplamiento.group(3);
+        // Casos "XL" y "XC"
+        if (decenas.length() == 2 &amp;&amp; decenas.charAt(0) == 'X' &amp;&amp; decenas.charAt(1) != 'X') {
+            switch (decenas.charAt(1)) {
+                case 'L': // "XL"
+                    numero += 40;
+                    break;
+                case 'C': // "XC"
+                    numero += 90;
+                    break;
+            }
+        } else {  // Resto de casos: X, XX, XXX, L, LX, LXX, LXXX
+            for (int i=0 ; i &lt; decenas.length(); i++) {
+                switch (decenas.charAt(i)) {
+                    case 'X':
+                        numero += 10;
+                        break;
+                    case 'L':
+                        numero += 50;
+                        break;
+                }
+            }
+        }
+
+        // Decodificamos unidades
+        String unidades = acoplamiento.group(4);
+        // Casos "IV" y "IX"
+        if (unidades.length() == 2 &amp;&amp; unidades.charAt(0) == 'I' &amp;&amp; unidades.charAt(1) != 'I') {
+            switch (unidades.charAt(1)) {
+                case 'V': // "IV"
+                    numero += 4;
+                    break;
+                case 'X': // "IX"
+                    numero += 9;
+                    break;
+            }
+        } else {  // Resto de casos: I, II, III, V, VI, VII, VIII
+            for (int i=0 ; i &lt; unidades.length(); i++) {
+                switch (unidades.charAt(i)) {
+                    case 'I':
+                        numero += 1;
+                        break;
+                    case 'V':
+                        numero += 5;
+                        break;
+                }
+            }
+        }
+
+        if (listaNumeros.length()&gt;0) { // Si no es el primer número, añadimos una coma                
+            listaNumerosRomanos += ", ";
+            listaNumeros += ", ";
+        }
+
+        // Añadimos el número encontrado y convertido a sus respetivas listas
+        listaNumerosRomanos += acoplamiento.group(0);
+        listaNumeros += numero;
+    }
+}
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println();
+System.out.println("RESULTADO");
+System.out.println("---------");
+if (listaNumeros.length()&gt;0) {
+    System.out.printf ("La lista de números romanos encontrados es: \n%s\n", 
+            listaNumerosRomanos);
+    System.out.printf ("La lista de números decodificados es: \n%s\n", 
+            listaNumeros);
+} else {
+    System.out.printf ("No se han encontrado números romanos en el texto.");
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion6b5" class="block iDevice_content">
+<p>7.- Por último, utilizando los métodos de sustitución de la clase <code>String</code> (<code>replace</code>, <code>replaceFirst</code>, <code>replaceAll</code>, <abbr title="etcétera">etc</abbr>.). ¿Se te ocurre cómo podríamos generar una cadena de salida que fuera el <strong>texto original con los números romanos transformados a números en formato decimal</strong>?</p>
+<p>Los ejemplos anteriores de funcionamiento podrían entonces quedar como:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>PROGRAMA PARA EXPLORAR TEXTOS CON NÚMEROS ROMANOS
+-------------------------------------------------
+Introduzca texto que puede contener números romanos (entre I y MMMCMXCIX): 
+I.-  El rey Alfonso X el sabio es del siglo XIII, mientras que el rey Alfonso XII es del siglo XIX.
+
+
+RESULTADO
+---------
+La lista de números romanos encontrados es: 
+I, X, XIII, XII, XIX
+La lista de números decodificados es: 
+1, 10, 13, 12, 19
+El texto final sustituido sería:
+1.-  El rey Alfonso 10 el sabio es del siglo 13, mientras que el rey Alfonso 12 es del siglo 19.</code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>PROGRAMA PARA EXPLORAR TEXTOS CON NÚMEROS ROMANOS
+-------------------------------------------------
+Introduzca texto que puede contener números romanos (entre I y MMMCMXCIX): 
+II.- Esta peli es de MCMXCVIII, es decir, del siglo XX. Estamos ahora en el sigo XXI.
+
+
+RESULTADO
+---------
+La lista de números romanos encontrados es: 
+II, MCMXCVIII, XX, XXI
+La lista de números decodificados es: 
+2, 1998, 20, 21
+El texto final sustituido sería:
+2.- Esta peli es de 1998, es decir, del siglo 20. Estamos ahora en el sigo 21.</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback6b5" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback6b5text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback6b5" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback6b5" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Una forma posible de resolver el problema y no muy complicada podría consistir en lo siguiente:</p>
+<ol>
+<li>iniciamos una cadena textoModificado que inicialmente será igual a la entrada y poco a poco irá transformándose según vayamos encontrando números romanos;</li>
+<li>cada vez que encontremos un número romano válido y lo decodifiquemos, procederemos a sustituirlo por su número equivalente. Pero solo ese. No tocamos posibles números romanos posteriores, porque podrían ser parte de otros números mayores y los "estropearíamos". Solamente sustituimos justo lo que encontremos (para ello podríamos usar el método <code>replaceFirst</code> de la clase <code>String</code>).</li>
+</ol>
+<p>Teniendo todo eso en cuenta, el programa final podría quedar como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>
+//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+// Constantes
+// Variables de entrada
+String texto;
+
+// Variables de salida
+String listaNumerosRomanos = "";
+String listaNumeros = "";
+String textoModificado;
+
+// Variables auxiliares
+String patronRomano = "(M{0,3})(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})";
+Pattern patron = Pattern.compile(patronRomano);
+Matcher acoplamiento;
+
+// Clase Scanner para petición de datos de entrada
+Scanner teclado = new Scanner(System.in);
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("PROGRAMA PARA EXPLORAR TEXTOS CON NÚMEROS ROMANOS");
+System.out.println("-------------------------------------------------");
+System.out.println("Introduzca texto que puede contener números romanos (entre I y MMMCMXCIX): ");
+texto = teclado.nextLine();
+textoModificado = texto;
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+acoplamiento = patron.matcher(texto);
+
+while (acoplamiento.find() ) {
+    if (acoplamiento.group(0).length()&gt;0) {
+        // Hemos encontrado un número romano y no es la cadena vacía. Procedemos a "descifrarlo"
+        int numero= 0;
+
+        // Decodificamos millares
+        String millares = acoplamiento.group(1);
+        numero += millares.length() * 1000;
+
+        // Decodificamos centenas
+        String centenas = acoplamiento.group(2);
+        // Casos "CD" y "CM"
+        if (centenas.length() == 2 &amp;&amp; centenas.charAt(0) == 'C' &amp;&amp; centenas.charAt(1) != 'C') {
+            switch (centenas.charAt(1)) {
+                case 'D': // "CD"
+                    numero += 400;
+                    break;
+                case 'M': // "CM"
+                    numero += 900;
+                    break;
+            }
+        } else {  // Resto de casos: C, CC, CCC, D, DC, DCC,DCCC
+            for (int i=0 ; i &lt; centenas.length(); i++) {
+                switch (centenas.charAt(i)) {
+                    case 'C':
+                        numero += 100;
+                        break;
+                    case 'D':
+                        numero += 500;
+                        break;
+                }
+            }
+        }
+
+        // Decodificamos decenas
+        String decenas = acoplamiento.group(3);
+        // Casos "XL" y "XC"
+        if (decenas.length() == 2 &amp;&amp; decenas.charAt(0) == 'X' &amp;&amp; decenas.charAt(1) != 'X') {
+            switch (decenas.charAt(1)) {
+                case 'L': // "XL"
+                    numero += 40;
+                    break;
+                case 'C': // "XC"
+                    numero += 90;
+                    break;
+            }
+        } else {  // Resto de casos: X, XX, XXX, L, LX, LXX, LXXX
+            for (int i=0 ; i &lt; decenas.length(); i++) {
+                switch (decenas.charAt(i)) {
+                    case 'X':
+                        numero += 10;
+                        break;
+                    case 'L':
+                        numero += 50;
+                        break;
+                }
+            }
+        }
+
+        // Decodificamos unidades
+        String unidades = acoplamiento.group(4);
+        // Casos "IV" y "IX"
+        if (unidades.length() == 2 &amp;&amp; unidades.charAt(0) == 'I' &amp;&amp; unidades.charAt(1) != 'I') {
+            switch (unidades.charAt(1)) {
+                case 'V': // "IV"
+                    numero += 4;
+                    break;
+                case 'X': // "IX"
+                    numero += 9;
+                    break;
+            }
+        } else {  // Resto de casos: I, II, III, V, VI, VII, VIII
+            for (int i=0 ; i &lt; unidades.length(); i++) {
+                switch (unidades.charAt(i)) {
+                    case 'I':
+                        numero += 1;
+                        break;
+                    case 'V':
+                        numero += 5;
+                        break;
+                }
+            }
+        }
+
+        if (listaNumeros.length()&gt;0) { // Si no es el primer número, añadimos una coma                
+            listaNumerosRomanos += ", ";
+            listaNumeros += ", ";
+        }
+
+        // Añadimos el número encontrado y convertido a sus respetivas listas
+        listaNumerosRomanos += acoplamiento.group(0);
+        listaNumeros += numero;
+
+        // Llevamos a cabo la sustitución
+        textoModificado = textoModificado.replaceFirst(acoplamiento.group(0), Integer.toString(numero));
+
+    }
+}
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println();
+System.out.println("RESULTADO");
+System.out.println("---------");
+if (listaNumeros.length()&gt;0) {
+    System.out.printf ("La lista de números romanos encontrados es: \n%s\n", 
+            listaNumerosRomanos);
+    System.out.printf ("La lista de números decodificados es: \n%s\n", 
+            listaNumeros);
+    System.out.printf ("El texto final sustituido sería:\n%s\n",
+            textoModificado);
+} else {
+    System.out.printf ("No se han encontrado números romanos en el texto.");
+}</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4__arrays.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

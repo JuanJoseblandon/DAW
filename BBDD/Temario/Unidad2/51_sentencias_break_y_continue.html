@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.1.- Sentencias break y continue. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul class="other-section">
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructuras_de_seleccin_o_condicionales.html" class="daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul class="other-section">
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li><a href="34_estructura_selectiva_mltiple_switch_i.html" class="daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul class="other-section">
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul class="other-section">
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li><a href="45_estructura_repetitiva_for_i.html" class="daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul class="other-section">
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_estructuras_de_salto_incondicional.html" class="current-page-parent daddy">5.- Estructuras de salto incondicional.</a>
+   <ul>
+      <li id="active"><a href="51_sentencias_break_y_continue.html" class="active no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul class="other-section">
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="5_estructuras_de_salto_incondicional.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="52_etiquetas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5.1.- Sentencias break y continue.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id38">
+<div class="iDevice emphasis0">
+<div id="ta38_73" class="block iDevice_content">
+<div>
+<div class="elemento_derecha"><a title="Diagrama de flujo representando el uso de break y continue" href="PROG03_CONT_R11_diagramabreakycontinue.jpg"><img alt="Dentro de un rombo verde se lee “Expresión != 0”, a su derecha un rectángulo rojo en el que se lee “falso” y del que parte una flecha hacia el final de la estructura. Bajo el rombo un rectángulo verde en el que pone “verdadero” y bajo él un rectángulo azul en el que se lee “secuencia”. Bajo la palabra “secuencia”, dos etiquetas “continue” y “break” de las que parten dos flechas, una otra vez hacia el rombo verde y otra hacia la flecha que representa el final de la estructura." class="imagen_ampliable" src="PROG03_CONT_R11_diagramabreakycontinue_miniatura.jpg" style="width: 160px; height: 200px;" title="Diagrama de flujo representando el uso de break y continue" width="160" height="200" /></a></div>
+</div>
+<p>Se trata de dos instrucciones que permiten modificar el comportamiento de otras estructuras o sentencias de control, simplemente por el hecho de estar incluidas en algún punto de su secuencia de instrucciones.</p>
+<p>La <strong>sentencia </strong><strong><code>break</code></strong> incidirá sobre las estructuras de control <code>switch</code>, <code>while</code>, <code>for</code> y <code>do-while</code> del siguiente modo:</p>
+<ul class="lista_verificacion">
+<li>Si aparece una sentencia <code>break</code> dentro de la secuencia de instrucciones de cualquiera de las estructuras mencionadas anteriormente, dicha estructura terminará inmediatamente.</li>
+<li>Si aparece una sentencia <code>b</code><code>reak</code> dentro de un bucle anidado sólo finalizará ejecución del bucle más interno en el que se encuentra, el resto se ejecuta de <code></code>forma normal.</li>
+</ul>
+<p>Es decir, que <code>break</code> sirve para romper el flujo de control de un bucle, aunque no se haya cumplido la condición del bucle. Si colocamos un <code>break</code> dentro del código de un bucle, cuando se alcance el <code>break</code>, automáticamente se saldrá del bucle pasando a ejecutarse la siguiente instrucción inmediatamente después de él.</p>
+<p>Aquí tienes un ejemplo de cómo se utilizaría la sentencia <code>break</code> dentro de un bucle <code>for</code>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Ejemplo de uso de la sentencia de salto break
+ */
+public class SentenciaBreak {
+     public static void main(String[] args) {
+        // Declaración de variables
+            int contador;
+            1
+        //Procesamiento y salida de información     
+       /* Este bucle sólo se ejecutará en 6 ocasiones, ya que cuando
+        * la variable contador sea igual a 7 encontraremos un break que
+        * romperá el flujo del bucle, transfiriéndonos el control a la 
+        * sentencia que imprime el  mensaje  de Fin del programa.
+        */
+        for (contador=1;contador&lt;=10;contador++){
+            if (contador==7)
+                 break;
+            System.out.println ("Valor: " + contador); // Es una forma muy inapropiada de salir del bucle!!      
+        }
+        System.out.println ("Fin del programa");   
+     }  
+}</code></pre>
+</div>
+</div>
+<p class="destacado"><strong>¡Recuerda!</strong><br />Debemos saber cómo funciona <code>break</code>, pero su uso, salvo en el caso del <code>switch</code>, donde es obligado usarlo para evitar una "ejecución en cascada", se desaconseja, y siempre es evitable. <br /><span class="resaltado_inline">La salida de cualquier ciclo usando</span> <code>break</code> <span class="resaltado_inline">es  en general<strong> una mala práctica</strong> de programación, que esconde una mala planificación de la lógica asociada al ciclo</span>. La <strong>salida natural y <span class="resaltado_inline">única</span> de cada ciclo</strong> debe ser comprobando la condición de control del mismo, único punto donde debemos comprobar si ha llegado o no el momento de terminarlo. Cualquier comprobación de cualquier condición de salida dentro del cuerpo del bucle para forzar la salida del bucle desde el interior del mismo usando <code>break</code>, debería haberse incorporado a la condición de control del mismo, y supone ir abriendo puertas traseras de salida que hacen que el código se haga cada vez más complicado de entender y mantener. ¡¡Evita usar <code>break</code> siempre que sea posible!! Y salvo el caso de <code>switch</code>, siempre es posible.</p>
+<p>La <strong>sentencia </strong><strong><code>continue</code></strong> incidirá sobre las sentencias o estructuras de control <code>while</code>, <code>for</code> y <code>do-while</code> del siguiente modo:</p>
+<ul class="lista_verificacion">
+<li>Si aparece una sentencia <code>continue</code> dentro de la secuencia de instrucciones de cualquiera de las sentencias anteriormente indicadas, dicha sentencia dará por terminada la iteración actual y se ejecuta una nueva iteración, evaluando de nuevo la expresión condicional del bucle.</li>
+<li>Si aparece en el interior de un bucle anidado solo detendrá la ejecución de la iteración del bucle más interno en el que se encuentra, el resto se ejecutaría de forma normal.</li>
+</ul>
+<p>Es decir, la sentencia <code>continue</code><code> </code>forzará a que se ejecute la siguiente iteración del bucle, ignorando y saltándose las instrucciones que pudiera haber después del <code>continue</code>, y hasta el final del código del bucle, para esta iteración.</p>
+<p>Aquí tienes un ejemplo de cómo se utilizaría la sentencia <code>continue</code> dentro de un bucle <code>for</code> para mostrar por pantalla los números pares que hay entre el 1 y el 10:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Ejemplo de uso de la sentencia de salto continue
+ */
+public class EjemploSentenciaContinue {
+     public static void main(String[] args) {
+        // Declaración de variables
+          int contador;
+        //Procesamiento y salida de información    
+		  System.out.println ("Imprimiendo los números pares que hay del 1 al 10... "); 
+          for (contador=1;contador&lt;=10;contador++){
+            if (contador % 2 != 0) 
+			   continue;
+            System.out.print(contador + " ");         
+          }
+          System.out.println ("\nFin del programa");   
+        /* Las iteraciones del bucle que generarán la impresión de cada uno de los números
+         * pares, serán aquellas en las que el resultado de calcular el resto de la división
+         * entre 2 de cada valor de la variable contador, sea igual a 0.
+         */
+    }
+}</code></pre>
+</div>
+</div>
+<p class="destacado"><strong>¡¡Recuerda!!</strong> <br />Con la sentencia <code>continue</code>, también se desaconseja el uso. Igual que pasaba con el uso de <code>break</code>, es en general <span class="resaltado_inline"><strong>una mala práctica </strong>de programación, que esconde un mal diseño de la lógica asociada al ciclo</span>. De hecho, la sentencia <code>continue</code>, como en el ejemplo de la imagen anterior, se pondría dentro de un<code> if </code>para que se ejecute dependiendo de una condición. La sentencia <code>continue</code> lo que hace  implícitamente de hecho, es meter las demás sentencias que siguen a partir de ella en una "invisible" cláusula <code>else</code> del condicional, ya que sólo serán alcanzables y ejecutables en el caso de que la condición sea falsa y por tanto no se ejecute <code>continue</code>. Si un grupo de sentencias del bucle deben dejar de ejecutarse bajo ciertas circunstancias, lo que hay que hacer es incluirlas en un condicional que compruebe dicha condición, y que se salte esas sentencias cuando sea oportuno.</p>
+<p>Para clarificar algo más el funcionamiento de ambas sentencias de salto, vuelve a mirar detenidamente el diagrama representativo del comienzo de este epígrafe.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdIdevice em_iDevice em_iDevice_reflexionfpd" id="id121">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta121_34" class="block iDevice_content">
+<p><strong>¿Cómo reescribirías el código de los dos ejemplos de código anteriores para conseguir el mismo funcionamiento, pero sin usar sentencias <code>break</code> ni <code>continue</code>?</strong></p>
+</div>
+<form name="feedback-form-121" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedback121text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-121" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-121" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div id="ta121_35" class="block iDevice_content">
+<p>Prueba a cambiarlos y a ejecutarlos para comprobar que efectivamente el resultado es el esperado, y si tienes alguna duda, compártela con el resto de participantes del curso  en el foro de la unidad.</p>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id39">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta39_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b39" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b39" class="block iDevice_content">
+<p align="justify"><strong>La instrucci&oacute;n <code>break</code> puede utilizarse en las estructuras de control <code>switch</code>, <code>while</code>, <code>for</code> y <code>do-while</code>, pudiendo omitirse en la cl&aacute;usula <code>default</code> de la estructura <code>switch</code>.&nbsp;</strong></p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b39"><input type="radio" name="option0b39" id="true0b39" class="exe-radio-option exe-radio-option-0-2-0b39-truefalse" /> Verdadero</label> 
+<label for="false0b39"><input type="radio" name="option0b39" id="false0b39" class="exe-radio-option exe-radio-option-1-2-0b39-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b39" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b39-result" class="right">Verdadero</strong></p>
+<p align="justify">Si tenemos la cl&aacute;usula <code>default</code> al final y no existe una sentencia <code>break</code>, directamente se pasar&iacute;a a la finalizaci&oacute;n de la estructura condicional m&uacute;ltiple, exactamente igual que si us&aacute;ramos <code>break</code></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id151">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta151_63" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b151" class="block iDevice_content">
+<p>Usando la sentencia <code>continue </code>dentro un bucle tipo <code>while</code>, intenta que se muestre la secuencia siguiente de 6 líneas:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>*
+**
+*
+**
+*
+**</code></pre>
+</div>
+</div>
+<p>Fíjate que en las líneas impares se muestra solo un asterísco, y en las pares, dos asteríscos. ¿Se te ocurre como resolver el problema usando un <code>continue</code>? Intenta primer solucionar el problema sin <code>continue </code>y luego con <code>continue</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback0b151" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b151text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b151" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b151" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>El siguiente código es una posible solución al problema <strong>sin usar <code>continue</code></strong>:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class SolucionEjercicioSinContinue {
+    public static void main(String[] args)
+    {        
+        int i=0;
+        String cad="";
+        while (i&lt;6)
+        {
+            i++;                                
+            if (i%2!=0) { System.out.println("*"); }                       
+            else System.out.println("**");            
+        }        
+    }
+}</code></pre>
+</div>
+</div>
+<p>El mismo ejercicio usando un <code>continue</code> se hace un poco más complejo de entender (es el tipo de soluciones que tenemos que evitar):</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class SolucionEjercicioContinue {
+    public static void main(String[] args)
+    {        
+        int i=0;
+        String cad="";
+        while (i&lt;6)
+        {
+            i++;                    
+            cad="*";
+            if (i%2!=0) { System.out.println(cad); continue; }            
+            cad+="*";     
+            System.out.println(cad);
+        }        
+    }
+}</code></pre>
+</div>
+</div>
+<p> </p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="5_estructuras_de_salto_incondicional.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="52_etiquetas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

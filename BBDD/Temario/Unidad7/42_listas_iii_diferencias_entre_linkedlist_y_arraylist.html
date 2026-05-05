@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.2.- Listas (III). Diferencias entre LinkedList y ArrayList | Estructuras de datos internas (memoria) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-59"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructuras de datos internas (memoria)</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos internas (memoria)</a></li>
+   <li><a href="1_clases_y_mtodos_genricos_i.html" class="daddy">1.- Clases y métodos genéricos (I)</a>
+   <ul class="other-section">
+      <li><a href="11_clases_y_mtodos_genricos_ii.html" class="no-ch">1.1.- Clases y métodos genéricos (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="2__introduccin_a_las_colecciones.html" class="no-ch">2.-  Introducción a las colecciones</a></li>
+   <li><a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="daddy">3.- Conjuntos (I).  ¿Qué son y cómo se declaran? HashSet</a>
+   <ul class="other-section">
+      <li><a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="no-ch">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</a></li>
+      <li><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="no-ch">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</a></li>
+      <li><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="no-ch">3.3.- Conjuntos (IV). Combinando datos de varias colecciones</a></li>
+      <li><a href="34_conjuntos_v_ordenando_sus_elementos.html" class="no-ch">3.4.- Conjuntos (V). Ordenando sus elementos</a></li>
+      <li><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="no-ch">3.5.- Conjuntos (VI). Ejemplos de uso.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_listas_i_definicin_y_diferencias_con_los_conjuntos.html" class="current-page-parent daddy">4.- Listas (I). Definición y diferencias con los conjuntos</a>
+   <ul>
+      <li><a href="41_listas_ii_cmo_se_usan.html" class="no-ch">4.1.- Listas (II). ¿Cómo se usan?</a></li>
+      <li id="active"><a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="active no-ch">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</a></li>
+      <li><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="no-ch">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</a></li>
+   </ul>
+   </li>
+   <li><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="daddy">5.- Conjuntos de pares clave/valor o diccionarios</a>
+   <ul class="other-section">
+      <li><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="no-ch">5.1.- Recorrido de los elementos de un diccionario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="daddy">6.- Iteradores (I). ¿Qué son y cómo se usan?</a>
+   <ul class="other-section">
+      <li><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="no-ch">6.1.- Iteradores (II). ¿Qué características debemos considerar?</a></li>
+   </ul>
+   </li>
+   <li><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="daddy">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</a>
+   <ul class="other-section">
+      <li><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="no-ch">7.1.- Algoritmos (II). Ordenando los elementos de la colección</a></li>
+      <li><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="no-ch">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</a></li>
+      <li><a href="73_algoritmos_iv_operaciones_agregadas.html" class="daddy">7.3. Algoritmos (IV). Operaciones agregadas</a>
+      <ul class="other-section">
+         <li><a href="731_operaciones_de_reduccin.html" class="no-ch">7.3.1. Operaciones de reducción</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I. Ejercicios resueltos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="41_listas_ii_cmo_se_usan.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id161">
+<div class="iDevice emphasis0">
+<div id="ta161_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a title="Ampliar imagen para &quot;Lista doblemente enlazada&quot;. (Se abre en una nueva ventana)" href="PROG09_CONT_R040_ListaDoblementeEnlazada.png" target="_blank" rel="noopener"><img alt="Ilustración que muestra como funciona una lista doblemente enlazada. En la imagen se ven varios nodos unidos por flechas, simbolizando a un puntero o apuntador que contiene la dirección del elemento anterior y posterior en la lista. También se muestra un ejemplo de como podría ser un clase nodo, que encadenados entre sí darían lugar a la lista. La clase nodo propuesta contiene tres campos, uno sig (instancia de la clase Nodo), que sería un apuntador o puntero al siguiente nodo, uno ant (también instancia de la clase nodo), que sería un puntero al nodo anterior, y una instancia de la clase Object, llamada v, destinada a contener el valor almacenado en cada nodo." class="imagen_ampliable" src="PROG09_CONT_R040_ListaDoblementeEnlazada.png" title="Lista doblemente enlazada." width="196" height="103" /></a></div>
+<div class="elemento_centrado credenciales">Salvador Romero Villegas. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">Elaboración propia.</div>
+</div>
+<p>¿Y en qué se diferencia un <code>LinkedList</code> de un <code>ArrayList</code>?</p>
+<p>Las <code>LinkedList</code> utilizan listas doblemente enlazadas, que son listas enlazadas (como se vio en un apartado anterior), pero que permiten ir hacia atrás en la lista de elementos. Los elementos de la lista se encapsulan en los llamados nodos. Los nodos van enlazados unos a otros para no perder el orden y no limitar el tamaño de almacenamiento. Tener un doble enlace significa que en cada nodo se almacena la información de cuál es el siguiente nodo y además, de cuál es el nodo anterior. Si un nodo no tiene nodo siguiente o nodo anterior, se almacena <code>null</code> o nulo para ambos casos.</p>
+<p>No es el caso de los <code>ArrayList</code>. Éstos se implementan utilizando <span lang="en">arrays</span> que se van redimensionando conforme se necesita más espacio o menos. La redimensión es transparente para nosotros, no nos enteramos cuando se produce, pero eso redunda en una diferencia de rendimiento notable dependiendo del uso:</p>
+<ul class="lista_verificacion">
+<li>Los <code>ArrayList</code> son más rápidos en cuanto a acceso a los elementos, acceder a un elemento según su posición es más rápido en un <span lang="en">array</span> que en una lista doblemente enlazada (hay que recorrer la lista).</li>
+<li>En cambio, eliminar un elemento implica muchas más operaciones en un <span lang="en">array</span> que en una lista enlazada de cualquier tipo.</li>
+</ul>
+<p>¿Y esto que quiere decir?</p>
+<p class="destacado"><strong>Si se van a realizar muchas operaciones de eliminación de elementos sobre la lista, conviene usar una lista enlazada (<code>LinkedList</code>), pero si no se van a realizar muchas eliminaciones, sino que solamente se van a insertar y consultar elementos por posición, conviene usar una lista basada en <span lang="en">arrays</span> redimensionados (<code>ArrayList</code>)</strong>.</p>
+<p><code>LinkedList</code> tiene otras ventajas que pueden hacer aconsejable su uso. Implementa las interfaces <code>java.util.Queue</code> y <code>java.util.Deque</code>. Dichas interfaces permiten hacer uso de las listas como si fueran una cola.</p>
+<p><strong>Las colas</strong> (<em>queue</em>) son listas, pero que aportan métodos para trabajar de forma diferente. ¿Tú sabes lo que es hacer cola para que te atiendan en una ventanilla? Pues igual: se trata de que el primero que llega es el primero en ser atendido (<acronym title="First In First Out. " lang="en">FIFO</acronym>, o Primero en Entrar, Primero en Salir). Simplemente se aportan tres métodos nuevos: meter en el final de la lista (<code>add()</code> y <code>offer()</code>), sacar y eliminar el elemento más antiguo (<code>poll()</code>), y examinar el elemento al principio de la lista sin eliminarlo (<code>peek()</code>). Dichos métodos están disponibles en las listas enlazadas <code>LinkedList</code>:</p>
+<ul class="lista_verificacion">
+<li><code>boolean add(E e) y boolean offer(E e)</code>, devolverán <code>true</code> si se ha podido insertar el elemento al final de la <code>LinkedList</code>.</li>
+<li><code>E poll()</code> devolverá el primer elemento de la <code>LinkedList</code> y lo eliminará de la misma. Al insertar al final, los elementos más antiguos siempre están al principio. Retornará <code>null</code> si la lista está vacía.</li>
+<li><code>E peek()</code> devolverá el primer elemento de la <code>LinkedList</code> pero no lo eliminará, permite examinarlo. Retornará <code>null</code> si la lista está vacía.</li>
+</ul>
+<p><strong>Las pilas</strong>, son todo lo contrario a las colas. Una pila es igual que una montaña de hojas en blanco (o una pila de platos): para añadir hojas nuevas (o platos),  se ponen encima del resto, y para retirar una se coge la primera que hay, encima de todas. En las pilas el último en llegar es el primero en ser atendido (<abbr title="Last-In, First-Out" lang="en">LIFO</abbr>). Para ello se proveen de tres métodos: meter al principio de la pila (<code>push()</code>), sacar y eliminar del principio de la pila (<code>pop()</code>), y examinar el primer elemento de la pila (<code>peek()</code>, igual que si usara la lista como una cola). Las estructuras de tipo <strong>pila</strong> (<em>stack</em>) están implementadas en Java mediante las clases <code>java.util.Stack</code> y <code>java.util.Deque</code>.</p>
+<p>Ten en mente que <strong>tanto las colas como las pilas, son listas enlazadas sobre la que se hacen operaciones especiales</strong>.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id162">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-162_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion162_60" class="block question iDevice_content">
+<p><strong>Dada la siguiente lista, usada como si fuera una cola de prioridad, ¿cuál es la letra que se mostraría por la pantalla tras su ejecución?</strong></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>LinkedList&lt;String&gt; tt=new LinkedList&lt;&gt;();
+tt.offer("A"); 
+tt.offer("B"); 
+tt.offer("C");
+System.out.println(tt.poll());</code></pre>
+</div>
+</div>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i162_63" class="sr-av"><a href="#answer-162_63">Opción 1</a></label><input type="radio" name="option162_60" id="i162_63" class="exe-radio-option exe-radio-option-0-3-162_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-162_63"><div id="taans162_63" class="block iDevice_content">
+<p>A.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i162_120" class="sr-av"><a href="#answer-162_120">Opción 2</a></label><input type="radio" name="option162_60" id="i162_120" class="exe-radio-option exe-radio-option-1-3-162_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-162_120"><div id="taans162_120" class="block iDevice_content">
+<p>C.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i162_123" class="sr-av"><a href="#answer-162_123">Opción 3</a></label><input type="radio" name="option162_60" id="i162_123" class="exe-radio-option exe-radio-option-2-3-162_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-162_123"><div id="taans162_123" class="block iDevice_content">
+<p>D.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b162_60" class="feedback js-hidden">
+<div id="taf162_63" class=" iDevice_content">
+<p>Correcto. Efectivamente, el primero en entrar es el primero que sale.</p>
+</div>
+</section>
+<section id="sa1b162_60" class="feedback js-hidden">
+<div id="taf162_120" class=" iDevice_content">
+<p>Incorrecto. Revisa el funcionamiento de las colas.</p>
+</div>
+</section>
+<section id="sa2b162_60" class="feedback js-hidden">
+<div id="taf162_123" class=" iDevice_content">
+<p>No es correcto. El elemento D no est&aacute; en la lista.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-162_63">Opción correcta</a><span> (<a href="#sa0b162_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-162_120">Incorrecto</a><span> (<a href="#sa1b162_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-162_123">Incorrecto</a><span> (<a href="#sa2b162_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id14">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta14_148" class="block story iDevice_content">
+<p>Vamos a trabajar un poco con <strong>pilas</strong> y <strong>colas</strong>.</p>
+</section>
+<section id="taquesQuestion0b14" class="block iDevice_content">
+<p><strong>1. Rellenado de pilas y colas</strong></p>
+<p>Crea una colección de tipo pila (usando la clase <code>Stack</code>) y otra de tipo cola (usando la clase <code>LinkedList</code>)</p>
+<p>Coloca los números del 1 al 5 en ambas estructuras (con el método <code>push</code> para la pila y el método <code>push</code> para la cola) y ve mostrando cómo se va modificando su contenido:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Colocando  elemento 1 en cola (add):  [1]
+Colocando  elemento 1 en pila (push): [1]
+Colocando  elemento 2 en cola (add):  [1, 2]
+Colocando  elemento 2 en pila (push): [1, 2]
+Colocando  elemento 3 en cola (add):  [1, 2, 3]
+Colocando  elemento 3 en pila (push): [1, 2, 3]
+Colocando  elemento 4 en cola (add):  [1, 2, 3, 4]
+Colocando  elemento 4 en pila (push): [1, 2, 3, 4]
+Colocando  elemento 5 en cola (add):  [1, 2, 3, 4, 5]
+Colocando  elemento 5 en pila (push): [1, 2, 3, 4, 5]</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b14" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b14text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b14" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b14" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Lo primero que habrá que hacer será instanciar las colecciones cola y pila:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Queue&lt;Integer&gt; cola = new LinkedList&lt;&gt;();
+Stack&lt;Integer&gt; pila = new Stack&lt;&gt;();
+</code></pre>
+</div>
+</div>
+<p>A continuación iremos colocando los números del 1 al 5 en ambas estructuras:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for ( int elemento=1 ; elemento&lt;=5 ; elemento++ ) {
+    cola.add(elemento);
+    System.out.printf ("Colocando  elemento %d en cola (push): %s\n", elemento, cola);            
+    pila.push(elemento);            
+    System.out.printf ("Colocando  elemento %d en pila (pop) : %s\n", elemento, pila);
+}</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+<section id="taquesQuestion1b14" class="block iDevice_content">
+<p><strong>2. Vaciado de pilas y colas</strong></p>
+<p>Ahora ve sacando los elementos uno a uno hasta dejar ambas estructuras vacías (usando los métodos <code>poll</code> para la cola y <code>pop</code> para la pila):</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Extrayendo elemento 1 de cola (poll): [2, 3, 4, 5]
+Extrayendo elemento 5 de cola (pop):  [1, 2, 3, 4]
+Extrayendo elemento 2 de cola (poll): [3, 4, 5]
+Extrayendo elemento 4 de cola (pop):  [1, 2, 3]
+Extrayendo elemento 3 de cola (poll): [4, 5]
+Extrayendo elemento 3 de cola (pop):  [1, 2]
+Extrayendo elemento 4 de cola (poll): [5]
+Extrayendo elemento 2 de cola (pop):  [1]
+Extrayendo elemento 5 de cola (poll): []
+Extrayendo elemento 1 de cola (pop):  []</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback1b14" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b14text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b14" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b14" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Ahora extraeremos todos los elementos has que las estructuras queden vacías:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int elemento;
+while ( !cola.isEmpty() ) { // Como ambas estructuras tienen el mismo tamaño, basta con comprobar una de ellas
+    elemento = cola.poll();
+    System.out.printf ("Extrayendo elemento %d de cola (poll): %s\n", elemento, cola);
+    elemento = pila.pop();
+    System.out.printf ("Extrayendo elemento %d de cola (pop):   %s\n", elemento, pila);            
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="41_listas_ii_cmo_se_usan.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

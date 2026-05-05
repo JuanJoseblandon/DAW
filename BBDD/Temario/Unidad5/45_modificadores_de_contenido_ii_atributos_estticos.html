@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.5.- Modificadores de contenido (II): atributos estáticos | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-19"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_atributos.html" class="current-page-parent daddy">4.- Atributos</a>
+   <ul>
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li id="active"><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="active no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li><a href="5_mtodos.html" class="daddy">5.- Métodos</a>
+   <ul class="other-section">
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="46_combinando_modificadores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.5.- Modificadores de contenido (II): atributos estáticos</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id27">
+<div class="iDevice emphasis0">
+<div id="ta27_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="child-145067_640.png" alt="Balón compartido por un niño y una niña" title="Compartido" style="float: right;" width="200" height="103" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/ni%C3%B1o-compartir-amistad-juego-bola-145067/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de OpenClipart-Vectors en Pixabay (se abre en una nueva ventana).">OpenClipart-Vectors</a> <span class="license"><span class="sep">(</span><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep">)</span></span></div>
+</div>
+<p>Cada vez que se produce una instancia de una clase (es decir, cada vez que se crea un objeto de esa clase), se desencadenan una serie de procesos (construcción del objeto) que dan lugar a la reserva en memoria de un espacio físico que alojará al objeto creado (los <span lang="en">bytes</span> que ocupan sus atributos) así como a la asignación de valores iniciales a esos atributos. De esta manera <strong>cada objeto tendrá sus propios miembros</strong> a imagen y semejanza de la plantilla propuesta por la clase.</p>
+<p>En el caso de nuestra clase <code>Vehiculo</code>, cada vez que se instancie un objeto vehículo se ejecutará un mecanismo automático (construcción del objeto) que reservará espacio para cada uno de sus atributos (ocho <span lang="en">bytes</span> para el la capacidad del depósito, que es de tipo <code>double</code>; un <span lang="en">byte</span> para el estado del motor, que es de tipo <code>boolean</code>, <abbr title="etcétera">etc.</abbr>).</p>
+<p>Supongamos ahora que nos ha pedido añadir un nuevo atributo a la clase que representa el número de vehículos que han sido creados hasta el momento. Podríamos llamarlo, por ejemplo, <code>vehiculosCreados</code> y podría ser de tipo entero (por ejemplo <code>short</code>). Ese atributo se incrementará en uno cada vez que se construya un nuevo vehículo. Si te fijas, ese valor será siempre el mismo para cualquier vehículo, pues en realidad no es una característica específica de cada vehículo en particular, sino una característica de todos los vehículos en general. Es decir, podríamos hablar de una característica de la propia clase más que de una característica de cada objeto. Este tipo de de atributos son conocidos con el nombre de <strong>atributos estáticos</strong> o <strong>atributos de clase</strong>, o <strong>variables de clase</strong>.</p>
+<p><strong>Un atributo estático o de clase es común (el mismo) para todos los objetos de una misma clase</strong>. Podría decirse que la existencia del atributo no depende de la existencia de ningún objeto en particular, sino de la propia clase, y por tanto sólo habrá uno, independientemente del número de objetos que se creen, incluso aunque no exista aún ningún objeto. El atributo será siempre el mismo para todos los objetos y tendrá un valor único independientemente de cada objeto. Aunque no exista ningún objeto de esa clase, ése atributo sí existirá y contendrá un valor (pues se trata de un <strong>atributo de la clase</strong> más que del objeto). Por ejemplo, podríamos estar al inicio de un programa que utiliza vehículos pero sin haber creado todavía ninguno y aún así el atributo <code>vehiculosCreados</code> ya tendría un valor (valor cero). Puedo querer preguntar por el número de vehículos que se han creado, y asegurar que obtendré una respuesta al consultar ese atributo, aunque el número sea cero porque todavía no se ha creado ninguno.</p>
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 275px;"><a href="AtributosEstaticos.png" title="Ampliar imagen &quot;Atributos estáticos&quot;. (Se abre en una nueva ventana)" target="_blank"><img src="AtributosEstaticos_mini.jpg" width="250" height="196" alt="Estructura de una clase Java: detalle de los atributos. La clase Ejemplo tiene un atributo 1 y un atributo 2, siendo éste último static, por lo que su valor está &quot;guardado en la clase&quot;. Se crean dos instancias de la la clase Ejemplo, ej1 y ej2, cada una de las cuales tiene dos atributos, atributo 1 con su valor guardado en el objeto, y atributo 2, que lo único que hay en el objeto es una referencia que apunta al valor guardado para ese atributo 2 en la clase, por ser static. Se indica también que el atributo 2 existe y tiene valor, independientemente de que existan o no instancias de la clase." title="Atributos estáticos" class="imagen_ampliable" /></a>
+<div class="figcaption"><span class="author">Elaboración propia.</span> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+<p style="text-align: center;"><strong><span class="destacado_inline">Para indicar que un atributo es estático o de clase Java proporciona el modificador de contenido <code>static</code>.</span></strong></p>
+<p>En el caso de nuestro atributo <code>vehiculosCreados</code> para la clase <code>Vehiculo</code> simplemente habría que colocar delante el modificador <code>static</code>:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="language-java">public class Vehiculo {
+  private static short vehiculosCreados;  // Cantidad de vehículos creados hasta el momento
+  ...
+  ...
+}</code></pre>
+</div>
+<p>De esta manera acabamos de añadir un atributo común (el mismo) para todos los objetos de una misma clase. Gracias al modificador <code>static</code> no se creará un atributo <code>vehiculosCreados</code> de tipo <code>short</code> cada vez que se instancie un objeto <code>Vehiculo</code>, sino que ese atributo existirá desde antes de la creación de ningún objeto (será una atributo de clase y no de instancia) y será compartido por todos los objetos <code>Vehiculo</code> que se vayan creando en tu programa.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id28">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta28_67" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="ad-70507_640.jpg" alt="Indicador de combustible de un vehículo" title="Combustible" style="float: right;" width="200" height="141" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/anuncios-gasolina-tanque-70507/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Gerd Altmann en Pixabay (se abre en una nueva ventana).">Gerd Altmann</a> <span class="license"><span class="sep">(</span><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep">)</span></span></div>
+</div>
+<p><br />Continuando con nuestro proyecto de clase para modelar vehículos, se ha considerado añadir los siguientes nuevos atributos:</p>
+<ul class="lista_verificacion">
+<li><strong>número de vehículos que se han creado</strong> hasta el momento;</li>
+<li><strong>consumo medio</strong> del vehículo (en litros por cada 100 kilómetros);</li>
+<li><strong>cantidad de kilómetros totales realizados por todos los vehículos;</strong></li>
+<li><strong>número de vehículos con el motor encendido</strong> en el momento actual;</li>
+<li><strong>nivel del depósito de combustible</strong> en el vehículo (en litros).</li>
+</ul>
+</div>
+<div id="taquesQuestion0b28" class="block iDevice_content">
+<p>Lleva a cabo un análisis para cada uno de esos nuevos atributos en el que tendrás que decidir:</p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li>un<strong> identificador</strong> (<strong>nombre</strong> del atributo). Habrá que elegir un nombre representativo de la información que almacena;</li>
+<li>un<strong> tipo</strong>: entero, real, texto, <abbr title="etcétera">etc</abbr>., y la elección de un tipo <span lang="en">Java</span> apropiado;</li>
+<li>una<strong> visibilidad</strong>. Si va a ser visible desde cualquier clase, sólo desde el paquete o sólo desde la clase (modificador de acceso);</li>
+<li><strong>mutabilidad</strong>. Si va a ser constante durante toda la vida del objeto (modificador <code>final</code>) o podría cambiar con el tiempo.</li>
+</ol>
+<p>Esto ya lo has hecho para otros atributos en anteriores ejercicios, pero ahora además también tendrás que decidir para cada uno si es más conveniente que sea un <strong>atributo de objeto</strong> (cada vehículo tendrá esa característica con un valor concreto) o un <strong>atributo de clase</strong> (esa característica será común y con el mismo valor para cualquier objeto, es decir, será una característica de la clase y no de cada objeto en particular). Por tanto tendrás que incluir en tu análisis un quinto criterio a considerar: <strong>¿atributo de objeto o atributo de clase?</strong></p>
+</div>
+<form name="feedback-form-quesFeedback0b28" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b28text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b28" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b28" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Realizamos ese análisis para cada uno de los nuevos atributos:</p>
+<ul class="lista_verificacion">
+<li><strong>número de vehículos que se han creado</strong> hasta el momento:
+<ul>
+<li>nombre: <code>vehiculosCreados</code>;</li>
+<li>tipo: <strong>número entero</strong> (podríamos usar un <code>short</code>);</li>
+<li>visibilidad: <strong>privada</strong>, sólo desde dentro de la clase (se usará el modificador de acceso <code>private</code>). Todos estos los atributos serán privados según se nos indica en el enunciado;</li>
+<li>mutabilidad: no constante, sino <strong>variable</strong> (cada vez que se cree un vehículo irá incrementando);</li>
+<li>de<strong> clase</strong>, pues no tiene sentido que esta característica se repita en cada vehículo. Es una característica general de la clase, independientemente de la cantidad de objetos <code>Vehiculo</code> que existan. De hecho podría no existir ningún vehículo y esta característica seguiría teniendo sentido: tendría valor cero.</li>
+</ul>
+</li>
+<li><strong>Consumo medio</strong> del vehículo:
+<ul>
+<li>nombre: <code>consumoMedio</code>.</li>
+<li>tipo: <strong>número real</strong> (podríamos usar un <code>double</code>);</li>
+<li>visibilidad: <strong>privada</strong>;</li>
+<li>mutabilidad: <strong>constante</strong>. Se trata de una característica específica de cada vehículo que no va a cambiar con el tiempo;</li>
+<li><strong>de objeto</strong>, pues cada vehículo tendrá su propio consumo. No se trata de un valor igual para todos los vehículos. Podrá haber vehículos que tengan el mismo valor para este atributo del mismo modo que pueda haber vehículos con el mismo número de puertas, pero habrá otros vehículos que podrían tener un valor diferente. Se trata de una característica individual de cada objeto.</li>
+</ul>
+</li>
+<li><strong>Cantidad de kilómetros totales realizados por todos los vehículos</strong>:
+<ul>
+<li>nombre: <code>kilometrosTotalesFlota</code>;</li>
+<li>tipo: <strong>número real</strong> (podríamos usar un <code>double</code>);</li>
+<li>visibilidad: <strong>privada</strong>;</li>
+<li><strong>variable</strong> (cada vez que algún vehículo recorra un trayecto irá incrementando);</li>
+<li><strong>de clase</strong>, pues no tiene sentido que esta característica se repita en cada vehículo. Es una característica general de la clase, independientemente de la cantidad de objetos <code>Vehiculo</code> que existan. Antes de que se cree ningún vehículo este atributo tendrá el valor 0.0.</li>
+</ul>
+</li>
+<li><strong>Número de vehículos con el motor encendido</strong> en el momento actual:
+<ul>
+<li>nombre: <code>vehiculosArrancados</code>;</li>
+<li>tipo: <strong>número entero</strong> (podríamos usar un <code>short</code>);</li>
+<li>visibilidad: <strong>privada</strong>.</li>
+<li><strong>variable</strong> (cada vez que se arranque el motor de algún vehículo se incrementará en uno y cada vez que se apague el motor se decrementará en uno);</li>
+<li><strong>de clase</strong>. Es una característica general de la clase, independientemente de la cantidad de objetos <code>Vehiculo</code> que existan.</li>
+</ul>
+</li>
+<li><strong>Nivel del depósito de combustible</strong> en el vehículo:
+<ul>
+<li>nombre: <code>nivelDeposito</code>;</li>
+<li>tipo: <strong>número real</strong>, pues habrá que almacenar un valor en litros, con posibles fracciones (podríamos usar un <code>double</code>);</li>
+<li>visibilidad: <strong>privada</strong>;</li>
+<li><strong>variable</strong>. Cada vez que se use el vehículo se producirá un consumo que hará que ese nivel descienda hasta que el depósito quede vacío. Además, cada vez que se reposte combustible en una estación de servicio, esta cantidad podrá incrementarse sin poder superar nunca el tamaño del depósito;</li>
+<li><strong>de objeto</strong>, pues cada vehículo tendrá en cada momento un nivel de combustible. Es una característica de estado de cada vehículo en particular según el uso que se le esté dando.</li>
+</ul>
+</li>
+</ul></div>
+</form>
+<div id="taquesQuestion1b28" class="block iDevice_content">
+<p>Una vez realizado ese análisis, confecciona un <strong>tabla para representar estos nuevos atributos</strong> en la que incluyas una <strong>columna adicional </strong>que indique, además de todo lo que hemos visto anteriormente (nombre, tipo, visibilidad, mutabilidad), si el atributo va a ser <strong>de objeto o de clase.</strong></p>
+</div>
+<form name="feedback-form-quesFeedback1b28" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b28text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b28" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b28" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Aquí tenemos una tabla resumen con los nuevos atributos una vez realizado el anterior análisis en el que hemos valorado, para cada uno, su <strong>identificador</strong>, <strong>tipo</strong>, <strong>visibilidad</strong>, <strong>mutabilidad</strong> (constante o variable) y si debe ser <strong>de objeto o de clase</strong>:</p>
+<table class="tabla" style="width: 100%;" summary="Tabla de cinco columnas que contiene para cada fila el nombre, el tipo, la visibilidad, la inmutabilidad y la estaticidad de un conjunto de atributos de la clase Vehiculo" border="1"><caption>Nuevos atributos de la clase <code>Vehiculo</code></caption>
+<tbody>
+<tr><th scope="col">Nombre</th><th scope="col">Tipo</th><th scope="col">Visibilidad</th><th scope="col">Mutabilidad</th><th scope="col">De objeto/de clase</th></tr>
+<tr>
+<td><code>vehiculosCreados</code></td>
+<td><code>short</code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code>consumoMedio</code></td>
+<td><code>double</code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code><code>kilometrosTotalesFlota</code></code></td>
+<td><code>double</code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code>vehiculosArrancados</code></td>
+<td><code>short</code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code>nivelDeposito</code></td>
+<td><code>double</code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+</tbody>
+</table></div>
+</form>
+<div id="taquesQuestion2b28" class="block iDevice_content">
+<p>A partir de la <strong>tabla</strong> anterior escribe la <strong>clase <span lang="en">Java</span> que representa a un vehículo</strong> incluyendo todos los atributos que hemos visto hasta el momento (los del ejercicio anterior más los de este ejercicio).</p>
+</div>
+<form name="feedback-form-quesFeedback2b28" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b28text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b28" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b28" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Una vez que tenemos claro cómo van a ser estos nuevos atributos, los añadiríamos a nuestra clase <code>Vehiculo</code>:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">  private static short  vehiculosCreados;          // Cantidad de vehículos creados hasta el momento
+  private static double kilometrosTotalesFlota;    // Cantidad de kilómetros recorridos por todos los vehículos creados hasta el momento
+  private static short  vehiculosArrancados;       // Cantidad de vehículos arrancados en este momento
+
+  private final double consumoMedio;               // Consumo medio del vehículo (en litros/100km)
+
+  private double nivelDeposito;                    // Nivel del depósito de combustible del vehículo (en litros)
+</code></pre>
+</div>
+<p>Estos son los nuevos atributos que debemos integrar junto a todos los demás que ya habíamos definido.</p>
+<p>Aunque no es obligatorio, sería recomendable <strong>separar los tipos de atributos indicando cuáles son de clase (estáticos) y cuáles son de objeto</strong> con el fin de facilitar la legibilidad del código. Cuantas más marcas visuales incluyamos y más limpios y organizados seamos a la hora de declarar los atributos de la clase, más fácil lo tendremos en el futuro si tenemos que realizar alguna modificación para encontrar un posible error o para añadir algo nuevo.</p>
+<p>Nuestra clase <code>Vehiculo</code> podría quedar finalmente con este aspecto:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">public class Vehiculo {
+
+  // ATRIBUTOS DE CLASE: sólo habrá un atributo (común para todos los objetos) para representar estas características
+  // -----------------------------------------------------------------------------------------------------------------
+
+  private static short  vehiculosCreados;            // Cantidad de vehículos creados hasta el momento
+  private static double kilometrosTotalesFlota;      // Cantidad de kilómetros recorridos por todos los vehículos creados hasta el momento
+  private static short  vehiculosArrancados;         // Cantidad de vehículos arrancados en este momento
+
+  // ATRIBUTOS DE OBJETO: cada vehículo tendrá su propio valor para representar estas características
+  // ------------------------------------------------------------------------------------------------
+
+  // Atributos de objeto constantes (representan características "inmutables" del vehículo)
+  private final double    capacidadDeposito;        // Capacidad del depósito de combustible del vehículo (en litros)
+  private final String    matricula;                // Matrícula del vehículo
+  private final LocalDate fechaMatriculacion;       // Fecha de matriculación del vehículo 
+  private final double    consumoMedio;             // Consumo medio del vehículo (en litros/100km)
+
+  // Atributos de objeto variables (representan el estado del vehículo en un instante dado)
+  private boolean estadoMotor;              // Estado del motor del vehículo (arrancado o apagado)
+  private double  nivelDeposito;            // Nivel del depósito de combustible del vehículo (en litros)
+  private double  kilometrosTotales;        // Distancia total recorrida desde que se fabricó el vehículo (en kilómetros)
+  private double  kilometrosParciales       // Distancia recorrida desde que el vehículo se arrancó por última vez (en kilómetros)
+}</code></pre>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="46_combinando_modificadores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

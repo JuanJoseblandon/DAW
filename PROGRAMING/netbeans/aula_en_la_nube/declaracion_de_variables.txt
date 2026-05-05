@@ -1,0 +1,56 @@
+/**La forma de "declarar" una variable en JAVA es detallando primero el tipo de datos
+que podrá almacenar y después el nombre(identificador) que daremos la variable.
+Además, se puede indicar un valor inicial a través del igual.
+Para finalizar la asignación de la variable debemos introducir un punto y coma.**/
+
+// int Tipo de variable
+// num identificador de la variable
+int num;
+
+//int tipo de varible
+// cantidad identificador de la variable
+// 5 en este caso valor de la variable
+int cantidad = 5;
+
+/*La declaración de variables funciona de la siguiente forma:
+
+1. Se evalua la expresion a la derecha del igual.
+2. Se guarda el resultado de la expresión sobre la variable a la izquierda del igual.
+
+Además podemos asignar a una variable el valor de otra variable, e incluso, realizar
+operaciones con ellas.
+ */
+
+int cantidad = 5+2; //guardamos en cantidad un 7
+int precio = 10; //guardamos en precio un 10
+precio =5 ; //modificamos el precio a 5
+int precioFinal = cantidad * precio; // guardamos un 35 en precioFinal
+precioFinal = precioFinal + 10;
+//Se pueden declarar varias variables del mismo tipo "a la vez", separando con comas:
+
+int a = 5, b = 10; // "a" y "b" son enteros y valen 5 y 10
+short c = -1, d, e = 4; // "c" vale -1, "d" no tiene valor, "e" vale 4
+int f, g; // declaramos las variables "f" y "g" de tipo entero
+
+/*Los nombres de variables pueden contener letras y numeros (pero no pueden comenzar
+con un número). Pueden contener símbolos, como el de subrayado, pero no podrán
+contener otros muchos símbolos, como los de las distintas operaciones matemáticas
+posibles (+, -*. /), ni llaves o paréntesis.*/
+
+int a2 = 5; //correcto
+int 2a = 10; //error
+int nombre-2 = 20 //error
+
+/*Identificador de la variable: es el nombre que damos a la variable. Deben seguir las siguientes
+reglas:
+
+
+* Debe comenzar por letra, subrayado (_) o el caracter $.
+* No pueden comenzar por un número, pero después si podemos incluirlos.
+* Las variables son case-sensitive, es decir diferencian entre mayúsculas y minúsculas.
+* No pueden utilizarse espacios en blanco ni símbolos de operadores.
+* No pueden coincidir con ninguna palabra reservada.
+* El % no está permitido, si el $ y la ç. También los acentos y la ñ, pero no se recomienda
+utilizarlos.
+
+. */

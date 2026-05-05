@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.7.4.- Borrado de información </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-18"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Gestión de bases de datos: relacionales y orientadas a objetos. Persistencia de objetos</a></li>
+   <li class="current-page-parent"><a href="1_bases_de_datos_relacionales.html" class="current-page-parent daddy">1.- Bases de datos relacionales</a>
+   <ul>
+      <li><a href="11_el_desfase_objetorelacional.html" class="no-ch">1.1.- El desfase objeto-relacional</a></li>
+      <li><a href="12_jdbc.html" class="no-ch">1.2.- JDBC</a></li>
+      <li><a href="13__conectores_o_drivers.html" class="no-ch">1.3.-  Conectores o Drivers</a></li>
+      <li><a href="14_instalacin_de_la_base_de_datos.html" class="no-ch">1.4.- Instalación de la base de datos</a></li>
+      <li><a href="15_creacin_de_las_tablas_en_una_base_de_datos.html" class="daddy">1.5.- Creación de las tablas en una base de datos</a>
+      <ul class="other-section">
+         <li><a href="151_lenguaje_sql_i.html" class="no-ch">1.5.1.- Lenguaje SQL (I)</a></li>
+         <li><a href="152_lenguaje_sql_ii.html" class="no-ch">1.5.2.- Lenguaje SQL (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="16_establecimiento_de_conexiones.html" class="daddy">1.6.- Establecimiento de conexiones</a>
+      <ul class="other-section">
+         <li><a href="161_configurar_un_conector_jdbc_en_un_proyecto_netbeans.html" class="no-ch">1.6.1.- Configurar un conector JDBC en un proyecto NetBeans</a></li>
+         <li><a href="162_registrar_el_conector_jdbc.html" class="no-ch">1.6.2.- Registrar el conector JDBC</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="17_ejecucin_de_consultas_sobre_la_base_de_datos.html" class="current-page-parent daddy">1.7.- Ejecución de consultas sobre la base de datos</a>
+      <ul>
+         <li><a href="171_adicin_de_informacin.html" class="no-ch">1.7.1.- Adición de información</a></li>
+         <li><a href="172_recuperacin_de_informacin_i.html" class="daddy">1.7.2.- Recuperación de información (I)</a>
+         <ul class="other-section">
+            <li><a href="1712_recuperacin_de_informacin_ii.html" class="no-ch">1.7.1.2.- Recuperación de información (II)</a></li>
+         </ul>
+         </li>
+         <li><a href="173_actualizacin_de_informacin.html" class="no-ch">1.7.3.- Actualización de información</a></li>
+         <li id="active"><a href="174_borrado_de_informacin.html" class="active no-ch">1.7.4.- Borrado de información</a></li>
+         <li><a href="175_cierre_de_conexiones.html" class="no-ch">1.7.5.- Cierre de conexiones</a></li>
+         <li><a href="176_excepciones_en_jdbc.html" class="no-ch">1.7.6.- Excepciones en JDBC</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="2_persistencia_de_objetos.html" class="daddy">2.- Persistencia de objetos</a>
+   <ul class="other-section">
+      <li><a href="21_qu_son_las_bases_de_datos_orientadas_a_objetos.html" class="no-ch">2.1.- ¿Qué son las bases de datos orientadas a objetos?</a></li>
+      <li><a href="22_qu_es_el_mapeado_de_objetos.html" class="no-ch">2.2.- ¿Qué es el mapeado de objetos?</a></li>
+      <li><a href="23_cmo_empiezo_a_usar_jpa.html" class="no-ch">2.3.- ¿Cómo empiezo a usar JPA?</a></li>
+      <li><a href="24_unidades_de_persistencia_i.html" class="daddy">2.4.- Unidades de persistencia (I)</a>
+      <ul class="other-section">
+         <li><a href="241_unidades_de_persistencia_ii.html" class="no-ch">2.4.1.- Unidades de persistencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="25_modelo_de_datos_en_jpa.html" class="daddy">2.5.- Modelo de datos en JPA</a>
+      <ul class="other-section">
+         <li><a href="251_entidades.html" class="no-ch">2.5.1.- Entidades</a></li>
+         <li><a href="252_atributos.html" class="no-ch">2.5.2.- Atributos</a></li>
+         <li><a href="253_relaciones_entre_entidades.html" class="no-ch">2.5.3.- Relaciones entre entidades</a></li>
+         <li><a href="254_relaciones_uno_a_uno.html" class="no-ch">2.5.4.- Relaciones uno a uno</a></li>
+         <li><a href="255_relaciones_uno_a_muchos.html" class="no-ch">2.5.5.- Relaciones uno a muchos</a></li>
+      </ul>
+      </li>
+      <li><a href="26_operaciones_crud_con_jpa.html" class="daddy">2.6.- Operaciones CRUD con JPA</a>
+      <ul class="other-section">
+         <li><a href="261_persistir_y_leer.html" class="no-ch">2.6.1.- Persistir y leer</a></li>
+         <li><a href="262__actualizar_y_borrar_instancias.html" class="no-ch">2.6.2.-  Actualizar y borrar instancias</a></li>
+      </ul>
+      </li>
+      <li><a href="27_jpql_i.html" class="daddy">2.7.- JPQL (I)</a>
+      <ul class="other-section">
+         <li><a href="271_jpql_ii.html" class="no-ch">2.7.1.- JPQL (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="173_actualizacin_de_informacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="175_cierre_de_conexiones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.7.4.- Borrado de información</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id36">
+<div class="iDevice emphasis0">
+<div id="ta36_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 250px;"><img src="Borrar.jpg" width="250" height="141" alt="Goma de borrar" title="Borrar información" style="float: right;" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/goma-de-borrar-abrasi%C3%B3n-papeler%C3%ADa-3822402/" target="_blank" class="author" title="Acceder a la imagen  &quot;Borrar información&quot;, de &quot;MasterTux&quot;, en Pixabay. (Se abre en una nueva ventana)">MasterTux</a> <span class="sep">(</span><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Licencia Pixabay</a><span class="sep">)</span></div>
+</div>
+<p>Hay que eliminar información, ¿te atreves?</p>
+<p>Siempre da un poco de miedo eliminar datos, pero hay veces que es necesario hacerlo.</p>
+<p>Cuando nos interese eliminar registros de una tabla de una base de datos, emplearemos la sentencia <acronym title="Structured Query Language." lang="en">SQL</acronym> <code>DELETE</code>. Para eliminar registros de la base de datos recomendamos utilizar <code>PreparedStatement</code>, dado que lo más habitual es que haya que pasar algún parámetro a la consulta. Imagina que necesitamos eliminar un producto concreto de la base de datos, deberíamos utilizar una consulta similar a la siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String queryDelete = "DELETE FROM producto WHERE id=?";
+</code></pre>
+</div>
+</div>
+<p>En el código anterior se eliminaría un producto con un <code>id</code> interno concreto. En las sentencias de este tipo, normalmente, siempre se usa la clave primaria para especificar qué registro concreto se desea eliminar, y no eliminar otro por error.</p>
+<p>Veamos un ejemplo de la ejecución de la sentencia anterior:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>    public static void borrarProducto(Connection con, long id) {
+        String queryDelete = "DELETE FROM producto WHERE id=?";
+        if (con != null) {
+            try ( PreparedStatement consultaDelete = con.prepareStatement(queryDelete)) {
+                consultaDelete.setLong(1, id);
+                int registrosAfectados = consultaDelete.executeUpdate();
+                if (registrosAfectados &gt; 0) {
+                    System.out.println("El producto ha sido eliminado correctamente");
+                } else {
+                    System.out.println("El producto no ha sido eliminado, porque no existe.");
+                }
+            } catch (SQLException ex) {
+                System.err.printf("Se ha producio un error al ejecutar la consulta SQL.");
+            }
+        }
+    }</code></pre>
+</div>
+</div>
+<p>Fíjate que tal y como ocurría en otros casos anteriores, aprovechamos el valor retornado por el método <code>executeUpdate</code> para saber si el registro se eliminó o no.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id37">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta37_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b37" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b37" class="block iDevice_content">
+<p><strong>Al ejecutar el borrado de un registro mediante <code>executeUpdate(&hellip;)</code>, no podemos saber si el borrado elimin&oacute; alguna fila o no.</strong></p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b37"><input type="radio" name="option0b37" id="true0b37" class="exe-radio-option exe-radio-option-0-2-0b37-truefalse" /> Verdadero</label> 
+<label for="false0b37"><input type="radio" name="option0b37" id="false0b37" class="exe-radio-option exe-radio-option-1-2-0b37-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b37" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b37-result" class="wrong">Falso</strong></p>
+<p>Efectivamente podemos saberlo porque se devuelve el n&uacute;mero de registros borrados, como hemos visto en el c&oacute;digo del ejemplo anterior.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id168">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta168_63" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b168" class="block iDevice_content">
+<p>En realidad, un producto no debería borrarse si ya está siendo usado en alguna línea de algún <span lang="en">ticket</span>. Esto quiere decir, que si el <code>id</code> de producto aparece en algún registro de la tabla <code>LINEATICKET</code>, dicho producto no debería borrarse porque entonces crearía inconsistencia en la base de datos. ¿Sabrías modificar el código anterior para solucionar ese problema?</p>
+</div>
+<form name="feedback-form-quesFeedback0b168" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b168text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b168" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b168" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Existen varias soluciones, algunas mejores y otras peores. La solución que te proponemos a continuación no es la mejor, pero la ventaja es que es sencilla de entender: primero comprobamos cuántas líneas de <span lang="en">ticket</span> tienen el producto en cuestión, y luego, si el número de líneas de <span lang="en">tickets</span> donde aparece el producto es 0, podemos borrar dicho producto. Veamos el código, como verás, es necesario ejecutar dos consultas:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>    public static void borrarProductoConVerificacion(Connection con, long id) {
+        /*Consulta 1: Comprobar que no hay ninguna lineaticket que esté usando el producto. */
+        String querySelect = "SELECT count(*) FROM lineaticket WHERE producto_id=?";
+        /*Consulta 2: Eliminar el producto */
+        String queryDelete = "DELETE FROM producto WHERE id=?";
+        int recuento=-1;
+        if (con != null) {            
+            try ( PreparedStatement consultaSelect = con.prepareStatement(querySelect)) {
+                
+                consultaSelect.setLong(1, id);
+
+                ResultSet result=consultaSelect.executeQuery();
+                if (result.next())
+                {
+                    recuento=result.getInt(1);
+                }                                
+            } catch (SQLException ex) {
+                System.err.printf("Se ha producio un error al ejecutar la consulta SQL.");
+            }
+            
+            if (recuento==0)
+            {
+                try ( PreparedStatement consultaDelete = con.prepareStatement(queryDelete)) {
+            
+                    consultaDelete.setLong(1, id);
+                    int registrosAfectados = consultaDelete.executeUpdate();
+                    if (registrosAfectados&gt;0)
+                    {
+                        System.out.println("El producto ha sido eliminado correctamente");
+                    } else {
+                        System.out.println("El producto no ha sido eliminado, porque no existe.");
+                    }
+                } catch (SQLException ex) {
+                    System.err.printf("Se ha producido un error al ejecutar la consulta SQL.");
+                 }
+            }
+            else if (recuento!=-1)
+            {
+                System.out.println("El producto no se puede eliminar porque ya aparece en líneas de ticket.");
+            }           
+        }
+    }</code></pre>
+</div>
+</div>
+<p>Nota: cuando se trabaja con bases de datos que reciben múltiples consultas simultáneamente, al ejecutar código como el anterior hay que tener ciertas precauciones extra, como bloquear tablas o realizar transacciones con un nivel de aislamiento adecuado.</p>
+<p></p>
+<p></p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="173_actualizacin_de_informacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="175_cierre_de_conexiones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

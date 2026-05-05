@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.6.- Establecimiento de conexiones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Gestión de bases de datos: relacionales y orientadas a objetos. Persistencia de objetos</a></li>
+   <li class="current-page-parent"><a href="1_bases_de_datos_relacionales.html" class="current-page-parent daddy">1.- Bases de datos relacionales</a>
+   <ul>
+      <li><a href="11_el_desfase_objetorelacional.html" class="no-ch">1.1.- El desfase objeto-relacional</a></li>
+      <li><a href="12_jdbc.html" class="no-ch">1.2.- JDBC</a></li>
+      <li><a href="13__conectores_o_drivers.html" class="no-ch">1.3.-  Conectores o Drivers</a></li>
+      <li><a href="14_instalacin_de_la_base_de_datos.html" class="no-ch">1.4.- Instalación de la base de datos</a></li>
+      <li><a href="15_creacin_de_las_tablas_en_una_base_de_datos.html" class="daddy">1.5.- Creación de las tablas en una base de datos</a>
+      <ul class="other-section">
+         <li><a href="151_lenguaje_sql_i.html" class="no-ch">1.5.1.- Lenguaje SQL (I)</a></li>
+         <li><a href="152_lenguaje_sql_ii.html" class="no-ch">1.5.2.- Lenguaje SQL (II)</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="16_establecimiento_de_conexiones.html" class="active daddy">1.6.- Establecimiento de conexiones</a>
+      <ul>
+         <li><a href="161_configurar_un_conector_jdbc_en_un_proyecto_netbeans.html" class="no-ch">1.6.1.- Configurar un conector JDBC en un proyecto NetBeans</a></li>
+         <li><a href="162_registrar_el_conector_jdbc.html" class="no-ch">1.6.2.- Registrar el conector JDBC</a></li>
+      </ul>
+      </li>
+      <li><a href="17_ejecucin_de_consultas_sobre_la_base_de_datos.html" class="daddy">1.7.- Ejecución de consultas sobre la base de datos</a>
+      <ul class="other-section">
+         <li><a href="171_adicin_de_informacin.html" class="no-ch">1.7.1.- Adición de información</a></li>
+         <li><a href="172_recuperacin_de_informacin_i.html" class="daddy">1.7.2.- Recuperación de información (I)</a>
+         <ul class="other-section">
+            <li><a href="1712_recuperacin_de_informacin_ii.html" class="no-ch">1.7.1.2.- Recuperación de información (II)</a></li>
+         </ul>
+         </li>
+         <li><a href="173_actualizacin_de_informacin.html" class="no-ch">1.7.3.- Actualización de información</a></li>
+         <li><a href="174_borrado_de_informacin.html" class="no-ch">1.7.4.- Borrado de información</a></li>
+         <li><a href="175_cierre_de_conexiones.html" class="no-ch">1.7.5.- Cierre de conexiones</a></li>
+         <li><a href="176_excepciones_en_jdbc.html" class="no-ch">1.7.6.- Excepciones en JDBC</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="2_persistencia_de_objetos.html" class="daddy">2.- Persistencia de objetos</a>
+   <ul class="other-section">
+      <li><a href="21_qu_son_las_bases_de_datos_orientadas_a_objetos.html" class="no-ch">2.1.- ¿Qué son las bases de datos orientadas a objetos?</a></li>
+      <li><a href="22_qu_es_el_mapeado_de_objetos.html" class="no-ch">2.2.- ¿Qué es el mapeado de objetos?</a></li>
+      <li><a href="23_cmo_empiezo_a_usar_jpa.html" class="no-ch">2.3.- ¿Cómo empiezo a usar JPA?</a></li>
+      <li><a href="24_unidades_de_persistencia_i.html" class="daddy">2.4.- Unidades de persistencia (I)</a>
+      <ul class="other-section">
+         <li><a href="241_unidades_de_persistencia_ii.html" class="no-ch">2.4.1.- Unidades de persistencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="25_modelo_de_datos_en_jpa.html" class="daddy">2.5.- Modelo de datos en JPA</a>
+      <ul class="other-section">
+         <li><a href="251_entidades.html" class="no-ch">2.5.1.- Entidades</a></li>
+         <li><a href="252_atributos.html" class="no-ch">2.5.2.- Atributos</a></li>
+         <li><a href="253_relaciones_entre_entidades.html" class="no-ch">2.5.3.- Relaciones entre entidades</a></li>
+         <li><a href="254_relaciones_uno_a_uno.html" class="no-ch">2.5.4.- Relaciones uno a uno</a></li>
+         <li><a href="255_relaciones_uno_a_muchos.html" class="no-ch">2.5.5.- Relaciones uno a muchos</a></li>
+      </ul>
+      </li>
+      <li><a href="26_operaciones_crud_con_jpa.html" class="daddy">2.6.- Operaciones CRUD con JPA</a>
+      <ul class="other-section">
+         <li><a href="261_persistir_y_leer.html" class="no-ch">2.6.1.- Persistir y leer</a></li>
+         <li><a href="262__actualizar_y_borrar_instancias.html" class="no-ch">2.6.2.-  Actualizar y borrar instancias</a></li>
+      </ul>
+      </li>
+      <li><a href="27_jpql_i.html" class="daddy">2.7.- JPQL (I)</a>
+      <ul class="other-section">
+         <li><a href="271_jpql_ii.html" class="no-ch">2.7.1.- JPQL (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="152_lenguaje_sql_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="161_configurar_un_conector_jdbc_en_un_proyecto_netbeans.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.6.- Establecimiento de conexiones</h1></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id21">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta21_66" class="block iDevice_content">
+<div class="exe-figure exe-image float-left license-copyright" style="width: 196px;"><img src="EIN_PPAA_CASO_R08_ProfesorCuerpo_FOT.jpg" alt="Juan de pie hablando, gesticulando con los brazos." title="Juan hablando." style="float: left;" width="196" height="132" />
+<div class="figcaption"><span class="author">Ministerio de Educación. Uso educativo-nc. Elaboración propia.</span></div>
+</div>
+<p><br />Tanto <strong>Juan</strong> como <strong>María</strong> están deseando empezar a trabajar en su proyecto de mini punto de venta, ya tienen pensadas las tablas y ahora toca empezar a escribir código. Saben que usar bases de datos relacionales en <span lang="en">Java</span> es sencillo, pero aún así tienen algunas dudas, por lo que deciden preguntarle a <strong>Ada</strong>.</p>
+<p>¿Cómo se crea una conexión a la base de datos? —pregunta <strong>Juan—</strong>. Estoy intentando ejecutar una consulta usando lo que he visto en un tutorial en Internet, y no consigo que se conecte, me falla en la primera línea.</p>
+<p>—Primero tienes que cargar el conector —le responde <strong>Ada—</strong>. ¿Has configurado en tu proyecto las librerías del conector <acronym title="Java Database Connectivity." lang="en">JDBC</acronym>? Para conectarte a una base de datos como MySQL u Oracle desde tu programa necesitas el conector.</p>
+<p><span class="st"><span class="st">—Estamos usando H2 para nuestras pruebas, que va todo incluido en el archivo <code>.jar</code> —replica <strong>María</strong>.<br /></span></span></p>
+<p>—Es verdad, no me acordaba —contesta <strong>Ada—</strong>. El problema entonces debe estar en que no habéis realizado la conexión previamente, vamos a echarle un vistazo al código. No obstante, no olvidéis que en el proyecto habrá que usar una base de datos más potente, revisad también como conectaros con una base de datos como<span lang="en"> <span lang="en">MySQL</span></span><span lang="en"></span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id22">
+<div class="iDevice emphasis0">
+<div id="ta22_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG11_CONT_R12_archivo.jpg" alt="Foto de un mueble con filas de cajones para archivar fichas" title="Archivadores de fichas." class="elemento_derecha" style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by" title="Acceder a la licencia CC BY (Se abre en una nueva ventana)" href="http://creativecommons.org/licenses/by/3.0/deed.es" target="_blank"><span class="transparente">CC by</span></a> <a title="Acceder a la imagen &quot;Archivadores de fichas.&quot; de &quot;Eirik Stavelin&quot; en Flickr. (Se abre en una nueva ventana)" href="http://www.flickr.com/photos/eiriks/3359730744/" target="_blank">Eirik Stavelin</a></div>
+</div>
+<p align="justify">Cuando queremos acceder a una base de datos para operar con ella, necesitamos que el conector <acronym title="Java Database Connectivity." lang="en">JDBC</acronym> esté configurado en nuestro proyecto a dos niveles:</p>
+<ul class="lista_verificacion">
+<li align="justify">En un primer nivel es necesario añadir el conector <acronym title="Java Database Connectivity." lang="en">JDBC</acronym> (la librería <code>.jar</code>) en nuestro proyecto para poder desarrollar la aplicación, sin esa dependencia no podremos probar el código que estamos desarrollando.</li>
+<li align="justify">En un segundo nivel, si estamos trabajando con una versión anterior a <acronym title="Java Database Connectivity." lang="en">JDBC</acronym> <acronym title="cuatro punto cero">4.0</acronym>, es necesario registrar el conector <acronym title="Java Database Connectivity." lang="en">JDBC</acronym> antes de iniciar la conexión.</li>
+</ul>
+<p align="justify">Una vez que hemos tenido en cuenta los aspectos anteriores, para establecer una conexión con una base de datos debemos utilizar el método <code>getConnection()</code> de la clase <code>DriverManager</code>. Este método recibe como parámetro la <acronym title="Uniform Resource Locator" lang="en">URL</acronym> de <acronym title="Java Database Connectivity." lang="en">JDBC</acronym> que identifica a la base de datos con la que queremos realizar la conexión.</p>
+<p align="justify">Un ejemplo de <acronym title="Uniform Resource Locator" lang="en">URL</acronym> de conexión sería el siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>jdbc:mysql://localhost/proyectobase?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8</code></pre>
+</div>
+</div>
+<p align="justify">En la <acronym title="Uniform Resource Locator" lang="en">URL</acronym> anterior hay varias partes importantes, separadas por ":". Veamos cuáles son:</p>
+<ul class="lista_verificacion">
+<li align="justify"><code>jdbc</code> indica que se trata de una <acronym title="Uniform Resource Locator" lang="en">URL</acronym> que contiene la información para conectar usando <acronym title="Java Database Connectivity." lang="en">JDBC</acronym>.</li>
+<li align="justify"><code>mysql </code>indica que se trata de una conexión a una base de datos <span lang="en">MySQL</span>.</li>
+<li align="justify">La siguiente sección tiene dos partes:<br />
+<ul>
+<li align="justify">Servidor y base de datos con la que se desea conectar: <code>//localhost/proyectobase</code>. En ese ejemplo el servidor estaría instalado en la máquina local (<code>localhost</code>) y la base de datos se llamaría <code>proyectobase</code>.</li>
+<li align="justify">Después, hay una serie de parámetros para el conector: <code>?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8</code>. En este caso, esos <span lang="en">drivers</span> indican tres cosas: que el servidor debe considerar que se usará la zona horaria de europa occicental (<code>serverTimezone=UTC</code>) y que se utilizará <span lang="en">Unicode</span> para el texto almacenado (<code>useUnicode=true</code> y <code>characterEncoding=utf8</code>).</li>
+</ul>
+</li>
+</ul>
+<p align="justify">Ese es un ejemplo de <acronym title="Uniform Resource Locator" lang="en">URL</acronym>. Si usamos otra base de datos, la <acronym title="Uniform Resource Locator" lang="en">URL</acronym> será diferente. Esa <acronym title="Uniform Resource Locator" lang="en">URL</acronym> se proporcionará al método <code>getConnection</code> para efectuar la conexión, junto con otra información que pueda ser necesaria:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String url="jdbc:mysql://localhost/proyectobase?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8";
+String usuario="prueba";
+String password="prueba";
+Connection con = DriverManager.getConnection(url,usuario,password); //Establecer la conexión
+
+/* Resto del código */
+
+if (con!=null) con.close(); //Cerrar la conexión</code></pre>
+</div>
+</div>
+<p>Fíjate que en el ejemplo anterior, aparte de la <acronym title="Uniform Resource Locator" lang="en">URL</acronym> de conexión, se le proporciona el usuario y la contraseña para acceder a la base de datos.</p>
+<p>La ejecución de este método devuelve un objeto <code>Connection</code> que representa la conexión con la base de datos, <strong><span class="destacado_inline">no debes olvidar cerrar la conexión cuando ya no sea necesaria</span></strong>.</p>
+<p align="justify">Pero <strong>el ejemplo anterior está incompleto</strong>. Tienes que tener en cuenta que cuando se encuentra con una <acronym title="Uniform Resource Locator" lang="en">URL</acronym> específica, <code>DriverManager</code> itera sobre la colección de <span lang="en">drivers</span> registrados hasta que uno de ellos reconoce la <acronym title="Uniform Resource Locator" lang="en">URL</acronym> especificada. Si no se encuentra ningún <span lang="en">driver</span> adecuado, se lanza una <code>SQLException</code>.</p>
+<p align="justify">Veamos un ejemplo completo de conexión con una base de datos, donde dicha excepción se trata correctamente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String url="jdbc:mysql://localhost/proyectobase?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8";
+String usuario="prueba";
+String password="prueba";
+try (Connection con = DriverManager.getConnection(url,usuario,password)) {
+               
+    /* Consultas a la base de datos. */                 
+                                                
+} catch (SQLException ex) {
+   err.printf("No se pudo conectar a la base de datos (%s)\n", dbname);
+   ex.printStackTrace();
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="152_lenguaje_sql_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="161_configurar_un_conector_jdbc_en_un_proyecto_netbeans.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

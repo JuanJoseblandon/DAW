@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.1.- Repaso del concepto de objeto | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li class="current-page-parent"><a href="1_concepto_de_clase.html" class="current-page-parent daddy">1.- Concepto de clase</a>
+   <ul>
+      <li id="active"><a href="11_repaso_del_concepto_de_objeto.html" class="active no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li><a href="4_atributos.html" class="daddy">4.- Atributos</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li><a href="5_mtodos.html" class="daddy">5.- Métodos</a>
+   <ul class="other-section">
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="1_concepto_de_clase.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_el_concepto_de_clase.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.1.- Repaso del concepto de objeto</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id4">
+<div class="iDevice emphasis0">
+<div id="ta4_73" class="block iDevice_content">
+<p>Desde el comienzo del módulo llevas utilizando el concepto de <strong>objeto</strong> para desarrollar tus programas de ejemplo. En las unidades anteriores se ha descrito un objeto como una entidad que contiene <strong>información</strong> (atributos) y que es capaz de llevar a cabo ciertas <strong>operaciones</strong> (métodos) con esa información más algunos estímulos externos (parámetros de entrada de los métodos). Según la información que contengan esos atributos el objeto tendrá un <strong>estado</strong> determinado y según las operaciones que se puedan llevar a cabo con esos datos será responsable de un <strong>comportamiento</strong> concreto.</p>
+<div class="destacado">
+<p><strong>Recuerda que entre las características fundamentales de un objeto se encontraban la <em>identidad</em> (los objetos son únicos y por tanto distinguibles entre sí, aunque pueda haber objetos exactamente iguales), un <em>estado</em> (los atributos que describen al objeto y que tendrán cierto valor en cada momento) y un determinado <em>comportamiento</em> (acciones que se pueden realizar sobre el objeto).</strong></p>
+</div>
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG06_CONT_R04_cocodrilo.jpg" alt="Dibujo de un cocodrilo." title="Cocodrilo." style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="Acceder a los términos de la Licencia CC BY-NC-SA (se abre en una nueva ventana)." href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a> <a title="Acceder a la web descarga de la imagen de René van Belzen en Flickr (se abre en una nueva ventana)." href="http://www.flickr.com/photos/aaipodpics/4046279755/" target="_blank">René van Belzen</a></div>
+</div>
+<p>Algunos ejemplos de objetos que podríamos imaginar podrían ser:</p>
+<ul class="lista_verificacion">
+<li>Un vehículo de tipo turismo, de color rojo, marca <acronym title="Sociedad Española de Automóviles de Turismo.">SEAT</acronym>, modelo Toledo, del año 2020. En este ejemplo tenemos una serie de atributos, como el color (en este caso rojo), la marca, el modelo, el año, <abbr title="etcétera.">etc</abbr>. Así mismo también podríamos imaginar determinadas características como la cantidad de combustible que le queda, o el número de kilómetros recorridos hasta el momento.</li>
+<li>Otro vehículo de color amarillo, marca Opel, modelo Astra, del año 2018.</li>
+<li>Otro vehículo más de color amarillo, marca Opel, modelo Astra y también del año 2018. Se trataría de otro objeto (otro vehículo) con las mismas propiedades que el anterior (es idéntico pero no es el mismo). Sería otro objeto diferente con características idénticas, casi como un clon.</li>
+<li>Un cocodrilo de cuatro metros de longitud y de veinte años de edad.</li>
+<li>Un círculo de radio 2 centímetros, con centro en las coordenadas (0,0) y relleno de color amarillo.</li>
+<li>Otro círculo de radio 3 centímetros, con centro en las coordenadas (1,2) y relleno de color verde.</li>
+<li>Una persona con nombre "Juan", apellidos "Torres Waxman" y fecha de nacimiento 01/01/1990.</li>
+<li>Otra persona con nombre "Ana", apellidos "Castillo Gil" y fecha de nacimiento 04/07/1992.</li>
+</ul>
+<p>Si observas los ejemplos anteriores podrás distinguir sin demasiada dificultad al menos cuatro familias de objetos diferentes, que no tienen nada que ver una con otra:</p>
+<ul class="lista_verificacion">
+<li>Los vehículos.</li>
+<li>Los círculos.</li>
+<li>Los cocodrilos.</li>
+<li>Las personas.</li>
+</ul>
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG06_CONT_R05_coches.jpg" alt="Imagen de dos coches en un garaje. " title="Coches" style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="Acceder a los términos de la Licencia CC BY-NC-SA (se abre en una nueva ventana)." href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a><a title="Acceder a la web descarga de la imagen de  Pepijn Schmitz en Flickr. (Se abre en una nueva ventana)" href="https://www.flickr.com/photos/captainchaos/3606236/in/photolist-necLSZ-7e7spM-7yBzHX-7yBAHv-nQfjoG-dPuGGx-eeEp8S-9FZVxT-7yFmXy-7sPstg-7JNjeV-7JNjc6-7JSeBs-boBYVJ-ju1u-57VDcc-8WXTsW" target="_blank">Pepijn Schmitz</a></div>
+</div>
+<p>Es de suponer entonces que cada objeto tendrá determinadas posibilidades de <strong>comportamiento</strong> (<strong>acciones</strong>) dependiendo de la familia a la que pertenezcan. Por ejemplo, en el caso de los <strong>vehículos</strong> podríamos imaginar acciones como: <strong>arrancar</strong>, <strong>apagar</strong>, <strong>repostar</strong>, <strong>frenar</strong>, <strong>acelerar</strong>, <strong>cambiar de marcha</strong>, <abbr title="etcétera.">etc</abbr>. En el caso de los <strong>cocodrilos</strong> podrías imaginar otras acciones como: <strong>desplazarse</strong>, <strong>comer</strong>, <strong>dormir</strong>, <strong>cazar</strong>, <abbr title="etcétera.">etc</abbr>. Para el caso del <strong>círculo</strong> se podrían plantear acciones como: <strong>cálculo de la superficie del círculo</strong>, <strong>cálculo de la longitud de la circunferencia que lo rodea</strong>, <abbr title="etcétera.">etc</abbr>.</p>
+<p>Por otro lado, también podrías imaginar algunos <strong>atributos</strong> cuyos valores podrían ir cambiando en función de las acciones que se realizaran sobre el objeto: ubicación del vehículo (coordenadas), velocidad instantánea, kilómetros recorridos, velocidad media, cantidad de combustible en el depósito, <abbr title="etcétera.">etc</abbr>. En el caso de los cocodrilos podrías imaginar otros atributos como: peso actual, el número de dientes actuales (irá perdiendo algunos a lo largo de su vida), el número de presas que ha cazado hasta el momento, <abbr title="etcétera.">etc</abbr>.</p>
+<p>Como puedes ver, un <strong>objeto</strong> puede ser cualquier cosa que puedas describir en términos de <strong>atributos</strong> y <strong>acciones</strong>. Dependerá de la aplicación que tengas que desarrollar para que tu objeto contenga unos u otros atributos y/o acciones. El límite estará en las necesidades de la aplicación y tu imaginación a la hora de "inventar" objetos.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id276">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta276_151" class="block iDevice_content">
+<p><strong>Un objeto no es más que la representación de cualquier entidad concreta o abstracta que puedas percibir o imaginar y que pueda resultar de utilidad para modelar los elementos del entorno del problema que deseas resolver.</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id5">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-5_60" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion5_60" class="block question iDevice_content">
+<p><strong>Tenemos un objeto bombilla, de marca <span title="Acme es una empresa ficticia, que existe en el universo de los Looney Tunes.">ACME</span>, que se puede encender o apagar, que tiene una potencia de 50 vatios y ha costado 3 euros. La bombilla se encuentra en este momento apagada. A partir de esta informaci&oacute;n, &iquest;sabr&iacute;as decir qu&eacute; atributos y qu&eacute; acciones (comportamiento) podr&iacute;amos relacionar con ese objeto bombilla?</strong></p>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i5_63" class="sr-av"><a href="#answer-5_63">Opción 1</a></label><input type="radio" name="option5_60" id="i5_63" class="exe-radio-option exe-radio-option-0-4-5_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-5_63"><a name="answer-5_63"></a>
+<div id="taans5_63" class="block iDevice_content">
+<p>Objeto bombilla con atributos potencia (50 vatios), precio (3 euros), marca (ACME) y estado (apagada). Las acciones que se podr&iacute;an ejercer sobre el objeto ser&iacute;an encender y apagar.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i5_79" class="sr-av"><a href="#answer-5_79">Opción 2</a></label><input type="radio" name="option5_60" id="i5_79" class="exe-radio-option exe-radio-option-1-4-5_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-5_79"><a name="answer-5_79"></a>
+<div id="taans5_79" class="block iDevice_content">
+<p>Objeto bombilla con atributos precio (3 euros), marca (ACME) y apagado. Las acciones que se podr&iacute;an ejercer sobre el objeto ser&iacute;an encender y apagar.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i5_82" class="sr-av"><a href="#answer-5_82">Opción 3</a></label><input type="radio" name="option5_60" id="i5_82" class="exe-radio-option exe-radio-option-2-4-5_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-5_82"><a name="answer-5_82"></a>
+<div id="taans5_82" class="block iDevice_content">
+<p>Objeto bombilla con atributos precio (3 euros), marca (ACME), potencia (50 vatios) y estado (apagada). No se puede ejercer ninguna acci&oacute;n sobre el objeto.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i5_85" class="sr-av"><a href="#answer-5_85">Opción 4</a></label><input type="radio" name="option5_60" id="i5_85" class="exe-radio-option exe-radio-option-3-4-5_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-5_85"><a name="answer-5_85"></a>
+<div id="taans5_85" class="block iDevice_content">
+<p>Se trata de un objeto bombilla cuyas posibles acciones son encender, apagar y arreglar. Sus atributos ser&iacute;an los mismos que en el&nbsp; primer caso: potencia (50 vatios), precio (3 euros), marca (ACME) y estado (apagada).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b5_60" class="feedback js-hidden"><a name="sa0b5_60"></a>
+<div id="taf5_63" class=" iDevice_content">
+<p>&iexcl;As&iacute; es! &iexcl;Enhorabuena!</p>
+</div>
+</div>
+<div id="sa1b5_60" class="feedback js-hidden"><a name="sa1b5_60"></a>
+<div id="taf5_79" class=" iDevice_content">
+<p>&iexcl;Error! En efecto la bombilla est&aacute; apagada, pero eso ser&iacute;a un posible valor del atributo m&aacute;s que el nombre del atributo en s&iacute; mismo (que podr&iacute;amos llamar por ejemplo estado y cuyo valor ser&iacute;a en este caso apagada). Adem&aacute;s, faltar&iacute;a tambi&eacute;n el atributo potencia (con valor de 50 vatios).</p>
+</div>
+</div>
+<div id="sa2b5_60" class="feedback js-hidden"><a name="sa2b5_60"></a>
+<div id="taf5_82" class=" iDevice_content">
+<p>&iexcl;Has fallado! Los atributos son v&aacute;lidos, pero faltan las dos acciones que se han mencionado: encender y apagar.</p>
+</div>
+</div>
+<div id="sa3b5_60" class="feedback js-hidden"><a name="sa3b5_60"></a>
+<div id="taf5_85" class=" iDevice_content">
+<p>&iexcl;No! En efecto los atributos son los del primer caso, pero en el enunciado no se ha mencionado ninguna acci&oacute;n que sea arreglar la bombilla. Por supuesto que se trata una acci&oacute;n que podr&iacute;a plantearse hacer con una bombilla real, pero en el contexto del problema (enunciado) no se ha mencionado nada al respecto de esa posible acci&oacute;n.</p>
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-5_63">Opción correcta</a><span> (<a href="#sa0b5_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-5_79">Incorrecto</a><span> (<a href="#sa1b5_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-5_82">Incorrecto</a><span> (<a href="#sa2b5_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-5_85">Incorrecto</a><span> (<a href="#sa3b5_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id162">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta162_121" class="block iDevice_content">
+<p>Si has trabajado antes con el <strong>modelo Entidad/Relación</strong> para representar información a la hora de modelar un sistema de información o una base de datos, es posible que hayas reparado en la la similitud que existe entre el concepto de <strong>objetos</strong> y el de <strong>instancias o casos individuales de una entidad</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="1_concepto_de_clase.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_el_concepto_de_clase.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

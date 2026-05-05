@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.3.- Clases y métodos finales. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-24"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_clases_abstractas.html" class="current-page-parent daddy">4.- Clases abstractas.</a>
+   <ul>
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li id="active"><a href="43_clases_y_mtodos_finales.html" class="active no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="42_mtodos_abstractos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_polimorfismo_y_ligadura_dinmica.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.3.- Clases y métodos finales.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id63">
+<div class="iDevice emphasis0">
+<div id="ta63_73" class="block iDevice_content">
+<div class="elemento_derecha"><img alt="Preseñalización de una calzada sin salida." class="elemento_derecha" src="PROG07_CONT_R42_SinSalida.gif" style="width: 160px; height: 160px;" title="Sin salida." /> <figcaption class="figcaption">
+<div class="elemento_centrado credenciales">ITE. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">idITE=169539.</div>
+</figcaption></div>
+<p>En unidades anteriores has visto el modificador <strong><code>final</code></strong>, aunque sólo lo has utilizado por ahora para <strong>atributos</strong> y <strong>variables</strong> (por ejemplo para declarar <strong>atributos constantes</strong>, que una vez que toman un valor ya no pueden ser modificados). Pero este modificador también puede ser utilizado con clases y con métodos (con un comportamiento que no es exactamente igual, aunque puede encontrarse cierta analogía: no se permite heredar o no se permite redefinir).</p>
+<p><strong>Una clase declarada como <code>final</code> no puede ser heredada</strong>, es decir, <strong>no puede tener clases derivadas</strong>. La jerarquía de clases a la que pertenece acaba en ella (no tendrá clases hijas):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>[modificador_acceso] final class nombreClase  [herencia] [interfaces]</code></pre>
+</div>
+</div>
+<p>Un <strong>método</strong> también puede ser declarado como <strong><code>final</code></strong>, en tal caso, ese método no podrá ser redefinido en una <strong>clase derivada</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>[modificador_acceso] final &lt;tipo&gt; &lt;nombreMetodo&gt; ([parámetros]) [excepciones]</code></pre>
+</div>
+</div>
+<p class="destacado"><strong>Si intentas redefinir un método <code>final</code> en una subclase se producirá un <em>error de compilación</em>.</strong></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id64">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta64_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b64" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b64" class="block iDevice_content">
+<p><strong>Los modificadores <code>final</code> y <code>abstract</code> son excluyentes en la declaración de un <em>método</em>. </strong></p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b64"><input type="radio" name="option0b64" id="true0b64" class="exe-radio-option exe-radio-option-0-2-0b64-truefalse" /> Verdadero</label> 
+<label for="false0b64"><input type="radio" name="option0b64" id="false0b64" class="exe-radio-option exe-radio-option-1-2-0b64-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b64" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b64-result" class="right">Verdadero</strong></p>
+<p>
+No se puede ser a la vez <strong><code>final</code></strong> y <strong><code>abstract</code></strong>, pues si un método <strong><code>abstract</code></strong> necesita ser redefinido,  un método <strong><code>final</code></strong> no permite serlo. Sería  una contradicción.
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id65">
+<div class="iDevice emphasis0">
+<div id="ta65_73" class="block iDevice_content">
+<p>
+Además de en la declaración de  atributos, clases y métodos, el modificador <strong><code>final</code></strong> también podría aparecer acompañando a un método de un parámetro. En tal caso no  se podrá modificar el valor del parámetro dentro del código del método. Por  ejemplo: <strong><code>public final metodoEscribir (int par1, <span style="color: #0075be">final</span> int par2)</code></strong>.
+</p>
+
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id66">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header" style="background-image:url(icon_debesconocerfpd.png)"><h2 class="iDeviceTitle">Debes conocer</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta66_48" class="block iDevice_content">
+<p class="enlace_centrado" style="text-align: left;">Dada la gran cantidad de contextos diferentes en los que se puede encontrar el modificador <strong><code>final</code></strong>, vale la pena que hagas un repaso de todos los lugares donde puede aparecer y cu&aacute;l ser&iacute;a su funci&oacute;n en cada uno, en el apartado <strong><em>Anexo IV: Contextos del modificador <code>final</code></em>.</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id106">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicios Resueltos</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta106_148" class="block story iDevice_content">
+<p>Las piezas de un tablero de ajedrez son: peón, rey, reina, torre, cabello y alfil. Supongamos que disponemos de una clase Java para cada una de ellas.</p>
+</div>
+<div id="taquesQuestion0b106" class="block iDevice_content">
+<p>¿Cómo harías para que las clases <code>Torre</code>, <code>Rey</code>, <abbr title="etcétera">etc</abbr>. que has implementado en apartados anteriores no pudieran ser clases base de otras? Es decir, <strong>que no fueran heredables</strong>.</p>
+</div>
+<form name="feedback-form-quesFeedback0b106" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b106text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b106" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b106" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Bastaría con añadir el modificador <code>final</code> a la cabecera de esas clases. Por ejemplo, para la clase <code>Torre</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public final class Torre extends PiezaAjedrez {</code></pre>
+</div>
+</div></div>
+</form>
+<div id="taquesQuestion1b106" class="block iDevice_content">
+<p>Respecto a la clase <code>PiezaAjedrez</code>, que sí es heredable (aunque no instanciable, pues es abstracta), no deseamos que se puedan redefinir o sobrescribir sus métodos <code>getter</code>. ¿Cómo podríamos hacerlo?</p>
+</div>
+<form name="feedback-form-quesFeedback1b106" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b106text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b106" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b106" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso habría que añadir el modificador <code>final</code> a la cabecera de los métodos que no deseamos que puedan ser sobrescritos por clases derivadas. Por ejemplo, para el método <code>getColor</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public final String getColor() {
+</code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="42_mtodos_abstractos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_polimorfismo_y_ligadura_dinmica.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

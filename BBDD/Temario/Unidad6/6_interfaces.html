@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.- Interfaces. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-44"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="6_interfaces.html" class="active daddy">6.- Interfaces.</a>
+   <ul>
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="54_conversin_de_objetos_operador_instanceof.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="61_concepto_de_interfaz.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">6.- Interfaces.</h1></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id125">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta125_66" class="block iDevice_content">
+<div class="elemento_derecha"><img alt="María sentada, escribiendo con un ordenador, mirando a la pantalla y tecleando." class="elemento_derecha" src="PROG07_CONT_R44_Caso_MariaOrdenador_FOT.jpg" title="María trabajando. " /> <figcaption class="figcaption">
+<div class="elemento_centrado credenciales">Ministerio de Educación. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">Elaboración propia.</div>
+</figcaption></div>
+<p><strong>María</strong> y <strong>Juan</strong> continúan con su tarea de desarrollo de clases para el proyecto de la <strong>Clínica Veterinaria</strong>. Ya han utilizado la <strong>herencia</strong> en diversas ocasiones e incluso han escrito alguna <strong>clase abstracta</strong> para luego generar clases especializadas basadas en ella.</p>
+<p>Pero ahora se les ha planteado un nuevo problema: tienen pensadas algunas clases entre las que no existe ninguna relación de <strong>herencia</strong>, cada una hereda de unos ancestros diferentes que no tienen nada que ver, pero sin embargo, sí podrían compartir una buena parte de sus <strong>comportamientos</strong> (<strong>métodos</strong>). No es posible hacer que las dos hereden de la misma <strong>clase base</strong> porque hemos dicho que no se parecen en nada a ese respecto (cada una tiene su <strong>clase base</strong>, sin relación entre ellas), y tampoco pueden heredar de una nueva <strong>clase abstracta</strong> que contenga la interfaz de ese comportamiento, pues la <strong>herencia múltiple</strong> no está permitida en <span lang="en">Java</span>:</p>
+<p><span>— </span>¿Qué hacemos entonces?, ¿repetimos la misma <strong>interfaz</strong> en las dos <strong>jerarquías</strong> de clases? No me cuadra tener que hacer eso.  <span>—</span>le pregunta <strong>María</strong> a <strong>Juan</strong>.</p>
+<p><span>— </span>A mí tampoco. No me suena muy bien" <span>—</span>le contesta <strong>Juan</strong>.</p>
+<p><span>—</span> Así es. Tiene que haber una solución más elegante que no nos haga tener que repetir ese código una y otra vez. ¿Alguna idea?</p>
+<p><span>—</span> "Quizá exista una forma de resolver el problema. ¿Recuerdas que <strong>Ada</strong> nos habló el otro día de las <strong>interfaces</strong>?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id126">
+<div class="iDevice emphasis0">
+<div id="ta126_73" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><a title="Ampliar imagen &quot;Pirámide feudal&quot;. (Se abre en una nueva ventana)" href="PROG07_CONT_R45_Piramide_feudal.jpg" target="_blank"><img alt="Esquema explicativo de la pirámide feudal." class="imagen_ampliable" src="PROG07_CONT_R45_Piramide_feudal_miniatura.jpg" title="Pirámide feudal." width="192" height="128" /></a> <figcaption class="figcaption">
+<div class="elemento_centrado credenciales">ITE. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">idITE=169555.</div>
+</figcaption></div>
+</div>
+<p>Has visto cómo la <strong>herencia</strong> permite definir <strong>especializaciones</strong> (o <strong>extensiones</strong>) de una <strong>clase base</strong> que ya existe sin tener que volver a repetir de nuevo todo el código de ésta. Este mecanismo da la oportunidad de que la nueva <strong>clase especializada</strong> (o <strong>extendida</strong>) disponga de toda la <strong>interfaz</strong> que tiene su clase base.</p>
+<p>También has estudiado cómo los <strong>métodos abstractos</strong> permiten establecer una <strong>interfaz</strong> para marcar las <strong>líneas generales de un comportamiento común de</strong> <strong>superclase</strong> que deberían compartir de todas las <strong>subclases</strong>.</p>
+<p>Si llevamos al límite esta idea de <strong>interfaz</strong>, podrías llegar a tener una <strong>clase abstracta</strong> donde todos sus métodos fueran abstractos. De este modo estarías dando únicamente el <strong>marco de comportamiento</strong>, sin ningún método implementado, de las posibles <strong>subclases</strong> que heredarán de esa <strong>clase abstracta</strong>. La idea de una <strong>interfaz</strong> (o <strong><span lang="en">interface</span></strong>) es precisamente ésa: <strong>disponer de un mecanismo que permita especificar cuál debe ser el comportamiento que deben tener todos los objetos que formen parte de una determinada clasificación</strong> (no necesariamente jerárquica).</p>
+<p>Una <strong>interfaz</strong> consiste principalmente en una lista de declaraciones de métodos sin implementar, que caracterizan un determinado comportamiento. Si se desea que una clase tenga ese comportamiento, tendrá que implementar esos métodos establecidos en la <strong>interfaz</strong>. En este caso no se trata de una relación de <strong>herencia</strong> (la clase <strong>A</strong> es una especialización de la clase <strong>B</strong>, o la subclase <strong>A</strong> es del tipo de la superclase <strong>B</strong>), sino más bien una relación "de implementación de comportamientos" (la clase <strong>A</strong> implementa los métodos establecidos en la <strong>interfaz</strong> <strong>B</strong>, o los comportamientos indicados por <strong>B</strong> son llevados a cabo por <strong>A</strong>; pero no que <strong>A</strong> sea de clase <strong>B</strong>).</p>
+<p>Imagina que estás diseñando una aplicación que trabaja con clases que representan distintos tipos de animales. Algunas de las acciones que quieres que lleven a cabo están relacionadas con el hecho de que algunos animales sean <strong>depredadores</strong> (por ejemplo: <strong>observar</strong> una <strong>presa</strong>, <strong>perseguirla</strong>, <strong>comérsela</strong>, <abbr title="etcétera">etc.</abbr>) o sean <strong>presas</strong> (<strong>observar</strong>, <strong>huir</strong>, <strong>esconderse</strong>, <abbr title="etcétera">etc.</abbr>). Si creas la clase <code>Leon</code>, esta clase podría implementar una interfaz <code>Depredador</code>, mientras que otras clases como <code>Gacela</code> implementarían las acciones de la interfaz <code>Presa</code>. Por otro lado, podrías tener también el caso de la clase <code>Rana</code>, que implementaría las acciones de la interfaz <code>Depredador</code><strong> </strong>(pues es cazador de pequeños insectos), pero también la de <code>Presa</code> (pues puede ser cazado y necesita las acciones necesarias para protegerse).</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a title="Ampliar imagen &quot;Interfaces Depredador y Presa&quot;. (Se abre en una nueva ventana)" href="PROG07_CONT_R46_InterfacesDepredadorPresa.png" target="_blank"><img alt="Esquema que muestra un ejemplo de clases que implementan la interfaz Depredador (clase Léon), la interfaz Presa (clase Gacela) o ambas (clase Rana), siendo cada una de ellas subclases de clases diferentes (Felino, Bóvido y Anfibio)." class="imagen_ampliable" src="PROG07_CONT_R46_InterfacesDepredadorPresa_miniatura.PNG" style="width: 300px; height: 126px;" title="Interfaces Depreador y Presa." /></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="54_conversin_de_objetos_operador_instanceof.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="61_concepto_de_interfaz.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

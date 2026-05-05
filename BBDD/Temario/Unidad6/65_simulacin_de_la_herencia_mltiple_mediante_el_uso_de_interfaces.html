@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.5.- Simulación de la herencia múltiple mediante el uso de interfaces. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-50"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_interfaces.html" class="current-page-parent daddy">6.- Interfaces.</a>
+   <ul>
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li id="active"><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="active no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="64_interfaces_y_polimorfismo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="66_herencia_de_interfaces.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id121">
+<div class="iDevice emphasis0">
+<div id="ta121_73" class="block iDevice_content">
+<p>Una <strong>interfaz</strong> no tiene <strong>espacio de almacenamiento</strong> asociado (no se van a declarar objetos de un tipo de interfaz), es decir, no tiene <strong>implementación</strong>.</p>
+<p>En algunas ocasiones es posible que interese representar la situación de que "una clase <strong>X</strong> es de tipo <strong>A</strong>, de tipo <strong>B</strong>, y de tipo <strong>C</strong>", siendo <strong>A</strong>, <strong>B</strong>, <strong>C</strong> <strong>clases disjuntas</strong> (no heredan unas de otras). Hemos visto que sería un caso de <strong>herencia múltiple</strong> que <span lang="en">Java</span> no permite.</p>
+<p>Para poder simular algo así, podrías definir tres <strong>interfaces</strong> <strong>A</strong>, <strong>B</strong>, <strong>C</strong> que indiquen los comportamientos (métodos) que se deberían tener según se pertenezca a una supuesta clase <strong>A</strong>, <strong>B</strong>, o <strong>C</strong>, pero sin implementar ningún método concreto ni atributos de objeto (sólo interfaz).</p>
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a title="Ampliar imagen&quot;Implementación de las interfaces Depredador y Presa&quot;. (Se abre en una nueva ventana)" href="PROG07_CONT_R63_InterfacesMultiplesDepredadorPresa.png" target="_blank"><img alt="Diagrama con ejemplo de clase que implementa las interfaces Depredador y Presa." class="imagen_ampliable" src="PROG07_CONT_R63_InterfacesMultiplesDepredadorPresa_miniatura.PNG" title="Implementación de las interfaces Depredador y Presa." /></a></div>
+</div>
+<p>De esta manera la clase <strong>X</strong> podría a la vez:</p>
+<ol type="1" start="1">
+<li>Implementar las interfaces <strong>A</strong>, <strong>B</strong>, <strong>C</strong>, que la dotarían de los comportamientos que deseaba heredar de las clases <strong>A</strong>, <strong>B</strong>, <strong>C</strong>.</li>
+<li>Heredar de otra clase <strong>Y</strong>, que le proporcionaría determinadas características dentro de su taxonomía o jerarquía de objeto (atributos, métodos implementados y métodos abstractos).</li>
+</ol>
+<p>En el ejemplo que hemos visto de las interfaces <code>Depredador</code> y <code>Presa</code>, tendrías un ejemplo de esto: la clase <code>Rana</code>, que es subclase de <code>Anfibio</code>, implementa una serie de <strong>comportamientos</strong> propios de un <code>Depredador</code> y, a la vez, otros más propios de una <code>Presa</code>. Esos <strong>comportamientos</strong> (<strong>métodos</strong>) no forman parte de la <strong>superclase</strong> <code>Anfibio</code>, sino de las <strong>interfaces</strong>. Si se decide que la clase <code>Rana</code> debe de llevar a cabo algunos otros <strong>comportamientos adicionales</strong>, podrían añadirse a una <strong>nueva interfaz</strong> y la clase <code>Rana</code> <strong>implementaría</strong> una tercera <strong>interfaz</strong>.</p>
+<p>De este modo, con el mecanismo "<strong>una herencia pero varias interfaces</strong>", podrían conseguirse resultados similares a los obtenidos con la <strong>herencia múltiple</strong>.</p>
+<p>Ahora bien, del mismo modo que sucedía con la <strong>herencia múltiple</strong>, puede darse el problema de la <strong>colisión de nombres</strong> al implementar dos <strong>interfaces</strong> que tengan un <strong>método con el mismo identificador</strong>. En tal caso puede suceder lo siguiente:</p>
+<ul class="lista_verificacion" type="square">
+<li>Si los dos métodos tienen <strong>diferentes parámetros</strong> no habrá problema aunque tengan el mismo nombre pues se realiza una <strong>sobrecarga</strong> de métodos.</li>
+<li>Si los dos métodos se diferencian solo en su<strong> valor de retorno que es de un tipo diferente</strong>, se producirá un <strong>error de compilación</strong> (al igual que sucede en la sobrecarga cuando la única diferencia entre dos métodos es ésa).</li>
+</ul>
+<p>Si los dos métodos son <strong>exactamente iguales en identificador, parámetros y tipo devuelto</strong>, entonces solamente se podrá <strong>implementar uno de los dos métodos</strong>. En realidad se trata de un solo método pues ambos tienen la misma interfaz (mismo identificador, mismos parámetros y mismo tipo devuelto).</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice em_iDevice_recomendacionfpd" id="id122">
+<div class="iDevice emphasis_recomendacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_recomendacionfpd.png)"><h2 class="iDeviceTitle">Recomendación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta122_50" class="block iDevice_content">
+<p>
+La utilización de nombres
+idénticos en diferentes <strong>interfaces</strong> que pueden ser implementadas a la vez
+por una misma clase puede causar, además del problema de la <strong>colisión de
+nombres</strong>,  dificultades de <strong>legibilidad</strong>
+en el código, pudiendo dar lugar a confusiones. Si es posible intenta evitar
+que se produzcan este tipo de situaciones.
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id123">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-123_60" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion123_60" class="block question iDevice_content">
+<p><strong>Dada una clase <span lang="en">Java</span> que implementa dos </strong><strong>interfaces diferentes que contienen un método con el mismo nombre, indicar cuál de las siguientes afirmaciones es correcta.</strong></p>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i123_63" class="sr-av"><a href="#answer-123_63">Opción 1</a></label><input type="radio" name="option123_60" id="i123_63" class="exe-radio-option exe-radio-option-0-4-123_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-123_63"><a name="answer-123_63"></a>
+<div id="taans123_63" class="block iDevice_content">
+Si los dos métodos
+tienen <strong>un valor de retorno de un tipo diferente</strong>, se producirá un <strong>error
+de compilación</strong>.
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i123_115" class="sr-av"><a href="#answer-123_115">Opción 2</a></label><input type="radio" name="option123_60" id="i123_115" class="exe-radio-option exe-radio-option-1-4-123_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-123_115"><a name="answer-123_115"></a>
+<div id="taans123_115" class="block iDevice_content">
+<p>Si los dos métodos tienen <strong>un valor de retorno de un tipo diferente</strong>, se <strong>implementarán dos métodos</strong>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i123_118" class="sr-av"><a href="#answer-123_118">Opción 3</a></label><input type="radio" name="option123_60" id="i123_118" class="exe-radio-option exe-radio-option-2-4-123_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-123_118"><a name="answer-123_118"></a>
+<div id="taans123_118" class="block iDevice_content">
+Si los dos métodos son <strong>exactamente
+iguales en identificador, parámetros y tipo devuelto</strong>, se producirá un <strong>error
+de compilación</strong>.
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i123_121" class="sr-av"><a href="#answer-123_121">Opción 4</a></label><input type="radio" name="option123_60" id="i123_121" class="exe-radio-option exe-radio-option-3-4-123_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-123_121"><a name="answer-123_121"></a>
+<div id="taans123_121" class="block iDevice_content">
+<p>Si los dos métodos tienen <strong>diferentes parámetros</strong> se producirá un <strong>error de compilación</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b123_60" class="feedback js-hidden"><a name="sa0b123_60"></a>
+<div id="taf123_63" class=" iDevice_content">
+<p>¡Así es! ¡Enhorabuena! Se produce un <strong>error de compilación,</strong> pues en la <strong>sobrecarga</strong> se utilizan los parámetros para distinguir unos métodos de otros, pero no el <strong>valor de retorno</strong>.</p>
+</div>
+</div>
+<div id="sa1b123_60" class="feedback js-hidden"><a name="sa1b123_60"></a>
+<div id="taf123_115" class=" iDevice_content">
+<p>Incorrecto. Se produce un <strong>error de compilación,</strong> pues en la <strong>sobrecarga</strong> se utilizan los parámetros para distinguir unos métodos de otros, pero no el <strong>valor de retorno</strong>.</p>
+</div>
+</div>
+<div id="sa2b123_60" class="feedback js-hidden"><a name="sa2b123_60"></a>
+<div id="taf123_118" class=" iDevice_content">
+<p>No es cierto. En estos casos solamente se podrá <strong>implementar uno de los dos métodos</strong>. En realidad se trata de un solo método pues ambos tienen la misma <strong>interfaz</strong> (mismo identificador, mismos parámetros y mismo tipo devuelto). No se producirá <strong>ningún error de compilación</strong>.</p>
+</div>
+</div>
+<div id="sa3b123_60" class="feedback js-hidden"><a name="sa3b123_60"></a>
+<div id="taf123_121" class=" iDevice_content">
+<p>¡No es así! Si los dos métodos tienen <strong>diferentes parámetros</strong> no habrá problema, pues se realiza una <strong>sobrecarga</strong> de métodos.</p>
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-123_63">Opción correcta</a><span> (<a href="#sa0b123_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-123_115">Incorrecto</a><span> (<a href="#sa1b123_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-123_118">Incorrecto</a><span> (<a href="#sa2b123_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-123_121">Incorrecto</a><span> (<a href="#sa3b123_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id124">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta124_67" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b124" class="block iDevice_content">
+<p><strong>Localiza en la <acronym title="Application Programming Interface" lang="en">API</acronym> de <span lang="en">Java</span> algún ejemplo de clase que implemente </strong><strong>varias interfaces diferentes (puedes consultar la documentación de referencia de <strong>la <acronym title="Application Programming Interface" lang="en">API</acronym> de <span lang="en">Java</span></strong>).</strong></p>
+</div>
+<form name="feedback-form-quesFeedback0b124" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b124text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b124" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b124" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Existen una gran cantidad de clases en <strong>la</strong> <acronym title="Application Programming Interface" lang="en">API</acronym> de <span lang="en">Java</span> que implementan <strong>múltiples interfaces</strong>. Aquí tienes un par de ejemplos:</p>
+<ul class="lista_verificacion" type="square">
+<li>La clase <code>javax.swing.JFrame</code>, que implementa las <strong>interfaces</strong> <code>WindowConstants, Accessible</code> y <code>RootPaneContainer</code>:
+<ul>
+<li><code>public class JFrame extends Frame</code></li>
+<li><code>implements WindowConstants</code><strong>, </strong><code>Accessible</code><strong>, </strong><code>RootPaneContainer</code></li>
+</ul>
+</li>
+<li>La clase <code>java.awt.omponent</code>, que implementa las <strong>interfaces</strong> <code>ImageObserver</code>, <code>MenuContainer</code> y <code>Serializable</code>:
+<ul>
+<li><code>public abstract class Component extends Object</code></li>
+<li><code>implements ImageObserver, MenuContainer, Serializable</code></li>
+</ul>
+</li>
+</ul></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="64_interfaces_y_polimorfismo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="66_herencia_de_interfaces.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

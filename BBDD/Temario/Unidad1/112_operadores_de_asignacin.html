@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.2.- Operadores de asignación | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-63"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li class="current-page-parent"><a href="11_operadores_y_expresiones.html" class="current-page-parent daddy">11.- Operadores y expresiones</a>
+   <ul>
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li id="active"><a href="112_operadores_de_asignacin.html" class="active no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="111_operadores_aritmticos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="113_operadores_de_relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.2.- Operadores de asignación</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id176">
+<div class="iDevice emphasis0">
+<div id="ta176_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG02_CONT_R26_Asignacion.jpg" alt="Símbolos de los operadores de asignación sobre una pizarra con números escritos." title="Operadores asignación." style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="CC by-nc-sa" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a> <a title="Aldo Cavini Benedetti" href="https://www.flickr.com/photos/aldoaldoz/4177043494" target="_blank">Aldo Cavini Benedetti</a></div>
+</div>
+<p>El principal operador de esta categoría es el operador asignación "<strong><span style="font-size: medium;"><code>=</code></span></strong>"  que permite al programa darle un valor a una variable, que ya hemos utilizado en varias ocasiones en esta unidad. Además de este operador, <span lang="en">Java</span> proporciona otros operadores de asignación combinados con los operadores aritméticos, que permiten abreviar o reducir ciertas expresiones.</p>
+<p>Por ejemplo, el operador "<span style="font-size: medium;"><strong><code>+=</code></strong></span>" suma el valor de la expresión a la derecha del operador con el valor de la variable que hay a la izquierda del operador, y almacena el resultado en dicha variable. En la siguiente tabla se muestran todos los operadores de asignación compuestos que podemos utilizar en <span lang="en">Java</span>.</p>
+<table class="tabla" summary="Cuadro o tabla de seis filas por tres columnas, de título &quot;Operadores de asignación combinados en Java&quot;, de modo que para cada operador de asignación se indica cómo se escribe en Java y su expresión equivalente. Debe ser leída en columnas de izquierda a derecha y de arriba abajo. "><caption>Operadores de asignación combinados en Java</caption>
+<thead>
+<tr><th scope="col">Operador</th><th scope="col">Ejemplo en Java</th><th scope="col">Expresión equivalente</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>+=</code></span></strong></td>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>op1 += op2</code></span></strong></td>
+<td style="text-align: center;"><span style="font-size: medium;"><strong><code>op1 = op1 + op2</code></strong></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>-=</code></span></strong></td>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>op1 -= op2</code></span></strong></td>
+<td style="text-align: center;"><span style="font-size: medium;"><strong><code>op1 = op1 - op2</code></strong></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>*=</code></span></strong></td>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>op1 *= op2</code></span></strong></td>
+<td style="text-align: center;"><span style="font-size: medium;"><strong><code>op1 = op1 * op2</code></strong></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>/=</code></span></strong></td>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>op1 /= op2</code></span></strong></td>
+<td style="text-align: center;"><span style="font-size: medium;"><strong><code>op1 = op1 / op2</code></strong></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>%=</code></span></strong></td>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>op1 %= op2</code></span></strong></td>
+<td style="text-align: center;"><span style="font-size: medium;"><strong><code>op1 = op1 % op2</code></strong></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id183">
+<div class="iDevice emphasis0">
+<div id="ta183_85" class="block iDevice_content">
+<p>A continuación tienes un ejemplo de uso de algunos de estos operadores de asignación.</p>
+<table class="tabla" summary="Cuadro o tabla de siete filas por tres columnas, de título &quot;Operadores lógicos en Java&quot;, de modo que para cada operador lógico se indica cómo se escribe en Java y su significado. Debe ser leída en columnas de izquierda a derecha y de arriba abajo. "><caption>Ejemplo de uso de operadores de asignación combinados en Java</caption>
+<thead>
+<tr><th scope="col">Ejemplo de código</th><th scope="col">Salida por pantalla</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">
+<div class="highlighted-code language-java" style="text-align: left;">
+<div>
+<pre><code>public class OperadoresAsignacion {
+  
+    public static void main(String[] args) {
+        int x;
+        int y;
+
+        x = 5;  // operador asignación
+        y = 3;  // operador asignación
+
+        System.out.println ("EJEMPLOS DE USO DE OPERADORES DE ASIGNACIÓN");
+        System.out.println ("-------------------------------------------");
+        System.out.println (" El valor de x es: " + x);
+        System.out.println (" El valor de y es: " + y);
+        System.out.println ();
+        
+        // Ejemplos de uso de operadores de asignación combinados
+        x += y;
+        System.out.println(" Suma combinada:      x += y " + " ............ x vale " + x);
+
+        x = 5;
+        x -= y;
+        System.out.println(" Resta combinada:     x -= y " + " ............ x vale " + x);
+
+        x = 5;
+        x *= y;
+        System.out.println(" Producto combinado:  x *= y " + " ............ x vale " + x);
+
+        x = 5;
+        x /= y;
+        System.out.println(" Division combinada:  x /= y " + " ............ x vale " + x);
+
+        x = 5;
+        x %= y;
+        System.out.println(" Resto combinado:     x %= y " + " ............ x vale " + x);
+    } 
+} </code></pre>
+</div>
+</div>
+</td>
+<td style="text-align: center;">
+<div class="highlighted-code code-style-2 language-markup">
+<div style="text-align: left;">
+<pre><code>EJEMPLOS DE USO DE OPERADORES DE ASIGNACIÓN
+-------------------------------------------
+ El valor de x es: 5
+ El valor de y es: 3
+
+ Suma combinada:      x += y  ............ x vale 8
+ Resta combinada:     x -= y  ............ x vale 2
+ Producto combinado:  x *= y  ............ x vale 15
+ Division combinada:  x /= y  ............ x vale 1
+ Resto combinado:     x %= y  ............ x vale 2</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id196">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta196_149" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b196" class="block iDevice_content">
+<p>Dada la variable entera <code>x</code>, cuyo valor inicial es <code>10</code>, haz un programa en el que se vaya modificando el valor de la variable <code>x</code> de manera que dicha variable tome la siguiente secuencia de valores:</p>
+<p style="text-align: center;">5, 6, 12, 6, -4, 1</p>
+<p style="text-align: left;">La variable <code>x</code> deberá modificarse haciendo una operación aritmética sobre el valor que ya posee, por ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int x=10;
+x=x+100; //La variable x toma el valor 110 (10 + 100)</code></pre>
+</div>
+</div>
+<p style="text-align: left;">Para hacer el ejercicio debes usar al menos una vez los operadores aritméticos de suma, resta, división y multiplicación. No olvides mostrar el valor de la variable <code>x</code> después de cada modificación.</p>
+</section>
+<form name="feedback-form-quesFeedback0b196" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b196text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b196" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b196" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Un solución posible sería la siguiente:</p>
+<div class="highlighted-code language-java line-numbers">
+<pre><code>public class EjercicioModificacionValorVariable {
+     public static void main(String[] args) {
+         int x=10;
+         x=x-5;         
+         System.out.println(x);
+         x=x+1;
+         System.out.println(x);
+         x=x*2;
+         System.out.println(x);
+         x=x/2;
+         System.out.println(x);
+         x=x-10;
+         System.out.println(x);
+         x=x+5;
+         System.out.println(x);         
+    }
+}</code></pre>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id165">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta165_63" class="block story iDevice_content">
+<p>Una factoría papelera confecciona <strong>cuadernos</strong> en los que se van alternando hojas de color <strong>rojo</strong> y <strong>verde</strong><strong></strong>. Siempre se comienza por el color rojo, siguiéndole el verde y comenzando nuevamente con el rojo.</p>
+</section>
+<section id="taquesQuestion0b165" class="block iDevice_content">
+<p>Implementar un programa en Java que calcule, para un cuaderno de <strong>20 hojas</strong>, cuántas hojas contiene de cada color.</p>
+</section>
+<form name="feedback-form-quesFeedback0b165" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b165text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b165" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b165" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Está claro que cada<strong> dos hojas se repiten consecutivamente los colores <span style="color: #ff0000;">rojo</span></strong> y <strong><span style="color: #008000;">verde</span></strong>. Por tanto, <strong>cada paquete de dos hojas implica una hoja de cada uno de estos colores</strong>. Eso significa que si la cantidad de hojas fuera múltiplo de dos (par), podríamos obtener la cantidad de hojas de cada color mediante el cociente de la división entera entre dos. Ahora bien, <strong>si la cantidad de hojas no es múltiplo de dos (es impar), habrá un desfase de una <span style="color: #ff0000;">hoja roja (+1) adicional</span></strong>.</p>
+<p>¿Cómo calculamos ese posible "desfase" de hoja roja adicional? Podemos hacerlo usando el operador módulo (resto de la división entera).</p>
+<p>Para el caso de las <span style="color: #008000;"><strong>hojas verdes</strong></span>, sabemos que nunca habrá desfase respecto a la división entre dos:</p>
+<p><span style="color: #008000;">Cantidad de hojas verdes = hojas totales / 2</span></p>
+<p>Para el caso de las <strong><span style="color: #ff0000;">hojas rojas</span></strong>, podemos calcular el desfase de hojas mediante el operador módulo (cero o una hojas adicionales).</p>
+<p><span style="color: #ff0000;">Cantidad de hojas rojas = hojas totales / 2 + (hojas totales % 2)</span></p>
+<p>Una solución posible para un <strong>cuaderno de 20 hojas</strong> podría ser la siguiente:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class EjercicioCuadernoColores1 {
+     public static void main(String[] args) {
+         int hojasTotales= 20;         
+         int hojasVerdes  = hojasTotales / 2;
+         int hojasRojas = hojasTotales / 2 + (hojasTotales % 2);
+         
+         System.out.println ("Total de hojas en el cuaderno: " + hojasTotales);
+         System.out.println ("Cantidad de hojas rojas: " + hojasRojas);
+         System.out.println ("Cantidad de hojas verdes: " + hojasVerdes);
+    }
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b165" class="block iDevice_content">
+<p>Implementar un programa en Java que calcule, para un cuaderno de <strong>61 hojas</strong>, cuántas hojas contiene de cada color.</p>
+</section>
+<form name="feedback-form-quesFeedback1b165" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b165text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b165" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b165" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>El programa sería prácticamente igual. Lo único que cambiaría sería el contenido de la variable con el total de hojas (61):</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class EjercicioCuadernoColores2 {
+     public static void main(String[] args) {
+         int hojasTotales= 61;         
+         int hojasVerdes = hojasTotales / 2;
+         int hojasRojas = hojasTotales / 2 + (hojasTotales % 2);
+         
+         System.out.println ("Total de hojas en el cuaderno: " + hojasTotales);
+         System.out.println ("Cantidad de hojas rojas: " + hojasRojas);
+         System.out.println ("Cantidad de hojas verdes: " + hojasVerdes);
+    }
+}</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="111_operadores_aritmticos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="113_operadores_de_relacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

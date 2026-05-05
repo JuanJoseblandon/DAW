@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones | Estructuras de datos internas (memoria) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-66"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructuras de datos internas (memoria)</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos internas (memoria)</a></li>
+   <li><a href="1_clases_y_mtodos_genricos_i.html" class="daddy">1.- Clases y métodos genéricos (I)</a>
+   <ul class="other-section">
+      <li><a href="11_clases_y_mtodos_genricos_ii.html" class="no-ch">1.1.- Clases y métodos genéricos (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="2__introduccin_a_las_colecciones.html" class="no-ch">2.-  Introducción a las colecciones</a></li>
+   <li><a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="daddy">3.- Conjuntos (I).  ¿Qué son y cómo se declaran? HashSet</a>
+   <ul class="other-section">
+      <li><a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="no-ch">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</a></li>
+      <li><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="no-ch">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</a></li>
+      <li><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="no-ch">3.3.- Conjuntos (IV). Combinando datos de varias colecciones</a></li>
+      <li><a href="34_conjuntos_v_ordenando_sus_elementos.html" class="no-ch">3.4.- Conjuntos (V). Ordenando sus elementos</a></li>
+      <li><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="no-ch">3.5.- Conjuntos (VI). Ejemplos de uso.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_listas_i_definicin_y_diferencias_con_los_conjuntos.html" class="daddy">4.- Listas (I). Definición y diferencias con los conjuntos</a>
+   <ul class="other-section">
+      <li><a href="41_listas_ii_cmo_se_usan.html" class="no-ch">4.1.- Listas (II). ¿Cómo se usan?</a></li>
+      <li><a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="no-ch">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</a></li>
+      <li><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="no-ch">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</a></li>
+   </ul>
+   </li>
+   <li><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="daddy">5.- Conjuntos de pares clave/valor o diccionarios</a>
+   <ul class="other-section">
+      <li><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="no-ch">5.1.- Recorrido de los elementos de un diccionario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="daddy">6.- Iteradores (I). ¿Qué son y cómo se usan?</a>
+   <ul class="other-section">
+      <li><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="no-ch">6.1.- Iteradores (II). ¿Qué características debemos considerar?</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="current-page-parent daddy">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</a>
+   <ul>
+      <li><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="no-ch">7.1.- Algoritmos (II). Ordenando los elementos de la colección</a></li>
+      <li id="active"><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="active no-ch">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</a></li>
+      <li><a href="73_algoritmos_iv_operaciones_agregadas.html" class="daddy">7.3. Algoritmos (IV). Operaciones agregadas</a>
+      <ul class="other-section">
+         <li><a href="731_operaciones_de_reduccin.html" class="no-ch">7.3.1. Operaciones de reducción</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I. Ejercicios resueltos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="73_algoritmos_iv_operaciones_agregadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id181">
+<div class="iDevice emphasis0">
+<div id="ta181_73" class="block iDevice_content">
+<p>¿Qué más ofrecen las <code>clases java.util.Collections</code> y <code>java.util.Arrays</code> de <span lang="en">Java</span>?</p>
+<p>Una vez vista la ordenación, que quizás es lo más complicado, veamos algunas operaciones adicionales. En los ejemplos, la variable "<code>array</code>" es un <span lang="en">array</span> y la variable "<code>lista</code>" es una lista de cualquier tipo de elemento:</p>
+<table class="tabla" summary="Tabla que muestra algunas operaciones adicionales sobre listas y arrays. En la primera columna se muestra el nombre de la operación, en la segunda columna la descripción de la operación realizada y en la tercera un código de ejemplo para llevar a cabo dicha operación."><caption>Operaciones adicionales sobre listas y <span lang="en">arrays</span>.</caption>
+<tbody>
+<tr><th scope="col">Operación</th><th scope="col">Descripción</th><th scope="col">Ejemplos</th></tr>
+<tr><th scope="row">Desordenar una lista.</th>
+<td>Desordena una lista, este método no está disponible para <span lang="en">arrays</span>.</td>
+<td>
+<div>
+<div class="texto_izquierda">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Collections.shuffle (lista);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr><th scope="row">Rellenar una lista o <span lang="en">array</span>.</th>
+<td>Rellena una lista o <span lang="en">array</span> copiando el mismo valor en todos los elementos del <span lang="en">array</span> o lista. Útil para reiniciar una lista o <span lang="en">array</span>.</td>
+<td>
+<div>
+<div class="texto_izquierda">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Collections.fill (lista,elemento);
+Arrays.fill (array,elemento);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr><th scope="row">Búsqueda binaria.</th>
+<td>Permite realizar búsquedas rápidas en un una lista o <span lang="en">array</span> ordenados. Es necesario que la lista o <span lang="en">array</span> estén ordenados, si no lo están, la búsqueda no tendrá éxito.</td>
+<td>
+<div>
+<div class="texto_izquierda">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Collections.binarySearch(lista,elemento);
+Arrays.binarySearch(array, elemento);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr><th scope="row">Convertir un array a lista.</th>
+<td>Permite rápidamente convertir un <span lang="en">array</span> a una lista de elementos, y es extremadamente útil. No se especifica el tipo de lista retornado (no es <code>ArrayList</code> ni <code>LinkedList</code>), Solo se especifica que retorna una lista que implementa la interfaz <code>java.util.List</code>.</td>
+<td>
+<div>
+<div class="texto_izquierda">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>List lista=Arrays.asList(array);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>Si el tipo de dato almacenado en el <span lang="en">array</span> es conocido (<code>Integer</code> por ejemplo), es conveniente especificar el tipo de objeto de la lista:</p>
+<div>
+<div class="texto_izquierda">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>List&lt;Integer&gt;lista = Arrays.asList(array);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr><th scope="row">Convertir una lista a <span lang="en">array</span>.</th>
+<td>Permite convertir una lista a <span lang="en">array</span>. Esto se puede realizar en todas las colecciones, y no es un método de la clase <code>Collections</code>, sino propio de la interfaz <code>Collection</code>. Es conveniente que sepas de su existencia.</td>
+<td>
+<p>Para este ejemplo, supondremos que los elementos de la lista son números, dado que hay que crear un <span lang="en">array</span> del tipo almacenado en la lista, y del tamaño de la lista:</p>
+<div>
+<div class="texto_izquierda">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Integer[] array=new Integer[lista.size()];
+lista.toArray(array);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr><th scope="row">Dar la vuelta.</th>
+<td>Da la vuelta a una lista, poniéndola en orden inverso al que tiene.</td>
+<td>
+<div>
+<div class="texto_izquierda">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Collections.reverse(lista);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="exe-figure exe-image float-right license-pd" style="width: 300px;"><img src="platano_troceado-357650.jpg" alt="Plátano cortado en rodajas." title="Trocear" width="300" height="200" />
+<div class="figcaption"><a href="https://www.pexels.com/es-es/foto/platano-en-rodajas-357650/" target="_blank" class="author" title="Acceder a la imagen &quot;Trocear&quot; de Pexels." rel="noopener">pexels</a> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></div>
+</div>
+<p><br />Otra operación que no se ha visto hasta ahora es la <strong>dividir una cadena en partes</strong>.</p>
+<p>Cuando una cadena está formada internamente por trozos de texto claramente delimitados por un separador (una coma, un punto y coma o cualquier otro), es posible dividir la cadena y obtener cada uno de los trozos de texto por separado en un <span lang="en">array</span> de cadenas. Es una operación sencilla, pero requiere conocer el funcionamiento de los <span lang="en">arrays</span> y de las expresiones regulares para su uso. Para poder realizar esta operación, usaremos el método <code>split()</code> de la clase <code>String</code>. El delimitador o separador es una expresión regular, único argumento del método <code>split()</code>, y puede ser obviamente todo lo complejo que sea necesario:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String texto="Z,B,A,X,M,O,P,U";
+String[] partes=texto.split(",");
+Arrays.sort(partes);</code></pre>
+</div>
+</div>
+<p>En el ejemplo anterior la cadena <code>texto</code> contiene una serie de letras separadas por comas. La cadena se ha dividido con el método <code>split()</code>, y se ha guardado cada carácter por separado en un <span lang="en">array</span>. Después se ha ordenado el <span lang="en">array</span>.</p>
+<p>¡Increíble lo que se puede llegar a hacer con solo tres líneas de código!</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id182">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta182_47" class="block iDevice_content">
+<p>En el siguiente vídeo podrás ver en qué consiste la búsqueda binaria y cómo se aplica de forma sencilla:</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><iframe width="425" height="350" src="https://www.youtube.com/embed/7qv1An90q2Q" style="border:0"></iframe></div>
+<div class="credenciales elemento_centrado"><a title="Resumen textual alternativo para &quot;Metodo de búsqueda binaria&quot;." href="PROG09_Descripcion_Video_metodo_de_busqueda_binaria.html">Resumen textual alternativo para "Método de búsqueda binaria"</a></div>
+</div>
+<p> </p>
+<p>Ahora bien, este vídeo contiene un par de erratas. A ver si eres capaz de encontrarlas. Te damos una pista: la primera se encuentra sobre el minuto y medio, y la segunda sobre los dos minutos y medio. </p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="73_algoritmos_iv_operaciones_agregadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

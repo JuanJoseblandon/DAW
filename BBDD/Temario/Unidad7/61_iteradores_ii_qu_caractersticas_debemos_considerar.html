@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.1.- Iteradores (II). ¿Qué características debemos considerar? | Estructuras de datos internas (memoria) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-63"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructuras de datos internas (memoria)</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos internas (memoria)</a></li>
+   <li><a href="1_clases_y_mtodos_genricos_i.html" class="daddy">1.- Clases y métodos genéricos (I)</a>
+   <ul class="other-section">
+      <li><a href="11_clases_y_mtodos_genricos_ii.html" class="no-ch">1.1.- Clases y métodos genéricos (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="2__introduccin_a_las_colecciones.html" class="no-ch">2.-  Introducción a las colecciones</a></li>
+   <li><a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="daddy">3.- Conjuntos (I).  ¿Qué son y cómo se declaran? HashSet</a>
+   <ul class="other-section">
+      <li><a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="no-ch">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</a></li>
+      <li><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="no-ch">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</a></li>
+      <li><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="no-ch">3.3.- Conjuntos (IV). Combinando datos de varias colecciones</a></li>
+      <li><a href="34_conjuntos_v_ordenando_sus_elementos.html" class="no-ch">3.4.- Conjuntos (V). Ordenando sus elementos</a></li>
+      <li><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="no-ch">3.5.- Conjuntos (VI). Ejemplos de uso.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_listas_i_definicin_y_diferencias_con_los_conjuntos.html" class="daddy">4.- Listas (I). Definición y diferencias con los conjuntos</a>
+   <ul class="other-section">
+      <li><a href="41_listas_ii_cmo_se_usan.html" class="no-ch">4.1.- Listas (II). ¿Cómo se usan?</a></li>
+      <li><a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="no-ch">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</a></li>
+      <li><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="no-ch">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</a></li>
+   </ul>
+   </li>
+   <li><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="daddy">5.- Conjuntos de pares clave/valor o diccionarios</a>
+   <ul class="other-section">
+      <li><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="no-ch">5.1.- Recorrido de los elementos de un diccionario</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="current-page-parent daddy">6.- Iteradores (I). ¿Qué son y cómo se usan?</a>
+   <ul>
+      <li id="active"><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="active no-ch">6.1.- Iteradores (II). ¿Qué características debemos considerar?</a></li>
+   </ul>
+   </li>
+   <li><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="daddy">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</a>
+   <ul class="other-section">
+      <li><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="no-ch">7.1.- Algoritmos (II). Ordenando los elementos de la colección</a></li>
+      <li><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="no-ch">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</a></li>
+      <li><a href="73_algoritmos_iv_operaciones_agregadas.html" class="daddy">7.3. Algoritmos (IV). Operaciones agregadas</a>
+      <ul class="other-section">
+         <li><a href="731_operaciones_de_reduccin.html" class="no-ch">7.3.1. Operaciones de reducción</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I. Ejercicios resueltos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.1.- Iteradores (II). ¿Qué características debemos considerar?</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id173">
+<div class="iDevice emphasis0">
+<div id="ta173_73" class="block iDevice_content">
+<p>¿Qué inconvenientes tiene usar los iteradores sin especificar el tipo de objeto?</p>
+<p>En el siguiente ejemplo, se genera una lista con los números del 0 al 10. Se eliminan de la lista aquellos que son pares y sólo se dejan los impares. En el ejemplo de la izquierda se especifica el tipo de objeto del iterador, en el ejemplo de la derecha no. Observa que al no especificar el tipo de objeto del iterador,  tenemos que usar la conversión explícita de tipos (<strong><span lang="en">casting</span></strong>) en la línea 7.</p>
+<table class="tabla" summary="Tabla en la que se muestran dos ejemplos de usos de los iteradores, en uno de ellos, el segundo, se usa conversión de tipos, en el otro, el primero, no."><caption>Comparación de usos de los iteradores, con o sin conversión de tipos.</caption>
+<tbody>
+<tr><th scope="col">Ejemplo indicando el tipo de objeto de iterador</th><th scope="col">Ejemplo no indicando el tipo de objeto del iterador</th></tr>
+<tr>
+<td>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>ArrayList &lt;Integer&gt; lista=new ArrayList&lt;&gt;();
+for (int i=0;i&lt;=10;i++){ 
+     lista.add(i);
+}
+Iterator&lt;Integer&gt; it=lista.iterator();
+while (it.hasNext()) {
+    Integer t=it.next();
+    if (t%2==0) it.remove();
+}</code></pre>
+</div>
+</div>
+</td>
+<td>
+<div class="highlighted-code language-java line-numbers hightlight-7">
+<div>
+<pre><code>ArrayList &lt;Integer&gt; lista=new ArrayList&lt;&gt;();
+for (int i=0;i&lt;=10;i++){
+    lista.add(i);
+}
+Iterator it=lista.iterator();
+while (it.hasNext()) {
+    Integer t=(Integer)it.next();
+    if (t%2==0) it.remove();
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="exe-figure exe-image float-right license-pd" style="width: 250px;"><img src="Seguridad.jpg" alt="Ilustración de un candado rodeado de números binarios" title="Seguridad." width="250" height="150" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/seguridad-cibern%C3%A9tica-tecnolog%C3%ADa-red-3374252/" target="_blank" class="author" title="Acceder a la imagen &quot;Seguridad&quot;, de TheDigitalArtist, en Pixabay. (Se abre en una nueva ventana)" rel="noopener">TheDigitalArtist</a> <span>(</span><a href="https://pixabay.com/es/service/license/" target="_blank" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" rel="noopener">Licencia Pixabay</a><span>)</span></div>
+</div>
+<p><br />Un iterador <strong>es seguro porque está pensado para</strong> <strong>no sobrepasar los límites de la colección,</strong> ocultando operaciones más complicadas que pueden repercutir en errores de <span lang="en">software</span>. Pero realmente <strong>se convierte en inseguro cuando es necesario hacer la operación de conversión de tipos</strong>. Si la colección no contiene los objetos esperados, al intentar hacer la conversión, saltará una incómoda excepción. Usar genéricos aporta grandes ventajas, pero usándolos adecuadamente.</p>
+<p><strong>Para recorrer los estructursa de tipo Map con iteradores, hay que hacer un pequeño truco</strong>. Usamos el método <code>entrySet() </code>que ofrecen los mapas para generar un conjunto con las entradas (pares de clave-valor) o bien el método <code>keySet()</code> para generar un conjunto con las claves o llaves existentes en el mapa.</p>
+<p>Veamos cómo sería para el segundo caso, el más sencillo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>HashMap&lt;Integer,Integer&gt; mapa=new HashMap&lt;Integer,Integer&gt;();
+for (int i=0;i&lt;10;i++){
+    mapa.put(i, i); // Insertamos datos de prueba en el mapa.
+}
+for (Integer llave:mapa.keySet()){ // Recorremos el conjunto generado por keySet(), contendrá las llaves.
+           Integer valor=mapa.get(llave); //Para cada llave, accedemos a su valor si es necesario. 
+}</code></pre>
+</div>
+</div>
+<p>Si te fijas, esto es lo que ya hemos hecho en algún ejemplo anterior con estructuras de tipo Map.</p>
+<p>Lo único que debes tener en cuenta es que el conjunto generado por <code>keySet()</code> no tendrá obviamente el método <code>add()</code> para añadir elementos al mismo, dado que eso tendrás que hacerlo a través del map.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionfpdIdevice em_iDevice em_iDevice_reflexionfpd" id="id174">
+<div class="iDevice emphasis_reflexionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Reflexiona</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta174_119" class="block iDevice_content">
+<p><span>Si usas iteradores, y piensas eliminar elementos de la colección (e incluso de un mapa), <strong>debes usar el método </strong></span><strong><code>remove()</code></strong><span><strong> del iterador y no el de la colección</strong>. </span></p>
+<p><span>Si eliminas los elementos utilizando el método </span><code>remove()</code><span> de la colección, mientras estás dentro de un bucle de iteración, o dentro de un bucle </span><strong><span lang="en">for-each</span></strong><span>, los fallos que pueden producirse en tu programa son impredecibles. ¿Logras adivinar por qué se pueden producir dichos problemas?</span></p>
+</div>
+<form name="feedback-form-174" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedback174text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-174" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-174" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div id="ta174_120" class="block iDevice_content">
+<p><span>Son debidos a que el método</span><code></code><span> </span><code>remove()</code><span> del iterador elimina el elemento de dos sitios: de la colección y del iterador en sí (que mantiene interiormente información del orden de los elementos). Si usas el método </span><code>remove()</code><span> de la colección, la información solo se elimina de un lugar: de la colección.</span></p>
+</div>
+</section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id175">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-175_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion175_60" class="block question iDevice_content">
+<p>
+<strong>¿Cuándo debemos invocar el método <code>remove()</code> de los iteradores?</strong>
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i175_63" class="sr-av"><a href="#answer-175_63">Opción 1</a></label><input type="radio" name="option175_60" id="i175_63" class="exe-radio-option exe-radio-option-0-4-175_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-175_63"><div id="taans175_63" class="block iDevice_content">
+En cualquier momento.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i175_101" class="sr-av"><a href="#answer-175_101">Opción 2</a></label><input type="radio" name="option175_60" id="i175_101" class="exe-radio-option exe-radio-option-1-4-175_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-175_101"><div id="taans175_101" class="block iDevice_content">
+<p>
+Después de invocar el método <code>next()</code>.
+</p>
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i175_104" class="sr-av"><a href="#answer-175_104">Opción 3</a></label><input type="radio" name="option175_60" id="i175_104" class="exe-radio-option exe-radio-option-2-4-175_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-175_104"><div id="taans175_104" class="block iDevice_content">
+<p>
+Después de invocar el método <code>hasNext()</code>.
+</p>
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i175_107" class="sr-av"><a href="#answer-175_107">Opción 4</a></label><input type="radio" name="option175_60" id="i175_107" class="exe-radio-option exe-radio-option-3-4-175_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-175_107"><div id="taans175_107" class="block iDevice_content">
+No es conveniente usar este método para eliminar elementos, es mejor usar el de la colección.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b175_60" class="feedback js-hidden">
+<div id="taf175_63" class=" iDevice_content">
+Incorrecto. Deberías revisar el tema.
+
+</div>
+</section>
+<section id="sa1b175_60" class="feedback js-hidden">
+<div id="taf175_101" class=" iDevice_content">
+Efectivamente, has dado en el clavo.
+
+</div>
+</section>
+<section id="sa2b175_60" class="feedback js-hidden">
+<div id="taf175_104" class=" iDevice_content">
+No es correcto.
+
+</div>
+</section>
+<section id="sa3b175_60" class="feedback js-hidden">
+<div id="taf175_107" class=" iDevice_content">
+<p>Incorrecto. Es relativo, si usas iteradores deberías usar este método, si no usas iteradores, no importa.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-175_63">Incorrecto</a><span> (<a href="#sa0b175_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-175_101">Opción correcta</a><span> (<a href="#sa1b175_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-175_104">Incorrecto</a><span> (<a href="#sa2b175_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-175_107">Incorrecto</a><span> (<a href="#sa3b175_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id27">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta27_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b27" class="block iDevice_content">
+<p>Repetir el ejercicio anterior en el que se rellenaba una lista con diez números aleatorios entre 1 y 5 y a continuación eliminar los números pares utilizando un iterador.</p>
+<p>El resultado podría quedar así:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Recorremos la estructura con un iterador
+ 4  5  3  5  1  3  1  3  4  3 
+
+Eliminando los números pares:
+[5, 3, 5, 1, 3, 1, 3, 3]</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b27" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b27text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b27" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b27" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Se trata simplemente de volver a recorrer la estructura a través un iterador y si elemento al que apunta el iterador cumple la condición, entonces lo eliminamos de la lista mediante el método <code>remove()</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println();
+System.out.println ("Eliminando los números pares:");
+iterador = listaAleatorios.iterator();
+while ( iterador.hasNext() ) {
+    Integer elemento = iterador.next();
+    if ( elemento % 2 == 0) {
+        iterador.remove();
+    }
+}
+System.out.printf ("%s\n", listaAleatorios);</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b27" class="block iDevice_content">
+<p>Elimina ahora los múltiplos de 3.</p>
+<p>El resultado final podría quedar entonces como algo similar a :</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Recorremos la estructura con un iterador
+ 4  5  3  5  1  3  1  3  4  3 
+
+Eliminando los números pares:
+[5, 3, 5, 1, 3, 1, 3, 3]
+
+Eliminando los múltiplos de 3:
+[5, 5, 1, 1]</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback1b27" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b27text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b27" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b27" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Se trata de volver a recorrer la lista y tener en cuenta una nueva condición para llevar a cabo el borrado:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println();
+System.out.println ("Eliminando los múltiplos de 3:");
+iterador = listaAleatorios.iterator();
+while ( iterador.hasNext() ) {
+    Integer elemento = iterador.next();
+    if ( elemento % 3 == 0) {
+        iterador.remove();
+    }
+}
+System.out.printf ("%s\n", listaAleatorios);</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

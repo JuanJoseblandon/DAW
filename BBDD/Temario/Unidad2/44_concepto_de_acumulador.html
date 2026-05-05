@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.4.- Concepto de acumulador. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-61"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul class="other-section">
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructuras_de_seleccin_o_condicionales.html" class="daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul class="other-section">
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li><a href="34_estructura_selectiva_mltiple_switch_i.html" class="daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul class="other-section">
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="current-page-parent daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul>
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li id="active"><a href="44_concepto_de_acumulador.html" class="active no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li><a href="45_estructura_repetitiva_for_i.html" class="daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul class="other-section">
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul class="other-section">
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="43_concepto_de_contador.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="45_estructura_repetitiva_for_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.4.- Concepto de acumulador.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id221">
+<div class="iDevice emphasis0">
+<div id="ta221_154" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 189px;"><img src="canned-food-570114_640.jpg" alt="Estantería con diversos productos de alimentación enlatados" title="Productos" style="float: right;" width="180" height="120" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/alimentos-enlatados-latas-570114/" title="Acceder a la web de descarga de la imagen de PublicDomainArchive en Pixabay (se abre en una nueva ventana)" target="_blank" class="author"><span class="author">PublicDomainArchive</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Del mismo modo que hemos hablado de contadores, que son variables que se van incrementando (o decrementando) según un determinado ritmo o bien cuando se produce alguna circunstancia (se está "contando" algo), también podemos encontrarnos con la necesidad de ir acumulando en una variable los resultados que vayamos obteniendo a lo largo de la ejecución de un bucle. Es decir, que en lugar de ir sustituyendo el valor anterior por un valor nuevo, lo "acumulamos" o "sumamos" en la variable de algún modo. A este tipo de variables se les suele conocer como <strong>acumuladores</strong>.</p>
+<p>Los acumuladores más habituales son los <strong>aditivos</strong> o <strong>sumativos</strong>. Por ejemplo, imagina que queremos calcular la suma de todos los números que hay entre un número de inicio y un número de fin, ambos incluidos. Por ejemplo, la suma entre los números 1 y 5 sería 1+2+3+4+5 = 15. ¿Cómo podríamos automatizar este proceso mediante un programa en Java? Para lograr algo así necesitaríamos un contador que fuera desde 1 hasta 5 y un acumulador que fuera incorporando a lo que ya tienes cada uno de los nuevos valores que va adquiriendo el contador.</p>
+<p>Podemos verlo paso a paso:</p>
+<p>1. Iniciamos el contador (variable <code>contador</code>) y el acumulador (variable <code>suma</code>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int contador=1; // Contador que irá desde inicio (1) hasta fin (5)
+int suma=0;     // Acumulador que irá sumando de manera consecutiva los distintos valores que vaya tomando del contador
+</code></pre>
+</div>
+</div>
+<p>2. Recorremos todos los números que haya entre 1 y 5 (inicio y fin) con un bucle while</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>while (contador &lt;= 5) </code></pre>
+</div>
+</div>
+<p>3. En el cuerpo del bucle vamos realizando la suma acumulada e incrementado el contador:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>{
+    suma += contador;
+    contador++;
+}</code></pre>
+</div>
+</div>
+<p>4. Mostramos por pantalla el resultado final:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println ("La suma de los números entre 1 y 5 es " + suma);</code></pre>
+</div>
+</div>
+<p>Uniéndolo todo tendríamos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+int contador; // Contador que irá desde inicio (1) hasta fin (5)
+int suma;     // Acumulador que irá sumando de manera consecutiva los distintos valores que vaya tomando del contador
+
+// Iniciamos contadores
+contador=1; // Iniciamos el contador a 1
+suma=0;     // Iniciamos el acumulador a 0, para ir sumando todo lo que se vaya recorriendo
+
+// Realizamos el recorrido
+while (contador &lt;= 5) {  // Mientras contador no supere el valor 5...
+    suma += contador; // En cada iteración: cumulamos en suma el valor de cada contador
+    contador++;       // En cada iteración: incrementamos en 1 el contador 
+}
+
+// Mostramos el resultado por pantalla
+System.out.println ("La suma de los números entre 1 y 5 es " + suma);</code></pre>
+</div>
+</div>
+<p><br /><br /></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id223">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta223_148" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b223" class="block iDevice_content">
+<p>Escribe un programa que solicite dos números por teclado (inicio y fin, donde inicio debería ser menor o igual que fin) y muestre por pantalla la suma de los múltiplos de tres hay entre esos dos números, ambos incluidos. Utiliza una variable de tipo <strong>acumulador</strong> para calcular esa suma.</p>
+<p>Aquí tienes un ejemplo de una posible ejecución del programa:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Introduzca el inicio: 2
+Introduzca el fin: 15
+
+La suma de los múltiplos de 3 entre 2 y 15 es 45.</code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback0b223" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b223text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b223" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b223" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Vamos a utilizar un contador para ir desde el inicio hasta el fin (tal y como se ha hecho en otros ejercicios) y un acumulador para ir sumando o "acumulando" cuántos múltiplos de tres vamos encontrando:</p>
+<ul>
+<li class="lista_verificacion">variable <code>contador</code>;</li>
+<li class="lista_verificacion">variable <code>sumaMultiplos3</code>.</li>
+</ul>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+// ------------------------
+Scanner teclado = new Scanner(System.in);  
+int inicio, fin;    // Entradas
+int contador;       // contador
+int sumaMultiplos3; // acumulador
+
+// Entrada de datos
+// ----------------
+System.out.print ("Introduzca el inicio: ");
+inicio = teclado.nextInt();
+System.out.print("Introduzca el fin: ");
+fin = teclado.nextInt();
+
+// Procesamiento
+// -------------
+contador= inicio;  // Iniciamos contador
+sumaMultiplos3=0;  // Iniciamos acumulador
+// Recorremos números desde inicio hasta fin
+while (contador &lt;= fin) {
+    if (contador % 3 == 0)  // Si alguno es múltiplo de 3, lo sumamos al acumulador (lo "acumulamos")
+        sumaMultiplos3 += contador;
+    contador++;  // Incrementamos el contador que va desde inicio hasta fin
+}
+
+// Salida de resultados
+// --------------------
+System.out.println ("La suma de los múltiplos de 3 entre " + inicio + " y " + fin + " es " + sumaMultiplos3 + ".");
+System.out.println ();</code></pre>
+</div>
+</div>
+<p></p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id225">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta225_121" class="block iDevice_content">
+<p><strong>La forma de acumular no tiene por qué ser siempre sumando</strong> (acumulación aditiva o sumativa). Podría ser también, por ejemplo, multiplicando (acumulación multiplicativa). En tal caso es muy importante que el valor inicial del acumulador no sea cero, sino uno, pues si multiplicas por cero el resultado siempre será cero. En general, el valor inicial de un acumulador debe ser el elemento neutro del operador que se vaya a utilizar para "acumular" (0 para la suma o la resta, 1 para el producto o la división, la cadena vacía para la concatenación, <acronym title="etcétera">etc</acronym>.).</p>
+<p>Por otro lado, a veces en lugar de hacer más grande el valor del acumulador, se hace más pequeño (sería un "desacumulador") pues en lugar de restar se suma o en lugar de multiplicar se divide.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id228">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta228_148" class="block story iDevice_content">
+<p>El factorial de un número natural n se calcula multiplicando todos los números que van desde 1 hasta n y se representa por el símbolo de la exclamación (n!).</p>
+<p>Por ejemplo 4!= 1×2×3×4 = 24.</p>
+</div>
+<div id="taquesQuestion0b228" class="block iDevice_content">
+<p>Escribe un programa en Java que solicite un número natural positivo n y calcule y muestre por pantalla el valor de su factorial n!</p>
+<p>Aquí tienes un ejemplo de una posible ejecución:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Introduzca un número n para calcular su factorial: 6
+El factorial n! es 720.</code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback0b228" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b228text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b228" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b228" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Un posible programa que resuelva el problema prodía ser el siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+// ------------------------
+Scanner teclado = new Scanner(System.in);  
+int numero;            // Entrada
+int contador;          // contador
+int productoAcumulado; // acumulador
+
+// Entrada de datos
+// ----------------
+System.out.print ("Introduzca un número n para calcular su factorial: ");
+numero = teclado.nextInt();
+
+// Procesamiento
+// -------------
+contador= 1;          // Iniciamos contador
+productoAcumulado=1;  // Iniciamos acumulador (no puede iniciarse a cero porque es multiplicativo)
+// Recorremos números desde inicio hasta fin
+while (contador &lt;= numero) {
+    productoAcumulado *= contador;  // Vamos acumulando productos
+    contador++;  // Incrementamos el contador que va desde inicio hasta fin
+}
+
+// Salida de resultados
+// --------------------
+System.out.println ("El factorial n! es " + productoAcumulado + ".");
+System.out.println ();
+</code></pre>
+</div>
+</div></div>
+</form>
+<div id="taquesQuestion1b228" class="block iDevice_content">
+<p>Amplía el ejercicio anterior para que además de calcular el factorial de un número, también genere una cadena de caracteres a base de concatenaciones que represente los cálculos que se han tenido que realizar para obtenerlo. Por ejemplo, si para obtener el factorial de 4 (4!) hay que llevar a cabo las operaciones 1×2×3×4, habría que generar una cadena con el contenido <code>"1*2*3*4"</code>. Esta cadena la podemos ir creando a base de concatenaciones a la vez que se van realizando los cálculos. Sería un ejemplo de acumulador por <a href="#t2f2cf294-fa89-a141-6722-596ce32e1e48" id="link2f2cf294-fa89-a141-6722-596ce32e1e48" class="exe-tooltip definition-tt" title="Yuxtaponer">yuxtaposición</a> o concatenación.</p>
+<p>Aquí tienes un ejemplo de una posible ejecución:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Introduzca el número n para calcular su factorial: 6
+El factorial n! es 1*2*3*4*5*6 = 720.</code></pre>
+</div>
+</div>
+<p></p>
+<div id="t2f2cf294-fa89-a141-6722-596ce32e1e48" class="exe-tooltip-text">
+<p>Poner algo junto a otra cosa o inmediata a ella</p>
+</div>
+</div>
+<form name="feedback-form-quesFeedback1b228" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b228text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b228" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b228" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Para generar la cadena resultado que se nos pide deberíamos comenzar con una cadena (<code>String</code>) vacía a la que le vamos concatenando ("acumulando") cada uno de los números que se van multiplicando junto con el símbolo asterisco de multiplicación (<code>"*"</code>).</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String procesoCalculo; // acumulador para ir guardando los pasos del proceso
+procesoCalculo= "";   // Iniciamos acumulador a la cadena vacía (para poder empezar a concatenar a algo)</code></pre>
+</div>
+</div>
+<p>Y dentro del bucle de cálculo, habrá que añadir la concatenación de cada número que se va multiplicando:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>procesoCalculo += contador + "*";  // Vamos acumulando cada paso (multiplicación) realizado</code></pre>
+</div>
+</div>
+<p>Dentro del contexto de bucle quedaría:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>while (contador &lt;= numero) {
+    productoAcumulado *= contador;     // Vamos acumulando productos
+    procesoCalculo += contador + "*";  // Vamos acumulando cada paso (multiplicación) realizado
+    contador++;  // Incrementamos el contador que va desde inicio hasta fin
+}</code></pre>
+</div>
+</div>
+<p>El inconveniente que tiene hacer esto así es que generariámos un asterisco de más en el último paso. Por ejemplo, si calculamos el factorial de 4, generaríamos la cadena <code>"1*2*3*4*"</code>. Nos sobra el último asterisco. Eso podemos intentar evitarlo incluyendo un <code>if</code> dentro del bucle para que solo si <code>contador </code> está por debajo del <code>numero</code> se concatene el asterisco. De este modo en el último paso no se concatena un asterisco, tan solo el valor de <code>contador</code>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>while (contador &lt;= numero) {
+    productoAcumulado *= contador;     // Vamos acumulando productos
+    procesoCalculo += contador;  // Vamos acumulando cada paso (multiplicación) realizado
+    if (contador &lt; numero)
+        procesoCalculo += "*"; // Concatenamos asterisco salvo para el último factor
+    contador++;  // Incrementamos el contador que va desde inicio hasta fin
+}</code></pre>
+</div>
+</div>
+<p>El programa completo podría quedar entonces así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+// ------------------------
+Scanner teclado = new Scanner(System.in);  
+int numero;            // Entrada
+int contador;          // contador
+int productoAcumulado; // acumulador para obtener el resultado final
+String procesoCalculo; // acumulador para ir guardando los pasos del proceso
+
+// Entrada de datos
+// ----------------
+System.out.print ("Introduzca el número n para calcular su factorial: ");
+numero = teclado.nextInt();
+
+// Procesamiento
+// -------------
+contador= 1;          // Iniciamos contador
+productoAcumulado=1;  // Iniciamos acumulador (no puede iniciarse a cero porque es multiplicativo)
+procesoCalculo= "";   // Iniciamos acumulador a la cadena vacía (para poder empezar a concatenar a algo)
+// Recorremos números desde inicio hasta fin
+while (contador &lt;= numero) {
+    productoAcumulado *= contador;     // Vamos acumulando productos
+    procesoCalculo += contador;  // Vamos acumulando cada paso (multiplicación) realizado
+    if (contador &lt; numero)
+        procesoCalculo += "*"; // Concatenamos asterisco salvo para el último factor
+    contador++;  // Incrementamos el contador que va desde inicio hasta fin
+}
+
+// Salida de resultados
+// --------------------
+System.out.println ("El factorial n! es " + procesoCalculo + " = " + productoAcumulado + ".");
+System.out.println ();</code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id229">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta229_148" class="block story iDevice_content">
+<p>Una manera de calcular el número de cifras que tiene un número natural es ir realizando la división entera entre diez hasta que el cociente sea cero. El número de veces que hayamos podido dividir será el número de cifras que tiene el número.</p>
+<p>Por ejemplo, si tenemos el número 3521 y vamos dividiendo sucesivamente entre diez hasta que obtengamos cero tendríamos:</p>
+<p>3521 / 10 = 352 →  352/10 = 35 → 35/10 = 3 → 3/10=0</p>
+<p>Dado que hemos podido dividir cuatro veces, sabemos que el número tiene cuatro cifras.</p>
+</div>
+<div id="taquesQuestion0b229" class="block iDevice_content">
+<p>Escribe un programa en Java que solicite un número natural positivo n y calcule y muestre por pantalla su número de cifras aplicando el anterior proceso de cálculo. Recuerda que debes trabajar con números enteros y no reales.</p>
+<p>Aquí tienes un ejemplo de una posible ejecución:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Introduzca el número n para calcular su número de cifras: 3521
+El número de cifras de n es 4.</code></pre>
+</div>
+</div>
+<p></p>
+</div>
+<form name="feedback-form-quesFeedback0b229" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b229text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b229" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b229" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso tendremos un contador para el número de cifras y un acumulador (o "desacumulador" si prefieres verlo así, pues cada vez se irá reduciendo) para lo que vaya quedando del número original tras los sucesivos cocientes.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int numCifras; // contador (para ir "contando" las cifras)
+int residuo;   // Acumulador (o "desacumulador") que almacena lo que va quedando del número tras cada división
+</code></pre>
+</div>
+</div>
+<p>La inicialización de estos elementos será:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>numCifras= 0;      // Iniciamos contador (al final contendrá el número de cifras)
+residuo= numero;   // Iniciamos acumulador (al valor inicial del número)
+</code></pre>
+</div>
+</div>
+<p>Y el proceso de cálculo consistirá en la sucesiva división entre 10 hasta que el cociente sea cero. El número de veces que se haya podido dividir (contado por el contador numCifras) será el número de cifras del número:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>while (residuo &gt; 0) {
+    residuo = residuo / 10;     // Vamos diviendo entre 10
+    numCifras++;  // Incrementamos el contador por cada vez que se pueda dividir
+}</code></pre>
+</div>
+</div>
+<p>El programa completo podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+// ------------------------
+Scanner teclado = new Scanner(System.in);  
+int numero;     // Entrada
+int numCifras;  // contador (para ir "contando" las cifras)
+int residuo;    // Acumulador (o "desacumulador") para almacenar lo que va quedando del número tras cada división
+
+// Entrada de datos
+// ----------------
+System.out.print ("Introduzca el número n para calcular su número de cifras: ");
+numero = teclado.nextInt();
+
+// Procesamiento
+// -------------
+numCifras= 0;      // Iniciamos contador (al final contendrá el número de cifras)
+residuo= numero;   // Iniciamos acumulador (al valor inicial del número)
+// Vamos dividiendo mientras el residuo sea mayor que cero
+while (residuo &gt; 0) {
+    residuo = residuo / 10;     // Vamos diviendo entre 10
+    numCifras++;  // Incrementamos el contador por cada vez que se pueda dividir
+}
+
+// Salida de resultados
+// --------------------
+System.out.println ("El número de cifras de n es " + numCifras + ".");
+System.out.println ();</code></pre>
+</div>
+</div>
+<p></p>
+<p></p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="43_concepto_de_contador.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="45_estructura_repetitiva_for_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

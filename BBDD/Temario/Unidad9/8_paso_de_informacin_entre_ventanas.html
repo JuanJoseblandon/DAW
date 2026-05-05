@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.- Paso de información entre ventanas </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-86"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Interfaces gráficas de usuario</a></li>
+   <li><a href="1_arquitectura_de_javafx.html" class="no-ch">1.- Arquitectura de JavaFX</a></li>
+   <li><a href="2_estructura_de_una_aplicacin.html" class="daddy">2.- Estructura de una aplicación</a>
+   <ul class="other-section">
+      <li><a href="21_grafo_de_escena.html" class="no-ch">2.1.- Grafo de escena</a></li>
+      <li><a href="22_instalar_sdk.html" class="no-ch">2.2.- Instalar SDK</a></li>
+      <li><a href="23_primer_ejemplo.html" class="no-ch">2.3.- Primer ejemplo</a></li>
+   </ul>
+   </li>
+   <li><a href="3_eventos.html" class="daddy">3.- Eventos</a>
+   <ul class="other-section">
+      <li><a href="31_modelo_de_gestin_de_eventos.html" class="no-ch">3.1.- Modelo de gestión de eventos</a></li>
+      <li><a href="32_tipos_de_eventos.html" class="no-ch">3.2.- Tipos de eventos</a></li>
+      <li><a href="33_aadir_un_manejador_de_evento.html" class="no-ch">3.3.- Añadir un manejador de evento</a></li>
+   </ul>
+   </li>
+   <li><a href="4_css.html" class="daddy">4.- CSS</a>
+   <ul class="other-section">
+      <li><a href="41_introduccin.html" class="no-ch">4.1.- Introducción</a></li>
+      <li><a href="42_hoja_de_estilo_por_defecto.html" class="no-ch">4.2.- Hoja de estilo por defecto</a></li>
+      <li><a href="43_hoja_de_estilo_especfica_de_la_escena.html" class="no-ch">4.3.- Hoja de estilo específica de la escena</a></li>
+      <li><a href="44_hoja_de_estilo_especfica_del_padre.html" class="no-ch">4.4.- Hoja de estilo específica del padre</a></li>
+      <li><a href="45_estilo_especfico_en_componente.html" class="no-ch">4.5.- Estilo específico en componente</a></li>
+   </ul>
+   </li>
+   <li><a href="5_layout_panes.html" class="daddy">5.- Layout panes</a>
+   <ul class="other-section">
+      <li><a href="51_absolute_layout.html" class="no-ch">5.1.- Absolute layout</a></li>
+      <li><a href="52_hbox.html" class="no-ch">5.2.- HBox</a></li>
+      <li><a href="53_vbox.html" class="no-ch">5.3.- VBox</a></li>
+      <li><a href="54_borderpane.html" class="no-ch">5.4.- BorderPane</a></li>
+      <li><a href="55_anchorpane.html" class="no-ch">5.5.- AnchorPane</a></li>
+      <li><a href="56_stackpane.html" class="no-ch">5.6.- StackPane</a></li>
+      <li><a href="57_flowpane.html" class="no-ch">5.7.- FlowPane</a></li>
+      <li><a href="58_tilepane.html" class="no-ch">5.8.- TilePane</a></li>
+      <li><a href="59_gridpane.html" class="no-ch">5.9.- GridPane</a></li>
+   </ul>
+   </li>
+   <li><a href="6_controles_ui.html" class="daddy">6.- Controles UI</a>
+   <ul class="other-section">
+      <li><a href="61_label_etiqueta_y_textfield_campo_de_texto.html" class="no-ch">6.1.- Label (Etiqueta) y TextField (Campo de texto)</a></li>
+      <li><a href="62_button_botn.html" class="daddy">6.2.- Button (Botón)</a>
+      <ul class="other-section">
+         <li><a href="621_aadir_imagenicono_a_botn.html" class="no-ch">6.2.1.- Añadir imagen/icono a botón</a></li>
+         <li><a href="622_validar_entrada.html" class="no-ch">6.2.2.- Validar entrada</a></li>
+      </ul>
+      </li>
+      <li><a href="63_men.html" class="no-ch">6.3.- Menú</a></li>
+      <li><a href="64_menubutton.html" class="no-ch">6.4.- MenuButton</a></li>
+      <li><a href="65_checkbox.html" class="no-ch">6.5.- CheckBox</a></li>
+      <li><a href="66_radiobutton_radiobotn.html" class="no-ch">6.6.- RadioButton (Radiobotón)</a></li>
+      <li><a href="67_combobox.html" class="daddy">6.7.- ComboBox</a>
+      <ul class="other-section">
+         <li><a href="671_seleccionar_un_valor.html" class="no-ch">6.7.1.- Seleccionar un valor</a></li>
+      </ul>
+      </li>
+      <li><a href="68_listview_lista.html" class="daddy">6.8.- ListView (Lista)</a>
+      <ul class="other-section">
+         <li><a href="681_obtener_valor_seleccionado.html" class="no-ch">6.8.1.- Obtener valor seleccionado</a></li>
+         <li><a href="682_seleccionar_varios_elementos.html" class="no-ch">6.8.2.- Seleccionar varios elementos.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="7_javafx_fxml.html" class="daddy">7.- JavaFX FXML</a>
+   <ul class="other-section">
+      <li><a href="71_javafx_scene_builder.html" class="no-ch">7.1.- JavaFX Scene Builder</a></li>
+      <li><a href="72_estructura_de_un_proyecto_fxml.html" class="daddy">7.2.- Estructura de un proyecto FXML</a>
+      <ul class="other-section">
+         <li><a href="721_el_fichero_fxml.html" class="no-ch">7.2.1.- El fichero .fxml</a></li>
+         <li><a href="722_controlador.html" class="no-ch">7.2.2.- Controlador</a></li>
+         <li><a href="723_clase_principal.html" class="no-ch">7.2.3.- Clase principal</a></li>
+         <li><a href="724_ejemplo_javafx_con_scene_builder_y_netbeans.html" class="no-ch">7.2.4.- Ejemplo JavaFX con Scene Builder y NetBeans</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li id="active"><a href="8_paso_de_informacin_entre_ventanas.html" class="active daddy">8.- Paso de información entre ventanas</a>
+   <ul>
+      <li><a href="81_paso_de_informacin_entre_ventanas_usando_fxml.html" class="no-ch">8.1.- Paso de información entre ventanas usando FXML</a></li>
+      <li><a href="82_paso_de_informacin_entre_ventanas_usando_fxml_ii.html" class="no-ch">8.2.- Paso de información entre ventanas usando FXML (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="9_grficos.html" class="daddy">9.- Gráficos</a>
+   <ul class="other-section">
+      <li><a href="91_ejemplo_diagrama_de_quesos.html" class="no-ch">9.1.- Ejemplo: diagrama de quesos</a></li>
+   </ul>
+   </li>
+   <li><a href="10_imagen_audio_y_vdeo.html" class="daddy">10.- Imagen, audio y vídeo</a>
+   <ul class="other-section">
+      <li><a href="101_imagen.html" class="no-ch">10.1.- Imagen</a></li>
+      <li><a href="102_audio.html" class="no-ch">10.2.- Audio</a></li>
+      <li><a href="103_vdeo.html" class="no-ch">10.3.- Vídeo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_lambda.html" class="no-ch">Anexo I.- Lambda</a></li>
+   <li><a href="anexo_ii_atributos_tipo_property.html" class="no-ch">Anexo II.- Atributos tipo Property</a></li>
+   <li><a href="anexo_iii_ejemplo_de_aplicacin.html" class="no-ch">Anexo III.- Ejemplo de aplicación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="724_ejemplo_javafx_con_scene_builder_y_netbeans.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="81_paso_de_informacin_entre_ventanas_usando_fxml.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.- Paso de información entre ventanas</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id194">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta194_62" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="profesor.jpg" alt="Hombre explicando algo." title="Profesor." style="float: left;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc" title="CC by-nc" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc</span></a>&nbsp;<a title="Innovation_School" href="https://www.flickr.com/photos/innovationschool/6084094811/in/photolist-agCzqp-d3XzYG-661Wh2-7QWygK-agFuw7-AeesVo-81pKiy-AfmrM7-zjuLTo-DqTGn-65n5XZ-7g8wo-dcLb2x-Jx8Emy-bnCSSc-rwvPK8-bK8KFM-aRTs5F-5JLVAD-6Yefy-8wV9w2-5fX4s5-y2YM9P-6Qu1BM-TooJif-bpBgPD-kdC7qV-5x27WT-fDbnY9-79z93b-GXPyf-8H8vXr-5JQsp5-b1CDb-9WPMXw-dv5QjH-4eRDif-8Y26T8-8NP9iP-48GJEL-of7xC-CiTree-7TgMth-26jxt-3mXHud-fgsHRk-3chYV-93uqz-8xRCTL-8kK4xd" target="_blank">Innovation_School</a></div>
+</div>
+<p>De todo lo que <strong>Ana</strong> est&aacute; aprendiendo en clase, lo que m&aacute;s le est&aacute; costando sobre la tecnolog&iacute;a JavaFX, es el paso de informaci&oacute;n entre ventanas.</p>
+<p>El otro d&iacute;a, el profesor mencion&oacute; algo sobre el asunto, pero muy superficialmente, unas breves pinceladas y <strong>Ana</strong> no acaba de verlo claro...</p>
+<p>Ha preguntado a su compa&ntilde;ero de clase, <strong>Ricardo</strong>, pero &eacute;l tampoco lo tiene nada claro.</p>
+<p>As&iacute; que esta tarde en clase, se armar&aacute; de valor y aunque le da un poco de verg&uuml;enza, preguntar&aacute; al profe para que le explique c&oacute;mo se hace eso de pasar informaci&oacute;n entre ventanas, en una aplicaci&oacute;n.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id189">
+<div class="iDevice emphasis0">
+<div id="ta189_69" class="block iDevice_content">
+<p>En muchas ocasiones nos interesa pasar información de una ventana a otra. Imagina que estamos en una ventana principal de una aplicación, entonces abrimos una nueva donde obtenemos algún dato y nos interesa llevarnos ese dato a la ventana principal desde la que accedimos a la segunda.</p>
+<p>A continuación, puedes ver un ejemplo con dos ventanas, una principal y otra secundaria. Al pulsar un botón, accedemos a la ventana secundaria donde elegimos un valor. Y entonces se cerrará esa segunda ventana, volviendo a la primera, y desde esa ventana principal obtenemos el valor que se eligió en la secundaria.</p>
+<p>Observa detenidamente los comentarios del código para ayudarte a entender el funcionamiento de la aplicación.</p>
+<p>Fíjate que <code>campoTexto</code> se crea en la venta principal, y en el constructor de la ventana secundaria se pasa como parámetro el objeto correspondiente a la ventana principal, que aprovechará para acceder al campo texto de dicha ventana principal.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>package javafxcomunicando;
+
+import javafx.application.Application;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.FlowPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+/**
+ * Ejemplo para mostrar el paso de valores entre ventanas con JavaFX
+ * campoTexto se crea en la venta principal, y como se ve en el código
+ * se accede a él desde al ventana secundaria.
+ * 
+ * @author JJBH
+ */
+public class JavaFXComunicando extends Application {
+    
+    protected TextField campoTexto ;
+    private Label etiqueta ;
+        
+    @Override
+    public void start(Stage primaryStage) {
+        
+        primaryStage.setTitle("Principal");
+        
+        // Crear panel
+        FlowPane root = new FlowPane();
+        root.setAlignment(Pos.CENTER);
+        
+        // Crear escena
+        Scene scene = new Scene(root, 700, 200);
+        
+        // Crear una etiqueta 
+        etiqueta = new Label();
+        etiqueta.setText("Pulse botón para seleccionar valor a pegar en el campo");
+        
+        // Crear un campo de texto
+        campoTexto = new TextField();
+        // Crear un botón
+        Button boton = new Button("Pulsa para escoger un valor");
+        // Cuando se pulse el botón se abrirá una ventana secundaria
+        boton.setOnAction(eve-&gt; new VentanaSecundaria(this));
+            
+        // Añadir el campo de texto al panel
+        root.getChildren().addAll(etiqueta, campoTexto, boton);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    
+
+    /**
+     * Main para lanzar la aplicación.
+     * @param args 
+     */
+    public static void main(String[] args) {   
+        Application.launch(args);
+    }
+
+
+}
+
+/**
+ * Esta clase corresponde a la ventana secundaria que se abrirá cuando se pulse
+ * el botón desde la ventana principal.
+ * 
+ * @author JJBH
+ */
+class VentanaSecundaria {
+    
+    /**
+     * Constructor de la ventana secundaria. Recibe como parámetro el objeto
+     * correspondiente a la ventana principal, que aprovechará para acceder
+     * al campo texto de dicha ventana principal.
+     * 
+     * @param ventanaPrincipal Ventana principal.
+     */
+    VentanaSecundaria(JavaFXComunicando ventanaPrincipal) {
+        
+        // Crear un nuevo escenario
+        Stage secunStage = new Stage();
+        // Dar título
+        secunStage.setTitle("Ventana secundaria");
+        // Hacer la venta modal para evitar que se pueda volver a la principal
+        // sinb cerrar ésta.
+        secunStage.initModality(Modality.APPLICATION_MODAL);
+
+        // Crear un panel para depositar los controles botón sobre él.
+        FlowPane panel = new FlowPane();
+        panel.setAlignment(Pos.CENTER);
+        // Crear la escena pasándole el panel
+        Scene scene = new Scene(panel, 290, 95);
+        
+        // Crear un botón que al pinchar establezca el valor "A" en el campo
+        // de texto de la ventana principal, y luego cierre esta ventana 
+        // secundaria
+        Button boton = new Button("A");
+        boton.setOnAction(eve-&gt;{
+            ventanaPrincipal.campoTexto.setText("A");
+            secunStage.close();
+        });
+        
+        // Crear un botón que al pinchar establezca el valor "10" en el campo
+        // de texto de la ventana principal, y luego cierre esta ventana 
+        // secundaria
+        Button boton2 = new Button("10");
+        boton2.setOnAction(eve-&gt;{
+            ventanaPrincipal.campoTexto.setText("10");
+            secunStage.close();
+        });
+        
+        // Crear un botón que al pinchar establezca el valor "##" en el campo
+        // de texto de la ventana principal, y luego cierre esta ventana 
+        // secundaria
+        Button boton3 = new Button("##");
+        boton3.setOnAction(e-&gt;{
+            ventanaPrincipal.campoTexto.setText("##");
+            secunStage.close();
+        });  
+        
+        // Añadir los tres botones recién creados al panel
+        panel.getChildren().addAll(boton, boton2, boton3);
+        // Añadir la escena al escenario
+        secunStage.setScene(scene);
+        // Mostrar el escenario
+        secunStage.show();
+    }
+    
+}</code></pre>
+</div>
+</div>
+<p></p>
+<p>Puedes conseguir el proyecto completo descargándolo a continuación:</p>
+<p style="text-align: center;"><a class="paquete" title="Descargar el proyecto con el ejemplo de paso de información entre ventanas" href="PasarInformacion.zip" target="_blank">Paso de información entre ventanas</a><span class="tamano">(28 KB)</span></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id236">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta236_63" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b236" class="block iDevice_content">
+<p>A continuación vamos a ver otro ejemplo. La aplicación constará de tres clases:</p>
+<ul class="lista_verificacion">
+<li>Una sencilla clase <code>Persona</code> con solo dos atributos: <code>nombre</code> y <code>edad</code>.</li>
+<li>Una clase principal desde la cual se parte la ejecución de la aplicación, y que básicamente consta de una ventana con dos botones: uno para añadir objetos <code>Persona</code> que se creen añadiéndolos a una lista de este tipo de objetos, y otro para vaciar dicha lista.
+<ul>
+<li>Fíjate en este caso cómo se realiza el paso de información. Como verás en la clase <code>Main</code>, en el método <code>crearContenido</code> es donde se define la acción que debe hacerse cuando se pulse el botón de añadir.</li>
+<li>Y lo que ocurrirá es que se abrirá la ventana de dar de alta a una nueva persona, es decir, se invocará a <code>DialogAltaPersona</code>. Entonces, cuando se esté dando de alta en esa ventana una nueva persona y se le dé a aceptar, se creará un nuevo objeto de la clase <code>Persona</code>, en el método <code>aceptar()</code> de dicha clase.</li>
+<li>Y así, como no se canceló el alta comprobamos en la clase Main, con <code>!ventanaAlta.esCancelado() </code>y añadimos la persona a la lista.</li>
+<li>Observa, que en esa clase <code>Main</code> se invocó a la ventana de alta con el método <span tabindex="0" lang="es"><code>showAndWait()</code>, el cual muestra el objeto <code>Stage</code> y luego bloquea, o sea, espera a que se oculte el <code>Stage</code> antes de regresar al invocante.</span><br />
+<div class="highlighted-code language-java">
+<div>
+<pre><code>package pasarinformacion;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Optional;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+/**
+ * Clase principal de la aplicación
+ * @author Salvador Romero Villegas
+ */
+public class Main extends Application{
+        
+    // Lista de personas
+    private List&lt;Persona&gt; listaDePersona = new LinkedList&lt;&gt;() ;
+    
+    // Disposición donde aparecerán las personas
+    private VBox layoutListaPersonas = new VBox(10) ;
+    
+    /**
+     * Actualiza el layout que muestra la lista de personas, borra el layout
+     * y ñaade los datos de la lista.
+     */
+    private void actualizarLista() {
+        // Limpiar el layout
+        this.layoutListaPersonas.getChildren().clear();
+        
+        // Añadir los objetos persona al layout
+        for (Persona p:this.listaDePersona)
+            this.layoutListaPersonas.getChildren().add(new Text(p.toString()));
+    }
+    
+    
+    /**
+     * Crea el contenido de la ventana principal: un panel y dos botones, el de 
+     * añadir y el de vaciar.
+     * También añade la funcionalidad al pulsar el botón de añadir
+     * 
+     * @param primaryStage Ventana
+     */
+    public void crearContenido (Stage primaryStage) {
+        // Crear panel
+        BorderPane panel = new BorderPane();
+        // Crear el botón de añadir
+        Button agregar = new Button("Añadir Persona");
+        // Crear el botón de vaciar la lista
+        Button vaciar = new Button("Vaciar");
+        // Añadir los botones en la parte superior del panel
+        panel.setTop(new HBox(10, agregar, vaciar));
+        // Añade en el centro del pañerl el layout con la lista de personas
+        panel.setCenter(layoutListaPersonas);
+        
+        // Dar funcionalidad al pulsar el botón de añadir.
+        // Cuando se pulse en el botón de añadir persona se abrirá la ventana
+        // donde se escriben los datos de la nueva persona
+        agregar.setOnAction((a)-&gt;  {
+            DialogAltaPersona ventanaAlta = new DialogAltaPersona(primaryStage);
+            ventanaAlta.showAndWait();
+            // Si en la ventana de alta no se dio a cancelar
+            if (!ventanaAlta.esCancelado())
+                // Actualizar la lista con la nueva persona
+                listaDePersona.add(ventanaAlta.getPersona());
+            
+            // Actualizar el layout que se muestra, con los datos de la lista
+            actualizarLista();
+        } );
+        
+        // Dar funcionalidad al pulsar el botón de vaciar
+        vaciar.setOnAction((a)-&gt; { 
+            Alert avisa = new Alert(AlertType.CONFIRMATION,
+                    "¿Seguro que desea vaciar la lista?",
+                    ButtonType.NO,ButtonType.YES);
+            Optional&lt;ButtonType&gt; result = avisa.showAndWait();
+            if (result.orElse(ButtonType.NO) == ButtonType.YES) {
+                this.listaDePersona.clear();
+                actualizarLista();
+            }
+        });
+        
+        // Mostrar la lista de personas mediante el laayout que manejamos
+        actualizarLista();
+        
+        primaryStage.setScene(new Scene(panel, 300, 300));
+    }    
+    
+    public static void main(String[] args) {
+        Application.launch(args);
+    }
+    
+    @Override
+    public void start(Stage primaryStage) {
+        
+        primaryStage.setTitle("Lista de personas.");
+        crearContenido(primaryStage);               
+        primaryStage.show();
+        
+    }
+</code></pre>
+</div>
+</div>
+<br /><br /><br /></li>
+</ul>
+</li>
+<li>La clase <code>DialogAltaPersona</code> que será la ventana que se mostrará al pulsar el botón de añadir persona en la clase <code>Main</code> que acabamos de ver. Esta clase <code>DialogAltaPersona</code> la hacemos heredar de Stage: <br />
+<div class="highlighted-code language-java">
+<div>
+<pre><code>package pasarinformacion;
+
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+/**
+ * Clase que hereda de la clase Stage y que consiste en crear una ventana modal
+ * para añadir personas. 
+ * 
+ * @author Salvador Romero Villegas
+ */
+public class DialogAltaPersona extends Stage {
+    
+    private TextField inputNombre = new TextField();
+    private TextField inputEdad = new TextField();
+    private boolean cancelado = true;
+    private Persona persona;
+    
+    /**
+     * Constructor de la clase que genera el formulario de alta
+     * @param parentStage Ventana padre 
+     */
+    public DialogAltaPersona (Stage parentStage)  {        
+        crearContenido();
+        
+        //Modalidad "MODAL": bloquear eventos para que no vayan a otras venanas
+        initModality(Modality.APPLICATION_MODAL);
+        // Establecemos que el propietario es la clase padre
+        initOwner(parentStage.getOwner());        
+        // Establecer modo de ventana no redimensionable
+        resizableProperty().setValue(false);
+        // Establecer título de la ventana
+        this.setTitle("Añadir persona");
+
+    }
+    
+    /**
+     *  Crear la escena: panel, botones, etc. 
+     */
+    private void crearContenido()  {
+        // Crear panel
+        GridPane gp = new GridPane();        
+        gp.setVgap(10);
+        gp.setHgap(10);
+        gp.add(new Label("Nombre:"),0,0);
+        gp.add(inputNombre, 0, 1);
+        gp.add(new Label("Edad:"),1,0);
+        gp.add(inputEdad, 1, 1);
+     
+        // Crear el botón aceptar y asociarle la funcionalidad
+        Button aceptar = new Button(); 
+        aceptar.setDefaultButton(true);
+        aceptar.setText("_Aceptar");  
+        aceptar.setOnAction(a-&gt;this.aceptar());
+        
+        // Crear el botón cancelar y asociarle la funcionalidad
+        Button cancel = new Button("_Cancelar");        
+        cancel.setCancelButton(true);        
+        cancel.setOnAction(a-&gt;this.close());
+        
+        // Añadir los botones al panel
+        gp.add(aceptar, 0, 2);
+        gp.add(cancel, 1, 2);
+                
+        // Crear la escena añadiéndole el panel
+        Scene s = new Scene(gp);
+        setScene(s);
+    }
+    
+    /**
+     * Acciones a efectuar si se pulsa en el botón aceptar.
+     */
+    private void aceptar() {
+        try {
+            String nombre = inputNombre.getText();
+            int edad = Integer.parseInt(inputEdad.getText());
+            if (nombre.length()==0)  {
+                mostrarError("El nombre debe ser mayor de 0");
+            } else if (edad&lt;=0) {
+                mostrarError("Edad incorrecta");
+            } else  {
+                // Crear la persona y asignarle los datos tecleados
+                persona = new Persona() ;
+                persona.setEdad(edad) ;
+                persona.setNombre(nombre) ;
+                // Se han aceptado correctamente los datos introducidos
+                cancelado = false ;
+                // Cerrar esta ventana de alta
+                close() ;
+            }
+        } catch (NumberFormatException e) {
+            mostrarError("La edad es incorrecta.");
+            inputEdad.setText("");
+        }
+    }        
+    
+    /**
+     * Ventanita para mostrar mensajes de error
+     * @param error 
+     */
+    private void mostrarError(String error)  {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("Error en los datos.");        
+        alert.setContentText(error);
+        alert.showAndWait();
+    }
+        
+    /**
+     * Este método se usa en la clase Main para saber si se aceptó y por tanto
+     * se dio a aceptar en esta ventana de alta a una persona o bien si se dio
+     * a cancelar el alta.
+     * 
+     * @return false si no se dio de alta, true si se dio de alta a la persona.
+     */
+    public boolean esCancelado()  {
+        return cancelado;
+    }
+    
+    public Persona getPersona()  {
+        return persona;
+    }
+    
+}</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</section>
+<form name="feedback-form-quesFeedback0b236" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b236text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b236" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b236" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Puedes descargar el proyecto completo donde en el siguiente fichero comprimido:</p>
+<p class="texto_centrado"><a class="paquete" title="Descargar archivo java que contiene el proyecto PasarInformacion. " href="PasoInfo.zip" target="_blank">Proyecto PasoInfo.</a><span class="tamano">(447.90 KB)</span></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="724_ejemplo_javafx_con_scene_builder_y_netbeans.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="81_paso_de_informacin_entre_ventanas_usando_fxml.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

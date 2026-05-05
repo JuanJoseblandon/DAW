@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet? | Estructuras de datos internas (memoria) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-54"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructuras de datos internas (memoria)</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos internas (memoria)</a></li>
+   <li><a href="1_clases_y_mtodos_genricos_i.html" class="daddy">1.- Clases y métodos genéricos (I)</a>
+   <ul class="other-section">
+      <li><a href="11_clases_y_mtodos_genricos_ii.html" class="no-ch">1.1.- Clases y métodos genéricos (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="2__introduccin_a_las_colecciones.html" class="no-ch">2.-  Introducción a las colecciones</a></li>
+   <li class="current-page-parent"><a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="current-page-parent daddy">3.- Conjuntos (I).  ¿Qué son y cómo se declaran? HashSet</a>
+   <ul>
+      <li><a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="no-ch">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</a></li>
+      <li id="active"><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="active no-ch">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</a></li>
+      <li><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="no-ch">3.3.- Conjuntos (IV). Combinando datos de varias colecciones</a></li>
+      <li><a href="34_conjuntos_v_ordenando_sus_elementos.html" class="no-ch">3.4.- Conjuntos (V). Ordenando sus elementos</a></li>
+      <li><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="no-ch">3.5.- Conjuntos (VI). Ejemplos de uso.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_listas_i_definicin_y_diferencias_con_los_conjuntos.html" class="daddy">4.- Listas (I). Definición y diferencias con los conjuntos</a>
+   <ul class="other-section">
+      <li><a href="41_listas_ii_cmo_se_usan.html" class="no-ch">4.1.- Listas (II). ¿Cómo se usan?</a></li>
+      <li><a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="no-ch">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</a></li>
+      <li><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="no-ch">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</a></li>
+   </ul>
+   </li>
+   <li><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="daddy">5.- Conjuntos de pares clave/valor o diccionarios</a>
+   <ul class="other-section">
+      <li><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="no-ch">5.1.- Recorrido de los elementos de un diccionario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="daddy">6.- Iteradores (I). ¿Qué son y cómo se usan?</a>
+   <ul class="other-section">
+      <li><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="no-ch">6.1.- Iteradores (II). ¿Qué características debemos considerar?</a></li>
+   </ul>
+   </li>
+   <li><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="daddy">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</a>
+   <ul class="other-section">
+      <li><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="no-ch">7.1.- Algoritmos (II). Ordenando los elementos de la colección</a></li>
+      <li><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="no-ch">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</a></li>
+      <li><a href="73_algoritmos_iv_operaciones_agregadas.html" class="daddy">7.3. Algoritmos (IV). Operaciones agregadas</a>
+      <ul class="other-section">
+         <li><a href="731_operaciones_de_reduccin.html" class="no-ch">7.3.1. Operaciones de reducción</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I. Ejercicios resueltos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id147">
+<div class="iDevice emphasis0">
+<div id="ta147_73" class="block iDevice_content">
+<div class="elemento_derecha" style="text-align: left;">
+<div class="elemento_centrado"><a title="Ampliar imagen para &quot;Lista enlazada&quot;. (Se abre en una nueva ventana)" href="PROG09_CONT_R031_ListaEnlazada.JPG" target="_blank" rel="noopener"><img alt="Imagen que muestra una lista enlazada. Diferentes cajas, cada una representado un nodo que contiene datos, están enlazadas entre sí por apuntadores a memoria o punteros, que señalan la dirección en memoria del siguiente nodo con el siguiente dato.  En la imagen se muestra como podría ser un ejemplo de nodo en Java sencillo, se trata de una clase llamada Nodo con solo dos atributos, uno que se llama sig, y que es una instancia de una clase Nodo (siguiente nodo) y otro que es v, el cual es una instancia de la clase Object, y que está destinado a almacenar la información de nodo (sea del tipo que sea)." class="imagen_ampliable" src="PROG09_CONT_R031_ListaEnlazada_miniatura.JPG" title="Lista enlazada." width="200" height="76" /></a></div>
+<div class="elemento_centrado credenciales">Salvador Romero Villegas. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">Elaboración propia.</div>
+</div>
+<p>¿En qué se diferencian las estructuras <code>LinkedHashSet</code> y <code>TreeSet</code> de la estructura <code>HashSet</code>?</p>
+<p>Ya se comentó antes: la diferencia se encuentra básicamente en <strong>su funcionamiento interno </strong>que las hace más o menos eficientes y por tanto más o menos adecuadas<strong> según el tipo de operaciones más frecuentes</strong> que necesitemos realizar con los elementos que contienen.</p>
+<p>La estructura <code>LinkedHashSet</code> es una estructura que internamente funciona como una lista enlazada, aunque usa también <strong>tablas <span lang="en">hash</span></strong> para poder acceder rápidamente a los elementos. Una lista enlazada es una estructura similar a la representada en la imagen de la derecha, la cual está compuesta por nodos (elementos que forman la lista) que van enlazándose entre sí. Un nodo contiene dos cosas: <strong>el dato u objeto almacenado en la lista y una referencia al siguiente nodo de la lista</strong>. Si no hay siguiente nodo, se indica poniendo nulo (<code>null</code>) en la referencia al siguiente nodo.</p>
+<p>Las listas enlazadas tienen un montón de operaciones asociadas en las que no vamos a profundizar: eliminación de un nodo de la lista, inserción de un nodo al final, al principio o entre dos nodos,<abbr title="etcétera."> etc.</abbr></p>
+<p class="destacado"><strong>Gracias a las colecciones que nos proporciona <span lang="en">Java</span> podremos utilizar listas enlazadas sin tener que complicarnos, ni conocer, los detalles de su programación y funcionamiento interno, ya que nos las proporciona "listas para usar" cómodamente, con toda una serie de métodos disponibles, que nos proporciona su interfaz.</strong></p>
+<p>La estructura <code>TreeSet</code>, utiliza internamente árboles. Los árboles son como las listas pero mucho más complejos. En vez de tener un único elemento siguiente, pueden tener dos o más elementos siguientes, formando estructuras organizadas y jerárquicas.</p>
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a title="Ampliar imagen para &quot;Árbol binario&quot;. (Se abre en una nueva ventana)" href="PROG09_CONT_R032_ArbolBinario.JPG" target="_blank" rel="noopener"><img alt="Ilustración que muestra tres niveles de un árbol binario, formado por 5 nodos, así como una posible implementación básica de un nodo en Java. En la ilustración se ve un primer nivel (nivel 0), con un nodo inicial (padre) que enlaza con dos nodos del siguiente nivel. En el nivel 1 se ven dos nodos que enlazan a su vez con otros dos nodos en el nivel 2, dejando el valor nulo (null) en los enlaces donde no hay un nodo hijo. Una posible implentación para este nodo podría ser la que se muestra en la imagen, donde hay una clase llamada Nodo con tres atributos, los dos primeros se llaman izq y dch, y son instancias de la clase Nodo, usados para almacenar la posición de los nodos hijo de este nodo. El tercer atributo es v, una instancia de la clase Object utilizada para almacenar el dato almacenado en el árbol." class="imagen_ampliable" src="PROG09_CONT_R032_ArbolBinario_miniatura.jpg" title="Árbol binario." /></a></div>
+<div class="elemento_centrado credenciales">Salvador Romero Villegas. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">Elaboración propia.</div>
+</div>
+<p>Los nodos se diferencian en dos tipos: <strong>nodos padre y nodos hijo</strong>; un nodo padre puede tener varios nodos hijo asociados (depende del tipo de árbol), dando lugar a una estructura que parece un árbol invertido (de ahí su nombre).</p>
+<p>En la figura de la derecha se puede apreciar un árbol donde cada nodo puede tener dos hijos, denominados izquierdo (<abbr title="Izquierdo o izquierda.">izq</abbr>) y derecho (<abbr title="Derecha o derecho.">dch</abbr>). Puesto que un nodo hijo puede también ser padre a su vez, los árboles se suelen visualizar para su estudio por niveles para entenderlos mejor, donde cada nivel contiene hijos de los nodos del nivel anterior, excepto el primer nivel (que no tiene padre).</p>
+<p>Los árboles son estructuras complejas de manejar y que permiten operaciones muy sofisticadas. Los árboles usados en los <code>TreeSet</code>, los árboles rojo-negro, son árboles auto-ordenados, es decir, que al insertar un elemento, éste queda ordenado por su valor de forma que al recorrer el árbol, pasando por todos los nodos, los elementos salen ordenados. El ejemplo mostrado en la imagen es simplemente un árbol binario, el más simple de todos.</p>
+<p>Nuevamente, no se va a profundizar en las operaciones que se pueden realizar en un árbol a nivel interno (inserción de nodos, eliminación de nodos, búsqueda de un valor, <abbr title="etcétera">etc.</abbr>). <strong>Nos aprovecharemos de las colecciones para hacer uso de su potencial.</strong> En la siguiente tabla tienes un uso comparado de <code>TreeSet</code> y <code>LinkedHashSet</code>. Su creación es similar a como se hace con <code>HashSet</code>, simplemente sustituyendo el nombre de la clase <code>HashSet</code> por una de las otras. <strong>Ni <code>TreeSet</code>, ni <code>LinkedHashSet</code> admiten duplicados</strong>, como conjuntos que son, y se usan los mismos métodos ya vistos antes, los existentes en la interfaz <code>Set</code> (que es la interfaz que implementan).</p>
+<table class="tabla" summary="Tabla que muestra ejemplos de utilización de TreeSet y LinkedHashSet, mostrando un trozo de código para cada uno de ellos, y el resultado que se mostraría después de ejecutar dicho código."><caption>Ejemplos de utilización de los conjuntos <code>TreeSet</code> y <code>LinkedHashSet</code>.</caption>
+<thead>
+<tr>
+<td> </td>
+<th scope="col">Conjunto <code>TreeSet</code>.</th><th scope="col">Conjunto <code>LinkedHashSet</code>.</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Ejemplo de uso</th>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Set &lt;Integer&gt; conjunto;
+conjunto = new TreeSet&lt;Integer&gt;();     
+conjunto.add(new Integer(4));
+conjunto.add(new Integer(3));
+conjunto.add(new Integer(1));
+conjunto.add(new Integer(99));
+for ( Integer elemento : conjunto ) {
+    System.out.println(i);
+}</code></pre>
+</div>
+</div>
+</td>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Set &lt;Integer&gt; conjunto;
+conjunto = new LinkedHashSet&lt;Integer&gt;();     
+conjunto.add(new Integer(4));
+conjunto.add(new Integer(3));
+conjunto.add(new Integer(1));
+conjunto.add(new Integer(99));
+for ( Integer elemento: conjunto ){
+    System.out.println(elemento);
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr><th scope="row">Resultado mostrado por pantalla</th>
+<td>
+<p>1 3 4 99</p>
+<p>(el resultado sale ordenado por valor)</p>
+</td>
+<td>
+<p>4 3 1 99</p>
+<p>(los valores salen ordenados según el momento de inserción en el conjunto)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id148">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-148_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion148_60" class="block question iDevice_content">
+<p><strong>Un &aacute;rbol cuyos nodos solo pueden tener un &uacute;nico nodo hijo, en realidad es una lista. &iquest;Verdadero o falso?</strong></p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i148_63" class="sr-av"><a href="#answer-148_63">Opción 1</a></label><input type="radio" name="option148_60" id="i148_63" class="exe-radio-option exe-radio-option-0-2-148_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-148_63"><div id="taans148_63" class="block iDevice_content">
+<p>Verdadero.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i148_93" class="sr-av"><a href="#answer-148_93">Opción 2</a></label><input type="radio" name="option148_60" id="i148_93" class="exe-radio-option exe-radio-option-1-2-148_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-148_93"><div id="taans148_93" class="block iDevice_content">
+<p>Falso.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b148_60" class="feedback js-hidden">
+<div id="taf148_63" class=" iDevice_content">
+<p>Acertaste.</p>
+</div>
+</section>
+<section id="sa1b148_60" class="feedback js-hidden">
+<div id="taf148_93" class=" iDevice_content">
+<p>Incorrecto. Revisa el tema para entender en qu&eacute; has fallado.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-148_63">Opción correcta</a><span> (<a href="#sa0b148_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-148_93">Incorrecto</a><span> (<a href="#sa1b148_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

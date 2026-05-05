@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.4.- Operaciones avanzadas con cadenas de caracteres (II). | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-74"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li class="current-page-parent"><a href="2__cadenas_de_caracteres.html" class="current-page-parent daddy">2.-  Cadenas de caracteres.</a>
+   <ul>
+      <li class="current-page-parent"><a href="21_operaciones_con_cadenas_de_caracteres.html" class="current-page-parent daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul>
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li id="active"><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="active no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id303">
+<div class="iDevice emphasis0">
+<div id="ta303_154" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="corona-g90fac9210_640.jpg" alt="Letras en el juego Scrabble" title="Letras" style="float: right;" width="240" height="160" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/corona-covid-medicina-enfermo-4937348/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Markus Distelrath en Pixabay (se abre en una nueva ventana).">Markus Distelrath</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Podríamos continuar revisando uno por uno todos los métodos disponibles para la clase <code>String</code>, pero acabaría convirtiéndose en una actividad tediosa y, probablemente, aburrida. En general, la idea es conocer los métodos más básicos e importantes de una clase y a continuación empezar a utilizarla para comprender bien su funcionamiento. Si más adelante intuimos que necesitamos algo más, siempre podemos consultar la documentación javadoc de la <acronym title="Application Programming Interface">API</acronym> de Java para la clase <code>String</code> e investigar si hay algún método que puede ayudarnos a resolver nuestro problema:</p>
+<p style="text-align: center;"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="Enlace a la documentación de la API para la clase String (se abre en una nueva ventana)." target="_blank" class="html">Documentación javadoc de la clase <code>String</code></a></p>
+<p>Por el momento nos vamos a limitar a enumerar y describir brevemente algunos métodos más cuya potencia descubrirás más adelente pero que aún no podrás utilizar porque hacen uso de algunos conceptos y herramientas que todavía no conocemos. Según vayamos avanzando, podremos hacer uso de ellos en nuestros programas:</p>
+<p></p>
+<table class="tabla" summary="Tabla que expone alguno de los métodos más importantes de la clase String. En la primera columna aparece la sintaxis el método, en la segunda columna una descripción que explica para que sirve dicho método."><caption>Algunos métodos avanzados de la clase <code>String</code>.</caption>
+<thead>
+<tr><th scope="col">Método</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td scope="row"><span style="font-size: medium;"><strong><code>boolean matches (String regex)</code></strong></span></td>
+<td>Indica si la expresión regular <code>regex</code>, que se pasa como parámetro, "encaja" (o hace "<em></em><span lang="en"><em>match</em></span>") con la cadena. Dado que aún no sabemos lo que es una <strong>expresión regular</strong>, todavía no vamos a utilizar este método. Lo dejaremos para los siguientes apartados.</td>
+</tr>
+<tr>
+<td scope="row"><span style="font-size: medium;"><strong><code>String[] split (String regex)</code></strong></span></td>
+<td>Divide una cadena en fragmentos teniendo en cuenta que cada fragmento estaría separado en la cadena original mediante una cadena de caracteres representada por la expresión regular <code>regex</code>, que se pasa como parámetro. El método devuelve un array de <code>regex</code> donde cada elemento del array será cada uno de los fragmentos encontrados. Nuevamente, como tampoco sabemos lo que es un <strong>array</strong> (ni una <strong>expresión regular</strong>), tendremos que dejarlo para más adelante.</td>
+</tr>
+<tr>
+<td scope="row">
+<p><span style="font-size: medium;"><strong><code>String replaceAll (String regex, String replacement)</code></strong></span></p>
+</td>
+<td>Similar al método <code>replace</code> que ya has visto, pero permitiendo que la sustitución no sea simplemente para las subcadenas que sean exactamente iguales al parámetro pasado (<code>regex</code>), sino que se nos permite especificar toda una familia de cadenas que cumplan unas determinadas características (<strong>expresión regular</strong>).</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

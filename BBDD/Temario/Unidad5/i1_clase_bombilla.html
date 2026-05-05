@@ -1,0 +1,999 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>I.1.- Clase Bombilla | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-78"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li><a href="4_atributos.html" class="daddy">4.- Atributos</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li><a href="5_mtodos.html" class="daddy">5.- Métodos</a>
+   <ul class="other-section">
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="current-page-parent daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul>
+      <li id="active"><a href="i1_clase_bombilla.html" class="active no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="i2_clase_ticket.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">I.1.- Clase Bombilla</h1></div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id256">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta256_148" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b256" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 100px;"><img src="light-311119_640.png" alt="Dibujo de una bombilla" title="Bombilla" style="float: right;" width="80" height="126" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/luz-bombilla-filamento-l%C3%A1mpara-311119/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Clker-Free-Vector-Images en Pixabay (se abre en una nueva ventana).">Clker-Free-Vector-Images</a> <span class="license"><span class="sep">(</span><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep"></span></span><span class="sep">)</span></span></div>
+</div>
+<p>Se nos ha planteado implementar una clase que represente un modelo básico de funcionamiento de una <strong>bombilla</strong>:</p>
+<ul class="lista_verificacion">
+<li><strong>estado lumínico de la bombilla</strong> (<strong>encendida</strong> o <strong>apagada</strong>),</li>
+<li><strong>número de veces que ha sido encendida</strong> desde que se fabricó.</li>
+</ul>
+<p>Además de eso se querría mantener un registro de <strong>cuántas bombillas han sido creadas</strong> hasta el momento y <strong>cuántas de ellas se encuentran encendidas</strong>.</p>
+<p>Teniendo en cuenta los supuestos anteriores, ¿qué atributos te plantearías incluir en una clase <code>Bombilla</code>?</p>
+</div>
+<form name="feedback-form-quesFeedback0b256" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b256text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b256" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b256" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Lo primero que podríamos hacer es considerar qué atributos serían de cada bombilla en particular (atributos de objeto o de instancia) y si habría algún atributo que fuera genérico (de clase).</p>
+<p>Para representar el <strong>estado lumínico de una bombilla</strong> en un momento dado (<strong>encendida</strong> o <strong>apagada</strong>) podría usarse un atributo de tipo <strong>lógico</strong> o <strong>booleano</strong> (<code>boolean</code> en <span lang="en">Java</span>), que permite representar dos estados posibles (<code>true</code> y <code>false</code>). Claramente ese atributo sería <strong>de objeto</strong> (cada bombilla tendrá su estado) y <strong>mutable</strong> o variable (el estado puede cambiar a lo largo de la vida del objeto). Un nombre adecuado para este atributo podría ser <code>estado</code>.</p>
+<p>Para almacenar la <strong>cantidad de veces que una bombilla ha sido encendida</strong>, podría usarse un atributo de tipo <strong>entero</strong> (por ejemplo <code>int</code>). Este atributo también sería de objeto (es una característica de cada bombilla en particular) y <strong>mutable</strong> (cada vez que se encienda se incrementará en uno). Un identificador apropiado para esta característica podría ser, por ejemplo, <code>vecesEncendida</code>.</p>
+<p>En cuanto al <strong>número de bombillas que han sido creadas</strong>, parece claro que sí se trata de un <strong>atributo de clase </strong>(<code>static</code> en Java), una característica no específica de cada bombilla sino de la clase en general. Para este atributo podría usarse un tipo <strong>entero</strong> (<code>int</code> por ejemplo). Este atributo también será <strong>mutable</strong>, pues irá creciendo a medida que se fabriquen más bombillas (se ejecute algún constructor de la clase). Como nombre para este atributo podríamos escoger, por ejemplo, <code>bombillasCreadas</code>.</p>
+<p>Por último, para guardar la <strong>cantidad de bombillas que hay encendidas</strong> en cada momento nos encontramos ante otra propiedad no específica de cada bombilla en particular sino genérica de la clase (atributo <strong>de clase</strong>), <strong>mutable</strong> y de tipo <strong>entero</strong> (<code>int</code>). Un identificador adecuado podría ser <code>bombillasEncendidas</code>.</p>
+<p>Respecto a la <strong>visibilidad</strong>, como suele ser habitual, lo más prudente es que todos estos atributos sean <strong>privados</strong> (<code>private</code>).</p>
+<p>A modo de resumen, podríamos construir la siguiente tabla de atributos:</p>
+<table class="tabla" style="width: 100%;" summary="Tabla de cinco columnas que contiene para cada fila el nombre, el tipo, la visibilidad, la inmutabilidad y la estaticidad de un conjunto de atributos de la clase Bombilla" border="1"><caption>Atributos de la clase <code>Bombilla</code></caption>
+<tbody>
+<tr><th scope="col">Nombre</th><th scope="col">Tipo</th><th scope="col">Visibilidad</th><th scope="col">Mutabilidad</th><th scope="col">De objeto/de clase</th></tr>
+<tr>
+<td><code>bombillasCreadas</code></td>
+<td><code>int</code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code>bombillasEncendidas</code></td>
+<td><code>int</code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code><code>estado</code></code></td>
+<td><code>boolean</code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>vecesEncendida</code></td>
+<td><code>int</code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>A partir de la tabla podemos comenzar a implementar la clase <code>Bombilla</code> en <span lang="en">Java</span> con esos atributos:</p>
+<div class="highlighted-code language-java">
+<pre><code>public class Bombilla {
+
+    // Atributos de clase
+    private static int bombillasCreadas;
+    private static int bombillasEncendidas;
+    
+    // Atributos de objeto
+    private boolean estado;
+    private int vecesEncendida;
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion1b256" class="block iDevice_content">
+<p>Una vez que tenemos un núcleo básico de atributos para la clase, se nos plantean los siguientes constructores:</p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li>un <strong>constructor con un solo parámetro</strong> (<strong>estado inicial</strong> de la bombilla), que hará que la bombilla tenga ese estado inicial al crearse;</li>
+<li>un <strong>constructor sin parámetros</strong>, que hará que la bombilla al crearse esté <strong>apagada</strong>.</li>
+</ol>
+<p>Implementa esos constructores en <span lang="en">Java</span> y añade, si lo consideras necesario, los atributos adicionales que estimes oportuno.</p>
+</div>
+<form name="feedback-form-quesFeedback1b256" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b256text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b256" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b256" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Para implementar el primer constructor, habría que realizar las siguientes acciones:</p>
+<ol>
+<li>asignar al <strong>estado de la bombilla</strong> el estado inicial que se ha pasado como parámetro. No es necesario llevar a cabo ninguna comprobación para ese parámetro pues sólo podrá tener dos valores (<code>true</code> o <code>false</code>) y ambos son posibles y válidos para el constructor;</li>
+<li>iniciar el contador que registra el <strong>número de veces que la bombilla ha sido encendida</strong>. Aquí habrá que tener en cuenta si el estado inicial va a ser apagado o encendido, para que este contador comience desde cero o desde uno;</li>
+<li>actualizar los atributos de clase: <strong>cantidad de bombillas creadas</strong> y <strong>cantidad de bombillas encendidas</strong>.</li>
+</ol>
+<p>Dado que no es posible que se produzca ninguna situación anómala o errónea durante la ejecución de este constructor, no se incluirá en su cabecera que lanza (<code>throws</code>) ninguna excepción.</p>
+<p>Respecto al <strong>segundo constructor</strong>, podríamos implementarlo fácilmente si hacemos uso de todo lo que hemos llevado a cabo ya en el primero y realizando una simple llamada a <code>this()</code> con el parámetro con valor a <code>false</code> (bombilla apagada), es decir <code>this(false)</code>. Ahora bien, si seguimos la política de evitar al máximo el uso de literales en los métodos y usar constantes para que de este modo los literales estén escritos sólo una vez (en la definición de la constante), podríamos utilizar un <strong>atributo de clase (<code>static</code>) constante (<code>final</code>)</strong> para almacenar cuál sería el valor por omisión (o por defecto, del inglés "<span lang="en">by default</span>") del estado de una bombilla al crearse. Este atributo, dado que va a ser constante y además refleja cierta información de interés desde fuera de la clase, puede declararse como <strong>público</strong> (<code>public</code>):</p>
+<div class="highlighted-code language-java">
+<pre><code>// Atributos de clase constantes
+  public static final boolean DEFAULT_ESTADO_INICIAL = false;    </code>
+</pre>
+</div>
+<p>Teniendo en cuenta todo lo anterior, la implementación de ambos constructores en <span lang="en">Java</span> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre><code>public Bombilla(boolean estadoInicial) {
+
+  // Inicializamos el estado    
+  this.estado = estadoInicial;
+
+  // Si el primer estado es encendida, ya ha sido encendida una vez
+  this.vecesEncendida = estadoInicial ? 1 : 0;
+
+  // Actualizamos atributos de clase        
+  Bombilla.bombillasCreadas++;
+  Bombilla.bombillasEncendidas += this.estado ? 1 : 0;        
+}
+
+public Bombilla() {
+    this(Bombilla.DEFAULT_ESTADO_INICIAL);
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion2b256" class="block iDevice_content">
+<p>Analiza e implementa los <strong><span lang="en">getter</span></strong> (métodos <strong><span lang="en">get</span></strong>) que consideres apropiado que esta clase podría tener.</p>
+</div>
+<form name="feedback-form-quesFeedback2b256" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b256text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b256" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b256" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Dados los atributos que tenemos hasta el momento, podríamos definir los siguientes métodos <span lang="en">get</span> para obtener <strong>propiedades del objeto</strong> (estado):</p>
+<ul class="lista_verificacion">
+<li><code>getEstado</code>, para consultar el estado actual de la bombilla (apagada/<code>false</code> o encendida/<code>true</code>);</li>
+<li><code>isEncendida</code>, que devuelva <code>true</code> si la bombilla está encendida (estado encendido/<code>true</code>);</li>
+<li><code>isApagada</code>, que devuelva <code>true</code> si la bomilla está apagada (estado apagada/<code>false</code>);</li>
+<li><code>getVecesEncendida</code>, para obtener el número de veces que ha sido encendida.</li>
+</ul>
+<div class="highlighted-code language-java">
+<pre><code>public boolean getEstado() {
+  return this.estado;
+}
+
+public boolean isEncendida() {
+  return this.estado;
+}
+
+public boolean isApagada() {
+  return !this.estado;
+}
+
+public int getVecesEncendida() {
+  return this.vecesEncendida;
+}</code></pre>
+</div>
+<p>Respecto a la consulta de <strong>propiedades de la clase</strong>, podríamos plantearnos los siguientes métodos:</p>
+<ul class="lista_verificacion">
+<li><code>getBombillasCreadas</code>, para obtener la <strong>cantidad de bombillas creadas</strong> hasta el momento;</li>
+<li><code>getBombillasEncendidas</code>, para obtener la <strong>cantidad de bombillas encendidas</strong> en el momento actual.</li>
+</ul>
+<p>Es razonable que estos dos <span lang="en">getter</span> sean declarados como <strong>métodos de clase o estáticos</strong> (<code>static</code>), pues no hacen uso alguno de los atributos de objeto y por tanto podrían usarse independientemente de la existencia de instancias de la clase <code>Bombilla</code>.</p>
+<div class="highlighted-code language-java">
+<pre><code>public static int getBombillasCreadas() {
+  return Bombilla.bombillasCreadas;
+}
+
+public static int getBombillasEncendidas() {
+  return Bombilla.bombillasEncendidas;
+}</code></pre>
+</div>
+<p>Observa cómo al consultar <strong>atributos de objeto</strong> hemos utilizado la referencia <code>this</code> y sin embargo para acceder a <strong>atributos de clase</strong> hemos recurrido a la referencia de la propia clase (<code>Bombilla</code>).</p></div>
+</form>
+<div id="taquesQuestion3b256" class="block iDevice_content">
+<p>Una vez que ya disponemos de constructores y métodos de consulta de atributos, es el momento de plantearse un posible método <code>toString</code> para esta clase. Nos han propuesto el siguiente formato de salida:</p>
+<div>
+<pre><code>Bombilla xxx. Se ha encendido zzz veces</code></pre>
+</div>
+<p>donde xxx será el estado de la bombilla (encendida o apagada) y zzz el número de veces que ha sido encendida hasta el momento. También queremos que si la bombilla se ha encendido una sola vez, aparezca la palabra "vez" (singular) y no "veces" (plural). Por ejemplo:</p>
+<div>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Bombilla apagada. Se ha encendido 0 veces
+Bombilla encendida. Se ha encendido 1 vez
+Bombilla apagada. Se ha encendido 3 veces</code></pre>
+</div>
+</div>
+</div>
+<p>Teniendo en cuenta esas especificaciones, implementa un método <code>toString</code> en <span lang="en">Java</span> para la clase <code>Bombilla</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback3b256" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b256text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b256" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback3b256" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Teniendo en cuenta las especificaciones anteriores, el método <code>toString</code> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre><code>@Override
+public String toString() {
+  String resultado = String.format("Bombilla %s. Se ha encendido %d %s",
+    this.estado ? "encendida" : "apagada",
+    this.vecesEncendida, 
+    this.vecesEncendida == 1 ? "vez" : "veces");
+
+    return resultado;
+}</code></pre>
+</div>
+<p>Si te fijas, se ha incluido la anotación <code>@Override</code> antes de la cabecera del método para indicar que se trata de un método "sobrescrito" o "redefinido" (<span lang="en">override</span>). Esto es porque toda clase en <span lang="en">Java</span> ya dispone de ese método <code>toString</code> heredado de la clase <code>Object</code> y lo que hemos hecho ha sido volverlo a escribir para adaptarlo a nuestras necesidades. Esto lo comprenderás mejor cuando trabajes más adelante con la <strong>herencia</strong>.</p></div>
+</form>
+<div id="taquesQuestion4b256" class="block iDevice_content">
+<p>Respecto a los posibles <strong>métodos de acción</strong> que se pueden aplicar sobre un objeto bombilla se ha pensado en los siguientes:</p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li>método para <strong>encender</strong> una bombilla;</li>
+<li>método para <strong>apagar</strong> una bombilla;</li>
+<li>método para <strong>conmutar</strong> el estado de una bombilla (pasarla de encendida a apagada o viceversa).</li>
+</ol>
+<p>Debes tener en cuenta que <strong>una bombilla sólo puede ser encendida si aún no lo está</strong>. Si se intenta encender una bombilla encendida que ya lo está, debería producirse algún tipo de señal que indicara que se ha intentado llevar a cabo una acción que no se podía o no se debía realizar en ese momento. ¿Qué mecanismo proporciona <span lang="en">Java</span> para informar sobre ese tipo de circunstancias? También debería tenerse en cuenta lo mismo para cuando intente apagarse una bombilla que ya se encuentra apagada.</p>
+<p>También <strong>debes reflexionar acerca de todos los efectos que producen estas acciones sobre todos y cada uno de los atributos de objeto y de clase</strong>, no sólo de los más evidentes. Está claro que encender o apagar una bombilla afectará al estado lumínico de la bombilla (apagada o encendida), pero es probable que afecte también a otros atributos (número de veces que se ha encendido la bombilla, cantidad de bombillas encendidas, <abbr title="etcétera">etc.</abbr>). Ese análisis habrá que realizarlo siempre que se vaya a implementar un nuevo método.</p>
+<p>Teniendo en cuenta todas las consideraciones anteriores, implementa esos tres métodos para la clase <code>Bombilla</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback4b256" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback4b256text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback4b256" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback4b256" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Los tres métodos planteados se basan básicamente en el cambio de estado de encendido a apagado o viceversa.</p>
+<p>Analicemos cada uno de los métodos, observando:</p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li>qué circunstancias hay que comprobar antes de llevar a cabo ninguna modificación;</li>
+<li>qué errores pueden producirse y cómo podemos informar de ellos;</li>
+<li>a qué atributos afectaría la ejecución de esa acción.</li>
+</ol>
+<p>Para el caso del método para <strong>encender</strong> una bombilla (método <code>encender</code>):</p>
+<ol class="lista_esquema">
+<li>si la bombilla ya está encendida, no hay que hacer nada, si acaso enviar una señal de que la bombilla no puede encenderse porque ya lo está;</li>
+<li>podríamos informar de que se intenta encender una bombilla ya encendida mediante una excepción de tipo <code>IllegalStateException</code>;</li>
+<li>si finalmente hay que encender la bombilla porque en efecto estaba apagada, los atributos afectados serían:<ol>
+<li>el <strong>estado de la bombilla</strong> (atributo <code>estado</code>), que pasaría de apagado (<code>false</code>) a encendido (<code>true</code>);</li>
+<li>el <strong>número de veces que la bombilla ha sido encendida</strong> (atributo <code>vecesEncendida</code>), que habría que incrementarlo en uno;</li>
+<li>el <strong>número de bombillas encendidas en ese momento</strong> (atributo de clase <code>bombillasEncendida</code>), que habría que incrementarlo también en uno.</li>
+</ol></li>
+</ol>
+<p>Teniendo en cuenta todo eso, la implementación del método <code>encender</code> en <span lang="en">Java</span> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre><code>public void encender() throws IllegalStateException {        
+  if ( !this.estado ) { // Comprobamos que la bombilla no esté aún encendida
+    this.estado = true;              // Pasamos el estado a encendida
+    this.vecesEncendida++;           // Incrementamos el número de veces que la bombilla ha sido encendida
+    Bombilla.bombillasEncendidas++;  // Incrementamos la cantidad de bombillas encendidas en este momento
+  } else {  // Si la bombilla ya está encendida se lanza una excepción
+    throw new IllegalStateException ("intentando encender bombilla ya encendida");            
+  }
+}</code></pre>
+</div>
+<p>Dado que este método no necesita devolver ningún valor, será de tipo <code>void</code>.</p>
+<p>Respecto a la acción de <strong>apagar</strong> una bombilla (método <code>apagar</code>), será similar, teniendo en cuenta que hace prácticamente lo contrario. En este caso los atributos afectados serían únicamente <code>estado</code> y <code>bombillasEncendidas</code>.</p>
+<div class="highlighted-code language-java">
+<pre><code>public void apagar () throws IllegalStateException  {
+  if ( !this.estado ) {  // Si la bombilla ya está apagada se lanza una excepción
+    throw new IllegalStateException ("Intentando apagar bombilla apagada");
+  } else {  // Sólo si la bombilla está encendida se llevan a cabo las acciones
+    this.estado= false;              // Pasamos el estado a apagada
+    Bombilla.bombillasEncendidas--;  // Decrementamos en uno el número de bombillas encendidas en este momento
+  }
+}</code></pre>
+</div>
+<p>En cuanto a la acción de <strong>conmutar</strong> el estado de una bombilla (método <code>conmutar</code>), no podrá producirse ningún error, pues se pasará al estado contrario en el que se encuentre la bombilla:   <code>this.estado= !this.estado</code>.</p>
+<p>Aunque claro, como hacemos siempre, hay que tener en cuenta también el resto de atributos que pueden verse afectados:</p>
+<div class="highlighted-code language-java">
+<pre><code>public void conmutar()  {
+  this.estado= !this.estado;  // Cambiamos al contrario o "conmutamos" el valor del estado   
+  if (this.estado) {  // Si la hemos encendido (estado es true) 
+    this.vecesEncendida++;             // Incrementamos el número de veces que se ha encendido
+    Bombilla.bombillasEncendidas++;    // Incrementamos la cantidad de bombillas encendidas
+  } else {  // Si la hemos apagado (estado es false)
+    Bombilla.bombillasEncendidas--;    // Decrementamos la cantidad de bombillas encendidas
+  }        
+}</code></pre>
+</div>
+<p>Esa sería una manera de plantearse el método implementándolo desde cero. Ahora bien, podríamos aprovechar todo lo que ya había implementado (métodos <code>encender</code> y <code>apagar</code>) de manera que les dejaríamos a ellos el trabajo "duro" de actualizar en cada caso los atributos afectados:</p>
+<div class="highlighted-code language-java">
+<pre><code>public void conmutar()  {
+  if (this.estado)
+    apagar();    // Si la bombilla está encendida, la apagamos           
+  else 
+    encender();  // Si la bombilla está apagada, la encendemos
+}</code></pre>
+</div>
+<p>Implementar el método <code>conmutar</code> de esta manera tiene la ventaja de, además de ahorrar código (que en realidad tampoco ahorramos tanto), separar el trabajo de cada método y responsabilizar a cada uno de una función específica y diferente (sin mezclar acciones comunes). Así, de esta manera, dejamos al método <code>apagar</code> la responsabilidad de actualizar adecuadamente todos los atributos que haya que modificar cuando se apague una bombilla (y lo mismo para el método <code>encender</code>). Como consecuencia, el método <code>conmutar</code> se sirve de ellos y no vuelve a implementar esas acciones.</p>
+<p>Si en el futuro se ampliara la clase <code>Bombilla</code> para que contuviera y gestionara más atributos, es probable que el método <code>conmutar</code> no hubiera que modificarlo, pues la actualización de atributos se realizaría en los métodos <code>apagar</code> y <code>encender</code> y no aquí. De esa manera estaríamos implementando un <strong>código mucho más independiente y fácil de gestionar</strong>.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id258">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta258_148" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 180px;"><img src="lamp-3489395_640.jpg" alt="Hilera de bombillas encendidas" title="Bombillas" style="float: right;" width="180" height="120" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/l%C3%A1mpara-la-luz-iluminaci%C3%B3n-bombilla-3489395/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Bru-nO en Pixabay (se abre en una nueva ventana).">Bru-nO</a> <span class="license"><span class="sep">(</span><span class="license"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep"></span></span><span class="sep"></span></span><span class="sep">)</span></span></div>
+</div>
+<p>Una vez que disponemos de la clase <code>Bombilla</code>, la idea es poder utilizarla en tus programas, llevando a cabo acciones como:</p>
+<ul class="lista_verificacion">
+<li><strong>declaración de variables</strong> referencia a esa clase,</li>
+<li><strong>creación de objetos</strong> instancia esa clase mediante la invocación a <strong>constructores</strong>,</li>
+<li><strong>manipulación</strong> de esos objetos a través de sus métodos,</li>
+<li>visualización por la consola de los atributos de los objetos mediante el uso de <span lang="en">getters</span> o del método <code>toString</code>,</li>
+<li><abbr title="etcétera">etc</abbr>.</li>
+</ul>
+</div>
+<div id="taquesQuestion0b258" class="block iDevice_content">
+<p>Supongamos que queremos implementar un programa en <span lang="en">Java</span> que use objetos de la clase <code>Bombilla</code> para llevar a cabo lo siguiente:</p>
+<ol class="lista_esquema">
+<li>se muestre la <strong>cantidad de bombillas creadas</strong> hasta el momento mediante el uso de método <code>getBombillasCreadas;</code></li>
+<li>se muestre la <strong>cantidad de bombillas encendidas</strong> en este momento mediante el uso de método <code>getBombillasEncendidas;</code></li>
+<li>se declaren dos variables <code>b1</code>, <code>b2</code> y <code>b3</code> de tipo referencia a la clase <code>Bombilla;</code></li>
+<li>se <strong>instancie una primera bombilla</strong>, se asigne su referencia a la variable <code>b1</code> usando el <strong>constructor sin parámetros</strong> y se muestre su estado usando el método <code>getEstado;</code></li>
+<li>se <strong>instancie una segunda bombilla</strong> <strong>encendida</strong>, se asigne su referencia a la variable <code>b2</code> usando el <strong>constructor con párametros</strong> y se muestre su estado usando el método <code>toString;</code></li>
+<li>para esta segunda bombilla , que se realicen las siguientes acciones (tras cada acción se mostrará su estado mediante el método <code>toString</code>):<ol>
+<li>se <strong>conmuta</strong> su estado <strong>tres veces seguidas</strong> mediante un bucle <code>for;</code></li>
+<li>se <strong>enciende</strong> dos veces seguidas;</li>
+<li>se <strong>apaga</strong> una vez;</li>
+<li>se <strong>vuelve</strong> a encender;</li>
+</ol></li>
+<li>se <strong>instancie una tercera bombilla</strong> <strong>encendida</strong>, se asigne su referencia a la variable <code>b3</code> usando el <strong>constructor con párametros</strong> y se muestre su estado usando el método <code>toString;</code></li>
+<li>se muestre la <strong>cantidad de bombillas creadas</strong> hasta este momento mediante el uso de método <code>getBombillasCreadas;</code></li>
+<li>se muestre la <strong>cantidad de bombillas encendidas</strong> en este momento mediante el uso de método <code>getBombillasEncendidas</code>.</li>
+</ol>
+<p>¿Qué salida por pantalla deberíamos obtener?</p>
+</div>
+<form name="feedback-form-quesFeedback0b258" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b258text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b258" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b258" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Deberíamos obtener una salida del siguiente tipo:</p>
+<div>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>
+Número de bombillas creadas hasta el momento: 0.
+Número de bombillas encendidas en este momento: 0.
+
+Declarando variables b1, b2, b3 de tipo referencia a objetos Bombilla.
+
+Creación de b1.
+Estado de b1: false
+
+Creación de b2.
+Estado de b2: Bombilla encendida. Se ha encendido 1 vez.
+
+Conmutando estado de b2.
+Estado de b2: Bombilla apagada. Se ha encendido 1 vez.
+
+Conmutando estado de b2.
+Estado de b2: Bombilla encendida. Se ha encendido 2 veces.
+
+Conmutando estado de b2.
+Estado de b2: Bombilla apagada. Se ha encendido 2 veces.
+
+Encendiendo b2.
+Estado de b2: Bombilla encendida. Se ha encendido 3 veces.
+
+Encendiendo b2.
+Error: Intentando encender bombilla encendida.
+Estado de b2: Bombilla encendida. Se ha encendido 3 veces.
+
+Apagando b2.
+Estado de b2: Bombilla apagada. Se ha encendido 3 veces.
+
+Encendiendo b2.
+Estado de b2: Bombilla encendida. Se ha encendido 4 veces.
+
+Creación de b3.
+Estado de b3: Bombilla encendida. Se ha encendido 1 vez.
+
+Número de bombillas creadas hasta el momento: 3.
+Número de bombillas encendidas en este momento: 2.</code></pre>
+</div>
+</div>
+</div></div>
+</form>
+<div id="taquesQuestion1b258" class="block iDevice_content">
+<p>Implementa una clase de pruebas para la clase <code>Bombilla</code> que contenga un método <code>main</code> donde se lleven a cabo las acciones anteriores.</p>
+</div>
+<form name="feedback-form-quesFeedback1b258" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b258text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b258" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b258" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>El código del método <code>main</code> de la clase de pruebas podría quedar más o menos así:</p>
+<div class="highlighted-code language-java">
+<pre><code>public static void main(String[] args) {
+
+    // Valores de clase inciales
+    System.out.printf ("Número de bombillas creadas hasta el momento: %d.\n", Bombilla.getBombillasCreadas());
+    System.out.printf ("Número de bombillas encendidas en este momento: %d.\n\n", Bombilla.getBombillasEncendidas());
+
+    // Declaración de variables
+    System.out.printf ("Declarando variables b1, b2, b3 de tipo referencia a objetos Bombilla.\n\n");
+    Bombilla b1, b2, b3;
+
+    // Creación y asignación del primer objeto
+    System.out.printf ("Creación de b1.\n");
+    b1= new Bombilla();
+    System.out.printf ("Estado de b1: %s\n\n", b1.getEstado());
+
+    // Creación y asignación del segundo objeto
+    System.out.printf ("Creación de b2.\n");
+    b2= new Bombilla(true);
+    System.out.printf ("Estado de b2: %s.\n\n", b2);
+
+    // Conmutar b2 cuatro veces
+    for (int i=0; i &lt; 4; i++) {
+        System.out.printf ("Conmutando estado de b2.\n");
+        b2.conmutar();
+        System.out.printf ("Estado de b2: %s.\n\n", b2);
+    }
+
+    // Encender b2
+    try {
+        System.out.printf ("Encendiendo b2.\n");
+        b2.encender();
+    } catch (IllegalStateException ex) {
+        System.out.printf ("Error: %s.\n", ex.getMessage());
+    } finally {
+        System.out.printf ("Estado de b2: %s.\n\n", b2);            
+    }
+
+    // Encender b2 (error)
+    try {
+        System.out.printf ("Encendiendo b2.\n");
+        b2.encender();
+    } catch (IllegalStateException ex) {
+        System.out.printf ("Error: %s.\n", ex.getMessage());
+    } finally {
+        System.out.printf ("Estado de b2: %s.\n\n", b2);            
+    }
+
+    // Apagar b2
+    try {
+        System.out.printf ("Apagando b2.\n");
+        b2.apagar();
+    } catch (IllegalStateException ex) {
+        System.out.printf ("Error: %s.\n", ex.getMessage());
+    } finally {
+        System.out.printf ("Estado de b2: %s.\n\n", b2);            
+    }
+
+    // Encender b2
+    try {
+        System.out.printf ("Encendiendo b2.\n");
+        b2.encender();
+    } catch (IllegalStateException ex) {
+        System.out.printf ("Error: %s.\n", ex.getMessage());
+    } finally {
+        System.out.printf ("Estado de b2: %s.\n\n", b2);            
+    }
+
+    // Creación y asignación del tercer objeto
+    System.out.printf ("Creación de b3.\n");
+    b3= new Bombilla(true);
+    System.out.printf ("Estado de b3: %s.\n\n", b3);
+
+    // Valores de clase finales
+    System.out.printf ("Número de bombillas creadas hasta el momento: %d.\n", Bombilla.getBombillasCreadas());
+    System.out.printf ("Número de bombillas encendidas en este momento: %d.\n", Bombilla.getBombillasEncendidas());
+}    
+</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion2b258" class="block iDevice_content">
+<p>¿Podrías haber implementado esas pruebas dentro de la propia clase <code>Bombilla</code>? ¿Cómo podrías haberlo hecho?</p>
+</div>
+<form name="feedback-form-quesFeedback2b258" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b258text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b258" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b258" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Sí. Podrías haber introducido todo ese código de prueba dentro de un método <code>main</code> dentro de la clase <code>Bombilla</code> en lugar de hacer otra clase independiente para llevar a cabo las pruebas.</p>
+<p>Lo habitual es hacer las pruebas en un método <code>main</code> en una clase independiente a la clase que quieres probar para no "ensuciar" la clase con un método <code>main</code> que contiene unas pruebas que tienen una función muy específica y que luego no se van a utilizar para nada, pero es bueno que sepas que puede hacerse por si en alguna ocasión te encuentras algo así.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id259">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta259_148" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 160px;"><img src="201px-Wattmeter.jpg" alt="Vatímetro (medidor de consumo)" title="Vatímetro" style="float: right;" width="160" height="191" />
+<div class="figcaption"><a href="https://commons.wikimedia.org/wiki/File:Wattmeter.jpg" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Audrius Meškauskas en Wikimedia Commons (se abre en una nueva ventana).">A. Meškauskas</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a los términos de la licencia Creative Commons BY-SA (se abre en una nueva ventana).">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+<p>Una vez que ya disponemos de una implementación básica de la clase <code>Bombilla</code>, los analistas de nuestra empresa han venido con unas nuevas especificaciones para el equipo de desarrollo. Nos piden ahora que los objetos de la clase <code>Bombilla</code> también sean capaces de calcular y registrar el consumo de cada bombilla.</p>
+<p>Los aparatos eléctricos cuando están funcionando generan un consumo de energía eléctrica en función de la potencia que tengan y del tiempo que estén en funcionamiento. Por tanto, para calcular el <strong>consumo</strong> producido por un dispositivo eléctrico es necesario conocer la <strong>potencia</strong> de ese aparato y el <strong>tiempo</strong> que ha estado funcionando. La potencia en el <acronym title="Sistema Internacional">S.I.</acronym> se mide en vatios (símbolo <abbr title="vatio">W</abbr>).</p>
+<p>El consumo de un dispositivo eléctrico se calcula multiplicando su potencia por la cantidad de tiempo que ha sido usado ese dispositivo. Es decir:</p>
+<p style="text-align: center;"><em><abbr title="Consumo de energía es igual a la potencia por el tiempo.">consumo (energía consumida) = potencia × tiempo</abbr></em></p>
+<p>donde el consumo se mediría en <strong>kilovatios-hora</strong> (<acronym title="kilovatios-hora">kWh</acronym>), la potencia en <strong>vatios</strong> (<abbr title="vatio">W</abbr>) y el tiempo en <strong>horas</strong>.</p>
+</div>
+<div id="taquesQuestion0b259" class="block iDevice_content">
+<p>Ante estos nuevos requerimientos, hay una serie de preguntas que puedes plantearte:</p>
+<ul class="lista_verificacion">
+<li>¿qué <strong>nuevos atributos</strong> vamos a necesitar para poder tener en cuenta estas nuevas circunstancias? ¿Habrá nuevos atributos de objeto o de clase? ¿De qué tipo serán? ¿Serán constantes o variables?</li>
+<li>¿cómo va a afectar a los <strong>constructores</strong> y <strong>métodos ya existentes</strong>? ¿Habrá que añadirles nuevos parámetros? ¿Será necesario llevar a cabo más comprobaciones? ¿Cómo afectará a la actualización de los atributos ya existentes? ¿Y a la de los nuevos atributos?</li>
+<li>¿será necesario implementar <strong>nuevos métodos</strong>? ¿Con qué parámetros? ¿Con qué posibles excepciones?</li>
+</ul>
+<p>Teniendo en cuenta todas estas nuevas cuestiones, replantea el nuevo escenario de <strong>atributos</strong> de la nueva clase <code>Bombilla</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback0b259" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b259text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b259" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b259" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este nuevo escenario de atributos está claro que aparecen al menos dos nuevos actores:</p>
+<ul>
+<li class="lista_verificacion">la <strong>potencia</strong> de la bombilla (en <abbr title="vatio">W</abbr>), que dado que se trata de una magnitud física será de tipo <strong>real</strong> (por ejemplo <code>double</code>), <strong>inmutable</strong> (<code>final</code>), pues una vez creada una bombilla su potencia en principio no debería cambiar), <strong>de objeto</strong> (cada bombilla tendrá una potencia determinada) y <strong>privada</strong> (<code>private</code>). A este atributo lo podríamos llamar <code>potencia</code>;</li>
+<li class="lista_verificacion">el <strong>tiempo</strong> que la bombilla ha estado encendida desde que se creó hasta que se apagó por última vez (en horas). Para ello podríamos tener un atributo de tipo <strong>real</strong> (<code>double</code>), <strong>mutable</strong> (cuanto más tiempo pase estando encendida, más se incrementará este atributo), <strong>de objeto</strong> (cada bombilla llevará una determinada cantidad de tiempo encendida) y <strong>privada</strong> (<code>private</code>). A ese atributo lo podríamos llamar <code>tiempoEncendida</code>.</li>
+</ul>
+<p>Si una bombilla está apagada, está claro que el tiempo que ha estado encendida estará registrado en el atributo <code>tiempoEncendida</code> (todo el tiempo acumulado de todas las veces que ha estado encendida), pero si está encendida habría que sumar a ese tiempo el tiempo que ha transcurrido desde que se encendió por última vez hasta el instante actual (en el que aún permanece encendida). Eso nos indica que necesitamos también almacenar en un atributo el instante (fecha y hora) en el que se encendió por última vez. Se trataría de un atributo que también sería <strong>privado</strong>, <strong>variable</strong> (o mutable), y <strong>de objeto</strong>. Un tipo adecuado para almacenar esa información en <span lang="en">Java</span> podría ser un objeto de la clase <code>LocalDateTime</code>. Un posible nombre para ese atributo podría ser: <code>ultimaVezEncendida</code>.</p>
+<p>Respecto a la <strong>potencia</strong> de una bombilla, está claro que se trata de una característica intrínseca del objeto (<strong>atributo de objeto inmutable</strong>) y que habría que proporcionarla a la hora de crear un nuevo objeto de tipo <code>Bombilla</code>, es decir, como <strong>parámetro en el constructor</strong>. Para evitar que se reciban valores inválidos o inadecuados para ese parámetro (potencia negativa, potencias de trillones de vatios, <span title="etcétera">etc.</span>), debería realizarse una comprobación de rango para asegurarse de que se trata de una potencia válida. Como ya hemos hecho otras veces, sería razonable definir esos rangos (valores literales) como atributos constantes para evitar el uso de literales en los métodos. Para este caso podríamos definir:</p>
+<ul>
+<li class="lista_verificacion"><strong>Máxima potencia</strong> permitida para una bombilla, por ejemplo 200 <abbr title="vatio">W</abbr>.</li>
+<li class="lista_verificacion"><strong>Mínima potencia</strong> permitida para una bombilla, por ejemplo 10 <abbr title="vatio">W</abbr>.</li>
+<li class="lista_verificacion"><strong>Potencia por omisión</strong> para una bombilla, por ejemplo 60 <abbr title="vatio">W</abbr>. Utilizada por si implementamos un constructor al que no se le pasa la potencia como parámetro.</li>
+</ul>
+<p>Podríamos llamar a estos atributos <code>MAXIMA_POTENCIA</code>, <code>MINIMA_POTENCIA</code> y <code>DEFAULT_POTENCIA</code>.</p>
+<p>Teniendo en cuenta todo este análisis, la nueva tabla de atributos de nuestra clase <code>Bombilla</code> podría quedar de la siguiente manera:</p>
+<table class="tabla" style="width: 100%;" summary="Tabla de cinco columnas que contiene para cada fila el nombre, el tipo, la visibilidad, la inmutabilidad y la estaticidad de un conjunto de atributos de la nueva clase Bombilla" border="1"><caption>Atributos de la nueva clase <code>Bombilla</code></caption>
+<tbody>
+<tr><th scope="col">Nombre</th><th scope="col">Tipo</th><th scope="col">Visibilidad</th><th scope="col">Mutabilidad</th><th scope="col">De objeto/de clase</th></tr>
+<tr>
+<td><code>DEFAULT_ESTADO_INICIAL</code></td>
+<td><code>boolean</code></td>
+<td>público (<code>public</code>)</td>
+<td>constante (<code>final</code>)</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code>MAXIMA_POTENCIA</code></td>
+<td><code>double</code></td>
+<td>público (<code>public</code>)</td>
+<td>constante (<code>final</code>)</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code>MINIMA_POTENCIA</code></td>
+<td><code>double</code></td>
+<td>público (<code>public</code>)</td>
+<td>constante (<code>final</code>)</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code>DEFAULT_POTENCIA</code></td>
+<td><code>double</code></td>
+<td>público (<code>public</code>)</td>
+<td>constante (<code>final</code>)</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code>bombillasCreadas</code></td>
+<td><code>short</code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code>bombillasEncendidas</code></td>
+<td><code>short</code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de clase (<code>static</code>)</td>
+</tr>
+<tr>
+<td><code>estado</code></td>
+<td><code>boolean</code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>vecesEncendida</code></td>
+<td><code>short</code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>potencia</code></td>
+<td><code>double</code></td>
+<td>privado (<code>private</code>)</td>
+<td>constante (<code>final</code>)</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>tiempoEncendida</code></td>
+<td><code>double</code><code><double></double></code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+<tr>
+<td><code>ultimaVezEncendida</code></td>
+<td><code>LocalDateTime</code></td>
+<td>privado (<code>private</code>)</td>
+<td>variable</td>
+<td>de objeto</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>A partir de la tabla podemos comenzar a implementar la nueva clase <code>Bombilla</code> en <span lang="en">Java</span> con todos esos atributos:</p>
+<div class="highlighted-code language-java">
+<pre><code>public class Bombilla {
+
+  // ATRIBUTOS DE CLASE
+  // ------------------
+    
+  // Atributos constantes de clase   
+  public static final boolean DEFAULT_ESTADO_INICIAL = false;
+
+  public static final double MAXIMA_POTENCIA= 200.00;  // (en vatios)
+  public static final double MINIMA_POTENCIA=  10.00;  // (en vatios)
+  public static final double DEFAULT_POTENCIA= 60.00;  // (en vatios)
+   
+  // Atributos variables de clase
+  private static short bombillasCreadas;
+  private static short bombillasEncendidas;
+    
+  // ATRIBUTOS DE OBJETO
+  // -------------------
+
+  // Atributos constantes de objeto   
+  private final double potencia;  // (en vatios)
+    
+  // Atributos de variables objeto
+  private boolean estado;
+  private int vecesEncendida;
+  private double tiempoEncendida;  // (en horas)
+  private LocalDateTime ultimaVezEncendida;
+
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion1b259" class="block iDevice_content">
+<div id="taquesQuestion1b256" class="block iDevice_content">
+<p>Una vez que ya tenemos los nuevos atributos, habrá que plantearse cómo afecta eso a los constructores que ya teníamos y si podría venir bien disponer de algún otro constructor adicional.</p>
+<strong>Reestructura los constructores</strong> que ya tenías para la clase <code>Bombilla</code> y, si lo consideras apropiado, añade alguno nuevo que pienses que podría resultar útil.</div>
+</div>
+<form name="feedback-form-quesFeedback1b259" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b259text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b259" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b259" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Para empezar, podríamos añadir a los constructores ya existentes un nuevo parámetro que indique la potencia de la bombilla. De esta manera, el constructor con un parámetro (<strong>estado inicial</strong>) pasaría a tener <strong>dos parámetros</strong> (<strong>estado inicial</strong> y <strong>potencia</strong>):</p>
+<div class="highlighted-code language-java">
+<pre><code>public Bombilla (boolean estadoInicial, double potencia) {
+
+    // Comprobamos si la potencia es válida
+    if (potencia &lt; Bombilla.MINIMA_POTENCIA || potencia &gt; Bombilla.MAXIMA_POTENCIA) {
+        throw new IllegalArgumentException(
+                String.format("potencia no válida: %.2f", potencia));
+    }
+
+    // Inicializamos los atributos intrínsecos
+    this.potencia= potencia;
+
+    // Inicializamos los atributos de estado
+    this.estado = estadoInicial;
+
+    // Si el primer estado es encendida, ya ha sido encendida una vez
+    this.vecesEncendida = estadoInicial ? 1 : 0;
+
+    // Si la bombilla comienza como encendida, registramos el instante 
+    // actual como último instante de encendido
+    if (this.estado) {
+        this.ultimaVezEncendida= LocalDateTime.now();
+    } else {
+        this.ultimaVezEncendida= null;
+    }
+
+    // Actualizamos atributos de clase        
+    Bombilla.bombillasCreadas++;
+    Bombilla.bombillasEncendidas += this.estado ? 1 : 0;        
+}</code></pre>
+</div>
+<p>El <strong>constructor sin parámetros</strong> podría pasar a tener un parámetro (<strong>potencia</strong>):</p>
+<div class="highlighted-code language-java">
+<pre><code>public Bombilla (double potencia) throws IllegalArgumentException {
+  this(Bombilla.DEFAULT_ESTADO_INICIAL, potencia);
+}</code></pre>
+</div>
+<p>Y podríamos dejar el antiguo constructor de un parámetro con el <strong>estado inicial</strong> (suponiendo una potencia por omisión):</p>
+<div class="highlighted-code language-java">
+<pre><code>public Bombilla (boolean estadoInicial)  {  // No lanza excepciones porque no puede haber errores
+  this(estadoInicial, Bombilla.DEFAULT_POTENCIA);
+}</code></pre>
+</div>
+<p>Y por último podríamos también implementar <strong>un nuevo constructor sin parámetros</strong> que suponga un <strong>estado inicial por omisión</strong> y una <strong>potencia por omisión</strong>. Para hacerlo podríamos llamar a uno de los constructores con un parámetro y usando el otro valor por omisión o bien invocando al constructor con dos parámetros usando los dos valores por omisión. Nosotros hemos escogido la primera opción:</p>
+<div class="highlighted-code language-java">
+<pre><code>public Bombilla ()  {  // No lanza excepciones porque no puede haber errores
+  this(Bombilla.DEFAULT_ESTADO_INICIAL);
+}</code></pre>
+</div>
+<p>La elección de unas posibilidades u otras a la hora de implementar constructores dependerá de las especificaciones de diseño que nos hayan proporcionado o bien, si no nos han dado ninguna directriz, de aquellos constructores que veas más útiles y apropiados a la hora de trabajar con esta clase. En nuestro caso hemos decidido implementar <strong>cuatro constructores</strong>.</p>
+<p>¿Y si nos hubiéramos planteado implementar también un <strong>constructor copia</strong>?</p>
+<p>Lo primero sería decidir qué atributos deseamos replicar en la copia: ¿sólo los "intrínsecos" (constantes) o también los de estado? Si elegimos la primera opción, el constructor de copia podríamos implementarlo llamando al constructor de un parámetro que recibe la potencia de la bombilla (que copiaremos de la bombilla original). El resto de atributos se inicializará como si fuera una bombilla recién creada (sin consumo, cero veces encendida, <abbr title="etcétera">etc.</abbr>):</p>
+<div class="highlighted-code language-java">
+<pre><code>public Bombilla (Bombilla bombillaOriginal) throws NullPointerException {
+  this (bombillaOriginal.potencia);
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion2b259" class="block iDevice_content">
+<p>Analiza e implementa los nuevos <strong><span lang="en">getter</span></strong> (métodos <strong><span lang="en">get</span></strong>) que podría tener la clase <code>Bombilla</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback2b259" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b259text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b259" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b259" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Dados los nuevos atributos de la clase, podríamos inicialmente plantear un <span lang="en">getter</span> por cada uno de ellos:</p>
+<ul class="lista_verificacion">
+<li><strong>potencia</strong> de la bombilla;</li>
+<li><strong>tiempo acumulado en que ha estado encendida</strong> la bombilla hasta que se apagó por última vez;</li>
+<li><strong>último instante en el que fue encendida</strong> la bombilla.</li>
+</ul>
+<p>Ahora bien, quizá algunos de estos atributos no proporcionen una información completa y útil para el usuario del objeto.</p>
+<p>En el caso de la<strong> potencia</strong>, es una característica de la bombilla que parece apropiado obtener con un <span lang="en">getter "tradicional" (devolver simplemente el valor de un atributo: método <code>getPotencia</code>). En el caso de los otros dos atributos se trata de información parcial que podría resultar confusa o poco útil para el usuario del objeto, pero que podría combinarse para obtener información algo más elaborada: </span></p>
+<ul class="lista_verificacion">
+<li><strong>tiempo total en que ha estado encendida</strong> la bombilla desde que se creó (el acumulado más el que ha pasado desde que se encendió por última vez hasta el instante actual). Para ello habrá que usar el tiempo acumulado el último instante de encendido y la fecha y hora actual;</li>
+<li><strong>consumo total</strong> desde que se creó la bombilla.</li>
+</ul>
+<p>La implementación del método <span lang="en"><code>getPotencia</code></span> no tiene ninguna dificultad:</p>
+<div class="highlighted-code language-java">
+<pre><code>public double getPotencia () {
+    return this.potencia;
+}    
+</code></pre>
+</div>
+<p>Para calcular el <strong>tiempo total acumulado que lleva la bombilla encendida</strong> habrá que tener en cuenta dos factores:</p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li>el <strong>tiempo acumulado en que ha estado encendida</strong> la bombilla hasta que se apagó por última vez;</li>
+<li>si la bombilla está actualmente encendida: el <strong>tiempo transcurrido desde que se encendió por última vez hasta el instante actual</strong>. Si la bombilla está actualmente apagada, este segundo factor sería cero.</li>
+</ol>
+<p>El método que lleve a cabo ese cálculo podríamos considerarlo un <span lang="en">getter</span> "indirecto" (llamándolo por ejemplo <span lang="en"><code>getTiempoEncendida</code></span>) o bien darle otro nombre (por ejemplo <span lang="en"><code>calcularTiempoEncendida</code></span>). En cualquier caso la implementación de ese algoritmo podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre><code>private double calcularTiempoEncendida () {
+    double primerTramo= this.tiempoEncendida; 
+    double segundoTramo= 0.0;
+
+   // Calculamos el segundo tramo de tiempo encendida
+   // (desde que se encendió por última vez hasta el instante actual)
+   if (this.ultimaVezEncendida != null) {
+       segundoTramo= this.ultimaVezEncendida.until (
+         LocalDateTime.now(), ChronoUnit.SECONDS) / 3600.0;  // cálculo en horas
+   }
+
+   // Sumamos el primer tramo y el segundo tramo de tiempo encendida
+   return primerTramo + segundoTramo;
+}</code></pre>
+</div>
+<p>Este método podría ser privado y usarse internamente como herramienta para el cálculo del consumo, o bien dejarlo como público para que pueda usarlo todo usuario de la clase. Si lo dejamos como público quizá podría usarse el nombre de <span lang="en"><code>getTiempoEncendida</code></span> en lugar de <span lang="en"><code>calcularTiempoEncendida</code></span>. Será una cuestión que tendrán decidir los desarrolladores de la clase:</p>
+<ul class="lista_verificacion">
+<li>opción 1: <code>private double calcularTiempoEncendida</code> ()</li>
+<li>opción 2: <code>public double getTiempoEncendida</code> ()</li>
+</ul>
+<p>Respecto al método que calcula el <strong>consumo total de la bombilla</strong>, una vez implementado el método anterior, sería muy sencillo pues simplemente habría que multiplicar por la potencia:</p>
+<div class="highlighted-code language-java">
+<pre><code>public double getPotenciaConsumida () {
+    return calcularTiempoEncendida() * this.potencia;
+}</code></pre>
+</div>
+<p>En este caso sucede algo parecido respecto al nombre: <span lang="en"><code>calcularPotenciaConsumida</code></span> o <span lang="en"><code>getPotenciaConsumida</code></span>, según se considere.</p></div>
+</form>
+<div id="taquesQuestion3b259" class="block iDevice_content">
+<p>Respecto a los <strong>métodos de acción</strong> de los que ya disponíamos:</p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li>método para <strong>encender</strong> una bombilla;</li>
+<li>método para <strong>apagar</strong> una bombilla;</li>
+<li>método para <strong>conmutar</strong> el estado de una bombilla;</li>
+</ol>
+<p>analiza qué habría que incluir en sus implementaciones para tener en cuenta las nuevas especificaciones de la clase.</p>
+<p></p>
+</div>
+<form name="feedback-form-quesFeedback3b259" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b259text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b259" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback3b259" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p><strong>Cuando una bombilla se enciende</strong>, hay que <strong>registrar el instante en que es encendida</strong> (atributo <code>ultimaVezEncendida</code>) y <strong>cuando se apaga</strong> hay que<strong> recalcular el tiempo acumulado que ha estado encendida</strong> (atributo <code>tiempoEncendida</code>).</p>
+<p>Teniendo esto en cuenta la implementación de los métodos <code>encender</code> y <code>apagar</code> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre><code>public void encender() throws IllegalStateException {        
+   if ( !this.estado ) { 
+     this.estado = true;
+     this.vecesEncendida++;
+     this.ultimaVezEncendida= LocalDateTime.now(); // Registrar el momento actual
+   } else {
+     throw new IllegalStateException ("Intentando encender bombilla encendida");            
+   }
+}
+
+public void apagar () throws IllegalStateException  {
+  if ( !this.estado ) {
+    throw new IllegalStateException ("Intentando apagar bombilla apagada");
+  } else {
+    this.estado= false;
+    this.tiempoEncendida += this.ultimaVezEncendida.until(LocalDateTime.now(), ChronoUnit.SECONDS) / 3600;  // Recalcular
+    this.ultimaVezEncendida= null;  // Ya no está encendida
+  }
+}</code></pre>
+</div>
+<p>Respecto al método <code>conmutar</code>, si hemos implementado apropiadamente los métodos <code>encender</code> y <code>apagar</code> no haría falta hacer ninguna modificación en él.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="i2_clase_ticket.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

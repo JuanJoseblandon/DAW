@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.- ¿Qué son las bases de datos orientadas a objetos? </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-114"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Gestión de bases de datos: relacionales y orientadas a objetos. Persistencia de objetos</a></li>
+   <li><a href="1_bases_de_datos_relacionales.html" class="daddy">1.- Bases de datos relacionales</a>
+   <ul class="other-section">
+      <li><a href="11_el_desfase_objetorelacional.html" class="no-ch">1.1.- El desfase objeto-relacional</a></li>
+      <li><a href="12_jdbc.html" class="no-ch">1.2.- JDBC</a></li>
+      <li><a href="13__conectores_o_drivers.html" class="no-ch">1.3.-  Conectores o Drivers</a></li>
+      <li><a href="14_instalacin_de_la_base_de_datos.html" class="no-ch">1.4.- Instalación de la base de datos</a></li>
+      <li><a href="15_creacin_de_las_tablas_en_una_base_de_datos.html" class="daddy">1.5.- Creación de las tablas en una base de datos</a>
+      <ul class="other-section">
+         <li><a href="151_lenguaje_sql_i.html" class="no-ch">1.5.1.- Lenguaje SQL (I)</a></li>
+         <li><a href="152_lenguaje_sql_ii.html" class="no-ch">1.5.2.- Lenguaje SQL (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="16_establecimiento_de_conexiones.html" class="daddy">1.6.- Establecimiento de conexiones</a>
+      <ul class="other-section">
+         <li><a href="161_configurar_un_conector_jdbc_en_un_proyecto_netbeans.html" class="no-ch">1.6.1.- Configurar un conector JDBC en un proyecto NetBeans</a></li>
+         <li><a href="162_registrar_el_conector_jdbc.html" class="no-ch">1.6.2.- Registrar el conector JDBC</a></li>
+      </ul>
+      </li>
+      <li><a href="17_ejecucin_de_consultas_sobre_la_base_de_datos.html" class="daddy">1.7.- Ejecución de consultas sobre la base de datos</a>
+      <ul class="other-section">
+         <li><a href="171_adicin_de_informacin.html" class="no-ch">1.7.1.- Adición de información</a></li>
+         <li><a href="172_recuperacin_de_informacin_i.html" class="daddy">1.7.2.- Recuperación de información (I)</a>
+         <ul class="other-section">
+            <li><a href="1712_recuperacin_de_informacin_ii.html" class="no-ch">1.7.1.2.- Recuperación de información (II)</a></li>
+         </ul>
+         </li>
+         <li><a href="173_actualizacin_de_informacin.html" class="no-ch">1.7.3.- Actualización de información</a></li>
+         <li><a href="174_borrado_de_informacin.html" class="no-ch">1.7.4.- Borrado de información</a></li>
+         <li><a href="175_cierre_de_conexiones.html" class="no-ch">1.7.5.- Cierre de conexiones</a></li>
+         <li><a href="176_excepciones_en_jdbc.html" class="no-ch">1.7.6.- Excepciones en JDBC</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_persistencia_de_objetos.html" class="current-page-parent daddy">2.- Persistencia de objetos</a>
+   <ul>
+      <li id="active"><a href="21_qu_son_las_bases_de_datos_orientadas_a_objetos.html" class="active no-ch">2.1.- ¿Qué son las bases de datos orientadas a objetos?</a></li>
+      <li><a href="22_qu_es_el_mapeado_de_objetos.html" class="no-ch">2.2.- ¿Qué es el mapeado de objetos?</a></li>
+      <li><a href="23_cmo_empiezo_a_usar_jpa.html" class="no-ch">2.3.- ¿Cómo empiezo a usar JPA?</a></li>
+      <li><a href="24_unidades_de_persistencia_i.html" class="daddy">2.4.- Unidades de persistencia (I)</a>
+      <ul class="other-section">
+         <li><a href="241_unidades_de_persistencia_ii.html" class="no-ch">2.4.1.- Unidades de persistencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="25_modelo_de_datos_en_jpa.html" class="daddy">2.5.- Modelo de datos en JPA</a>
+      <ul class="other-section">
+         <li><a href="251_entidades.html" class="no-ch">2.5.1.- Entidades</a></li>
+         <li><a href="252_atributos.html" class="no-ch">2.5.2.- Atributos</a></li>
+         <li><a href="253_relaciones_entre_entidades.html" class="no-ch">2.5.3.- Relaciones entre entidades</a></li>
+         <li><a href="254_relaciones_uno_a_uno.html" class="no-ch">2.5.4.- Relaciones uno a uno</a></li>
+         <li><a href="255_relaciones_uno_a_muchos.html" class="no-ch">2.5.5.- Relaciones uno a muchos</a></li>
+      </ul>
+      </li>
+      <li><a href="26_operaciones_crud_con_jpa.html" class="daddy">2.6.- Operaciones CRUD con JPA</a>
+      <ul class="other-section">
+         <li><a href="261_persistir_y_leer.html" class="no-ch">2.6.1.- Persistir y leer</a></li>
+         <li><a href="262__actualizar_y_borrar_instancias.html" class="no-ch">2.6.2.-  Actualizar y borrar instancias</a></li>
+      </ul>
+      </li>
+      <li><a href="27_jpql_i.html" class="daddy">2.7.- JPQL (I)</a>
+      <ul class="other-section">
+         <li><a href="271_jpql_ii.html" class="no-ch">2.7.1.- JPQL (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="2_persistencia_de_objetos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_qu_es_el_mapeado_de_objetos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.1.- ¿Qué son las bases de datos orientadas a objetos?</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id109">
+<div class="iDevice emphasis0">
+<div id="ta109_73" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><a href="PROG11_CONT_R26_googleEarth.jpg" target="_blank" title="Ampliar imagen &quot;Programa GoogleEarth&quot;. (Se abre en una nueva ventana)"><img src="PROG11_CONT_R26_googleEarth_miniatura.jpg" alt="Foto de una pantalla de ordenador mostrando  una aplicación informática en la que se visualiza el programa Google Earth." title="Programa GoogleEarth" class="imagen_ampliable" width="200" height="160" /></a></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-sa" title="Acceder a la licencia CC BY-SA. (Se abre en una nueva ventana)" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-sa</span></a> <a title="Acceder a la imagen &quot;Programa GoogleEarth&quot; de &quot;Agustín Díaz&quot; en Flickr. (Se abre en una nueva ventana)" href="http://www.flickr.com/photos/yonmacklein/22105978/" target="_blank">Agustín Díaz.</a></div>
+</div>
+<p>¿Cómo son las aplicaciones actuales?</p>
+<p>La aplicaciones de hoy día tienden a crecer de forma exponencial, no como las aplicaciones de antaño, donde la estructura de datos variaba poco o sufría pocos cambios.  Hoy día, tenemos que estar preparados para desarrollar aplicaciones que evolucionan rápidamente, y donde almacenar objetos multimedia, como imágenes o sonidos, sea relativamente sencillo.</p>
+<p>Hablamos de aplicaciones con estructuras de datos complejas y relaciones que son factibles a nivel de programación orientada a objetos, pero complejas de llevar a la práctica en una base de datos relacional.</p>
+<p>Para solucionar este problema, han surgido multitud de alternativas, como se ha visto con anterioridad. Una de las más notables, por su respercusión académica, han sido las <strong>Bases de Datos Orientadas a Objetos</strong> (<acronym title="Bases de Datos Orientadas a Objetos.">BDOO</acronym>) o Bases de Objetos.</p>
+<p>Estas se integran directamente y sin problemas con las aplicaciones desarrolladas en lenguajes orientados a objetos, ya que <strong>soportan un modelo de objetos puro</strong> y son ideales para almacenar y recuperar datos complejos permitiendo a los usuarios su <a href="#t96616a0e-4e04-2847-a2d6-8981858766d2" id="link96616a0e-4e04-2847-a2d6-8981858766d2" class="exe-tooltip definition-tt titled-tt" title="Navegación | Ver la definición de Navegación">navegación</a> directa (sin un mapeo entre distintas representaciones).</p>
+<div class="exe-figure exe-image float-right license-pd" style="width: 188px;"><a href="PROG11_CONT_R28_ventajaBDOO.jpg" title="Ampliar imagen &quot;Características de las bases de objetos&quot;. (Se abre en una nueva ventana)"><img src="PROG11_CONT_R28_ventajaBDOO_miniatura.jpg" alt="Dibujo que representa con tres rectángulos una base de objetos, un servidor y una aplicacición en una columna, y de abajo arriba. Otra columna paralela muestra dibujos de una rede de objetos tanto a nivel de la plicación como de la base de datos." title="Características de las bases de objetos" class="imagen_ampliable" style="float: right;" width="188" height="160" /></a>
+<div class="figcaption"><span class="author">Elaboración propia.</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span><a href="PROG11_CONT_R28_ventajaBDOO.jpg" title="Ampliar imagen &quot;Características de las bases de objetos&quot;. (Se abre en una nueva ventana)"></a></div>
+</div>
+<p><strong><br />En una <acronym title="Base de datos orientada a objetos.">BDOO</acronym>, los datos se almacenan como objetos</strong>. Un <strong>objeto</strong> es, al igual que en la programación orientada a objetos, una entidad que se puede identificar unívocamente y que describe tanto el <a class="exe-tooltip definition-tt titled-tt glosario" id="linka8b3aec0-b86e-23ff-c038-42242c2689bd" href="#ta8b3aec0-b86e-23ff-c038-42242c2689bd" title="Estado | Ver la definición de Estado">estado</a> como el <a class="exe-tooltip definition-tt titled-tt glosario" id="link1514d806-0a82-f94f-fdc9-70997e05fcc9" href="#t1514d806-0a82-f94f-fdc9-70997e05fcc9" title="Comportamiento | Ver la definición de Comportamiento">comportamiento</a> de una entidad del "mundo real". El estado de un objeto se describe mediante atributos y su comportamiento es definido mediante procedimientos o métodos.</p>
+<p><strong>Las <acronym title="Base de datos orientada a objetos.">BDOO</acronym> soportan características propias de la orientación a objetos, como agregación, encapsulamiento, polimorfismo y herencia.</strong> Los objetos pueden tener una complejidad arbitraria, a fin de contener toda la información necesaria que describe el objeto.</p>
+<p>Todo esto hace que las <acronym title="Base de datos orientada a objetos.">BDOO</acronym> sean, en esencia, el sueño de cualquier programador o programadora. Sin embargo, a pesar de sus bondades y de los años, no han logrado imponerse en el mercado, los motivos principales son:</p>
+<ul class="lista_verificacion">
+<li><strong>Carencia de un modelo de datos universal</strong>. No hay ningún modelo de datos aceptado universalmente, y la mayor parte de los modelos carecen de una base teórica.</li>
+<li><span style="left: 538.2px; top: 516.984px; font-size: 17.6033px; font-family: sans-serif; transform: scaleX(0.937427);"></span><span style="left: 508.198px; top: 697.71px; font-size: 16.7px; font-family: sans-serif; transform: scaleX(0.974461);"></span><strong>No hay un lenguaje de consulta común a todas las <acronym title="Base de datos orientada a objetos.">BDOO</acronym></strong>. A pesar de que incluso la <acronym title="Object Data Management Group" lang="en">ODMG</acronym> se esforzó por estandarizar <acronym title="Object Query Language" lang="en">OQL</acronym> (<span lang="en">Object Query Language</span>), dicho lenguaje de consulta no está disponible en muchas <acronym title="Base de datos orientada a objetos.">BDOO</acronym>. <acronym title="Object Query Language" lang="en">OQL</acronym> no tiene el mismo respaldo que <acronym title="Structured Query Language" lang="en">SQL </acronym>y las empresas detrás de cada <acronym title="Base de datos orientada a objetos.">BDOO </acronym>ofrecen sus propias alternativas.</li>
+<li><strong>Competencia con los modelos ya asentados</strong>. Las bases de datos relacionales y objeto-relacionales están muy asentadas y extendidas. Además, las soluciones de mapeado objeto-relacional se han hecho fuertes, y ahora permiten hacer aplicaciones que se desarrollan rápido y que crecen con rapidez.</li>
+<li><strong>Aparición de otros modelos de bases de datos NoSQL más sencillos y flexibles. </strong>Hoy día es común escuchar hablar de bases de datos documentales tales como <span lang="en">MongoDB</span> o de bases de datos clave-valor como Redis, que han ocupado el espacio destinado a las bases de datos orientadas a objetos. La flexibilidad y escalabilidad de estos modelos de datos han desplazado a las bases de datos orientadas a objetos.</li>
+</ul>
+<div class="elemento_derecha"> </div>
+<div id="ta8b3aec0-b86e-23ff-c038-42242c2689bd" class="exe-tooltip-text">
+<p>El estado de un objeto es el conjunto de valores que toman sus propiedades (atributos y relaciones).</p>
+</div>
+<div id="t1514d806-0a82-f94f-fdc9-70997e05fcc9" class="exe-tooltip-text">
+<p>El comportamiento de un objeto se refiere al conjunto de operaciones que se pueden realizar sobre un objeto.</p>
+</div>
+<div id="t96616a0e-4e04-2847-a2d6-8981858766d2" class="exe-tooltip-text">
+<p>Se refiere en el contexto de orientación a objetos, a descender por los diferentes nodos de la red o grafo de objetos.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id80">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta80_47" class="block iDevice_content">
+<p>En el siguiente enlace puedes visitar un <span lang="en">ranking </span>con los motores de base de datos más usados hoy día.</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a la web con el ranking actualizado de los motores de bases de datos más usados hoy día. (Se abre en una nueva ventana)" href="https://db-engines.com/en/ranking" target="_blank" hreflang="en"><span lang="en">Ranking</span> de motores de bases de datos más usados.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id97">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<div id="actitity-97_55">
+<form name="multi-select-form-97_55" action="#" class="activity-form multi-select-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion97_55" class="block question iDevice_content">
+<p>
+<strong>Señala las opciones correctas. Las bases de datos orientadas a objetos:</strong>
+</p>
+
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op97_550" class="sr-av"><a href="#answer-97_58">Opción 1</a></label><input type="checkbox" id="op97_550" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-97_58"><a name="answer-97_58"></a>
+<div id="taans97_58" class="block iDevice_content">
+<p>Soportan conceptos de orientación a objetos como la herencia.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-97_550" style="display:none"></div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op97_551" class="sr-av"><a href="#answer-97_85">Opción 2</a></label><input type="checkbox" id="op97_551" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-97_85"><a name="answer-97_85"></a>
+<div id="taans97_85" class="block iDevice_content">
+<p>Permiten la manipulación navegacional.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-97_551" style="display:none"></div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op97_552" class="sr-av"><a href="#answer-97_87">Opción 3</a></label><input type="checkbox" id="op97_552" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-97_87"><a name="answer-97_87"></a>
+<div id="taans97_87" class="block iDevice_content">
+<p>Tienen el mismo tipo de problemas que las relacionales para gestionar objetos complejos.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-97_552" style="display:none"></div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op97_553" class="sr-av"><a href="#answer-97_89">Opción 4</a></label><input type="checkbox" id="op97_553" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-97_89"><a name="answer-97_89"></a>
+<div id="taans97_89" class="block iDevice_content">
+<p>Cada objeto se puede identificar unívocamente.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-97_553" style="display:none"></div>
+</div>
+</div>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-97_55" /> 
+</p>
+</div>
+<div id="f97_55" class="js-hidden js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+
+<div id="tafeedback97_55" class="feedback iDevice_content">
+<p>Las bases de datos orientadas a objetos permiten usar conceptos de programación orientada a objetos como la herencia. Además permiten la manipulación navegacional donde cada objeto se puede identificar unívocamente.</p>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-97_58" class="right">Correcto</a></li>
+<li><a href="#answer-97_85" class="right">Correcto</a></li>
+<li><a href="#answer-97_87" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-97_89" class="right">Correcto</a></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id108">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta108_54" class="block iDevice_content">
+<strong>Señala si la siguiente afirmación es verdadera o falsa.</strong>
+
+</div>
+<div class="question">
+<form name="true-false-form-0b108" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b108" class="block iDevice_content">
+<p><strong>En una <acronym title="Base de Datos Orientada a Objetos">BDOO</acronym> el resultado de una consulta son objetos, por lo que no es necesario reensamblar los objetos cada vez que se accede a la base de datos.</strong></p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b108"><input type="radio" name="option0b108" id="true0b108" class="exe-radio-option exe-radio-option-0-2-0b108-truefalse" /> Verdadero</label> 
+<label for="false0b108"><input type="radio" name="option0b108" id="false0b108" class="exe-radio-option exe-radio-option-1-2-0b108-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b108" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b108-result" class="right">Verdadero</strong></p>
+Es verdadero, precisamente ésta es una de las ventajas de estos sistemas de almacenamiento.
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="2_persistencia_de_objetos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_qu_es_el_mapeado_de_objetos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

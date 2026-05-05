@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Anexo II.- Conversión de tipos de datos en Java | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-72"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li id="active"><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="active no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="anexo_i_listado_de_ides.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_iii_ejercicios_resueltos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Anexo II.- Conversión de tipos de datos en Java</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id192">
+<div class="iDevice emphasis0">
+<div id="ta192_73" class="block iDevice_content">
+<p><a title="anexo_i_conversin_de_tipos_de_datos_en_java.html" name="anexo_i_conversin_de_tipos_de_datos_en_java.html"></a></p>
+<table class="tabla" summary="Cuadro o tabla de diez filas por diez columnas, de título &quot;Tabla de Conversión de Tipos de Datos Primitivos&quot;, de modo que para cada tipo de dato origen se indica su conversión a otro tipo de dato destino, y de qué tipo es la conversión (CI: implícita, C: Casting, N: No permitida). Debe ser leída de izquierda a derecha y de arriba abajo, haciendo corresponder cada tipo de dato origen con cada tipo de dato destinto para ver el tipo de conversión aplicada entre ambos. "><caption>Tabla de Conversión de Tipos de Datos Primitivos</caption>
+<tbody>
+<tr>
+<td rowspan="2" colspan="2">    </td>
+<th id="td" colspan="8">Tipo destino</th></tr>
+<tr><th id="tdboolean" headers="td"><span style="font-size: medium;"><code>boolean</code></span></th><th id="tdchar" headers="td"><span style="font-size: medium;"><code>char</code></span></th><th id="tdbyte" headers="td"><span style="font-size: medium;"><code>byte</code></span></th><th id="tdshort" headers="td"><span style="font-size: medium;"><code>short</code></span></th><th id="tdint" headers="td"><span style="font-size: medium;"><code>int</code></span></th><th id="tdlong" headers="td"><span style="font-size: medium;"><code>long</code></span></th><th id="tdfloat" headers="td"><span style="font-size: medium;"><code>float</code></span></th><th id="tddouble" headers="td"><span style="font-size: medium;"><code>double</code></span></th></tr>
+<tr><th id="to" rowspan="8">Tipo origen</th><th id="toboolean" headers="to" scope="row"><span style="font-size: medium;"><code>boolean</code></span></th>
+<td style="text-align: center;" headers="toboolean tdboolean"><abbr title="Mismo tipo.">-</abbr></td>
+<td style="text-align: center;" headers="tochar tdchar"><abbr title="Conversión no permitida.">N</abbr></td>
+<td style="text-align: center;" headers="tobyte tdbyte"><abbr title="Conversión no permitida.">N</abbr></td>
+<td style="text-align: center;" headers="toshort tdshort"><abbr title="Conversión no permitida.">N</abbr></td>
+<td style="text-align: center;" headers="toint tdint"><abbr title="Conversión no permitida.">N</abbr></td>
+<td style="text-align: center;" headers="tolong tdlong"><abbr title="Conversión no permitida.">N</abbr></td>
+<td style="text-align: center;" headers="tofloat tdfloat"><abbr title="Conversión no permitida.">N</abbr></td>
+<td style="text-align: center;" headers="todouble tddouble"><abbr title="Conversión no permitida.">N</abbr></td>
+</tr>
+<tr><th headers="to" scope="row"><span style="font-size: medium;"><code>char</code></span></th>
+<td style="text-align: center;" headers="toboolean tdboolean"><abbr title="Conversión no permitida.">N</abbr></td>
+<td style="text-align: center;" headers="tochar tdchar"><abbr title="Mismo tipo.">-</abbr></td>
+<td style="text-align: center;" headers="tobyte tdbyte"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="toshort tdshort"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="toint tdint"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+<td style="text-align: center;" headers="tolong tdlong"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+<td style="text-align: center;" headers="tofloat tdfloat"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+<td style="text-align: center;" headers="todouble tddouble"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+</tr>
+<tr><th headers="to" scope="row"><span style="font-size: medium;"><code>byte</code></span></th>
+<td style="text-align: center;" headers="toboolean tdboolean"><abbr title="Conversión no permitida.">N</abbr></td>
+<td style="text-align: center;" headers="tochar tdchar"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="tobyte tdbyte"><abbr title="Mismo tipo.">-</abbr></td>
+<td style="text-align: center;" headers="toshort tdshort"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+<td style="text-align: center;" headers="toint tdint"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+<td style="text-align: center;" headers="tolong tdlong"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+<td style="text-align: center;" headers="tofloat tdfloat"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+<td style="text-align: center;" headers="todouble tddouble"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+</tr>
+<tr><th headers="to" scope="row"><span style="font-size: medium;"><code>short</code></span></th>
+<td style="text-align: center;" headers="toboolean tdboolean"><abbr title="Conversión no permitida.">N</abbr></td>
+<td style="text-align: center;" headers="tochar tdchar"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="tobyte tdbyte"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="toshort tdshort"><abbr title="Mismo tipo.">-</abbr></td>
+<td style="text-align: center;" headers="toint tdint"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+<td style="text-align: center;" headers="tolong tdlong"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+<td style="text-align: center;" headers="tofloat tdfloat"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+<td style="text-align: center;" headers="todouble tddouble"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+</tr>
+<tr><th headers="to" scope="row"><span style="font-size: medium;"><code>int</code></span></th>
+<td style="text-align: center;" headers="toboolean tdboolean"><abbr title="Conversión no permitida.">N</abbr></td>
+<td style="text-align: center;" headers="tochar tdchar"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="tobyte tdbyte"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="toshort tdshort"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="toint tdint"><abbr title="Mismo tipo.">-</abbr></td>
+<td style="text-align: center;" headers="tolong tdlong"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+<td style="text-align: center;" headers="tofloat tdfloat"><abbr title="Conversión implícita o automática.">CI</abbr><abbr title="Una posible pérdida de datos.">*</abbr></td>
+<td style="text-align: center;" headers="todouble tddouble"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+</tr>
+<tr><th headers="to" scope="row"><span style="font-size: medium;"><code>long</code></span></th>
+<td style="text-align: center;" headers="toboolean tdboolean"><abbr title="Conversión no permitida.">N</abbr></td>
+<td style="text-align: center;" headers="tochar tdchar"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="tobyte tdbyte"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="toshort tdshort"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="toint tdint"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="tolong tdlong"><abbr title="Mismo tipo.">-</abbr></td>
+<td style="text-align: center;" headers="tofloat tdfloat"><abbr title="Conversión implícita o automática.">CI</abbr><abbr title="Una posible pérdida de datos.">*</abbr></td>
+<td style="text-align: center;" headers="todouble tddouble"><abbr title="Conversión implícita o automática.">CI</abbr><abbr title="Una posible pérdida de datos.">*</abbr></td>
+</tr>
+<tr><th headers="to" scope="row"><span style="font-size: medium;"><code>float</code></span></th>
+<td style="text-align: center;" headers="toboolean tdboolean"><abbr title="Conversión no permitida.">N</abbr></td>
+<td style="text-align: center;" headers="tochar tdchar"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="tobyte tdbyte"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="toshort tdshort"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="toint tdint"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="tolong tdlong"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="tofloat tdfloat"><abbr title="Mismo tipo.">-</abbr></td>
+<td style="text-align: center;" headers="todouble tddouble"><abbr title="Conversión implícita o automática.">CI</abbr></td>
+</tr>
+<tr><th headers="to" scope="row"><span style="font-size: medium;"><code>double</code></span></th>
+<td style="text-align: center;" headers="toboolean tdboolean"><abbr title="Conversión no permitida.">N</abbr></td>
+<td style="text-align: center;" headers="tochar tdchar"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="tobyte tdbyte"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="toshort tdshort"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="toint tdint"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="tolong tdlong"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="tofloat tdfloat"><abbr title="Casting de tipos o conversión explícita.">C</abbr></td>
+<td style="text-align: center;" headers="todouble tddouble"><abbr title="Mismo tipo.">-</abbr></td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="20257__54_m_51.jpg" alt="Aula de informática con estudiante atento a las indicaciones del libro de texto y con el ordenador delante." title="Aula de informática." style="float: right;" width="200" height="133" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="CC by-nc-sa" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a> <a title="ITE. Francisco Javier Martínez Adrados." href="http://recursostic.educacion.es//bancoimagenes/ArchivosImagenes/DVD11/CD05/20257__54_m_51.jpg" target="_blank">ITE. Francisco Javier Martínez Adrados.</a></div>
+</div>
+<p>Explicación de los símbolos utilizados:</p>
+<ul class="lista_verificacion">
+<li><strong><abbr title="Conversión no permitida.">N</abbr>:</strong> Conversión no permitida (un <span style="font-size: medium;"><strong><code>boolean</code></strong></span> no se puede convertir a ningún otro tipo y viceversa).</li>
+<li><strong><abbr title=" Conversión implícita o automática.">CI</abbr>:</strong> Conversión implícita o automática. Un asterisco indica que puede haber posible pérdida de datos.</li>
+<li><strong><abbr title="Casting de tipos o conversión explícita.">C</abbr>:</strong> Casting de tipos o conversión explícita.</li>
+<li><abbr title="Mismo tipo.">-</abbr>: Mismo tipo. No hay que convertir nada.</li>
+</ul>
+<p>El asterisco indica que puede haber <strong>una posible pérdida de datos</strong>, por ejemplo al convertir un número de tipo <strong><code>int</code></strong> que usa los 32 bits posibles de la representación, a un tipo <strong><code>float</code></strong>, que también usa 32 bits para la representación, pero 8 de los cuales son para el exponente.</p>
+<p>En cualquier caso, las conversiones de números en coma flotante a números enteros siempre necesitarán un <strong><span lang="en">casting</span></strong>, y deberemos tener mucho cuidado debido a la pérdida de precisión que ello supone.</p>
+<p><strong>Reglas de Promoción de Tipos de Datos.</strong></p>
+<p>Cuando en una expresión hay datos o variables de distinto tipo, el compilador realiza la promoción de unos tipos en otros, para obtener como resultado el tipo final de la expresión. Esta promoción de tipos se hace siguiendo unas reglas básicas en base a las cuales se realiza esta promoción de tipos, y resumidamente son las siguientes:</p>
+<p> </p>
+<ul class="lista_verificacion">
+<li>Si uno de los operandos es de tipo <span style="font-size: medium;"><strong><code>double</code></strong></span>, el otro es convertido a <span style="font-size: medium;"><strong><code>double</code></strong></span>.</li>
+<li>En cualquier otro caso:
+<ul>
+<li>Si uno de los operandos es <span style="font-size: medium;"><strong><code>float</code></strong></span>, el otro se convierte a <span style="font-size: medium;"><strong><code>float.</code></strong></span></li>
+<li>Si uno de los operandos es <span style="font-size: medium;"><strong><code>long</code></strong></span>, el otro se convierte a <span style="font-size: medium;"><strong><code>long</code></strong></span>.</li>
+<li>Si no se cumple ninguna de las condiciones anteriores, (ningún operando es <strong><span style="font-size: medium;"><code>double</code></span></strong>, ni <strong><span style="font-size: medium;"><code>float</code></span></strong>, ni <strong><span style="font-size: medium;"><code>long</code></span></strong>) entonces ambos operandos son convertidos al tipo <span style="font-size: medium;"><strong><code>int</code></strong></span>.</li>
+</ul>
+</li>
+</ul>
+<table class="tabla" summary="Cuadro o tabla de dos filas por tres columnas, de título &quot;Tabla sobre otras consideraciones con los Tipos de Datos&quot;. Se indican las consideraciones de conversión de números en coma flotante (float, double) a enteros (int), las conversiones entre caracteres (char) y enteros (int) y las conversiones de tipo con cadenas de caracteres (String). Debe ser leída de izquierda a derecha y de arriba abajo. "><caption>Tabla sobre otras consideraciones con los Tipos de Datos</caption>
+<thead>
+<tr><th scope="col">Conversiones de números en Coma flotante (<span style="font-size: medium;"><code>float</code>, <code>double</code></span>) a enteros (<span style="font-size: medium;"><code>int</code></span>)</th><th scope="col">Conversiones entre caracteres (<span style="font-size: medium;"><code>char</code></span>) y enteros (<span style="font-size: medium;"><code>int</code></span>)</th><th scope="col">Conversiones de tipo con cadenas de caracteres (<span style="font-size: medium;"><code>String</code></span>)</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<p>Cuando convertimos números en coma flotante a números enteros, la parte decimal se trunca (redondeo a cero). Si queremos hacer otro tipo de redondeo, podemos utilizar, entre otras, las siguientes funciones:</p>
+<ul class="lista_verificacion">
+<li><strong>Math.round(numero):</strong> Redondeo al siguiente número entero.</li>
+<li><strong>Math.ceil(numero):</strong> El menor de los enteros que sigue siendo mayor o igual a <span style="font-size: medium;"><code>numero</code></span>.</li>
+<li><strong>Math.floor(numero):</strong> El mayor de los enteros que sigue siendo inferior o igual a <span style="font-size: medium;"><code>numero</code></span>.</li>
+</ul>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>double numero=3.5;
+x=Math.round(numero);    //  x = 4
+y=Math.ceil(numero);     //  y = 4
+z=Math.floor(numero);    //  z = 3
+</code></pre>
+</div>
+</div>
+<p></p>
+</td>
+<td>
+<p>Como un tipo <strong><code>char</code></strong> lo que guarda en realidad es el código <strong><span lang="en">Unicode</span></strong> de un carácter, los caracteres pueden ser considerados como números enteros sin signo.</p>
+<p> </p>
+<p><strong>Ejemplo:</strong></p>
+<p></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int numero;
+char c;
+numero = (int) 'A';          // numero = 65
+c = (char) 65;               // c = 'A'
+c = (char) ((int) 'A' + 1);  // c = 'B'
+</code></pre>
+</div>
+</div>
+<p></p>
+</td>
+<td>
+<p>Para convertir cadenas de texto a otros tipos de datos se utilizan las siguientes funciones:</p>
+<p></p>
+<p> </p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>numero=Byte.parseByte(cadena);
+numero=Short.parseShort(cadena);
+numero=Integer.parseInt(cadena);
+numero=Long.parseLong(cadena);
+numero=Float.parseFloat(cadena);
+numero=Double.parseDouble(cadena);</code></pre>
+</div>
+</div>
+<p> </p>
+<p>Por ejemplo, si hemos leído de teclado un número que está almacenado en una variable de tipo <strong><code>String</code> </strong>llamada<strong> <code>cadena</code></strong>, y lo queremos convertir al tipo de datos <strong><code>byte</code></strong>, haríamos lo siguiente:</p>
+<p></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>byte n=Byte.parseByte(cadena);</code></pre>
+</div>
+</div>
+<p></p>
+<br /><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="anexo_i_listado_de_ides.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_iii_ejercicios_resueltos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

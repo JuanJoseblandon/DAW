@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.5.- Java y los Bytecodes | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-23"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_el_lenguaje_de_programacin_java.html" class="current-page-parent daddy">5.- El lenguaje de programación Java</a>
+   <ul>
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li id="active"><a href="55_java_y_los_bytecodes.html" class="active no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="54_seguridad_y_simplicidad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_programas_en_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.5.- Java y los Bytecodes</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id52">
+<div class="iDevice emphasis0">
+<div id="ta52_73" class="block iDevice_content">
+<p>Un programa escrito en <span lang="en">Java</span> no es directamente ejecutable, es necesario que el c&oacute;digo fuente sea interpretado por la M&aacute;quina Virtual <span lang="en">Java</span>. &iquest;Cu&aacute;les son los pasos que se siguen desde que se genera el c&oacute;digo fuente hasta que se ejecuta? A continuaci&oacute;n se detallan cada uno de ellos.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="PROG01_CONT_R16_programas_en_Java.png" target="_blank"><img src="PROG01_CONT_R16_programas_en_Java_miniatura.png" alt="Esquema que muestra el proceso desde la creaci&oacute;n del c&oacute;digo fuente en Java, pasando por las fases de compilaci&oacute;n, generaci&oacute;n de bytecodes y su interpretaci&oacute;n en la M&aacute;quina Virtual Java." title="Programas en Java." class="imagen_ampliable" style="vertical-align: middle;" width="140" height="192" /></a></div>
+<div class="elemento_centrado credenciales">Ministerio de Educaci&oacute;n. Uso educativo-nc. Elaboraci&oacute;n propia.</div>
+</div>
+<p>&nbsp;</p>
+<p>Una vez escrito el c&oacute;digo fuente (archivos con extensi&oacute;n <code>.java</code>), &eacute;ste es precompilado gener&aacute;ndose los c&oacute;digos de <span lang="en">bytes, Bytecodes</span> o <span lang="en">Java Bytecodes</span> (archivos con extensi&oacute;n <code>.class</code>) que ser&aacute;n interpretados directamente por la M&aacute;quina Virtual <span lang="en">Java</span> y traducidos a c&oacute;digo nativo de la plataforma sobre la que se est&eacute; ejecutando el programa.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id53">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta53_70" class="block iDevice_content">
+<p><strong><span lang="en">Bytecode</span>: </strong>son un conjunto de instrucciones en lenguaje m&aacute;quina que no son espec&iacute;ficas para ning&uacute;n procesador o sistema de c&oacute;mputo. Un int&eacute;rprete de c&oacute;digo de <span lang="en">bytes (bytecodes) </span>para una plataforma espec&iacute;fica ser&aacute; quien los ejecute. A estos int&eacute;rpretes tambi&eacute;n se les conoce como M&aacute;quinas Virtuales <span lang="en">Java</span> o int&eacute;rpretes <span lang="en">Java</span> de tiempo de ejecuci&oacute;n.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id54">
+<div class="iDevice emphasis0">
+<div id="ta54_73" class="block iDevice_content">
+<p>En el proceso de precompilaci&oacute;n, existe un verificador de c&oacute;digos de <span lang="en">bytes</span> que se asegurar&aacute; de que se cumplen las siguientes condiciones:</p>
+<ul class="lista_verificacion">
+<li>El c&oacute;digo satisface las especificaciones de la M&aacute;quina Virtual <span lang="en">Java</span>.</li>
+<li>No existe amenaza contra la integridad del sistema.</li>
+<li>No se producen desbordamientos de memoria.</li>
+<li>Los par&aacute;metros y sus tipos son adecuados.</li>
+<li>No existen conversiones de datos no permitidas.</li>
+</ul>
+<p>Para que un <span lang="en">bytecode</span> pueda ser ejecutado en cualquier plataforma, es imprescindible que dicha plataforma cuente con el int&eacute;rprete adecuado, es decir,<strong> la m&aacute;quina virtual espec&iacute;fica para esa plataforma</strong>. En general, la M&aacute;quina Virtual <span lang="en">Java</span> es un programa de reducido tama&ntilde;o y gratuito para todos los sistemas operativos.</p>
+<p>&nbsp;</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="PROG01_CONT_R17_javabytecode.png" target="_blank"><img src="PROG01_CONT_R17_javabytecode_mini.png" alt="Esquema general de la arquitectura de un programa ejecut&aacute;ndose en una M&aacute;quina Virtual Java. El archivo con el c&oacute;digo fuente (extensi&oacute;n .java) es compilado mediante javac.exe, obteni&eacute;ndose los bytecodes (extensi&oacute;n .class). Finalmente, mediante el int&eacute;rprete java.exe se ejecutar&aacute;n los bytecodes en la plataforma espec&iacute;fica." title="Bytecodes en Java." class="imagen_ampliable" style="vertical-align: middle;" width="300" height="219" /></a></div>
+<div class="elemento_centrado credenciales">Ministerio de Educaci&oacute;n. Uso educativo-nc. Elaboraci&oacute;n propia.</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id114">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-114_56" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion114_56" class="block question iDevice_content">
+<p><strong>En <span lang="en">Java</span> el c&oacute;digo fuente es compilado, obteni&eacute;ndose el c&oacute;digo binario en forma de <span lang="en">bytecodes</span>. Pero, &iquest;cu&aacute;l es la extensi&oacute;n del archivo resultante?</strong></p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i114_59" class="sr-av"><a href="#answer-114_59">Opción 1</a></label><input type="radio" name="option114_56" id="i114_59" class="exe-radio-option exe-radio-option-0-3-114_56-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-114_59"><div id="taans114_59" class="block iDevice_content">
+<p>Extensi&oacute;n <code>.obj</code></p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i114_263" class="sr-av"><a href="#answer-114_263">Opción 2</a></label><input type="radio" name="option114_56" id="i114_263" class="exe-radio-option exe-radio-option-1-3-114_56-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-114_263"><div id="taans114_263" class="block iDevice_content">
+<div style="float: left; display: table-cell; margin-left: 0.2em;">Extensi&oacute;n <code>.class</code></div>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i114_266" class="sr-av"><a href="#answer-114_266">Opción 3</a></label><input type="radio" name="option114_56" id="i114_266" class="exe-radio-option exe-radio-option-2-3-114_56-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-114_266"><div id="taans114_266" class="block iDevice_content">
+<div style="float: left; display: table-cell; margin-left: 0.2em;">Extensi&oacute;n <code>.java</code></div>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b114_56" class="feedback js-hidden">
+<div id="taf114_59" class=" iDevice_content">
+<p>Incorrecto, los archivos <code>.obj</code> son generados por un compilador antes de generar el archivo ejecutable.</p>
+</div>
+</section>
+<section id="sa1b114_56" class="feedback js-hidden">
+<div id="taf114_263" class=" iDevice_content">
+<p>Correcto, este tipo de archivos son los que la M&aacute;quina Virtual <span lang="en">Java</span> traducir&aacute; para poder ejecutarlos en la m&aacute;quina real.</p>
+</div>
+</section>
+<section id="sa2b114_56" class="feedback js-hidden">
+<div id="taf114_266" class=" iDevice_content">
+<p>Incorrecto, los archivos con esta extensi&oacute;n contienen el c&oacute;digo fuente del programa.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-114_59">Incorrecto</a><span> (<a href="#sa0b114_56">Retroalimentación</a>)</span></li>
+<li><a href="#answer-114_263">Opción correcta</a><span> (<a href="#sa1b114_56">Retroalimentación</a>)</span></li>
+<li><a href="#answer-114_266">Incorrecto</a><span> (<a href="#sa2b114_56">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="54_seguridad_y_simplicidad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_programas_en_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

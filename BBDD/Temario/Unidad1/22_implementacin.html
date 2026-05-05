@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.- Implementación | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_fases_de_la_programacin.html" class="current-page-parent daddy">2.- Fases de la programación</a>
+   <ul>
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li id="active"><a href="22_implementacin.html" class="active no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_resolucin_del_problema.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_explotacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2.- Implementación</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id20">
+<div class="iDevice emphasis0">
+<div id="ta20_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="ST000943.png" alt="Primer plano de algunas teclas de un teclado de ordenador." title="Teclado." style="float: right;" width="200" height="132" /></div>
+<div class="elemento_centrado credenciales">Stockbyte. Uso educativo no comercial<br />para plataformas p&uacute;blicas de<br />Formaci&oacute;n Profesional a distancia.</div>
+<div class="elemento_centrado credenciales">CD-DVD Num. V07</div>
+</div>
+<p>Si la fase de resoluci&oacute;n del problema requiere un especial cuidado en la realizaci&oacute;n del an&aacute;lisis y el posterior dise&ntilde;o de la soluci&oacute;n, la fase de implementaci&oacute;n cobra tambi&eacute;n una especial relevancia. Llevar a la realidad nuestro algoritmo implicar&aacute; cubrir algunas etapas m&aacute;s que se detallan a continuaci&oacute;n.</p>
+<ol style="list-style-type: lower-alpha; list-style-image: none; list-style-position: outside;">
+<li>
+<p><strong>Codificaci&oacute;n o construcci&oacute;n.</strong></p>
+<p>Esta etapa consiste en transformar o traducir los resultados obtenidos a un determinado lenguaje de programaci&oacute;n. Para comprobar la calidad y estabilidad de la aplicaci&oacute;n se han de realizar una serie de pruebas que comprueben las funciones de cada m&oacute;dulo (<strong>pruebas unitaria</strong>s), que los m&oacute;dulos funcionan bien entre ellos (<strong>pruebas de interconexi&oacute;n</strong>) y que todos funcionan en conjunto correctamente (<strong>pruebas de integraci&oacute;n</strong>).</p>
+<p>Cuando realizamos la traducci&oacute;n del algoritmo al lenguaje de programaci&oacute;n debemos tener en cuenta las reglas gramaticales y la sintaxis de dicho lenguaje. Obtendremos entonces el <a class="glosario">c&oacute;digo fuente<span><em>C&oacute;digo fuente. </em>El c&oacute;digo fuente de un programa inform&aacute;tico (o software) es un conjunto de l&iacute;neas de texto (importante: l&iacute;neas de TEXTO), que son las instrucciones que debe seguir la computadora para ejecutar dicho programa. Por tanto, en el c&oacute;digo fuente de un programa est&aacute; escrito por completo su funcionamiento. (Basado en la definici&oacute;n de Wikipedia). </span></a>, lo que normalmente conocemos por programa.</p>
+<p>Pero para que nuestro programa comience a funcionar, antes debe ser <strong>traducido</strong> a un lenguaje que la m&aacute;quina entienda. Este proceso de traducci&oacute;n puede hacerse de dos formas, <strong>compilando </strong>o<strong> interpretando</strong> el c&oacute;digo&nbsp; fuente del programa.</p>
+</li>
+</ol>
+<div class="destacado">
+<p><strong>Compilaci&oacute;n: </strong>es el proceso por el cual se traducen las instrucciones escritas en un determinado lenguaje de programaci&oacute;n a lenguaje que la m&aacute;quina es capaz de interpretar.</p>
+<p><strong>Compilador: </strong>programa inform&aacute;tico que realiza la traducci&oacute;n. Recibe el c&oacute;digo fuente, realiza un an&aacute;lisis lexicogr&aacute;fico, sem&aacute;ntico y sint&aacute;ctico, genera un c&oacute;digo intermedio no optimizado, optimiza dicho c&oacute;digo y finalmente, genera el c&oacute;digo objeto para una plataforma espec&iacute;fica.</p>
+<p><strong>Int&eacute;rprete: </strong>programa inform&aacute;tico capaz de analizar y ejecutar otros programas, escritos en un lenguaje de alto nivel. Los int&eacute;rpretes se diferencian de los compiladores en que mientras estos traducen un programa desde su descripci&oacute;n en un lenguaje de programaci&oacute;n al c&oacute;digo de m&aacute;quina del sistema, los int&eacute;rpretes s&oacute;lo realizan la traducci&oacute;n a medida que sea necesaria, t&iacute;picamente, instrucci&oacute;n por instrucci&oacute;n, y normalmente no guardan el resultado de dicha traducci&oacute;n.</p>
+</div>
+<p>Una vez traducido, sea a trav&eacute;s de un proceso de compilaci&oacute;n o de interpretaci&oacute;n, el programa podr&aacute; ser ejecutado.</p>
+<ol style="list-style-type: lower-alpha; list-style-image: none; list-style-position: outside;" start="2">
+<li>
+<p><strong>Prueba de ejecuci&oacute;n y validaci&oacute;n.</strong></p>
+<p>Para esta etapa es necesario implantar la aplicaci&oacute;n en el sistema donde va a funcionar, debe ponerse en marcha y comprobar si su funcionamiento es correcto. Utilizando diferentes datos de prueba se ver&aacute; si el programa responde a los requerimientos especificados, si se detectan nuevos errores, si &eacute;stos son bien gestionados y si la interfaz es amigable. Se trata de poner a prueba nuestro programa para ver su respuesta en situaciones dif&iacute;ciles.</p>
+<p>Mientras se detecten errores y &eacute;stos no se subsanen no podremos avanzar a la siguiente fase. Una vez corregido el programa y testeado se documentar&aacute; mediante:</p>
+<ul class="lista_verificacion">
+<li><strong>Documentaci&oacute;n interna:</strong> encabezados, descripciones, declaraciones del problema y comentarios que se incluyen dentro del c&oacute;digo fuente.</li>
+<li><strong>Documentaci&oacute;n externa:</strong> son los manuales que se crean para una mejor ejecuci&oacute;n y utilizaci&oacute;n del programa, as&iacute; como algunos tipos de diagramas que ayudan a comprender mejor la "arquitectura" de nuestra soluci&oacute;n, como pueden ser los <a class="glosario">diagramas de flujo<span><em>Diagrama de flujo. </em>Es la representaci&oacute;n gr&aacute;fica del algoritmo o proceso. (Basado en la definici&oacute;n de Wikipedia).</span></a>, <a class="glosario">diagramas de clases<span><em>Diagrama de clases. </em>Es un tipo de diagrama est&aacute;tico orientado a objetos que describe la estructura de un sistema mostrando sus clases. (Wikipedia)</span></a>, <abbr title="etc&eacute;tera.">etc</abbr>.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ClozefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id21">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta21_41" class="block instructions iDevice_content">
+<p><strong>Rellena los huecos con los conceptos adecuados:</strong></p>
+</section>
+<section class="activity" id="activity-21_42"><form name="cloze-form-21_42" action="#" class="activity-form cloze-activity-form"><div id="cloze21_42"><input type="hidden" name="clozeFlag21_42.strictMarking" id="clozeFlag21_42.strictMarking" value="false"/>
+<input type="hidden" name="clozeFlag21_42.checkCaps" id="clozeFlag21_42.checkCaps" value="false"/>
+<input type="hidden" name="clozeFlag21_42.instantMarking" id="clozeFlag21_42.instantMarking" value="false"/>
+<input type="hidden" name="clozeVar21_42.feedbackId" id="clozeVar21_42.feedbackId" value="ta21_43"/>
+<p>En la fase de codificación, hemos de tener en cuenta la <label for="clozeBlank21_42.0" class="sr-av">Rellenar huecos (1):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank21_42.0" style="width:8ch" /><span style="display:none" id="clozeAnswer21_42.0">JXUwMDJiJXUwMDFhJXUwMDA3JXUwMDFhJXUwMDE1JXUwMDE5JXUwMDExJXUwMDFh
+</span> del lenguaje para obtener el código fuente o programa. Posteriormente, éste deberá ser <label for="clozeBlank21_42.1" class="sr-av">Rellenar huecos (2):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank21_42.1" style="width:9ch" /><span style="display:none" id="clozeAnswer21_42.1">JXUwMDNiJXUwMDBjJXUwMDAyJXUwMDFkJXUwMDE5JXUwMDA1JXUwMDBkJXUwMDA1JXUwMDBi
+</span> o <label for="clozeBlank21_42.2" class="sr-av">Rellenar huecos (3):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank21_42.2" style="width:12ch" /><span style="display:none" id="clozeAnswer21_42.2">JXUwMDMxJXUwMDA3JXUwMDFhJXUwMDExJXUwMDE3JXUwMDAyJXUwMDAyJXUwMDE3JXUwMDExJXUw
+MDE1JXUwMDA1JXUwMDBi
+</span> para que pueda ser ejecutado posteriormente.</p><div class="block iDevice_buttons"><p><input class="button" type="submit" name="submit21_42" value="Enviar"  id="submit21_42" />
+<input type="button" name="restart21_42" value="Reiniciar" style="display:none" id="restart21_42" onclick="$exe.cloze.restart('21_42')" />
+ <input type="button" name="21_42showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton21_42" onclick="$exe.cloze.fillInputs('21_42')" />
+<span class="js-hidden js-warning">Habilitar JavaScript</span></p></div><div id="clozeScore21_42"></div></div></form></section><section id="ta21_43" class="feedback js-feedback iDevice_content" style="display:none">
+<p>La <strong>sintaxis </strong>y reglas gramaticales del lenguaje de programaci&oacute;n que estemos utilizando deben ser respetadas para obtener un c&oacute;digo fuente correcto. Este c&oacute;digo fuente debe ser<strong> compilado o interpretado, </strong>utilizando un programa compilador o int&eacute;rprete, para transformarlo a un formato que sea ejecutable por la m&aacute;quina.</p>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_resolucin_del_problema.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_explotacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

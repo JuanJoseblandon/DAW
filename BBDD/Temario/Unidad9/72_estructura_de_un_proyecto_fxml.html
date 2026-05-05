@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.2.- Estructura de un proyecto FXML </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-47"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Interfaces gráficas de usuario</a></li>
+   <li><a href="1_arquitectura_de_javafx.html" class="no-ch">1.- Arquitectura de JavaFX</a></li>
+   <li><a href="2_estructura_de_una_aplicacin.html" class="daddy">2.- Estructura de una aplicación</a>
+   <ul class="other-section">
+      <li><a href="21_grafo_de_escena.html" class="no-ch">2.1.- Grafo de escena</a></li>
+      <li><a href="22_instalar_sdk.html" class="no-ch">2.2.- Instalar SDK</a></li>
+      <li><a href="23_primer_ejemplo.html" class="no-ch">2.3.- Primer ejemplo</a></li>
+   </ul>
+   </li>
+   <li><a href="3_eventos.html" class="daddy">3.- Eventos</a>
+   <ul class="other-section">
+      <li><a href="31_modelo_de_gestin_de_eventos.html" class="no-ch">3.1.- Modelo de gestión de eventos</a></li>
+      <li><a href="32_tipos_de_eventos.html" class="no-ch">3.2.- Tipos de eventos</a></li>
+      <li><a href="33_aadir_un_manejador_de_evento.html" class="no-ch">3.3.- Añadir un manejador de evento</a></li>
+   </ul>
+   </li>
+   <li><a href="4_css.html" class="daddy">4.- CSS</a>
+   <ul class="other-section">
+      <li><a href="41_introduccin.html" class="no-ch">4.1.- Introducción</a></li>
+      <li><a href="42_hoja_de_estilo_por_defecto.html" class="no-ch">4.2.- Hoja de estilo por defecto</a></li>
+      <li><a href="43_hoja_de_estilo_especfica_de_la_escena.html" class="no-ch">4.3.- Hoja de estilo específica de la escena</a></li>
+      <li><a href="44_hoja_de_estilo_especfica_del_padre.html" class="no-ch">4.4.- Hoja de estilo específica del padre</a></li>
+      <li><a href="45_estilo_especfico_en_componente.html" class="no-ch">4.5.- Estilo específico en componente</a></li>
+   </ul>
+   </li>
+   <li><a href="5_layout_panes.html" class="daddy">5.- Layout panes</a>
+   <ul class="other-section">
+      <li><a href="51_absolute_layout.html" class="no-ch">5.1.- Absolute layout</a></li>
+      <li><a href="52_hbox.html" class="no-ch">5.2.- HBox</a></li>
+      <li><a href="53_vbox.html" class="no-ch">5.3.- VBox</a></li>
+      <li><a href="54_borderpane.html" class="no-ch">5.4.- BorderPane</a></li>
+      <li><a href="55_anchorpane.html" class="no-ch">5.5.- AnchorPane</a></li>
+      <li><a href="56_stackpane.html" class="no-ch">5.6.- StackPane</a></li>
+      <li><a href="57_flowpane.html" class="no-ch">5.7.- FlowPane</a></li>
+      <li><a href="58_tilepane.html" class="no-ch">5.8.- TilePane</a></li>
+      <li><a href="59_gridpane.html" class="no-ch">5.9.- GridPane</a></li>
+   </ul>
+   </li>
+   <li><a href="6_controles_ui.html" class="daddy">6.- Controles UI</a>
+   <ul class="other-section">
+      <li><a href="61_label_etiqueta_y_textfield_campo_de_texto.html" class="no-ch">6.1.- Label (Etiqueta) y TextField (Campo de texto)</a></li>
+      <li><a href="62_button_botn.html" class="daddy">6.2.- Button (Botón)</a>
+      <ul class="other-section">
+         <li><a href="621_aadir_imagenicono_a_botn.html" class="no-ch">6.2.1.- Añadir imagen/icono a botón</a></li>
+         <li><a href="622_validar_entrada.html" class="no-ch">6.2.2.- Validar entrada</a></li>
+      </ul>
+      </li>
+      <li><a href="63_men.html" class="no-ch">6.3.- Menú</a></li>
+      <li><a href="64_menubutton.html" class="no-ch">6.4.- MenuButton</a></li>
+      <li><a href="65_checkbox.html" class="no-ch">6.5.- CheckBox</a></li>
+      <li><a href="66_radiobutton_radiobotn.html" class="no-ch">6.6.- RadioButton (Radiobotón)</a></li>
+      <li><a href="67_combobox.html" class="daddy">6.7.- ComboBox</a>
+      <ul class="other-section">
+         <li><a href="671_seleccionar_un_valor.html" class="no-ch">6.7.1.- Seleccionar un valor</a></li>
+      </ul>
+      </li>
+      <li><a href="68_listview_lista.html" class="daddy">6.8.- ListView (Lista)</a>
+      <ul class="other-section">
+         <li><a href="681_obtener_valor_seleccionado.html" class="no-ch">6.8.1.- Obtener valor seleccionado</a></li>
+         <li><a href="682_seleccionar_varios_elementos.html" class="no-ch">6.8.2.- Seleccionar varios elementos.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="7_javafx_fxml.html" class="current-page-parent daddy">7.- JavaFX FXML</a>
+   <ul>
+      <li><a href="71_javafx_scene_builder.html" class="no-ch">7.1.- JavaFX Scene Builder</a></li>
+      <li id="active"><a href="72_estructura_de_un_proyecto_fxml.html" class="active daddy">7.2.- Estructura de un proyecto FXML</a>
+      <ul>
+         <li><a href="721_el_fichero_fxml.html" class="no-ch">7.2.1.- El fichero .fxml</a></li>
+         <li><a href="722_controlador.html" class="no-ch">7.2.2.- Controlador</a></li>
+         <li><a href="723_clase_principal.html" class="no-ch">7.2.3.- Clase principal</a></li>
+         <li><a href="724_ejemplo_javafx_con_scene_builder_y_netbeans.html" class="no-ch">7.2.4.- Ejemplo JavaFX con Scene Builder y NetBeans</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="8_paso_de_informacin_entre_ventanas.html" class="daddy">8.- Paso de información entre ventanas</a>
+   <ul class="other-section">
+      <li><a href="81_paso_de_informacin_entre_ventanas_usando_fxml.html" class="no-ch">8.1.- Paso de información entre ventanas usando FXML</a></li>
+      <li><a href="82_paso_de_informacin_entre_ventanas_usando_fxml_ii.html" class="no-ch">8.2.- Paso de información entre ventanas usando FXML (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="9_grficos.html" class="daddy">9.- Gráficos</a>
+   <ul class="other-section">
+      <li><a href="91_ejemplo_diagrama_de_quesos.html" class="no-ch">9.1.- Ejemplo: diagrama de quesos</a></li>
+   </ul>
+   </li>
+   <li><a href="10_imagen_audio_y_vdeo.html" class="daddy">10.- Imagen, audio y vídeo</a>
+   <ul class="other-section">
+      <li><a href="101_imagen.html" class="no-ch">10.1.- Imagen</a></li>
+      <li><a href="102_audio.html" class="no-ch">10.2.- Audio</a></li>
+      <li><a href="103_vdeo.html" class="no-ch">10.3.- Vídeo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_lambda.html" class="no-ch">Anexo I.- Lambda</a></li>
+   <li><a href="anexo_ii_atributos_tipo_property.html" class="no-ch">Anexo II.- Atributos tipo Property</a></li>
+   <li><a href="anexo_iii_ejemplo_de_aplicacin.html" class="no-ch">Anexo III.- Ejemplo de aplicación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="71_javafx_scene_builder.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="721_el_fichero_fxml.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.2.- Estructura de un proyecto FXML</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id257">
+<div class="iDevice emphasis0">
+<div id="ta257_69" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-copyright" style="width: 200px;"><a href="errorCrear.png"><img src="errorCrear_mini.png" alt="Problema al usar el asistente para FXML" title="Problema al usar el asistente para FXML" class="imagen_ampliable" style="float: right;" width="200" height="143" /></a><figcaption class="figcaption"><span class="author">José Javier Bermúdez Hernández.</span> <span class="license"><span class="sep">Captura de pantalla de la aplicación NetBeans, propiedad de Apache, con licencia GNU GPL2.</span></span></figcaption></figure>
+<p>FXML es un lenguaje basado en XML, <strong>diseñado para construir interfaces de usuario para aplicaciones JavaFX</strong>.</p>
+<p>Un proyecto FXML sigue el patrón de diseño <acronym title="Modelo Vista Controlador"><a class="glosario">MVC<span><em>MVC</em>Es un patrón de arquitectura de software, que separa los datos y la lógica de negocio de una aplicación de su presentación y del módulo encargado de gestionar los eventos y las comunicaciones</span></a></acronym> (<strong>Modelo, Vista y Controlador</strong>), donde <code>FXMLDocument.fxml</code> es la vista y <code>FXMLDocumentController.java</code> el controlador.</p>
+<p>FXML permite separar la <a class="glosario">lógica de negocio<span><em>Lógica de negocio</em>Es la parte de un sistema que contiene las reglas de negocio del mundo real que determinan cómo se gestiona la información del sistema, cómo se crea, muestra, cambia,...</span></a> de la interfaz de usuario. Si cambia la interfaz de usuario, no es necesario recompilar el código JavaFX. En vez de eso, puedes cambiar el código del documento FXML mediante una editor de texto y ejecutar de nuevo la aplicación.</p>
+<p>Veremos la estructura de un proyecto JavaFX.</p>
+<p>Actualmente, si nos vamos al menú <strong><span lang="en">File</span> </strong>de Apache NetBeans 12, pulsamos en <strong><span lang="en">New Project</span></strong>, elegimos <strong></strong><span lang="en"><strong>JavaFX FXML Application</strong></span> y pulsamos en el botón siguiente tenemos el problema de que no está soportada esta característica.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id258">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta258_66" class="block iDevice_content">
+<p>Si estuviera soportada, o si estuviéramos usando una versión de Java anterior como el JDK 8, el proceso la creación de un proyecto sencillo con FXML, el que crea por defecto el asistente de NetBeans, sería el siguiente:</p>
+<div class="enlace_centrado"><a class="pdf" title="Descargar documento de diseño de menús. [pdf - 1.50 MB]" href="CrearProyectoFXML.pdf" target="_blank">Crear proyecto fxml</a> <span class="tamano"> (1.50 MB) </span></div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id259">
+<div class="iDevice emphasis0">
+<div id="ta259_69" class="block iDevice_content">
+<figure class="exe-figure exe-image float-left license-copyright" style="width: 255px;"><a href="javafxmlestructura.png"><img src="javafxmlestructura_mini.png" alt="Estructura FXML" title="Estructura FXML" style="float: left;" class="imagen_ampliable" width="185" height="200" /></a><figcaption class="figcaption"><span class="author">José Javier Bermúdez Hernández</span>.<span class="license"><span class="sep"><br />Captura de pantalla de la aplicación NetBeans, propiedad de Apache, con licencia GNU GPL2</span></span></figcaption></figure>
+<p><br />Como vemos, en ese documento la idea es que una aplicación básica tendría <strong>tres ficheros</strong>: dos ficheros de extensión .java y uno de extensión <code>.fxml</code>.</p>
+<p>La clase java <code>JavaFXBase</code> es la clase principal, la que inicia la ejecución de la aplicación. Si miramos su código fuente, observamos que se encarga de cargar la estructura de la ventana contenida en el archivo <code>FXMLDocument.fxml</code>, mediante la línea:</p>
+<p style="text-align: center;"><code>Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));</code></p>
+<p>Puesto que como hemos dicho, el asistente falla al intentar generar la plantilla inicial de un proyecto Java FXML, a continuación puedes descargar una plantilla ya creada de modo que solo tengas que abrir el proyecto y empezar a trabajar a partir de ella, renombrando el proyecto y añadiendo lo que necesites:</p>
+<p style="text-align: center;"><a class="paquete" title="Descargar el proyecto con el ejemplo de uso del componente CheckBox [zip – 24 KB]" href="PlantillaFXML.zip" target="_blank">Plantilla proyecto FXML</a> <span class="tamano">(24.00 KB)</span></p>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id273">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(icon_debesconocerfpd.png)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta273_129" class="block iDevice_content">
+<p>En el siguiente vídeo se ve cómo operar con <span lang="en">SceneBuilder</span>:</p>
+<div class="elemento_centrado titulo">JavaFX y SceneBuilder</div>
+<div class="elemento_centrado">
+<p><iframe width="560" height="315" src="//www.youtube.com/embed/HudNwOtiexY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></p>
+</div>
+<div class="elemento_centrado credenciales"><a title="Ver el resumen del vídeo" href="Resumen_textual_alternativo_para_le_video_sobre_Scene_Builder.html" target="_blank">Resumen del vídeo</a></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice em_iDevice_recomendacionfpd" id="id147">
+<div class="iDevice emphasis_recomendacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_recomendacionfpd.png)"><h1 class="iDeviceTitle">Recomendación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta147_46" class="block iDevice_content">
+<p>Te recomendamos que leas el siguiente enlace donde se explica muy resumidamente el patr&oacute;n modelo vista controlador.</p>
+<p style="text-align: center;"><a class="html" href="https://codigofacilito.com/articulos/mvc-model-view-controller-explicado" target="_blank">Patr&oacute;n MVC</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="71_javafx_scene_builder.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="721_el_fichero_fxml.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

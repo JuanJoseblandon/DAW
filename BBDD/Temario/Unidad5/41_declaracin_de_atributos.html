@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.1.- Declaración de atributos | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-16"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_atributos.html" class="current-page-parent daddy">4.- Atributos</a>
+   <ul>
+      <li id="active"><a href="41_declaracin_de_atributos.html" class="active no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li><a href="5_mtodos.html" class="daddy">5.- Métodos</a>
+   <ul class="other-section">
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="4_atributos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_modificadores_de_atributo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.1.- Declaración de atributos</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id22">
+<div class="iDevice emphasis0">
+<div id="ta22_73" class="block iDevice_content">
+<div class="elemento_derecha"></div>
+<div class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="boxes-1834406_640.jpg" alt="Panel de cajoneras archivadoras" title="Cajoneras" style="float: right;" width="240" height="146" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/cajas-cajones-buzones-de-correo-1834406/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Pexels en Pixabay (se abre en una nueva ventana).">Pexels</a> <span class="license"><span class="sep">(</span><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span>)</span></span></div>
+</div>
+<p>La sintaxis general para la declaración de un atributo en el interior de una clase es:</p>
+<div class="highlighted-code language-java">
+<pre><code>[modificadores] &lt;tipo&gt; &lt;nombreAtributo&gt;;</code></pre>
+</div>
+<p>Ejemplos:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code>int x;                                 // Un atributo de tipo int (entero)
+static double descuentoGeneral;        // Un atributo de tipo double (real)
+short numeroRuedas;                    // Un atributo de tipo short (entero corto)
+float porcentajeDescuento;             // Un atributo de tipo double (real)
+final boolean casado;                  // Un atributo de tipo boolean (lógico)
+public static final int VALOR_MAXIMO;  // Un atributo de tipo int (entero) y constante
+public String nombre;                  // Un atributo de tipo String (cadena de caracteres)
+private LocalTime horaDeLlegada;       // Un atributo de tipo LocalTime (hora)
+</code></pre>
+</div>
+<p>Te suena bastante, ¿verdad?</p>
+<p>La declaración de los atributos en una clase<strong> es exactamente igual a la declaración de cualquier variable</strong> tal y como has estudiado en las unidades anteriores y similar a como se hace en cualquier lenguaje de programación no necesariamente orientado a objetos. Es decir, mediante la indicación del tipo y a continuación el nombre del atributo.</p>
+<p>También puedes declarar a la vez varios atributos del mismo tipo mediante una lista de nombres separada por comas (exactamente como ya has estudiado al declarar variables). Por ejemplo:</p>
+<div class="highlighted-code language-java">
+<pre><code>private StringBuilder nombre, apellido1, apellido2;   // Tres atributos de tipo StringBuilder (cadena de caracteres)
+private double peso, altura;                          // Dos atributos de tipo double (real)
+private final LocalDate fechaInicio, fechaFin;        // Dos atributos de tipo LocalDate (fecha)
+</code></pre>
+</div>
+<p>La declaración de un <strong>atributo</strong> podría considerarse como la declaración de una variable que únicamente existe en el interior del objeto y, por tanto, su vida comenzará cuando el objeto comience a existir (el objeto sea creado por un<strong> constructor</strong>). Esto significa que cada vez que se cree o instancie un objeto se crearán tantas variables "internas" como atributos contenga ese objeto en su interior (definidas en la clase, que es la plantilla o "molde" del objeto). Todas esas variables estarán encapsuladas dentro del objeto y solo tendrán sentido dentro de él. Podríamos decir que son "locales" al objeto y visibles desde cualquiera de sus métodos, pero no necesariamente visibles desde fuera. A los atributos también se les conoce con otros nombres como por ejemplo: <strong>propiedades</strong>, <strong>campos</strong>, <strong>variables miembro</strong>, o <strong>variables de objeto</strong>.</p>
+<p><span>En el ejemplo de clase que estamos diseñando con objetos de tipo </span><code>Vehiculo</code><span> (instancias de la clase </span><code>Vehiculo</code><span>), cada vez que se cree un nuevo vehículo </span><code>v1</code><span>, se crearán  atributos </span><code>nivelDeposito</code><span>, </span><code>matriculacion</code><span></span><span> y <code>estadoMotor</code> de tipo </span><code>double</code><span>, <code>short</code> y <code>boolean</code> que estarán en el interior de ese vehículo </span><code>v1</code><span> (algo así como variables "internas" que solo existen en el contexto de ese objeto vehículo <code>v1</code>). Si a continuación se crea un nuevo objeto </span><code>Vehiculo v2</code><span>, se crearán otros tres nuevos atributos </span><span><code>nivelDeposito</code><span>, </span><code>matriculacion</code><span></span><span> y <code>estadoMotor</code> de tipo </span><code>double</code><span>, <code>short</code> y <code>boolean</code></span> que estarán esta vez alojados en el interior de </span><code>v2</code><span>. Y así con todos los objetos de tipo <code>Vehiculo </code>que instanciemos o creemos. Cada <code>v1</code><span></span>, <code>v2</code><span></span>, <code>v3</code><span></span>, <abbr title="etcétera.">etc</abbr><span></span>., tendrá sus propios valores para esos atributos (son vehículos independientes, cada uno con sus características específicas).<br /></span></p>
+<p>Dentro de la declaración de un atributo puedes encontrar tres partes:</p>
+<ul class="lista_verificacion">
+<li><strong>Modificadores</strong>. Son palabras reservadas que permiten modificar la utilización del atributo (indicar el control de acceso, si el atributo es constante, si se trata de un atributo de clase o de objeto, <abbr title="etcétera.">etc</abbr>.). Los iremos viendo uno a uno. En los ejemplos anteriores ya has tenido la oportunidad de observar algunos de ellos como <code>public</code>, <code>private</code>, <code>static</code>, <abbr title="etcétera">etc</abbr>.</li>
+<li><strong>Tipo</strong>. Indica el tipo del atributo. Puede tratarse de un tipo primitivo (<code>int</code><span>, </span><code>char</code>, <code>boolean</code>, <code>double</code>, <abbr title="etcétera.">etc.</abbr>) o bien de uno referenciado (objetos como por ejemplo <code>String</code>, <code>LocalDate</code> o <code>StringBuilder</code>, un <span lang="en">array</span>, otra clase implementada previamente por ti, <abbr title="etcétera.">etc.</abbr>).</li>
+<li><strong>Nombre</strong>. Identificador único para el nombre del atributo. Por convenio se <strong>suelen utilizar las minúsculas</strong>. En caso de que se trate de un identificador que contenga varias palabras, <strong>a partir de la segunda palabra se suele poner la letra de cada palabra en mayúsculas</strong>, tal y como ya hacíamos para declarar las variables (notación "<em><span lang="en">camel case</span></em>"). Por ejemplo: <code>primerValor</code>, <code>valor</code>, <code>puertaIzquierda</code>, <code>cuartoTrasero</code>, <code>equipoVecendor</code>, <code>sumaTotal</code>, <code>nombreCandidatoFinal</code>, <abbr title="etcétera.">etc</abbr>. Cualquier identificador válido de <span lang="en">Java</span> será admitido como nombre de atributo válido, pero <strong>es muy importante seguir este convenio</strong> para facilitar la legibilidad del código (todos los programadores de <span lang="en">Java</span> lo utilizan y nosotros también lo haremos). Si te fijas, es el <strong>mismo convenio que se utiliza para las variables</strong>. De este modo, cuando veamos un identificador que sigue ese convenio en cualquier parte del código sabremos rápidamente que se trata de un atributo o de una variable local.</li>
+</ul>
+<p>Y ahora, antes de seguir avanzando, ha llegado el momento de que nos tomemos unos minutos para reflexionar sobre este tema de la declaración de atributos y realicemos un pequeño ejercicio para consolidar lo que llevamos aprendido.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdIdevice em_iDevice em_iDevice_reflexionfpd" id="id130">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta130_119" class="block iDevice_content">
+<p>Casi siempre nos va a suceder que tendremos la opción de escoger entre varias posibilidades a la hora de decidir el <strong>tipo de un atributo</strong>. De hecho, ya te habrás encontrado con esa disyuntiva desde el comienzo del curso cada vez que vas a declarar <strong>una variable</strong>. Por ejemplo, para <strong>enteros</strong> hay cuatro posiblidades en <span lang="en">Java</span> (<code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>), para <strong>reales</strong> tienes dos (<code>float</code>, <code>double</code>), para <strong>cadenas de caracteres</strong> tienes también varias opciones (<code>String</code>, <code>StringBuilder</code>, <code>StringBuffer</code>).</p>
+<p>Los <strong>tipos primitivos</strong> de <span lang="en">Java</span> ya los has estudiado y conoces las diferencias entre unos y otros: cuantos más <span lang="en">bytes</span> se utilicen para representar el valor, más preciso se podrá ser a la hora de almacenarlo y representarlo, aunque obviamente también se ocupará más memoria. En el caso de las <strong>clases</strong>, tendrás que decidir cuál es la que mejor se ajusta a la información que pretendes representar (un texto, una fecha, un intervalo entre fechas, una hora, una fecha y hora a la vez, <abbr title="etcétera">etc</abbr>.).</p>
+<p>Una vez que tenemos claro el tipo de un atributo en "abstracto", de manera independiente al lenguaje de programación (entero, real, cadena de caracteres, <acronym title="etcétera">etc</acronym>.), ¿que criterio deberíamos utilizar a la hora de decidirnos por uno u otro tipo en <span lang="en">Java</span> si disponemos de varias alternativas?</p>
+</div>
+<form name="feedback-form-130" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedback130text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-130" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-130" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div id="ta130_120" class="block iDevice_content">
+<p>En el caso de los <strong>enteros</strong> en <span lang="en">Java</span>, normalmente se suele escoger <code>int</code> por simplicidad, ya que los literales de tipo entero son por omisión <code>int</code> en <span lang="en">Java</span> (recuerda que si quieres que un literal sea <code>long</code> debes añadirle el sufijo <code>L</code>). Pero si estás seguro de que la cantidad que vas a almacenar siempre va a estar por debajo de un determinado límite, puedes decidir utilizar algún tipo más "pequeño" como por ejemplo un <code>short</code> o un <code>byte</code>. Por ejemplo, si vas a almacenar la edad de una persona en número de años, probablemente tengas de sobra con un <code>byte</code> (no vas a superar los 127, que sería el mayor valor positivo representable por un <code>byte</code>), pero si vas a almacenar la edad de una persona en número de días, necesitarías un <code>short</code> (necesitas almacenar números de hasta decenas de miles, lo cual "cabe" en un <code>short</code> de sobra). En cualquier caso, siempre debes ser un poco precavido. Imagina por ejemplo que vas a almacenar la edad en años de personajes mitológicos, legendarios, imaginarios, <abbr title="etcétera">etc.</abbr> Entonces quizá sí podrían tener varios cientos de años y te vendría bien un <code>short</code>.</p>
+<p>En cualquier caso, tampoco te obsesiones demasiado con esta elección, pues la diferencia entre usar uno u otro tipo son unos pocos <span lang="en">bytes</span>. Realizar este análisis seriamente sólo vale la pena cuando se van a utilizar estructuras con millones de estos valores (por ejemplo en <span lang="en">arrays</span> muy grandes) y entonces sí puede ser importante la elección de uno u otro por la cantidad de <span lang="en">bytes</span> que se pueden ahorrar tanto desde el punto de vista del almacenamiento (ocupación de memoria) como del tiempo de transmisión (cuantos más bytes haya que transmitir, más tiempo se tardará). Lo normal es que en aplicaciones normales se use el tipo <code>int</code> para representar enteros y ni se recuerde que existen el <code>byte</code> y el <code>short</code>. Tan solo en algunos casos se recurre al <code>long</code> porque se prevea que se vaya a trabajar con números enteros muy grandes.</p>
+<p>En cuanto a los <strong>reales</strong> en <span lang="en">Java</span>, se suele elegir <code>double</code> por la misma razón que en el caso de los <code>int</code>: porque los literales de tipo real en <span lang="en">Java</span> son por omisión de tipo <code>double</code> (si queremos que sean <code>float</code> deben tener el sufijo <code>f</code>). Ahora bien, si tenemos claro que para nuestros fines no vamos a necesitar más de dos o tres cifras significativas, podríamos declarar ese atributo como <code>float</code>.</p>
+<p>Para el caso de <strong>cadenas de caracteres</strong> en <span lang="en">Java</span>, se suele optar por la clase <code>String</code> nuevamente por simplicidad y porque es lo más habitual. Pero también podría usarse <code>StringBuilder</code> si se trata de un atributo que puede cambiar de valor frecuentemente. En tal caso sería más eficiente trabajar con objetos <code>StringBuilder</code>, que pueden ser modificados, que con objetos <code>String</code>, que no puedes modificar (los objetos de la clase <code>String</code> son inmutables). Se crea un nuevo <code>String</code> cada vez que se lleva a cabo alguna operación de modificación sobre un objeto <code>String</code>.</p>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id131">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta131_148" class="block story iDevice_content">
+<div class="elemento_derecha">
+<div class="exe-figure exe-image position-center license-pd" style="width: 260px;"><img src="car-1744906_640.jpg" alt="Tablero de mandos de un automóvil" title="Car dashboard" width="260" height="173" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/coche-interior-veh%C3%ADculo-autom%C3%A1tico-1744906/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de MikesPhotos en Pixabay (se abre en una nueva ventana).">MikesPhotos</a> <span class="license"><span class="sep">(</span><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span>)</span></span></div>
+</div>
+</div>
+<p>Tras varias reuniones del equipo de diseño en las que se ha estado discutiendo el modelo de una clase para representar vehículos, se ha decidido que por el momento va a tener las siguientes características (atributos):</p>
+<ul class="lista_verificacion">
+<li><strong>Capacidad del depósito de combustible</strong>. En litros.</li>
+<li><strong>Matrícula</strong>.</li>
+<li><strong>Fecha de matriculación</strong>. Se ha decidido que en lugar de almacenar sólo el año, vamos a almacenar la fecha completa (día, mes y año).</li>
+<li><strong>Estado del motor</strong> (encendido o apagado).</li>
+<li><strong>Distancia recorrida desde que se fabricó el vehículo</strong> (memoria de ruta global). En kilómetros.</li>
+<li><strong>Distancia recorrida desde que se arrancó por última vez</strong> (memoria de ruta parcial). En kilómetros.</li>
+</ul>
+</div>
+<div id="taquesQuestion0b131" class="block iDevice_content">
+<p>Ahora nos toca a nosotros, como programadores, realizar un análisis en el que tendremos que decidir, para cada una de esas características:</p>
+<ul class="lista_verificacion">
+<li>Un <strong>nombre</strong> o <strong>identificador</strong> para cada una de ellas (nombre del atributo).</li>
+<li>Un <strong>tipo</strong> genérico para poder representar apropiadamente esa característica (<strong>número entero</strong>, <strong>número real</strong>, <strong>texto</strong>, <strong>fecha</strong>, <abbr title="etcétera">etc.</abbr>). No es necesario que "afinemos" con un tipo específico del lenguaje <span lang="en">Java</span> (por ejemplo, si se trata de un número entero basta con que indiquemos "número entero", todavía no hay que indicar si va a ser <code>byte</code>, <code>short</code>, <code>int</code> o <code>long</code>.</li>
+</ul>
+</div>
+<form name="feedback-form-quesFeedback0b131" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b131text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b131" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b131" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Una vez que tenemos claro qué atributos va a tener nuestra clase (eso ya nos lo acaban de proporcionar en el enunciado), habrá que escoger un <strong>nombre</strong> o <strong>identificador</strong> para cada uno de ellos. Se trata de un proceso importante, porque de ello dependerá mucho la legibilidad de nuestro código. Cuanto más claro dejemos lo que se almacena o representa un atributo, mucho más fácil será entender el código cuando lo leamos.</p>
+<p>Además del nombre, indicaremos también qué tipo de información se va almacenar en ese atributo (números enteros, números reales, textos, fechas, valores lógicos, <abbr title="etcétera">etc</abbr>.).</p>
+<p>Y éstas son las conclusiones a las que podríamos llegar:</p>
+<ul class="lista_verificacion">
+<li><strong>capacidad del depósito de combustible</strong>. En este atributo se va a almacenar un valor que representa <strong>litros de combustible</strong>, por tanto un nombre razonable podría ser <code>capacidadDeposito.</code> Por supuesto no es la única posibilidad. Se trata de escoger un nombre que identifique claramente qué es lo que se guarda dentro de ese atributo. Otras opciones podrían ser: <code>capacidadDelDeposito</code>, <code>litrosDeposito</code>, <abbr title="etcétera">etc</abbr>. En cuanto al tipo, el más apropiado para representar litros y sus posibles fracciones es un <strong>tipo real</strong>;</li>
+<li><strong>matrícula</strong>. Se trata de un <strong>texto</strong> que representa la matrícula. Por tanto el nombre <code>matricula</code> parece más que apropiado. Necesitaremos un <strong>tipo texto</strong> (cadena de caracteres);</li>
+<li><strong>fecha de matriculación</strong>. Un nombre que no deja lugar a dudas podría ser <code>fechaMatriculacion</code>, aunque no es el único posible. Otras opciones podrían ser: <code>fechaDeMatriculacion</code>, <code>fechaMatricula</code>, <abbr title="etcétera">etc</abbr>. Necesitaremos algún tipo que permita representar una <strong>fecha</strong>;</li>
+<li><strong>estado del motor</strong> (encendido o apagado). Aquí podría elegirse por ejemplo el nombre <code>estadoMotor</code>, aunque hay otras posibilidades que también podrían ser razonables. Por ejemplo: <code>encendido</code>, <code>estado</code>, <code>arrancado</code>, etc. Para este atributo vendría bien algún tipo que permita representar dos estados posibles: un tipo <strong>lógico</strong> o <strong>booleano</strong>;</li>
+<li><strong>distancia recorrida desde que se fabricó el vehículo</strong>. En este caso podría optarse por el nombre <code>ditanciaGlobal</code>, aunque se nos pueden ocurrir muchas otras alternativas: <code>kilometrosTotales</code>, <code>kilometrosTotalesRecorridos</code>,  <code>kilometrosDesdeInicio</code>, <code>distanciaTotal</code>, <abbr title="etcétera">etc</abbr>. Dado que hay que representar kilómetros y sus posibles fracciones, lo apropiado en este caso sería un <strong>tipo real</strong>;</li>
+<li><strong>distancia recorrida desde que se arrancó por última vez</strong>. En este caso habría que elegir un nombre que permitiera disitnguirlo claramente del atributo anterior, para no dar lugar confusión. Algunos ejemplos podrían ser: <code>distanciaParcial</code>, <code>distanciaDesdeUltimoArranque</code>, <code>distanciaLocal</code>, <code>kilometrosLocales</code>, <code>kilometrosParciales</code>, <abbr title="etcétera">etc</abbr>. Lo importante será que quede clara la diferencia entre ambos atributos simplemente con mirar el nombre. Respecto al tipo, nuevamente necesitaríamos un <strong>tipo real</strong>.</li>
+</ul></div>
+</form>
+<div id="taquesQuestion1b131" class="block iDevice_content">
+<p>Una vez realizado ese análisis y decidido el <strong>nombre</strong> o <strong>identificador</strong> que se va a utilizar para cada atributo así como el tipo "genérico" que va a tener cada uno, habrá que escoger <strong>tipos primitivos</strong> de <span lang="en">Java</span> que representen apropiadamente las magnitudes o valores que queremos almacenar en ellos. Si fuéramos a trabajar con otro lenguaje diferente a <span lang="en">Java</span> (<abbr title="C plus plus, lenguaje C con orientación a objetos">C++</abbr>, <acronym title="Hypertext Pre-Processor" lang="en">PHP</acronym>, <span lang="en">Python</span>, <span lang="en">Ruby</span>, <abbr title="etcétera">etc</abbr>.) habría que amoldarse a los tipos que ofrezca ese lenguaje.</p>
+<p>Si la información que va a contener un atributo es demasiado compleja para poder ser representada por un tipo primitivo de <span lang="en">Java</span>, también puede recurrirse a <strong>clases</strong> ya disponibles en la <acronym title="Application Programming Interface" lang="en">API</acronym> de Java, o incluso a otras clases que hayan sido implementadas por otros programadores.</p>
+<p>Lleva a cabo este nuevo análisis y rellena una tabla en la que indiques, para cada atributo, qué tipo primitivo (o clase) de <span lang="en">Java</span> se le va a asignar.</p>
+</div>
+<form name="feedback-form-quesFeedback1b131" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b131text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b131" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b131" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Tendremos ahora que analizar para cada atributo cuál sería el tipo de <span lang="en">Java</span> más apropiado:</p>
+<ul class="lista_verificacion">
+<li><strong>capacidad del depósito de combustible</strong>. Para este atributo se ha decidido que es necesario un tipo <strong>real</strong>, así que podría usarse un <code>double</code> o bien un <code>float</code>. Nosotros usaremos <code>double</code> por ser el tipo por omisión que se usa para los literales de tipo real en <span lang="en">Java.</span></li>
+<li><strong>matrícula</strong>. Se trata de un <strong>texto</strong> para representar matrículas al estilo de, por ejemplo, "4264KPY". Por tanto podría usarse alguna clase que sirva para almacenar <strong>cadenas de caracteres</strong> como <code>String</code> o <code>StringBuilder</code>. Usaremos un <code>String</code>.</li>
+<li><strong>fecha de matriculación</strong>. La <acronym title="Application Programming Interface">API</acronym> de <span lang="en">Java</span> proporciona clases para representar <strong>fechas</strong>, como por ejemplo <code>LocalDate</code>, así que usaremos esa clase. Es mucho más cómodo que tener que almacenar tres números enteros (día, mes año);</li>
+<li><strong>estado del motor</strong> (encendido o apagado). Necesitamos un tipo que represente <strong>dos estados posibles</strong>. <span lang="en">Java</span> nos proporciona el tipo <code>boolean</code>;</li>
+<li><strong>distancia recorrida desde que se fabricó el vehículo</strong>. Se trata nuevamente de otro <strong>número rea</strong>l. Por tanto podría usarse <code>double</code> o <code>float</code>. Escogeremos <code>double</code>;</li>
+<li><strong>distancia recorrida desde que se arrancó por última vez</strong>. Lo mismo que en el caso anterior: algún tipo de <span lang="en">Java</span> que represente <strong>números reales</strong> como por ejemplo <code>double</code>.</li>
+</ul>
+<p>Si no tienes claro cuándo usar uno u otro tipo en el caso de que dispongas de varias opciones, te recomendamos que vuelvas a leer la reflexión anterior sobre qué tipo elegir cuando tienes varias posibilidades.</p>
+<p>El resultado del análisis anterior en forma de tabla quedaría de la siguiente manera:</p>
+<table class="tabla" style="width: 100%;" summary="Tabla de dos columnas que contiene para cada fila el nombre y el tipo de cada uno de los atributos de la clase Vehiculo" border="1"><caption>Atributos de la clase <code>Vehiculo</code></caption>
+<tbody>
+<tr><th scope="col">Nombre</th><th scope="col">Tipo</th></tr>
+<tr>
+<td><code>capacidadDeposito</code></td>
+<td><code>double</code></td>
+</tr>
+<tr>
+<td><code>matricula</code></td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td><code>fechaMatriculacion</code></td>
+<td><code>LocalDate</code></td>
+</tr>
+<tr>
+<td><code>estadoMotor</code></td>
+<td><code>boolean</code></td>
+</tr>
+<tr>
+<td><code>kilometrosTotales</code></td>
+<td><code>double</code></td>
+</tr>
+<tr>
+<td><code>kilometrosParciales</code></td>
+<td><code>double</code></td>
+</tr>
+</tbody>
+</table></div>
+</form>
+<div id="taquesQuestion2b131" class="block iDevice_content">
+<p>A partir de la <strong>tabla</strong> que has confeccionado con el <strong>nombre</strong> y el <strong>tipo</strong> para cada atributo, escribe la <strong>clase <span lang="en">Java</span> que representa a un vehículo</strong>.</p>
+<p>Ten en cuenta que se desea que sea una <strong>clase visible desde cualquier otra clase</strong>.</p>
+</div>
+<form name="feedback-form-quesFeedback2b131" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b131text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b131" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b131" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Además del nombre y el tipo de cada atributo, debemos también tener en cuenta las cuestiones de visibilidad que nos han indicado en el enunciado: "<em>...que sea una <strong>clase visible desde cualquier otra clase</strong>.</em>".  Por tanto tendrá que ser una clase con el modificador <code>public</code>, que en cualquier caso es lo que haremos normalmente.</p>
+<p>Nuestra clase <code class="  language-java"><span class="token keyword">Vehiculo</span></code> en <span lang="en">Java</span> quedaría así, de momento:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="language-java">public class Vehiculo {            
+  double    capacidadDeposito;        // Capacidad del depósito de combustible del vehículo (en litros)
+  String    matricula;                // Matrícula del vehículo
+  LocalDate fechaMatriculacion;       // Fecha de matriculación del vehículo 
+  boolean   estadoMotor;              // Estado del motor del vehículo (arrancado o apagado)
+  double    kilometrosTotales;        // Distancia total recorrida desde que fabricó el vehículo (en kilómetros)
+  double    kilometrosParciales       // Distancia recorrida desde que el vehículo se arrancó por última vez (en kilómetros)
+}</code></pre>
+</div>
+<p>Si te fijas, hemos añadido <strong>un comentario a cada atributo indicando qué es lo que representa</strong> o qué se va a almacenar en su interior. <strong>No es algo estrictamente necesario, pero es muy recomendable para facilitar la legibilidad del código</strong>. En cualquier caso, si hemos elegido bien el nombre de cada atributo, es posible que no sea necesario acudir a ese comentario para intuir qué es lo que se está almacenando en él. Cuanto más transparente, legible y natural se vea el código, más fácil nos resultará nuestro trabajo como programadores (y el de nuestros compañeros si alguna vez tienen que revisar nuestro código).</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id296">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta296_151" class="block iDevice_content">
+<p>Los atributos, <strong>a diferencia de las variables,</strong> sí tienen un <strong>valor inicial automático</strong>:</p>
+<ul class="lista_verificacion">
+<li>cuando son de tipo <strong>numérico</strong> (<code>int</code>, <code>short</code>, <code>byte</code>, <code>long</code>, <code>double</code>, <code>float</code>), se inicializan por omisión a <span style="font-size: medium;"><code>0</code></span>;<span style="font-size: medium;"></span></li>
+<li>si son de tipo <code>char</code>, se inicializan al <strong>carácter nulo</strong> (<span style="font-size: medium;"><code>\0</code></span>);</li>
+<li>si son de tipo  <code>boolean</code> se les asigna el valor por omisión <span style="font-size: medium;"><code>false</code></span>;</li>
+<li>si son tipo <strong>referencia</strong> (referencias a instancias de clase, arrays, <abbr title="etcétera">etc.</abbr>) se inicializan a <span style="font-size: medium;"><code>null</code></span>.</li>
+</ul>
+<p>Esto significa que <strong>si no se les asigna ningún valor y se intentan utilizar, no se producirá un error de compilación, sino que tendrán ese valor inicial</strong>. Ten en cuenta que en el caso de las variables, sí se produciría un error.</p>
+<p>Recuerda que <strong>las variables se declaran dentro de los métodos</strong> (solo tendrán sentido dentro del método en el que se declaran, por eso se les llamará variables "locales") mientras que <strong>los atributos los vamos a declarar en la cabecera de la clase</strong>, y, por tanto, serán visibles desde cualquier método de la clase.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="4_atributos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_modificadores_de_atributo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

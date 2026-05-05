@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>9.- Los tipos de datos | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-54"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li id="active"><a href="9_los_tipos_de_datos.html" class="active daddy">9.- Los tipos de datos</a>
+   <ul>
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="841_tipos_de_variables_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="91_tipos_de_datos_primitivos_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">9.- Los tipos de datos</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id150">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta150_66" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG02_CONT_R12_CASO_BU004854.png" alt="Imagen en la que se aprecia una mano introduciendo datos por un teclado." title="Teclado." style="float: right;" height="160" width="160" /></div>
+<div class="elemento_centrado credenciales">Stockbyte. Uso educativo no comercial</div>
+<div class="elemento_centrado credenciales">para plataformas p&uacute;blicas de</div>
+<div class="elemento_centrado credenciales">Formaci&oacute;n Profesional a distancia.</div>
+<div class="elemento_centrado credenciales">CD-DVD Num. V43.</div>
+</div>
+<p><strong>Mar&iacute;a</strong> ya ha hecho sus pinitos como programadora. Ahora mismo est&aacute; ayudando a <strong>Juan</strong> con las variables y le ha surgido un problema. <br /> &mdash;El lenguaje se est&aacute; comportando de una forma extra&ntilde;a, quiero llamar a una variable<code> final</code> y no me deja &mdash;comenta <strong>Mar&iacute;a</strong> a <strong>Juan</strong>. <br /> &mdash;Claro, eso es porque<code> final</code> es una palabra reservada y ya hemos visto que no la puedes utilizar para nombrar variables &mdash;le responde <strong>Juan</strong>. <br /> &mdash;&iexcl;Vaya, es verdad! &iquest;Y qu&eacute; otros requisitos debo tener en cuenta a la hora de declarar las variables? <br /> &mdash;Pues lo importante es saber qu&eacute; tipo de informaci&oacute;n hay que guardar, para poder asignarles el tipo de dato adecuado. &iquest;Tienes un momento y te lo cuento? &mdash; le dice <strong>Juan</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id151">
+<div class="iDevice emphasis0">
+<div id="ta151_73" class="block iDevice_content">
+<figure class="exe-figure exe-image float-left license-copyright" style="width: 200px;"><img src="social-media-1989152_960_720.jpg" alt="Ilistración con muchas palabras escritas en diagonal hacia arriba." title="Datos" style="float: left;" width="200" height="133" /><figcaption class="figcaption"><a href="https://pixabay.com/es/illustrations/medios-de-comunicaci%c3%b3n-social-1989152/" target="_blank" class="author">geralt</a> P<span class="license"><span>ixabay License.</span></span></figcaption></figure>
+<p><br />En los <a class="glosario">lenguajes fuertemente tipados<span><em>Lenguaje fuertemente tipado</em>Un lenguaje de programación es fuertemente tipado cuando una variable de un tipo de dato concreto, no se puede usar como si fuera una variable de otro tipo a menos que se haga una conversión de tipo. Si la variable es de tipo entero, por ejemplo, no podré asignarle un valor real.</span></a>, a todo dato (constante, variable o expresión) le corresponde un tipo que es conocido antes de que se ejecute el programa.</p>
+<p>El tipo limita el valor de la variable o expresión, las operaciones que se pueden hacer sobre esos valores, y el significado de esas operaciones. Esto es así porque <strong>un tipo de dato no es más que una especificación de los valores que son válidos para esa variable, y de las operaciones que se pueden realizar con ellos. </strong></p>
+<p>Debido a que el tipo de dato de una variable se comprueba durante la revisión que hace el compilador para detectar errores, o sea,  en tiempo de compilación, esta labor es mucho más fácil, ya que no hay que esperar a que se ejecute el programa para saber qué valores va a contener esa variable. Esto se consigue con un control muy exhaustivo de los tipos de datos que se utilizan, lo cual tiene sus ventajas e inconvenientes. Por ejemplo, cuando se intenta asignar un valor de un tipo a una variable de otro tipo el compilador "se quejará" mostrando un mensaje de error. Sin embargo, en <span lang="en">Java</span>, puede haber <strong>conversión entre ciertos tipos de datos</strong>, como veremos posteriormente.</p>
+<p>Ahora no es el momento de entrar en detalle sobre la conversión de tipos, pero sí debemos conocer con exactitud de qué tipos de datos dispone el lenguaje <span lang="en">Java</span>. Ya hemos visto que las variables, según la información que contienen, se pueden dividir en variables de tipos primitivos y variables referencia. Pero ¿qué es un tipo de dato primitivo? ¿Y un tipo referencia? Aunque lo hemos indicado brevemente antes, la primera vez que aparecían estos conceptos para que no te sonara totalmente a chino, esto es lo que vamos a ver a continuación con más detalle. Los tipos de datos en <span lang="en">Java</span> se dividen principalmente en dos categorías:</p>
+<ul class="lista_verificacion">
+<li><strong>Tipos de datos sencillos o primitivos</strong>. Representan valores simples que vienen predefinidos en el lenguaje; contienen valores únicos, como por ejemplo un carácter o un número.</li>
+<li><strong>Tipos de datos referencia. </strong>Se definen con un nombre o referencia (<a class="glosario">puntero<span><em>Puntero.</em>En general un puntero no es más que una variable cuyo contenido no es el dato que nos interesa, sino que es una dirección de memoria donde está el dato que nos interesa. En Java las referencias son más o menos esto, de forma que cuando uso el nombre de una referencia para decirle al programa que haga algo, lo que hace el programa en realidad es ir a la zona de memoria donde está la variable referencia, buscar a qué dirección de memoria apunta, e ir a esa posición para leer el dato (o estructura de datos) que contenga y trabajar con esa información. Poco a poco irás entendiendo que esto tiene bastantes ventajas a la hora de gestionar la memoria que usa el programa. </span></a>) que contiene la dirección en memoria de un valor o grupo de valores. Dentro de este tipo tenemos por ejemplo los vectores (también conocidos en informática como arrays), que son una serie de elementos del mismo tipo, o las clases, que son los modelos o plantillas a partir de los cuales se crean los objetos.</li>
+</ul>
+<p>En el siguiente apartado vamos a ver con detalle los diferentes tipos de datos que se engloban dentro de estas dos categorías.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id152">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-152_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion152_60" class="block question iDevice_content">
+<strong>El tipado fuerte de datos supone que:</strong> 
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i152_63" class="sr-av"><a href="#answer-152_63">Opción 1</a></label><input type="radio" name="option152_60" id="i152_63" class="exe-radio-option exe-radio-option-0-4-152_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-152_63"><div id="taans152_63" class="block iDevice_content">
+A todo dato le corresponde un tipo que es conocido antes de que se ejecute el programa.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i152_83" class="sr-av"><a href="#answer-152_83">Opción 2</a></label><input type="radio" name="option152_60" id="i152_83" class="exe-radio-option exe-radio-option-1-4-152_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-152_83"><div id="taans152_83" class="block iDevice_content">
+El lenguaje hace un control muy exhaustivo de los tipos de datos.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i152_86" class="sr-av"><a href="#answer-152_86">Opción 3</a></label><input type="radio" name="option152_60" id="i152_86" class="exe-radio-option exe-radio-option-2-4-152_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-152_86"><div id="taans152_86" class="block iDevice_content">
+El compilador puede optimizar mejor el tratamiento de los tipos de datos.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i152_89" class="sr-av"><a href="#answer-152_89">Opción 4</a></label><input type="radio" name="option152_60" id="i152_89" class="exe-radio-option exe-radio-option-3-4-152_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-152_89"><div id="taans152_89" class="block iDevice_content">
+Todas las anteriores son correctas.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b152_60" class="feedback js-hidden">
+<div id="taf152_63" class=" iDevice_content">
+Incorrecto, existen más condiciones.
+
+</div>
+</section>
+<section id="sa1b152_60" class="feedback js-hidden">
+<div id="taf152_83" class=" iDevice_content">
+Incorrecta, sigue intentándolo.
+
+</div>
+</section>
+<section id="sa2b152_60" class="feedback js-hidden">
+<div id="taf152_86" class=" iDevice_content">
+No es la única respuesta correcta.
+
+</div>
+</section>
+<section id="sa3b152_60" class="feedback js-hidden">
+<div id="taf152_89" class=" iDevice_content">
+Muy bien, en un lenguaje fuertemente tipado se cumplen todas las condiciones anteriores.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-152_63">Incorrecto</a><span> (<a href="#sa0b152_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-152_83">Incorrecto</a><span> (<a href="#sa1b152_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-152_86">Incorrecto</a><span> (<a href="#sa2b152_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-152_89">Opción correcta</a><span> (<a href="#sa3b152_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="841_tipos_de_variables_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="91_tipos_de_datos_primitivos_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

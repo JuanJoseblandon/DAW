@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.4.- Conversión de objetos. Operador instanceof. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-38"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_polimorfismo_y_ligadura_dinmica.html" class="current-page-parent daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul>
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li id="active"><a href="54_conversin_de_objetos_operador_instanceof.html" class="active no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="53_limitaciones_de_la_ligadura_dinmica.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_interfaces.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5.4.- Conversión de objetos. Operador instanceof.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id69">
+<div class="iDevice emphasis0">
+<div id="ta69_73" class="block iDevice_content">
+<div class="elemento_derecha"><img alt="Señal de cambio de sentido a distinto nivel." class="elemento_izquierda" src="PROG07_CONT_R73_CambioSentido.gif" style="width: 164px; height: 160px; float: right;" title="Cambio de sentido a distinto nivel." /> <figcaption class="figcaption">
+<div class="elemento_centrado credenciales">ITE. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">idITE=169555.</div>
+</figcaption></div>
+<p>Como ya has visto, en principio no se puede acceder a los <strong>miembros específicos</strong> de una <strong>subclase</strong> a través de una <strong>referencia</strong> a una <strong>superclase</strong>. Si deseas tener acceso a todos los métodos y atributos específicos del objeto <strong>subclase</strong> tendrás que realizar una <strong>conversión explícita</strong> (<strong><span lang="en">casting</span></strong>) que convierta la referencia más general (<strong>superclase</strong>) en la del tipo específico del objeto (<strong>subclase</strong>).</p>
+<p>Para que puedas llevar a cabo conversiones entre distintas clases es obligatorio que exista una relación de <strong>herencia</strong> entre ellas (una debe ser clase derivada de la otra). Se efectuará una <strong>conversión implícita o automática</strong> de <strong>subclase</strong> a <strong>superclase</strong> siempre que sea necesario, pues un objeto de tipo <strong>subclase</strong> siempre contendrá toda la información necesaria para ser considerado un objeto de la <strong>superclase</strong>.</p>
+<p>Ahora bien, la conversión en sentido contrario (de <strong>superclase</strong> a <strong>subclase</strong>) debe hacerse de forma <strong>explícita</strong> y según el caso podría dar lugar a errores por falta de información (atributos) o de métodos. En tales casos se produce una <strong>excepción</strong> de tipo <strong><code>ClassCastException</code></strong>.</p>
+<p>Por ejemplo, imagina que tienes una clase <strong>A</strong> y una clase <strong>B</strong>, <strong>subclase</strong> de <strong>A</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class ClaseA {
+     public int atrib1;
+} 
+ 
+class ClaseB extends ClaseA {
+     public int atrib2;
+} </code></pre>
+</div>
+</div>
+<p><span style="font-size: 1em;">A continuación declaras una variable referencia a la clase </span><strong style="font-size: 1em;">A</strong><span style="font-size: 1em;"> (</span><strong style="font-size: 1em;">superclase</strong><span style="font-size: 1em;">) pero, sin embargo, le asignas una referencia a un objeto de la clase </span><strong style="font-size: 1em;">B</strong><span style="font-size: 1em;"> (</span><strong style="font-size: 1em;">subclase</strong><span style="font-size: 1em;">) haciendo uso del </span><strong style="font-size: 1em;">polimorfismo</strong><span style="font-size: 1em;">:</span></p>
+<div class="highlighted-code language-java hightlight-2">
+<div>
+<pre><code>A obj ;  // Referencia a objetos de la clase A
+obj = new B() ; // Referencia a objetos clase A, pero apunta realmente a objeto clase B (polimorfismo)</code></pre>
+</div>
+</div>
+<p><span style="font-size: 1em;">El objeto que acabas de crear como </span><strong style="font-size: 1em;">instancia de la clase B</strong><span style="font-size: 1em;"> (</span><strong style="font-size: 1em;">subclase</strong><span style="font-size: 1em;"> de </span><strong style="font-size: 1em;">A</strong><span style="font-size: 1em;">) contiene más información que la referencia </span><strong style="font-size: 1em;">obj</strong><span style="font-size: 1em;"> te permite en principio acceder sin que el compilador genere un error (pues es de clase </span><strong style="font-size: 1em;">A</strong><span style="font-size: 1em;">). En concreto, los objetos de la clase </span><strong style="font-size: 1em;">B</strong><span style="font-size: 1em;"> disponen de </span><strong style="font-size: 1em;">atrib1</strong><span style="font-size: 1em;"> y </span><strong style="font-size: 1em;">atrib2</strong><span style="font-size: 1em;">, mientras que los objetos de la clase </span><strong style="font-size: 1em;">A</strong><span style="font-size: 1em;"> sólo de </span><strong style="font-size: 1em;">atrib1</strong><span style="font-size: 1em;">. Para acceder a esa información adicional de la clase especializada (</span><strong style="font-size: 1em;">atrib2</strong><span style="font-size: 1em;">) tendrás que realizar una </span><strong style="font-size: 1em;">conversión explícita</strong><span style="font-size: 1em;"> (</span><strong style="font-size: 1em;"><span lang="en">casting</span></strong><span style="font-size: 1em;">):</span></p>
+<div class="highlighted-code language-java  hightlight-2">
+<div>
+<pre><code>// Casting del tipo A al tipo B (funcionará bien porque el objeto es realmente del tipo B)
+System.out.printf ("obj.atrib2=%d", ((B) obj).atrib2);</code></pre>
+</div>
+</div>
+<p>Sin embargo, si se hubiera tratado de una <strong>instancia de la clase A</strong> y hubieras intentado acceder al miembro <strong>atrib2</strong>, se habría producido una <strong>excepción</strong> de tipo <strong><code>ClassCastException</code></strong>:</p>
+<div class="highlighted-code language-java hightlight-2and7and10">
+<div>
+<pre><code>A obj;  // Referencia a objetos de la clase A
+obj = new A() ;  // Referencia a objetos de la clase A, y apunta realmente a un objeto de la clase A
+ 
+// Casting del tipo A al tipo B (puede dar problemas porque el objeto es realmente del tipo A):
+ 
+// Funciona (la clase A tiene atrib1)
+System.out.printf ("obj.atrib1=%d", ((B) obj).atrib1); 
+ 
+// ¡Error en ejecución! (la clase A no tiene atrib2). Producirá una ClassCastException.
+System.out.printf ("obj.atrib2=%d", ((B) obj).atrib2);  </code></pre>
+</div>
+</div>
+<p>Imagina ahora que estás trabajando con las clases <strong><code>Cerradura</code></strong> y <strong><code>Bombilla</code></strong>, subclases de <strong><code>Dispositivo</code></strong>, que ya hemos utilizado anteriormente. En un momento dado tenemos una variable de tipo <strong><code>Dispositivo</code></strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Dispositivo disp;</code></pre>
+</div>
+</div>
+<p>Sabemos que esa variable contiene una referencia a algún objeto que es subclase de <strong><code>Dispositivo</code></strong>, pues no pueden existir objetos <strong><code>Dispositivo</code></strong> como tales (es una clase abstracta). Ahora bien, ¿cómo podríamos saber si se trata de una referencia a una clase de tipo <strong><code>Bombilla</code></strong> o <strong><code>Cerradura</code></strong>? Para ello Java nos proporciona el operador <strong><code>instanceof</code></strong>, que nos devuelve <strong><code>true</code></strong> si una variable de tipo referencia hace referencia a un objeto de la clase que le estamos preguntando.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>instanceof disp Bombilla // Esto será true si disp hace referencia a un objeto instancia de la clase Bombilla</code></pre>
+</div>
+</div>
+<p>Por ejemplo, dado el siguiente fragmento de código, ¿cuál crees que será la salida?</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Dispositivo disp1 = new Bombilla ("b1", 1);
+Dispositivo disp2 = new Cerradura ("c1", 1);
+
+System.out.printf ("disp1 instanceof Dispositivo = %s\n", disp1 instanceof Dispositivo);
+System.out.printf ("disp1 instanceof Bombilla = %s\n", disp1 instanceof Bombilla);
+System.out.printf ("disp1 instanceof Cerradura = %s\n", disp1 instanceof Cerradura);
+System.out.printf ("disp2 instanceof Dispositivo = %s\n", disp2 instanceof Dispositivo);
+System.out.printf ("disp2 instanceof Bombilla = %s\n", disp2 instanceof Bombilla);
+System.out.printf ("disp2 instanceof Cerradura = %s\n", disp2 instanceof Cerradura);</code></pre>
+</div>
+</div>
+<p>Dado que <strong><code>disp1</code></strong> hace referencia a un objeto de tipo <strong><code>Bombilla</code></strong>, el <strong><code>instanceof</code></strong> con <strong><code>Bombilla</code></strong> debe dar verdadero y con <strong><code>Dispositivo</code></strong> también (pues toda bombilla es un dispositivo). Sin embargo, con <strong><code>Cerradura</code></strong> debe dar falso. En el caso de <strong><code>disp2</code></strong> sucederá algo similar: verdadero con <strong><code>Cerradura</code></strong> y con <strong><code>Dispositivo</code></strong>, y falso con <strong><code>Bombilla</code></strong>.</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>disp1 instanceof Dispositivo = true
+disp1 instanceof Bombilla = true
+disp1 instanceof Cerradura = false
+disp2 instanceof Dispositivo = true
+disp2 instanceof Bombilla = false
+disp2 instanceof Cerradura = true</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id72">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta72_66" class="block iDevice_content">
+<p><strong>En <span lang="en">Java</span>, el operador <code>instanceof</code> nos sirve para averiguar si un objeto es de una clase determinada. A continuaci&oacute;n tienes un ejemplo resuelto bastante interesante sobre su utilidad.</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id71">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta71_63" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b71" class="block iDevice_content">
+<p>Supongamos que en una aplicaci&oacute;n contamos con una clase <code>Socio</code>, la cual tenga subclases para distintos tipos de socio. (No especificamos cada atributo aqu&iacute; por comodidad, adem&aacute;s de que no es relevante para el ejemplo). F&iacute;jate c&oacute;mo en el siguiente fragmento de c&oacute;digo creamos un <span lang="en">array</span> de 100 socios. Creamos dos socios, uno de un tipo y otro de otro tipo, ambos los almacenamos en el <span lang="en">array</span>. Ahora, con una referencia a socio, que hemos llamado <code>soc</code>, voy referenciando a cada uno de los elementos del <span lang="en">array</span>, y con <code>instanceof</code> puedo saber de qu&eacute; tipo de objeto se trata, de este modo, podr&iacute;a llamar a un m&eacute;todo que fuera espec&iacute;fico de una de las subclases, pues s&eacute; exactamente a qu&eacute; subclase pertenece:</p>
+</div>
+<form name="feedback-form-quesFeedback0b71" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b71text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b71" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b71" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaro el array
+Socio[] socios = new Socio[100]; 
+ 
+// Creo un objeto de tipo socio titular familiar
+SocioTitularFamiliar socioTipo1 = new SocioTitularFamiliar("Antonio", 25, 2, "Taxista", "50222333Q",
+"2222-3333-30-1111111111", 3, 1998, 4) ;
+ 
+ // Introduzco el socio recién creado en el array
+socios[0] = socioTipo1 ;
+ 
+ // Creo un objeto socio titular individual
+ 
+SocioTitularIndividual socioTipo2= new SocioTitularIndividual("Filomeno a mi pesar", 33, 1.3f, "Bombero", "22333444F",
+            "2222-3333-30-1111111111", 2, 2001) ;
+// Introduzco el socio en el array
+socios[1] = socioTipo2;
+...  // podría seguir introduciendo socios de un tipo u otro hasta llenar el array, pero lo obviamos aquí.
+// Recorro el array, hasta que me encuentre una posición "vacía" (referencia a null), porque se supone que en 
+// el array los socios están en las posiciones iniciales, no dejamos huecos vacíos más que al final.
+int contador ;
+Socio socio ;
+for (contador= 0; contador &lt; socios.length &amp;&amp; socios[contador]!=null; contador++) {
+     socio = socios[contador];
+     if (socio instanceof SocioTitularFamiliar)
+         System.out.println("El de la posición " + contador + " es un socio titular familiar"); 
+         // podría hacer casting para "apuntarlo" con una referencia socioTitularFamiliar
+     else
+         System.out.println("El de la posición " + contador + " no es  un socio titular familiar");
+         // si intentara hacer hacer casting para "apuntarlo" con una referencia SocioTitularFamiliar, 
+         // provocaría una ClassCastException
+}</code></pre>
+</div>
+</div>
+<p></p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id116">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta116_148" class="block story iDevice_content">
+<p>Añadiendo funcionalidad a la CasaDomotica</p>
+</div>
+<div id="taquesQuestion0b116" class="block iDevice_content">
+<p>Dada la clase <strong><code>CasaDomotica</code></strong>, que ya comenzamos a implementar en otro ejercicio anterior, amplía sus atributos añadiendo estos dos:</p>
+<ul class="lista_verificacion">
+<li>número de dispositivos de tipo <strong><code>Cerradura</code></strong>;</li>
+<li>número de dispositivos de tipo <strong><code>Bombilla</code></strong>.</li>
+</ul>
+<p>Si recuerdas la estructura de esta clase, esta información sería <strong>redundante</strong>, pues se podría obtener a partir del contenido del array de dispositivos. En principio debería evitarse tener este tipo de atributos con información "duplicada" dado que una incorrecta manipulación podría dar lugar a información inconsistente. Pero en este ejercicio, por simplicidad y eficiencia, podemos incluirlos si lo estimamos adecuado (siempre teniendo en cuenta el potencial "peligro" que entrañan).</p>
+</div>
+<form name="feedback-form-quesFeedback0b116" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b116text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b116" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b116" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La inclusión de esos dos atributos dejaría así la clase:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class CasaDomotica {
+
+    // Atributos de objeto
+    private final String propietario;
+    private final String descripcion;
+    private final Dispositivo[] listaDispositivos;
+
+    // Estos atributos no son necesarios. Se pueden calcular a partir de la lista de dispositivos.
+    // Ahora bien, pueden mejorar el funcionamiento de algunos métodos.
+    // Si se decide incorporarlos por facilidad de implementación y mejora de la eficiencia de los getter, 
+    // debe hacerse con precaución para que su uso no genere inconsistencias con la información "real" contenida
+    // en el array
+    private int numBombillas;
+    private int numCerraduras;
+    . . .</code></pre>
+</div>
+</div>
+<p></p></div>
+</form>
+<div id="taquesQuestion1b116" class="block iDevice_content">
+<p>Ahora, enriquece el código del constructor de esta clase para que a la vez que se van introduciendo en el array de dispositivos los objetos de tipo dispositivo pasados como parámetros, se vaya calculando el valor de esos dos atributos (cuántos dispositivos son de tipo <strong><code>Cerradura</code></strong> y cuántos de tipo <strong><code>Bombilla</code></strong>).</p>
+<p>Se trata de añadir en el bucle de asignación de dispositivos a las celdas del array una condición usando el operador <strong><code>instanceof</code></strong> para saber si esos dispositivos son de tipo <strong><code>Bombilla</code></strong> o de tipo <strong><code>Cerradura</code></strong>.</p>
+</div>
+<form name="feedback-form-quesFeedback1b116" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b116text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b116" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b116" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>El código del <strong>constructor</strong> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public CasaDomotica(String propietario, String descripcion, Dispositivo... dispositivos) {
+    // Resevamos espacio para el array de dispositivos
+    this.listaDispositivos = new Dispositivo[dispositivos.length];
+    // Iniciamos atributos básicos
+    this.propietario = propietario;
+    this.descripcion = descripcion;
+    // Iniciamos atributos de tipo "contador"
+    this.numBombillas = 0;
+    this.numCerraduras = 0;
+
+    // Rellenamos el array de dispositivos con los parámetros recibidos
+    // (y a la vez "contabilizamos" cuántas bombillas y cerraduras hay
+    // Usando un for "tradicional" con índices (opción a)
+    for (int disp = 0; disp &lt; dispositivos.length; disp++) {
+        listaDispositivos[disp] = dispositivos[disp];
+        if (listaDispositivos[disp] instanceof Bombilla) {
+            this.numBombillas++;
+        } else if (listaDispositivos[disp] instanceof Cerradura) {
+            this.numCerraduras++;
+        }
+    }
+}</code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="53_limitaciones_de_la_ligadura_dinmica.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_interfaces.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

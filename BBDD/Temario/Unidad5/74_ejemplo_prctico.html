@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.4.- Ejemplo práctico | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-87"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li><a href="4_atributos.html" class="daddy">4.- Atributos</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li><a href="5_mtodos.html" class="daddy">5.- Métodos</a>
+   <ul class="other-section">
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="7_documentacin_de_una_clase.html" class="current-page-parent daddy">7.- Documentación de una clase</a>
+   <ul>
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li id="active"><a href="74_ejemplo_prctico.html" class="active no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="73_orden_de_las_etiquetas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="8_creacin_y_utilizacin_de_objetos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">7.4.- Ejemplo práctico</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id293">
+<div class="iDevice emphasis0">
+<div id="ta293_154" class="block iDevice_content">
+<p>Una vez que hemos visto la mayoría de las etiquetas que se pueden colocar en la documentación javadoc de una clase Java, vamos a ver un ejemplo práctico de cómo llevar a cabo esta tarea.</p>
+<p>Aquí tienes una <strong>guía-resumen</strong> de todo aquello que debes documentar<span>:</span></p>
+<ul class="lista_verificacion">
+<li style="text-align: justify;"><strong>documentación de la clase</strong>. Debes incluir una descripción lo más completa y detallada posible de la clase, explicando todo aquello que consideres que pueda ser de interés para otros programadores que vayan a utilizarla. Ten en cuenta que no tienen por qué conocer cómo está implementada por dentro, sino únicamente cómo utilizarla (cómo usar sus miembros que actúan como interfaz con el código externo: métodos y atributos públicos). Esta descripción se puede subdividir en:<br />
+<ul>
+<li style="text-align: justify;"><strong>descripción corta</strong> o resumen de la clase. Consiste en todo el texto que incluyas hasta el primer punto (".") que contenga el texto. Es el texto que aparecerá en la tabla resumen de clases del paquete en el que se encuentre la clase;</li>
+<li style="text-align: justify;"><strong>descripción larga</strong> de la clase. Todo el texto que haya después del primer punto. Ambas descripciones aparecerán en la descripción general de la clase;</li>
+</ul>
+</li>
+<li style="text-align: justify;"><strong>documentación de atributos públicos y protegidos</strong> (los miembros protegidos los verás en la próxima unidad) indicando para cada uno de ellos una pequeña descripción;
+<ul>
+<li style="text-align: justify;">si se trata de un <strong>atributo constante</strong>, incluye su valor usando la etiqueta <code>@value</code>. <strong>Debes usar la etiqueta <code>@value</code> y no escribir un literal en el comentario javadoc</strong>. De esta manera si se modificara el valor de la constante en el código, no habría que modificar el comentario.</li>
+</ul>
+</li>
+<li style="text-align: justify;"><strong>documentación de los métodos públicos y protegidos</strong>, incluyendo para cada método:
+<ul style="list-style-type: disc;">
+<li style="text-align: justify;"><strong>descripción del método</strong>:
+<ul style="list-style-type: disc;">
+<li style="text-align: justify;"><strong>descripción corta</strong> o resumen del método. Consiste en todo el texto que incluyas hasta el primer punto. Es el texto que aparecerá en la tabla resumen de métodos;</li>
+<li style="text-align: justify;"><strong>descripción larga</strong> del método. Todo el texto que haya después del primer punto. Ambas descripciones aparecerán en la descripción detallada del método;</li>
+</ul>
+</li>
+<li style="text-align: justify;"><strong>descripción del valor devuelto</strong> (etiqueta <code>@return</code>), si es que devuelve algo. Esta información aparecerá en la descripción detallada del método;</li>
+<li style="text-align: justify;"><strong>descripción de cada uno de los parámetros</strong> (etiqueta <code>@param</code>);</li>
+<li style="text-align: justify;"><strong>descripción de las posibles excepciones</strong> que puede lanzar (etiqueta <code>@throws</code>);</li>
+</ul>
+</li>
+</ul>
+<p style="text-align: justify;">Es más que recomendable que una vez que hayas terminado de redactar todos tus comentarios javadoc generes la documentación para observar en los <acronym title="Hyper Text Markup Language" lang="en">HTML</acronym> obtenidos si están todos tus comentarios javadoc y los textos son correctos, apropiados y completos como para poder ser utilizados como <strong>manual de referencia de la biblioteca de clases sobre los elementos que puedes encontrar en un juego de tablero<span lang="ingles"></span></strong>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id294">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta294_148" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 240px;"><img src="SampleBankbook.png" alt="Libreta de ahorros" title="Apuntes contables en libreta de ahorros" style="float: right;" width="240" height="173" />
+<div class="figcaption"><a href="https://en.wikipedia.org/wiki/File:SampleBankbook.png" target="_blank" class="author" title="Acceder a la página de descarga de la imagen Passbook sample. (Se abre en nueva ventana)">Sergio Ortega</a>. <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a los términos de la licencia Creative Commons BY-SA (Se abre en una nueva ventana)">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+<p>Estamos implementando una clase llamada <code>CuentaBancaria</code> que servirá para<strong> gestionar una cuenta bancaria</strong>. Los objetos de esa clase contarán con una serie de <strong>características </strong>como <strong>identificador de cuenta</strong>, fecha de <strong>creación</strong>, <strong>saldo</strong>, <abbr title="etcétera">etc</abbr>. y un repertorio de métodos que permitirán llevar a cabo ciertas acciones (ingresos, transferencias, extracciones, <abbr title="etcétera">etc</abbr>.).</p>
+<p>Si queremos que esa clase pueda ser utilizada apropiadamente por otros desarrolladores que no hayan participado en su implementación, tendremos que ser muy rigurosos y detallados a la hora de documentar todos y cada uno de sus elementos. Si no, no sabrán como utilizarla. Debemos procurar elaborar un "manual de instrucciones" de la clase lo suficientemente completo como para que cualquier otra persona pueda utilizar esta clase en sus programas sin ayuda externa de los programadores originales.</p>
+<p>Para ello disponemos de la herramienta <code>Javadoc</code>.</p>
+</div>
+<div id="taquesQuestion0b294" class="block iDevice_content">
+<p>Lo primero que debemos hacer es proporcionar una descripción general de la clase explicando su utilidad.</p>
+<p>Teniendo en cuenta que la cabecera de la clase es la siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class CuentaBancaria {</code></pre>
+</div>
+</div>
+<p>Si quisiéramos generar un javadoc que tuviera el siguiente aspecto:</p>
+<p><a href="ClassCuentaBancaria_javadoc01.png" title="Enlace a la imagen cabecera javadoc de la clase CuentaBancaria" target="_blank"><img src="ClassCuentaBancaria_javadoc01.1.png" alt="Cabecera javadoc de la clase CuentaBancaria" title="Clase CuentaBancaria (se abre en una nueva ventana)." class="imagen_ampliable" style="display: block; margin-left: auto; margin-right: auto;" width="480" height="284" /></a></p>
+<p>¿Qué comentario javadoc incluirías antes de la cabecera de la clase para poder obtener esa documentación?</p>
+</div>
+<form name="feedback-form-quesFeedback0b294" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b294text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b294" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b294" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso se trata <strong>un único comentario javadoc</strong> con todo ese texto apropiadamente formateado utilizando el lenguaje de marcado <acronym title="Hypertext Markup Language ">HTML</acronym>:</p>
+<div class="highlighted-code language-java line-numbers hightlight-2">
+<div>
+<pre><code>/**
+ * Clase que representa una &lt;strong&gt;cuenta bancaria&lt;/strong&gt;.
+ * &lt;p&gt;
+ * Los objetos de esta clase contienen atributos que permiten almacenar
+ * información sobre:&lt;/p&gt;
+ * &lt;ul&gt;
+ * &lt;li&gt;&lt;strong&gt;Identificador&lt;/strong&gt; de la cuenta. Este valor se establecerá
+ * al crear la cuenta y ya no podrá cambiar. Es un valor constante.&lt;/li&gt;
+ * &lt;li&gt;&lt;strong&gt;Fecha de creacion&lt;/strong&gt; de la cuenta. Es también un valor
+ * constante. Se establecerá al crear la cuenta y ya no podrá cambiar su valor.&lt;/li&gt;
+ * &lt;li&gt;&lt;strong&gt;Porcentaje de embargo&lt;/strong&gt; de la cuenta.&lt;/li&gt;
+ * &lt;li&gt;&lt;strong&gt;Saldo actual&lt;/strong&gt; de la cuenta.&lt;/li&gt;
+ * &lt;li&gt;&lt;strong&gt;Saldo máximo&lt;/strong&gt; que ha tenido la cuenta a lo largo de su
+ * historia.&lt;/li&gt;
+ * &lt;li&gt;&lt;strong&gt;Ingresos totales&lt;/strong&gt; que ha tenido la cuenta a lo largo de
+ * su historia.&lt;/li&gt;
+ * &lt;/ul&gt;
+ * &lt;p&gt;
+ * La clase también dispone de información general independiente de los objetos
+ * concretos que se hayan creado. Es el caso de:&lt;/p&gt;
+ * &lt;ul&gt;
+ * &lt;li&gt;&lt;strong&gt;Saldo global&lt;/strong&gt; entre todas las cuentas en el momento
+ * actual.&lt;/li&gt;
+ * &lt;li&gt;&lt;strong&gt;Número de cuentas embargadas&lt;/strong&gt; en el momento actual.&lt;/li&gt;
+ * &lt;li&gt;&lt;strong&gt;Fecha de creación&lt;/strong&gt; de la &lt;strong&gt;cuenta más moderna&lt;/strong&gt;
+ * creada hasta el momento actual.&lt;/li&gt;
+ * &lt;/ul&gt;
+ */</code></pre>
+</div>
+</div>
+<p>Como puedes observar, en este caso la descripción corta o resumen sería el texto "<em>Clase que representa una &lt;strong&gt;cuenta bancaria&lt;/strong&gt;.</em>", que es todo lo que hay hasta el primer punto (carácter '.'). Ese es el texto que aparecerá en el catálogo resumen de clases del paquete en el que se encuentre integrada la clase, por ejemplo:</p>
+<p style="text-align: center;"><a href="ClassCuentaBancaria_javadoc00.png" title="Enlace a imagen Javadoc clase CuentaBancaria (se abre en una nueva venetana)" target="_blank"><img src="ClassCuentaBancaria_javadoc00.png" alt="Javadoc de la lista de clases del paquete donde se encuentra la clase CuentaBancaria" title="Javadoc clase CuentaBancaria (se abre en una nueva venetana)" class="imagen_ampliable" width="480" height="114" /></a></p></div>
+</form>
+<div id="taquesQuestion1b294" class="block iDevice_content">
+<p>Teniendo en cuenta que la clase dispone de una serie de atributos públicos como <code> DEFAULT_MAX_DESCUBIERTO</code>, <code>DEFAULT_SALDO</code>, <code>MAX_DESCUBIERTO</code> <abbr title="etcétera">etc</abbr>.:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class CuentaBancaria {
+
+    // ------------------------------------------------------------
+    //                 ATRIBUTOS ESTÁTICOS (de clase)
+    // ------------------------------------------------------------
+    // Atributos estáticos constantes públicos (rangos y requisitos de los atributos de objeto)
+    // Son públicos, para que cualquier código cliente pueda acceder a ellos
+
+    public static final double MAX_DESCUBIERTO =       -2_000.00;   // euros 
+    public static final double MIN_EMBARGO     =            0.00;   // porcentaje 
+    public static final double MAX_EMBARGO     =          100.00;   // porcentaje 
+    public static final int    MIN_YEAR        =            1900;   // año 
+    public static final double MAX_SALDO       =   50_000_000.00;   // euros 
+    public static final double DEFAULT_SALDO   =            0.00;   // euros 
+    public static final double DEFAULT_MAX_DESCUBIERTO =    0.00;   // euros </code></pre>
+</div>
+</div>
+<p>Y que queremos que aparezcan documentados con el siguiente formato:</p>
+<p><a href="ClassCuentaBancaria_AtributosPublicos_javadoc02.png" title="Enlace a la imagen del javadoc con los los atributos públicos de la clase CuentaBancaria" target="_blank"><img src="ClassCuentaBancaria_AtributosPublicos_javadoc02.png" alt="Atributos públicos de la clase CuentaBancaria" title="Atributos públicos de la clase CuentaBancaria (se abre en una nueva ventana)." class="imagen_ampliable" style="display: block; margin-left: auto; margin-right: auto;" width="480" height="297" /></a></p>
+<p>¿Qué comentarios javadoc incluirías antes de cada uno de esos atributos para lograrlo?</p>
+<p>Procura <strong>no escribir el valor literal de los atributos en tus comentarios javadoc</strong>. Puedes usar para ello la etiqueta <code>@value</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback1b294" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b294text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b294" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b294" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>El código documentado mediante comentarios javadoc podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Descubierto máximo permitido al crear una cuenta :
+ * {@value MAX_DESCUBIERTO} euros.
+ */
+public static final double MAX_DESCUBIERTO = -2_000.00;   // euros 
+/**
+ * Embargo mínimo de una cuenta : {@value MIN_EMBARGO}%.
+ */
+public static final double MIN_EMBARGO = 0.00;   // porcentaje 
+/**
+ * Embargo máximo de una cuenta: {@value MAX_EMBARGO} %.
+ */
+public static final double MAX_EMBARGO = 100.00;   // porcentaje 
+/**
+ * Año mínimo para la creación de una cuenta: {@value MIN_YEAR}.
+ */
+public static final int MIN_YEAR = 1900;   // año 
+/**
+ * Saldo máximo para una cuenta: {@value MAX_SALDO} euros.
+ */
+public static final double MAX_SALDO = 50_000_000.00;   // euros 
+/**
+ * Saldo inicial por omisión para una cuenta: {@value DEFAULT_SALDO} euros.
+ */
+public static final double DEFAULT_SALDO = 0.00;   // euros 
+/**
+ * Límite de descubierto por omisión para una cuenta:
+ * {@value DEFAULT_MAX_DESCUBIERTO} euros.
+ */
+public static final double DEFAULT_MAX_DESCUBIERTO = 0.00;   // euros </code></pre>
+</div>
+</div>
+<p>Al usar la etiqueta <code>@value</code> para documentar el valor de las contantes conseguimos escribir una sola vez el literal y así hacemos referencia directamente al valor de la constante. De este modo, si se modificara el valor de la constante en el código, el comentario javadoc no habría que retocarlo, pues hace referencia directamente al valor y no tiene el valor literal escrito "a mano". Recuerda que debemos evitar escribir cualquier cosa más de una vez en nuestro código. Así evitaremos potenciales fuentes de inconsistencias.</p></div>
+</form>
+<div id="taquesQuestion2b294" class="block iDevice_content">
+<p>La clase <code>CuentaBancaria</code> dispone de cuatro constructores:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public CuentaBancaria(double saldoInicial, LocalDate fechaCreacion, double limiteDescubierto) throws IllegalArgumentException {
+  . . .
+  . . .
+}
+
+public CuentaBancaria(double saldoInicial, LocalDate fechaCreacion) throws IllegalArgumentException {
+   this(saldoInicial, fechaCreacion, CuentaBancaria.DEFAULT_MAX_DESCUBIERTO);
+}
+
+public CuentaBancaria(double saldoInicial) throws IllegalArgumentException {
+   this(saldoInicial, LocalDate.now());
+}
+
+public CuentaBancaria() {
+   this(CuentaBancaria.DEFAULT_SALDO);
+}</code></pre>
+</div>
+</div>
+<p></p>
+<p>Y deseamos que aparezcan documentados de la siguiente manera en el resumen de constructores:</p>
+<p style="text-align: center;"><a href="ClassCuentaBancaria_javadoc03_Constructores.png" title="Javadoc constructores clase CuentaBancaria (se abre en una nueva ventana)" target="_blank"><img src="ClassCuentaBancaria_javadoc03_Constructores.png" alt="Javadoc de la lista de constructores de la clase CuentaBancaria" title="Javadoc constructores clase CuentaBancaria (se abre en una nueva ventana)" class="imagen_ampliable" width="480" height="202" /></a></p>
+<p>Además, en la descripción detallada del primer constructor (el que tiene tres parámetros) nos gustaría que apareciera la siguiente información:</p>
+<p style="text-align: center;"><a href="ClassCuentaBancaria_javadoc04_Constructores.png" title="Javadoc detallado constructor clase CuentaBancaria (se abre en una nueva ventana)" target="_blank"><img src="ClassCuentaBancaria_javadoc04_Constructores.png" alt="Javadoc detallado de un constructor de la clase CuentaBancaria" title="Javadoc detallado constructor clase CuentaBancaria (se abre en una nueva ventana)" class="imagen_ampliable" width="480" height="277" /></a></p>
+<p>¿Qué comentarios javadoc y qué etiquetas utilizarías para lograrlo?</p>
+</div>
+<form name="feedback-form-quesFeedback2b294" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b294text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b294" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b294" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En el comentario javadoc de ese constructor necesitarás hacer uso de las etiquetas <code>@param</code> para documentar los parámetros y <code>@throws</code> para documentar las posibles excepciones:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Constructor con tres parámetros
+ *
+ * @param saldoInicial Saldo inicial de la cuenta (en euros)
+ * @param fechaCreacion Fecha de creación de la cuenta
+ * @param limiteDescubierto Límite de descubierto de lacuenta (en euros)
+ * @throws IllegalArgumentException Si alguno de los parámetros no es válido
+ */
+public CuentaBancaria(double saldoInicial, LocalDate fechaCreacion, double limiteDescubierto) throws IllegalArgumentException {
+</code></pre>
+</div>
+</div>
+<p>Te dejamos a ti que intentes la documentación del resto de constructores.</p></div>
+</form>
+<div id="taquesQuestion3b294" class="block iDevice_content">
+<p>El método <code>ingresar</code> tiene la siguiente cabecera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public void ingresar(double cantidad) throws IllegalArgumentException, IllegalStateException {</code></pre>
+</div>
+</div>
+<p>Y nos gustaría que apareciera documentado de la siguiente manera:</p>
+<p><a href="ClassCuentaBancaria_javadoc05_MetodoIngresar.png" title="Javadoc método ingresar clase CuentaBancaria (se abre en una nueva ventana)" target="_blank"><img src="ClassCuentaBancaria_javadoc05_MetodoIngresar.png" alt="Javadoc detallado del método ingresar de la clase CuentaBancaria" title="Javadoc método ingresar clase CuentaBancaria (se abre en una nueva ventana)" class="imagen_ampliable" style="display: block; margin-left: auto; margin-right: auto;" width="480" height="168" /></a></p>
+<p>¿Qué comentarios javadoc escribirías? ¿Qué etiquetas utilizarías? ¿Necesitarías la etiqueta <code>@return</code>?</p>
+</div>
+<form name="feedback-form-quesFeedback3b294" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b294text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b294" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback3b294" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso también haremos uso de las etiquetas <code>@param</code> y <code>@throws</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Ingresa una determinada cantidad en la cuenta. Se permiten ingresos de
+ * 0.00 euros.
+ *
+ * @param cantidad Cantidad que se desea ingresar (en euros). Se permite
+ * ingresar 0.00 euros.
+ * @throws IllegalArgumentException Si la cantidad de ingreso es inválida
+ * (negativa).
+ * @throws IllegalStateException Si con ese ingreso se superaría el saldo
+ * máximo. En tal caso no se llevaría a cabo el ingreso.
+ */
+public void ingresar(double cantidad) throws IllegalArgumentException, IllegalStateException {</code></pre>
+</div>
+</div>
+<p>No hay que utilizar la etiqueta <code>@return</code> dado que este método es <code>void</code>, es decir, que no devuelve (<em></em><span lang="en"><em>return</em></span>) nada, y por tanto no hay que documentarlo.</p></div>
+</form>
+<div id="taquesQuestion4b294" class="block iDevice_content">
+<p>El método <code>toString</code> tiene la siguiente cabecera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Override
+public String toString() {</code></pre>
+</div>
+</div>
+<p>Y nos gustaría que apareciera documentado de la siguiente manera:</p>
+<p style="text-align: center;"><a href="ClassCuentaBancaria_javadoc06_MetodoToString.png" title="Javadoc método toString clase CuentaBancaria (se abre en una nueva ventana)" target="_blank"><img src="ClassCuentaBancaria_javadoc06_MetodoToString.png" alt="Javadoc detallado del método toString de la clase CuentaBancaria" title="Javadoc método toString clase CuentaBancaria (se abre en una nueva ventana)" class="imagen_ampliable" width="640" height="445" /></a></p>
+<p>¿Qué etiquetas necesitarías para ello? Escribe el javadoc apropiado para generar esa documentación. Fíjate que en este caso hay bastante texto y está muy formateado. Tendrás que hacer uso de tus habilidades <acronym title="Hypertext Markup Language">HTML</acronym> para intentar que se parezca lo máximo posible...</p>
+</div>
+<form name="feedback-form-quesFeedback4b294" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback4b294text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback4b294" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback4b294" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso necesitaremos únicamente la etiqueta <code>@return</code>. El resto es texto, eso sí, con muchas etiquetas <acronym title="Hypertext Markup Language">HTML</acronym>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Devuelve una cadena que representa el estado actual de la cuenta. Esa
+ * cadena proporcionará la siguiente información:
+ * &lt;ol&gt;
+ * &lt;li&gt;&lt;strong&gt;Identificador&lt;/strong&gt; de la cuenta.&lt;/li&gt;
+ * &lt;li&gt;&lt;strong&gt;Saldo actual&lt;/strong&gt; de la cuenta.&lt;/li&gt;
+ * &lt;li&gt;Si la cuenta está o no &lt;strong&gt;embargada&lt;/strong&gt;.&lt;/li&gt;
+ * &lt;/ol&gt;
+ * &lt;p&gt;
+ * &lt;strong&gt;El formato de salida&lt;/strong&gt; será del siguiente tipo: &lt;/p&gt;
+ * &lt;pre&gt;Id: XXX - Saldo: YYYYYYYY.YY - Embargada: sí|no [ZZZ.Z%]&lt;/pre&gt;
+ * &lt;p&gt;
+ * donde XXX será el identificador de la cuenta(número entero); YYYYYYYY.YY
+ * será el saldo actual en euros, con dos decimales, con una anchura para
+ * poder representar el máximo saldo de 50000000.00 euros; ZZZ.Z será el
+ * porcentaje actual de embargo de la cuenta con una anchura de 5
+ * caracteres, y con un decimal, si es que está embargada. Si no lo está, no
+ * aparecerá información de porcentaje. Simplemente aparecerá "no".&lt;/p&gt;
+ * &lt;p&gt;
+ * Algunos ejemplos de este &lt;code&gt;String&lt;/code&gt; de salida podrían ser:&lt;/p&gt;
+ * &lt;pre&gt;Id: 0 - Saldo: 50000000,00 - Embargada: no&lt;/pre&gt;
+ * &lt;pre&gt;Id: 0 - Saldo:        0,00 - Embargada: no&lt;/pre&gt;
+ * &lt;pre&gt;Id: 0 - Saldo:    -2000,00 - Embargada: no&lt;/pre&gt;
+ * &lt;pre&gt;Id: 1 - Saldo:     5000,00 - Embargada: sí  25,0%&lt;/pre&gt;
+ * &lt;pre&gt;Id: 1 - Saldo:     3750,00 - Embargada: sí  50,0%&lt;/pre&gt;
+ * &lt;pre&gt;Id: 3 - Saldo:        0,00 - Embargada: sí 100,0%&lt;/pre&gt;
+ *
+ * @return Cadena que representa el estado actual de la cuenta.
+ */
+@Override
+public String toString() {</code></pre>
+</div>
+</div>
+<p>Como puedes observar, el texto que hay antes del primer punto es "<em>Devuelve una cadena que representa el estado actual de la cuenta</em>". Eso será lo único que aparecerá en la parte de resumen de métodos:</p>
+<p style="text-align: center;"><a href="ClassCuentaBancaria_javadoc07_MetodoToStringResumen.png" title="Javadoc resumen método toString clase CuentaBancaria (se abre en una nueva ventana)" target="_blank"><img src="ClassCuentaBancaria_javadoc07_MetodoToStringResumen.png" alt="Javadoc detallado del resumen del método toString de la clase CuentaBancaria" title="Javadoc resumen método toString clase CuentaBancaria (se abre en una nueva ventana)" class="imagen_ampliable" width="520" height="47" /></a></p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="73_orden_de_las_etiquetas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="8_creacin_y_utilizacin_de_objetos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

@@ -1,0 +1,1301 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Anexo III.- Ejercicios resueltos | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-89"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li id="active"><a href="anexo_iii_ejercicios_resueltos.html" class="active no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_iv_paradigmas_de_la_programacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Anexo III.- Ejercicios resueltos</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id214">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta214_147" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="white-board-593300_640.jpg" alt="Escribiendo sobre una pizarra blanca" title="Whiteboard" style="float: right;" width="200" height="133" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/tablero-blanco-inicio-593300/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de StartupStockPhotos en Pixabay (se abre en una nueva ventana).">StartupStockPhotos</a> <span class="license"><span class="sep">(</span><span class="license"><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>María y <strong>Juan</strong> han estado trabajando con <strong>variables</strong>, <strong>tipos de datos</strong> y <strong>operadores</strong>. Además también han <strong>leído datos desde el teclado</strong> y <strong>mostrado información por pantalla</strong>. Ahora necesitan practicar con todas esas herramientas para combinarlas y construir programas en Java que sirvan para resolver los distintos problemas con los que se van a tener que enfrentar.</p>
+<p>Aún tienen pocas herramientas para trabajar, pero son suficientes como para plantear soluciones a pequeños problemas que tan solo requieran la aplicación de algunas fórmulas matemáticas. Ha llegado el momento de empezar a escribir programas en Java que pregunten por unos datos de entrada, se procesen esos datos y se muestren unos resultados de salida. Para ello van a utilizar la <strong>plantilla genérica de programa en Java</strong> que se les proporcionó en un <a href="651_estandarizacin_del_cdigo.html" title="Volver al apartado 6.5.1.- Estandarización del código">apartado anterior</a>. Te sugerimos que tú también lo hagas.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id177">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 1: Palos de la baraja</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta177_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b177" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 250px;"><img src="cards-5206895_640.jpg" alt="Ilustración con los cuatro ases de la baraja española: oros, copas, bastos, espadas" title="Naipes" style="float: right;" width="210" height="140" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/naipes-cartas-espa%C3%B1olas-casino-5206895/" title="Acceder a la web de descarga de la imagen de kevberon en Pixabay (se abre en una nueva ventana)" target="_blank" class="author"><span class="author">kevberon</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Escribe un pequeño programa en Java que defina un enumerado con los <strong>nombres de los palos de la baraja española</strong>: <code>OROS</code>, <code>COPAS</code>, <code>BASTOS</code>, <code>ESPADAS</code>, para posteriormente mostrar por pantalla cada valor del enumerado declarado.</p>
+<p>La salida por pantalla podría ser algo así:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>PALOS DE LA BARAJA ESPAÑOLA
+---------------------------
+Palo 1: OROS
+Palo 2: COPAS
+Palo 3: BASTOS
+Palo 4: ESPADAS</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b177" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b177text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b177" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b177" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso podemos considerar que ni siquiera vale la pena hacer la distinción entre los bloques de entrada de datos, procesamiento y salida de resultados, pues lo único que se hace es mostrar cada uno de los cuatro posibles valores del <code>enum</code>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class EjercicioPalosBaraja {
+    
+    public enum PaloBaraja {OROS, COPAS, ESPADAS, BASTOS};
+     
+    public static void main(String[] args) {
+     
+        PaloBaraja palo;
+        
+        System.out.println ("PALOS DE LA BARAJA ESPAÑOLA");
+        System.out.println ("---------------------------");
+        
+        palo=PaloBaraja.OROS;
+        System.out.println("Palo 1: " + palo);
+        palo=PaloBaraja.COPAS;
+        System.out.println("Palo 2: " + palo);
+        palo=PaloBaraja.ESPADAS;
+        System.out.println("Palo 3: " + palo);
+        palo=PaloBaraja.BASTOS;
+        System.out.println("Palo 4: " + palo);
+    }  
+}</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id222">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 2: Cálculos aritméticos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta222_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b222" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 189px;"><img src="geometry-1044090_640.jpg" alt="Mosaico de fórmulas geométricas y físicas" title="Cálculos" style="float: right;" width="180" height="118" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/geometr%C3%ADa-matem%C3%A1ticas-volumen-1044090/" title="Acceder a la web de descarga de la imagen de Gerd Altmann en Pixabay (se abre en una nueva ventana)" target="_blank" class="author"><span class="author">Gerd Altmann</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Escribe un programa en Java que solicite dos <strong>números reales</strong> y lleve a cabo los siguientes cálculos:</p>
+<ul class="lista_verificacion">
+<li>el doble del primer número,</li>
+<li>la mitad del segundo número,</li>
+<li>el cuadrado de la suma de ambos números,</li>
+<li>La décima parte de la suma los cuadrados de ambos números.</li>
+</ul>
+<p>Para ello tendrás que utilizar <strong>operadores aritméticos</strong> tales como la suma, el producto o la división. Además, es posible que en algunos casos necesites hacer uso de los <strong>paréntesis</strong>.</p>
+<p>Un ejemplo de ejecución del programa podría ser:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre class="  language-markup"><code class="  language-markup">CÁLCULOS ARITMÉTICOS
+--------------------
+Introduzca dos números reales: 
+Primer número: 2
+Segundo número: 3
+
+RESULTADO
+---------
+Doble del primer número: 4.0
+Mitad del segundo número: 1.5
+Cuadrado de la suma de ambos números: 25.0
+Décima parte de la suma de los cuadrados de ambos números: 1.3</code></pre>
+</div>
+</div>
+<p>Otro ejemplo de ejecución podría ser:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre class="  language-markup"><code class="  language-markup">CÁLCULOS ARITMÉTICOS
+--------------------
+Introduzca dos números reales: 
+Primer número: 0
+Segundo número: 1
+
+RESULTADO
+---------
+Doble del primer número: 0.0
+Mitad del segundo número: 0.5
+Cuadrado de la suma de ambos números: 1.0
+Décima parte de la suma de los cuadrados de ambos números: 0.1</code></pre>
+</div>
+</div>
+<p>Y otro ejemplo más:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre class="  language-markup"><code class="  language-markup">CÁLCULOS ARITMÉTICOS
+--------------------
+Introduzca dos números reales: 
+Primer número: -2
+Segundo número: 2
+
+RESULTADO
+---------
+Doble del primer número: -4.0
+Mitad del segundo número: 1.0
+Cuadrado de la suma de ambos números: 0.0
+Décima parte de la suma de los cuadrados de ambos números: 0.8</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b222" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b222text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b222" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b222" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso se trata de solicitar un par de números reales al usuario, los cuales se almacenarán en sendas variables (entrada de datos) y a continuación realizar una serie de cálculos aritméticos sencillos cuyos resultados podemos almacenar en otras variables (procesamiento). Finalmente mostraremos esos resultados por pantalla (salida de resultados).</p>
+<p>Como variables de entrada podríamos usar algo del estilo a:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>double numero1, numero2;</code></pre>
+</div>
+</div>
+<p>Y como variables de salida podríamos utilizar las siguientes:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>double resultado1, resultado2, resultado3, resultado4;</code></pre>
+</div>
+</div>
+<p>Recuerda que <strong>la elección de los nombres de las variables es un asunto importante</strong>. En este caso no lo es especialmente, pues se trata de un ejemplo extremadamente sencillo. Pero si consideramos que el nombre de cada variable debe representar lo que almacena, también podríamos haber escogido nombres como  <code>dobleNumero1</code>, <code>mitadNumero2</code>, <code>cuadradoSuma</code>, <code>decimoSumaCuadrados</code>, <abbr title="etcétera">etc</abbr>.</p>
+<p>Los cálculos que habría que realizar son:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>resultado1= 2.0 * numero1;
+resultado2= numero2 / 2.0;
+resultado3= (numero1 + numero2) * (numero1 + numero2);
+resultado4= (numero1*numero1 + numero2*numero2) / 10.0;</code></pre>
+</div>
+</div>
+<p>Si utilizamos nuestra plantilla de programa, la solución al ejercicio podría quedar de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.util.Scanner;
+
+public class CalculosAritmeticos {
+    
+    public static void main(String[] args) {
+
+        //----------------------------------------------
+        //          Declaración de variables 
+        //----------------------------------------------
+
+        // Constantes
+
+        
+        // Variables de entrada
+        double numero1, numero2;
+        
+        // Variables de salida
+        double resultado1, resultado2, resultado3, resultado4;
+
+        // Variables auxiliares
+
+        // Clase Scanner para petición de datos de entrada
+        Scanner teclado= new Scanner (System.in);
+        
+        
+        //----------------------------------------------
+        //                Entrada de datos 
+        //----------------------------------------------
+        System.out.println("CÁLCULOS ARITMÉTICOS");
+        System.out.println("--------------------");
+        System.out.println("Introduzca dos números reales: ");
+        System.out.print("Primer número: ");
+        numero1= teclado.nextDouble();
+        System.out.print("Segundo número: ");
+        numero2= teclado.nextDouble();
+        
+        //----------------------------------------------
+        //                 Procesamiento 
+        //----------------------------------------------
+        
+        // Primer cálculo: doble del primer número
+        resultado1= 2.0 * numero1;
+        
+        // Segundo cálculo: mitad del segundo número
+        resultado2= numero2 / 2.0;
+
+        // Tercer cálculo: cuadrado de la suma
+        resultado3= (numero1 + numero2) * (numero1 + numero2);
+        
+        // Cuarto cálculo: décima parte de la suma de los cuadrados
+        resultado4= (numero1*numero1 + numero2*numero2) / 10.0;
+        
+        //----------------------------------------------
+        //              Salida de resultados 
+        //----------------------------------------------
+        System.out.println ();
+        System.out.println ("RESULTADO");
+        System.out.println ("---------");
+        System.out.println ("Doble del primer número: " + resultado1);
+        System.out.println ("Mitad del segundo número: " + resultado2);
+        System.out.println ("Cuadrado de la suma de ambos números: " + resultado3);
+        System.out.println ("Décima parte de la suma de los cuadrados de ambos números: " + resultado4);
+                
+        System.out.println ();
+        System.out.println ("Fin del programa. Bye!");        
+    }    
+}</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id223">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 3: Cambio de unidades</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta223_148" class="block story iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="320px-Inch_tape.jpg" alt="Fragmento de cinta métrica con divisiones en centímetro y pulgadas" title="Cinta métrica" style="float: right;" width="240" height="78" /><figcaption class="figcaption"><a href="https://commons.wikimedia.org/wiki/File:Inch_tape.jpg" target="_blank" class="author" title="Acceder a la web descarga de la imagen de MJCdetroit en Wiki Commons (se abre en una nueva ventana)."> MJCdetroit</a> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption></figure>
+<p>El <strong>Sistema Internacional de Unidades</strong> (<acronym title="Sistema Internacional">SI</acronym>, del francés <span lang="fr">Le Système International d’Unités</span>) está constituido por siete unidades básicas: amperio, kelvin, segundo, metro, kilogramo, candela y mol, además de unidades derivadas, prefijos para denotar múltiplos y submúltiplos de las unidades y reglas para escribir el valor de las magnitudes.</p>
+<p>Por otro lado, el <strong>sistema anglosajón de unidades</strong> es un conjunto de unidades de medida diferentes a las del sistema métrico decimal, que se utilizan actualmente como medida principal en los Estados Unidos, el Reino Unido y en algunos territorios históricamente vinculados a estos dos países.</p>
+<p>A nuestro equipo de desarrollo le han propuesto que implemente un pequeño programa para <strong>transformar longitudes medidas en el sistema internacional a submúltiplos de éstas así como también al sistema anglosajón</strong>.</p>
+</section>
+<section id="taquesQuestion0b223" class="block iDevice_content">
+<p>Lo primero que nos han pedido es la transformación de una <strong>longitud dada en metros</strong> (introducida desde teclado) a:</p>
+<ul class="lista_verificacion">
+<li>decímetros, centímetros y milímetros (sistema internacional);</li>
+<li>pulgadas, yardas y pies (sistema anglosajón de unidades).</li>
+</ul>
+<p>Para ello hay que tener en cuenta que:</p>
+<ol>
+<li>en el sistema métrico decimal, un decímetro es la décima parte de un metro (diez decímetros hacen un metro), un centímetro es la centésima parte de un metro (cien centímetros hacen un metro) y un milímetro es la milésima parte de un metro (mil milímetros hacen un metro);</li>
+<li>en el sistema anglosajón, 1 pulgada = 2,54 cm, 1 pie = 12 pulgadas y una yarda = 3 pies.</li>
+</ol>
+<p>Escribe un programa en Java que lea de teclado una longitud en metros y muestra esa misma medida en:</p>
+<ul class="lista_verificacion">
+<li>decímetros, centímetros y milímetros (sistema internacional);</li>
+<li>pulgadas, yardas y pies (sistema anglosajón de unidades).</li>
+</ul>
+<p>Un ejemplo de una posible salida por pantalla del programa podría ser:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Introduzca la longitud en metros que desea transformar: 0,5
+RESULTADO
+---------
+
+SISTEMA INTERNACIONAL
+---------------------
+La medida 0.5 en metros son:
+5.0 decímetros
+50.0 centímetros
+500.0 milímetros
+
+SISTEMA ANGLOSAJÓN
+------------------
+La medida 0.5 en metros son:
+19.68503937007874 pulgadas
+1.6404199475065617 pies
+0.5468066491688539 yardas</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b223" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b223text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b223" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b223" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>La implementación de este programa de transformación consiste básicamente en realizar seis conjuntos de operaciones matemáticas, una para cada transformación:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.util.Scanner;
+
+public class CambioUnidades {
+
+    public static void main(String[] args) {
+
+        //----------------------------------------------
+        //          Declaración de variables 
+        //----------------------------------------------
+        // Constantes
+        // Variables de entrada
+        double metros;
+
+        // Variables de salida
+        double decimetros, centimetros, milimetros;
+        double pulgadas, pies, yardas;
+
+        // Variables auxiliares
+        // Clase Scanner para peticióde datos
+        Scanner teclado = new Scanner(System.in);
+
+        //----------------------------------------------
+        //                Entrada de datos 
+        //----------------------------------------------
+        System.out.println("TRANSFORMACIÓN DE UNIDADES");
+        System.out.println("--------------------------");
+        System.out.println(" ");
+        System.out.print("Introduzca la longitud en metros que desea transformar: ");
+        metros = teclado.nextDouble();
+
+        //----------------------------------------------
+        //                 Procesamiento 
+        //----------------------------------------------
+        // Sistema Internacional
+        decimetros = metros * 10;
+        centimetros = metros * 100;
+        milimetros = metros * 1000;
+
+        // Sistema anglosajón
+        pulgadas = metros * 100 / 2.54;
+        pies = pulgadas / 12;
+        yardas = pies / 3;
+
+        //----------------------------------------------
+        //              Salida de resultados 
+        //----------------------------------------------
+        System.out.println();
+        System.out.println("RESULTADO");
+        System.out.println("---------");
+        System.out.println();
+        System.out.println("SISTEMA INTERNACIONAL");
+        System.out.println("---------------------");
+        System.out.println("La medida " + metros + " en metros son:");
+        System.out.println(decimetros + " decímetros");
+        System.out.println(centimetros + " centímetros");
+        System.out.println(milimetros + " milímetros");
+
+        System.out.println();
+        System.out.println("SISTEMA ANGLOSAJÓN");
+        System.out.println("------------------");
+        System.out.println("La medida " + metros + " en metros son:");
+        System.out.println(pulgadas + " pulgadas");
+        System.out.println(pies + " pies");
+        System.out.println(yardas + " yardas");
+
+        System.out.println();
+        System.out.println("Fin del programa. Bye!");
+    }
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id208">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 4: Volumen de una pirámide</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta208_149" class="block story iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 144px;"><img src="Pyramid_(geometry).png" alt="Imagen que muestra una pirámide marcando la altura y la base." title="Imagen de una pirámide." width="144" height="195" /><figcaption class="figcaption"><a href="https://commons.wikimedia.org/wiki/File:Pyramid_(geometry).png" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Sebbe.wigmo en Wikimedia Commons (se abre en una nueva ventana).">Sebbe.wigmo</a> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption></figure>
+<p>El <strong>volumen de una pirámide</strong> se calcula con la siguiente fórmula:</p>
+<p style="text-align: center;"><img src="eXe_LaTeX_math_0.gif" alt="Volumen es igual a un tercio del area de la base por la altura." style="vertical-align: middle;"  width="136" height="27" /></p>
+<p style="text-align: left;">En la fórmula anterior, <strong>B</strong> corresponde con el área de la base y <strong>h</strong> corresponde con la altura de la pirámide. Crea un programa que, dado el tamaño del lado de la base <strong>L </strong>y la altura <strong>h</strong>, calcule el volumen.</p>
+<p style="text-align: left;">Nota: ten en cuenta que la base (<strong>B</strong>) es un cuadrado, por lo que primero deberás calcular el area <strong>B</strong> partiendo del tamaño del lado (<strong>L</strong>).</p>
+</section>
+<section id="taquesQuestion0b208" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 200px;"><img src="320px-Kheops-Pyramid.jpg" alt="Pirámide de Keops, Egipto." title="Pirámide de Keops" style="float: right;" width="200" height="123" /><figcaption class="figcaption"><a href="https://commons.wikimedia.org/wiki/File:Kheops-Pyramid.jpg" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Nina en Wikie Commons (se abre en una nueva ventana).">Nina</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a los términos de la licencia Creative Commons BY-SA (se abre en una nueva ventana).">CC BY-SA</a><span class="sep">)</span></span></figcaption></figure>
+<p style="text-align: left;"><br />Escribe un programa en Java que solicite la <strong>altura</strong> y la <strong>longitud del lado</strong> (en metros) de una <strong>pirámide de base cuadrángular</strong> y calcule su <strong>volumen</strong> en metros cúbicos.</p>
+<p style="text-align: left;">Después de realizar ese cálculo, muestra <strong>a cuántas piscinas olímpicas equivale dicho volumen</strong>, teniendo en cuenta que una piscina olímpica tiene 2500 metros cúbicos.</p>
+<p style="text-align: left;">Aquí tienes un ejemplo de ejecución (los datos corresponden con la actual pirámide de Keops o Khufu):</p>
+<div>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Introduce la altura de la pirámide (metros): 137
+Introduce la longitud del lado de la base (metros): 227
+Volumen de la pirámide: 2353157.6666666665 metros cúbicos.
+Equivale aproximadamente a 941 piscinas olímpicas.</code></pre>
+</div>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b208" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b208text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b208" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b208" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Nuestro programa debe aplicar las anteriores expresiones matemáticas:</p>
+<div class="highlighted-code language-java">
+<pre><code>areaBase= lado * lado;                  // Cálculo del área de la base
+volumen= (1.0/3.0) * areaBase * altura; // Cálculo del volumen
+equivalencia= (int) (volumen/2500);     // Cálculo de la equivalencia en piscinas olímpìcas</code>
+</pre>
+</div>
+<p>Además de eso, tendrá que solicitar por teclado la altura y la longitud del lado de la base, así como realizar los cálculos intermedios necesarios y mostrar los resultados por pantalla.</p>
+<p>Si utilizamos nuestra plantilla de programa, la solución al ejercicio podria quedar de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<pre><code>import java.util.Scanner;
+
+public class EjercicioVolumenPiramide {
+ 
+    public static void main(String[] args) {
+
+        //----------------------------------------------
+        //          Declaración de variables 
+        //----------------------------------------------
+
+        // Constantes
+
+
+        // Variables de entrada
+        double altura;
+        double lado;
+        
+        // Variables de salida
+        double volumen;		
+        int equivalencia;
+
+        // Variables auxiliares
+        double areaBase;
+
+        // Clase Scanner para petición de datos de entrada
+        Scanner teclado= new Scanner (System.in);        
+        
+        //----------------------------------------------
+        //                Entrada de datos 
+        //----------------------------------------------
+        System.out.println("VOLUMEN DE PIRÁMIDE");
+        System.out.println("-------------------");
+        
+        System.out.print("Introduce la altura de la pirámide (metros): ");
+        altura=teclado.nextDouble();
+
+        System.out.print("Introduce la longitud del lado de la base (metros): ");
+        lado=teclado.nextDouble();
+        
+        //----------------------------------------------
+        //                 Procesamiento 
+        //----------------------------------------------
+        areaBase= lado * lado;                  // Cálculo del área de la base
+        volumen= (1.0/3.0) * areaBase * altura; // Cálculo del volumen
+        equivalencia= (int)(volumen/2500);      // Cálculo de la equivalencia en piscinas olímpìcas
+        
+        //----------------------------------------------
+        //              Salida de resultados 
+        //----------------------------------------------       
+        System.out.println ();
+        System.out.println ("RESULTADO");
+        System.out.println ("---------");
+        System.out.println("Volumen de la pirámide: " + volumen + " metros cúbicos.");
+        System.out.println("Equivale aproximadamente a " + equivalencia + " piscinas olímpicas.");
+                
+        System.out.println ();
+        System.out.println ("Fin del programa. Bye!");
+    }    
+}</code></pre>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id224">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 5: Análisis de un número</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta224_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b224" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 189px;"><img src="matrix-3109378_640.jpg" alt="Listas de números en vertical en fósforo verde con fondo negro, estilo Matrix" title="Números" style="float: right;" width="189" height="130" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/matriz-tecnolog%C3%ADa-de-datos-3109378/" title="Acceder a la web de descarga de la imagen de Jae Rue en Pixabay (se abre en una nueva ventana)" target="_blank" class="author"><span class="author">Jae Rue</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Escribe un programa en Java que solicite un <strong>número entero</strong> (sin decimales) y lo analice averiguando lo siguiente:</p>
+<ul class="lista_verificacion">
+<li>si es cero,</li>
+<li>si es positivo,</li>
+<li>si es menor que cien,</li>
+<li>si es par.</li>
+</ul>
+<p>Para ello tendrás que utilizar <strong>operadores relacionales</strong> tales como igual (<code>==</code>), menor que (<code>&lt;</code>), mayor que (<code><code>&gt;</code></code>), <abbr title="etcétera">etc.</abbr> Ten en cuenta que el resultado de la aplicación de estos operadores es un valor de tipo <code>boolean</code>, es decir un valor que será <code>true</code> o <code>false</code>.</p>
+<p>Recuerda también que un <strong>número es par si es divisible entre dos</strong>, es decir, si el resto de la división entera de ese número entre dos es cero. En Java dispones del operador <strong>módulo</strong> (<strong>%</strong>) para calcular el resto de la división entera.</p>
+<p>Un ejemplo de ejecución del programa podría ser:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre class="  language-markup"><code class="  language-markup">ANÁLISIS DE UN NÚMERO
+---------------------
+Introduzca un número entero: 17
+
+RESULTADO
+---------
+El número es cero: false
+El número es positivo: true
+El número es es menor que 100: true
+El número es par: false</code></pre>
+</div>
+</div>
+<p>Otro ejemplo de ejecución podría ser:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre class="  language-markup"><code class="  language-markup">ANÁLISIS DE UN NÚMERO
+---------------------
+Introduzca un número entero: 0
+
+RESULTADO
+---------
+El número es cero: true
+El número es positivo: false
+El número es es menor que 100: true
+El número es par: true</code></pre>
+</div>
+</div>
+<p>Y otro ejemplo más:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre class="  language-markup"><code class="  language-markup">ANÁLISIS DE UN NÚMERO
+---------------------
+Introduzca un número entero: 100
+
+RESULTADO
+---------
+El número es cero: false
+El número es positivo: true
+El número es es menor que 100: false
+El número es par: true</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b224" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b224text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b224" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b224" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso se trata de analizar distintas posibles circunstancias que podrían darse con un número que es introducido desde teclado (si es igual a cero, si es positivo, si es menor que cien, <abbr title="etcétera">etc</abbr>.). Para ello utilizaremos los operadores relacionales (mayor, menor, igual, <abbr title="etcétera">etc</abbr>.), cuya evaluación devolverá un valor lógico (<code>true</code> o <code>false</code>). Para almacenar ese resultado podríamos utilizar variables de tipo <code>boolean</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>boolean esCero, esPositivo, esMenor100, esPar;</code></pre>
+</div>
+</div>
+<p>Y los cálculos o comprobaciones que habría que realizar serían:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>numero==0;
+numero&gt;0;
+numero&lt;100;
+numero % 2 == 0;</code></pre>
+</div>
+</div>
+<p>Recuerda que la manera más sencilla de saber si un número es par es comprobando si el resto de su división entre dos es o no cero.</p>
+<p>Los resultados de esas comprobaciones (<code>true</code> o <code>false</code>) se almacenan como valores logicos o <code>boolean</code> en variables de tipo lógico o <code>boolean</code>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>esCero= numero==0;
+esPositivo= numero&gt;0;
+esMenor100= numero&lt;100;
+esPar= numero % 2 == 0;</code></pre>
+</div>
+</div>
+<p>Si unimos todo en un programa utilizando nuestra plantilla estándar con entrada de datos, procesamiento y salida de resultados podríamos tener algo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.util.Scanner;
+
+public class AnalisisNumero {
+    
+    public static void main(String[] args) {
+
+        //----------------------------------------------
+        //          Declaración de variables 
+        //----------------------------------------------
+
+        // Constantes
+
+
+        // Variables de entrada
+        int numero;
+        
+        // Variables de salida
+        boolean esCero, esPositivo, esMenor100, esPar;
+
+        // Variables auxiliares
+
+        // Clase Scanner para petición de datos de entrada
+        Scanner teclado= new Scanner (System.in);
+        
+        
+        //----------------------------------------------
+        //                Entrada de datos 
+        //----------------------------------------------
+        System.out.println("ANÁLISIS DE UN NÚMERO");
+        System.out.println("---------------------");
+        System.out.print("Introduzca un número entero: ");
+        numero= teclado.nextInt();
+        
+        //----------------------------------------------
+        //                 Procesamiento 
+        //----------------------------------------------
+        
+        // Cálculo de los resultados lógicos
+        esCero= numero==0;
+        esPositivo= numero&gt;0;
+        esMenor100= numero&lt;100;
+        esPar= numero % 2 == 0;
+        
+        //----------------------------------------------
+        //              Salida de resultados 
+        //----------------------------------------------
+        System.out.println ();
+        System.out.println ("RESULTADO");
+        System.out.println ("---------");
+        System.out.println ("El número es cero: " + esCero);
+        System.out.println ("El número es positivo: " + esPositivo);
+        System.out.println ("El número es es menor que 100: " + esMenor100);
+        System.out.println ("El número es par: " + esPar);
+                
+        System.out.println ();
+        System.out.println ("Fin del programa. Bye!");        
+    }    
+}</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id211">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 6: Estilos de natación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta211_63" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b211" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="swimming-78112_640.jpg" alt="Imagen de un nadador en una piscina" title="Natación" style="float: right;" width="200" height="133" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/nataci%C3%B3n-nadador-mujeres-carrera-78112/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de David Mark en Pixabay (se abre en una nueva ventana).">David Mark</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p><br />Un nadador entrena en la piscina haciendo <strong>un largo de ida a estilo crol</strong>, <strong>un largo de vuelta a estilo espalda</strong>, y así sucesivamente.</p>
+<p>Escribe un programa en Java que solicite al usuario la <strong>cantidad de largos que ha recorrido el nadador</strong> y <strong>la longitud de la piscina</strong> en la que ha entrenado (en metros). <br /><br />El programa debe calcular e indicar: la <strong>cantidad total de metros que ha nadado en cada estilo</strong> así como la <strong>longitud total que ha recorrido nadando</strong> (en kilómetros).</p>
+<p><strong>Ejemplo de ejecución 1</strong>: se han nadado 47 largos en una piscina de 25 metros.<br /><br /></p>
+<ul>
+<li class="lista_verificacion">En tal caso el programa debería indicar que se han nadado 600 metros a crol y 575 metros a espalda, de un total de 1,175 kilómetros.</li>
+</ul>
+<p><br /><strong>Ejemplo de ejecución 2</strong>: se han nadado 100 largos en una piscina de 15,2 metros.<br /><br /></p>
+<ul>
+<li class="lista_verificacion">En tal caso el programa debería indicar que se han nadado 760 metros a crol y 760 metros a espalda, de un total de 1,52 kilómetros.</li>
+</ul>
+</section>
+<form name="feedback-form-quesFeedback0b211" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b211text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b211" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b211" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Para resolver este problema lo primero que debemos hacer es <strong>calcular cuántos largos se han nadado a cada estilo</strong>. En principio sería algo tan simple con dividir por dos la cantidad total de largos. Dado que se trata numeros enteros (cantidad de largos) la división será entera. Ahora bien, tenemos un problema si el número de largos ha sido impar.</p>
+<p>Imagina por ejemplo que se han hecho tres largos. En tal caso sabemos que se ha hecho uno de ida a crol, uno de vuelta a espalda y otro de ida a crol, y nos hemos salido de la piscina. Eso significa que si dividimos el total de largos (tres) entre dos, obtendríamos un largo a crol y un largo a espalda. Pero nos falta un largo (el último largo de ida a crol). ¿Cómo podríamos obtenerlo? Sería simplemente lo que "sobra" de la división entera (el <strong>resto</strong> de la división entera). Ese resto puede calcularse en Java mediante el <strong>operador módulo</strong> (%). Por tanto tendríamos:</p>
+<ul class="lista_verificacion">
+<li>número de largos nadados a crol = largos totales / 2 + largos totales % 2 (la mitad más el posible resto),</li>
+<li>número de largos nadados a espalda= largos totales / 2 (la mitad).</li>
+</ul>
+<p>En cuanto al cálculo de las distancias se trataría simplemente de multiplicar la cantidad de largos por la distancia de la pisicina usando los multiplicadores o divisores adecuados.</p>
+<p>Por ejemplo, <strong>47 largos en una piscina de 25 metros</strong>:</p>
+<ul class="lista_verificacion">
+<li>largos nadados a crol = 47 / 2 + 47 % 1 = 23 + 1 = 24 largos,</li>
+<li>largos nadados a espalda= 47 / 2 = 23 largos,</li>
+<li>distancia (metros) nadada a crol = 24 × 25 = 600 metros,</li>
+<li>distancia (metros) nadada a espalda= 47 / 2 = 23 × 25 = 575 metros,</li>
+<li>distancia (kilómeros) total = 47 × 25 / 1000 = 1,175 kilómetros.</li>
+</ul>
+<div>Esos mismos cálculos (algoritmo) serán los que tendrá que realizar nuestro programa:</div>
+<div class="highlighted-code language-java">
+<pre><code>import java.util.Scanner;
+
+public class EjercicioNadador1 {
+    public static void main(String[] args) {
+
+        //----------------------------------------------
+        //          Declaración de variables 
+        //----------------------------------------------
+        // Constantes
+        // (no hay constantes en este programa)
+        
+        // Variables de entrada
+        int largosTotales;
+        double longitudPiscina;
+        
+        // Variables de salida
+        double distanciaCrol, distanciaEspalda; // En metros
+        double distanciaTotal;  // En kilómetros
+
+        // Variables auxiliares
+        int largosCrol, largosEspalda;
+        
+        // Clase Scanner para peticióde datos
+        Scanner teclado = new Scanner(System.in);
+
+        //----------------------------------------------
+        //                Entrada de datos 
+        //----------------------------------------------
+        System.out.println("ENTRENAMIENTO DE NATACIÓN");
+        System.out.println("-------------------------");
+        System.out.println(" ");
+        System.out.print("Introduzca el número total de largos realizados: ");
+        largosTotales = teclado.nextInt();
+        System.out.print("Introduzca la longitud de la piscina: ");
+        longitudPiscina = teclado.nextDouble();
+
+        //----------------------------------------------
+        //                 Procesamiento 
+        //----------------------------------------------
+        // Cálculo de la cantidad de largos de cada estilo
+        largosCrol    = largosTotales / 2 + largosTotales % 2;
+        largosEspalda = largosTotales / 2;
+        
+        //´Cálculo de la distancia en cada estilo (en metros)
+        distanciaCrol   = largosCrol    * longitudPiscina;
+        distanciaEspalda= largosEspalda * longitudPiscina;
+        
+        // Cálculo de la distancia total (en kilómetros)
+        distanciaTotal = largosTotales * longitudPiscina / 1000;
+        
+        
+        //----------------------------------------------
+        //              Salida de resultados 
+        //----------------------------------------------
+        System.out.println();
+        System.out.println("RESULTADO");
+        System.out.println("---------");
+        System.out.println();
+        System.out.println("DISTANCIAS RECORRIDAS");
+        System.out.println("---------------------");
+        System.out.println("Distancia recorrida a crol (metros): " + distanciaCrol);
+        System.out.println("Distancia recorrida a espalda (metros): " + distanciaEspalda);
+        System.out.println("Distancia total recorrida (kilómetros): " + distanciaTotal);
+
+        System.out.println();
+        System.out.println("Fin del programa. Bye!");
+    }
+}</code></pre>
+</div></section>
+</form>
+<section id="taquesQuestion1b211" class="block iDevice_content">
+<p>Tras una semana de entrenamiento, nuestro nadador ha cambiado su rutina haciendo <strong>un largo de ida a estilo crol</strong>, <strong>un largo de vuelta a estilo espalda</strong>, <strong>un largo de ida a estilo braza</strong> y <strong>de nuevo vuelta a estilo espalda</strong>, y así sucesivamente.</p>
+<p>Amplía el programa anterior para que calcule e indique nuevamente la <strong>cantidad total de metros que ha nadado en cada estilo</strong> y la <strong>longitud total que ha recorrido nadando</strong> (en kilómetros) teniendo en cuenta que ahora hay <strong>tres estilos diferentes</strong>.</p>
+</section>
+<form name="feedback-form-quesFeedback1b211" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b211text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b211" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b211" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Si el número de largos nadados es un múltiplo de cuatro (4, 8, 12, 16, <abbr title="etcétera">etc.</abbr>) el cálculo es nuevamente muy sencillo: <strong>la mitad de los largos serán a espalda</strong>, <strong>una cuarta parte a crol</strong> y <strong>la otra cuarta parte a braza</strong>. El problema lo tenemos cuando la cantidad de largos no sea múltiplo de cuatro. Volvemos a tener nuevamente el problema de los restos.</p>
+<p>Analicemos cada caso posible y saquemos conclusiones:</p>
+<ol>
+<li>En el caso de los largos a <strong>espalda</strong>, siempre serán la <strong>mitad</strong> de los realizados (cociente de la división entera entre dos).</li>
+<li>En el caso de <strong>crol</strong>, sabemos que <strong>cada cuatro largos uno será a crol</strong> (cociente de la división entera entre cuatro) y <strong>si se realiza una serie de menos de cuatro largos el primero será a crol</strong>. Por tanto si el resto de la división es mayor que cero, habrá que sumar ese largo adicional.</li>
+<li>En el caso de <strong>braza</strong>, sabemos también que <strong>cada cuatro uno será de espalda</strong> (cociente de la división entera entre cuatro) y que <strong>si se realiza una serie final de tres largos, ése último largo de la serie sería de espalda</strong>.</li>
+</ol>
+<p>Ejemplos:</p>
+<table class="tabla" style="width: 100%;" summary="Tabla en la que se detalla y calcula para cada número de largos (fila) cuántos largos se realizan en cada estilo: crol, espalda y braza" border="1"><caption>Detalle de los largos realizados por un nadador</caption>
+<tbody>
+<tr><th scope="row">Total largos</th><th scope="row">Crol</th><th scope="row">Espalda</th><th scope="row">Braza</th><th scope="row">Espalda</th><th scope="row">Crol</th><th scope="row">Espalda</th><th scope="row">Braza</th><th scope="row">Espalda</th><th scope="row">Total Crol</th><th scope="row" style="width: 8%;">Total Espalda</th><th scope="row">Total Braza</th></tr>
+<tr>
+<td>1</td>
+<td style="width: 5%;"><strong><span style="color: #ff0000;"><strong><span style="color: #ff0000;"><strong><span style="color: #ff0000;"><strong><span style="color: #ff0000;">√</span></strong></span></strong></span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;"><strong><span style="color: #0000ff;"></span></strong></span></strong></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td>1/4+1=<strong><span style="color: #ff0000;">1</span></strong></td>
+<td>1/2=<strong><span style="color: #0000ff;">0</span></strong></td>
+<td>1/4+0=<strong><span style="color: #008000;">0</span></strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td style="width: 5%;"><strong><span style="color: #ff0000;"><strong><span style="color: #ff0000;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;"><strong><span style="color: #0000ff;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #008000;"></span></strong></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td>2/4+1=<strong><span style="color: #ff0000;">1</span></strong></td>
+<td>2/2=<strong><span style="color: #0000ff;">1</span></strong></td>
+<td>2/4+0=<strong><span style="color: #008000;">0</span></strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td style="width: 5%;"><strong><span style="color: #ff0000;">√</span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;">√</span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #008000;">√</span></strong></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td>3/4+1=<strong><span style="color: #ff0000;">1</span></strong></td>
+<td>3/2=<strong><span style="color: #0000ff;">1</span></strong></td>
+<td>3/4+1=<strong><span style="color: #008000;">1</span></strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td style="width: 5%;"><strong><span style="color: #ff0000;"><strong><span style="color: #ff0000;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;"><strong><span style="color: #0000ff;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #008000;"><strong><span style="color: #008000;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;"><strong><span style="color: #0000ff;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #ff0000;"></span></strong></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td>4/4+0=<strong><span style="color: #ff0000;">1</span></strong></td>
+<td>4/2=<strong><span style="color: #0000ff;">2</span></strong></td>
+<td>4/4+0=<strong><span style="color: #008000;">1</span></strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td style="width: 5%;"><strong><span style="color: #ff0000;">√</span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;">√</span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #008000;">√</span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;">√</span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #ff0000;">√</span></strong></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td>5/4+1=<strong><span style="color: #ff0000;">2</span></strong></td>
+<td>5/2=<strong><span style="color: #0000ff;">2</span></strong></td>
+<td>5/4+0=<strong><span style="color: #008000;">1</span></strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td style="width: 5%;"><strong><span style="color: #ff0000;"><strong><span style="color: #ff0000;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;"><strong><span style="color: #0000ff;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #008000;"><strong><span style="color: #008000;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;"><strong><span style="color: #0000ff;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #ff0000;"><strong><span style="color: #ff0000;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;">√</span></strong></td>
+<td style="width: 5%;"></td>
+<td style="width: 5%;"></td>
+<td>6/4+1=<strong><span style="color: #ff0000;">2</span></strong></td>
+<td>6/2=<strong><span style="color: #0000ff;">3</span></strong></td>
+<td>6/4+0=<strong><span style="color: #008000;">1</span></strong></td>
+</tr>
+<tr>
+<td>7</td>
+<td style="width: 5%;"><strong><span style="color: #ff0000;">√</span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;">√</span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #008000;">√</span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;">√</span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #ff0000;">√</span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;">√</span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #008000;">√</span></strong></td>
+<td style="width: 5%;"></td>
+<td>7/4+1=<strong><span style="color: #ff0000;">2</span></strong></td>
+<td>7/2=<strong><span style="color: #0000ff;">3</span></strong></td>
+<td>7/4+1=<strong><span style="color: #008000;">2</span></strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td style="width: 5%;"><strong><span style="color: #ff0000;"><strong><span style="color: #ff0000;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;"><strong><span style="color: #0000ff;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #008000;"><strong><span style="color: #008000;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;"><strong><span style="color: #0000ff;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #ff0000;"><strong><span style="color: #ff0000;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;"><strong><span style="color: #0000ff;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #008000;"><strong><span style="color: #008000;">√</span></strong></span></strong></td>
+<td style="width: 5%;"><strong><span style="color: #0000ff;">√</span></strong></td>
+<td>8/4+0=<strong><span style="color: #ff0000;">2</span></strong></td>
+<td>8/2=<strong><span style="color: #0000ff;">4</span></strong></td>
+<td>8/4+0=<strong><span style="color: #008000;">2</span></strong></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>¿Cómo podemos calcular esos "+1" que a veces hay que sumar al resultado de dividir entre cuatro? Podemos volver a usar el resto de la división entera.</p>
+<p>En el caso de <strong>crol</strong> sería cuestión de obtener el <strong>resto de dividir entre cuatro</strong> (<code>largosTotales % 4</code>), y sabemos que <strong>si se obtiene una cantidad mayor que cero (1, 2 o 3) entonces además hay que sumar uno</strong>. Para ello podríamos usar el <strong>operador condicional</strong> (<code>?</code>). Si el resto de la división es mayor que cero, sumamos uno:</p>
+<p><code>largosCrol = largosTotales / 4 + (largosTotales % 4 &gt; 0 ? 1 : 0);</code></p>
+<p>En el caso de <strong>braza</strong> podríamos hacer algo similar pero teniendo en cuenta que tendríamos <strong>un largo de braza adicional si el resto de la división es tres</strong>:</p>
+<p><code>largosBraza = largosTotales / 4 + (largosTotales % 4 == 3 ? 1 : 0);</code></p>
+<p>De esta manera, la forma de calcular el número de largos de cada estilo quedaría así:</p>
+<div class="highlighted-code language-java">
+<pre><code> // Cálculo de la cantidad de largos de cada estilo
+ largosCrol    = largosTotales / 4 + (largosTotales % 4 &gt; 0  ? 1 : 0);
+ largosBraza   = largosTotales / 4 + (largosTotales % 4 == 3 ? 1 : 0);
+ largosEspalda = largosTotales / 2;
+</code></pre>
+</div>
+<p>No olvides poner el cálculo del posible resto entre paréntesis porque <strong>el operador condicional (<code>?</code>) tiene menor prioridad que los aritméticos</strong> y se haría la suma antes que la resolución de la condición.</p>
+<p>El resto del programa sería prácticamente igual y no vale la pena repetirlo.</p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id213">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 7: Cuadernos de colores</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta213_63" class="block story iDevice_content">
+<figure class="exe-figure exe-image float-right license-custom" style="width: 200px;"><img src="time-682333_640.png" alt="Cuaderno con páginas de colores" title="Cuaderno" width="200" height="200" /> <figcaption class="figcaption"><a href="https://pixabay.com/es/illustrations/tiempo-libreta-de-direcciones-682333/" target="_blank" class="author" rel="noopener">849356</a> <span class="license"><span class="sep">(</span><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep">)</span></span></figcaption></figure>
+<p><br />Una factoría papelera confecciona <strong>cuadernos</strong> en los que se van alternando hojas de color <strong>rojo</strong>, <strong>verde</strong><strong></strong> y <strong>azul</strong>. Siempre se comienza por el color rojo, siguiéndole el verde, luego el azul y comenzando nuevamente con el rojo.</p>
+<p>Por ejemplo, si un cuaderno está compuesto por <strong>100 hojas</strong>, <strong><span style="color: #ff0000;">34 serían de color rojo</span></strong>, <strong><span style="color: #008000;">33 de color verde</span></strong> y <strong><span style="color: #0000ff;">33 de color azul</span></strong>.</p>
+<p>Sin embargo, si el cuaderno tuviera <strong>200 hojas</strong>, <span style="color: #ff0000;"><strong>67 serían de color rojo</strong></span>, <span style="color: #008000;"><strong>67 de color verde</strong></span> y <span style="color: #0000ff;"><strong>66 de color azul</strong></span>.</p>
+<p>Por otro lado, si el cuaderno tuviera <strong>201 hojas</strong>, <span style="color: #ff0000;"><strong>67 serían rojas</strong></span>, <strong><span style="color: #008000;">67 verdes</span></strong> y <strong><span style="color: #0000ff;">67 azules</span></strong>.</p>
+</section>
+<section id="taquesQuestion0b213" class="block iDevice_content">
+<p>Escribe un programa en Java que solicite por teclado el <strong>número de hojas del cuaderno</strong> y calcule y muestre por pantalla la <strong>cantidad de hojas que contiene de cada color</strong><strong></strong>.</p>
+</section>
+<form name="feedback-form-quesFeedback0b213" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b213text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b213" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b213" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Sabemos que cada<strong> tres hojas se repiten consecutivamente los colores</strong> rojo, verde y azul. Por tanto, <strong>cada paquete de tres hojas implica una hoja de cada uno de estos colores</strong>. Eso significa que si la cantidad de hojas fuera múltiplo de tres, podríamos obtener la cantidad de hojas de cada color mediante el cociente de la división entera entre tres. Ahora bien, <strong>si la cantidad de hojas no es múltiplo de tres</strong>, habrá un <strong>desfase de <span style="color: #ff0000;">una hoja roja</span></strong> (<span style="color: #ff0000;">+1</span>) adicional o bien de <strong><span style="color: #ff0000;">una hoja roja</span></strong> (<span style="color: #ff0000;">+1</span>) y <span style="color: #008000;"><strong>otra verde</strong></span> (<span style="color: #008000;">+1</span>) adicionales.</p>
+<p>¿Cómo calculamos ese posible "desfase" de hojas adicionales? Ya lo hemos hecho en otras ocasiones usando el <strong>operador módulo</strong> (<code>%</code>, resto de la división entera).</p>
+<p>Para el caso de las hojas <span style="color: #0000ff;"><strong>azules</strong></span>, sabemos que nunca habrá desfase respecto a la división entre tres:</p>
+<p><span style="color: #0000ff;">Cantidad de hojas azules= hojas totales / 3</span></p>
+<p>Para el caso de las hojas <span style="color: #ff0000;"><strong>rojas</strong></span>, podemos calcular el desfase de hojas mediante el operador módulo (una hoja adicional si el resto de la división entera es mayor que cero) combinado con el <strong>operador condicional</strong> (<code>?</code>):</p>
+<p><span style="color: #ff0000;">Cantidad de hojas rojas = hojas totales / 3 + [ 1 si (hojas totales % 3) &gt; 0 ]</span></p>
+<p>Eso en Java podríamos codificarlo como: <code>hojasRojas = hojasTotales / 3 + (hojasTotales % 3 &gt; 0 ? 1 : 0)</code></p>
+<p>En el caso de las hojas <span style="color: #008000;"><strong>verdes</strong></span>, podemos hacer algo similar: (si el resto de la división entera es mayor que uno)</p>
+<p><span style="color: #008000;">Cantidad de hojas verdes = hojas totales / 3 + [ 1 si (hojas totales % 3) &gt; 1 ]</span></p>
+<p>Codificado en Java quedaría como: <code>hojasVerdes = hojasTotales / 3 + (hojasTotales % 3 &gt; 1 ? 1 : 0)</code></p>
+<p>Por tanto, el programa podría quedar finalmente así:</p>
+<div class="highlighted-code language-java">
+<pre><code>import java.util.Scanner;
+
+public class EjercicioCuadernoTresColores {
+ 
+    public static void main(String[] args) {
+
+        //----------------------------------------------
+        //          Declaración de variables 
+        //----------------------------------------------
+
+        // Constantes
+
+
+        // Variables de entrada
+        int hojasTotales;
+        
+        // Variables de salida
+        int hojasRojas, hojasVerdes, hojasAzules;
+
+
+        // Variables auxiliares
+
+
+        // Clase Scanner para petición de datos de entrada
+        Scanner teclado= new Scanner (System.in);        
+        
+        //----------------------------------------------
+        //                Entrada de datos 
+        //----------------------------------------------
+        System.out.println("CUADERNOS DE COLORES");
+        System.out.println("--------------------");
+        System.out.println(" ");
+        
+        System.out.print ("Introduce la cantidad de hojas del cuaderno: ");
+        hojasTotales= teclado.nextInt();
+        
+        //----------------------------------------------
+        //                 Procesamiento 
+        //----------------------------------------------
+        hojasRojas=   hojasTotales / 3 + (hojasTotales % 3 &gt; 0 ? 1 : 0);
+        hojasVerdes=  hojasTotales / 3 + (hojasTotales % 3 &gt; 1 ? 1 : 0);
+        hojasAzules=  hojasTotales / 3;
+        
+        //----------------------------------------------
+        //              Salida de resultados 
+        //----------------------------------------------       
+        System.out.println ();
+        System.out.println ("RESULTADO");
+        System.out.println ("---------");
+        System.out.println ("Cantidad total de hojas del cuaderno: " + hojasTotales);
+        System.out.println ("Cantidad de hojas rojas: "  + hojasRojas);
+        System.out.println ("Cantidad de hojas verdes: " + hojasVerdes);
+        System.out.println ("Cantidad de hojas azules: " + hojasAzules);
+                
+        System.out.println ();
+        System.out.println ("Fin del programa. Bye!");
+        
+        
+    }
+    
+}</code></pre>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id228">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 8: Concurso de TV</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta228_63" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b228" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 200px;"><img src="320px-Milonario_El_Salvador.jpg" alt="Concurso de TV" title="Concurso" style="float: right;" width="200" height="133" /><figcaption class="figcaption"><a href="https://commons.wikimedia.org/wiki/File:Milonario_El_Salvador.jpg" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Idea SV en Wiki commons (se abre en una nueva ventana).">Idea SV</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a los términos de la licencia Creative Commons BY-SA (se abre en una nueva ventana).">CC BY-SA</a><span class="sep">)</span></span></figcaption></figure>
+<p><br />Para un concurso de <abbr title="Televisión">TV</abbr> se solicitan personas cuyo <strong>nombre comience y termine por la misma letra</strong>, y además sus apellidos tengan la misma cantidad de letras.</p>
+<p>Escribe un programa en Java que reciba como entradas el <strong>nombre</strong>, el <strong>primer apellido</strong> y el <strong>segundo apellido</strong> de una persona y muestre por pantalla:</p>
+<ul class="lista_verificacion">
+<li>"<em>La persona es APTA para el concurso</em>" si es apta para participar en el concurso.</li>
+<li>"<em>La persona es NO APTA para el concurso</em>" si no lo es.</li>
+</ul>
+<p>La <strong>primera letra del nombre y de los apellidos debe escribirse en mayúscula</strong> y <strong>el resto en minúscula</strong>. No se admiten acentos ni eñes.</p>
+<p>Aquí tienes algunos ejemplos de funcionamiento:</p>
+<ol>
+<li>AnaTorres Barros. Persona APTA para participar en el concurso.</li>
+<li>Luis Zagal Hegel. Persona NO APTA para participar en el concurso.</li>
+<li>Orlando Bisbal Torzal. Persona APTA para participar en el concurso.</li>
+<li>Nanin Torres Manzano. Persona no APTA para participar en el concurso.</li>
+</ol>
+</section>
+<form name="feedback-form-quesFeedback0b228" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b228text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b228" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b228" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Lo primero que tendrás que hacer será leer el <strong>nombre</strong> y los <strong>dos apellidos</strong>. Podrías usar tres variables <code>String nombre</code>, <code>apellido1</code> y <code>apellido2</code>.</p>
+<p>Para resolver el problema debes llevar a cabo una serie de comprobaciones:</p>
+<ul class="lista_verificacion">
+<li>La primera comprobación que debemos hacer es si <strong>el nombre comienza y termina por la misma letra</strong>:
+<ul>
+<li>La primera letra la podremos obtener con <code>nombre.charAt(0)</code>.</li>
+<li>La última la podemos obtener con <code>nombre.chartAt(nombre.length()-1)</code>.</li>
+<li>Debes tener en cuenta que los caracteres de una cadena se cuentan desde 0 hasta la longitud menos uno.</li>
+<li>También debes tener en cuenta que para convertir una letra minúscula en su equivalente en mayúscula debes "restarle" a su código la diferencia o distancia que hay entre los códigos de las mayúsculas y las minúsculas, que puedes calcular como <code>final char DISTANCIA= 'a' - 'A'</code>. Hay que restar porque las minúsculas están después (son "mayores" o tienen un código mayor) que las mayúsculas (tienen un código más bajo o menor).</li>
+<li>La comprobación quedaría entonces como <code>nombre.charAt(0) + DISTANCIA == nombre.charAt(nombre.length()-1)</code>. Podríamos almacenar el resultado de esa comprobación en una variable <code>boolean</code> llamada por ejemplo <code>nombreApto</code>.</li>
+</ul>
+</li>
+<li>La segunda comprobación es <strong>si la longitud de los apellidos es la misma</strong>: <code>apellido1.length() == apellido2.length()</code>. Podríamos almacenar el resultado de esa comprobación en otra variable <code>boolean</code> llamada por ejemplo <code>apellidosAptos</code>.</li>
+<li>Una vez que tenemos las dos comprobaciones, sabemos que ambas tienen que ser <code>true</code>. Podemos almacenar ese resultado en una tercera variable:<br />
+<ul>
+<li><code>concursanteApto= nombreApto &amp;&amp; apellidosAptos</code>.</li>
+</ul>
+</li>
+</ul>
+<p>En función de que el valor de <code>concursanteApto</code> sea <code>true</code> o <code>false</code> habrá que devolver "APTA" o "NO APTA":</p>
+<div class="highlighted-code language-java">
+<pre><code>resultado= concursanteApto ? "APTA" : "NO APTA";</code></pre>
+</div>
+<p>Una vez tenido todo esto en cuenta, el programa completo podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre><code>import java.util.Scanner;
+
+public class Concurso {
+ 
+    public static void main(String[] args) {
+
+        //----------------------------------------------
+        //          Declaración de variables 
+        //----------------------------------------------
+
+        // Constantes
+        final char DISTANCIA= 'a' - 'A';
+
+        // Variables de entrada
+        String nombre, apellido1, apellido2;
+        
+        // Variables de salida
+        String resultado;
+
+
+        // Variables auxiliares
+        boolean nombreApto, apellidosAptos, concursanteApto;
+        
+        
+        // Clase Scanner para petición de datos de entrada
+        Scanner teclado= new Scanner (System.in);
+        
+        
+        //----------------------------------------------
+        //                Entrada de datos 
+        //----------------------------------------------
+        System.out.println("CONCURSO DE TV");
+        System.out.println("--------------");
+        System.out.println();
+        System.out.println("Nombre del concursante: ");
+        nombre= teclado.nextLine();
+        System.out.println("Primer apellido del concursante: ");
+        apellido1= teclado.nextLine();
+        System.out.println("Segundo apellido del concursante: ");
+        apellido2= teclado.nextLine();
+
+        
+        //----------------------------------------------
+        //                 Procesamiento 
+        //----------------------------------------------
+        
+        nombreApto= nombre.charAt(0) + DISTANCIA == nombre.charAt(nombre.length()-1);
+        apellidosAptos= apellido1.length() == apellido2.length();
+        concursanteApto= nombreApto &amp;&amp; apellidosAptos;
+        
+        resultado= concursanteApto ? "APTA" : "NO APTA";
+        
+        //----------------------------------------------
+        //              Salida de resultados 
+        //----------------------------------------------        
+        System.out.println ();
+        System.out.println ("RESULTADO");
+        System.out.println ("---------");
+        System.out.println ("La persona es " + resultado + " para el concurso.");
+        
+        System.out.println ();
+        System.out.println ("Fin del programa. Bye!");
+    }    
+}</code></pre>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_iv_paradigmas_de_la_programacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

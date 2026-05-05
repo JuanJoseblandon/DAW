@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.- Clases y métodos genéricos (I) | Estructuras de datos internas (memoria) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-49"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructuras de datos internas (memoria)</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos internas (memoria)</a></li>
+   <li id="active"><a href="1_clases_y_mtodos_genricos_i.html" class="active daddy">1.- Clases y métodos genéricos (I)</a>
+   <ul>
+      <li><a href="11_clases_y_mtodos_genricos_ii.html" class="no-ch">1.1.- Clases y métodos genéricos (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="2__introduccin_a_las_colecciones.html" class="no-ch">2.-  Introducción a las colecciones</a></li>
+   <li><a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="daddy">3.- Conjuntos (I).  ¿Qué son y cómo se declaran? HashSet</a>
+   <ul class="other-section">
+      <li><a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="no-ch">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</a></li>
+      <li><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="no-ch">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</a></li>
+      <li><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="no-ch">3.3.- Conjuntos (IV). Combinando datos de varias colecciones</a></li>
+      <li><a href="34_conjuntos_v_ordenando_sus_elementos.html" class="no-ch">3.4.- Conjuntos (V). Ordenando sus elementos</a></li>
+      <li><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="no-ch">3.5.- Conjuntos (VI). Ejemplos de uso.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_listas_i_definicin_y_diferencias_con_los_conjuntos.html" class="daddy">4.- Listas (I). Definición y diferencias con los conjuntos</a>
+   <ul class="other-section">
+      <li><a href="41_listas_ii_cmo_se_usan.html" class="no-ch">4.1.- Listas (II). ¿Cómo se usan?</a></li>
+      <li><a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="no-ch">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</a></li>
+      <li><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="no-ch">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</a></li>
+   </ul>
+   </li>
+   <li><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="daddy">5.- Conjuntos de pares clave/valor o diccionarios</a>
+   <ul class="other-section">
+      <li><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="no-ch">5.1.- Recorrido de los elementos de un diccionario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="daddy">6.- Iteradores (I). ¿Qué son y cómo se usan?</a>
+   <ul class="other-section">
+      <li><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="no-ch">6.1.- Iteradores (II). ¿Qué características debemos considerar?</a></li>
+   </ul>
+   </li>
+   <li><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="daddy">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</a>
+   <ul class="other-section">
+      <li><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="no-ch">7.1.- Algoritmos (II). Ordenando los elementos de la colección</a></li>
+      <li><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="no-ch">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</a></li>
+      <li><a href="73_algoritmos_iv_operaciones_agregadas.html" class="daddy">7.3. Algoritmos (IV). Operaciones agregadas</a>
+      <ul class="other-section">
+         <li><a href="731_operaciones_de_reduccin.html" class="no-ch">7.3.1. Operaciones de reducción</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I. Ejercicios resueltos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="11_clases_y_mtodos_genricos_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.- Clases y métodos genéricos (I)</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id141">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta141_66" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="PuestoDeTrabajo.jpg" alt="Imagen que muestra varios puestos de trabajo." title="Puestos de trabajo." class="elemento_izquierda" width="200" height="135" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/estaci%C3%B3n-de-trabajo-oficina-en-casa-405768/" target="_blank" class="author" title="Acceder a la imagen &quot;Puestos de trabajo&quot;, de Picography, en Pixabay. (Se abre en una nueva ventana)" rel="noopener">Picography</a> <span class="sep">(<a href="https://pixabay.com/es/service/license/" target="_blank" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" rel="noopener">Licencia Pixabay</a></span><span class="sep">)</span></div>
+</div>
+<p><strong>María</strong> se acerca a la mesa de <strong>Ana</strong>, quiere saber cómo lo lleva:</p>
+<p><span class="st">—</span>¿Qué tal? ¿Cómo vas con la tarea? <span class="st">—</span>pregunta <strong>María</strong>.</p>
+<p><span class="st">—</span>Bien, creo. Mi programita ya sabe procesar el archivo de pedido y he creado un par de clases para almacenar los datos de forma estructurada, pero no sé cómo almacenar los artículos del pedido, porque son varios <span class="st">—</span>comenta <strong>Ana</strong>.</p>
+<p><span class="st">—</span>Pero, ¿cuál es el problema? Eso es algo sencillo.</p>
+<p><span class="st">—</span>Pues que tengo que crear un <span lang="en">array</span> para guardar en él los artículos del pedido, y no sé cómo averiguar el número de artículos antes de empezar a procesarlos. Es necesario saber el número de artículos para crear el <span lang="en">array</span> del tamaño adecuado.</p>
+<p><span class="st">—</span>Pues en vez de utilizar un <span lang="en">array</span>, podrías utilizar <strong>una lista</strong>. <span lang="en">Java</span> proporciona maneras muy flexibles de solucionar esto, usando "genéricos" como por ejemplo <code>ArrayList</code>.</p>
+<p><span class="st">—Suena bien. </span>Tendré que informarme y probarlo.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id142">
+<div class="iDevice emphasis0">
+<div id="ta142_73" class="block iDevice_content">
+<p>¿Sabes por qué se suele aprender el uso de los genéricos?</p>
+<p>Pues porque se necesita para usar las listas, aunque realmente <strong>los genéricos son una herramienta muy potente y que nos puede ahorrar tareas de programación repetitivas</strong>.</p>
+<p><strong>Las clases y los métodos genéricos</strong> son un recurso de programación disponible en muchos lenguajes. Su objetivo es claro: facilitar la reutilización del <span lang="en">software</span>, creando métodos y clases que puedan trabajar con diferentes tipos de objetos, evitando incómodas y engorrosas conversiones de tipos. Su inicio se remonta a las <strong>plantillas (<span lang="en">templates</span>) de <acronym title="C plus plus" lang="en">C++</acronym>,</strong> un gran avance en el mundo de programación sin duda. En lenguajes de más alto nivel como <span lang="en">Java</span> o <abbr title="C sharp" lang="en"><span title="C sharp.">C#</span></abbr> se ha transformado en lo que se denomina <strong>"genéricos"</strong>. Veamos un ejemplo sencillo de cómo transformar un método normal en genérico:</p>
+<table class="tabla" summary="Tabla en la que se muestran versiones genérica (segunda columna) y no genérica (primera columna) de un mismo método. Se trata de un método que permite comparar el tamaño de dos arrays."><caption>Versiones genérica y no genérica del método de <code>compararTamano()</code>.</caption>
+<thead>
+<tr><th scope="col">Versión no genérica</th><th scope="col">Versión genérica del método</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Util { 
+     public static int compararTamano(Object[] a, Object[] b) { 
+          return a.length-b.length;
+     }
+ }</code></pre>
+</div>
+</div>
+</td>
+<td> 
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Util { 
+     public static &lt;T&gt; int compararTamano (T[] a, T[] b) { 
+         return a.length-b.length; 
+     }
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Los dos métodos anteriores tienen el mismo objetivo: permitir comprobar si un <span lang="en">array</span> es más grande que otro (su longitud es mayor). Retornarán 0 si ambos <span lang="en">arrays</span> tienen la misma longitud, un número mayor de cero si el <span lang="en">array</span> <code>a</code> es más grande (su longitud es mayor), y un número menor de cero si el <span lang="en">array</span> <code>b</code> es más grande. La diferencia está en que uno de los métodos es genérico y el otro no. La versión genérica del método incluye la expresión "<code>&lt;T&gt;</code>", justo antes del tipo retornado por el método. "<code>&lt;T&gt;</code>" es la definición de una <strong>variable o parámetro formal de tipo</strong> de la clase o método genérico, al que podemos llamar simplemente <strong>parámetro de tipo o parámetro genérico</strong>. Este parámetro genérico (<code>&lt;T&gt;</code><code></code>) se puede usar a lo largo de todo el método o clase, dependiendo del ámbito de definición, y hará referencia a cualquier clase con la que nuestro algoritmo tenga que trabajar. Como veremos más adelante, puede haber más de un parámetro genérico.</p>
+<p>Utilizar genéricos tiene claras ventajas. Para invocar un método genérico, sólo hay que realizar una <strong>invocación de tipo genérico</strong>, olvidándonos de las conversiones de tipo. Esto consiste en indicar qué clases o interfaces concretas se utilizarán en lugar de cada parámetro genérico ("<code>&lt;T&gt;</code>"), para después, pasándole los argumentos correspondientes, ejecutar el algoritmo. Cada clase o interfaz concreta, la podemos denominar <strong>tipo </strong>o <strong>tipo base</strong> y se da por sentado que <strong>los argumentos pasados al método genérico serán también de dicho tipo base</strong>.</p>
+<p>Supongamos que el tipo base es <code>Integer</code>, pues para realizar la invocación del método genérico anterior basta con indicar el tipo, entre los símbolos de menor qué y mayor qué ("<code>&lt;Integer&gt;</code>"), justo antes del nombre del método.</p>
+<table class="tabla" summary="Tabla en la que se muestran invocaciones a la versiones no genérica (primera columna) y genérica (segunda columna) de un mismo método."><caption>Invocaciones de las versiones genéricas y no genéricas de un método.</caption>
+<thead>
+<tr><th scope="col">Invocación del método no genérico.</th><th scope="col">Invocación del método genérico.</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Integer[] a = {0,1,2,3,4}; 
+Integer[] b = {0,1,2,3,4,5}; 
+Util.compararTamano ((Object[])a, (Object[])b);</code></pre>
+</div>
+</div>
+</td>
+<td>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Integer[] a = {0,1,2,3,4}; 
+Integer[] b = {0,1,2,3,4,5}; 
+Util.&lt;Integer&gt;compararTamano (a, b);</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="11_clases_y_mtodos_genricos_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

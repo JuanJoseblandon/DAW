@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.3.- La clase StringTokenizer en Java. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-77"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li class="current-page-parent"><a href="2__cadenas_de_caracteres.html" class="current-page-parent daddy">2.-  Cadenas de caracteres.</a>
+   <ul>
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="23_la_clase_stringtokenizer_en_java.html" class="active no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.3.- La clase StringTokenizer en Java.</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id321">
+<div class="iDevice emphasis0">
+<div id="ta321_85" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="food-g5d40abade_640.jpg" alt="Rebanadas de pan cortado" title="Rebanadas" style="float: right;" width="240" height="160" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/comida-pan-desayuno-trigo-horneado-3913021/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Przemysław Trojanen Pixabay (se abre en una nueva ventana).">athree23</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>La clase <code>StringTokenizer</code> es una herramienta que nos proporciona la <acronym title="Application Programming Interface">API</acronym> de Java para dividir una cadena en subcadenas (también conocidas como "<strong>tokens</strong>" o "elementos") en base a un <strong>separador</strong> o delimitador (otra cadena). Este proceso es conocido también como "tokenización" o "división". Esta clase se encuentra en el paquete <code>java.util</code>.</p>
+<p>Los métodos más usuales de esta clase son:</p>
+<ul>
+<li class="lista_verificacion"><strong>constructores</strong>, que crean un objeto <code>StringTokenizer</code> con la cadena que se pasa como parámetro. Si se añade un segundo parámetro, será la cadena delimitadora. Si no se indica un segundo parámetro, se considera que la cadena delimitadora es el espacio en blanco (así como el avance de línea y el tabulador). A partir de este objeto podremos llevar a cabo el proceso de "tokenización" u obtención de cada uno de los elementos o tokens de la cadena en función del separador que se haya especificado;</li>
+<li class="lista_verificacion">método <code>nextToken</code>, que devuelve el siguiente elemento o token de la cadena. La primera vez que se llama a este método se devolverá el primer token, la segunda vez el segundo token, y así sucesivamente. Si no quedaran tokens por devolver, se lanzaría la excepción <code>NoSuchElementException</code>.</li>
+<li class="lista_verificacion">método <code>hasMoreTokens</code>, que indica si quedan o no más tokens por devolver. Este método te puede servir para evitar que se te lance la excepción anterior;</li>
+<li class="lista_verificacion">método <code>countTokens</code>, que devuelve la cantidad de tokens que tiene un objeto de tipo <code>StringTokenizer</code>.</li>
+</ul>
+<p>La mejor manera de comprender su funcionamiento es mediante un ejemplo. Imagina una cadena formada por el nombre y los dos apellidos de una persona separados por espacios en blanco. La clase <code>StringTokenizer</code> nos ayuda a separar esa cadena en tres subcadenas usando como delimitador un espacio en blanco. Una forma sencilla de extraer el nombre y los apellidos podría ser la siguiente (no olvides el <code>import java.lang.StringTokenizer</code> al comienzo de tu programa):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.util.StringTokenizer;
+. . .
+. . .
+String nombreCompleto ="Luis Torres Ugarte";
+StringTokenizer tokens =new StringTokenizer(nombreCompleto); // Si no hay segundo parámetro se asume el espacio como separador
+String nombre = tokens.nextToken();
+String apellido1 = tokens.nextToken();
+String apellido2 = tokens.nextToken();
+System.out.printf ("Nombre completo: %s\n", nombreCompleto);
+System.out.printf ("Nombre: %s \nApellido1: %s \nApellido2: %s\n", 
+        nombre, apellido1, apellido2);</code></pre>
+</div>
+</div>
+<p>La salida de ese programa debería ser algo similar a lo siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Nombre completo: Luis Torres Ugarte
+Nombre: Luis 
+Apellido1: Torres 
+Apellido2: Ugarte</code></pre>
+</div>
+</div>
+<p>Ahora bien, este ejemplo es extremadamente simple, pues conocíamos a priori cuántos tokens o elementos íbamos a encontrar en la cadena. Eso no será lo habitual, sino que el número de elementos será desconocido y habrá que ir recorriéndolos hasta que se acaben. Para ello podremos utilizar el método <code>hasMoreTokens</code> como condición de continuidad dentro de un bucle donde iremos extrayendo uno a uno cada elemento mediante el método <code>nextToken</code>.<br /><br />Por ejemplo, imagina un programa en el que se piden por teclado una serie de palabras separadas por comas y posteriormente deseamos mostrar por pantalla cada una de esas palabras. Podríamos hacer algo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println ("Introduzca una lista de palabras separadas por comas: ");        
+String linea = teclado.nextLine();
+StringTokenizer lista = new StringTokenizer (linea, ","); // El separador de elementos será la cadena ","
+System.out.println ("\nLas palabras son:");
+do {
+    String palabra = lista.nextToken().trim(); // Obtenemos la siguiente palabra y quitamos los posibles espacios de los extremos
+    System.out.printf ("%s\n", palabra);
+} while (lista.hasMoreTokens());</code></pre>
+</div>
+</div>
+<p>Un ejemplo de funcionamiento podría ser el siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Introduzca una lista de palabras separadas por coma:
+Argentina, Polonia, Portugal,  Chile
+
+Las palabras son:
+Argentina
+Polonia
+Portugal
+Chile</code></pre>
+</div>
+</div>
+<p>También podrías haberlo resuelto mediante un bucle <code>for</code>, teniendo en cuenta que puedes obtener la cantidad de elementos mediante el método <code>countTokens</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println ("Introduzca una lista de palabras separadas por comas: ");        
+String linea = teclado.nextLine();
+StringTokenizer lista = new StringTokenizer (linea, ","); // El separador de elementos será la cadena ","
+System.out.println ("\nLas palabras son:");
+int cantidadTokens = lista.countTokens();
+for (int i=0 ; i&lt;cantidadTokens ; i++) {
+    String palabra = lista.nextToken().trim(); // Obtenemos la siguiente palabra y quitamos espacios de los extremos
+    System.out.printf ("%s\n", palabra);
+}        </code></pre>
+</div>
+</div>
+<p>Si quieres evitar el uso de la variable <code>cantidadTokens</code>, podría haberse usado directamente el resultado obtenido por el método <code>countTokens()</code> hasta que éste sea cero:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println ("\nLas palabras son:");
+while ( lista.countTokens()&gt;0 ) {
+    String palabra = lista.nextToken().trim(); // Obtenemos la siguiente palabra y quitamos espacios de los extremos
+    System.out.printf ("%s\n", palabra);
+}        </code></pre>
+</div>
+</div>
+<p>Y volveríamos a tener un bucle <code>while</code>.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id322">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta322_128" class="block iDevice_content">
+<p>Si quieres revisar bien el funcionamiento de cada uno de los métodos de la clase <code>StringTokenizer</code>, siempre puedes echar un vistazo a la documentación de la <acronym title="Application Programming Interface">API</acronym> de Java:</p>
+<p style="text-align: center;"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/StringTokenizer.html" title="Enlace a la documentación de la API para la clase StringTokenizer (se abre en una nueva ventana)." target="_blank" class="html">Documentación javadoc de la clase StringTokenizer</a></p>
+<p style="text-align: justify;">Si quieres ver algunos ejemplos más de uso de esta clase, puedes echar un vistazo a las siguientes referencias:</p>
+<p style="text-align: center;"><a href="https://web.archive.org/web/20230822003422/www.w3schools.blog/stringtokenizer-in-java" title="Enlace al artículo &quot;StringTokenizer in java&quot; de las W3Schools (se abre en una nueva ventana)." target="_blank" class="html">W3Schools - StringTokenizer in java</a></p>
+<p style="text-align: center;"><a href="https://www.geeksforgeeks.org/stringtokenizer-class-in-java/" title="Enlace al artículo &quot;StringTokenizer Class in Java&quot; de GeeksforGeeks (se abre en una nueva ventana)." target="_blank" class="html">StringTokenizer Class in Java - GeeksforGeeks</a></p>
+<p style="text-align: justify;"></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice em_iDevice_recomendacionfpd" id="id323">
+<div class="iDevice emphasis_recomendacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_recomendacionfpd.png)"><h1 class="iDeviceTitle">Recomendación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta323_131" class="block iDevice_content">
+<p>Sería interesante que volvieras a esta sección una vez que veamos el método <code>split</code> de la clase <code>String</code>, que permite hacer algo muy similar a lo que permite hacer esta clase (proceso de "tokenización" o "separación"), salvo que de una manera más potente, dado que:</p>
+<ol>
+<li>permite especificar un separador más genérico y flexible mediante una <strong>expresión regular</strong>;</li>
+<li>devuelve de manera inmediata todos los tokens en un <strong>array</strong> de <code>String</code> sin necesidad de tener que implementar un bucle.</li>
+</ol>
+<p>El problema es que <strong>aún no sabemos lo que es una expresión regular ni un array</strong>, así que tendremos que esperar un poco para poder usar ese método. Mientras tanto, puedes utilizar el mecanismo proporcionado por la clase <code>StringTokenizer</code> que acabamos de estudiar. Cuando hayas visto también el método <code>split</code>, podrás decidir, para cada problema concreto, qué herramienta te interesa más.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

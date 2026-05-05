@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.4.- Redefinición de métodos heredados. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-15"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_herencia.html" class="current-page-parent daddy">3.- Herencia.</a>
+   <ul>
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="34_redefinicin_de_mtodos_heredados.html" class="active no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="35_ampliacin_de_mtodos_heredados.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3.4.- Redefinición de métodos heredados.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id38">
+<div class="iDevice emphasis0">
+<div id="ta38_73" class="block iDevice_content">
+<div class="elemento_izquierda"><img alt="Falda de capas superpuestas." class="elemento_izquierda" src="PROG07_CONT_R28_CapasSuperpuestas.jpg" style="width: 160px; float: left;" title="Capas superpuestas." width="160" height="250" /> <figcaption class="figcaption">
+<div class="elemento_centrado credenciales">ITE. Pilar Cristóbal Antón. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">idITE=139899.</div>
+</figcaption></div>
+<p>Una clase puede <strong>redefinir</strong> algunos de los métodos que ha heredado de su <strong>clase base</strong>. En tal caso, el nuevo método (<strong>especializado</strong>) sustituye al <strong>heredado</strong>. Este procedimiento también es conocido como de <strong>sobrescritura de métodos</strong>.</p>
+<p>En cualquier caso, aunque un método sea <strong>sobrescrito</strong> o <strong>redefinido</strong>, aún es posible acceder a él a través de la referencia <strong><code>super</code></strong>, aunque sólo se podrá acceder a métodos de la <strong>clase padre</strong> y no a métodos de clases superiores en la <strong>jerarquía de herencia</strong>.</p>
+<p>Los <strong>métodos redefinidos</strong> pueden <strong>ampliar su accesibilidad</strong> con respecto a la que ofrezca el método original de la <strong>superclase</strong>, pero <strong>nunca restringirla</strong>. Por ejemplo, si un método es declarado como <strong><code>protected</code></strong> o <strong>de paquete </strong>en la clase base, podría ser redefinido como <strong><code>public</code></strong> en una clase derivada.</p>
+<p class="destacado"><strong>Los <em>métodos estáticos</em> o de clase no pueden ser sobrescritos. Los originales de la clase base permanecen inalterables a través de toda la<em> jerarquía de herencia</em>.</strong></p>
+<p>En el ejemplo de la clase <strong><code>Alumno</code></strong>, podrían redefinirse algunos de los métodos heredados. Por ejemplo, imagina que el método <strong><code>getApellidos</code></strong> devuelva la cadena “Alumno:” junto con los apellidos del alumno. En tal caso habría que rescribir ese método para que realizara esa modificación:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public String getApellidos () {
+     return “Alumno: “ + apellidos;
+}</code></pre>
+</div>
+</div>
+<p>Cuando sobrescribas un método heredado en <span lang="en">Java</span> debes incluir la <strong>anotación</strong> <strong><code>@Override</code></strong>. Esto indicará al compilador que tu intención es <strong>sobrescribir el método de la clase padre</strong>. De este modo, si te equivocas (por ejemplo, al escribir el nombre del método) y no lo estás realmente sobrescribiendo, el compilador producirá un error y así podrás darte cuenta del fallo. Por tanto, aunque no es imprescindible indicar <strong><code>@Override</code></strong> para que la clase compile, es importante que lo hagas. Eso te ayudará a la hora de localizar este tipo de errores (crees que has sobrescrito un <strong>método heredado</strong> y al confundirte en una letra estás realmente creando un nuevo método diferente). En el caso del ejemplo anterior quedaría:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Override
+public String getApellidos ()</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id39">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta39_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b39" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b39" class="block iDevice_content">
+<p>
+<strong>
+Dado que el método </strong><strong><code>finalize()</code> de la clase </strong><strong><code>Object</code> es </strong><strong><code>protected</code>,  el método </strong><strong><code>finalize()</code> de cualquier clase  que tú escribas podrá ser </strong><strong><code>public</code>, </strong><strong><code>private</code> o </strong><strong><code>protected</code>.  ¿Verdadero o Falso? 
+</strong>
+</p>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b39"><input type="radio" name="option0b39" id="true0b39" class="exe-radio-option exe-radio-option-0-2-0b39-truefalse" /> Verdadero</label> 
+<label for="false0b39"><input type="radio" name="option0b39" id="false0b39" class="exe-radio-option exe-radio-option-1-2-0b39-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b39" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b39-result" class="wrong">Falso</strong></p>
+<p>
+Sabemos que en Java toda clase acaba siempre  derivando de la clase <strong><code>Object</code></strong> y también sabemos que  cuando se redefine un método puede ampliarse su accesibilidad, pero nunca  restringirse. De este modo, si el método original (el de la clase en la que se  definió) es <strong><code>protected</code></strong>, podrá ampliarse su accesibilidad a <strong><code>public</code></strong> o dejarse como <strong><code>protected</code></strong>, pero  nunca restringirse más.
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id40">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta40_67" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b40" class="block iDevice_content">
+<p>Dadas las clases <code>Persona</code>, <code>Alumno</code> y <code>Profesor</code> que has utilizado anteriormente, redefine el método <code>getNombre</code> para que devuelva la cadena “<code>Alumno: </code>“, junto con el nombre del alumno, si se trata de un objeto de la clase <code>Alumno</code> o bien “<code>Profesor</code> “, junto con el nombre del profesor, si se trata de un objeto de la clase <code>Profesor</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback0b40" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b40text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b40" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b40" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<ol>
+<li style="margin-bottom: 15px;">
+<p><strong>Clase <code>Alumno</code></strong><strong>.</strong></p>
+<p>Al heredar de la clase <strong><code>Persona</code></strong> tan solo es necesario escribir métodos para los nuevos atributos (<strong>métodos especializados</strong> de acceso a los <strong>atributos especializados</strong>), pues los <strong>métodos genéricos</strong> (de acceso a los <strong>atributos genéricos</strong>) ya forman parte de la clase al haberlos heredado. Esos son los métodos que se implementaron en el ejercicio anterior (<strong><code>getGrupo()</code></strong>, <strong><code>setGrupo()</code></strong>, etc.).</p>
+<p>Ahora bien, hay que escribir otro método más, pues tienes que redefinir el método <strong><code>getNombre()</code></strong> para que tenga un comportamiento un poco diferente al <strong><code>getNombre</code></strong> que se hereda de la clase base <strong><code>Persona</code></strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Método getNombre()
+@Override
+public String getNombre (){
+            return “Alumno: “ + this.nombre;
+}</code></pre>
+</div>
+</div>
+<p>En este caso podría decirse que se “renuncia” al método heredado para redefinirlo con un comportamiento más especializado y acorde con la clase derivada.</p>
+</li>
+<li>
+<p><strong><strong>Clase <code>Profesor</code>.</strong></strong></p>
+<p>Seguimos exactamente el mismo procedimiento que con la clase <strong><code>Alumno</code></strong> (redefinición del método <strong><code>getNombre()</code></strong>).</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Método getNombre()
+@Override
+public String getNombre (){
+            return “Profesor: “ + this.nombre;
+}</code></pre>
+</div>
+</div>
+</li>
+</ol></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="35_ampliacin_de_mtodos_heredados.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.4.1.- Listas de parámetros variables | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-52"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li><a href="4_atributos.html" class="daddy">4.- Atributos</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_mtodos.html" class="current-page-parent daddy">5.- Métodos</a>
+   <ul>
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li class="current-page-parent"><a href="54_parmetros_en_un_mtodo.html" class="current-page-parent daddy">5.4.- Parámetros en un método</a>
+      <ul>
+         <li id="active"><a href="541_listas_de_parmetros_variables.html" class="active no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="54_parmetros_en_un_mtodo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="542_modificador_final_en_los_parmetros.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5.4.1.- Listas de parámetros variables</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id147">
+<div class="iDevice emphasis0">
+<div id="ta147_154" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="exe-figure exe-image position-right license-pd" style="width: 200px;"><img src="checklist-2023731_640.png" alt="Lista de comprobación con algunos ítems marcados y otros no" title="Checklist incompleta" style="float: right;" width="200" height="200" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/lista-de-comprobaci%C3%B3n-an%C3%A1lisis-2023731/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Ricarda Mölck en Pixabay (se abre en una nueva ventana).">Ricarda Mölck</a> <span class="license"><span class="sep">(</span><span class="license"><span class="sep"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep"></span></span></span></span><span class="sep">)</span></span></div>
+</div>
+</div>
+<p>En el lenguaje <span lang="en">Java</span> es posible utilizar una construcción especial llamada <code>varargs</code> (<strong>argumentos variables</strong>) que permite que un método pueda tener un número variable de parámetros. Para utilizar este mecanismo se coloca un tipo, unos <strong>puntos suspensivos</strong> (tres puntos: "..."), un espacio en blanco y a continuación el nombre del parámetro que aglutinará la lista de argumentos variables.</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">&lt;tipo&gt; &lt;nombreMetodo&gt; (&lt;tipo&gt;... &lt;nombre&gt;)</code>
+</pre>
+</div>
+<p>Es posible además mezclar el uso de <code>varargs</code> con parámetros fijos. En tal caso, <strong>la lista de parámetros variables debe aparecer al final (y sólo puede aparecer una).</strong></p>
+<p>En realidad se trata una manera transparente para el usuario del método de pasar un <span lang="en">array</span> con un número variable de elementos para no tener que hacerlo manualmente. Dentro del método habrá que ir recorriendo el <span lang="en">array</span> para ir obteniendo cada uno de los elementos de la lista de argumentos variables. Ya veremos algún caso de uso cuando tratemos el cuerpo de los métodos.</p>
+<p>Veamos ahora un ejemplo. Supongamos que tenemos una clase que contiene un método llamado <code>sumar</code> que necesita recibir como parámetros varios elementos de tipo real para ser sumados. Inicialmente podríamos pensar en escribir varias versiones de métodos de suma con cada posibilidad (un parámetro, dos parámetros, tres parámetros, etc.):</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">public void sumarUnElemento (double elemento)
+public void sumarDosElementos (double elemento1, double elemento2)
+public void sumarTresElementos (double elemento1, double elemento2, double elemento3)
+...</code>
+</pre>
+</div>
+<p>Lo cual podría ser bastante tedioso y redundante. Para evitar esa situación, podríamos utilizar esta construcción, que nos permitiría tener la posibilidad de disponer de un número indeterminado de parámetros, todos del mismo tipo:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">public void sumarElementos (double... elementos)</code>
+</pre>
+</div>
+<p>Si quisiéramos combinar esa construcción con algún otro parámetro "fijo", tendríamos que colocar ese parámetro o parámetros al principio. Por ejemplo si además de los elementos que se desean sumar se requieren otros dos parámetros (<code>seccion</code> de tipo <code>String</code> y <code>unidad</code> de tipo <code>int</code>), habría que ubicarlos delante de la especificación de parámetros variables:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">public void sumarElementos (String seccion, int unidad, double... elementos)</code>
+</pre>
+</div>
+<p>De esta manera tendríamos dos parámetros "fijos" (de tipo <code>String</code> e <code>int</code> respecitvamente) junto con un número variable de parámetros de tipo <code>double</code>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id37">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta37_47" class="block iDevice_content">
+<p>Puedes echar un vistazo a la sección "<em></em><span lang="en"><em>Arbitrary Number of Arguments</em></span>" del artículo general sobre paso de parámetros<span lang="en"> al que hicimos referencia en el apartado anterior</span>:</p>
+<p class="enlace_centrado"><a class="html" title="Acceder al artículo del manual de Java de Oracle en el que se describe el paso de información a los métodos (En inglés. Se abre en una nueva ventana)." href="http://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html" target="_blank"><span lang="en">Passing Information to a Method or a Constructor.</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id152">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta152_148" class="block story iDevice_content">
+<p>En apartados anteriores hemos considerado la posibilidad de incluir en la clase <code>Vehiculo</code> un método llamado <code>recorrerTrayecto</code> con la idea de hacer que el objeto vehículo sobre el que se aplique ese método recorra una determinada distancia. Para ello habíamos declarado el método con un parámetro de tipo real:</p>
+<div class="highlighted-code language-java">
+<pre><code>public void recorrerTrayecto (double distancia)   // Un parámetro: distancia que se desea recorrer</code>
+</pre>
+</div>
+</div>
+<div id="taquesQuestion0b152" class="block iDevice_content">
+<p>Si quisiéramos que existiera la posibilidad de que ese método pudiera recibir varios parámetros para de esa manera recorrer varios trayectos y no solo uno, ¿cómo quedaría la cabecera del método?</p>
+</div>
+<form name="feedback-form-quesFeedback0b152" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b152text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b152" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b152" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Si aplicamos la construcción <code>varargs</code>, que nos permite indicar una lista de una cantidad indeterminada de parámetros, todos ellos del mismo tipo, la cabecera del método podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre><code>public void recorrerTrayecto (double... distancia)   // Una lista variable de trayectos</code>
+</pre>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id283">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta283_148" class="block story iDevice_content">
+<p>Imagina que estamos desarrollando una clase llamada <code>Mates</code>, que va a incluir métodos para efectuar operaciones matemáticas.</p>
+</div>
+<div id="taquesQuestion0b283" class="block iDevice_content">
+<p>Una de esas operaciones va a ser la de <strong>sumar listas de números enteros</strong> con una <strong>cantidad de sumandos indeterminada</strong>. Para ello se va a disponer de un método llamado <code>sumar</code>, de tal manera que la cantidad de parámetros pudiera ser variable, ¿cómo quedaría la cabecera de ese método?</p>
+</div>
+<form name="feedback-form-quesFeedback0b283" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b283text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b283" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b283" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Aplicando nuevamente la construcción <code>varargs</code>, que nos permite indicar una lista de una cantidad indeterminada de parámetros, todos ellos del mismo tipo, la cabecera del método podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre><code>public int sumar (int... sumando)   // Una lista variable de sumandos</code>
+</pre>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="54_parmetros_en_un_mtodo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="542_modificador_final_en_los_parmetros.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

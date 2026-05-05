@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.3.- La API de Java | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-26"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_programas_en_java.html" class="current-page-parent daddy">6.- Programas en Java</a>
+   <ul>
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li id="active"><a href="63_la_api_de_java.html" class="active no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="62_el_entorno_bsico_de_desarrollo_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="64_afinando_la_configuracin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.3.- La API de Java</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id66">
+<div class="iDevice emphasis0">
+<div id="ta66_73" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="SKD246687SDC.png" alt="Una alumna busca un libro en un estante bajo de una biblioteca." title="Biblioteca." style="float: left;" height="160" width="160" /></div>
+<div class="elemento_centrado credenciales">Stockbyte. Uso educativo no comercial para</div>
+<div class="elemento_centrado credenciales">plataformas p&uacute;blicas de Formaci&oacute;n Profesional</div>
+<div class="elemento_centrado credenciales">a distancia. CD-DVD Num. SD174</div>
+</div>
+<p>Junto con el kit de desarrollo que hemos descargado e instalado anteriormente, vienen incluidas gratuitamente todas las bibliotecas de la <acronym title=" Application  Programming Interface" lang="en">API</acronym> (<span lang="en">Application Programming Interface</span> &ndash; Interfaz de programaci&oacute;n de aplicaciones) de <span lang="en">Java</span>, es lo que se conoce como <strong>Bibliotecas de Clases <span lang="en">Java</span>.</strong> Este conjunto de bibliotecas proporciona al programador paquetes de clases &uacute;tiles para la realizaci&oacute;n de m&uacute;ltiples tareas dentro de un programa. Est&aacute; organizada en paquetes l&oacute;gicos, donde cada paquete contiene un conjunto de clases relacionadas <a class="glosario">sem&aacute;nticamente<span><em>Sem&aacute;ntica</em>Referencia a los aspectos del significado, sentido o interpretaci&oacute;n del significado de un determinado elemento, s&iacute;mbolo, palabra, expresi&oacute;n o representaci&oacute;n formal. En principio cualquier medio de expresi&oacute;n (lenguaje formal o natural) admite una correspondencia entre expresiones de s&iacute;mbolos o palabras, y situaciones o conjuntos de cosas que se encuentran en el mundo f&iacute;sico o abstracto, que puede ser descrito por dicho medio de expresi&oacute;n. </span></a>.</p>
+<p>En d&eacute;cadas pasadas una biblioteca era un conjunto de programas que conten&iacute;an cientos de rutinas (una rutina es un procedimiento o funci&oacute;n bien verificados, en determinado lenguaje de programaci&oacute;n). Las rutinas de biblioteca manejaban las tareas que todos o casi todos los programas necesitaban. El programador pod&iacute;a recurrir a esta biblioteca para desarrollar programas con rapidez.<br /> <br /> Una biblioteca de clases es un conjunto de clases de programaci&oacute;n orientada a objetos. Esas clases contienen m&eacute;todos que son &uacute;tiles para los programadores. En el caso de <span lang="en">Java</span> cuando descargamos el <acronym title="Java Development Kit." lang="en">JDK</acronym> obtenemos la biblioteca de clases <acronym title="Application Programming Interface." lang="en">API</acronym>. Utilizar las clases y m&eacute;todos de las&nbsp;<acronym title="Application Programming Interface." lang="en">API</acronym> de <span lang="en">Java </span>reduce el tiempo de desarrollo de los programas. Tambi&eacute;n, existen diversas bibliotecas de clases desarrolladas por terceros que contienen componentes reutilizables de <span lang="en">software</span>, y est&aacute;n disponibles a trav&eacute;s de la Web.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id67">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta67_47" class="block iDevice_content">
+<p>Si quieres acceder a la informaci&oacute;n oficial sobre la <acronym title="Application Programming Interface." lang="en">API</acronym> de Java, te proponemos el siguiente enlace (est&aacute; en Ingl&eacute;s).</p>
+<div class="enlace_centrado"><a class="html" title="Acceder a la web con la API de Java." href="http://www.oracle.com/technetwork/Java/Javase/documentation/api-jsp-136079.html" target="_blank"> Informaci&oacute;n oficial sobre la <acronym title="Application Programming Interface. " lang="en">API</acronym> de Java</a></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id68">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-68_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion68_60" class="block question iDevice_content">
+<p><strong>Indica qu&eacute; no es la <acronym title="Application Programming Interface. " lang="en">API</acronym> de <span lang="en">Java</span>:</strong></p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i68_63" class="sr-av"><a href="#answer-68_63">Opción 1</a></label><input type="radio" name="option68_60" id="i68_63" class="exe-radio-option exe-radio-option-0-3-68_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-68_63"><div id="taans68_63" class="block iDevice_content">
+<p>Un entorno integrado de desarrollo.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i68_121" class="sr-av"><a href="#answer-68_121">Opción 2</a></label><input type="radio" name="option68_60" id="i68_121" class="exe-radio-option exe-radio-option-1-3-68_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-68_121"><div id="taans68_121" class="block iDevice_content">
+<p>Un conjunto de bibliotecas de clases.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i68_124" class="sr-av"><a href="#answer-68_124">Opción 3</a></label><input type="radio" name="option68_60" id="i68_124" class="exe-radio-option exe-radio-option-2-3-68_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-68_124"><div id="taans68_124" class="block iDevice_content">
+<p>Una parte del <acronym title="Java Development Kit." lang="en">JDK</acronym>, incluido en el <span lang="en">Java </span><acronym title="Standard Edition. " lang="en">SE</acronym>.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b68_60" class="feedback js-hidden">
+<div id="taf68_63" class=" iDevice_content">
+<p>En efecto, la <acronym title="Application Programming Interface. " lang="en">API </acronym>de<span lang="en"> Java</span> es utilizada para la creaci&oacute;n de programas pero no ofrece las herramientas de desarrollo que un <acronym title="Integrated Development Environment." lang="en">IDE</acronym> posee.</p>
+</div>
+</section>
+<section id="sa1b68_60" class="feedback js-hidden">
+<div id="taf68_121" class=" iDevice_content">
+<p>Incorrecto, la <acronym title="Application Programming Interface. " lang="en">API </acronym>de <span lang="en">Java</span> provee de clases agrupadas en paquetes que proporcionan una interfaz com&uacute;n para desarrollar aplicaciones <span lang="en">Java</span> en todas las plataformas.</p>
+</div>
+</section>
+<section id="sa2b68_60" class="feedback js-hidden">
+<div id="taf68_124" class=" iDevice_content">
+<p>Incorrecto, la <acronym title="Application Programming Interface. " lang="en">API</acronym> de Java est&aacute; incluida junto con <acronym title="Java Development Kit. " lang="en">JDK</acronym> y <acronym title="Java Runtime Environment." lang="en">JRE</acronym> en <span lang="en">Java</span> <acronym title="Standard Edition. " lang="en">SE</acronym>.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-68_63">Opción correcta</a><span> (<a href="#sa0b68_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-68_121">Incorrecto</a><span> (<a href="#sa1b68_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-68_124">Incorrecto</a><span> (<a href="#sa2b68_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="62_el_entorno_bsico_de_desarrollo_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="64_afinando_la_configuracin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

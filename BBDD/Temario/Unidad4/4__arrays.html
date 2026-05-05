@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.-  Arrays. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-90"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="4__arrays.html" class="active daddy">4.-  Arrays.</a>
+   <ul>
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="41_uso_de_arrays_unidimensionales.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.-  Arrays.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id388">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta388_66" class="block iDevice_content">
+<figure class="exe-figure exe-image float-left license-pd" style="width: 128px;"><img alt="Fotografía de una mujer pensando." class="elemento_izquierda" src="PROG05_CONT_R019_pensando.jpg" title="Mujer pensando." width="128" height="192" /> <figcaption class="figcaption">Ministerio de Educación.<span class="license"><span class="sep">(</span><span class="license"><span class="custom-license">Uso educativo-nc. Elaboración propia</span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p></p>
+<p><strong>Ana</strong> se ha puesto a pensar en que cuando hay que trabajar con muchos elementos: números, o cadenas de caracteres, <abbr title="etcétera.">etc</abbr>., lo más adecuado es utilizar algún tipo de variable que nos permita usar el mismo nombre, donde almacenar varios elementos. Es decir, si tenemos 100 elementos sobre los que hacer determinada operación, una solución sería utilizar cien variables, y entonces en el programa ir usando cada una de esas cien variables, digamos <code>var1, var2,...,</code> y así hasta <code>var100</code>. Pero esto es muy incómodo para el programador, puesto que entre otras cosas tendrá que usar cien nombres distintos para referirse a las variables. Además, ¿y si luego en vez de 100 elementos, necesita que sean 200? Pues el programador tendrá que declarar otras cien variables más en el programa. Por tanto, hay que buscar otra solución más adecuada, y esa solución son los <strong>arrays</strong>, como vamos a ver.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id389">
+<div class="iDevice emphasis0">
+<div id="ta389_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a title="Ampliar imagen. Se abre en una nueva ventana" href="PROG05_CONT_R020_Posicionesdelarray.jpg" target="_blank" rel="noopener"><img alt="Ilustración que describe la numeración de las diferentes posiciones de un array de números enteros. En la imagen aparece los datos de un array de 10 posiciones, y una etiqueta en la que cada elemento está numerado, empezando por el cero como posición del primer elemento, hasta el 9, como posición del último elemento del array." class="imagen_ampliable" src="PROG05_CONT_R020_Posicionesdelarray_miniatura.jpg" title="Posiciones del array." /></a></div>
+</div>
+<p>¿Dónde almacenarías tú una lista de nombres de personas? Una de las soluciones es usar <span title="en">arrays</span>, puede que sea justo lo que necesita Ana, pero puede que no. La mayoría de los lenguajes de programación permiten el uso de <span title="en">arrays</span>. Veamos cómo son en Java.</p>
+<p><strong>Los </strong><strong><span title="en">arrays</span></strong><strong> permiten almacenar una colección de objetos o datos del mismo tipo</strong>. Son muy útiles y su utilización es muy simple:</p>
+<ul class="lista_verificacion">
+<li><strong>Declaración del </strong><strong><span title="en">array</span></strong>. Consiste en decir "esto es un <span title="en">array</span>" y sigue la siguiente estructura: "<strong><span style="font-size: medium;"><code>tipo[] nombre;</code></span></strong>". El tipo será un tipo de variable o una clase ya existente, de la cual se quieran almacenar varias unidades.</li>
+<li><strong>Creación o reserva de memoria del </strong><strong><span title="en">array</span></strong>. Consiste en indicar el tamaño que tendrá el <span title="en">array</span>, es decir, el número de elementos que contendrá, y se pone de la siguiente forma: "<strong><span style="font-size: medium;"><code>nombre = new tipo[tamaño]</code></span></strong>", donde tamaño es un número entero positivo que indicará el <strong>tamaño del <span title="en">array</span></strong>. En Java, una vez creado el <span title="en">array</span>, no podrá cambiar de tamaño.</li>
+</ul>
+<p>Veamos un ejemplo de su uso:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int[] unArray ; // Declaración del array.
+unArray = new int[10] ; //Creación del array reservando para el un espacio en memoria.
+
+int[] otroArray = new int[10]; // Declaración y creación en un mismo lugar.</code></pre>
+</div>
+</div>
+<p>La única diferencia entre la declaración de una variable de tipo "escalar" (un único elemento de tipo <code>int</code>, <code>double</code>, <code>String</code>, <code>LocalDate</code>, <abbr title="etcétera">etc</abbr>.) y una de tipo "vectorial" o array (una agrupación de varios elementos del mismo tipo) es el uso de los corchetes (<code>[]</code>). Si no lleva corchetes es única o escalar. Si lleva corchetes es un array o "vectorial".</p>
+<p>Dado que para reservar espacio para el array debes usar el operador <code>new</code>, podrás imaginar que lo que contiene una variable de tipo array no es más que una referencia a una zona de memoria donde realmente se encuentran la secuencia de valores que componen el array. Es algo similar a lo que sucede con las variables de un tipo objeto o clase, que lo que contienen es una referencia a una zona de memoria donde realmente se encuentran los atributos del objeto. Por tanto, <strong>las variables de tipo array son también variables de tipo referencia</strong>. Es decir, que la variable no contiene un valor (o valores) del tipo del array, sino una referencia a una zona de la memoria donde se encuentran todos los componentes del array.</p>
+<p>Una vez creado un array (reservado su espacio en memoria mediante el operador <code>new</code>), ya podemos almacenar valores en cada una de las posiciones del <span title="en" lang="en">array. Para ello se usarán los </span>corchetes, indicando en su interior la posición sobre la que queremos leer o escribir, teniendo en cuenta que <strong>la primera posición es la cero</strong> y <strong>la última el tamaño del <span title="en" lang="en">array</span> menos uno</strong>. En el ejemplo anterior, la primera posición sería la 0 y la última sería la 9.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id390">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-390_55">
+<form name="multi-select-form-390_55" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion390_55" class="block question iDevice_content">
+<p><strong>&iquest;Cu&aacute;les de las siguientes opciones permitir&iacute;a almacenar m&aacute;s de 50 n&uacute;meros reales?</strong></p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op390_550" class="sr-av"><a href="#answer-390_58">Opción 1</a></label><input type="checkbox" id="op390_550" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-390_58"><div id="taans390_58" class="block iDevice_content">
+<p><code>int[] numeros; numeros=new int[51];</code></p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-390_550" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op390_551" class="sr-av"><a href="#answer-390_133">Opción 2</a></label><input type="checkbox" id="op390_551" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-390_133"><div id="taans390_133" class="block iDevice_content">
+<p><code>int[] numeros; numeros=new float[52];</code></p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-390_551" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op390_552" class="sr-av"><a href="#answer-390_135">Opción 3</a></label><input type="checkbox" id="op390_552" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-390_135"><div id="taans390_135" class="block iDevice_content">
+<p><code>double[] numeros; numeros=new double[53];</code></p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-390_552" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op390_553" class="sr-av"><a href="#answer-390_137">Opción 4</a></label><input type="checkbox" id="op390_553" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-390_137"><div id="taans390_137" class="block iDevice_content">
+<p><code>float[] numeros=new float[54];</code></p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-390_553" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-390_55" /> 
+</p>
+</div>
+<section id="f390_55" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback390_55" class="feedback iDevice_content">
+<p>Recuerda, cuando se declara un <span lang="en">array</span> y después se reserva memoria para él, se tiene que usar el mismo tipo de dato o clase.</p>
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-390_58" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-390_133" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-390_135" class="right">Correcto</a></li>
+<li><a href="#answer-390_137" class="right">Correcto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice em_iDevice_recomendacionfpd" id="id391">
+<div class="iDevice emphasis_recomendacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_recomendacionfpd.png)"><h1 class="iDeviceTitle">Recomendación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta391_46" class="block iDevice_content">
+<p><span class="resaltado_inline">Error común de programación</span></p>
+<p>Un índice debe ser un valor <code>int</code>, o un valor de un tipo que pueda promoverse a <code>int</code>, es decir, los tipos <code>byte</code>, <code>short</code> o <code>char</code>, pero no <code>long</code>. De lo contrario, se producirá un error de compilación (error semántico por "pérdida de precisión" al promover de <code>long</code> a <code>int</code>).</p>
+<p>Al contrario que en otros lenguajes de programación, <strong>en la declaración de un array no se debe indicar el número de elementos</strong>. Si se especifica el  número de elementos en los corchetes de la declaración (por ejemplo <code>int[12] c</code>), se produce también un error de compilación (en este caso de sintaxis).</p>
+<p>Debes ser cuidadoso con las <strong>declaraciones múltiples de variables de tipo array</strong>, pues pueden llevar a confusión. Por ejemplo, en la declaración:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int[] a, b, c;</code></pre>
+</div>
+</div>
+<p>Si <code>a</code>, <code>b</code> y <code>c</code> deben ser varia­bles de tipo array de enteros, entonces esa declaración es correcta. Al colocar corchetes directamente después del tipo, indicamos que todos los identificadores en la declaración son variables tipo array. Ahora bien, si solamente <code>a</code> debe ser una variable tipo array, mientras que  <code>b</code> y <code>c</code> deben ser variables <code>int</code> individuales (escalares), entonces la declaración no sería apropiada. En tal caso, la declaración</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int a[], b, c;</code></pre>
+</div>
+</div>
+<p>o bien esta otra:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int[] a;
+int b, c;</code></pre>
+</div>
+</div>
+<p>lograrían el resultado deseado.</p>
+<p><span class="resaltado_inline">Buena práctica de programación</span></p>
+<p>Por cuestión de legibilidad, suele ser apropiado indicar solo una variable de tipo array en cada declaración. Y si se añade un comentario que describa a la variable que se está declarando, mucho mejor.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="41_uso_de_arrays_unidimensionales.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

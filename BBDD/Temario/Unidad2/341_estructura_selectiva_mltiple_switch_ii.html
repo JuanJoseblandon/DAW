@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.4.1.- Estructura selectiva múltiple: switch (II). </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-38"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul class="other-section">
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_estructuras_de_seleccin_o_condicionales.html" class="current-page-parent daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul>
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li class="current-page-parent"><a href="34_estructura_selectiva_mltiple_switch_i.html" class="current-page-parent daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul>
+         <li id="active"><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="active no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul class="other-section">
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li><a href="45_estructura_repetitiva_for_i.html" class="daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul class="other-section">
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul class="other-section">
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="34_estructura_selectiva_mltiple_switch_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3.4.1.- Estructura selectiva múltiple: switch (II).</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id208">
+<div class="iDevice emphasis0">
+<div id="ta208_85" class="block iDevice_content">
+<div class="exe-figure exe-image position-center license-CC-BY" style="width: 180px;"><img src="funnel-147577_640.png" alt="Dibujo de un embudo donde entran varias flechas y sale sólo una" title="Embudo" width="180" height="181" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/embudo-canalizar-combinar-147577/" target="_blank" class="author">OpenClipart-Vectors</a> <span class="license"><span class="sep">(</span><a href="https://pixabay.com/es/service/license/" target="_blank" title="Acceder a los términos de la licencia Pixabay (se abre en una nueva ventana)">Pixabay License</a><span class="sep">)</span></span></div>
+</div>
+<p>En algunas ocasiones es posible que más de una opción de un <code>switch</code> dé lugar a que se tengan que realizar las mismas acciones. En tales casos lo que hay que hacer es acumular varias cláusulas <code>case</code> sin contenido una tras otra (o una debajo de otra) y un único cuerpo de sentencias para esas opciones. Algo así como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>switch (expresion) {<br />
+   case valor1:
+   case valor2:
+      sentencia1_1;  // Este bloque de sentencias se ejecutará si expresion da como resultado tanto valor1 como valor2 
+      sentencia1_2;
+      . . .
+      break;
+
+   case valor3:  
+   case valor4:
+   case valor5:
+      sentencia2_1;   // Aquí se entraría si resultado fuera valor3, valor4 o valor5
+      sentencia2_2;
+      . . .
+      break;
+
+   . . .
+}</code></pre>
+</div>
+</div>
+<p>O bien si lo prefieres:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>switch (expresion) {
+
+   case valor1: case valor2:
+      sentencia1_1; 
+      sentencia1_2;
+      . . .
+      break;
+
+   case valor3:  case valor4:  case valor5:
+      sentencia2_1;   
+      sentencia2_2;
+      . . .
+      break;
+
+   . . .
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id209">
+<div class="iDevice emphasis0">
+<div id="ta209_85" class="block iDevice_content">
+<p>Veamos un ejemplo donde podríamos utilizar esto. Imagina que dependiendo del valor de una cadena de caracteres llamada <code>dia</code> queremos mostrar por pantalla el siguiente mensaje:</p>
+<ul>
+<li class="lista_verificacion">"<em>día laborable</em>", si el contenido es <em>lunes</em>, <em>martes</em>, <em>miércoles</em>, <em>jueves</em> o <em>viernes</em>;</li>
+<li class="lista_verificacion">"<em>fin de semana</em>", si el contenido es <em>sábado</em> o <em>domingo</em>;</li>
+<li class="lista_verificacion">"<em>día no válido</em>", en cualquier otro caso.</li>
+</ul>
+<p>Este es un caso en el que nos vendrá muy bien aplicar lo anterior para no tener que repetir una y otra vez la misma línea de código.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>switch (dia) {
+    case "lunes":
+    case "martes":
+    case "miércoles":
+    case "jueves":
+    case "viernes":
+        resultado = "día laborable";
+        break;
+    case "sábado":
+    case "domingo":
+        resultado = "fin de semana";
+        break;
+    default:
+        resultado = "día no válido";
+}</code></pre>
+</div>
+</div>
+<p>O bien, si prefieres escribir todos los <code>case</code> del mismo grupo en la misma línea:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>switch (dia) {
+    case "lunes":  case "martes":  case "miércoles":  case "jueves":  case "viernes":
+        resultado = "día laborable";
+        break;
+    case "sábado":  case "domingo":
+        resultado = "fin de semana";
+        break;
+    default:
+        resultado = "día no válido";
+}</code></pre>
+</div>
+</div>
+<p>Ten en cuenta que para el compilador de Java, tanto el espacio en blanco como el salto de línea realizan la función de separador, de manera que puedes usar espacios o bien saltos de línea para separar cada <code>case</code>. Tan solo afectará al aspecto visual, pero no a su significado o funcionamiento.</p>
+<p>El código equivalente utilizando estructuras de tipo <code>if-else</code> habría sigo el siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (dia.equals("lunes") || dia.equals("martes") || dia.equals("miércoles") || dia.equals("jueves") || dia.equals("viernes"))
+    resultado = "día laborable";  
+else if (dia.equals("sábado") || dia.equals("domingo"))
+    resultado = "fin de semana";
+else
+    resultado = "día no válido";</code></pre>
+</div>
+</div>
+<p>Fíjate que la acumulación de varios case para una única acción común es equivalente al uso de la estructura <code>OR</code><strong></strong> (en Java simbolizada por <code>||</code> o <code>|</code>) en la estructura if-else.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id210">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta210_151" class="block iDevice_content">
+<p>Recuerda que en Java la comparación entre cadenas de caracteres debe hacerse utilizando <code>.equals</code>, pues <code>String</code> <strong>no es un tipo primitivo sino una clase</strong> (fíjate que se escribe con la primera letra en mayúscula y no todo en minúsculas como <code>int</code>, <code>char</code>, <code>double</code>, etc.) y por tanto no podemos usar <code>==</code>. El motivo ya lo veremos más adelante. Pero recuerda siempre que si quieres comparar referencias a objetos que son instancias de una clase no puedes usar <code>==</code> sino <code>equals</code> o cualquier otro método de comparación que esa clase proporcione. Por ahora solo tendremos trabajar con referencias a objetos que sean instancias de la clase <code>String</code>. En la siguiente unidad, cuando empecemos a instanciar objetos y utilizarlos, profundizaremos en este tema.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id211">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Propuesto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta211_148" class="block story iDevice_content">
+<p>Recuerda que <strong>para leer de teclado una cadena de caracteres</strong> podemos hacer algo como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Scanner teclado = new Scanner(System.in);
+String dia;
+
+System.out.print("Introduzca un día de la semana: ");
+dia = teclado.nextLine();</code></pre>
+</div>
+</div>
+<p>Es decir, que utilizamos <code>nextLine</code> en lugar de <code>nextInt</code> y obviamente asignamos lo que se obtenga a una variable de tipo <code>String</code> y no <code>int</code>.</p>
+</div>
+<div id="taquesQuestion0b211" class="block iDevice_content">
+<p>Teniendo en cuenta lo anterior, completa el código del último ejemplo para escribir un programa completo que pueda ejecutarse y lleve a cabo la función de escribir por pantalla el mensaje apropiado (<em>día laborable</em>, <em>fin de semana</em>, <em>día no válido</em>) en función de la entrada recibida (<em>lunes</em>, <em>martes</em>, <em>miércoles</em>, <acronym title="etcétera">etc</acronym>.).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice em_iDevice_recomendacionfpd" id="id134">
+<div class="iDevice emphasis_recomendacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_recomendacionfpd.png)"><h2 class="iDeviceTitle">Recomendación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta134_46" class="block iDevice_content">
+<p><strong>Error común de programación</strong></p>
+<ul class="lista_verificacion">
+<li>Olvidar una instrucción <code>break</code> cuando se necesita en una instrucción <code>switch</code> es un error lógico. Es decir, un error del que no nos va a avisar el compilador, pero que es muy probable que de lugar a un comportamiento no deseado de nuestro programa.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id117">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta117_50" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b117" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b117" class="block iDevice_content">
+<p><strong>Para la estructura tipo <code>switch</code>, el último caso que debe incluirse es siempre la etiqueta <code>default</code>, ya que debe indicarse expresamente al compilador qué debe hacer ante cualquier valor resultante de evaluar la expresión distinto de los contemplados en las etiquetas anteriores. De lo contrario, se produciría una indefinición, que provocaría que el programa abortara si se  presentara cualquier otro caso no previsto expresamente con alguna  etiqueta asociada a las instrucciones a ejecutar.</strong></p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b117"><input type="radio" name="option0b117" id="true0b117" class="exe-radio-option exe-radio-option-0-2-0b117-truefalse" /> Verdadero</label> 
+<label for="false0b117"><input type="radio" name="option0b117" id="false0b117" class="exe-radio-option exe-radio-option-1-2-0b117-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b117" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b117-result" class="wrong">Falso</strong></p>
+<p>Es falso. La etiqueta <strong> <code>default</code></strong> puede incluirse o no. Si no se incluye expresamente, y se presenta cualquier valor de la expresión no contemplado como caso con ninguna etiqueta, simplemente la sentencia terminará sin haber hecho nada.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id111">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta111_63" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b111" class="block iDevice_content">
+<div id="taquesQuestion0b85" class="block iDevice_content">
+<p>Realiza un programa en Java que calcule la nota de un examen de tipo test de 20 preguntas, donde ha habido 17 aciertos, 3 errores y 0 preguntas sin contestar, siguiendo la formula explicada en apartados anteriores. <strong>La nota calculada debes obtenerla como un número entero, aunque los cálculos los puedes hacer con números reales.</strong> Después de calcular la nota final, haz que el programa muestre la calificación no numérica de dicho examen:</p>
+<ul class="lista_verificacion">
+<li>Si la nota es 0, 1, 2, 3 o 4, la calificación será <code>"INSUFICIENTE"</code>.</li>
+<li>Si la nota es 5, la calificación será <code>"SUFICIENTE"</code>.</li>
+<li>Si la nota es 6, la calificación será <code>"BIEN"</code>.</li>
+<li>Si la nota es 7 o 8, entonces la calificación será <code>"NOTABLE"</code>.</li>
+<li>Si la nota es 9 o 10, entonces la califación será de <code>"SOBRESALIENTE"</code>.</li>
+</ul>
+<p><strong>Para realizar este ejercicio deberás usar obligatoriamente la estructura <code>switch</code>.</strong></p>
+</div>
+</div>
+<form name="feedback-form-quesFeedback0b111" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b111text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b111" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b111" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Código de ejemplo con <code>switch</code>:</p>
+<p style="text-align: center;"><a class="documento" title="Solución del ejercicio sobre la estructura condicional múltiple switch. java 2,77 KB [java - 2.77 KB]" charset="text/plain" type="UTF-8" href="CondicionalSwitch.java" target="_blank">Solución del ejercicio sobre el uso de la estructura condicional múltiple <code>switch</code>.</a><span class="credenciales"> (java - 2.77 <abbr title="KiloBytes" lang="en">KB</abbr>)</span></p>
+<p> </p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id112">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta112_43" class="block iDevice_content">
+<p>Una explicación bastante buena de la sentencia <code>switch</code> en <span lang="en">Java</span> puedes encontrarla en el siguiente enlace:</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a un artículo sobre la sentencia switch en Java en  la web Wikilibros" href="http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_Java/Sentencia_switch">Sentencia <code>switch</code> en <span lang="en">Java</span> </a></p>
+<p class="enlace_centrado" style="text-align: left;">Una web con algunos ejemplos típicos de uso de la sentencia <code>switch</code> en <span lang="en">Java:</span></p>
+<p class="enlace_centrado"> <a class="html" title="Acceder a una web con ejercicios resueltos en Java usando if y switch." href="http://puntocomnoesunlenguaje.blogspot.com.es/2012/04/estructuras-de-control.html" target="_blank">Ejemplos de ejercicios resueltos en Java usando if y switch</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="34_estructura_selectiva_mltiple_switch_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

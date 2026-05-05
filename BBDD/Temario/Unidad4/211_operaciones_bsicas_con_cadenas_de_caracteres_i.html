@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.1.- Operaciones básicas con cadenas de caracteres (I). | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-71"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li class="current-page-parent"><a href="2__cadenas_de_caracteres.html" class="current-page-parent daddy">2.-  Cadenas de caracteres.</a>
+   <ul>
+      <li class="current-page-parent"><a href="21_operaciones_con_cadenas_de_caracteres.html" class="current-page-parent daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul>
+         <li id="active"><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="active no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_operaciones_con_cadenas_de_caracteres.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id290">
+<div class="iDevice emphasis0">
+<div id="ta290_73" class="block iDevice_content">
+<p align="left">Vamos a continuar revisando las operaciones básicas que se pueden realizar con cadenas. Algunas de ellas ya las vimos en la primera unidad, al presentar las cadenas de caracteres como un posible tipo más. En todos los ejemplos que presentaremos a continuación, la variable <code>cad</code> contiene la cadena "<code>¡Bienvenido!</code>", como se muestra en las imágenes.</p>
+<ul class="lista_verificacion">
+<li><code><strong>int length(</strong>).</code> Devuelve un número entero que contiene la longitud de una cadena, resultado de contar el número de caracteres que contiene. Recuerda que un espacio en blanco es también un carácter.
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a title="Ampliar imagen." href="PROG05_CONT_R007_LongitudDeUnaCadena.png" target="_blank"><img alt="Imagen que ilustra como cada carácter de una cadena ocupa una única posición, y que el número de posiciones de la cadena es en definitiva la longitud de la cadena." class="imagen_ampliable" src="PROG05_CONT_R007_LongitudDeUnaCadena_miniatura.PNG" style="width: 188px; height: 28px;" title="Longitud de una cadena." width="188" height="28" /></a></div>
+</div>
+</li>
+<li>
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a title="Ampliar imagen." href="PROG05_CONT_R008_ExtraccionDeCaracteres.png" target="_blank"><img alt="Imagen que ilustra la posición de cada carácter en una cadena de 12 caracteres, la cadena es “¡Bienvenido!”. Los caracteres empiezan a numerarse en cero, hasta la longitud total de la cadena menos uno. El primero carácter, el carácter cero, será el carácter más a la izquierda de la cadena. El último carácter será el símbolo de cerrar admiración (!). Los caracteres se pueden obtener individualmente con el método charAt de la clase String." class="imagen_ampliable" src="PROG08_CONT_R009_Subcadenas_miniatura.png" title="Extracción de caracteres de una cadena." /></a></div>
+</div>
+<strong><span style="font-size: medium;"><code>char charAt(int pos)</code></span></strong>. Devuelve el carácter ubicado en la posición pasada por parámetro. El carácter obtenido de dicha posición será almacenado en un tipo de dato <strong><span style="font-size: medium;"><code>char</code></span></strong>. Las posiciones se empiezan a contar desde el 0 (y no desde el 1), y van desde 0 hasta <span title="Longitud menos uno.">longitud - 1</span>. Por ejemplo, el código siguiente mostraría por pantalla el carácter "<strong><span style="font-size: medium;"><code>v</code></span></strong>": <br />
+<div class="highlighted-code language-java">
+<div class="texto_izquierda">
+<pre><code>char t = cad.charAt(5);</code>
+<code>System.out.println(t);</code>
+</pre>
+</div>
+</div>
+</li>
+<li><strong><span style="font-size: medium;"><code>String substring(int beginIndex, int endIndex)</code></span></strong>. Este método permite extraer una subcadena de otra de mayor tamaño. Devolverá una nueva cadena compuesta por todos los caracteres existentes entre la posición <strong><span style="font-size: medium;"><code>beginIndex</code></span></strong> y la posición <strong><span style="font-size: medium;"><code><span title="endIndex o índice final menos uno.">endIndex - 1</span></code></span></strong>. Por ejemplo, si pusiéramos <strong><span style="font-size: medium;"><code>cad.substring(0,5)</code></span></strong> en nuestro programa, sobre la variable <strong><span style="font-size: medium;"><code>cad</code></span></strong> anterior, dicho método devolvería la subcadena "<strong><span style="font-size: medium;"><code>¡Bien</code></span></strong>" tal y como se muestra en la imagen.
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a title="Ampliar imagen." href="PROG05_CONT_R009_Subcadenas.png" target="_blank"><img alt="Imagen que ilustra el conjunto de caracteres a los que corresponderían dos extracciones de caracteres usando el método substring, sobre la cadena “¡Bienvenido!”. La primera extracción va desde el carácter 0 al 5, y correspondería con la subcadena “¡Bien”. La segunda extracción va desde el carácter 5 al 11 y correspondería con la subcadena “venido!”. La tercera extracción extrae los caracteres desde la posición 2 en adelante, y extraería la cadena “ienvenido!”." class="imagen_ampliable" src="PROG08_CONT_R009_Subcadenas_miniatura.png" style="width: 192px; height: 76px;" title="Extracción de subcadenas." /></a></div>
+</div>
+</li>
+<li><strong><span style="font-size: medium;"><code>String substring (int beginIndex)</code></span></strong>. Cuando al método <strong><span style="font-size: medium;"><code>substring</code></span></strong> solo le proporcionamos un parámetro, extraerá una cadena que comenzará en el carácter con posición <strong><span style="font-size: medium;"><code>beginIndex</code></span></strong> e irá hasta el final de la cadena. En el siguiente ejemplo se mostraría por pantalla la cadena "<strong><span style="font-size: medium;"><code>ienvenido!</code></span></strong>": <br />
+<div class="highlighted-code language-java">
+<div class="texto_izquierda">
+<pre><code>String subcad = cad.substring(2);</code>
+<code>System.out.println(subcad);</code>
+</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id291">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta291_151" class="block iDevice_content">
+<p>Si se intenta acceder a un carácter que se encuentra fuera de los límites de un objeto <code>String</code> (es decir, un índice menor que 0 o un índice mayor o igual a la longitud del objeto <code>String</code>), se produce una excepción <code>StringIndexOutOfBoundsException</code>.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id292">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto: comprobación de nombres</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta292_148" class="block story iDevice_content">
+<p>Vamos ahora a poner en práctica lo que hemos aprendido sobre los métodos <code><strong>length</strong></code> y <code><strong>charAt</strong></code> con algunos ejercicios sencillos.</p>
+</section>
+<section id="taquesQuestion0b292" class="block iDevice_content">
+<p>Escribe un programa que solicite por teclado un nombre cuya longitud debe ser como <strong>mínimo</strong> de <strong>una letra</strong> y como <strong>máximo</strong> de <strong>diez</strong>. Si el nombre introducido no cumple esos criterios, debe mostrarse un mensaje de error y volver a solicitarse hasta que en efecto se cumpla esa regla.</p>
+<p>Aquí tienes un ejemplo de lo que podría aparecer en pantalla al probarlo:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Introduzca el nombre (máximo diez caracteres y mínimo uno): Stanislavski
+El nombre debe tener como como mínimo un carácter y como máximo diez.
+Introduzca el nombre (máximo diez caracteres y mínimo uno): 
+El nombre debe tener como como mínimo un carácter y como máximo diez.
+Introduzca el nombre (máximo diez caracteres y mínimo uno): Hermenegildo
+El nombre debe tener como como mínimo un carácter y como máximo diez.
+Introduzca el nombre (máximo diez caracteres y mínimo uno): Diosdado
+El nombre introducido es: Diosdado</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b292" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b292text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b292" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b292" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Este es un caso en el que el método <code><strong>length</strong></code> nos será de gran ayuda para comprobar si se está cumpliendo el requisito que se nos pide. Si lo que devuelve ese método respecto a la cadena introducida desde teclado es inferior a uno, o superior a diez, habrá que volver a solicitarlo.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (nombre.length()&gt;10 || nombre.length()&lt;1)  {
+    // Entonces es un error
+    . . .
+</code></pre>
+</div>
+</div>
+<p>Antes de hacer esa comprobación, obviamente tendríamos que haber solicitado el nombre por teclado:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.print ("Introduzca el nombre (máximo diez caracteres y mínimo uno): ");
+nombre= teclado.nextLine();</code></pre>
+</div>
+</div>
+<p>Y todo ello podríamos incluirlo dentro de un bucle de tipo <code><strong>do-while</strong></code>, pues al menos habrá que solicitar una primera vez el dato.</p>
+<p>Además, podríamos utilizar, por ejemplo, una variable de tipo <code><strong>boolean</strong></code> para guardar el resultado de la comprobación, por si fuera necesario utilizarlo más de una vez (una como criterio de continuidad del bucle en la cláusula <code><strong>while</strong></code> y otra en un <code><strong>if</strong></code> para mostrar algún mensaje de error):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>    boolean nombreInvalido= false;
+    String nombre;    
+    Scanner teclado= new Scanner (System.in);
+    
+     do {   
+        System.out.print ("Introduzca el nombre (máximo diez caracteres y mínimo uno): ");
+        nombre= teclado.nextLine();
+        nombreInvalido= nombre.length()&gt;10 || nombre.length()&lt;1;
+        if (nombreInvalido)  {
+            System.out.println ("El nombre debe tener como como mínimo un carácter y como máximo diez.");
+        }                
+    } while (nombreInvalido); // Seguiremos solicitando mientras el nombre no sea válido
+
+    System.out.println ("El nombre introducido es: " + nombre);
+</code></pre>
+</div>
+</div>
+<p>Otra opción podría haber sido realizar la comprobación contraria: si el nombre es válido (su longitud está entre uno y diez, ambos incluidos). En tal caso, la lógica de comprobación y continuidad sería la contraria y convendría nombrar a la variable <code><strong>boolean</strong></code> justo al contrario: <code><strong>nombreValido</strong></code>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>nombreValido= nombre.length()&gt;=1 &amp;&amp; nombre.length()&lt;=10;</code></pre>
+</div>
+</div>
+<p>El bucle debería entonces repetirse si <code><strong>nombreValido</strong></code> es <code><strong>false</strong></code>, es decir, si se cumple que <code><strong>!nombreValido</strong></code> es <code><strong>true</strong></code>. Recuerda que en las sentencias <code><strong>while</strong></code> e <code><strong>if</strong></code> no es necesario comparar las expresiones <code><strong>boolean</strong></code> (incluidas las variables <code><strong>boolean</strong></code>) con <code><strong>false</strong></code> o con <code><strong>true</strong></code>, pues ya valen directamente <code><strong>false</strong></code> o <code><strong>true</strong></code>.</p>
+<p>El resultado podría quedar entonces así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>    boolean nombreValido= true;
+    String nombre;    
+    Scanner teclado= new Scanner (System.in);
+    
+     do {   
+        System.out.print ("Introduzca el nombre (máximo diez caracteres y mínimo uno): ");
+        nombre= teclado.nextLine();
+        nombreValido= nombre.length()&gt;=1 &amp;&amp; nombre.length()&lt;=10;
+        if (!nombreValido)  {
+            System.out.println ("El nombre debe tener como como mínimo un carácter y como máximo diez.");
+        }                
+    } while (!nombreValido); // Seguiremos solicitando mientras el nombre no sea válido
+
+    System.out.println ("El nombre introducido es: " + nombre);</code></pre>
+</div>
+</div>
+<p>Ambas formas de resolver el problema son correctas y equivalentes. Son simplemente dos "lógicas" o "enfoques" diferentes de entender el problema (desde el punto de vista de comprobar si lo introducido es correcto o bien desde el punto de vista de comprobar si lo introducido es incorrecto).</p>
+<p>Ahora bien, en cualquier caso, recuerda que la variable <code><strong>nombreValido</strong></code> o <code><strong>nombreinValido</strong></code> es de tipo <code><strong>boolean</strong></code>. Eso significa que ya vale por sí misma <code><strong>true</strong></code> o <code><strong>false</strong></code>, de manera que es totalmente innecesario compararla con el valor <code><strong>true</strong></code> o <code><strong>false</strong></code>.  Es decir, procura evitar comprobaciones del tipo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (nombreValido == false) // Basta con if (!nombreValido)</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (nombreInvalido == true) // Basta con if (nombreInvalido)</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>while (nombreValido == false); // Basta con while (!nombreValido);</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>while (nombreInvalido == true); // Basta con while (nombreInvalido);</code></pre>
+</div>
+</div>
+<p>Todos esos "<code><strong>==true</strong></code>"o " <code><strong>==false</strong></code>" sobran. Son innecesarios y suelen dificultar la legibilidad del código<br /><br /></p></section>
+</form>
+<section id="taquesQuestion1b292" class="block iDevice_content">
+<p>Añadir al programa anterior la condición de que la primera letra del nombre debe ser una mayúscula. Es decir, que debe ser un carácter que se encuentre entre la 'A' y la 'Z'. No tendremos en cuenta la 'Ñ' como letra para simplificar el ejercicio.</p>
+<p>Aquí tienes un nuevo ejemplo de lo que podría aparecer en pantalla al probarlo:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Introduzca el nombre (máximo diez caracteres y mínimo uno): juan
+El nombre debe tener como como mínimo un carácter y como máximo diez, y además debe comenzar por letra mayúscula.
+Introduzca el nombre (máximo diez caracteres y mínimo uno): 
+El nombre debe tener como como mínimo un carácter y como máximo diez, y además debe comenzar por letra mayúscula.
+Introduzca el nombre (máximo diez caracteres y mínimo uno): Hermenegildo
+El nombre debe tener como como mínimo un carácter y como máximo diez, y además debe comenzar por letra mayúscula.
+Introduzca el nombre (máximo diez caracteres y mínimo uno): Juan
+El nombre introducido es: Juan</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback1b292" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b292text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b292" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b292" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso, además de las condiciones anteriores, tendremos que añadir una nueva condición: que el primer carácter sea una mayúscula. Si no lo es, el nombre tampoco nos sirve.</p>
+<p>Esta comprobación podemos enfocarla de muchas maneras, pero cualquiera de ellas normalmente se basará en la información obtenida por el método <code><strong>charAt</strong></code> con el parámetro 0 (<code><strong>charAt(0)</strong></code>), para así examinar si se trata de una mayúscula o no. Quizá la forma más sencilla sería hacer simplemente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>nombreValido= nombre.length()&gt;=1 &amp;&amp; nombre.length()&lt;=10 &amp;&amp; nombre.charAt(0)&gt;='A' &amp;&amp; nombre.charAt(0)&lt;='Z';</code></pre>
+</div>
+</div>
+<p>O bien, si usamos la comprobación inversa (para un nombre inválido):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>nombreInvalido= nombre.length()&lt;1 || nombre.length()&gt;10 || nombre.charAt(0)&lt;'A' || nombre.charAt(0)&gt;'Z';</code></pre>
+</div>
+</div>
+<p>Ahora bien, hemos de tener cuidado, pues si la longitud de la cadena es 0, la ejecución del método <code><strong>charAt(0)</strong></code> haría saltar la <strong>excepción</strong> <code><strong>StringIndexOutOfBoundsException</strong></code> y nuestro programa podría romperse, algo en absoluto deseable. Afortunadamente, eso no va a suceder, pues antes de obtener el carácter 0 de la cadena, comprobamos primero si la longitud es menor que uno, y si eso sucede, las comprobaciones dejarán de realizarse. Eso es así porque estamos usando los operadores lógicos "dobles" o de "cortocircuito" <code><strong>&amp;&amp;</strong></code> o bien <code><strong>||</strong></code>, que hacen que en cuanto una condición:</p>
+<ol>
+<li>sea <code><strong>false</strong></code> en un <code><strong>AND</strong></code> (<code><strong>&amp;&amp;</strong></code> en Java), se dejan de realizar las comprobaciones, pues el resultado final va a ser <code><strong>false</strong></code> independientemente del resultado del resto;</li>
+<li>sea <code><strong>true</strong></code> en un <code><strong>OR</strong></code> (<code><strong>||</strong></code> en Java), se dejan de llevar a cabo las comprobaciones, pues el resultado final va a ser <code><strong>true</strong></code> independientemente del resultado de las otras comprobaciones.</li>
+</ol>
+<p>Ambas formas de resolver el problema son correctas. Ahora bien, si queremos escribir algo menos de código e incluso mejorar su legibilidad, podemos también hacer uso de los métodos estáticos que proporciona la clase envoltorio <code><strong>Character</strong></code> para hacer los tests de mayúsculas, minúsculas, letras, dígitos, <abbr title="etcétera">etc</abbr>. La clase "wrapper" o "envoltorio" <code><strong>Character</strong></code> incluye una serie de herramientas que pueden venirnos muy bien para algunas de nuestras verificaciones. Entre ellas se encuentran métodos estáticos como <code><strong>isLetter</strong></code>, <code><strong>isLowerCase</strong></code>, <code><strong>isUpperCase</strong></code>, <code><strong>isDigit</strong></code>, <abbr title="etcétera">etc</abbr>. Puedes consultar el repertorio completo en la documentación Javadoc de la <acronym title="Application Programming Interface">API</acronym> de Java (paquete <code><strong>java.lang</strong></code>):</p>
+<p style="text-align: center;"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Character.html" target="_blank" class="html" title="Enlace a la documentación de la clase Character de la API de Java (se abre en una nueva ventana)">Documentación de la clase <code><strong>java.lang.Character</strong></code> de la <acronym title="Application Programming Interface">API</acronym> de Java</a></p>
+<p>Usando esas herramientas, las comprobaciones podrían haber quedado de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>nombreValido= nombre.length()&gt;=1 &amp;&amp; nombre.length()&lt;=10 &amp;&amp; Character.isUpperCase (nombre.charAt(0));</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>nombreInvalido= nombre.length()&lt;1 || nombre.length()&gt;10 || !Character.isUpperCase (nombre.charAt(0));</code></pre>
+</div>
+</div>
+<p>Tú decides cuál de las cuatro opciones prefieres.</p>
+<p>Si optamos por la primera (desde el punto de vista del nombre "válido" y sin usar los métodos de <code><strong>Character</strong></code>), nuestro programa podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>    boolean nombreValido= true;
+    String nombre;    
+    Scanner teclado= new Scanner (System.in);
+    
+     do {   
+        System.out.print ("Introduzca el nombre (máximo diez caracteres y mínimo uno): ");
+        nombre= teclado.nextLine();
+        nombreValido= nombre.length()&gt;=1 &amp;&amp; nombre.length()&lt;=10 &amp;&amp; nombre.charAt(0)&gt;='A' &amp;&amp; nombre.charAt(0)&lt;='Z';
+        if (!nombreValido)  {
+            System.out.println ("El nombre debe tener como como mínimo un carácter y como máximo diez, y además debe comenzar por letra mayúscula.");
+        }                
+    } while (!nombreValido); // Seguiremos solicitando mientras el nombre no sea válido
+
+    System.out.println ("El nombre introducido es: " + nombre);</code></pre>
+</div>
+</div>
+<p>Si optamos por la segunda (desde el punto de vista del "no válido" y sin usar los métodos de <code><strong>Character</strong></code>), podríamos haber hecho algo como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>    boolean nombreInvalido= true;
+    String nombre;    
+    Scanner teclado= new Scanner (System.in);
+    
+     do {   
+        System.out.print ("Introduzca el nombre (máximo diez caracteres y mínimo uno): ");
+        nombre= teclado.nextLine();
+        nombreInvalido= nombre.length()&lt;1 || nombre.length()&gt;10 || nombre.charAt(0)&lt;'A' || nombre.charAt(0)&gt;'Z';
+        if (nombreInvalido)  {
+            System.out.println ("El nombre debe tener como como mínimo un carácter y como máximo diez.");
+        }                
+    } while (nombreInvalido); // Seguiremos solicitando mientras el nombre no sea válido
+
+    System.out.println ("El nombre introducido es: " + nombre);</code></pre>
+</div>
+</div>
+<p>Ambos enfoques son correctos y apropiados. Y por supuesto garantizan una buena legibilidad del código.</p>
+<p>Te invitamos ahora a rescribir ambas soluciones utilizando las herramientas (métodos estáticos) proporcionadas por la clase <code><strong>Character</strong></code> para el test de las mayúsculas. Se trataría simplemente de cambiar</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>nombre.charAt(0)&gt;='A' &amp;&amp; nombre.charAt(0)&lt;='Z'</code></pre>
+</div>
+</div>
+<p>por</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Character.isUpperCase (nombre.charAt(0))</code></pre>
+</div>
+</div>
+<p>O bien, cambiar</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>nombre.charAt(0)&lt;'A' || nombre.charAt(0)&gt;'Z'
+</code></pre>
+</div>
+</div>
+<p>por</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>!Character.isUpperCase (nombre.charAt(0))</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion2b292" class="block iDevice_content">
+<p>Con lo que llevamos hasta ahora, hemos logrado comprobar que el nombre introducido tiene un tamaño dentro del rango que deseamos y que además comienza por mayúscula. Pero, ¿y qué sucede con el resto de los caracteres introducidos? Podrían ser cualquier cosa: números, caracteres especiales, <abbr title="etcétera">etc</abbr>. Lo que ahora nos interesa es llegar un poco más allá y garantizar que el resto de caracteres sean letras minúsculas.</p>
+<p>Te proponemos entonces ampliar el programa anterior para garantizar que el resto de caracteres del nombre introducido son letras minúsculas (caracteres entre 'a' y 'z').</p>
+<p>Aquí tienes otro ejemplo de lo que podría aparecer en pantalla al probarlo:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Introduzca el nombre (máximo diez caracteres y mínimo uno): juan
+El nombre debe tener como como mínimo un carácter y como máximo diez, debe comenzar por letra mayúscula y el resto deben ser minúsculas.
+Introduzca el nombre (máximo diez caracteres y mínimo uno): JUAN
+El nombre debe tener como como mínimo un carácter y como máximo diez, debe comenzar por letra mayúscula y el resto deben ser minúsculas.
+Introduzca el nombre (máximo diez caracteres y mínimo uno): Juan12
+El nombre debe tener como como mínimo un carácter y como máximo diez, debe comenzar por letra mayúscula y el resto deben ser minúsculas.
+Introduzca el nombre (máximo diez caracteres y mínimo uno): Juan
+El nombre introducido es: Juan</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback2b292" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b292text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b292" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback2b292" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Se trata de añadir más condiciones. En este caso, una vez aseguradas las comprobaciones anteriores (el tamaño y la primera letra mayúscula), tendremos que recorrer uno a uno el resto de caracteres y comprobar que cumplen la nueva condición (estar entre 'a' y 'z' o bien ser un espacio en blanco). Eso podríamos hacerlo en un <code>else</code> del <code>if</code> en el que se comprueba si se cumplen las condiciones iniciales:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (!nombreValido)  {
+    System.out.println ("El nombre debe tener como como mínimo un carácter y como máximo diez, y además debe comenzar por letra mayúscula.");
+} else {
+    // Aquí podríamos comprobar el resto de caracteres de la cadena
+}</code></pre>
+</div>
+</div>
+<p>Para esa comprobación del resto de caracteres podríamos utilizar un bucle <code>while</code> o <code>for</code>. Si lo hacemos con <code>for</code>, podría quedar algo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for (int indice=1 ; indice&lt;nombre.length() &amp;&amp; nombreValido ; indice++) {
+    // Aquí comprobaríamos la validez de cada carácter.
+    // En cuanto un carácter no cumpla, nos salimos del bucle. No es necesario seguir comprobando.
+}
+</code></pre>
+</div>
+</div>
+<p>La nueva comprobación podría ser algo del estilo a:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// El carácter es válido si es una letra minúscula (está entre 'a' y 'z')
+nombreValido= nombre.charAt(indice)&gt;='a' &amp;&amp; nombre.charAt(indice)&lt;='z'</code></pre>
+</div>
+</div>
+<p>O bien, si utilizamos las herramientas proporcionadas por la clase <code>Character</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// El carácter es válido si es una letra minúscula (está entre 'a' y 'z')
+nombreValido= Character.isLowerCase(nombre.charAt(indice))</code></pre>
+</div>
+</div>
+<p>Si lo juntamos todo, podría quedarnos algo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>boolean nombreValido= true;
+String nombre;    
+Scanner teclado= new Scanner (System.in);
+
+ do {   
+    System.out.print ("Introduzca el nombre (máximo diez caracteres y mínimo uno): ");
+    nombre= teclado.nextLine();
+    nombreValido= nombre.length()&gt;=1 &amp;&amp; nombre.length()&lt;=10 &amp;&amp; nombre.charAt(0)&gt;='A' &amp;&amp; nombre.charAt(0)&lt;='Z';
+    if (!nombreValido)  {
+        System.out.println ("El nombre debe tener como como mínimo un carácter y como máximo diez, debe comenzar por letra mayúscula y el resto deben ser minúsculas.");
+    } else {  // Si se supera la prueba del primer carácter en mayúscula, pasamos a comprobar el resto
+        for (int indice=1 ; indice&lt;nombre.length() &amp;&amp; nombreValido ; indice++) {
+            nombreValido= nombre.charAt(indice)&gt;='a' &amp;&amp; nombre.charAt(indice)&lt;='z';
+        }
+        if (!nombreValido)
+            System.out.println ("El nombre debe tener como como mínimo un carácter y como máximo diez, debe comenzar por letra mayúscula y el resto deben ser minúsculas.");
+    }
+
+} while (!nombreValido); // Seguiremos solicitando mientras el nombre no sea válido
+
+System.out.println ("El nombre introducido es: " + nombre);
+</code></pre>
+</div>
+</div>
+<p>Y si reorganizamos un poco el código para no tener que repetir el mensaje de error, podría quedar finalmente así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>boolean nombreValido = true;
+String nombre;
+Scanner teclado = new Scanner(System.in);
+
+do {
+    System.out.print("Introduzca el nombre (máximo diez caracteres y mínimo uno): ");
+    nombre = teclado.nextLine();
+    nombreValido = nombre.length() &gt;= 1 &amp;&amp; nombre.length() &lt;= 10 &amp;&amp; nombre.charAt(0) &gt;= 'A' &amp;&amp; nombre.charAt(0) &lt;= 'Z';
+    if (nombreValido) { // Continuamos con las comprobaciones del resto de caracteres
+        for (int indice = 1; indice &lt; nombre.length() &amp;&amp; nombreValido; indice++) {
+            nombreValido = nombre.charAt(indice) &gt;= 'a' &amp;&amp; nombre.charAt(indice) &lt;= 'z';
+        }
+    }
+    if (!nombreValido) {
+        System.out.println("El nombre debe tener como como mínimo un carácter y como máximo diez, debe comenzar por letra mayúscula y el resto deben ser minúsculas.");
+    }
+} while (!nombreValido); // Seguiremos solicitando mientras el nombre no sea válido
+
+System.out.println("El nombre introducido es: " + nombre);
+</code></pre>
+</div>
+</div>
+<p>Te invitamos nuevamente a rescribir la solución usando las herramientas (métodos estáticos) proporcionadas por la clase <code><strong>Character</strong></code> para la comprobación de las mayúsculas y las minúsculas.</p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id293">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto: obtención de subcadenas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta293_148" class="block story iDevice_content">
+<p>Vamos ahora  a seguir practicando con los métodos <code><strong>length</strong></code> y <code><strong>charAt</strong></code>, así como con <code><strong>substring</strong></code>.</p>
+</section>
+<section id="taquesQuestion0b293" class="block iDevice_content">
+<p>Escribe un programa que solicite por teclado un nombre compuesto por <strong>dos palabras separadas por un espacio</strong>. La cadena que se debe leer debe contener un único espacio, ninguno más, y no puede ser ni el primer ni el último carácter. El resto de caracteres deben ser <strong>letras minúsculas</strong>.</p>
+<p>Aquí tienes un ejemplo de lo que podría aparecer en pantalla al probarlo:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Introduzca un nombre formado por dos palabras en minúscula separadas por un espacio:
+juan
+Introduzca un nombre formado por dos palabras en minúscula separadas por un espacio:
+ juan jose
+Introduzca un nombre formado por dos palabras en minúscula separadas por un espacio:
+juan  jose
+Introduzca un nombre formado por dos palabras en minúscula separadas por un espacio:
+juan jose 
+Nombre introducido: juan jose</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b293" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b293text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b293" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b293" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso debemos recorrer toda la cadena para asegurarnos de que cada carácter cumpla las condiciones que debe cumplir:</p>
+<ul>
+<li class="lista_verificacion">el <strong>primero</strong> y el <strong>último</strong> solamente pueden ser letras <strong>minúsculas</strong>;</li>
+<li class="lista_verificacion">el <strong>resto</strong> pueden ser letras <strong>minúsculas</strong> o bien un <strong>espacio en blanco</strong>;</li>
+<li class="lista_verificacion">debe haber exactamente <strong>un único espacio en blanco</strong> y nada más que uno.</li>
+</ul>
+<p>La comprobación para el primer y último carácter es sencilla. Podríamos hacer algo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>nombreValido = nombre.length() &gt; 0 &amp;&amp; nombre.charAt(0) &gt;= 'a' &amp;&amp; nombre.charAt(0) &lt;= 'z' 
+    &amp;&amp; nombre.charAt(nombre.length() - 1) &gt;= 'a' &amp;&amp; nombre.charAt(nombre.length() - 1) &lt;= 'z'</code></pre>
+</div>
+</div>
+<p>Para la comprobación del resto podemos construir un bucle que vaya desde el segundo carácter (posición <strong><span style="font-size: medium;"><code>1</code></span></strong>, recuerda que la <strong><span style="font-size: medium;"><code>0</code></span></strong> es la primera) hasta el penúltimo de la cadena (posición <strong><span style="font-size: medium;"><code>length()-2</code></span></strong>, recuerda que <strong><span style="font-size: medium;"><code>length()-1</code></span></strong> es la última):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for (int i=1 ; i&lt;nombre.length()-2 ; i++) {</code></pre>
+</div>
+</div>
+<p>A la condición de continuidad de ese bucle podríamos añadirle también que en el momento que encuentre un carácter no válido, no siga comprobando, pues la cadena ya no será válida:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for (int i=1 ; i&lt;nombre.length()-2 &amp;&amp; nombreValido ; i++) {</code></pre>
+</div>
+</div>
+<p>Dentro del bucle, para cada carácter de la cadena podemos comprobar que se trata de una minúscula o bien un espacio:<br /><br /></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>nombreValido = nombre.charAt(i) &gt;= 'a' &amp;&amp; nombre.charAt(i) &lt;= 'z' || nombre.charAt(i) == ' ';</code></pre>
+</div>
+</div>
+<p>Pero como solamente puede haber un espacio en toda la zona interior de la cadena, debemos contar cada espacio que aparezca, para asegurarnos de que una vez finalizada toda la exploración, existe uno y solamente uno:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>nombreValido = nombre.charAt(i) &gt;= 'a' &amp;&amp; nombre.charAt(i) &lt;= 'z' || nombre.charAt(i) == ' ';
+if (nombre.charAt(i) == ' ') 
+    espacios++; // Cada vez que se encuentre un espacio, lo contabilizamos
+nombreValido = nombreValido &amp; espacios&lt;=1; // Si hay más de un espacio la cadena ya no es válida</code></pre>
+</div>
+</div>
+<p>Todo eso estará dentro del bucle <strong><span style="font-size: medium;"><code>for</code></span></strong>. Una vez finalizado el bucle, debemos asegurarnos de que el número de espacios es exactamente uno:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for (int i=1 ; i&lt;nombre.length()-2 &amp;&amp; nombreValido ; i++) {
+    nombreValido = nombre.charAt(i) &gt;= 'a' &amp;&amp; nombre.charAt(i) &lt;= 'z' || nombre.charAt(i) == ' ';
+    if (nombre.charAt(i) == ' ')
+        espacios++;
+    nombreValido = nombreValido &amp; espacios&lt;=1;
+}
+nombreValido = nombreValido &amp; espacios == 1;</code></pre>
+</div>
+</div>
+<p>Y todo ello estará dentro del bucle <strong><span style="font-size: medium;"><code>do-while</code></span></strong> que solicitará la entrada una y otra vez hasta que esta sea correcta:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>do {
+    System.out.println("Introduzca un nombre formado por dos palabras en minúscula separadas por un espacio:");
+    nombre = teclado.nextLine();
+    espacios = 0;
+    nombreValido = nombre.length() &gt; 0 &amp;&amp; nombre.charAt(0) &gt;= 'a' &amp;&amp; nombre.charAt(0) &lt;= 'z'
+            &amp;&amp; nombre.charAt(nombre.length() - 1) &gt;= 'a' &amp;&amp; nombre.charAt(nombre.length() - 1) &lt;= 'z';
+    if (nombreValido) {
+        for (int i=1 ; i&lt;nombre.length()-2 &amp;&amp; nombreValido ; i++) {
+            nombreValido = nombre.charAt(i) &gt;= 'a' &amp;&amp; nombre.charAt(i) &lt;= 'z' || nombre.charAt(i) == ' ';
+            if (nombre.charAt(i) == ' ')
+                espacios++;
+            nombreValido = nombreValido &amp; espacios&lt;=1; // Si hay más de un espacio la cadena ya no es válida
+        }
+        nombreValido = nombreValido &amp; espacios == 1; // La cadena es válida solo si al final hay exactamente un espacio
+    }            
+} while (!nombreValido);
+System.out.printf ("Nombre introducido: %s", nombre );</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b293" class="block iDevice_content">
+<p>Amplía el programa anterior para que, además de realizar las comprobaciones, muestre por pantalla cuál es el primer nombre y cuál el segundo.</p>
+<p>Un ejemplo de salida podría ser:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Introduzca un nombre formado por dos palabras en minúscula separadas por un espacio:
+juan jose
+Nombre introducido: juan jose
+La primera palabra es "juan" y la última "jose"</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback1b293" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b293text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b293" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b293" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso podríamos utilizar el método <strong><span style="font-size: medium;"><code>substring</code></span></strong> para obtener dos subcadenas:</p>
+<ol>
+<li>la que va desde el comienzo de la cadena hasta el espacio;</li>
+<li>la que va desde el espacio hasta el final de la cadena.</li>
+</ol>
+<p>Para ello tendremos que saber en qué posición se encuentra el único espacio que hay en la cadena. Eso podríamos conseguirlo añadiendo lo siguiente en el programa anterior:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (nombre.charAt(i) == ' ') {
+    posicionEspacio = i;
+    espacios++;
+}</code></pre>
+</div>
+</div>
+<p>De ese modo, al final de las comprobaciones, si todo ha ido bien, la variable <strong><span style="font-size: medium;"><code>posicionEspacio</code></span></strong> contendrá la ubicación del único espacio de la cadena. A partir de ahí, podremos obtener las dos palabras mediante el empleo del método <strong><span style="font-size: medium;"><code>substring</code></span></strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>primeraPalabra= nombre.substring(0, posicionEspacio);
+segundaPalabra= nombre.substring(posicionEspacio+1);</code></pre>
+</div>
+</div>
+<p>Para la segunda palabra no es necesario un segundo parámetro en el método <strong><span style="font-size: medium;"><code>substring</code></span></strong>, pues queremos toda la subcadena que va desde después del espacio hasta el final. Podemos usar entonces la versión del método con solo un parámetro.</p>
+<p>Si juntamos todo esto con el programa anterior, nos podría quedar algo como lo siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Variables de entrada
+String nombre;
+
+// Variables de salida
+String primeraPalabra, segundaPalabra;
+
+// Variables auxiliares
+int espacios, posicionEspacio=0;
+boolean nombreValido;
+Scanner teclado = new Scanner(System.in);
+
+// Entrada de datos
+do {
+    System.out.println("Introduzca un nombre formado por dos palabras en minúscula separadas por un espacio:");
+    nombre = teclado.nextLine();
+    espacios = 0;
+    nombreValido = nombre.length() &gt; 0 &amp;&amp; nombre.charAt(0) &gt;= 'a' &amp;&amp; nombre.charAt(0) &lt;= 'z'
+            &amp;&amp; nombre.charAt(nombre.length() - 1) &gt;= 'a' &amp;&amp; nombre.charAt(nombre.length() - 1) &lt;= 'z';
+    if (nombreValido) {
+        for (int i=1 ; i&lt;nombre.length()-2 &amp;&amp; nombreValido ; i++) {
+            nombreValido = nombre.charAt(i) &gt;= 'a' &amp;&amp; nombre.charAt(i) &lt;= 'z' || nombre.charAt(i) == ' ';
+            if (nombre.charAt(i) == ' ') {
+                posicionEspacio= i;
+                espacios++;
+            }
+            nombreValido = nombreValido &amp; espacios&lt;=1; // Si hay más de un espacio la cadena ya no es válida
+        }
+        nombreValido = nombreValido &amp; espacios == 1; // La cadena es válida solo si hay exactamente un espacio
+    }            
+} while (!nombreValido);
+System.out.printf ("Nombre introducido: %s", nombre );
+
+// Procesamiento
+primeraPalabra= nombre.substring(0, posicionEspacio);
+segundaPalabra= nombre.substring(posicionEspacio+1);
+
+// Salida de resultados
+System.out.printf ("La primera palabra es \"%s\" y la última \"%s\"", primeraPalabra, segundaPalabra);
+</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_operaciones_con_cadenas_de_caracteres.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

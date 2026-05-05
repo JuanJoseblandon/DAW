@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1.- Estructura condicional simple: if. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-56"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul class="other-section">
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_estructuras_de_seleccin_o_condicionales.html" class="current-page-parent daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul>
+      <li id="active"><a href="31_estructura_condicional_simple_if.html" class="active no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li><a href="34_estructura_selectiva_mltiple_switch_i.html" class="daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul class="other-section">
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul class="other-section">
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li><a href="45_estructura_repetitiva_for_i.html" class="daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul class="other-section">
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul class="other-section">
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="3_estructuras_de_seleccin_o_condicionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_estructura_condicional_compuesta_ifelse.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3.1.- Estructura condicional simple: if.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id170">
+<div class="iDevice emphasis0">
+<div id="ta170_154" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a title="Imagen Ampliada para Diagrama de flujo de sentencia if else" href="PROG03_CONT_R02_diagramaifelse.jpg"><img alt="Un rombo verde con la inscripción “expresión” muestra a sus lados las palabras “verdadero” y “falso”, de ellas parten dos flechas a sendos rectágulos en los que están escritas las palabras “secuencia1” y “secuencia2” respectivamente. De estos recuadros, parten dos flechas que se unen en una circunferencia pequeña y de ésta parte otra flecha hacia abajo." class="imagen_ampliable" src="PROG03_CONT_R02_diagramaifelse_miniatura.jpg" style="width: 196px; height: 160px;" title="Diagrama de flujo de sentencia if else." width="196" height="160" /></a></div>
+</div>
+<p>La estructura de control <code>if</code> es una <strong>estructura de selección</strong> o <strong>estructura selectiva</strong> o <strong>estructura condicional</strong>. Os la podéis encontrar con todos estos nombres. Permite condicionar la ejecución entre dos sentencias (o dos bloques de sentencias) dependiendo de la evaluación de una expresión lógica (condición). Al comprobar una condición podamos tomar dos caminos alternativos (bloques de sentencias) dependiendo de si esa condición se evaluó como verdadera (<code>true</code>) o como falsa (<code>false</code>). La representación en diagrama de flujo sería la de la imagen de la derecha, que es bastante explicativa:</p>
+<ul class="lista_verificacion">
+<li><strong>Si la expresión que se evalúa es verdadera</strong>, <strong>se ejecuta la secuencia de instrucciones 1</strong>.</li>
+<li><strong>Si es falsa, se ejecuta la secuencia de instrucciones 2</strong>. Esta rama, a veces, puede no contener ninguna sentencia a ejecutar. Este caso es el que conocemos como <strong>estructura condicional simple</strong>. Es el que vamos a estudiar en este apartado.</li>
+</ul>
+<p>En ambos casos, una vez finalizada la ejecución del bloque de sentencias 1 o 2, el flujo continúa con la siguiente sentencia que haya tras esta estructura condicional.</p>
+<p>En lenguaje natural (o <a href="#tb9649008-82f7-47b9-bd9e-6968056548ec" id="linkb9649008-82f7-47b9-bd9e-6968056548ec" class="exe-tooltip definition-tt titled-tt" title="Pesudocódigo | Ver la definición">pseudocódigo</a>), eso se expresaría como:</p>
+<table class="tabla" summary="Tabla que representa la forma de indicar en pseudocódigo la estructura if simple y la estructura if de doble alternativa (o if-else)" border="0"><caption>Estructura <code>if</code> en lenguaje natural</caption>
+<tbody>
+<tr><th scope="col">Estructura condicional simple.(<strong><span style="font-size: medium;"><code>Si-entonces</code></span></strong>)</th></tr>
+<tr>
+<td>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>Si expresion Entonces
+   secuencia_1
+Fin Si</code></pre>
+</div>
+</div>
+<code></code></td>
+</tr>
+<tr>
+<td>
+<p><strong>Funcionamiento:</strong></p>
+<p>La secuencia de instrucciones <code>secuencia_1</code> se ejecuta si y solo si en el caso de que la<code> expresion</code> se evalúe como verdadera.</p>
+<p></p>
+<p>No se hace nada en caso contrario, simplemente "se omite" la ejecución de <code>secuencia_1.</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>Fíjate que la palabra <code>Entonces</code><strong><em></em></strong> se indica para delimitar con claridad dónde termina la expresión que se va a evaluar y dónde empieza la secuencia de instrucciones del primer bloque.</p>
+<p>La estructura <code>if</code> puede presentarse en <span lang="en">Java</span> de las siguientes formas:</p>
+<table class="tabla" summary="En esta tabla aparece la sintaxis de la estructura if simple, con una única sentencia a ejecutar o con un bloque. Por otra parte, se expresa la sintaxis de la estructura if-else, con una única sentencia o bloque de ellas a ejecutar en cada una de las alternativas posibles. "><caption>Estructura <code>if</code> <code></code> en <span lang="en">Java</span></caption>
+<thead>
+<tr><th scope="col" colspan="2">Estructura <strong><span style="font-size: medium;"><code>if</code></span></strong> simple.</th></tr>
+</thead>
+<tbody>
+<tr><th scope="col"><strong>Sintaxis para el caso de ejecución condicional de una sola rama con una sola sentencia</strong></th><th scope="col"><strong><strong>Sintaxis para el caso de ejecución condicional de una sola rama con un bloque de sentencias</strong></strong></th></tr>
+<tr>
+<td>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>if (expresion_logica)
+    sentencia_1;</code></pre>
+</div>
+</div>
+</td>
+<td>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>if (expresion_logica) {
+    sentencia_1;
+    sentencia_2;
+    . . .
+    sentencia_N;
+}
+</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p><strong>Funcionamiento:</strong></p>
+<p>Si la evaluación de la <code>expresion_logica</code> ofrece un resultado verdadero, se ejecuta la <code>sentencia_1</code> o bien el bloque de sentencias asociado. Si el resultado de dicha evaluación es falso, no se ejecutará ninguna instrucción asociada a la estructura condicional.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<div id="tb9649008-82f7-47b9-bd9e-6968056548ec" class="exe-tooltip-text">
+<p>El pseudocódigo consiste en la descripción de algoritmos mediante el uso del lenguaje natural. De este modo el código que se escribe es independiente de cualquier lenguaje de programación formal y debería poder entenderlo cualquier persona nativa del idioma (español, inglés, francés, etc.) en que se haya escrito el algoritmo.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id182">
+<div class="iDevice emphasis0">
+<div id="ta182_85" class="block iDevice_content">
+<p>La mejor de manera de entender el funcionamiento de esta estructura es mediante un ejemplo sencillo. Imagina que dependiendo del contenido de una variable entera llamada <code>valor</code> se muestre por pantalla el texto <code>"El valor es negativo"</code> o bien no se muestre nada. Bastaría con escribir algo así:</p>
+<div class="highlighted-code language-java line-numbers hightlight-4">
+<div>
+<pre><code>int valor = -10;
+System.out.println ("El programa está ejecutándose."); // Esta línea se ejecuta en cualquier caso
+if (valor &lt; 0)
+    System.out.println("El valor es negativo."); // Esta línea solo se ejecuta si valor &lt; 0
+System.out.println ("El programa sigue ejecutándose."); // Esta línea se ejecuta en cualquier caso
+</code></pre>
+</div>
+</div>
+<p>En este caso se mostraría por pantalla lo siguiente:<br /><br /></p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>El programa está ejecutándose.
+El valor es negativo.
+El programa sigue ejecutándose.</code></pre>
+</div>
+</div>
+<p>Dado que el contenido de la variable <code>valor</code> es negativo, se ejecuta la línea 4. Si no, se habría saltado directamente a la 5. Veámoslo con otro ejemplo. Si la variable <code>valor</code> contuviera un número que no fuera negativo, como es en el siguiente caso:</p>
+<div class="highlighted-code language-java line-numbers hightlight-4">
+<div>
+<pre><code>int valor = 0;
+System.out.println ("El programa está ejecutándose."); // Esta línea se ejecuta en cualquier caso
+if (valor &lt; 0)
+    System.out.println("El valor es negativo."); // Esta línea solo se ejecuta si valor&lt;  0
+System.out.println ("El programa sigue ejecutándose."); // Esta línea se ejecuta en cualquier caso
+</code></pre>
+</div>
+</div>
+<p>El resultado de la ejecución de este fragmento de código no mostraría por pantalla el texto <code>"El valor es negativo"</code>, aunque sí se ejecutarían las sentencias que hay justo antes (línea 2) y justo después (línea 5), pues no forman parte de la estructura condicional:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>El programa está ejecutándose.
+El programa sigue ejecutándose.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id183">
+<div class="iDevice emphasis0">
+<div id="ta183_85" class="block iDevice_content">
+<p>Como habrás podido observar, al tener una única sentencia dentro del "bloque" de la estructura <code>if</code>, no es necesario encerrar ese bloque entre llaves. Si queremos incluir más de una sentencia, sí que tendremos que encerrar todo ese bloque de sentencias entre llaves.</p>
+<p>Si en el caso anterior, además de mostrar un texto por pantalla, queremos hacer algo más, tendremos que encerrar todas esas sentencias entre llaves para que el compilador de Java sepa que son todas esas sentencias las que se tienen que ejecutar cuando la condición de la estructura <code>if</code> sea evaluada como <code>true</code>. Si no se encierra el bloque entre llaves, se entenderá que tan solo debe ejecutarse la primera sentencia y que el resto de sentencias sí se ejecutarán en cualquier caso (tanto si el resultado de la evaluación de la expresión lógica es <code>true</code> como si es <code>false</code>).</p>
+<p>Por ejemplo, si además de mostrar el mensaje por pantalla, queremos poner la variable valor a 0 y mostrar otro mensaje más por pantalla, tendremos que encerrar todas esas sentencias entre llaves formando un bloque. Lo haríamos de la siguiente manera:</p>
+<div class="highlighted-code language-java line-numbers hightlight-4and5and6">
+<div>
+<pre><code>int valor = -10;
+System.out.println ("El programa está ejecutándose."); // Esta línea se ejecuta en cualquier caso
+if (valor &lt; 0) {
+    System.out.println ("El valor es negativo."); // Esta línea solo se ejecuta si valor &lt; 0
+    valor= 0; // Esta línea solo se ejecuta si valor &lt; 0
+    System.out.println ("El valor ha sido reseteado a cero."); // Esta línea solo se ejecuta si valor &lt; 0
+}
+System.out.println ("El programa sigue ejecutándose."); // Esta línea se ejecuta en cualquier caso
+</code></pre>
+</div>
+</div>
+<p>En este caso el resultado obtenido en pantalla sería:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>El programa está ejecutándose.
+El valor es negativo.
+El valor ha sido reseteado a cero.
+El programa sigue ejecutándose.
+</code></pre>
+</div>
+</div>
+<p>Si el valor no hubiera sido negativo y hubiéramos tenido por ejemplo:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>int valor = 0;
+System.out.println ("El programa está ejecutándose."); // Esta línea se ejecuta en cualquier caso
+if (valor &lt; 0) {
+   . . .</code></pre>
+</div>
+</div>
+<p>El resultado habría sido:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>El programa está ejecutándose.
+El programa sigue ejecutándose.</code></pre>
+</div>
+</div>
+<p>Sin embargo, si no hubiéramos encerrado entre llaves el bloque de las sentencias que deben ejecutarse cuando el resultado de evaluar <code>valor &lt; 0</code> sea <code>true</code>, el código tendría el siguiente aspecto:</p>
+<div class="highlighted-code language-java line-numbers hightlight-4">
+<div>
+<pre><code>int valor = 0;
+System.out.println ("El programa está ejecutándose."); // Esta línea se ejecuta en cualquier caso
+if (valor &lt; 0) 
+    System.out.println ("El valor es negativo."); // Esta línea solo se ejecuta si valor &lt; 0
+    valor= 0; // Esta línea se ejecuta en cualquier caso
+    System.out.println ("El valor ha sido reseteado a cero."); // Esta línea se ejecuta en cualquier caso
+System.out.println ("El programa sigue ejecutándose."); // Esta línea se ejecuta en cualquier caso
+</code></pre>
+</div>
+</div>
+<p>Y el resultado de la ejecución habría sido:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>El programa está ejecutándose.
+El valor ha sido reseteado a cero.
+El programa sigue ejecutándose.</code></pre>
+</div>
+</div>
+<p>Donde podemos ver cómo las líneas 5 y 6 se han ejecutado independientemente de que el resultado de evaluar la expresión lógica <code>valor &lt; 0</code> haya sido <code>true</code> o <code>false</code>. Y eso probablemente no es lo que nosotros deseábamos que sucediera. Debes tener cuidado con esto, pues se trata de un error bastante habitual cuando se empieza a programar. Por mucha indentación que añadamos, si no encerramos el bloque entre llaves, Java considerará que el bloque es de una única sentencia y que el resto de sentencias están fuera de la estructura condicional. Es decir, que es como si hubiéramos escrito:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>int valor = 0;
+System.out.println("El programa está ejecutándose."); // Esta línea se ejecuta en cualquier caso
+if (valor &lt; 0) {
+    System.out.println("El valor es negativo."); // Esta línea solo se ejecuta si valor &lt; 0
+}
+valor = 0; // Esta línea se ejecuta en cualquier caso
+System.out.println("El valor ha sido reseteado a cero."); // Esta línea se ejecuta en cualquier caso
+System.out.println("El programa sigue ejecutándose."); // Esta línea se ejecuta en cualquier caso
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdIdevice em_iDevice em_iDevice_reflexionfpd" id="id184">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta184_119" class="block iDevice_content">
+<p>Para indicar <strong>un bloque de ejecución dentro de una estructura de control condicional</strong>, ¿utilizamos la <strong>indentación</strong> o las <strong>llaves</strong>? ¿O ambas? ¿Que sentido tiene cada una?</p>
+</div>
+<form name="feedback-form-184" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedback184text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-184" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-184" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div id="ta184_120" class="block iDevice_content">
+<p>Lo habitual es utilizar ambas:</p>
+<ol>
+<li>las <strong>llaves</strong> se utilizan para que el compilador sepa cuáles son las sentencias que forman el bloque;</li>
+<li>la <strong>indentación</strong> se usa para que a los seres humanos nos sea más sencillo distinguir que ese bloque está "dentro" de la estructura de control y que por tanto solamente se ejecutará si se dan ciertas condiciones. Pero para que eso realmente sea así el bloque, además de indentarse, tendrá que estar encerrado entre llaves.</li>
+</ol>
+<p>Es decir, que el primer caso es para indicar el bloque propiamente dicho al compilador de Java, mientras que el segundo es para <strong>facilitar la legibilidad del código fuente</strong> a las personas. Aunque ambos aspectos son muy importantes y debemos cumplirlos, el primero (el <strong>uso de las llaves</strong>) es imprescindible para que Java sepa qué es lo que queremos hacer.</p>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id206">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta206_148" class="block story iDevice_content">
+<p>Es probable que recuerdes que en la unidad pasada se os proporcionó una herramienta llamada <strong><code>Scanner</code></strong> que nos servía para recibir entradas desde el teclado, de tal manera que podíamos hacer cosas como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Scanner teclado = new Scanner(System.in); // No olvides incluir al principio una sentencia import java.util.Scanner
+int numero;
+System.out.print("Introduzca un número entero: ");
+numero = teclado.nextInt();</code></pre>
+</div>
+</div>
+<p></p>
+</div>
+<div id="taquesQuestion0b206" class="block iDevice_content">
+<p>Teniendo en cuenta todo esto, ¿cómo podríamos implementar un programa <strong>leyera desde teclado un número entero</strong> y nos indicara si se trata de un <strong>número par</strong>?</p>
+</div>
+<form name="feedback-form-quesFeedback0b206" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b206text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b206" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b206" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Se trataría de un programa con dos partes:</p>
+<ol>
+<li>la lectura del número (entrada de datos);</li>
+<li>la comprobación del número. Si el número resulta ser par (el resultado de aplicarle la operación módulo es cero), entonces se muestra un mensaje por pantalla. En caso contrario no se hace nada y el programa sigue con su ejecución justo después de la sentencia condicional.</li>
+</ol>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Primera parte: entrada de datos
+Scanner teclado = new Scanner(System.in);
+int numero;
+System.out.print("Introduzca un número entero: ");
+numero = teclado.nextInt();
+
+// Segunda parte: procesamiento (comprobación) y salida de resultados (mensaje por pantalla si es par)
+if (numero % 2 == 0) {  // Si el resto de la división entera entre 2 es cero, el número es par
+    System.out.println("El número es par.");
+}</code></pre>
+</div>
+</div>
+<p>Una vez leído de teclado el número, lo siguiente que hacemos es calcular el resto de la división entera del número entre 2 (mediante el operador módulo representado por el símbolo <code>%</code> en Java) y a continuación comparamos ese resultado con cero (mediante el operador de relación de igualdad, representado en Java por el símbolo <code>==</code>). Si el resultado de la expresión lógica <code>numero % 2 == 0</code> es <code>true</code>, entonces se ejecutará el bloque primer bloque de sentencias (formado por una única sentencia dentro de las llaves) dando lugar a que se escriba por pantalla el mensaje <code>"El número es par."</code>.</p></div>
+</form>
+<div id="taquesQuestion1b206" class="block iDevice_content">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id162">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta162_121" class="block iDevice_content">
+<p>Recuerda que la línea de código:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Scanner teclado = new Scanner(System.in);</code></pre>
+</div>
+</div>
+<p>aún no somos capaces de interpretarla completamente pero sabemos que es <strong>necesaria para poder leer datos desde el teclado</strong> posteriormente usando esta otra línea:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>numero = teclado.nextInt();</code></pre>
+</div>
+</div>
+<p>Así lo llevamos haciendo desde la unidad anterior aunque todavía no sepamos qué se está haciendo en realidad. En la siguiente unidad aprenderemos mejor cómo trabajar con la entrada desde teclado. Mientras tanto sabemos que podemos hacerlo así:</p>
+<ol>
+<li><strong>declarando e instanciando un objeto de tipo</strong> <code>Scanner</code> (un tipo referenciado que estudiaremos más adelante): la variable que hemos llamado <code>teclado</code> (<code>Scanner teclado = new Scanner(System.in)</code>);</li>
+<li><strong>usando ese objeto para leer una entrada</strong> desde teclado usando alguna de las sentencias <code>teclado.nextInt()</code>, <code>teclado.nextDouble()</code>, <code>teclado.nextShort()</code>, <abbr title="etcétera">etc</abbr>. según queramos leer un <code>int</code>, <code>double</code>, <code>short</code>, <code>float</code>, <abbr title="etcétera">etc</abbr>. En este caso se ha efectuado la lectura de un entero y lo leído se ha almacenado en una variable de tipo entero: <code>numero= teclado.nextInt()</code>.</li>
+</ol>
+<p>En la próxima unidad ya entenderemos qué significa instanciar un objeto o llamar a u método. Por ahora nos conformaremos con utilizar este mecanismo sin preocuparnos especialmente de su funcionamiento interno.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="3_estructuras_de_seleccin_o_condicionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_estructura_condicional_compuesta_ifelse.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

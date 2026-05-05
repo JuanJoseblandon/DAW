@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.4.- Tipos de variables I | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-52"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="8_variables_e_identificadores.html" class="current-page-parent daddy">8.- Variables e identificadores</a>
+   <ul>
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li id="active"><a href="84_tipos_de_variables_i.html" class="active daddy">8.4.- Tipos de variables I</a>
+      <ul>
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="83_palabras_reservadas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="841_tipos_de_variables_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.4.- Tipos de variables I</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id147">
+<div class="iDevice emphasis0">
+<div id="ta147_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG02_CONT_R09_Libros.jpg" alt="Una selección de libros de textos sobre programación." title="Libros" style="float: right;" width="192" height="140" /></div>
+<div class="elemento_centrado credenciales"><a class="cc0" title="Dominio público" href="http://creativecommons.org/publicdomain/zero/1.0/deed.es" target="_blank"><span class="transparente">Dominio público</span></a> <a title="K.lee" href="https://es.wikipedia.org/wiki/Dominio_p%C3%BAblico?uselang=es" target="_blank">K.lee</a> <a title="Programming language textbooks" href="http://commons.wikimedia.org/wiki/File:Programming_language_textbooks.jpg" target="_blank">Programming language textbooks</a></div>
+</div>
+<p>Dentro de un programa podemos encontrar distintos tipos de variables. Las diferencias entre unas variables y otras dependerán de diversos factores como, por ejemplo, el tipo de datos que representan, si su valor puede cambiar o no, o cuál es el papel que tienen en el programa.</p>
+<p>Además, dependiendo del lenguaje de programación que se utilice, es posible que encontremos ciertas variaciones en los tipos de variables que se ofrecen. En el caso concreto del <strong>lenguaje de programación <span lang="en">Java </span></strong>podemos distinguir los distintos tipos de variables según los siguientes criterios:</p>
+<ol style="list-style-type: lower-alpha; list-style-image: none; list-style-position: outside;">
+<li>
+<p>Según el<strong> tipo de información que contengan</strong>, podemos hablar de <strong>variables de tipos primitivos </strong>y<strong> variables referencia</strong>. En función de a qué grupo pertenezca la variable, <a class="glosario">tipos primitivos<span><em>Tipo primitivo.</em>Son tipos de datos tan básicos que sin ellos apenas podría hacerse ningún programa, y que trae incorporados el lenguaje, incluso como palabras reservadas. Suelen ser los distintos tipos de datos numéricos (enteros cortos, enteros largos, reales, ....) algún tipo carácter y el tipo lógico o booleano. </span></a> o <a class="glosario">tipos referenciados<span><em>Tipo referenciado</em>Tipo de dato donde el valor de una variable de este tipo es una referencia (un puntero o dirección de memoria) hacia el valor real. En Java tenemos los arrays, las clases y los interfaces como tipos de datos referenciados.</span></a>, podrá tomar unos valores u otros, y se podrán definir sobre ella unas operaciones u otras.</p>
+</li>
+<li>
+<p>Dependiendo de su <strong>mutabilidad</strong>, podemos hablar de variables <strong>mutables</strong> (o <strong>variables</strong>) e <strong>inmutables</strong> (o<strong> constantes</strong>), es decir, según su valor pueda ser modificado o no durante la ejecución del programa.</p>
+</li>
+</ol>
+<p>En conclusión, podemos decir sobre una variable que:</p>
+<ol>
+<li>es un <strong>almacén temporal de información</strong> que usan los programas para registrar datos y operar con ellos;</li>
+<li>puede contener un valor de un <strong>tipo primitivo</strong> (entero, real, caracter, etc.) o bien una <strong>referencia</strong> (una dirección de memoria o "puntero") a una zona de memoria que contendrá información mucho más compleja que un simple valor en un tipo primitivo;</li>
+<li>se crea y usa <strong>dentro de un bloque de código</strong> (en el caso de Java, dentro de un <a href="#tf2102ca9-3d29-a702-d584-843c25a426fa" id="linkf2102ca9-3d29-a702-d584-843c25a426fa" class="exe-tooltip definition-tt titled-tt">método</a>);</li>
+<li>deja de existir (se "<strong>destruye</strong>") <strong>cuando la ejecución de ese bloque de código finaliza</strong>.</li>
+</ol>
+<p>El siguiente ejemplo puedes observar cómo se declaran algunas variables. En algunos casos se ha indicado un valor inicial y en otros no.</p>
+<div class="highlighted-code language-java">
+<pre><code>int cantidadLargos = 10;
+double longitudPiscina;
+char letraDni;
+String nombre;
+final int MAXIMO_NUMERO_PLANTAS= 12;
+final double PI= 3.1415926536;</code></pre>
+</div>
+<p>Analicemos cada una de las variables o elementos de memoria que se han declarado:</p>
+<table class="tabla" style="width: 100%;" summary="Tabla de seis columnas que contiene para cada fila el nombre, el tipo, la mutabilidad, si es prmitiva o no, el valor y la descripción de un conjunto de variables en Java." border="1"><caption>Descripción de variables</caption>
+<tbody>
+<tr><th scope="row">Nombre</th><th scope="row">Tipo</th><th scope="row">Mutabilidad</th><th scope="row">Primitivo/Referencia</th><th scope="row">Contenido</th><th scope="row">Descripción</th></tr>
+<tr>
+<td><strong><span style="font-size: medium;"><code>cantidadLargos</code></span></strong></td>
+<td>entero (<strong><span style="font-size: medium;"><code>int</code></span></strong>)</td>
+<td>variable</td>
+<td>primitivo (un número entero)</td>
+<td>valor entero 10</td>
+<td>Se trata de una variable que puede cambiar, valor, que almacenará la cantidad de largos realizados por un nadador y cuyo valor inicial es 10.</td>
+</tr>
+<tr>
+<td><strong><span style="font-size: medium;"><code>longitudPisicina</code></span></strong></td>
+<td>real (<strong><span style="font-size: medium;"><code>double</code></span></strong>)</td>
+<td>variable</td>
+<td>primitivo (un número real)</td>
+<td>todavía nada</td>
+<td>Se trata de una variable que puede cambiar de valor, que almacenará la longitud de una piscina y que aún no tiene ningún valor asignado.</td>
+</tr>
+<tr>
+<td><strong><span style="font-size: medium;"><code>letraDni</code></span></strong></td>
+<td>carácter (<strong><span style="font-size: medium;"><code>char</code></span></strong>)</td>
+<td>variable</td>
+<td>primitivo (un carácter)</td>
+<td>aún nada</td>
+<td>Se trata de una variable que puede cambiar de valor, que almacenará la letra de un <acronym title="Documento Nacional de Identidad">DNI</acronym>.</td>
+</tr>
+<tr>
+<td><strong><span style="font-size: medium;"><code>nombre</code></span></strong></td>
+<td>cadena (<strong><span style="font-size: medium;"><code>String</code></span></strong>)</td>
+<td>variable</td>
+<td>referencia (puntero a una cadena)</td>
+<td>aún nada (referencia vacía o nula)</td>
+<td>Se trata de una variable que puede cambiar de valor, que almacena la dirección de memoria (referencia o "puntero") donde se encontrará una cadena de caracteres que representa el nombre de una persona.</td>
+</tr>
+<tr>
+<td><strong><span style="font-size: medium;"><code>MAXIMO_NUMERO_PLANTAS</code></span></strong></td>
+<td>entero (<strong><span style="font-size: medium;"><code>int</code></span></strong>)</td>
+<td>constante</td>
+<td>primitivo (un número entero)</td>
+<td>valor entero 12</td>
+<td>Se trata de una variable que una vez que se le asigne un primer valor ya no podrá cambiar y que almacena el máximo número de plantas que puede tener un edificio. Se le ha asignado el valor 12. Ese valor ya no se podrá cambiar.</td>
+</tr>
+<tr>
+<td><strong><span style="font-size: medium;"><code><strong><span style="font-size: medium;"><code>PI</code></span></strong></code></span></strong></td>
+<td>real (<strong><span style="font-size: medium;"><code>double</code></span></strong>)</td>
+<td>constante</td>
+<td>primitivo (un número real)</td>
+<td>valor real 3.1415926536</td>
+<td>Se trata de una variable que una vez que se le asigne un primer valor, ya no podrá cambiarse y que almacena el valor la constante geométrica <abbr title="pi">π</abbr> (4,1415926536).</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>Como puedes observar se trata de pequeños casilleros donde se almacena cierta información básica (tipos <strong>primitivos</strong>) o bien una referencia (dirección de memoria) a información más compleja (tipos <strong>referenciados</strong>). En unos casos puede tratarse de información cambiante (<strong>mutable</strong>) y en otros constante (<strong>inmutable</strong>).</p>
+<p><strong><span class="destacado_inline">En Java para indicar que una variable es inmutable o constante hay que utilizar el modificador <span style="font-size: medium;"><code>final</code></span> en su declaración.</span></strong></p>
+<div id="tf2102ca9-3d29-a702-d584-843c25a426fa" class="exe-tooltip-text">
+<p>Elementos de una clase u objeto compuestos por una serie de sentencias que sirven para describir las acciones a realizar con esa clase u objeto.</p>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="83_palabras_reservadas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="841_tipos_de_variables_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

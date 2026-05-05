@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1.5.- Metacaracteres y escapado. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-85"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_expresiones_regulares.html" class="current-page-parent daddy">3.- Expresiones regulares.</a>
+   <ul>
+      <li class="current-page-parent"><a href="31_construccin_de_expresiones_regulares.html" class="current-page-parent daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul>
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li id="active"><a href="315_metacaracteres_y_escapado.html" class="active no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="314_alternativas_operador_barra__o_disyuntor.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.1.5.- Metacaracteres y escapado.</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id351">
+<div class="iDevice emphasis0">
+<div id="ta351_85" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="fire-ga881f1f14_640.png" alt="Salida de incendios." title="Salida" style="float: right;" width="240" height="240" /><figcaption class="figcaption"><a href="https://pixabay.com/es/vectors/fuego-la-seguridad-se%c3%b1ales-simbolos-40631/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Clker-Free-Vector-Images en Pixabay (se abre en una nueva ventana).">Clker-Free-Vector-Images</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Como ya has podido observar, dentro del contexto de una expresión regular algunos caracteres no tienen su significado "literal", sino que cumplen otra función. Entre ellos se encuentran las <strong>llaves</strong> (usadas para cuantificar elementos), los <strong>paréntesis</strong> (utilizados para agrupar elementos básicos y así formar elementos mayores), los <strong>corchetes</strong> (para indicar conjuntos de posibles valores), la <strong>barra</strong> (operador disyuntor), el <strong>asterisco</strong> (cuantificador), el <strong>guion dentro de unos corchetes</strong> (para indicar rangos), la <strong>interrogación</strong> (cuantificador), <abbr title="etcétera">etc</abbr>. A estos símbolos, que pierden su significado "literal" para cumplir una función más avanzada, se les suele llamar <strong>metacaracteres</strong>.</p>
+<p>Como ya habíamos hecho con las cadenas en Java, para poder indicar el significado "literal" de esos caracteres es necesario <strong>escaparlos</strong> mediante el carácter <strong>barra invertida</strong> '<code>\</code>'. Es decir que si en una expresión queremos indicar que puede aparecer un asterisco, dado que carácter <code>*</code> ya tiene un significado especial (metacarácter), debemos escribir <code>\*</code> para dejar claro que nos estamos refiriendo al carácter "asterisco" y no al "cuantificador asterisco".  Dependiendo del contexto dentro de la expresión regular, es posible que a veces sea necesario llevar a cabo el escape y en otras no. Por ejemplo, el asterisco tiene normalmente significado como cuantificador, pero si lo incluimos dentro de unos corchetes (para indicar un conjunto de opciones), entonces no hay que escaparlo porque dentro de los corchetes ya no existe el concepto de cuantificación (no tiene sentido).</p>
+<p>Por ejemplo:</p>
+<ul>
+<li class="lista_verificacion">la expresión regular <code>x*</code> representa una cadena que consiste en un carácter '<code>x</code>' cero o más veces;</li>
+<li class="lista_verificacion">sin embargo, la expresión regular <code>x\*</code> representa la cadena "<code>x*</code>" (el carácter '<code>x</code>' seguido del carácter '<code>*</code>').</li>
+</ul>
+<p>Ahora bien, dado que <strong>normalmente vamos a escribir las expresiones regulares entre comillas dobles</strong>, que es como <strong>Java</strong> las trata (utiliza objetos <code>String</code> para procesarlas), habrá que tener en cuenta que <strong>en las cadenas de Java la barra invertida ya sirve para escapar</strong>.  Eso significa que si escribes "<code>x\*</code>", tendrás un problema de interpretación en Java, dado que se estaría intentando escapar el asterisco dentro de la propia cadena y confundiéndose lo que quieres indicar.</p>
+<p>Digamos que aquí tendríamos dos "niveles" de escape. Uno inmediato (el de los <code>String</code> de Java) y otro superior (el de la sintaxis de las expresiones regulares). Por tanto, cuando encerremos una expresión regular entre comillas (que será lo habitual, al menos al trabajar en un lenguaje de programación convencional), tendremos que "escapar" la barra invertida dentro de la cadena para poder indicar que queremos literalmente una barra. De ese modo no se perderá en ese "primer nivel" de escape y conservaremos la barra invertida para el intérprete de expresiones regulares.</p>
+<p>La conclusión de todo esto es que <strong>cada vez que vayamos a utilizar una barra invertida (<code>\</code>) en una expresión regular entre comillas tendremos que escribir dos barras invertidas ("<code>\</code><code>\</code>")</strong>.</p>
+<p>Por tanto, en el ejemplo anterior, la expresión regular entre comillas debería haber quedado así: "<code>x\\*</code>". Esa "doble barra invertida" significará para las cadenas en Java que deseamos escribir realmente una barra invertida dentro de la cadena (hemos "escapado" la barra invertida). Así habremos "conservado" la barra y podrá usarse a continuación, en el intérprete de expresiones regulares de Java, para escapar el asterisco e indicar que deseamos hacer "match" con un asterisco y no llevar a cabo una cuantificación del elemento anterior.</p>
+<p>Veamos un ejemplo. Imagina que quieres elaborar una expresión regular que represente cadenas que empiecen con la barra invertida (<code>\</code>), a continuación un espacio, un asterisco (<code>*</code>), un símbolo de suma (<code>+</code>) y otro espacio. Tras esto una palabra que empiece en mayúscula y con el resto de letras en minúscula (<code>[A-Z][a-z]*</code>). Finalmente, la cadena debe finalizar obligatoriamente con otro espacio, otro símbolo de suma, otro asterisco, otro espacio y otra barra invertida.</p>
+<p>Para implementar ese patrón tendríamos que incluir el asterisco escapado (<code>\*</code>), la barra invertida escapada (<code>\\</code>) y el símbolo de suma (<code>\+</code>): </p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>\\ \*\+ [A-Z][a-z]* \+\* \\</code></pre>
+</div>
+</div>
+<p>Esa expresión regular admitirá cadenas como, por ejemplo, "<code>\ *+ Hola +* \</code>". Así podrías utilizarla, por ejemplo, en la herramienta <span lang="en">online</span> <a href="https://regexr.com/" title="Enlace la herramienta online regexr.com para construir y validar expresiones regulares (se abre en una nueva ventana)." target="_blank" class="html">Regexr.com</a>.</p>
+<p>Ahora bien, dado que nosotros normalmente <strong>encerraremos esa expresión regular entre comillas dobles</strong> (para poder usarla como una cadena en Java), <strong>cada vez que aparezca una barra invertida, habrá que añadirle otra para que la cadena de Java entienda cada dos barras invertidas como una barra invertida "literal"</strong>. Es decir, que cada barra invertida (<code>\</code>) habrá que sustituirla por un par de barras invertidas (<code>\\</code>):</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>"\\\\ \\*\\+ [A-Z][a-z]* \\+\\* \\\\"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ClozefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id352">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta352_122" class="block instructions iDevice_content">
+<div id="ta248_122" class="block instructions iDevice_content">
+<div id="ta243_122" class="block instructions iDevice_content">
+<div id="ta241_122" class="block instructions iDevice_content">
+<p><strong>Dadas las siguientes expresiones regulares:</strong></p>
+<table class="tabla" summary="Tabla para relacionar los tipos de datos primitivos de la primera columna con las características que los define, que figura en la tercera columna."><caption>Expresiones regulares</caption>
+<thead>
+<tr><th scope="col">Número</th><th scope="col">Expresión Regular</th><th scope="col">Número</th><th scope="col">Expresión Regular</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="texto_centrado">1</td>
+<td>"<code>/\\*[A-Za-z0-9_ ]*\\*/</code>"</td>
+<td style="text-align: center;">4</td>
+<td>"<code>\\*+<code></code></code>"</td>
+</tr>
+<tr>
+<td class="texto_centrado">2</td>
+<td>"<code>[*+]+</code>"</td>
+<td style="text-align: center;">5</td>
+<td>"<code>\\{\\+*\\}</code>"</td>
+</tr>
+<tr>
+<td class="texto_centrado">3</td>
+<td>"<code>/\\*[A-Za-z0-9_ ]*\\*/|//<code>*[A-Za-z0-9_ ]*</code></code>"</td>
+<td style="text-align: center;">6</td>
+<td>
+<p>"<code>\\{+\\}+</code>"</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p><strong>relaciónalas con los tipos de textos o cadenas con las que harían "matching" o "acoplamiento":</strong></p>
+</div>
+</div>
+</div>
+</section>
+<section class="activity" id="activity-352_123"><form name="cloze-form-352_123" action="#" class="activity-form cloze-activity-form"><div id="cloze352_123"><input type="hidden" name="clozeFlag352_123.strictMarking" id="clozeFlag352_123.strictMarking" value="false"/>
+<input type="hidden" name="clozeFlag352_123.checkCaps" id="clozeFlag352_123.checkCaps" value="false"/>
+<input type="hidden" name="clozeFlag352_123.instantMarking" id="clozeFlag352_123.instantMarking" value="false"/>
+<table class="tabla" summary="Tabla para relacionar los tipos de datos primitivos de la primera columna con las características que los define, que figura en la tercera columna."><caption>Textos</caption>
+<thead>
+<tr><th scope="col">Número de expresión regular</th><th scope="col">Cadenas que encajan con la expresión regular (hacen "matching")</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank352_123.0" class="sr-av">Rellenar huecos (1):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank352_123.0" style="width:1ch" /><span style="display:none" id="clozeAnswer352_123.0">JXUwMDZj
+</span></td>
+<td style="text-align: justify;">Cadenas formadas únicamente por asteriscos ('<code>*</code>'). Por ejemplo: "<code>*</code>", "<code>**</code>", "<code>****</code>", <abbr title="etcétera">etc</abbr>. Debe haber al menos un asterisco.</td>
+</tr>
+<tr>
+<td class="texto_centrado" style="text-align: center;"><label for="clozeBlank352_123.1" class="sr-av">Rellenar huecos (2):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank352_123.1" style="width:1ch" /><span style="display:none" id="clozeAnswer352_123.1">JXUwMDZl
+</span></td>
+<td style="text-align: justify;">Cadenas que contienen una cantidad indeterminada de caracteres '<code>{</code>' (debe haber al menos uno) y a continuación otra cantidad indeterminada de caracteres '<code>}</code>' (debe también haber al menos uno). No tienen por qué ser la misma cantidad. No puede haber ningún otro carácter entre los dos bloques de llaves. Por ejemplo: "<code>{}</code>", "<code>{{{{}</code>", "<code>{}}}</code>", "<code>{{}}}</code>", <abbr title="etcétera">etc</abbr>.</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank352_123.2" class="sr-av">Rellenar huecos (3):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank352_123.2" style="width:1ch" /><span style="display:none" id="clozeAnswer352_123.2">JXUwMDY5
+</span></td>
+<td>
+<p style="text-align: justify;">Cadenas que representan comentarios de tipo <code>/*</code> . . .<code>*/</code> en Java. Por ejemplo: "<code>/*Comentario*/</code>", "<code>/* Esto es un comentario*/</code>", "<code>/*xxx*/</code>", "<code>/*123*/</code>", <abbr title="etcétera">etc</abbr>.</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank352_123.3" class="sr-av">Rellenar huecos (4):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank352_123.3" style="width:1ch" /><span style="display:none" id="clozeAnswer352_123.3">JXUwMDZh
+</span></td>
+<td>
+<p style="text-align: justify;">Cadenas formadas por combinaciones de los caracteres '<code>+</code>' y '<code>*</code>'. Por ejemplo: "<code>+</code>", "<code>++</code>", "<code>+**+++</code>", "<code>***</code>", <abbr title="etcétera">etc</abbr>. En este caso no es necesario escapar los símbolos '<code>*</code>' o '<code>+</code>', pues está dentro de unos corchetes y en ese contexto no son metacaracteres. Tienen su significado literal.</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank352_123.4" class="sr-av">Rellenar huecos (5):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank352_123.4" style="width:1ch" /><span style="display:none" id="clozeAnswer352_123.4">JXUwMDZk
+</span></td>
+<td style="text-align: justify;">Cadenas que contienen una cantidad indeterminada de caracteres '<code>+</code>' (puede no haber ninguno). Toda la secuencia (que puede ser vacía) estará encerrada entre llaves. Por ejemplo: "<code>{}</code>", "<code>{+}</code>", "<code>{++}</code>", "<code>{+++}</code>", <abbr title="etcétera">etc</abbr>.</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank352_123.5" class="sr-av">Rellenar huecos (6):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank352_123.5" style="width:1ch" /><span style="display:none" id="clozeAnswer352_123.5">JXUwMDZi
+</span></td>
+<td style="text-align: justify;">Cadenas que representan los dos posibles comentarios en Java: los de tipo <code>/*</code> . . .<code>*/</code> y los de tipo <code>//</code> . . . Por ejemplo: "<code>/*Comentario*/</code>", "<code>/* Esto es un comentario*/</code>", "<code>/*xxx*/</code>", "<code>/*123*/</code>", "<code>// Comentario</code>" <abbr title="etcétera">etc</abbr>. En este caso los dos caracteres de la doble barra no invertida (<code>//</code>) no hay que escaparlos porque no son metacaracteres y tienen siempre su significado literal.</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>Recuerda siempre que si estas expresiones regulares no van entre comillas (por ejemplo, si las vas a usar en la herramienta <span lang="en">online</span> <a href="https://regexr.com/" title="Enlace la herramienta online regexr.com para construir y validar expresiones regulares (se abre en una nueva ventana)." target="_blank" class="html">Regexr.com</a>) habría que escribir nada más que una barra invertida ('<code>\</code>') y no doble barra invertida ('<code>\\</code>').</p><div class="block iDevice_buttons"><p><input class="button" type="submit" name="submit352_123" value="Enviar"  id="submit352_123" />
+<input type="button" name="restart352_123" value="Reiniciar" style="display:none" id="restart352_123" onclick="$exe.cloze.restart('352_123')" />
+ <input type="button" name="352_123showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton352_123" onclick="$exe.cloze.fillInputs('352_123')" />
+<span class="js-hidden js-warning">Habilitar JavaScript</span></p></div><div id="clozeScore352_123"></div></div></form></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id353">
+<div class="iDevice emphasis0">
+<div id="ta353_85" class="block iDevice_content">
+<p>Por último, vamos a ver algunos metacaracteres y construcciones adicionales que pueden ayudarnos a enriquecer nuestras expresiones:</p>
+<ul class="lista_verificacion">
+<li><span style="font-size: medium;"><strong>Circunflejo '<code>^</code>' dentro de unos corchetes</strong>:</span><strong><span style="font-size: medium;"> "<code>[^abc]</code>"</span></strong>. Aunque ya lo hemos visto, no viene mal recordar que el símbolo <strong><span style="font-size: medium;"><code>'^'</code></span></strong>, cuando se pone justo detrás del corchete de apertura, significa "negación". La expresión regular admitirá cualquier símbolo diferente a los puestos entre corchetes. En este caso, cualquier símbolo diferente de <strong><span style="font-size: medium;"><code>"a"</code></span></strong>, <strong><span style="font-size: medium;"><code>"b"</code></span></strong> o <strong><span style="font-size: medium;"><code>"c"</code></span></strong>. Es decir, es justo lo contrario a los corchetes. Cuidado, porque fuera de los corchetes tiene otro significado.</li>
+<li><span style="font-size: medium;"><span style="font-size: medium;"><strong>Comienzo y fin de línea</strong>, <strong>circunflejo y dólar</strong>:</span></span><span style="font-size: medium;"> </span><strong><span style="font-size: medium;">"<code>^...$</code>"</span></strong>. Cuando el símbolo <strong><span style="font-size: medium;"><code>'^'</code></span></strong> aparece al comienzo de la expresión regular, permite indicar comienzo de línea o de entrada. El símbolo <strong><span style="font-size: medium;">"<code>$</code>"</span></strong> permite indicar fin de línea o fin de entrada. Usándolos podemos verificar que una línea completa (de principio a fin) encaje con la expresión regular. Puede resultar muy útil cuando se trabaja en <a href="#tcd207f54-4a4c-e4cb-b739-47599d6ada5b" id="linkcd207f54-4a4c-e4cb-b739-47599d6ada5b" class="exe-tooltip definition-tt titled-tt" data-hasqtip="0" title="Modo multilínea | ">modo multilínea</a>. Recuerda que si deseas utilizar esos caracteres de manera "literal", tendrás que escaparlos.</li>
+<li><strong><span style="font-size: medium;">Carácter comodín '<code>.</code>'</span></strong>. El punto simboliza cualquier carácter (pero solo uno, si necesitas indicar más de uno deberás cuantificarlo).</li>
+</ul>
+<p>Además de lo anterior, también te proponemos algunas construcciones habitualmente admitidas en las expresiones regulares que permiten simplificar su escritura:</p>
+<ul class="lista_verificacion">
+<li><strong><span style="font-size: medium;">"<code>\\d</code>"</span></strong>. Un <strong>dígito numérico</strong>. Equivale a <strong><span style="font-size: medium;">"<code>[0-9]</code>"</span></strong>.</li>
+<li><strong><span style="font-size: medium;">"<code>\\D</code>"</span></strong>. Cualquier cosa <strong>excepto un dígito numérico</strong>. Equivale a<strong><span style="font-size: medium;"> "<code>[^0-9]</code>"</span></strong>.</li>
+<li><strong><span style="font-size: medium;">"<code>\\s</code>"</span></strong>. Un <strong>espacio en blanco</strong> (incluye espacios, tabulaciones, saltos de línea y otras formas de espacio).</li>
+<li><strong><span style="font-size: medium;">"<code>\\S</code>"</span></strong>. Cualquier cosa <strong>excepto un espacio en blanco</strong>.</li>
+<li><strong><span style="font-size: medium;">"<code>\\w</code>"</span></strong>. Cualquier carácter que podrías encontrar en un <strong>identificador</strong> (letras mayúsculas, minúsculas, dígitos y carácter '<strong><span style="font-size: medium;"><code>_</code></span></strong>') . Equivale a <strong><span style="font-size: medium;">"<code>[a-zA-Z_0-9]</code>"</span></strong>.</li>
+</ul>
+<p>Estas construcciones abreviadas puedes incluirlas dentro de unos corchetes. Podrías escribir, por ejemplo <strong><span style="font-size: medium;">"<code><strong><span style="font-size: medium;"><code>[</code></span></strong><strong><span style="font-size: medium;"><code>\</code></span></strong>\dABC]</code>"</span></strong><span style="font-size: medium;"> y sería equivalente a </span><strong><span style="font-size: medium;">"<code><strong><span style="font-size: medium;"><code>[</code></span></strong><strong><span style="font-size: medium;"><code>0-9</code></span></strong>ABC]</code>"</span></strong>.</p>
+<p>Recuerda una vez más que si no van entre comillas (por ejemplo, si los vas a usar en la herramienta <span lang="en">online</span> <a href="https://regexr.com/" title="Enlace la herramienta online regexr.com para construir y validar expresiones regulares (se abre en una nueva ventana)." target="_blank" class="html">Regexr.com</a>) habría que escribir nada más que una barra invertida ('<code>\</code>'). Por ejemplo <strong><span style="font-size: medium;"><code>\d</code></span></strong>.</p>
+<p>Además de estas construcciones, tienes muchas otras que puedes consultar en la documentación según vayas necesitando.</p>
+<div id="tcd207f54-4a4c-e4cb-b739-47599d6ada5b" class="exe-tooltip-text">
+<p>Las cadenas que contienen en su interior saltos de línea, a veces no se procesan apropiadamente con las expresiones regulares, dado que éstas, se limitan a verificar generalmente solo la primera línea. El modo multilínea permite buscar líneas completas, que encajan con un patrón dentro de una cadena que contiene varias líneas.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id354">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta354_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b354" class="block iDevice_content">
+<p>Construye una expresión regular que represente una dirección de correo electrónico con el siguiente formato:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>nombre@dominio.dom</code></pre>
+</div>
+</div>
+<p>donde:</p>
+<ul>
+<li class="lista_verificacion">el <em>nombre</em> puede estar compuesto por letras (mayúsculas o minúsculas), dígitos numéricos, guion ('<code>-</code>'), guion bajo/subrayado/<span class="lista_verificacion" lang="en">underscore</span> ('<code>_</code>') o punto ('<code>.</code>'). Ha de empezar por una letra. Debe tener como mínimo tres caracteres y como máximo quince;</li>
+<li class="lista_verificacion">el <em>dominio</em> puede estar compuesto por letras (mayúsculas o minúsculas), dígitos numéricos o el guion ('<code>-</code>'). No puede comenzar por un número ni por el guion y no puede haber dos guiones seguidos. Debe estar formado como mínimo por un carácter y no tiene tamaño máximo;</li>
+<li class="lista_verificacion">el dominio de nivel superior (<acronym title="Top Level Domain">TLD</acronym>), <em>dom</em>, debe tener como mínimo dos caracteres y como máximo seis. Debe estar formado únicamente por letras (mayúsculas o minúsculas).</li>
+</ul>
+</section>
+<form name="feedback-form-quesFeedback0b354" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b354text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b354" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b354" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Como siempre, lo más recomendable es "atacar" el problema fragmentándolo en pequeños subpatrones que luego podremos unir:</p>
+<ul>
+<li class="lista_verificacion">para el <em>nombre</em> podríamos plantear algo del estilo a <code>[A-Za-z][\w.-]{2,14}</code>. Si utilizamos la construcción <code>\w</code> nos ahorramos tener que escribir los rangos de las letras, los dígitos y el guion bajo. Recuerda que el tamaño mínimo es dos y que el primer carácter tiene que ser una letra obligatoriamente;</li>
+<li class="lista_verificacion">para el <em>dominio</em> podríamos construir algo como <code>[A-Za-z](\-?[A-Za-z0-9]+)*</code>;</li>
+<li class="lista_verificacion">para el dominio de nivel superior (<em>dom</em>) el patrón podría ser <code>[A-Za-z]{2,6}</code>.</li>
+</ul>
+<p>Juntándolo todo, nos quedaría algo así:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>[A-Za-z][\w.-]{2,14}@[A-Za-z](\-?[A-Za-z0-9]+)*\.[A-Za-z]{2,6}</code></pre>
+</div>
+</div>
+<p>Recuerda que hay que escapar el punto ('<code>.</code>') porque es un metacarácter (significa cualquier carácter). Si queremos referirnos a su significado literal como "punto" hay que indicar <code>\.</code> para que sea el punto y no un comodín.</p>
+<p>Y si lo vamos a utilizar en algún lenguaje de programación, como por ejemplo en Java, y, por tanto, hay que encerrarlo entre comillas para crear un literal de cadena, entonces recuerda que debemos escapar toda las barras invertidas si las hubiera:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>"[A-Za-z][\\w.-]{2,14}@[A-Za-z](\\-?[A-Za-z0-9]+)*\\.[A-Za-z]{2,6}"</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="314_alternativas_operador_barra__o_disyuntor.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

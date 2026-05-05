@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>9.3.2.- Manipulación de documentos XML (III). Eliminar un hijo y modificar un elemento texto. | PROG07_Contenidos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="Juan Antonio Reina" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-34"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">PROG07_Contenidos</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos externas (ficheros).</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1.- Introducción.</a>
+   <ul class="other-section">
+      <li><a href="11_excepciones.html" class="no-ch">1.1.- Excepciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_concepto_de_flujo.html" class="no-ch">2.- Concepto de flujo.</a></li>
+   <li><a href="3_clases_relativas_a_flujos.html" class="daddy">3.- Clases relativas a flujos.</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplo_comentado_de_una_clase_con_flujos.html" class="no-ch">3.1.- Ejemplo comentado de una clase con flujos.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4.- Flujos.</a>
+   <ul class="other-section">
+      <li><a href="41_flujos_predefinidos_entrada_y_salida_estndar.html" class="no-ch">4.1.- Flujos predefinidos. Entrada y salida estándar.</a></li>
+      <li><a href="42_flujos_predefinidos_entrada_y_salida_estndar_ejemplo.html" class="no-ch">4.2.- Flujos predefinidos. Entrada y salida estándar. Ejemplo.</a></li>
+      <li><a href="43_flujos_basados_en_bytes.html" class="no-ch">4.3.- Flujos basados en bytes.</a></li>
+      <li><a href="44_flujos_basados_en_caracteres.html" class="no-ch">4.4.- Flujos basados en caracteres.</a></li>
+      <li><a href="45_rutas_de_los_ficheros.html" class="no-ch">4.5.- Rutas de los ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_trabajando_con_ficheros.html" class="daddy">5.- Trabajando con ficheros.</a>
+   <ul class="other-section">
+      <li><a href="51_escritura_y_lectura_de_informacin_en_ficheros.html" class="no-ch">5.1.- Escritura y lectura de información en ficheros.</a></li>
+      <li><a href="52_ficheros_binarios_y_ficheros_de_texto_i.html" class="daddy">5.2.- Ficheros binarios y ficheros de texto (I).</a>
+      <ul class="other-section">
+         <li><a href="521_ficheros_binarios_y_ficheros_de_texto_ii.html" class="no-ch">5.2.1.- Ficheros binarios y ficheros de texto (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="53_modos_de_acceso_registros.html" class="no-ch">5.3.- Modos de acceso. Registros.</a></li>
+      <li><a href="54_acceso_secuencial.html" class="no-ch">5.4.- Acceso secuencial.</a></li>
+      <li><a href="55_acceso_aleatorio.html" class="no-ch">5.5.- Acceso aleatorio.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_aplicaciones_del_almacenamiento_de_informacin_en_ficheros.html" class="no-ch">6.- Aplicaciones del almacenamiento de información en ficheros.</a></li>
+   <li><a href="7_utilizacin_de_los_sistemas_de_ficheros.html" class="daddy">7.- Utilización de los sistemas de ficheros.</a>
+   <ul class="other-section">
+      <li><a href="71_clase_file.html" class="no-ch">7.1.- Clase File.</a></li>
+      <li><a href="72_interface_filenamefilter.html" class="no-ch">7.2.- Interface FilenameFilter.</a></li>
+      <li><a href="73_creacin_y_eliminacin_de_ficheros_y_directorios.html" class="no-ch">7.3.- Creación y eliminación de ficheros y directorios.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_almacenamiento_de_objetos_en_ficheros_persistencia_serializacin.html" class="daddy">8.- Almacenamiento de objetos en ficheros. Persistencia. Serialización.</a>
+   <ul class="other-section">
+      <li><a href="81_serializacin_utilidad.html" class="no-ch">8.1.- Serialización: utilidad.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="9_tratamiento_de_documentos_estructurados_xml.html" class="current-page-parent daddy">9.- Tratamiento de documentos estructurados XML.</a>
+   <ul>
+      <li><a href="91_qu_es_un_documento_xml.html" class="no-ch">9.1.- ¿Qué es un documento XML?</a></li>
+      <li><a href="92_libreras_para_procesar_documentos_xml_i_convertir_el_archivo__xml_a_rbol_dom.html" class="daddy">9.2.- Librerías para procesar documentos XML (I). Convertir el archivo  XML a árbol DOM</a>
+      <ul class="other-section">
+         <li><a href="921_libreras_para_procesar_documentos_xml_ii_transformar_el_rbol__dom_en_archivo__xml.html" class="no-ch">9.2.1.- Librerías para procesar documentos XML (II). Transformar el árbol  DOM en archivo  XML.</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="93_manipulacin_de_documentos_xml_i_obtener_el_elemento_raz_y_buscar_un_elemento.html" class="current-page-parent daddy">9.3.- Manipulación de documentos XML (I). Obtener el elemento raíz, y buscar un elemento.</a>
+      <ul>
+         <li><a href="931_manipulacin_de_documentos_xml_ii_obtener_y_procesar_la_lista_de_hijos_y_aadir_uno_nuevo.html" class="no-ch">9.3.1.- Manipulación de documentos XML (II). Obtener y procesar la lista de hijos y añadir uno nuevo.</a></li>
+         <li id="active"><a href="932_manipulacin_de_documentos_xml_iii_eliminar_un_hijo_y_modificar_un_elemento_texto.html" class="active no-ch">9.3.2.- Manipulación de documentos XML (III). Eliminar un hijo y modificar un elemento texto.</a></li>
+         <li><a href="933_manipulacin_de_documentos_xml_iv_manejar_atributos_de_un_elemento.html" class="no-ch">9.3.3.- Manipulación de documentos XML (IV). Manejar atributos de un elemento.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="931_manipulacin_de_documentos_xml_ii_obtener_y_procesar_la_lista_de_hijos_y_aadir_uno_nuevo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="933_manipulacin_de_documentos_xml_iv_manejar_atributos_de_un_elemento.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">9.3.2.- Manipulación de documentos XML (III). Eliminar un hijo y modificar un elemento texto.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id152">
+<div class="iDevice emphasis0">
+<div id="ta152_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 200px;"><img src="PROG07_CONT_R059_Matroshka.jpg" alt="Fotografía en la que se muestra un juego abierto de muñecas Matroshka." title="Las muñecas Matroshka son el mejor ejemplo de anidamiento." style="float: right;" width="200" height="136" />
+<div class="figcaption"><a href="https://es.wikipedia.org/wiki/Archivo:Russian-Matroshka_no_bg.jpg" target="_blank" class="author">Fanghong</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank" title="Creative Commons BY-SA">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+<p><br />Seguimos con las operaciones sobre árboles <acronym title="Document Object Model." lang="en">DOM</acronym>. ¿Sabrías cómo eliminar nodos de un árbol? ¿No? Vamos a descubrirlo.</p>
+<p><span class="destacado_inline"><strong>Eliminar un elemento hijo de otro elemento</strong>.</span></p>
+<p>Para eliminar un nodo, hay que recurrir al nodo padre de dicho nodo. En el nodo padre se invoca el método <code>removeChild()</code>, al que se le pasa la instancia de la clase <code>Element</code> con el nodo a eliminar (no el nombre de la etiqueta, sino la instancia), lo cual implica que primero hay que buscar el nodo a eliminar, y después eliminarlo. Veamos un ejemplo:</p>
+<div class="codigo elemento_centrado" style="width: 38.45em;">
+<div class="texto_izquierda">
+<pre><code>NodeList listaNodos3=documento.getElementsByTagName("DIRECCION_ENTREGA");</code>
+</pre>
+<pre><code>for (int i=0;i&lt;<code>listaNodos3</code>.getLength();i++){         </code>
+</pre>
+<pre><code>     Element elemento=(Element) <code>listaNodos3</code>.item(i);</code>
+</pre>
+<pre><code>     Element padre = (Element)<code>elemento</code>.getParentNode();</code>
+</pre>
+<pre><code>     padre.removeChild(elemento); </code>
+</pre>
+<pre><code>}</code>
+</pre>
+</div>
+</div>
+<p> </p>
+<p>En el ejemplo anterior se eliminan todas las etiquetas, estén donde estén, que se llamen "<code>DIRECCION_ENTREGA</code>". Para ello ha sido necesario buscar todos los elementos cuya etiqueta sea esa (como se explicó en ejemplos anteriores), recorrer los resultados obtenidos de la búsqueda, obtener el nodo padre del hijo a través del método <code>getParentNode()</code>, para así poder eliminar el nodo correspondiente con el método <code>removeChild()</code>.</p>
+<p>No es obligatorio obviamente invocar al método <code>getParentNode()</code> si el nodo padre es conocido. Por ejemplo, si el nodo es un hijo del elemento o etiqueta raíz, hubiera bastado con poner lo siguiente:</p>
+<div class="codigo elemento_centrado" style="width: 28em;">
+<div class="texto_izquierda">
+<pre><code>documento.getDocumentElement().removeChild(elemento);</code>
+</pre>
+</div>
+</div>
+<p> </p>
+<p><span class="destacado_inline"><strong>Cambiar el contenido de un elemento cuando solo es texto</strong>.</span></p>
+<p>Los métodos <code>getTextContent()</code> y <code>setTextContent()</code>, aplicados a un elemento, permiten respectivamente acceder al texto contenido dentro de un elemento o etiqueta o modificar dicho contenido. Tienes que tener cuidado, porque utilizar <code>setTextContent()</code> significa eliminar cualquier hijo (sub-elemento por ejemplo) que previamente tuviera la etiqueta. Ejemplo:</p>
+<div class="codigo elemento_centrado" style="width: 54.4em;">
+<div class="texto_izquierda">
+<pre><code>Element nuevo=documento.createElement(DIRECCION_RECOGIDA").setTextContent("C/Del Medio S/N");</code>
+</pre>
+<pre><code>System.out.println(nuevo.getTextContent());</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id153">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<div id="actitity-153_55">
+<form name="multi-select-form-153_55" action="#" class="activity-form multi-select-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion153_55" class="block question iDevice_content">
+<p><strong>De los siguientes tipos de nodos, marca aquellos en los que no se pueda ejecutar dos veces el m&eacute;todo <code>appendChild()</code>:</strong></p>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op153_550" class="sr-av"><a href="#answer-153_58">Opción 1</a></label><input type="checkbox" id="op153_550" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-153_58"><a name="answer-153_58"></a>
+<div id="taans153_58" class="block iDevice_content">
+<p><code>Document</code>.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-153_550" style="display:none"></div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op153_551" class="sr-av"><a href="#answer-153_151">Opción 2</a></label><input type="checkbox" id="op153_551" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-153_151"><a name="answer-153_151"></a>
+<div id="taans153_151" class="block iDevice_content">
+<p><code>Element</code>.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-153_551" style="display:none"></div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op153_552" class="sr-av"><a href="#answer-153_153">Opción 3</a></label><input type="checkbox" id="op153_552" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-153_153"><a name="answer-153_153"></a>
+<div id="taans153_153" class="block iDevice_content">
+<p><code>Text</code>.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-153_552" style="display:none"></div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op153_553" class="sr-av"><a href="#answer-153_155">Opción 4</a></label><input type="checkbox" id="op153_553" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-153_155"><a name="answer-153_155"></a>
+<div id="taans153_155" class="block iDevice_content">
+<p><code>Attr</code>.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-153_553" style="display:none"></div>
+</div>
+</div>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-153_55" /> 
+</p>
+</div>
+<div id="f153_55" class="js-hidden js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+
+<div id="tafeedback153_55" class="feedback iDevice_content">
+<p>Solo tiene sentido insertar nodos en los nodos tipo <code>Element</code> y <code>Document</code>, pero en los documentos<acronym title="eXtended Markup Language." lang="en"> XML</acronym> solo puede haber una etiqueta ra&iacute;z, es decir, solo puede haber un nodo hijo tipo <code>Element</code> dentro de un <code>Document</code>, &iquest;recuerdas? Si intentas a&ntilde;adir otro nodo ra&iacute;z dentro de un documento obtendr&aacute;s una inc&oacute;moda excepci&oacute;n.</p>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-153_58" class="right">Correcto</a></li>
+<li><a href="#answer-153_151" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-153_153" class="right">Correcto</a></li>
+<li><a href="#answer-153_155" class="right">Correcto</a></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="931_manipulacin_de_documentos_xml_ii_obtener_y_procesar_la_lista_de_hijos_y_aadir_uno_nuevo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="933_manipulacin_de_documentos_xml_iv_manejar_atributos_de_un_elemento.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

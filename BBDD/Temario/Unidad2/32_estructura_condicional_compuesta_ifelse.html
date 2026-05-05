@@ -1,0 +1,937 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.2.- Estructura condicional compuesta: if-else. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul class="other-section">
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_estructuras_de_seleccin_o_condicionales.html" class="current-page-parent daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul>
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li id="active"><a href="32_estructura_condicional_compuesta_ifelse.html" class="active no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li><a href="34_estructura_selectiva_mltiple_switch_i.html" class="daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul class="other-section">
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul class="other-section">
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li><a href="45_estructura_repetitiva_for_i.html" class="daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul class="other-section">
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul class="other-section">
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="31_estructura_condicional_simple_if.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="33_estructuras_condicionales_anidadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3.2.- Estructura condicional compuesta: if-else.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id14">
+<div class="iDevice emphasis0">
+<div id="ta14_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a title="Imagen Ampliada para Diagrama de flujo de sentencia if else" href="PROG03_CONT_R02_diagramaifelse.jpg"><img alt="Un rombo verde con la inscripción “expresión” muestra a sus lados las palabras “verdadero” y “falso”, de ellas parten dos flechas a sendos rectágulos en los que están escritas las palabras “secuencia1” y “secuencia2” respectivamente. De estos recuadros, parten dos flechas que se unen en una circunferencia pequeña y de ésta parte otra flecha hacia abajo." class="imagen_ampliable" src="PROG03_CONT_R02_diagramaifelse_miniatura.jpg" style="width: 196px; height: 160px;" title="Diagrama de flujo de sentencia if else." width="196" height="160" /></a></div>
+</div>
+<p>Una vez que hemos visto en detalle la estructura condicional simple, vamos a estudiar ahora la estructura condicional compuesta, también conocida como <code>if</code>-ese. En este caso si tendremos que implementar los dos posibles caminos alternativos (bloques de sentencias), dependiendo de que la condición se evalúe como verdadera (<code>true</code>) o como falsa (<code>false</code>), tal y como se indica en la representación en diagrama de flujo de la imagen de la derecha:</p>
+<ul class="lista_verificacion">
+<li><strong>Si la expresión que se evalúa es verdadera</strong>, <strong>se ejecuta la secuencia de instrucciones 1</strong>.</li>
+<li><strong>Si es falsa, se ejecuta la secuencia de instrucciones 2</strong>. En este caso, esta rama sí existe. Si no la hubiera, estaríamos en el caso anterior de una estructura condicional "simple".</li>
+</ul>
+<p>En lenguaje natural (o <a href="#tb9649008-82f7-47b9-bd9e-6968056548ec" id="linkb9649008-82f7-47b9-bd9e-6968056548ec" class="exe-tooltip definition-tt titled-tt" title="Pesudocódigo | Ver la definición">pseudocódigo</a>), esto se expresaría como:</p>
+<table class="tabla" summary="Tabla que representa la forma de indicar en pseudocódigo la estructura if simple y la estructura if de doble alternativa (o if-else)" border="0"><caption>Estructura <code>if-else</code> en lenguaje natural</caption>
+<tbody>
+<tr><th scope="col">Estructura condicional de doble alternativa. (<strong><span style="font-size: medium;"><code>Si-entonces-Si no</code></span></strong>).</th></tr>
+<tr>
+<td>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>Si expresion Entonces
+   secuencia_1
+Sino
+   secuencia_2
+Fin Si</code></pre>
+</div>
+</div>
+<code></code></td>
+</tr>
+<tr>
+<td>
+<p><strong>Funcionamiento:</strong></p>
+<p>Si <strong><span style="font-size: medium;"><code>expresion</code></span></strong> es evaluada como verdadera, se ejecuta <strong><span style="font-size: medium;"><code>secuencia_1</code></span></strong> y en caso contrario, no se ejecuta <strong><span style="font-size: medium;"><code>secuencia_1</code></span></strong> y se ejecuta <span style="font-size: medium;"><strong><code>secuencia_2</code></strong></span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Fíjate que la palabra <code>Entonces</code><strong><em></em></strong> se pone para delimitar con claridad dónde termina la expresión que se va a evaluar y dónde empieza la secuencia de instrucciones del primer bloque. En la parte <code>Sino</code><strong><em></em></strong> no es necesario, ya que esa misma palabra delimita el final del primer bloque de instrucciones y el comienzo del segundo. Y se pondría un <code>Fin Si</code><strong><em></em></strong><strong></strong> que delimita dónde acaba la sentencia condicional, bien sea delimitando el final del único bloque de sentencias en el condicional simple o bien delimitando el segundo.</p>
+<p>Una vez que tenemos clara la estructura, vamos a ver como se particulariza en el lenguaje Java, pues cada lenguaje de programación tendrá sus particularidades específicas.</p>
+<p>La estructura condicional <code>if</code> puede presentarse en <span lang="en">Java</span> de las siguientes formas:</p>
+<table class="tabla" summary="En esta tabla aparece la sintaxis de la estructura if simple, con una única sentencia a ejecutar o con un bloque. Por otra parte, se expresa la sintaxis de la estructura if-else, con una única sentencia o bloque de ellas a ejecutar en cada una de las alternativas posibles. "><caption>Estructura <code>if-else</code> en <span lang="en">Java</span></caption>
+<thead>
+<tr><th scope="col" colspan="2">Estructura <code>if</code> de doble alternativa ( o <strong><span style="font-size: medium;"><code>if-else</code><code></code></span></strong>).</th></tr>
+</thead>
+<tbody>
+<tr><th scope="col"><strong><strong>Sintaxis para el caso de ejecución condicional  de dos ramas y una sola  sentencia en cada rama<br /></strong></strong></th><th scope="col"><strong><strong><strong>Sintaxis para el caso de ejecución condicional  de dos ramas y un bloque de sentencias en cada rama</strong></strong></strong></th></tr>
+<tr>
+<td>
+<div class="highlighted-code language-markup">
+<div>
+<pre class="  language-markup"><code class="  language-markup">if (expresion_logica)
+    sentencia_1;
+else
+    sentencia_2;</code></pre>
+</div>
+</div>
+</td>
+<td>
+<div class="highlighted-code language-markup">
+<div>
+<pre class="  language-markup"><code class="  language-markup">if (expresion_logica) {
+     sentencia_1;
+     . . .
+     sentencia_N;
+} else {
+     sentencia_1;
+     . . .
+     sentencia_N;
+}
+</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p><strong>Funcionamiento:</strong></p>
+<p>Si la evaluación de la <code>expresion_logica</code> ofrece un resultado verdadero, se ejecutará la primera sentencia o el primer bloque de sentencias. Si, por el contrario, la evaluación de la <code>expresion_logica</code> ofrece un resultado falso, no se ejecutará la primera sentencia o el primer bloque y sí se ejecutará la segunda sentencia o el segundo bloque.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<div id="tb9649008-82f7-47b9-bd9e-6968056548ec" class="exe-tooltip-text">
+<p>El pseudocódigo consiste en la descripción de algoritmos mediante el uso del lenguaje natural. De este modo el código que se escribe es independiente de cualquier lenguaje de programación formal y debería poder entenderlo cualquier persona nativa del idioma (español, inglés, francés, etc.) en que se haya escrito el algoritmo.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id179">
+<div class="iDevice emphasis0">
+<div id="ta179_154" class="block iDevice_content">
+<p>Antes de seguir avanzando, veamos un ejemplo de uso: ¿cómo podríamos utilizar la estructura condicional <code>if-else</code> para completar el ejercicio del apartado anterior de manera que se muestre por pantalla un texto donde se indique si un número entero leído desde teclado es par o impar? (en el ejercicio anterior solo si indicaba si el número era par, pues no teníamos <code>else</code>).</p>
+<div id="ta157_154" class="block iDevice_content">
+<p>Una forma muy sencilla para llevar a cabo la comprobación podría ser la siguiente:</p>
+<div class="highlighted-code language-java line-numbers hightlight-3and4and5">
+<div>
+<pre><code>if (numero % 2 == 0) {  // Si el resto de la división entera entre 2 es cero, el número es par
+    System.out.println("El número es par.");
+} else { // Si no, el número es impar
+    System.out.println("El número es impar.");
+}</code> </pre>
+</div>
+</div>
+</div>
+<p>Como puedes observar, se trata de añadir el componente <code>else</code> a la estructura de control condicional (líneas 3-5). Con esto podemos indicar qué queremos que se haga cuando:</p>
+<ol>
+<li>el resultado de evaluar la condición sea <code>true</code>: <code>System.out.println("El número es par.");</code></li>
+<li>el resultado de evaluar la condición sea <code>false</code>: <code>System.out.println("El número es impar.");</code></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id181">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta181_148" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b181" class="block iDevice_content">
+<p>Teniendo en cuenta el ejercicio anterior, implementa el programa completo que lea desde teclado un número entero e indique si se trata de un número par o impar.</p>
+</div>
+<form name="feedback-form-quesFeedback0b181" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b181text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b181" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b181" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Se trataría simplemente de unir las dos partes:</p>
+<ol>
+<li>la lectura del número;</li>
+<li>la comprobación del número:</li>
+</ol>
+<div class="highlighted-code language-java">
+<div>
+<pre class="  language-java"><code class="  language-java">Scanner teclado <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> numero<span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Introduzca un número entero: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+numero <span class="token operator">=</span> teclado<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>numero <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">// Si el resto de la división entera entre 2 es cero, el número es par</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"El número es par."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// Si no, el número es impar</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"El número es impar."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id180">
+<div class="iDevice emphasis0">
+<div id="ta180_154" class="block iDevice_content">
+<p>Algunas consideraciones más a tener en cuenta sobre las sentencias condicionales en Java<span lang="en"></span>:</p>
+<ul class="lista_verificacion">
+<li><strong>La cláusula <code>else</code> de la sentencia <code>if</code> no es obligatoria</strong>. En algunos casos no necesitaremos utilizarla, pero sí se recomienda cuando es necesario llevar a cabo alguna acción en el caso de que la expresión lógica no se cumpla.</li>
+<li>En aquellos casos en los que no existe cláusula <code>else</code>, si la expresión lógica es falsa, simplemente se continuarán ejecutando las siguientes sentencias que aparezcan bajo la estructura condicional <code>if</code> . Es lo que hemos llamado en el apartado aterior estructura condicional simple.</li>
+<li><strong>Los condicionales <code>if</code> e <code>if-else</code> pueden anidarse</strong>, de tal forma que dentro de un bloque de sentencias puede incluirse otro <code>if</code> o <code>if-else</code>. El nivel de anidamiento queda a criterio del programador, pero si éste es demasiado profundo podría provocar problemas de eficiencia y legibilidad en el código. En otras ocasiones, un nivel de anidamiento excesivo puede hacernos pensar en la necesidad de utilización de otras estructuras de selección más adecuadas.</li>
+<li>Cuando se utiliza anidamiento de este tipo de estructuras, es necesario poner especial atención en saber a qué <code>if</code> está asociada una cláusula <code>else</code>. Normalmente, <strong>un <code>else </code>estará asociado con el <code>if</code> inmediatamente superior o más cercano que exista dentro del mismo bloque y que no se encuentre ya asociado a otro <code>else</code></strong>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id153">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-153_141" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion153_141" class="block question iDevice_content">
+<p><strong>¿Qué mostrará por pantalla el siguiente fragmento de código?</strong></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int x=100;
+if ( x &lt; 100 ) 
+    System.out.println ("¡Enhorabuena!");
+</code></pre>
+</div>
+</div>
+<p></p>
+</div>
+<div class="iDevice_hint">
+<h4 class="iDevice_hint_title">Sugerencia</h4>
+<div class="iDevice_hint_content js-hidden">
+<div id="tahint153_141" class="block iDevice_content">
+<p>Tienes que plantearte qué valor va a dar lugar la evaluación de la expresión <code>x&lt;100</code> sabiendo que la variable <code>x</code> contiene el valor 100. ¿Será <code>true</code> o <code>false</code>?</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i153_144" class="sr-av"><a href="#answer-153_144">Opción 1</a></label><input type="radio" name="option153_141" id="i153_144" class="exe-radio-option exe-radio-option-0-3-153_141-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-153_144"><a name="answer-153_144"></a>
+<div id="taans153_144" class="block iDevice_content">
+<p>Mostrará el texto "¡Enhorabuena!".</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i153_4014" class="sr-av"><a href="#answer-153_4014">Opción 2</a></label><input type="radio" name="option153_141" id="i153_4014" class="exe-radio-option exe-radio-option-1-3-153_141-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-153_4014"><a name="answer-153_4014"></a>
+<div id="taans153_4014" class="block iDevice_content">
+<p>No se mostrará nada por pantalla.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i153_4017" class="sr-av"><a href="#answer-153_4017">Opción 3</a></label><input type="radio" name="option153_141" id="i153_4017" class="exe-radio-option exe-radio-option-2-3-153_141-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-153_4017"><a name="answer-153_4017"></a>
+<div id="taans153_4017" class="block iDevice_content">
+<p>Mostrará el texto "¡Lo siento!".</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b153_141" class="feedback js-hidden"><a name="sa0b153_141"></a>
+<div id="taf153_144" class=" iDevice_content">
+<p>Incorrecto. La sentencia <code>System.out.println ("¡Enhorabuena!")</code> se ejecutará sólo si la variable <code>x</code> tiene un <strong>valor menor que 100</strong>, y en este caso vale exactamente 100. Es decir, que la evaluación de la expresión <code>x&lt;100</code> será <code>false</code> y por tanto la ejecución no entrará dentro del bloque de sentencias asociado al <code>if</code>.</p>
+</div>
+</div>
+<div id="sa1b153_141" class="feedback js-hidden"><a name="sa1b153_141"></a>
+<div id="taf153_4014" class=" iDevice_content">
+<p>Correcto. La evaluación de la expresión <code>x&lt;100</code> será <code>false</code> y por tanto la ejecución no entrará dentro del <code>if</code>.</p>
+</div>
+</div>
+<div id="sa2b153_141" class="feedback js-hidden"><a name="sa2b153_141"></a>
+<div id="taf153_4017" class=" iDevice_content">
+<p>Error. Ese texo no aparece en ninguna parte del fragmento de código, por tanto es imposible que se pueda mostrar por pantalla...</p>
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-153_144">Incorrecto</a><span> (<a href="#sa0b153_141">Retroalimentación</a>)</span></li>
+<li><a href="#answer-153_4014">Opción correcta</a><span> (<a href="#sa1b153_141">Retroalimentación</a>)</span></li>
+<li><a href="#answer-153_4017">Incorrecto</a><span> (<a href="#sa2b153_141">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+<br/><div class="question">
+<form name="multi-choice-form-153_4020" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion153_4020" class="block question iDevice_content">
+<p><strong>¿Qué mostrará por pantalla el siguiente fragmento de código?</strong></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int x=100;
+if ( x &gt;= 100 ) 
+    System.out.println ("¡Enhorabuena!");
+else
+    System.out.println ("¡Lo siento!");</code></pre>
+</div>
+</div>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i153_4023" class="sr-av"><a href="#answer-153_4023">Opción 1</a></label><input type="radio" name="option153_4020" id="i153_4023" class="exe-radio-option exe-radio-option-0-3-153_4020-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-153_4023"><a name="answer-153_4023"></a>
+<div id="taans153_4023" class="block iDevice_content">
+<p>Mostrará el texto "¡Enhorabuena!".</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i153_4026" class="sr-av"><a href="#answer-153_4026">Opción 2</a></label><input type="radio" name="option153_4020" id="i153_4026" class="exe-radio-option exe-radio-option-1-3-153_4020-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-153_4026"><a name="answer-153_4026"></a>
+<div id="taans153_4026" class="block iDevice_content">
+<p>No se mostrará nada por pantalla.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i153_4029" class="sr-av"><a href="#answer-153_4029">Opción 3</a></label><input type="radio" name="option153_4020" id="i153_4029" class="exe-radio-option exe-radio-option-2-3-153_4020-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-153_4029"><a name="answer-153_4029"></a>
+<div id="taans153_4029" class="block iDevice_content">
+<p>Mostrará el texto "¡Lo siento!".</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b153_4020" class="feedback js-hidden"><a name="sa0b153_4020"></a>
+<div id="taf153_4023" class=" iDevice_content">
+<p>¡Correcto! La sentencia <code>System.out.println ("¡Enhorabuena!")</code> se ejecutará cuando la variable <code>x</code> tiene un valor <span style="text-decoration: underline;"><strong>igual o superior</strong></span> 100, y en este caso vale exactamente 100. Es decir, que la evaluación de la expresión <code>x&gt;=100</code> será <code>true</code> y por tanto la ejecución entrará dentro del bloque de sentencias asociado al <code>if</code>.</p>
+</div>
+</div>
+<div id="sa1b153_4020" class="feedback js-hidden"><a name="sa1b153_4020"></a>
+<div id="taf153_4026" class=" iDevice_content">
+<p>Incorrecto. Dado que tanto el bloque <code>if</code> como el bloque <code>else</code> escriben algo en pantalla, algo se mostrará en pantalla. Por uno de los dos bloques ha de pasar el flujo de ejecución obligatoriamente. La evaluación de la expresión <code>x&gt;=100</code> tiene que ser necesariamente <code>true</code> o <code>false</code>, no hay más valores posibles.</p>
+</div>
+</div>
+<div id="sa2b153_4020" class="feedback js-hidden"><a name="sa2b153_4020"></a>
+<div id="taf153_4029" class=" iDevice_content">
+<p>¡Error! Dado que el contenido de la variable <code>x</code> es 100, la evaluación de la expresión <code>x&gt;=100</code> será <code>true</code> y por tanto la ejecución entrará dentro del bloque de sentencias asociado al <code>if</code>. Eso significa que se mostrará por pantalla el texto "¡Enhorabuena!".</p>
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-153_4023">Opción correcta</a><span> (<a href="#sa0b153_4020">Retroalimentación</a>)</span></li>
+<li><a href="#answer-153_4026">Incorrecto</a><span> (<a href="#sa1b153_4020">Retroalimentación</a>)</span></li>
+<li><a href="#answer-153_4029">Incorrecto</a><span> (<a href="#sa2b153_4020">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+<br/><div class="question">
+<form name="multi-choice-form-153_4032" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion153_4032" class="block question iDevice_content">
+<p><strong>¿Qué mostrará por pantalla el siguiente fragmento de código?</strong></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int x=100;
+if ( x &lt; 100 ) 
+    System.out.println ("¡Enhorabuena!");
+else
+    System.out.println ("¡Lo siento!");</code></pre>
+</div>
+</div>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i153_4035" class="sr-av"><a href="#answer-153_4035">Opción 1</a></label><input type="radio" name="option153_4032" id="i153_4035" class="exe-radio-option exe-radio-option-0-3-153_4032-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-153_4035"><a name="answer-153_4035"></a>
+<div id="taans153_4035" class="block iDevice_content">
+<p>Mostrará el texto "¡Enhorabuena!".</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i153_4038" class="sr-av"><a href="#answer-153_4038">Opción 2</a></label><input type="radio" name="option153_4032" id="i153_4038" class="exe-radio-option exe-radio-option-1-3-153_4032-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-153_4038"><a name="answer-153_4038"></a>
+<div id="taans153_4038" class="block iDevice_content">
+<p>No se mostrará nada por pantalla.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i153_4041" class="sr-av"><a href="#answer-153_4041">Opción 3</a></label><input type="radio" name="option153_4032" id="i153_4041" class="exe-radio-option exe-radio-option-2-3-153_4032-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-153_4041"><a name="answer-153_4041"></a>
+<div id="taans153_4041" class="block iDevice_content">
+<p>Mostrará el texto "¡Lo siento!".</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b153_4032" class="feedback js-hidden"><a name="sa0b153_4032"></a>
+<div id="taf153_4035" class=" iDevice_content">
+<p>¡Error! Dado que el contenido de la variable <code>x</code> es 100, la evaluación de la expresión <code>x &lt; 100</code> será <code>false</code> y por tanto la ejecución entrará dentro del bloque de sentencias asociado al <code>else</code>. Eso significa que se mostrará por pantalla el texto "¡Lo siento!".</p>
+</div>
+</div>
+<div id="sa1b153_4032" class="feedback js-hidden"><a name="sa1b153_4032"></a>
+<div id="taf153_4038" class=" iDevice_content">
+<p>Incorrecto. Dado que tanto el bloque <code>if</code> como el bloque <code>else</code> escriben algo en pantalla, algo se mostrará en pantalla. Por uno de los dos bloques ha de pasar el flujo de ejecución obligatoriamente. La evaluación de la expresión <code>x&gt;=100</code> tiene que ser necesariamente <code>true</code> o <code>false</code>, no hay más valores posibles.</p>
+</div>
+</div>
+<div id="sa2b153_4032" class="feedback js-hidden"><a name="sa2b153_4032"></a>
+<div id="taf153_4041" class=" iDevice_content">
+<p>¡Correcto! Dado que el contenido de la variable <code>x</code> es 100, la evaluación de la expresión <code>x &lt; 100</code> será <code>false</code> y por tanto la ejecución entrará dentro del bloque de sentencias asociado al <code>else</code>. Eso significa que se mostrará por pantalla el texto "¡Lo siento!".</p>
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-153_4035">Incorrecto</a><span> (<a href="#sa0b153_4032">Retroalimentación</a>)</span></li>
+<li><a href="#answer-153_4038">Incorrecto</a><span> (<a href="#sa1b153_4032">Retroalimentación</a>)</span></li>
+<li><a href="#answer-153_4041">Opción correcta</a><span> (<a href="#sa2b153_4032">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id154">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta154_148" class="block story iDevice_content">
+<p>Nos han pedido que escribamos un programa en Java que solicite un número entero e indique por pantalla si se trata de un número positivo o no. Para ello se mostrará uno de estos dos posibles mensajes:</p>
+<ul>
+<li class="lista_verificacion">"<em>El número es positivo</em>", si en efecto el número es positivo (mayor que cero).</li>
+<li class="lista_verificacion">"<em>El número no es positivo</em>", si el número no es positivo (cero o negativo, es decir, menor o igual que cero).</li>
+</ul>
+</div>
+<div id="taquesQuestion0b154" class="block iDevice_content">
+<p>Implementarlo utilizando una estructura condicional de tipo <strong><code>if-else</code></strong>.</p>
+</div>
+<form name="feedback-form-quesFeedback0b154" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b154text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b154" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b154" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La manera más sencilla de implementar este programa es simplemente construir una sentencia condicional con la condición <strong><code>numero&gt;0</code></strong>. Si esa condición es verdadera (bloque de sentencias del <strong><code>if</code></strong>) se mostrará el mensaje de que el número es positivo, y si no es así (bloque de sentencias del <strong><code>else</code></strong>) se indicará que no es positivo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Scanner teclado = new Scanner(System.in);
+int numero;
+System.out.print("Introduzca un número entero: ");
+numero = teclado.nextInt(); // Lectura de un entero desde teclado
+if (numero&gt;0) {
+    System.out.println("El número es positivo.");
+} else {
+    System.out.println("El número no es positivo.");
+}
+</code></pre>
+</div>
+</div>
+<p>Dado que tanto el bloque <strong><code>if</code></strong> como el bloque <strong><code>else</code></strong> tan solo contienen una sentencia (una línea) podrían eliminarse las llaves de ambos bloques, quedando el código así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int numero;
+System.out.print("Introduzca un número entero: ");
+numero = teclado.nextInt();
+if (numero&gt;0) 
+    System.out.println("El número es positivo.");
+else 
+    System.out.println("El número no es positivo.");</code></pre>
+</div>
+</div>
+<p>Dependerá de ti si quieres usar las llaves o no en estos casos. Las llaves pueden aportar claridad, pero también es cierto que un exceso de llaves puede provocar lo contrario. Según vayas construyendo programas con una estructura más compleja lo irás descubriendo tú mismo.</p></div>
+</form>
+<div id="taquesQuestion1b154" class="block iDevice_content">
+<p>Implementa ahora el programa utilizando la condición contraria que hayas usado antes. Lo más habitual es que hayas usado la condición <strong><code>numero &gt; 0</code></strong>. Por tanto la condición contraría sería <strong><code>numero &lt;= 0</code></strong> o bien <strong><code>!(numero &gt; 0)</code></strong>.</p>
+</div>
+<form name="feedback-form-quesFeedback1b154" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b154text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b154" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b154" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso, si lo que comprobamos es la condición inversa (que no sea positivo), en el bloque asociado al <strong><code>if</code></strong> habrá que colocar la frase "El número no es positivo" y la contraria en el bloque asociado al <strong><code>else</code></strong>.</p>
+<p>Para ello podemos usar la condición <strong><code>numero &lt;= 0</code></strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.print("Introduzca un número entero: ");
+numero = teclado.nextInt();
+if (numero&lt;=0) {
+    System.out.println("El número no es positivo.");
+} else {
+    System.out.println("El número es positivo.");
+}</code></pre>
+</div>
+</div>
+<p>O bien la condición <strong><code>!(numero &gt; 0)</code></strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.print("Introduzca un número entero: ");
+numero = teclado.nextInt();
+if (!(numero &gt; 0)) {
+    System.out.println("El número no es positivo.");
+} else {
+    System.out.println("El número es positivo.");
+}</code></pre>
+</div>
+</div>
+<p>Tendría el mismo efecto.</p>
+<p>Nuevamente aquí si lo deseas puedes evitar las llaves en todos aquellos bloques que sean de una única línea, que en este caso son todos.</p></div>
+</form>
+<div id="taquesQuestion2b154" class="block iDevice_content">
+<p>¿Se te ocurre cómo podrías haber resuelto este mismo problema sin usar la estructura <strong><code>if-else</code></strong>? Como pista te decimos que podrías utilizar el operador condicional <strong><code>?</code></strong> que ya vimos en la unidad anterior.</p>
+</div>
+<form name="feedback-form-quesFeedback2b154" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b154text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b154" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b154" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso se trata de una condición tan sencilla que queda hasta más corto si se usa el operador condicional:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.print("Introduzca un número entero: ");
+numero = teclado.nextInt();
+System.out.println ( numero &gt; 0 ? "El número es positivo." : "El número no es positivo.");
+</code></pre>
+</div>
+</div>
+<p>Dado que una buena parte del texto se repite (lo único que cambia es que aparezca o no la palabra "no") podríamos hasta habernos ahorrado escribir dos veces todo el texto y decidir cuándo hay que incluir el "no". Por ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.print("Introduzca un número entero: ");
+numero = teclado.nextInt();
+String esPositivo= numero &gt; 0 ? "" : "no "; // Si el número es positivo no se concatena nada; si no, concatenaremos "no"
+System.out.println("El número " + esPositivo + "es positivo.");</code></pre>
+</div>
+</div></div>
+</form>
+<div id="taquesQuestion3b154" class="block iDevice_content">
+<p>Por último, ¿se te ocurre alguna manera de escribir el programa utilizando una estructura <strong><code>if</code></strong> simple sin <strong><code>else</code></strong>?</p>
+</div>
+<form name="feedback-form-quesFeedback3b154" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b154text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b154" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback3b154" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>El problema lo podemos enfocar de muchas formas diferentes, pero quizá la más fácil sea hacer algo similar a lo que hemos hecho anteriormente con el operador condicional <code>?</code>. Usamos una cadena para almacenar el "no" o bien no almacenar nada, de manera que así generaremos el texto de resultado apropiado según cada caso. Por ejemplo, podríamos hacer algo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.print("Introduzca un número entero: ");
+numero = teclado.nextInt();
+String esPositivo= ""; // Cadena vacía si es positivo o con el texto "no" si no lo es
+if (numero &lt;= 0) {
+    esPositivo= "no ";
+}
+System.out.println("El número " + esPositivo + "es positivo.");</code></pre>
+</div>
+</div>
+<p>Esta sería una de las múltiples posibilidades. Se nos pueden ocurrir muchas formas diferentes de resolverlo. Como puedes observar, normalmente no hay una manera única de escribir un programa. Lo que sí hay que procurar es que sea claro y fácil de entender.</p>
+<p>Dado que el bloque <code>if</code> tan solo contiene una sentencia (una línea), podríamos evitar en este caso las llaves:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.print("Introduzca un número entero: ");
+numero = teclado.nextInt();
+String esPositivo= ""; // Cadena vacía si es positivo o con el texto "no" si no lo es
+if (numero &lt;= 0)
+    esPositivo= "no ";
+System.out.println("El número " + esPositivo + "es positivo.");</code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id158">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta158_148" class="block story iDevice_content">
+<p>Nos han pedido que escribamos un programa en Java que a partir de una calificación (número real) entre 0 y 10 (ambos inclusive) muestre por pantalla el mensaje "<em>APROBADO</em>" si la nota es igual o superior a 5 o bien "<em>SUSPENSO</em>" si es inferior a 5.</p>
+</div>
+<div id="taquesQuestion0b158" class="block iDevice_content">
+<p>Implementa ese programa utilizando una <strong>estructura de tipo condicional</strong>. Intenta que el texto de resultado sea almacenado en una variable de salida (llamada por ejemplo <code>calificacionCualitativa</code>) y procura separar el programa en los tres bloques que recomendábamos en la unidad anterior: <strong>entrada de datos</strong>, <strong>procesamiento</strong> y <strong>salida de resultados</strong>.</p>
+<p><strong>Coloca un comentario delante de cada bloque</strong> y <strong>separa cada bloque con al menos una línea en blanco</strong>. Coloca también <strong>un primer bloque adicional donde declares todas las variables</strong> que vayas a utilizar incluyendo a su derecha un pequeño comentario sobre cada variable. Observarás que el código queda mucho más claro y legible.</p>
+</div>
+<form name="feedback-form-quesFeedback0b158" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b158text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b158" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b158" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En el anterior ejercicio hemos observado varias formas diferentes de resolver este tipo de problemas donde existen dos resultados posibles en función del valor de una variable. Si escogemos la primera forma que vimos, utilizando la estructura <code>if-else</code>, obtendríamos algo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+Scanner teclado = new Scanner(System.in);  // Objeto Scanner para la lectura desde teclado
+double calificacionNumerica;               // Variable de entrada
+String calificacionCualitativa="SUSPENSO"; // Variable de salida
+
+// Entrada de datos
+System.out.print("Introduzca la calificación (entre 0.0 y 10.0): ");
+calificacionNumerica= teclado.nextDouble();
+
+// Procesamiento
+if (calificacionNumerica&gt;=5 ) {
+    calificacionCualitativa= "APROBADO";
+} else {
+    calificacionCualitativa= "SUSPENSO";
+}
+
+// Salida de resultados
+System.out.println (calificacionCualitativa);</code></pre>
+</div>
+</div>
+<p>Otra opción podría haber sido asignar el valor inicial "SUSPENSO" a la variable <code>calificacionCualitativa</code> y sólo hacer la comprobación de si el valor de la calificación es superior o igual a 5. En caso contrario (para un suspenso) no habría que hacer nada (no necesitaríamos el <code>else</code>), pues ya hemos asignado el valor suspenso como estado inicial a la variable de resultado. El código podría quedar entonces así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+Scanner teclado = new Scanner(System.in);  // Objeto Scanner para la lectura desde teclado
+double calificacionNumerica;
+String calificacionCualitativa= "SUSPENSO"; // Asignamos inicialmente un suspenso
+
+// Entrada de datos
+System.out.print("Introduzca la calificación (entre 0.0 y 10.0): ");
+calificacionNumerica= teclado.nextDouble();
+
+// Procesamiento
+if (calificacionNumerica&gt;=5 ) { // A partir de 5 es aprobado, si no quedará suspenso
+    calificacionCualitativa= "APROBADO";
+}
+
+// Salida de resultados
+System.out.println (calificacionCualitativa);</code></pre>
+</div>
+</div>
+<p>Volvemos a observar que las formas de resolver un mismo problema con programas diferentes son múltiples y a veces muy distintas. Lo importante es decidirse por una solución cuyo código que sea <strong>claro</strong>, <strong>limpio</strong> y <strong>legible</strong>.</p></div>
+</form>
+<div id="taquesQuestion1b158" class="block iDevice_content">
+<p>Dado que en nuestra escuela cualquier valor por debajo de 0.0 o por encima de 10.0 no tiene sentido como una calificación numérica, amplía el programa anterior para que si se introduce un valor fuera del rango válido, no se lleve a cabo la comprobación y se muestre un mensaje de salida del tipo "<em>Calificación introducida no válida</em>".</p>
+</div>
+<form name="feedback-form-quesFeedback1b158" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b158text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b158" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b158" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso lo primero que debemos hacer, antes de comprobar si la calificación es de aprobado o suspenso, es comprobar que esa calificación está dentro del rango válido (entre 0.0 y 10.0 ambos inclusive). Si no es así, directamente habremos terminado el programa y no hacemos ninguna comprobación más. Si por el contrario la calificación está dentro del rango, entonces si haremos la comprobación que llevábamos a cabo en el programa anterior (comprobar si estamos por encima o por debajo del 5). Para ello podemos hacer uso de una variable auxiliar de tipo <code>boolean</code> donde almacenemos si la calificación introducida ha sido válida.</p>
+<p>El código podría quedar entonces así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+Scanner teclado = new Scanner(System.in);  // Objeto Scanner para la lectura desde teclado
+double calificacion;                       // Variable de entrada
+String calificacionCualitativa="SUSPENSO"; // Variable de salida
+boolean calificacionValida;                // Variable intermedia o auxiliar
+
+// Entrada de datos
+System.out.print("Introduzca la calificación (entre 0.0 y 10.0): ");
+calificacion = teclado.nextDouble();
+if ( calificacion &lt; 0.0 || calificacion &gt; 10.0 ) // Comprobamos si NO está en el rango válido
+    calificacionValida= false;  // En tal caso la calificación no es válida
+else
+    calificacionValida= true;   // En caso contrario la calificación sí es válida
+
+// Procesamiento
+// Sólo llevamos a cabo las comprobaciones si la califcacion es válida
+if (calificacionValida) {
+    if ( calificacion &gt;= 5 )  // Es un caso de anidamiento: un if dentro de otro if
+        calificacionCualitativa= "APROBADO";
+}
+
+// Salida de resultados
+if (calificacionValida) 
+    System.out.println (calificacionCualitativa);
+else
+    System.out.println ("La calificación introducida no es válida (debía estar entre 0 y 10).");</code></pre>
+</div>
+</div>
+<p>Como puedes observar, aquí se ha producido un caso de <strong>anidamiento de estructuras de control condicionales</strong>: una sentencia <code>if</code> dentro de otra sentencia <code>if</code> (la comprobación de la calificación sólo se hace si ésta está dentro del rango válido). No hay ningún problema. Se pueden hacer tantos anidamientos como nos hagan falta. Eso sí, teniendo en cuenta siempre las consideraciones de las que hemos hablado antes.</p>
+<p>Respecto a la primera sentencia <code>if</code> (comprobación de la validez de la calificación) podríamos haber optado por dar un valor inicial (por ejemplo "suponer" que la entrada va a ser válida e inciamos la variable <code>calificacionValida</code> a <code>true</code>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+...
+boolean calificacionValida= true;           // Variable intermedia o auxiliar</code></pre>
+</div>
+</div>
+<p>Y por tanto ya no necesitaríamos incluir el <code>else</code>, pues si la calificación no está en el rango válido, se asignará a la variable <code>calificacionValida</code> el valor <code>false</code>. Pero en caso contrario no será necesario ponerla a <code>true</code> porque ya tiene el valor <code>true</code> desde su declaración. En tal caso la sentencia <code>if</code> quedaría más corta (sin <code>else</code>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Entrada de datos
+System.out.print("Introduzca la calificación (entre 0.0 y 10.0): ");
+calificacion = teclado.nextDouble();
+if ( calificacion &lt; 0.0 || calificacion &gt; 10.0 ) // Comprobamos si NO está en el rango válido
+    calificacionValida= false;  // En tal caso la calificación no es válida</code></pre>
+</div>
+</div>
+<p>Otra posibilidad sería haber dado un valor inicial a <code>false</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+...
+boolean calificacionValida= false;          // Variable intermedia o auxiliar</code></pre>
+</div>
+</div>
+<p>y entonces en el <code>if</code> habríamos hecho la comprobación contraria, también sin la necesidad de <code>else</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if ( calificacion &gt;= 0.0 &amp;&amp; calificacion &lt;= 10.0 ) // Comprobamos si está en el rango válido
+    calificacionValida= true;  // En tal caso la calificación sí es válida</code></pre>
+</div>
+</div>
+<p>Ten en cuenta que la condición contraria a "<span style="background-color: #ffff99;"><em>calificación <strong>por debajo de</strong> cero <strong>o</strong> <strong>por encima</strong> de 10</em></span>":</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>calificacion &lt; 0.0 || calificacion &gt; 10.0</code></pre>
+</div>
+</div>
+<p>es "<span style="background-color: #ffff99;"><em>calificación <strong>a partir de </strong>cero<strong> (incluido)</strong> <strong>y a la vez</strong> <strong>como máximo hasta </strong>10<strong> (incluido)</strong></em></span>":</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>calificacion &gt;= 0.0 &amp;&amp; calificacion &lt;= 10.0  </code></pre>
+</div>
+</div>
+<p>Ambas condiciones nos pueden servir y son igual de válidas. Ahora bien, dado que están expresando precisamente la condición contraria, habrá que hacer justo lo contrario en su bloque de sentencias asociado.</p>
+<p>Como puedes observar, la<strong> riqueza de posibilidades en el uso y combinación de los operadores relacionales y los operadores lógicos</strong> para crear condiciones puede dar lugar a muchas formas diferentes de expresar lo mismo y por tanto plantearte múltiples maneras de resolver los problemas. Nuevamente habrá que intentar escoger aquéllas que aporten la mayor <strong>claridad y legibilidad</strong> a nuestro código. ¡Hay que procurar por todos los medios que nuestros programas se entiendan lo mejor posible! Si no, el mantenimiento de ese código acabará conviertiéndose en una pesadilla para la persona que tenga que modificarlo para corregir errores o ampliar su funcionalidad.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice em_iDevice_recomendacionfpd" id="id133">
+<div class="iDevice emphasis_recomendacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_recomendacionfpd.png)"><h2 class="iDeviceTitle">Recomendación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta133_46" class="block iDevice_content">
+<p><strong>Buena práctica de programación</strong></p>
+<ul class="lista_verificacion">
+<li style="text-align: justify;">Utiliza la <strong>sangría</strong> o <strong>indentación</strong> en ambos cuerpos de una estructura <code>if-else</code>.</li>
+<li style="text-align: justify;">Si hay <strong>varios niveles de sangría</strong>, en cada nivel debe aplicarse la <strong>misma cantidad de espacios en blanco</strong>.</li>
+<li style="text-align: justify;"><strong>Colocar siempre las llaves</strong> en una instrucción <code>if-else</code> (y en general en cualquier estructura de control) ayuda a evitar que se omitan de manera accidental especialmente cuando posteriormente se agregan instrucciones a una cláusula <code>if</code> o <code>else</code>. Para evitar que esto suceda, algunos programadores prefieren escribir la llave inicial y final de los bloques antes de escribir las instrucciones individuales dentro de ellas.</li>
+</ul>
+<p><strong>Errores de programación</strong></p>
+<ul class="lista_verificacion">
+<li><strong>Olvidar una o las dos llaves que delimitan un bloque</strong> puede provocar errores de sintaxis o errores lógicos en un programa.</li>
+<li>Colocar <strong>un punto y coma después de la condición en una instrucción </strong><code>if-else</code> produce un error lógico en las instrucciones <code>if</code> de selección simple, y un error de sintaxis en las instrucciones <code>if-else</code> de selección doble (cuando la parte del <code>if</code> contiene una instrucción en el cuerpo).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id16">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-16_60" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion16_60" class="block question iDevice_content">
+<p><strong> ¿Cuándo se mostrará por pantalla el mensaje incluido en el siguiente fragmento de código?</strong></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (numero % 2 == 0);
+    System.out.print("El número es par");</code></pre>
+</div>
+</div>
+</div>
+<div class="iDevice_hint">
+<h4 class="iDevice_hint_title">Sugerencia</h4>
+<div class="iDevice_hint_content js-hidden">
+<div id="tahint16_60" class="block iDevice_content">
+<p>Observa bien todos los puntos y comas del código...</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i16_63" class="sr-av"><a href="#answer-16_63">Opción 1</a></label><input type="radio" name="option16_60" id="i16_63" class="exe-radio-option exe-radio-option-0-3-16_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-16_63"><a name="answer-16_63"></a>
+<div id="taans16_63" class="block iDevice_content">
+<p>Nunca.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i16_102" class="sr-av"><a href="#answer-16_102">Opción 2</a></label><input type="radio" name="option16_60" id="i16_102" class="exe-radio-option exe-radio-option-1-3-16_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-16_102"><a name="answer-16_102"></a>
+<div id="taans16_102" class="block iDevice_content">
+<p>Siempre.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i16_105" class="sr-av"><a href="#answer-16_105">Opción 3</a></label><input type="radio" name="option16_60" id="i16_105" class="exe-radio-option exe-radio-option-2-3-16_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-16_105"><a name="answer-16_105"></a>
+<div id="taans16_105" class="block iDevice_content">
+<p>Cuando el resto de la división entre 2 del contenido de la variable <code>numero</code> sea cero.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b16_60" class="feedback js-hidden"><a name="sa0b16_60"></a>
+<div id="taf16_63" class=" iDevice_content">
+<p>Incorrecto. Sí resulta posible que la sentencia que imprime el mensaje en pantalla sea ejecutada. ¿Pero será siempre, o será cuando el resto de la división entre 2 del contenido de la variable <code>numero</code> sea cero?</p>
+</div>
+</div>
+<div id="sa1b16_60" class="feedback js-hidden"><a name="sa1b16_60"></a>
+<div id="taf16_102" class=" iDevice_content">
+<p>¡Correcto! Efectivamente, <strong>al haber un punto y coma detrás de la expresión lógica de la estructura <code>if</code>, lo que se está diciendo es que si esa condición es verdadera, no se haga nada</strong> (se haga un "punto y coma", que es la sentencia "nula" o "vacía"). Y por tanto la sentencia siguiente, que es la que imprime el mensaje en pantalla, estará ya fuera del bloque <code>if</code> y por tanto siempre se ejecutará.</p>
+<p>Éste es un <strong>error muy típico de programador "novato"</strong> en el que escribimos un punto y coma justo después de la condición del <code>if</code> y a continuación, justo debajo, la sentencia (o bloque de sentencias) que deberían ejecutarse si la condición es verdadera. Sin embargo al ejecutar observamos que esa sentencia se ejecuta siempre, independientemente de que la condición sea verdadera o falsa. Esto es porque la sentencia asociada al <code>if</code> es el punto y coma (sentencia nula o vacía) y el resto de sentencias que haya debajo están ya fuera del <code>if</code>. ¡Mucho cuidado con esto!</p>
+<p>Para agravar la situación y que aún sea más difícil detectar este error, si hemos realizado una correcta indentación (sangrado hacia la derecha de las sentencias que pretendemos que estén dentro de una estructura de control) habremos escrito a la derecha la sentencia que está debajo del <code>if</code> (como de hecho sucede en este ejercicio), de manera que visualmente nuestro cerebro interpreta inmediatamente que esa sentencia solo se ejecutará si la condición es verdadera y en la mayoría de los casos no prestaremos atención al punto y coma. Observa que, aunque haya incluido un sangrado o indentación, en realidad es como si hubiera escrito lo siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (numero % 2 == 0);  // Si el número es par, no hacer nada (el punto y coma es la sentencia "vacía")
+System.out.print("El número es par"); // Esto se ejecuta siempre (tanto si la condición es true o false)</code></pre>
+</div>
+</div>
+<p></p>
+</div>
+</div>
+<div id="sa2b16_60" class="feedback js-hidden"><a name="sa2b16_60"></a>
+<div id="taf16_105" class=" iDevice_content">
+<p>Incorrecto. El punto y coma colocado justo detrás de la expresión lógica de la estructura <code>if</code> representaría la sentencia vacía, y pone fin a la sentencia condicional. Por tanto, la impresión del mensaje no quedaría asociada al resultado de la evaluación de dicha expresión lógica.</p>
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-16_63">Incorrecto</a><span> (<a href="#sa0b16_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-16_102">Opción correcta</a><span> (<a href="#sa1b16_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-16_105">Incorrecto</a><span> (<a href="#sa2b16_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="31_estructura_condicional_simple_if.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="33_estructuras_condicionales_anidadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

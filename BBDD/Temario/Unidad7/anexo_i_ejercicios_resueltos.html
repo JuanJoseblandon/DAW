@@ -1,0 +1,1378 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Anexo I. Ejercicios resueltos | Estructuras de datos internas (memoria) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-69"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructuras de datos internas (memoria)</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos internas (memoria)</a></li>
+   <li><a href="1_clases_y_mtodos_genricos_i.html" class="daddy">1.- Clases y métodos genéricos (I)</a>
+   <ul class="other-section">
+      <li><a href="11_clases_y_mtodos_genricos_ii.html" class="no-ch">1.1.- Clases y métodos genéricos (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="2__introduccin_a_las_colecciones.html" class="no-ch">2.-  Introducción a las colecciones</a></li>
+   <li><a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="daddy">3.- Conjuntos (I).  ¿Qué son y cómo se declaran? HashSet</a>
+   <ul class="other-section">
+      <li><a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="no-ch">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</a></li>
+      <li><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="no-ch">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</a></li>
+      <li><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="no-ch">3.3.- Conjuntos (IV). Combinando datos de varias colecciones</a></li>
+      <li><a href="34_conjuntos_v_ordenando_sus_elementos.html" class="no-ch">3.4.- Conjuntos (V). Ordenando sus elementos</a></li>
+      <li><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="no-ch">3.5.- Conjuntos (VI). Ejemplos de uso.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_listas_i_definicin_y_diferencias_con_los_conjuntos.html" class="daddy">4.- Listas (I). Definición y diferencias con los conjuntos</a>
+   <ul class="other-section">
+      <li><a href="41_listas_ii_cmo_se_usan.html" class="no-ch">4.1.- Listas (II). ¿Cómo se usan?</a></li>
+      <li><a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="no-ch">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</a></li>
+      <li><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="no-ch">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</a></li>
+   </ul>
+   </li>
+   <li><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="daddy">5.- Conjuntos de pares clave/valor o diccionarios</a>
+   <ul class="other-section">
+      <li><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="no-ch">5.1.- Recorrido de los elementos de un diccionario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="daddy">6.- Iteradores (I). ¿Qué son y cómo se usan?</a>
+   <ul class="other-section">
+      <li><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="no-ch">6.1.- Iteradores (II). ¿Qué características debemos considerar?</a></li>
+   </ul>
+   </li>
+   <li><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="daddy">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</a>
+   <ul class="other-section">
+      <li><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="no-ch">7.1.- Algoritmos (II). Ordenando los elementos de la colección</a></li>
+      <li><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="no-ch">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</a></li>
+      <li><a href="73_algoritmos_iv_operaciones_agregadas.html" class="daddy">7.3. Algoritmos (IV). Operaciones agregadas</a>
+      <ul class="other-section">
+         <li><a href="731_operaciones_de_reduccin.html" class="no-ch">7.3.1. Operaciones de reducción</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li id="active"><a href="anexo_i_ejercicios_resueltos.html" class="active no-ch">Anexo I. Ejercicios resueltos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="731_operaciones_de_reduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Anexo I. Ejercicios resueltos</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id21">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta21_147" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-gnu-gpl" style="width: 240px;"><img src="training-3185170_640.jpg" alt="Reunión informativa donde una persona instruye a otras usando una pizarra portátil" title="Reunión informativa" style="float: right;" width="240" height="207" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/formaci%C3%B3n-curso-de-entrenamiento-3185170/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de mohamed Hassan en Pixabay (se abre en una nueva ventana)" rel="noopener">mohamed Hassan</a> <span class="license"><span class="sep">(</span><a href="https://pixabay.com/es/service/license/" target="_blank" title="Acceder a los términos de la licencia Pixabay (se abre en una nueva ventana)" rel="noopener">Licencia Pixabay</a><span class="sep">)</span></span></div>
+</div>
+<p>María y Juan han estado trabajando con diversos tipos de <strong>colecciones</strong> y <strong>diccionarios</strong> (maps o conjutos clave-valor) de distintos tipos, así como elaborando algoritmos para llevar a cabo búsquedas, comprobaciones, borrados, actualizaciones, <abbr title="etcétera">etc</abbr>. Combinando todas esas herramientas ya se sienten con en el entrenamiento suficiente como para intentar resolver problemas que involucren a una cierta cantidad de información y sin necesidad de utilizar arrays.</p>
+<p>Por supuesto, aún sigue sin ser suficiente para elaborar aplicaciones completamente autónomas pues les falta, por ejemplo, que toda esa información sea persistente, es decir, que cuando el programa finalice su ejecución, todos esos datos que se encuentran en la memoria principal del ordenador no se pierdan. Pero ese será el objetivo de algunas de las siguientes unidades. Por el momento podemos afirmar que sigue creciendo el arsenal de herramientas disponibles para poder enfrentarse a los problemas que sus superiores les van proponiendo. Vamos a ver algunos de esos problemas.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id22">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 1. Combinando colores</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta22_148" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="to-dye-5821297_640.jpg" alt="Caja con acuarelas de diversos colores" title="Colores" style="float: right;" width="240" height="160" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/te%C3%B1ir-acuarela-color-5821297/" title="Acceder a la web de descarga de la imagen de webandi en Pixabay (se abre en una nueva ventana)" target="_blank" class="author"><span class="author">webandi</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Vamos a trabajar con conjuntos de <code>String</code> que contengan nombres de colores. Para generar nombres de colores aleatoriamente disponemos de la herramienta <code>Utilidades.colorAleatorio()</code>, que nos devolverá una cadena de tres caracteres que representará el nombre de un color (<code>"<abbr title="Negro">NGR</abbr>", "<abbr title="Blanco">BLA</abbr>", "<abbr title="Rojo">ROJ</abbr>", "<abbr title="Verde">VER</abbr>"</code>, <code>"<abbr title="Amarillo">AMR</abbr>", "<abbr title="Azul">AZL</abbr>"</code>).</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Utilidades {
+    private static String[] arrayColores = {"NGR", "BLA", "ROJ", "VER", "AZL", "AMR"};
+    /** Devuelve un texto de tres letras que representa un color aleatorio.
+     * @return un texto de tres letras que representa un color aleatorio
+     */
+    public static String colorAleatorio() {
+        int aleatorio = (int) (Math.random() * arrayColores.length);
+        return arrayColores[aleatorio];
+    }
+}</code></pre>
+</div>
+</div>
+</section>
+<section id="taquesQuestion0b22" class="block iDevice_content">
+<p>Escribe un programa en Java que lleve a cabo las siguientes acciones:</p>
+<ol>
+<li>Genere<strong> dos conjuntos</strong> de <code>String</code> (estructuras de tipo <code>Set</code>) con <strong>tres nombres de colores aleatorios</strong> cada uno donde, al tratarse de conjuntos, obviamente cada color puede aparecer una única vez en cada conjunto.</li>
+<li>Rellene un tercer conjunto con la <strong>unión de los dos conjuntos</strong> anteriores.</li>
+<li>Rellene un cuarto conjunto con la <strong>intersección</strong>.</li>
+<li>Genere un quinto conjunto con la <strong>diferencia del primer conjunto menos el segundo</strong>. Es decir quitar al primer conjunto los elementos (colores) que haya en el segundo.</li>
+<li><strong>Muestre por pantalla el contenido</strong> de cada uno de esos conjuntos.</li>
+</ol>
+<p>Un ejemplo de ejecución podría ser el siguiente:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre class="  language-markup"><code class="  language-markup">CONJUNTOS DE COLORES
+--------------------
+Conjunto C1: [VER, AZL, BLA]
+Conjunto C2: [AZL, NGR, ROJ]
+Unión C1 y C2: [VER, AZL, BLA, NGR, ROJ]
+Intersección C1 y C2: [AZL]
+Diferencia C1-C2: [VER, BLA]</code></pre>
+</div>
+</div>
+<p>En este caso solo había un color en común en ambos conjuntos: el azul (<code>"<abbr title="Azul">AZL</abbr>"</code>).</p>
+</section>
+<form name="feedback-form-quesFeedback0b22" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b22text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b22" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b22" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public static void main(String[] args) {
+
+	//----------------------------------------------
+	//          Declaración de variables 
+	//----------------------------------------------
+	final int CANTIDAD_COLORES = 3;
+	Set&lt;String&gt; setColores1, setColores2, union, interseccion, diferencia;
+	// Al usar conjuntos (set) garantizamos que no se pueden repetir elementos
+	setColores1=new HashSet&lt;&gt;();
+	setColores2=new HashSet&lt;&gt;();
+	
+	//----------------------------------------------
+	//                Entrada de datos 
+	//----------------------------------------------
+	// No hay, pues se usa un número fijo de elementos aleatorios
+	System.out.println("CONJUNTOS DE COLORES");
+	System.out.println("--------------------");
+
+	//----------------------------------------------
+	//                  Procesamiento
+	//----------------------------------------------
+	// Rellenamos los conjuntos con aleatorios hasta que haya CANTIDAD_COLORES
+	while (setColores1.size()&lt;CANTIDAD_COLORES) {
+		// Al añadir en un conjunto, si se produce una repetición, es como si no se añadiera nada
+		setColores1.add(Utilidades.colorAleatorio()); 
+	}
+	while (setColores2.size()&lt;CANTIDAD_COLORES) {
+		// Al añadir en un conjunto, si se produce una repetición, es como si no se añadiera nada
+		setColores2.add(Utilidades.colorAleatorio()); 
+	}
+	
+	// Unión de los dos conjuntos 
+	union= new HashSet&lt;&gt;(setColores1);
+	union.addAll(setColores2);
+	
+	// Intersección de los conjuntos
+	interseccion= new HashSet&lt;&gt;(setColores1);
+	interseccion.retainAll(setColores2);
+	
+	// Diferencia de los conjuntos
+	diferencia= new HashSet&lt;&gt;(setColores1);
+	diferencia.removeAll(setColores2);
+	
+	//----------------------------------------------
+	//              Salida de Resultados 
+	//----------------------------------------------
+	// Recorremos el conjunto y mostramos su contenido por pantalla
+	System.out.printf ("Conjunto C1: %s\n", setColores1);
+	System.out.printf ("Conjunto C2: %s\n", setColores2);
+	System.out.printf ("Unión C1 y C2: %s\n", union);
+	System.out.printf ("Intersección C1 y C2: %s\n", interseccion);
+	System.out.printf ("Diferencia C1-C2: %s\n", diferencia);
+
+	System.out.println();
+}</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id23">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 2. Vaciado de lista</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta23_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b23" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 189px;"><img src="white-2127384_640.png" alt="Tablas de madera blanca" title="Vacío" style="float: right;" width="160" height="120" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/blanco-textura-madera-superficie-2127384/" title="Acceder a la web de descarga de la imagen de Savana Price en Pixabay (se abre en una nueva ventana)" target="_blank" class="author"><span class="author">Savana Price</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Implementa un programa en Java donde:</p>
+<ol>
+<li>se rellene una estructura de tipo lista con <strong>doce números enteros aleatorios entre 1 y 5</strong> (ambos incluidos) y se muestre su contenido por pantalla;</li>
+<li>a continuación se observará el contenido del <strong>primer elemento de la lista</strong> y <strong>se eliminarán de ella todos los elementos que tengan ese valor</strong>, volviéndose a mostrar cómo ha quedado la lista tras el borrado;</li>
+<li>tras esto se observará nuevamente el <strong>valor del primer elemento</strong> de la lista (que necesariamente será otro diferente al del paso anterior, pues todas las posibles apariciones de ese valor habrán sido eliminadas) y <strong>se borrarán también todos los elementos que tengan ese valor</strong>, mostrando de nuevo el contenido de la lista;</li>
+<li>se siga procediendo de ese modo <strong>hasta que la lista quede completamente vacía</strong>.</li>
+</ol>
+<p>Aquí tienes un posible ejemplo de ejecución:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>VACIADO DE LISTA
+----------------
+Contenido inicial de la lista: [5, 3, 5, 2, 1, 1, 4, 3, 3, 4, 1, 4]
+Procedemos a ir vaciando su contenido.
+
+Eliminamos todas las apariciones del primer elemento: 5
+Lista resultante: [3, 2, 1, 1, 4, 3, 3, 4, 1, 4]
+
+Eliminamos todas las apariciones del primer elemento: 3
+Lista resultante: [2, 1, 1, 4, 4, 1, 4]
+
+Eliminamos todas las apariciones del primer elemento: 2
+Lista resultante: [1, 1, 4, 4, 1, 4]
+
+Eliminamos todas las apariciones del primer elemento: 1
+Lista resultante: [4, 4, 4]
+
+Eliminamos todas las apariciones del primer elemento: 4
+Lista resultante: []</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b23" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b23text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b23" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b23" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public static void main(String[] args) {
+	//----------------------------------------------
+	//          Declaración de variables 
+	//----------------------------------------------
+	final int CANTIDAD_NUMEROS = 12;
+	List&lt;Integer&gt; listaEnteros = new ArrayList&lt;&gt;();
+
+	//----------------------------------------------
+	//               Entrada de datos 
+	//----------------------------------------------
+	System.out.println("VACIADO DE LISTA");
+	System.out.println("----------------");
+	// No hay, pues se usa un número fijo de elementos aleatorios
+
+	// Rellenamos la lista con aleatorios hasta que haya CANTIDAD_NUMEROS
+	for (int i = 0; i &lt; CANTIDAD_NUMEROS; i++) {
+			int aleatorio = 1 + (int) (Math.random() * 5);
+		listaEnteros.add(aleatorio);
+	}
+	System.out.printf("Contenido inicial de la lista: %s\n", listaEnteros.toString());
+
+	//----------------------------------------------
+	//      Procesamiento + Salida de resultados
+	//----------------------------------------------
+	System.out.printf("Procedemos a ir vaciando su contenido.\n\n");
+
+	while (!listaEnteros.isEmpty()) {
+		int primerElemento = listaEnteros.get(0);
+		System.out.printf("Eliminamos todas las apariciones del primer elemento: %d\n", primerElemento);
+		while (listaEnteros.contains(primerElemento)) {
+			listaEnteros.remove((Integer) primerElemento);
+		}
+		System.out.printf("Lista resultante: %s\n\n", listaEnteros.toString());
+	}
+}</code></pre>
+</div>
+</div>
+<p></p>
+<p></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id24">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 3. Búsqueda de coincidentes</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta24_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b24" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 189px;"><img src="matches-3831871_640.jpg" alt="Cerillas con las cabezas de distintos colores" title="Cerillas" style="float: right;" width="160" height="107" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/coincidencias-luz-palillos-3831871/" title="Acceder a la web de descarga de la imagen de Hans Braxmeier en Pixabay (se abre en una nueva ventana)" target="_blank" class="author"><span class="author">Hans Braxmeier</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Implementa un programa en Java donde:</p>
+<ol>
+<li>Se rellenen dos estructuras de tipo lista (<code>List</code>) con <strong>diez nombres aleatorios de colores</strong> (objetos de la clase <code>String</code>) usando la herramienta <code>Utilidades.colorAleatorio</code> y se muestre su contenido por pantalla.</li>
+<li><strong>Se inspeccionen ambas listas</strong> y si tienen el<strong> mismo color</strong> en la <strong>misma posición</strong>:<ol>
+<li><strong>se "tachará"</strong> ese color de ambas listas sustituyéndolo por la cadena "---";</li>
+<li>se almacenará ese color en una <strong>lista de colores eliminados</strong>;</li>
+<li>se almacenará la posición en la que se encontraba ese color en una <strong>lista posiciones eliminadas</strong>.</li>
+</ol></li>
+<li>Se <strong>muestre por pantalla</strong>:<ol>
+<li>el contenido final de la <strong>primera lista de colores</strong> (con algunas posiciones "tachadas");</li>
+<li>el contenido final de la <strong>segunda lista de colores</strong> (con las mismas posiciones "tachadas");</li>
+<li>la lista de <strong>colores eliminados</strong>;</li>
+<li>la lista de <strong>posiciones eliminadas</strong>;</li>
+<li>el conjunto de <strong>colores eliminados (sin repetir)</strong>.</li>
+</ol></li>
+</ol>
+<p>Aquí tienes un posible ejemplo de ejecución.</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre class="  language-markup"><code class="  language-markup">BÚSQUEDA DE COINCIDENTES
+------------------------
+1. Contenido inicial de la lista1: [NGR, ROJ, VER, BLA, BLA, ROJ, AMR, NGR, NGR, BLA]
+2. Contenido inicial de la lista2: [AZL, AZL, BLA, NGR, AMR, NGR, NGR, NGR, VER, BLA]
+
+1. Contenido final de la lista 1:  [NGR, ROJ, VER, BLA, BLA, ROJ, AMR, ---, NGR, ---]
+2. Contenido final de la lista 2:  [AZL, AZL, BLA, NGR, AMR, NGR, NGR, ---, VER, ---]
+3. Contenido final de la lista de colores eliminados: [NGR, BLA]
+4. Contenido final de la lista de posiciones eliminadas: [7, 9]
+5. Contenido final del conjunto de colores eliminados: [BLA, NGR]</code></pre>
+</div>
+</div>
+<p>En este ejemplo concreto se han producido dos coincidencias: en la posición 7 (color <code>"<abbr title="Negro">NGR</abbr>"</code>) y en la posición 9 (color <code>"<abbr title="Blanco">BLA</abbr>"</code>).</p>
+</section>
+<form name="feedback-form-quesFeedback0b24" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b24text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b24" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b24" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public static void main(String[] args) {
+	//----------------------------------------------
+	//          Declaración de variables 
+	//----------------------------------------------
+	final int CANTIDAD_COLORES = 10;
+	List&lt;String&gt; listaColores1 = new ArrayList&lt;&gt;();
+	List&lt;String&gt; listaColores2 = new ArrayList&lt;&gt;();
+	List&lt;String&gt; listaColoresEliminados = new ArrayList&lt;&gt;();
+	Set&lt;String&gt; setColoresEliminados = new HashSet&lt;&gt;();
+	List&lt;Integer&gt; listaPosicionesEliminadas= new ArrayList&lt;&gt;();
+	
+	//----------------------------------------------
+	//               Entrada de datos 
+	//----------------------------------------------
+	System.out.println("BÚSQUEDA DE COINCIDENTES");
+	System.out.println("------------------------");
+	// No hay, pues se usa un número fijo de elementos aleatorios
+
+	// Rellenamos la lista con aleatorios hasta que haya CANTIDAD_COLORES
+	for (int i = 0; i &lt; CANTIDAD_COLORES; i++) {
+		listaColores1.add(Utilidades.colorAleatorio()); 
+	}
+	System.out.printf("1. Contenido inicial de la lista1: %s\n", listaColores1.toString());
+
+	for (int i = 0; i &lt; CANTIDAD_COLORES; i++) {
+		listaColores2.add(Utilidades.colorAleatorio()); 
+	}
+	System.out.printf("2. Contenido inicial de la lista2: %s\n", listaColores2.toString());
+	System.out.println();
+	
+	//----------------------------------------------
+	//               Procesamiento
+	//----------------------------------------------
+
+	// Recorremos a la vez las dos listas
+	for (int i=0; i&lt;listaColores1.size(); i++) {
+		String color=listaColores1.get(i);
+		// Comprobamos si en la misma posición encontramos el mismo color en ambas listas
+		if (color.equals(listaColores2.get(i))) { 
+			listaColoresEliminados.add(color);  // Se incluye ese color en la lista de eliminados
+			setColoresEliminados.add(color);
+			listaPosicionesEliminadas.add(i);   // Se incluye la posición en la lista de posiciones
+			listaColores1.set(i, "---");          // Se "tacha" ese color en las listas originales
+			listaColores2.set(i, "---");
+		}
+	}
+
+	//----------------------------------------------
+	//            Salida de resultados
+	//----------------------------------------------
+	System.out.printf("1. Contenido final de la lista 1:  %s\n", listaColores1.toString());
+	System.out.printf("2. Contenido final de la lista 2:  %s\n", listaColores2.toString());
+	System.out.printf("3. Contenido final de la lista de colores eliminados: %s\n", listaColoresEliminados.toString());
+	System.out.printf("4. Contenido final de la lista de posiciones eliminadas: %s\n", listaPosicionesEliminadas.toString());
+	System.out.printf("5. Contenido final del conjunto de colores eliminados: %s\n", setColoresEliminados.toString());
+	
+}</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id25">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 4. Clasificación de coincidentes</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta25_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b25" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 189px;"><img src="colors-1629684_640.jpg" alt="Muestras de diversos colores" title="Colores" style="float: right;" width="200" height="148" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/colores-vistoso-tablero-de-color-1629684/" title="Acceder a la web de descarga de la imagen de Brett Hondow en en Pixabay (se abre en una nueva ventana)" target="_blank" class="author"><span class="author">Brett Hondow en</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Implementa un programa en Java donde:</p>
+<ol>
+<li>Se rellenen <strong>dos estructuras de tipo lista</strong> con <strong>quince nombres aleatorios de colores</strong> y se muestre su contenido por pantalla, de manera similar a como ya se ha hecho en el ejercicio 2.</li>
+<li>Se declare y reserve espacio para una estructura de tipo <strong><code>Map</code></strong> donde las claves sean <strong>nombres de colores</strong> (objetos de tipo <strong><code>String</code></strong>) y los valores sean <strong>listas de números enteros</strong> (<strong><code>List&lt;Integer&gt;</code></strong>). Es decir, que se tratará de una estructura de tipo <strong><code>Map&lt;String, List&lt;Integer&gt;&gt;</code></strong>.</li>
+<li><strong>Se inspeccionen ambas listas</strong> y, si tienen el<strong> mismo color</strong> en la <strong>misma posición</strong>, se llevarán a cabo las siguientes operaciones en el <strong><code>Map</code></strong>:<br /><ol>
+<li>si ese color aún no existe como clave, se introducirá como nueva clave y se le asignará una nueva lista de enteros vacía;</li>
+<li>se asignará, a la lista correspondiente a ese color, la posición en las listas de origen en la que ha sido encontrada la coincidencia.</li>
+</ol></li>
+<li>Se <strong>muestre por pantalla</strong> la estructura de tipo <strong><code>Map</code></strong>.</li>
+</ol>
+<p>Aquí tienes un ejemplo de ejecución donde se han producido cuatro coincidencias: azul en la posición 4, amarillo en la 1, y negro en las posiciones 2 y 14:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre class="  language-markup"><code class="  language-markup">CLASIFICACIÓN DE COINCIDENTES
+-----------------------------
+Contenido inicial de la lista1: [AMR, AMR, NGR, AZL, AZL, NGR, BLA, ROJ, NGR, NGR, AMR, BLA, AZL, BLA, NGR]
+Contenido inicial de la lista2: [BLA, AMR, NGR, NGR, AZL, ROJ, AMR, NGR, VER, VER, NGR, AZL, BLA, ROJ, NGR]
+
+Clasificación de coincidencias: {AZL=[4], AMR=[1], NGR=[2, 14]}</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b25" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b25text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b25" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b25" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public static void main(String[] args) {
+	//----------------------------------------------
+	//          Declaración de variables 
+	//----------------------------------------------
+	final int CANTIDAD_COLORES = 15;
+	List&lt;String&gt; listaColores1 = new ArrayList&lt;&gt;();
+	List&lt;String&gt; listaColores2 = new ArrayList&lt;&gt;();
+	Map&lt;String, List&lt;Integer&gt;&gt; mapCoincidencias = new HashMap&lt;&gt;();
+
+	//----------------------------------------------
+	//               Entrada de datos 
+	//----------------------------------------------
+	System.out.println("CLASIFICACIÓN DE COINCIDENTES");
+	System.out.println("-----------------------------");
+	// No hay, pues se usa un número fijo de elementos aleatorios
+
+	// Rellenamos la lista con aleatorios hasta que haya CANTIDAD_COLORES
+	for (int i = 0; i &lt; CANTIDAD_COLORES; i++) {
+		listaColores1.add(Utilidades.colorAleatorio());
+	}
+	System.out.printf("Contenido inicial de la lista1: %s\n", listaColores1.toString());
+
+	for (int i = 0; i &lt; CANTIDAD_COLORES; i++) {
+		listaColores2.add(Utilidades.colorAleatorio());
+	}
+	System.out.printf("Contenido inicial de la lista2: %s\n", listaColores2.toString());
+	System.out.println();
+
+	//----------------------------------------------
+	//                 Procesamiento
+	//----------------------------------------------
+	for (int i = 0; i &lt; listaColores1.size(); i++) {
+		String color = listaColores1.get(i);
+		if (color.equals(listaColores2.get(i))) {
+			if (!mapCoincidencias.containsKey(color)) {
+				mapCoincidencias.put(color, new ArrayList());
+			}
+			mapCoincidencias.get(color).add(i);
+		}
+	}
+
+	//----------------------------------------------
+	//            Salida de resultados
+	//----------------------------------------------
+	System.out.printf("Clasificación de coincidencias: %s\n", mapCoincidencias);
+
+}</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id34">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 5. Clasificación de fechas por día de la semana</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta34_148" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 189px;"><img src="calendar-1763587_640.png" alt="Calendario de un mes" title="Calendario" style="float: right;" width="160" height="117" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/calendario-fecha-mes-d%C3%ADa-semana-1763587/" title="Acceder a la web de descarga de la imagen de 200Degrees en Pixabay (se abre en una nueva ventana)" target="_blank" class="author" rel="noopener"><span class="author">200Degrees </span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank" rel="noopener">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Nos han pedido implementar un programa en Java que rellene de manera <strong>automática</strong> una estructura de tipo <code>Map</code> donde:</p>
+<ol>
+<li>Las claves serán de tipo <code>Month</code>.</li>
+<li>Los valores serán nuevas estructuras de tipo <code>Map</code> donde:<ol>
+<li>Las claves serán de tipo <code>DayOfWeek</code>.</li>
+<li>Los valores serán estructuras de tipo <code>Set</code> de referencias a objetos <code>LocalDate</code> (<code>Set&lt;LocalDate&gt;</code>). En ese conjunto se almacenarán las fechas que correspondan, en un mes determinado, a un día de la semana determinado de un determinado año que se habrá introducido por teclado.</li>
+</ol></li>
+</ol>
+<p>Resumiendo, se trataría de una estructura de tipo <code>Map&lt;Month, Map&lt;DayOfWeek, Set&lt;LocalDate&gt;&gt;&gt;</code>.</p>
+<p>La idea es que para cada mes del año (claves de <code>Month.JANUARY</code> a <code>Month.DECEMBER</code>) se pueda consultar cada día de la semana (de <code>DayOfWeek.MONDAY</code> a <code>DayOfWeek.SUNDAY</code>) para obtener un conjunto (<code>Set</code>) que contenga todas las fechas que caen en ese día de la semana de ese mes.</p>
+<p>Por ejemplo, para el año <strong>2022</strong>, tendremos un <strong><code>Map</code> de doce elementos</strong> (uno para cada mes del año) donde, por ejemplo, el valor correspondiente a la clave <code>Month.JANUARY</code> será un nuevo <strong><code>Map</code> de siete elementos</strong> (uno para cada día de la semana) donde, por ejemplo, el valor correspondiente a la clave <code>DayOfWeek.MONDAY</code> será un <code>Set</code> de cuatro elementos con el siguiente contenido <strong><code>[07/02/2022, 14/02/2022, 21/02/2022, 28/02/2022]</code></strong>.</p>
+</section>
+<section id="taquesQuestion0b34" class="block iDevice_content">
+<p><strong>1. Implementa una entrada de datos que solicite un año (entre 1900 y 2100) por teclado realizando las comprobaciones oportunas</strong></p>
+</section>
+<form name="feedback-form-quesFeedback0b34" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b34text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b34" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b34" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+// Constantes
+final int YEAR_MIN = 1900;
+final int YEAR_MAX = 2100;
+
+// Variables de entrada
+int year = 0;
+
+// Variables de salida
+Map&lt;Month, Map&lt;DayOfWeek, Set&lt;LocalDate&gt;&gt;&gt; mapDiasSemana = new TreeMap&lt;&gt;();
+
+// Variables auxiliares
+boolean errorEntrada;
+DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+// Objeto Scanner para lectura desde teclado
+Scanner teclado = new Scanner(System.in);
+
+//----------------------------------------------
+//               Entrada de datos 
+//----------------------------------------------
+System.out.println("CLASIFICACIÓN DE FECHAS DE UN AÑO POR DÍA DE LA SEMANA");
+System.out.println("------------------------------------------------------");
+
+// Leer y comprobar el año (1900 y 2023), ambos incluidos
+do {
+    System.out.printf("Introduzca año (%d-%d): \n", YEAR_MIN, YEAR_MAX);
+    try {
+        year = teclado.nextInt();
+        errorEntrada = (year &lt; YEAR_MIN || year &gt; YEAR_MAX);
+    } catch (InputMismatchException ex) {
+        System.err.println("Error de lectura: no es un número entero válido.");
+        errorEntrada = true;
+        teclado.nextLine(); // "Purgamos" lo que haya en el teclado, que es incorrecto
+    }
+} while (errorEntrada);
+System.out.println();
+</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b34" class="block iDevice_content">
+<p><strong>2. Implementa un bucle que recorra todas las fechas del año elegido</strong></p>
+<p>Lo haremos mediante un bucle <code>for</code> donde el <strong>contador</strong> será de tipso <code>LocalDate</code> e irá avanzando <strong>desde el 1 de enero hasta el 31 de diciembre</strong> del año elegido. La variable contador podría llamarse, por ejemplo, <code>dia</code>. Su primer valor sería, por tanto <code>LocalDate.of(year, 1, 1)</code>, y el último <code>LocalDate.of(year, 12, 31)</code>.</p>
+<p>La forma de hacer un incremento similar a <code>dia++</code> podría ser algo como <code>dia = dia.plusDays(1)</code>.</p>
+</section>
+<form name="feedback-form-quesFeedback1b34" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b34text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b34" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b34" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>El bucle podría quedar de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Recorremos todos los días del año (bucle)
+LocalDate primerDia = LocalDate.of(year, 1, 1);       // Primer día del año (1 de enero)
+LocalDate ultimoDia = LocalDate.of(year, 12, 31);     // Último día del año (31 de diciembre)
+for ( LocalDate dia = primerDia; !dia.isAfter(ultimoDia) ; dia = dia.plusDays(1) ) {
+   . . . 
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion2b34" class="block iDevice_content">
+<p><strong>3. Crea las claves para cada mes</strong></p>
+<p>Una vez que tenemos la estructura del bucle <code>for</code>, habrá que crear una clave en el <code>map</code> principal para cada uno de los meses del año. Una opción es que, para cada valor del contador (variable <code>dia</code>), si aún no se ha creado una clave para el mes de esa fecha, la creamos.</p>
+</section>
+<form name="feedback-form-quesFeedback2b34" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b34text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b34" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback2b34" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Si el <code>map</code> no contiene la clave (<code>containsKey</code>) para un determinado mes de la variable contador fecha, entonces crearemos una nueva entrada usando como clave ese mes y como valor un <code>map</code> vacío.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Recorremos todos los días del año (bucle)
+LocalDate primerDia = LocalDate.of(year, 1, 1);       // Primer día del año (1 de enero)
+LocalDate ultimoDia = LocalDate.of(year, 12, 31);     // Último día del año (31 de diciembre)
+for ( LocalDate dia = primerDia; !dia.isAfter(ultimoDia) ; dia = dia.plusDays(1) ) {
+    if (!mapDiasSemana.containsKey(dia.getMonth())) {
+        mapDiasSemana.put(dia.getMonth(), new TreeMap&lt;&gt;());
+    }
+
+     . . . 
+
+}</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion3b34" class="block iDevice_content">
+<p><strong>4. Crea las claves para cada día de la semana para cada mes<br /></strong></p>
+<p>Dentro del <code>map</code> asociado a la clave de cada mes, crea las claves para cada día de la semana. Podemos hacer algo similar a lo que se ha hecho para crear las claves de cada mes. Nuevamente, para cada valor de la variable contador (una fecha), comprobamos si para el mes de esa fecha y el día de la semana de esa fecha, existe ya esa clave. Si aún no existe, la creamos y le asociamos un <code>Set</code> vacío, que es donde se guardarán las fechas asociadas a ese mes y a ese día de la semana.</p>
+</section>
+<form name="feedback-form-quesFeedback3b34" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b34text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b34" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback3b34" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Recorremos todos los días del año (bucle)
+LocalDate primerDia = LocalDate.of(year, 1, 1);       // Primer día del año (1 de enero)
+LocalDate ultimoDia = LocalDate.of(year, 12, 31);     // Último día del año (31 de diciembre)
+for (LocalDate dia = primerDia; !dia.isAfter(ultimoDia) ; dia = dia.plusDays(1)) {
+    if (!mapDiasSemana.containsKey(dia.getMonth())) {
+        mapDiasSemana.put(dia.getMonth(), new TreeMap&lt;&gt;());
+    }
+    if (!mapDiasSemana.get(dia.getMonth()).containsKey(dia.getDayOfWeek())) {
+        mapDiasSemana.get(dia.getMonth()).put(dia.getDayOfWeek(), new TreeSet&lt;&gt;());
+    }
+
+    . . . 
+
+}</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion4b34" class="block iDevice_content">
+<p><strong>5. Rellena el <code>Set</code> final con cada uno de los valores de la variable <code>dia</code></strong></p>
+<p>Se trata simplemente de añadir al bucle la línea de inserción de la fecha: <code>map.get(dia.getMonth()).get(dia.getDayOfWeek()).add(dia)</code></p>
+</section>
+<form name="feedback-form-quesFeedback4b34" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback4b34text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback4b34" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback4b34" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//                  Procesamiento
+//----------------------------------------------
+// Recorremos todos los días del año (bucle)
+LocalDate primerDia = LocalDate.of(year, 1, 1);       // Primer día del año (1 de enero)
+LocalDate ultimoDia = LocalDate.of(year, 12, 31);     // Último día del año (31 de diciembre)
+for (LocalDate dia = primerDia; !dia.isAfter(ultimoDia) ; dia = dia.plusDays(1)) {
+    if (!mapDiasSemana.containsKey(dia.getMonth())) {
+        mapDiasSemana.put(dia.getMonth(), new TreeMap&lt;&gt;());
+    }
+    if (!mapDiasSemana.get(dia.getMonth()).containsKey(dia.getDayOfWeek())) {
+        mapDiasSemana.get(dia.getMonth()).put(dia.getDayOfWeek(), new TreeSet&lt;&gt;());
+    }
+    mapDiasSemana.get(dia.getMonth()).get(dia.getDayOfWeek()).add(dia);
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion5b34" class="block iDevice_content">
+<p><strong>6. Muestra por pantalla el contenido total de la estructura creada utilizando el siguiente formato:</strong></p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>LISTADO DE FECHAS
+-----------------
+Mes: JANUARY
+  MONDAY: 06/01/2025 13/01/2025 20/01/2025 27/01/2025 
+  TUESDAY: 07/01/2025 14/01/2025 21/01/2025 28/01/2025 
+  . . .
+  SATURDAY: 04/01/2025 11/01/2025 18/01/2025 25/01/2025 
+  SUNDAY: 05/01/2025 12/01/2025 19/01/2025 26/01/2025 
+
+Mes: FEBRUARY
+  MONDAY: 03/02/2025 10/02/2025 17/02/2025 24/02/2025 
+  . . .
+  SUNDAY: 02/02/2025 09/02/2025 16/02/2025 23/02/2025 
+
+. . .
+
+. . .
+
+Mes: DECEMBER
+  MONDAY: 01/12/2025 08/12/2025 15/12/2025 22/12/2025 29/12/2025 
+  . . .
+  SUNDAY: 07/12/2025 14/12/2025 21/12/2025 28/12/2025 
+</code></pre>
+</div>
+</div>
+<p></p>
+</section>
+<form name="feedback-form-quesFeedback5b34" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback5b34text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback5b34" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback5b34" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//           Salida de resultados
+//----------------------------------------------
+System.out.println("LISTADO DE FECHAS");
+System.out.println("-----------------");
+
+for ( Month mes : mapDiasSemana.keySet() ) {
+    System.out.printf ("Mes: %s\n", mes);
+    //System.out.printf ("Mes %s: %s\n", mes, mapDiasSemana.get(mes));
+    for ( DayOfWeek dia : mapDiasSemana.get(mes).keySet() ) {
+        System.out.printf ("  %s: ", dia);
+        for ( LocalDate fecha : mapDiasSemana.get(mes).get(dia) ) {
+            System.out.printf ("%s ", fecha.format(formatoFecha));
+        }
+        System.out.println();
+    }
+    System.out.println ();
+}</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id35">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 6. Asignación de turnos (I)</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta35_148" class="block story iDevice_content">
+<p>Dado el siguiente array con los nombres de las personas que trabajan en sistema de turnos:</p>
+<pre>String[] arrayPersonas = {"Juan", "Luisa", "Clara", "Rogelio", "Francisco"}</pre>
+</section>
+<section id="taquesQuestion0b35" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 189px;"><img src="pencil-308509_640.png" alt="Hoja de checklists" title="Lista" style="float: right;" width="160" height="164" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/l%C3%A1piz-marcas-notas-programa-lista-308509/" title="Acceder a la web de descarga de la imagen de Clker-Free-Vector-Images en Pixabay (se abre en una nueva ventana)" target="_blank" class="author" rel="noopener"><span class="author">Clker-Free-Vector-Images</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank" rel="noopener">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Implementar un programa en Java que genere y rellene una estructura de tipo <code>Map</code> llamada <code>mapTurnosPorFecha</code> donde:</p>
+<ul>
+<li class="lista_verificacion">las <strong>claves</strong> serán <strong>fechas</strong> (objetos de tipo <code>LocalDate</code>);</li>
+<li class="lista_verificacion">los <strong>elementos</strong> serán <strong>listas</strong> que contengan <strong>nombres de personas</strong> (objetos de tipo <code>List&lt;String&gt;</code>).</li>
+</ul>
+<p>Una vez declarada la estructura <code>Map</code> se rellenará con <strong>siete elementos</strong> donde:</p>
+<ul>
+<li class="lista_verificacion">las <strong>claves</strong> serán las <strong>fechas desde el 1 de marzo al 7 de marzo de 2021</strong> (objetos de tipo <code>LocalDate</code>);</li>
+<li class="lista_verificacion">los <strong>elementos</strong> serán listas vacías, aún sin contener nombres de personas.</li>
+</ul>
+<p>A partir de aquí, se irán rellenando los conjuntos de personas correspondientes a cada fecha según el siguiente criterio:</p>
+<ol>
+<li><strong>cada fecha</strong> tendrá asociada <strong>tres personas</strong> para trabajar ese día. Comenzaremos asignando a la primera persona del array y continuaremos de manera secuencial siguiendo el orden de los nombres en el array. Cuando se vayan a superar los límites del array se volverá a la primera posición (recuerda la utilidad del operador <strong>módulo %</strong> para estos casos).</li>
+<li><strong>la primera persona asignada en una fecha no será asignada para el día siguiente</strong>, de manera que de un día para otro coincidirán la segunda y tercera persona del día anterior, que serán ahora primera y segunda, y habrá una tercera persona nueva.</li>
+</ol>
+<p>Esto significa que si para el 1 de marzo habría que asignar el trabajo a  <em>Juan</em>, <em>Luisa</em>, y <em>Clara</em>, para el día siguiente (2 de marzo) las personas involucradas tendrían que ser <em>Luisa</em>, <em>Clara</em> y <em>Rogelio</em>, para el tercer día (3 de marzo) tendríamos a <em>Clara</em>, <em>Rogelio</em> y <em>Francisco</em>, y así sucesivamente.</p>
+<p>El programa, a la vez que va rellenando la estructura de datos, debe ir indicando por pantalla cómo se va asignando a cada fecha cada uno de las personas involucradas, pudiendo quedar algo así:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre class="  language-markup"><code class="  language-markup">Asignando a la fecha 01/03/2021 la persona Juan
+Asignando a la fecha 01/03/2021 la persona Luisa
+Asignando a la fecha 01/03/2021 la persona Clara
+
+Asignando a la fecha 02/03/2021 la persona Luisa
+Asignando a la fecha 02/03/2021 la persona Clara
+Asignando a la fecha 02/03/2021 la persona Rogelio
+
+Asignando a la fecha 03/03/2021 la persona Clara
+Asignando a la fecha 03/03/2021 la persona Rogelio
+Asignando a la fecha 03/03/2021 la persona Francisco
+
+Asignando a la fecha 04/03/2021 la persona Rogelio
+Asignando a la fecha 04/03/2021 la persona Francisco
+Asignando a la fecha 04/03/2021 la persona Juan
+
+Asignando a la fecha 05/03/2021 la persona Francisco
+Asignando a la fecha 05/03/2021 la persona Juan
+Asignando a la fecha 05/03/2021 la persona Luisa
+
+Asignando a la fecha 06/03/2021 la persona Juan
+Asignando a la fecha 06/03/2021 la persona Luisa
+Asignando a la fecha 06/03/2021 la persona Clara
+
+Asignando a la fecha 07/03/2021 la persona Luisa
+Asignando a la fecha 07/03/2021 la persona Clara
+Asignando a la fecha 07/03/2021 la persona Rogelio</code></pre>
+</div>
+</div>
+<p>Una vez realizadas todas las asignaciones, deberá recorrerse el contenido del mapa de turnos y mostrar, para cada clave (objeto de tipo fecha), el conjunto de personas asociadas a ella usando el siguiente formato:</p>
+<p>En nuestro caso concreto, el resultado debería quedar así:</p>
+<pre>Fecha dd/mm/aaaa: [persona_1, persona_2, persona_3]</pre>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre class="  language-markup"><code class="  language-markup">Contenido final del mapa de turnos:
+Fecha 01/03/2021: [Juan, Luisa, Clara]
+Fecha 02/03/2021: [Luisa, Clara, Rogelio]
+Fecha 03/03/2021: [Clara, Rogelio, Francisco]
+Fecha 04/03/2021: [Rogelio, Francisco, Juan]
+Fecha 05/03/2021: [Francisco, Juan, Luisa]
+Fecha 06/03/2021: [Juan, Luisa, Clara]
+Fecha 07/03/2021: [Luisa, Clara, Rogelio]</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b35" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b35text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b35" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b35" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+String[] arrayPersonas = {"Juan", "Luisa", "Clara", "Rogelio", "Francisco"};
+Map&lt;LocalDate, List&lt;String&gt;&gt; mapTurnosPorFecha= new TreeMap&lt;&gt;();
+DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern ("dd/MM/yyyy");
+
+//----------------------------------------------
+//               Entrada de datos 
+//----------------------------------------------
+System.out.println("ASIGNACIÓN DE TURNOS (I): TURNOS POR FECHA");
+System.out.println("------------------------------------------");
+// Se usa un número fijo de elementos aleatorios
+
+// Creamos los índices y les asignamos un conjunto vacío (o una lista vacía)
+LocalDate fechaInicial= LocalDate.of (2021, 3, 1);
+for (int i=0; i&lt;7; i++) {
+    LocalDate fechaIndice= fechaInicial.plusDays(i);
+    mapTurnosPorFecha.put(fechaIndice, new LinkedList&lt;&gt;());
+}
+
+//----------------------------------------------
+//                  Procesamiento
+//----------------------------------------------
+    // Vamos recorriendo las claves del map y asignando tres personas para cada clave
+int indicePersonas= 0;
+for (LocalDate fecha: mapTurnosPorFecha.keySet()) {
+    for (int i=0; i&lt;3; i++) {
+        String persona= arrayPersonas[(indicePersonas+i)%arrayPersonas.length];
+        mapTurnosPorFecha.get(fecha).add(persona);
+        System.out.printf ("Asignando a la fecha %s la persona %s\n", fecha.format(formatoFecha), persona);
+    }         
+    System.out.println();
+    indicePersonas= (indicePersonas+1) % arrayPersonas.length;
+}
+
+//----------------------------------------------
+//           Salida de resultados
+//----------------------------------------------
+System.out.printf( "Contenido final del mapa de turnos organizados por fechas:\n");
+for (Map.Entry&lt;LocalDate, List&lt;String&gt;&gt; elemento: mapTurnosPorFecha.entrySet())
+{
+    System.out.printf("Fecha %s: %s\n",elemento.getKey().format(formatoFecha),elemento.getValue());
+}</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id36">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 7. Asignación de turnos (II)</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta36_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b36" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 189px;"><img src="pencil-308509_640.png" alt="Hoja de checklists" title="Lista" style="float: right;" width="160" height="164" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/l%C3%A1piz-marcas-notas-programa-lista-308509/" title="Acceder a la web de descarga de la imagen de Clker-Free-Vector-Images en Pixabay (se abre en una nueva ventana)" target="_blank" class="author" rel="noopener"><span class="author">Clker-Free-Vector-Images</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank" rel="noopener">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Partiendo del resultado obtenido por el ejercicio anterior, implementa un programa en Java que explore la estructura de datos que contiene la asignación de turnos organizados por fechas y genere una nueva estructura de datos que contenga la <strong>asignación de turnos organizados por personas</strong>. Es decir, que se rellene una estructura de tipo <code>Map</code>, en este caso llamada <code>mapTurnosPorPersona</code>, donde:</p>
+<ul>
+<li class="lista_verificacion">las <strong>claves</strong> sean los <strong>nombres</strong> de las personas (objetos de tipo <code>String</code>);</li>
+<li class="lista_verificacion">los <strong>elementos</strong> serán <strong>listas de fechas</strong> (objetos de tipo <code>List&lt;LocalDate&gt;</code>).</li>
+</ul>
+<p>Para realizar esta segunda parte, el programa no deberá usar los elementos del array original de nombres, sino que tendrá que obtenerlos a partir de la estructura <code>mapTurnosPorFecha</code> generada por el programa anterior de manera que según la vaya explorando se vayan encontrando nombres de personas que serán añadidos como claves del nuevo <code>mapTurnosPorPersona</code>.</p>
+<p>Por tanto, los pasos que habrían de darse serían:</p>
+<ol>
+<li>realizar todas las acciones del ejercicio anterior para generar la estructura <code>mapTurnosPorFecha</code>, aunque sin mostrar las asignaciones paso a paso, únicamente el contenido final de la estructura;</li>
+<li>llevar a cabo la exploración elemento a elemento de todos los contenidos de ese <code>Map</code> e ir generando <strong>una nueva entrada en el nuevo <code>Map</code> <code>mapTurnosPorPersona</code> cada vez que aparezca un nuevo nombre de persona</strong> e indicarlo por pantalla;</li>
+<li><strong>para cada aparición de una persona</strong> debe añadirse, a la lista asociada a esa persona, la <strong>fecha</strong> correspondiente e indicarlo por pantalla;</li>
+<li>una vez finalizada toda la exploración, se recorrerá la nueva estructura <strong><code>mapTurnosPorPersona</code></strong> y se <strong>mostrará su contenido</strong> de una manera similar a como se hizo con la estructura <code>mapTurnosPorFecha</code>.</li>
+</ol>
+<p>La primera parte sería para obtener exactamente lo mismo que en el ejercicio anterior:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>
+ASIGNACIÓN DE TURNOS (II): TURNOS POR PERSONA
+---------------------------------------------
+Contenido inicial del mapa de turnos organizado por fechas:
+Fecha 01/03/2021: [Juan, Luisa, Clara]
+Fecha 02/03/2021: [Luisa, Clara, Rogelio]
+Fecha 03/03/2021: [Clara, Rogelio, Francisco]
+Fecha 04/03/2021: [Rogelio, Francisco, Juan]
+Fecha 05/03/2021: [Francisco, Juan, Luisa]
+Fecha 06/03/2021: [Juan, Luisa, Clara]
+Fecha 07/03/2021: [Luisa, Clara, Rogelio]</code></pre>
+</div>
+</div>
+<p>La segunda y tercera parte llevarán a cabo la exploración de la estructura ya creada y la creación de la nueva a partir de esta:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Procedemos a explorar la estructura de turnos por fechas para generar la estructura de turnos por personas:
+
+Encontrada persona Juan por primera vez. Creamos una entrada en el mapa para ella con una lista de fechas vacía
+Asginando a la persona Juan la fecha 01/03/2021
+Encontrada persona Luisa por primera vez. Creamos una entrada en el mapa para ella con una lista de fechas vacía
+Asginando a la persona Luisa la fecha 01/03/2021
+Encontrada persona Clara por primera vez. Creamos una entrada en el mapa para ella con una lista de fechas vacía
+Asginando a la persona Clara la fecha 01/03/2021
+
+Asginando a la persona Luisa la fecha 02/03/2021
+Asginando a la persona Clara la fecha 02/03/2021
+Encontrada persona Rogelio por primera vez. Creamos una entrada en el mapa para ella con una lista de fechas vacía
+Asginando a la persona Rogelio la fecha 02/03/2021
+
+Asginando a la persona Clara la fecha 03/03/2021
+Asginando a la persona Rogelio la fecha 03/03/2021
+Encontrada persona Francisco por primera vez. Creamos una entrada en el mapa para ella con una lista de fechas vacía
+Asginando a la persona Francisco la fecha 03/03/2021
+
+Asginando a la persona Rogelio la fecha 04/03/2021
+Asginando a la persona Francisco la fecha 04/03/2021
+Asginando a la persona Juan la fecha 04/03/2021
+
+Asginando a la persona Francisco la fecha 05/03/2021
+Asginando a la persona Juan la fecha 05/03/2021
+Asginando a la persona Luisa la fecha 05/03/2021
+
+Asginando a la persona Juan la fecha 06/03/2021
+Asginando a la persona Luisa la fecha 06/03/2021
+Asginando a la persona Clara la fecha 06/03/2021
+
+Asginando a la persona Luisa la fecha 07/03/2021
+Asginando a la persona Clara la fecha 07/03/2021
+Asginando a la persona Rogelio la fecha 07/03/2021
+</code></pre>
+</div>
+</div>
+<p>La última parte consistirá en mostrar por pantalla el contenido de la nueva estructura:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Contenido final del mapa de turnos organizado por personas:
+Persona Clara: [2021-03-01, 2021-03-02, 2021-03-03, 2021-03-06, 2021-03-07]
+Persona Francisco: [2021-03-03, 2021-03-04, 2021-03-05]
+Persona Juan: [2021-03-01, 2021-03-04, 2021-03-05, 2021-03-06]
+Persona Luisa: [2021-03-01, 2021-03-02, 2021-03-05, 2021-03-06, 2021-03-07]
+Persona Rogelio: [2021-03-02, 2021-03-03, 2021-03-04, 2021-03-07]</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b36" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b36text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b36" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b36" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+String[] arrayPersonas = {"Juan", "Luisa", "Clara", "Rogelio", "Francisco"};
+Map&lt;LocalDate, List&lt;String&gt;&gt; mapTurnosPorFecha= new TreeMap&lt;&gt;();
+Map&lt;String, List&lt;LocalDate&gt;&gt; mapTurnosPorPersona= new TreeMap&lt;&gt;();
+DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern ("dd/MM/yyyy");
+
+//----------------------------------------------
+//               Entrada de datos 
+//----------------------------------------------
+System.out.println("ASIGNACIÓN DE TURNOS (II): TURNOS POR PERSONA");
+System.out.println("---------------------------------------------");
+
+// Se lleva a cabo todo el proceso de creación de la estructura mapTurnosPorFecha
+// del ejercicio anterior
+
+// Creamos los índices y les asignamos un conjunto vacío (o una lista vacía)
+LocalDate fechaInicial= LocalDate.of (2021, 3, 1);
+for (int i=0; i&lt;7; i++) {
+    LocalDate fechaIndice= fechaInicial.plusDays(i);
+    mapTurnosPorFecha.put(fechaIndice, new LinkedList&lt;&gt;());
+}
+
+// Vamos recorriendo las claves del map y asignando tres personas para cada clave
+int indicePersonas= 0;
+for (LocalDate fecha: mapTurnosPorFecha.keySet()) {
+    for (int i=0; i&lt;3; i++) {
+        String persona= arrayPersonas[(indicePersonas+i)%arrayPersonas.length];
+        mapTurnosPorFecha.get(fecha).add(persona);
+    }         
+    indicePersonas= (indicePersonas+1) % arrayPersonas.length;
+}
+
+System.out.printf( "Contenido inicial del mapa de turnos organizado por fechas:\n");
+for (Map.Entry&lt;LocalDate, List&lt;String&gt;&gt; elemento: mapTurnosPorFecha.entrySet())
+{
+    System.out.printf("Fecha %s: %s\n",elemento.getKey().format(formatoFecha),elemento.getValue());
+}
+
+//----------------------------------------------
+//                  Procesamiento
+//----------------------------------------------
+System.out.println();
+System.out.println("Procedemos a explorar todos las personas de la estructura de turnos por fechas para generar la estructura de turnos por personas:\n");
+for (Map.Entry&lt;LocalDate, List&lt;String&gt;&gt; elemento: mapTurnosPorFecha.entrySet())
+{
+    for (String persona: elemento.getValue()) {
+        if (!mapTurnosPorPersona.containsKey(persona)) {
+            System.out.printf ("Encontrada persona %s por primera vez. Creamos una entrada en el mapa para ella con una lista de fechas vacía\n", persona);
+            mapTurnosPorPersona.put(persona, new LinkedList&lt;&gt;());
+        }
+        LocalDate fecha= elemento.getKey();
+        System.out.printf ("Asginando a la persona %s la fecha %s\n", persona, fecha.format(formatoFecha));
+        mapTurnosPorPersona.get(persona).add(fecha);                    
+    }
+    System.out.println();
+}
+
+//----------------------------------------------
+//           Salida de resultados
+//----------------------------------------------
+System.out.printf( "Contenido final del mapa de turnos organizado por personas:\n");
+for (Map.Entry&lt;String, List&lt;LocalDate&gt;&gt; elemento: mapTurnosPorPersona.entrySet()) {
+    System.out.printf("Persona %s: %s\n",elemento.getKey(),elemento.getValue());
+}</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id37">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 8. Ordenación de citas literarias</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta37_148" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="books-2463779_640.jpg" alt="Lbrería con estantes de libros ordenados." title="Libros" style="float: right;" width="240" height="169" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/libros-estante-para-libros-2463779/" title="Acceder a la web de descarga de la imagen de AhmadArdity en Pixabay (se abre en una nueva ventana)" target="_blank" class="author"><span class="author">AhmadArdity</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Dada la clase <code>CitaLiteraria</code>, implementa un programa en Java donde se cree una lista de objetos de este tipo para a continuación rellenarla con la siguiente información y en el siguiente orden: <code></code><code></code></p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre class="  language-latex"><code class="  language-latex">1. <span class="token punctuation">{</span>"Soy el mejor en morir en la escena", <span class="token punctuation">[</span>Libro 1<span class="token punctuation">]</span><span class="token punctuation">}</span>
+2. <span class="token punctuation">{</span>"El mundo acaba hoy", <span class="token punctuation">[</span>Libro 1, Libro 2<span class="token punctuation">]</span><span class="token punctuation">}</span>
+3. <span class="token punctuation">{</span>"Silba una vez y vendré siempre", <span class="token punctuation">[</span>Libro 3, Libro 4, Libro 5<span class="token punctuation">]</span><span class="token punctuation">}</span>
+4. <span class="token punctuation">{</span>"Un invitado invita a cien", <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span></code></pre>
+</div>
+</div>
+</section>
+<section id="taquesQuestion0b37" class="block iDevice_content">
+<p>Aquí tienes el código de la clase <code>CitaLiteraria</code>:</p>
+</section>
+<form name="feedback-form-quesFeedback0b37" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b37text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b37" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b37" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Clase CitaLiteraria.
+ */
+public class CitaLiteraria {
+    private final String texto;
+    private final List&lt;String&gt; obras;
+    
+    /** Constructor
+     * 
+     * @param texto Conteindo de la cita literaria (texto)
+     * @param obras Títulos de las obras donde aparece esa cita literaria
+     */
+    public CitaLiteraria (String texto, String ... obras) {
+        this.texto= texto;
+        this.obras= new LinkedList&lt;&gt;();
+        this.obras.addAll(Arrays.asList(obras));
+    }
+    
+    /**
+     * Obtiene el texto de la cita literaria.
+     * @return Texto de la cita literaria.
+     */
+    public String getTexto() {
+        return this.texto;
+    }
+    
+    /**
+     * Obtiene la cantidad de obras en las que la cita aparece
+     * @return cantidad de obras en las que la cita aparece
+     */
+    public List getUsos() {
+        return this.obras;
+    }
+
+    /**
+     * Obtiene una representació textual de la cita literaria.
+     * Aparece encerrada entre llaves ({...}). El primer elemento será el contenido
+     * o texto de la cita entre comillas. El resto de elementos, encerrados en unos 
+     * corchetes, y separados por comas, serán los títulos de las obras en las que 
+     * aparece esa cita.
+     * @return una representación textual de la cita literaria.
+     */
+    @Override
+    public String toString() {
+        return String.format ("{\"%s\", %s}", 
+                this.getTexto(),
+                this.getUsos());
+    }        
+}</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+<section id="taquesQuestion1b37" class="block iDevice_content">
+<p>A continuación, ordenar la lista conforme a tres criterios diferentes:</p>
+<ol>
+<li>por <strong>texto</strong> de la cita (alfabético o lexicográfico);</li>
+<li>por <strong>longitud</strong> (número de caracteres)<strong> </strong>de la cita;</li>
+<li>por <strong>número de obras</strong> en las que aparece la cita en los libros de la biblioteca.</li>
+</ol>
+<p>Para ello habrá que escribir el código de tres clases que implementen la interfaz <code>Comparator</code> que nos permitan ordenar esa lista en función de tres criterios diferentes:</p>
+<ol>
+<li>clase <code>ComparadorCitasPorTexto</code>;</li>
+<li>clase <code>ComparadorCitasPorLongitud</code>;</li>
+<li>clase <code>ComparadorCitasPorNumObras</code>.</li>
+</ol>
+<p>Puedes escribir las tres clases dentro del propio archivo del ejercicio, fuera de la clase principal (como clases no públicas), o bien implementarlas de manera independiente cada una en un archivo.</p>
+<p>En resumen, tendrás que implementar un <strong>programa principal</strong> (método <code>main</code>) que llevará a cabo las siguientes acciones:</p>
+<ol>
+<li><strong>crear una lista de citas</strong> (objetos instancia de la clase <code>CitaLiteraria</code>);</li>
+<li><strong>rellenar la lista con las cuatro citas indicadas</strong>;</li>
+<li><strong>mostrar el contenido inicial de la lista</strong> recorriendo cada elemento y mostrándolo en una línea diferente;</li>
+<li>llevar a cabo la <strong>ordenación de la lista</strong> utilizando el comparador por <strong>texto</strong> de la cita;</li>
+<li>recorrer de nuevo la lista y <strong>mostrar cada elemento</strong> en una línea diferente;</li>
+<li>llevar a cabo una <strong>nueva ordenación de la lista</strong> utilizando el comparador por <strong>longitud</strong> de la cita;</li>
+<li>volver a recorrer la lista y <strong>mostrar nuevamente sus elementos</strong> ordenados con el nuevo criterio;</li>
+<li>realizar una <strong>última ordenació</strong>n utilizando el comparador por <strong>número de obras</strong> en las que aparece la cita;</li>
+<li><strong>mostrar por última</strong> vez el contenido de la lista ordenada por este tercer criterio.</li>
+</ol>
+</section>
+<form name="feedback-form-quesFeedback1b37" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b37text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b37" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b37" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong>Creación de la lista</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+List&lt;CitaLiteraria&gt; listaCitas= new LinkedList&lt;&gt;();
+
+//----------------------------------------------
+//            Creación de la lista
+//----------------------------------------------
+System.out.println("ORDENACIÓN DE CITAS LITERARIAS");
+System.out.println("------------------------------");
+
+// Rellenamos la lista con las citas literarias
+
+listaCitas.add (new CitaLiteraria ("Soy el mejor en morir en la escena", "Libro 1"));
+listaCitas.add (new CitaLiteraria ("El mundo acaba hoy", "Libro 1", "Libro 2"));
+listaCitas.add (new CitaLiteraria ("Silba una vez y vendré siempre", "Libro 3", "Libro 4", "Libro 5"));
+listaCitas.add (new CitaLiteraria ("Un invitado invita a cien"));
+
+
+// Mostramos el contenido inicial de la lista
+System.out.printf("Contenido inicial de la lista:\n");
+mostrarListaCitas (listaCitas);
+</code></pre>
+</div>
+</div>
+<p>Método para mostrar el contenido de la lista:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Método que recorre una lista de citas y las muestra cada una por pantalla
+static void mostrarListaCitas (List&lt;CitaLiteraria&gt; listaCitas) {
+int contador=1;
+for (CitaLiteraria elemento: listaCitas) {
+    System.out.printf ("%d. %s\n", contador++, elemento);
+}        </code></pre>
+</div>
+</div>
+<p><strong>Comparadores</strong> según los distintos criterios (<strong>texto</strong> de la cita, <strong>longitud</strong> de la cita, <strong>número de obras</strong> en las que aparece la cita):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Clase que permite comparar dos objetos &lt;code&gt;CitaLiteraria&lt;/code&gt; usando como criterio
+ * de comparación el &lt;strong&gt;contenido (texto) de esas citas&lt;/strong&gt;. Se trata de una comparación
+ * alfabética o lexicográfica.
+ * @author profe
+ */
+public class ComparadorCitasPorTexto implements Comparator&lt;CitaLiteraria&gt; {
+    
+    /**
+    * Comparación de dos objetos de tipo &lt;code&gt;CitaLiteraria&lt;/code&gt; usando como criterio
+    * de comparación el &lt;strong&gt;contenido (texto) de esas citas&lt;/strong&gt;. Es una comparación de tipo
+    * lexicográfica (la que se hace entre dos &lt;code&gt;String&lt;/code&gt;). El resultado de la comparación sería: 
+    * &lt;ul&gt;
+    * &lt;li&gt;negativo si la primera cita es "menor" o se colocara "antes" que la 
+    * segunda si hubiera que ordenarlas (alfabética o lexicográficamente está antes),&lt;/li&gt;
+    * &lt;li&gt;cero si se consideran "iguales" o "equivalentes" según este criterio
+    * (los dos títulos son exactamente la misma cadena de caracteres),&lt;/li&gt; 
+    * &lt;li&gt;positivo si la primera cita es "mayor" o se colocara "depués" que la segunda 
+    * si hubiera que ordenarlas.&lt;/li&gt;
+    * &lt;/ul&gt;
+    * @param c1 primer término de la comparación (primera cita)
+    * @param c2 segundo término de la comparación (segunda cita)
+    * @return resultado de la comparación
+    */
+    @Override
+    public int compare (CitaLiteraria c1, CitaLiteraria c2) {
+        return c1.getTexto().compareToIgnoreCase(c2.getTexto());
+    }
+}</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Clase que permite comparar dos objetos &lt;code&gt;CitaLiteraria&lt;/code&gt; usando como criterio
+ * de comparación la &lt;strong&gt;longitud del contenido (texto)&lt;/strong&gt; de las citas. 
+ * @author profe
+ */
+public class ComparadorCitasPorLongitud implements Comparator&lt;CitaLiteraria&gt; {
+
+   /**
+    * Comparación de dos objetos de tipo &lt;code&gt;CitaLiteraria&lt;/code&gt; usando como criterio
+    * de comparación la &lt;strong&gt;longitud del contenido (texto) de la citas&lt;/strong&gt;. 
+    * En realidad lo que se compara son dos números enteros. El resultado de la 
+    * comparación sería: 
+    * &lt;ul&gt;
+    * &lt;li&gt;negativo si la primera cita es "menor" o se colocara "antes" que la 
+    * segunda si hubiera que ordenarlas (el texto de la primera es más "corto" 
+    * en número de caracteres),&lt;/li&gt;
+    * &lt;li&gt;cero si se consideran "iguales" o "equivalentes" según este criterio
+    * (ambos títulos tienen la misma longitud),&lt;/li&gt; 
+    * &lt;li&gt;positivo si la primera cita es "mayor" o se colocara "depués" que la segunda 
+    * si hubiera que ordenarlas (el texto de la primera cita es más "largo".&lt;/li&gt;
+    * &lt;/ul&gt;
+    * @param c1 primer término de la comparación (primera cita)
+    * @param c2 segundo término de la comparación (segunda cita)
+    * @return resultado de la comparación
+    */
+    @Override
+    public int compare (CitaLiteraria c1, CitaLiteraria c2) {
+        return c1.getTexto().length() -  c2.getTexto().length();
+    }
+}</code></pre>
+</div>
+</div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>/**
+ * Clase que permite comparar dos objetos &lt;code&gt;CitaLiteraria&lt;/code&gt; usando como criterio
+ * de comparación la &lt;strong&gt;cantidad de veces que esas citas aparecen en distintas 
+ * obras&lt;/strong&gt;.
+ * @author profe
+ */
+public class ComparadorCitasPorNumObras implements Comparator&lt;CitaLiteraria&gt; {
+    
+    /**
+    * Comparación de dos objetos de tipo &lt;code&gt;CitaLiteraria&lt;/code&gt; usando como criterio
+    * de comparación la &lt;strong&gt;cantidad de veces que esas citas aparecen en distintas obras&lt;/strong&gt;.
+    * Aquí lo que se compara es un par de números enteros (la cantidad de usos
+    * de cada cita). El resultado de la comparación sería: 
+    * &lt;ul&gt;
+    * &lt;li&gt;negativo si la primera cita es "menor" o se colocara "antes" que la 
+    * segunda si hubiera que ordenarlas (menos veces citada),&lt;/li&gt;
+    * &lt;li&gt;cero si se consideran "iguales" o "equivalentes" según este criterio
+    * (mismas veces citada),&lt;/li&gt; 
+    * &lt;li&gt;positivo si la primera cita es "mayor" o se colocara "depués" que la segunda 
+    * si hubiera que ordenarlas (más veces citada).&lt;/li&gt;
+    * &lt;/ul&gt;
+    * @param c1 primer término de la comparación (primera cita)
+    * @param c2 segundo término de la comparación (segunda cita)
+    * @return resultado de la comparación    
+    */
+    @Override
+    public int compare (CitaLiteraria c1, CitaLiteraria c2) {
+        return c1.getUsos().size() -  c2.getUsos().size();
+    }   
+}</code></pre>
+</div>
+</div>
+<p><strong>Ordenación de la lista según los diferentes criterios</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//    Ordenación según diferentes criterios
+//----------------------------------------------
+
+// Ordenación de la lista por texto de la cita (alfabético) y la mostramos por pantalla
+System.out.printf ("\nOrdenación de la lista por texto de la cita (alfabético):\n");
+Collections.sort(listaCitas, new ComparadorCitasPorTexto() );
+mostrarListaCitas (listaCitas);
+
+// Ordenación de la lista por longitud de la cita y la mostramos por pantalla
+System.out.printf ("\nOrdenación de la lista por longitud de la cita:\n");
+Collections.sort(listaCitas, new ComparadorCitasPorLongitud() );
+mostrarListaCitas (listaCitas);
+
+// Ordenación de la lista por número de obras en las que aparece la cita y la mostramos por pantalla
+System.out.printf ("\nOrdenación de la lista por número de obras en las que aparece la cita:\n");
+Collections.sort(listaCitas, new ComparadorCitasPorNumObras() );
+mostrarListaCitas (listaCitas);</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="731_operaciones_de_reduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>9.2.1.- Librerías para procesar documentos XML (II). Transformar el árbol  DOM en archivo  XML. | PROG07_Contenidos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="Juan Antonio Reina" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-31"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">PROG07_Contenidos</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos externas (ficheros).</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1.- Introducción.</a>
+   <ul class="other-section">
+      <li><a href="11_excepciones.html" class="no-ch">1.1.- Excepciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_concepto_de_flujo.html" class="no-ch">2.- Concepto de flujo.</a></li>
+   <li><a href="3_clases_relativas_a_flujos.html" class="daddy">3.- Clases relativas a flujos.</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplo_comentado_de_una_clase_con_flujos.html" class="no-ch">3.1.- Ejemplo comentado de una clase con flujos.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4.- Flujos.</a>
+   <ul class="other-section">
+      <li><a href="41_flujos_predefinidos_entrada_y_salida_estndar.html" class="no-ch">4.1.- Flujos predefinidos. Entrada y salida estándar.</a></li>
+      <li><a href="42_flujos_predefinidos_entrada_y_salida_estndar_ejemplo.html" class="no-ch">4.2.- Flujos predefinidos. Entrada y salida estándar. Ejemplo.</a></li>
+      <li><a href="43_flujos_basados_en_bytes.html" class="no-ch">4.3.- Flujos basados en bytes.</a></li>
+      <li><a href="44_flujos_basados_en_caracteres.html" class="no-ch">4.4.- Flujos basados en caracteres.</a></li>
+      <li><a href="45_rutas_de_los_ficheros.html" class="no-ch">4.5.- Rutas de los ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_trabajando_con_ficheros.html" class="daddy">5.- Trabajando con ficheros.</a>
+   <ul class="other-section">
+      <li><a href="51_escritura_y_lectura_de_informacin_en_ficheros.html" class="no-ch">5.1.- Escritura y lectura de información en ficheros.</a></li>
+      <li><a href="52_ficheros_binarios_y_ficheros_de_texto_i.html" class="daddy">5.2.- Ficheros binarios y ficheros de texto (I).</a>
+      <ul class="other-section">
+         <li><a href="521_ficheros_binarios_y_ficheros_de_texto_ii.html" class="no-ch">5.2.1.- Ficheros binarios y ficheros de texto (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="53_modos_de_acceso_registros.html" class="no-ch">5.3.- Modos de acceso. Registros.</a></li>
+      <li><a href="54_acceso_secuencial.html" class="no-ch">5.4.- Acceso secuencial.</a></li>
+      <li><a href="55_acceso_aleatorio.html" class="no-ch">5.5.- Acceso aleatorio.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_aplicaciones_del_almacenamiento_de_informacin_en_ficheros.html" class="no-ch">6.- Aplicaciones del almacenamiento de información en ficheros.</a></li>
+   <li><a href="7_utilizacin_de_los_sistemas_de_ficheros.html" class="daddy">7.- Utilización de los sistemas de ficheros.</a>
+   <ul class="other-section">
+      <li><a href="71_clase_file.html" class="no-ch">7.1.- Clase File.</a></li>
+      <li><a href="72_interface_filenamefilter.html" class="no-ch">7.2.- Interface FilenameFilter.</a></li>
+      <li><a href="73_creacin_y_eliminacin_de_ficheros_y_directorios.html" class="no-ch">7.3.- Creación y eliminación de ficheros y directorios.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_almacenamiento_de_objetos_en_ficheros_persistencia_serializacin.html" class="daddy">8.- Almacenamiento de objetos en ficheros. Persistencia. Serialización.</a>
+   <ul class="other-section">
+      <li><a href="81_serializacin_utilidad.html" class="no-ch">8.1.- Serialización: utilidad.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="9_tratamiento_de_documentos_estructurados_xml.html" class="current-page-parent daddy">9.- Tratamiento de documentos estructurados XML.</a>
+   <ul>
+      <li><a href="91_qu_es_un_documento_xml.html" class="no-ch">9.1.- ¿Qué es un documento XML?</a></li>
+      <li class="current-page-parent"><a href="92_libreras_para_procesar_documentos_xml_i_convertir_el_archivo__xml_a_rbol_dom.html" class="current-page-parent daddy">9.2.- Librerías para procesar documentos XML (I). Convertir el archivo  XML a árbol DOM</a>
+      <ul>
+         <li id="active"><a href="921_libreras_para_procesar_documentos_xml_ii_transformar_el_rbol__dom_en_archivo__xml.html" class="active no-ch">9.2.1.- Librerías para procesar documentos XML (II). Transformar el árbol  DOM en archivo  XML.</a></li>
+      </ul>
+      </li>
+      <li><a href="93_manipulacin_de_documentos_xml_i_obtener_el_elemento_raz_y_buscar_un_elemento.html" class="daddy">9.3.- Manipulación de documentos XML (I). Obtener el elemento raíz, y buscar un elemento.</a>
+      <ul class="other-section">
+         <li><a href="931_manipulacin_de_documentos_xml_ii_obtener_y_procesar_la_lista_de_hijos_y_aadir_uno_nuevo.html" class="no-ch">9.3.1.- Manipulación de documentos XML (II). Obtener y procesar la lista de hijos y añadir uno nuevo.</a></li>
+         <li><a href="932_manipulacin_de_documentos_xml_iii_eliminar_un_hijo_y_modificar_un_elemento_texto.html" class="no-ch">9.3.2.- Manipulación de documentos XML (III). Eliminar un hijo y modificar un elemento texto.</a></li>
+         <li><a href="933_manipulacin_de_documentos_xml_iv_manejar_atributos_de_un_elemento.html" class="no-ch">9.3.3.- Manipulación de documentos XML (IV). Manejar atributos de un elemento.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="92_libreras_para_procesar_documentos_xml_i_convertir_el_archivo__xml_a_rbol_dom.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="93_manipulacin_de_documentos_xml_i_obtener_el_elemento_raz_y_buscar_un_elemento.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">9.2.1.- Librerías para procesar documentos XML (II). Transformar el árbol  DOM en archivo  XML.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id146">
+<div class="iDevice emphasis0">
+<div id="ta146_73" class="block iDevice_content">
+<p><img alt="Imagen en la que se ve una persona apuntando con un dedo a la pantalla de un ordenador." class="elemento_derecha" src="PROG09_CONT_R055_apuntandopantalla.jpg" style="width: 192px; height: 128px;" title="Explicando." height="128" width="192" /></p>
+<p>&iquest;Y c&oacute;mo paso la jerarqu&iacute;a o &aacute;rbol de objetos&nbsp;&nbsp;<abbr title="Document Object Model." lang="en">DOM</abbr> a <acronym title="eXtended Markup Language." lang="en">XML</acronym>?</p>
+<p>Como hemos dicho en el apartado anterior, en <span lang="en">Java </span>esto es un pel&iacute;n m&aacute;s complicado que la operaci&oacute;n inversa, y requiere el uso de un mont&oacute;n de clases del paquete <code>java.xml.transform</code>, pues la idea es transformar el &aacute;rbol&nbsp;&nbsp;<abbr title="Document Object Model." lang="en">DOM</abbr> en un archivo de texto que contiene el documento <acronym title="eXtended Markup Language." lang="en">XML</acronym>.</p>
+<p>Las clases que tendremos que usar son:</p>
+<ul class="lista_verificacion">
+<li><code>javax.xml.transform.TransformerFactory</code>. F&aacute;brica de transformadores, permite crear un nuevo transformador que convertir&aacute; el &aacute;rbol&nbsp;<abbr title="Document Object Model." lang="en">DOM</abbr> a <acronym title="eXtended Markup Language." lang="en">XML</acronym>.</li>
+<li><code>javax.xml.transform.Transformer</code>. Transformador que permite pasar un &aacute;rbol&nbsp;<abbr title="Document Object Model." lang="en">DOM</abbr> a <acronym title="eXtended Markup Language." lang="en">XML</acronym>.</li>
+<li><code>javax.xml.transform.TransformerException</code>. Excepci&oacute;n lanzada cuando se produce un fallo en la transformaci&oacute;n.</li>
+<li><code>javax.xml.transform.OutputKeys</code>. Clase que contiene opciones de salida para el transformador. Se suele usar para indicar la codificaci&oacute;n de salida (generalmente <acronym title="8-bit Unicode Transformation Format." lang="en">UTF-8</acronym>) del documento&nbsp;<acronym title="eXtended Markup Language." lang="en">XML</acronym> generado.</li>
+<li><code>javax.xml.transform.dom.DOMSource</code>. Clase que actuar&aacute; de intermediaria entre el &aacute;rbol&nbsp;<abbr title="Document Object Model." lang="en">DOM</abbr> y el transformador, permitiendo al transformador acceder a la informaci&oacute;n del &aacute;rbol <abbr title="Document Object Model." lang="en">DOM</abbr>.</li>
+<li><code>javax.xml.transform.stream.StreamResult</code>. Clase que actuar&aacute; de intermediaria entre el transformador y el archivo o <code>String</code> donde se almacenar&aacute; el documento&nbsp;<acronym title="eXtended Markup Language." lang="en">XML</acronym> generado.</li>
+<li><code>java.io.File</code>. Clase que, como posiblemente sabr&aacute;s, permite leer y escribir en un archivo almacenado en disco. El archivo ser&aacute; obviamente el documento&nbsp;<acronym title="eXtended Markup Language." lang="en">XML</acronym> que vamos a escribir en el disco.</li>
+</ul>
+<p>Esto es un poco lioso, &iquest;o no? No lo es tanto cuando se ve un ejemplo de c&oacute;mo realizar el proceso de transformaci&oacute;n de &aacute;rbol&nbsp;<abbr title="Document Object Model." lang="en">DOM</abbr> a <acronym title="eXtended Markup Language." lang="en">XML</acronym>, as&iacute; que veamos ese ejemplo:</p>
+<div class="codigo elemento_centrado" style="width: 64.3em;">
+<div class="texto_izquierda">
+<pre><code>try {</code>
+</pre>
+<pre><code>            // 1&ordm; Creamos una instancia de la clase File para acceder al archivo donde guardaremos el XML.</code>
+</pre>
+<pre><code>            File f=new File(CaminoAlArchivoXML);</code>
+</pre>
+<pre><code>            //2&ordm; Creamos una nueva instancia del transformador a trav&eacute;s de la f&aacute;brica de transformadores.</code>
+</pre>
+<pre><code>            Transformer transformer = TransformerFactory.newInstance().newTransformer();</code>
+</pre>
+<pre><code>            //3&ordm; Establecemos algunas opciones de salida, como por ejemplo, la codificaci&oacute;n de salida.</code>
+</pre>
+<pre><code>            transformer.setOutputProperty(OutputKeys.INDENT, "yes");</code>
+</pre>
+<pre><code>            transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");            </code>
+</pre>
+<pre><code>            //4&ordm; Creamos el StreamResult, que intermediar&aacute; entre el transformador y el archivo de destino.</code>
+</pre>
+<pre><code>            StreamResult result = new StreamResult(f);            </code>
+</pre>
+<pre><code>            //5&ordm; Creamos el DOMSource, que intermediar&aacute; entre el transformador y el &aacute;rbol DOM.</code>
+</pre>
+<pre><code>            DOMSource source = new DOMSource(doc);</code>
+</pre>
+<pre><code>            //6&ordm; Realizamos la transformaci&oacute;n.</code>
+</pre>
+<pre><code>            transformer.transform(source, result);         </code>
+</pre>
+<pre><code>} catch (TransformerException ex) {</code>
+</pre>
+<pre><code>     System.out.println("&iexcl;Error! No se ha podido llevar a cabo la transformaci&oacute;n.");            </code>
+</pre>
+<pre><code>}</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id147">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header" style="background-image:url(icon_debesconocerfpd.png)"><h2 class="iDeviceTitle">Debes conocer</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta147_48" class="block iDevice_content">
+<p>A continuación te adjuntamos, cortesía de la casa, una de esas clases anti-estrés, que nos permitirá hacer estas operaciones sin tener que reinventar la rueda cada vez, ni tener que acordarnos de tantos detalles... Utilízala todo lo que quieras, con ella podrás convertir un documento <acronym title="eXtended Markup Language." lang="en">XML</acronym> a árbol <acronym title="Document Object Model" lang="en">DOM </acronym>y viceversa de forma sencilla. El documento  <acronym title="eXtended Markup Language." lang="en">XML</acronym> puede estar almacenado en un archivo o en una cadena de texto (e incluso en Internet, para lo que necesitas el <acronym title="Unified Resource Identificator." lang="en">URI</acronym> (Identificador de Recursos Unificado)). Los métodos estáticos <code>domToXml()</code> te permitirán pasar el árbol <acronym title="Document Object Model" lang="en">DOM </acronym> a <acronym title="eXtended Markup Language." lang="en">XML</acronym>, y los métodos <code>stringToDom()</code> y <code>xmlToDom()</code> te permitirán pasar un documento <acronym title="eXtended Markup Language." lang="en">XML</acronym> a un árbol <acronym title="Document Object Model" lang="en">DOM </acronym>.</p>
+<p>También contiene el método <code>crearDOMVacio()</code> que permite crear un árbol <acronym title="Document Object Model" lang="en">DOM </acronym>vacío, útil para empezar un documento <acronym title="eXtended Markup Language." lang="en">XML</acronym> de cero.</p>
+<div class="enlace_centrado"><a class="documento" title="Descargar clase DOMUtil para convertir documentos XML a árboles DOM y viceversa. [zip - 7 KB]" href="DOMUtil.java">Clase DOMUtil de ayuda para convertir documentos <acronym title="eXtended Markup Language." lang="en">XML</acronym> a árboles <acronym title="Document Object Model" lang="en">DOM </acronym>y viceversa.</a> <span class="tamano"> (7 KB) </span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="92_libreras_para_procesar_documentos_xml_i_convertir_el_archivo__xml_a_rbol_dom.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="93_manipulacin_de_documentos_xml_i_obtener_el_elemento_raz_y_buscar_un_elemento.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

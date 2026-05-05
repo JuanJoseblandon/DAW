@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>I.3.- Clase Dado | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-80"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li><a href="4_atributos.html" class="daddy">4.- Atributos</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li><a href="5_mtodos.html" class="daddy">5.- Métodos</a>
+   <ul class="other-section">
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="current-page-parent daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul>
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li id="active"><a href="i3_clase_dado.html" class="active no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="i2_clase_ticket.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="i4_clase_bombo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">I.3.- Clase Dado</h1></div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id262">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta262_148" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="Wuerfel5.jpg" alt="Conjunto de dados en forma de poliedro regular de 4, 6, 8, 10, 12 y 20 caras" title="Dados" width="200" height="150" />
+<div class="figcaption"><a href="https://commons.wikimedia.org/wiki/File:Wuerfel5.jpg" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Peng en Wiki Commons (se abre en una nueva ventana).">Peng</a> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></div>
+</div>
+<p>Hemos recibido el encargo de implementar una clase que represente a los <strong>dados de un juego de mesa</strong>. Los posibles dados para estos juegos son todos aquellos poliedros que tengan todas las caras iguales. Matemáticamente existen cinco tipos diferentes (con cuatro, seis, ocho, doce o veinte caras). Son conocidos como los sólidos platónicos.</p>
+<p>Para <strong>cada dado</strong> queremos registrar la siguiente información:</p>
+<ul class="lista_verificacion">
+<li>el <strong>número de caras</strong> que tiene;</li>
+<li>la <strong>cantidad de lanzamientos</strong> que se han realizado con él.</li>
+</ul>
+<p></p>
+</div>
+<div id="taquesQuestion0b262" class="block iDevice_content">
+<p>Teniendo en cuenta esas especificaciones, realiza un análisis inicial para decidir qué atributos necesitarías para implementar la clase <code>Dado</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback0b262" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b262text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b262" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b262" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Se trata de una clase bastante simple para la cual, en principio, nos bastaría con un par de <strong>atributos de objeto privados</strong>:</p>
+<ul class="lista_verificacion">
+<li>el <strong class="lista_verificacion">número de caras</strong>, de tipo <strong>entero</strong> (por ejemplo <code>byte</code>), <strong>inmutable</strong> (el número de caras no va a cambiar);</li>
+<li>el <strong>número de lanzamientos</strong>, de tipo <strong>entero</strong> (por ejemplo <code>long</code>) y <strong>mutable</strong> (variable).</li>
+</ul>
+<p>La implementación en <span lang="en">Java</span> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre><code>public class Dado { 
+  // Atributos de objeto inmutables
+  private final byte numeroCaras;
+   
+  // Atributos de objeto mutables (estado)
+  private long numeroLanzamientos;
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion1b262" class="block iDevice_content">
+<p>Para poder crear instancias de esta clase se nos ha sugerido implementar <strong>dos constructores</strong>: uno <strong>con un parámetro</strong> entero, que indique el <strong>número de caras</strong> del dado, y otro <strong>sin parámetros</strong>, que instancie un dado de seis caras.</p>
+<p>Implementa ambos constructores.</p>
+</div>
+<form name="feedback-form-quesFeedback1b262" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b262text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b262" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b262" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En la implementación del primer constructor es necesario <strong>asegurarse de que el número de caras </strong>pasado como parámetro<strong> es válido</strong>. Si es así, entonces puede inicializarse el atributo que contiene el número de caras. Si no es así, se puede lanzar una <strong>excepción</strong> de tipo <code>IllegalArgumentException</code>:</p>
+<div class="highlighted-code language-java">
+<pre><code>public Dado (byte numeroCaras) throws IllegalArgumentException {
+  // Comprobamos la validez del número de caras
+  if (numeroCaras != 4 &amp;&amp; numeroCaras != 6 &amp;&amp; numeroCaras != 8 &amp;&amp; numeroCaras != 12 &amp;&amp; numeroCaras != 20) {
+        throw new IllegalArgumentException (String.format ("número de caras no válido: %d", numeroCaras));
+  }
+
+  // Inicializamos los atributos de objeto
+  this.numeroCaras= numeroCaras;
+  this.numeroLanzamientos= 0;        
+}</code></pre>
+</div>
+<p>El <strong>constructor sin parámetros</strong> puede implementarse como una simple llamada al constructor con parámetro con la <strong>cantidad de caras por omisión</strong> (seis). Si queremos evitar el uso de literales en los métodos, podemos declarar un <strong>atributo constante de clase</strong> que contenga ese valor:</p>
+<div class="highlighted-code language-java">
+<pre><code>public static final byte DEFAULT_NUMERO_CARAS= 6;
+</code></pre>
+</div>
+<p>De ese modo el constructor <strong>sin parámetros</strong> quedaría así de simple:</p>
+<div class="highlighted-code language-java">
+<pre><code>public Dado () {
+  this (Dado.DEFAULT_NUMERO_CARAS);
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion2b262" class="block iDevice_content">
+<p>Respecto a los métodos <span lang="en">get</span> se ha decido disponer de métodos para obtener la siguiente información:</p>
+<ul class="lista_verificacion">
+<li>el <strong class="lista_verificacion">número de caras</strong>, del dado;</li>
+<li>el <strong>número de lanzamientos</strong> que se han realizado con el dado.</li>
+</ul>
+<p>Implementa ambos métodos.</p>
+</div>
+<form name="feedback-form-quesFeedback2b262" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b262text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b262" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b262" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Se trata de dos métodos <span lang="en">get</span> "directos" que no requieren ningún tipo de filtro ni transformación. Se trata simplemente de devolver el valor de un par de atributos:</p>
+<div class="highlighted-code language-java">
+<pre><code>public byte getNumeroCaras () {
+  return this.numeroCaras;
+}
+
+public long getNumeroLAnzamientos() {
+  return this.numeroLanzamientos;
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion3b262" class="block iDevice_content">
+<p>Para que los objetos de la clase <code>Dado</code> resulten de utilidad, han de poder lanzarse para obtener un resultado al azar. Se ha planteado un método llamado <code>lanzar</code> que devuelva un valor aleatorio equiprobable dentro de las caras que tenga el dado. Se nos ha pedido además el valor devuelto sea de tipo <code>String</code> y consista en una cadena que represente el número de la cara en castellano. Es decir, que este método devolverá cadenas del tipo "UNO", "DOS", "TRES", "CUATRO", <abbr title="etcétera">etc.</abbr></p>
+<p>Implementa en <span lang="en">Java</span> el método <code>lanzar</code> tal y como se ha especificado.</p>
+</div>
+<form name="feedback-form-quesFeedback3b262" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b262text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b262" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback3b262" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Para facilitar el tratamiento de los nombres de los números para cada cara lo más sencillo y operativo es almacenar esos nombres dentro de un <span lang="en">array</span> para poder obtenerlos con facilidad.</p>
+<p>Ese <span lang="en">array</span> basta con que exista una sola vez y pueda ser usado por todos los objetos <code>Dado</code> que se vayan instanciando. Se trata por tanto de un <span lang="en">array</span> candidato a ser declarado como un atributo de clase. Será además constante o inmutable, pues no tiene mucho sentido que pueda cambiar. El <span lang="en">array</span> contendrá todos los nombres posibles y dependiendo del número de caras del dado se utilizarán todos o solo parte de esos nombres:</p>
+<div class="highlighted-code language-java">
+<pre><code>private static final String[] NOMBRES_CARAS= {"UNO", "DOS", "TRES", "CUATRO", "CINCO", "SEIS", "SIETE", "OCHO", "NUEVE", 
+"DIEZ", "ONCE", "DOCE", "TRECE", "CATORCE", "QUINCE", "DIECISÉIS", "DICECISIETE", "DIECIOCHO", "DIECINUEVE", "VEINTE"};</code></pre>
+</div>
+<p>En este caso lo podemos declarar como <strong>privado</strong> pues se trata de información "interna" que no va a resultar de utilidad a otros programadores que utilicen objetos de esta clase desde fuera.</p>
+<p>Una vez que dispongamos del <span lang="en">array</span> con los nombres de los números, el método <code>lanzar</code> quedaría bastante sencillo:</p>
+<div class="highlighted-code language-java">
+<pre><code>public String lanzar() {
+  byte aleatorio= (byte) (Math.random()*this.numeroCaras);
+  return Dado.NOMBRES_CARAS[aleatorio];
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion4b262" class="block iDevice_content">
+<div id="taquesQuestion3b256" class="block iDevice_content">
+<p>En cuanto a una posible <strong>representación textual</strong> de los objetos de la clase <code>Dado</code>, se nos ha propuesto el siguiente formato de salida:</p>
+<pre><code>Número de caras: xxx. Número de lanzamientos: zzz</code></pre>
+<p>donde xxx será el número de caras del dado y zzz el número de veces que ha sido lanzado hasta el momento. Algunos ejemplos de salida podrían ser:</p>
+<div>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Número de caras: 6. Número de lanzamientos: 0
+Número de caras: 12. Número de lanzamientos: 3
+Número de caras: 4. Número de lanzamientos: 21</code></pre>
+</div>
+</div>
+</div>
+<p>Teniendo en cuenta esas especificaciones, implementa un método <code>toString</code> en <span lang="en">Java</span> para la clase <code>Dado</code>.</p>
+</div>
+</div>
+<form name="feedback-form-quesFeedback4b262" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback4b262text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback4b262" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback4b262" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La implementación del método <code>toString</code> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre><code>@Override
+public String toString() {
+  return String.format ("Número de caras: %d, Número de lanzamientos: %d", this.numeroCaras, this.numeroLanzamientos);
+}</code></pre>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id266">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta266_148" class="block story iDevice_content">
+<p><puna vez="" que="" disponemos="" de="" una="" implementaci="" n="" b="" sica="" para="" la="" clase="" code="">Dado, nos ha llegado un nuevo requerimiento para que cada dado lleve un <strong>registro del número de veces que ha salido cada cara</strong>.</puna></p>
+</div>
+<div id="taquesQuestion0b266" class="block iDevice_content">
+<p>¿Cómo afectaría esta nueva funcionalidad a la nueva clase <code>Dado</code> desde el punto de vista de los atributos?</p>
+</div>
+<form name="feedback-form-quesFeedback0b266" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b266text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b266" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b266" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Una posible forma de registrar cuántas veces ha salido cada cara del dado podría ser mediante el uso de un <strong><span lang="en">array</span> de enteros de tamaño el número de caras del dado</strong>. En cada casilla podría almacenar la cantidad de veces que ha salido cada cara. Sería un atributo <strong>de objeto</strong> <strong>privado</strong> de tipo <strong><span lang="en">array</span> de enteros</strong> (por ejemplo <code>int</code>)<strong></strong>:</p>
+<div class="highlighted-code language-java">
+<pre><code>private int[] registroLanzamientos;</code>
+</pre>
+</div>
+<p>A partir de ese <span lang="en">array</span> podríamos obtener tanto el <strong>número de caras</strong> como la <strong>cantidad de lanzamientos</strong> pudiéndose eliminar esos dos atributos:</p>
+<ul>
+<li class="lista_verificacion">el <strong>número de caras</strong> podría obtenerse a partir del <strong>tamaño del <span lang="en">array</span></strong>: <code>registroLanzamientos.length</code>,</li>
+<li class="lista_verificacion">la <strong>cantidad de lanzamientos</strong> podría calcularse <strong>sumando todos los elementos del <span lang="en">array</span></strong>.</li>
+</ul>
+<p>La declaración de atributos de esta nueva clase <code>Dado</code> podría quedar entonces así:</p>
+<div class="highlighted-code language-java">
+<pre><code>public class Dado { 
+    
+  // ATRIBUTOS DE CLASE
+    
+  // Atributos constantes de clase
+  public static final byte DEFAULT_NUMERO_CARAS= 6;
+    
+  private static final String[] NOMBRES_CARAS= {"UNO", "DOS", "TRES", "CUATRO", "CINCO",
+  "SEIS", "SIETE", "OCHO", "NUEVE", "DIEZ", "ONCE", "DOCE", "TRECE", "CATORCE", "QUINCE",
+  "DIECISÉIS", "DICECISIETE", "DIECIOCHO", "DIECINUEVE", "VEINTE"};
+    
+  // ATRIBUTOS DE OBJETO    
+  private int[] registroLanzamientos;
+	
+  // (ya no necesitamos los atributos numeroCaras y numeroLanzamientos)
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion1b266" class="block iDevice_content">
+<p>Teniendo en cuenta que ahora debemos registrar cada lanzamiento, ¿cómo implementarías el método <code>lanzar</code>?</p>
+</div>
+<form name="feedback-form-quesFeedback1b266" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b266text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b266" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b266" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En la implementación del método <code>lanzar</code> habrá que incluir la actualización de la posición apropiada del <span lang="en">array</span> <code>registroLanzamientos</code>: <code>this.registroLanzamientos[aleatorio]++</code></p>
+<div class="highlighted-code language-java">
+<pre><code>public String lanzar() {
+  byte aleatorio= (byte) (Math.random()*this.numeroCaras);  // Calculamos cara aleatoria
+  this.registroLanzamientos[aleatorio]++;  // Incrementamos el registro de la cara obtenida
+  return Dado.NOMBRES_CARAS[aleatorio];    // Devolvemos el nombre de la cara obtenida
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion2b266" class="block iDevice_content">
+<p>Dado que ya no disponemos de los atributos <code>numeroCaras</code> y <code>numeroLanzamientos</code>, ¿cómo implementarías ahora los métodos <code>getNumeroCaras</code> y <code>get<code>NumeroLanzamientos</code></code>?</p>
+</div>
+<form name="feedback-form-quesFeedback2b266" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b266text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b266" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b266" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Para el <strong>número de caras</strong> basta con obtener el tamaño del <span lang="en">array</span> <code>registroLanzamientos</code>:</p>
+<div class="highlighted-code language-java">
+<pre><code>public byte getNumeroCaras () {
+  return (byte)this.registroLanzamientos.length;
+}</code></pre>
+</div>
+<p>Para calcular el <strong>número total de lanzamientos</strong> habrá que sumar el registro de veces que ha salido cada cara, es decir, sumar el contenido de cada uno de los elementos del <span lang="en">array</span> <code>registroLanzamientos</code>:</p>
+<div class="highlighted-code language-java">
+<pre><code>public long getNumeroLanzamientos() {
+  long totalLanzamientos=0;
+  for (int i=0; i&lt;this.registroLanzamientos.length; i++) {
+    totalLanzamientos += this.registroLanzamientos[i];
+  }
+  return totalLanzamientos;
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion3b266" class="block iDevice_content">
+<p>Añade los cambios oportunos al <strong>constructor</strong> para la nueva clase <code>Dado<code></code></code>.</p>
+</div>
+<form name="feedback-form-quesFeedback3b266" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b266text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b266" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback3b266" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Habrá que incluir la <strong>reserva de memoria para el <span lang="en">array</span> de registro de lanzamientos</strong> y desaparece la inicialización de los atributos <code>numeroCaras<code></code></code> y <code>numeroLanzamientos<code></code></code>, que ya no existirían.</p>
+<div class="highlighted-code language-java">
+<pre><code>public Dado (byte numeroCaras) throws IllegalArgumentException {
+  // Comprobamos la validez del número de caras
+  if (numeroCaras != 4 &amp;&amp; numeroCaras != 6 &amp;&amp; numeroCaras != 8 &amp;&amp; numeroCaras != 12 &amp;&amp; numeroCaras != 20) {
+    throw new IllegalArgumentException (
+      String.format ("numero de caras no válido: %d", numeroCaras));
+  }
+
+  // Inicializamos los atributos de objeto (reservamos espacio para el array de registros de cada cara)
+  this.registroLanzamientos= new int[numeroCaras];
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion4b266" class="block iDevice_content">
+<p>Dado que ahora que cada dado contiene un registro del número de veces que ha salido cada cara, estaría bien incorporar un nuevo método <code>getNumeroVecesCara<code></code></code> que:</p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li>reciba como <strong>parámetro</strong> un número entero que indique una <strong>cara del dado</strong> (entre 1 y el número de caras);</li>
+<li>devuelva el <strong>número de veces que ha salido esa cara</strong>.</li>
+</ol>
+<p>Si el <strong>parámetro</strong> es un <strong>valor inválido</strong> (menor que 1 o superior al número de caras) debería lanzarse una excepción de tipo <code>IllegalArgumentException<code></code></code>.</p>
+<p>Implementa el método <code>getNumeroVecesCara<code></code></code>.</p>
+</div>
+<form name="feedback-form-quesFeedback4b266" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback4b266text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback4b266" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback4b266" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La implementación del métoso <code>getNumeroVecesCara<code></code></code> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre><code>public int getNumeroVecesCara (byte cara) throws IllegalArgumentException {
+  if (cara &lt; 1 || cara &gt; this.getNumeroCaras()) {
+    throw new IllegalArgumentException ("numero de cara no válida");
+  }
+  return this.registroLanzamientos[cara-1];
+}</code></pre>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="i2_clase_ticket.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="i4_clase_bombo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

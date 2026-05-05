@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>9.1.- Tipos de datos primitivos I | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-55"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="9_los_tipos_de_datos.html" class="current-page-parent daddy">9.- Los tipos de datos</a>
+   <ul>
+      <li id="active"><a href="91_tipos_de_datos_primitivos_i.html" class="active daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul>
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="9_los_tipos_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="911_tipos_de_datos_primitivos_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">9.1.- Tipos de datos primitivos I</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id153">
+<div class="iDevice emphasis0">
+<div id="ta153_73" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="PROG02_CONT_R13_TiposPrimitivosI.jpg" alt="Imagen con los tipos primitivos de Java escritos sobre un fondo que simula un rompecabezas." title="Tipos de datos primitivos." style="float: left;" height="160" width="200" /></div>
+<div class="elemento_centrado credenciales">Flor Moncada A&ntilde;&oacute;n. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">Elaboraci&oacute;n propia.</div>
+</div>
+<p>Los tipos primitivos son aquellos datos sencillos que constituyen los tipos de informaci&oacute;n m&aacute;s habituales: n&uacute;meros, caracteres y valores l&oacute;gicos o booleanos. Al contrario que en otros lenguajes de programaci&oacute;n orientados a objetos, <strong>en <span lang="en">Java</span> no son objetos</strong>.</p>
+<p>Una de las mayores ventajas de tratar con tipos primitivos en lugar de con objetos, es que el compilador de <span lang="en">Java</span> puede optimizar mejor su uso. Otra importante caracter&iacute;stica, es que cada uno de los tipos primitivos tiene <strong>id&eacute;ntico </strong>tama&ntilde;o y comportamiento en todas las versiones de <span lang="en">Java</span> y para cualquier tipo de ordenador. Esto quiere decir que no debemos preocuparnos de c&oacute;mo se representar&aacute;n los datos en distintas plataformas, y asegura la <strong>portabilidad </strong>de los programas, a diferencia de lo que ocurre con otros lenguajes. Por ejemplo, el tipo <code>int</code> siempre se representar&aacute; con 32 bits, con signo, y en el formato de representaci&oacute;n <a class="glosario">complemento a 2<span><em>Complemento a 2</em>Formato de representaci&oacute;n de n&uacute;meros enteros basado en el sistema de numeraci&oacute;n binario.</span></a>, en cualquier plataforma que soporte <span lang="en">Java</span>.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id210">
+<div class="iDevice emphasis_reflexionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h1 class="iDeviceTitle">Reflexiona</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta210_40" class="block iDevice_content">
+<p><span lang="en">Java</span> especifica el tama&ntilde;o y formato de todos los tipos de datos primitivos con independencia de la plataforma o sistema operativo donde se ejecute el programa, de forma que el programador no tiene que preocuparse sobre las dependencias del sistema, y no es necesario escribir versiones distintas del programa para cada plataforma.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id155">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(icon_debesconocerfpd.png)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta155_48" class="block iDevice_content">
+<p>En el siguiente enlace se muestran los tipos de datos primitivos en <span lang="en">Java</span> con el rango de valores que pueden tomar, el tamaño que ocupan en memoria y sus valores por defecto.</p>
+<div class="enlace_centrado"><a class="html" title="Acceder a una web con información sobre los tipos de datos primitivos en Java" href="https://dcodingames.com/tipos-de-datos-en-java/" target="_blank"> Tipos de datos primitivos en <span lang="en">Java</span></a></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id156">
+<div class="iDevice emphasis0">
+<div id="ta156_73" class="block iDevice_content">
+<p>Hay una peculiaridad en los tipos de datos primitivos, y es que el tipo de dato <code>char </code>es considerado por el compilador como un tipo num&eacute;rico, ya que los valores que guarda son el c&oacute;digo <span lang="en">Unicode</span> correspondiente al car&aacute;cter que representa, no el car&aacute;cter en s&iacute;, por lo que <strong>puede operarse con caracteres</strong> como si se tratara de n&uacute;meros enteros.</p>
+<p>Una cuesti&oacute;n importante:&nbsp; a la hora de elegir el tipo de dato que vamos a utilizar &iquest;qu&eacute; criterio seguiremos para elegir un tipo de dato u otro?</p>
+<p>Pues deberemos tener en cuenta <strong>c&oacute;mo es la informaci&oacute;n</strong> que hay que guardar, si es de tipo texto, num&eacute;rico, <abbr title="etc&eacute;tera.">etc.</abbr>,&nbsp; y adem&aacute;s <strong>qu&eacute; rango de valores</strong> puede alcanzar. En este sentido, hay veces que aunque queramos representar un n&uacute;mero sin decimales, tendremos que utilizar datos de tipo real.</p>
+<p>Por ejemplo, el tipo de dato <code>int</code> no podr&iacute;a representar la poblaci&oacute;n mundial del planeta, ya que el valor m&aacute;ximo que alcanza es de 2.147.483.647, siendo &eacute;ste el n&uacute;mero m&aacute;ximo de combinaciones posibles con 32 bits, teniendo en cuenta que la representaci&oacute;n de los n&uacute;meros enteros en <span lang="en">Java</span> utiliza complemento a 2. Si queremos representar el valor correspondiente a la poblaci&oacute;n mundial del planeta, cerca de 7.000.000.000&nbsp; habitantes, tendr&iacute;amos que utilizar al menos un tipo de dato <code>long</code>, o si tenemos problemas de espacio un tipo <code>float</code>. Sin embargo, los tipos reales tienen otro problema: la <strong>precisi&oacute;n</strong>. Vamos a ver m&aacute;s sobre ellos en el siguiente apartado.</p>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="9_los_tipos_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="911_tipos_de_datos_primitivos_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

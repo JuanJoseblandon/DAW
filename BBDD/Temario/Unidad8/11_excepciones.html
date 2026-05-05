@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.1.- Excepciones. | PROG07_Contenidos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="Juan Antonio Reina" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">PROG07_Contenidos</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos externas (ficheros).</a></li>
+   <li class="current-page-parent"><a href="1_introduccin.html" class="current-page-parent daddy">1.- Introducción.</a>
+   <ul>
+      <li id="active"><a href="11_excepciones.html" class="active no-ch">1.1.- Excepciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_concepto_de_flujo.html" class="no-ch">2.- Concepto de flujo.</a></li>
+   <li><a href="3_clases_relativas_a_flujos.html" class="daddy">3.- Clases relativas a flujos.</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplo_comentado_de_una_clase_con_flujos.html" class="no-ch">3.1.- Ejemplo comentado de una clase con flujos.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4.- Flujos.</a>
+   <ul class="other-section">
+      <li><a href="41_flujos_predefinidos_entrada_y_salida_estndar.html" class="no-ch">4.1.- Flujos predefinidos. Entrada y salida estándar.</a></li>
+      <li><a href="42_flujos_predefinidos_entrada_y_salida_estndar_ejemplo.html" class="no-ch">4.2.- Flujos predefinidos. Entrada y salida estándar. Ejemplo.</a></li>
+      <li><a href="43_flujos_basados_en_bytes.html" class="no-ch">4.3.- Flujos basados en bytes.</a></li>
+      <li><a href="44_flujos_basados_en_caracteres.html" class="no-ch">4.4.- Flujos basados en caracteres.</a></li>
+      <li><a href="45_rutas_de_los_ficheros.html" class="no-ch">4.5.- Rutas de los ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_trabajando_con_ficheros.html" class="daddy">5.- Trabajando con ficheros.</a>
+   <ul class="other-section">
+      <li><a href="51_escritura_y_lectura_de_informacin_en_ficheros.html" class="no-ch">5.1.- Escritura y lectura de información en ficheros.</a></li>
+      <li><a href="52_ficheros_binarios_y_ficheros_de_texto_i.html" class="daddy">5.2.- Ficheros binarios y ficheros de texto (I).</a>
+      <ul class="other-section">
+         <li><a href="521_ficheros_binarios_y_ficheros_de_texto_ii.html" class="no-ch">5.2.1.- Ficheros binarios y ficheros de texto (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="53_modos_de_acceso_registros.html" class="no-ch">5.3.- Modos de acceso. Registros.</a></li>
+      <li><a href="54_acceso_secuencial.html" class="no-ch">5.4.- Acceso secuencial.</a></li>
+      <li><a href="55_acceso_aleatorio.html" class="no-ch">5.5.- Acceso aleatorio.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_aplicaciones_del_almacenamiento_de_informacin_en_ficheros.html" class="no-ch">6.- Aplicaciones del almacenamiento de información en ficheros.</a></li>
+   <li><a href="7_utilizacin_de_los_sistemas_de_ficheros.html" class="daddy">7.- Utilización de los sistemas de ficheros.</a>
+   <ul class="other-section">
+      <li><a href="71_clase_file.html" class="no-ch">7.1.- Clase File.</a></li>
+      <li><a href="72_interface_filenamefilter.html" class="no-ch">7.2.- Interface FilenameFilter.</a></li>
+      <li><a href="73_creacin_y_eliminacin_de_ficheros_y_directorios.html" class="no-ch">7.3.- Creación y eliminación de ficheros y directorios.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_almacenamiento_de_objetos_en_ficheros_persistencia_serializacin.html" class="daddy">8.- Almacenamiento de objetos en ficheros. Persistencia. Serialización.</a>
+   <ul class="other-section">
+      <li><a href="81_serializacin_utilidad.html" class="no-ch">8.1.- Serialización: utilidad.</a></li>
+   </ul>
+   </li>
+   <li><a href="9_tratamiento_de_documentos_estructurados_xml.html" class="daddy">9.- Tratamiento de documentos estructurados XML.</a>
+   <ul class="other-section">
+      <li><a href="91_qu_es_un_documento_xml.html" class="no-ch">9.1.- ¿Qué es un documento XML?</a></li>
+      <li><a href="92_libreras_para_procesar_documentos_xml_i_convertir_el_archivo__xml_a_rbol_dom.html" class="daddy">9.2.- Librerías para procesar documentos XML (I). Convertir el archivo  XML a árbol DOM</a>
+      <ul class="other-section">
+         <li><a href="921_libreras_para_procesar_documentos_xml_ii_transformar_el_rbol__dom_en_archivo__xml.html" class="no-ch">9.2.1.- Librerías para procesar documentos XML (II). Transformar el árbol  DOM en archivo  XML.</a></li>
+      </ul>
+      </li>
+      <li><a href="93_manipulacin_de_documentos_xml_i_obtener_el_elemento_raz_y_buscar_un_elemento.html" class="daddy">9.3.- Manipulación de documentos XML (I). Obtener el elemento raíz, y buscar un elemento.</a>
+      <ul class="other-section">
+         <li><a href="931_manipulacin_de_documentos_xml_ii_obtener_y_procesar_la_lista_de_hijos_y_aadir_uno_nuevo.html" class="no-ch">9.3.1.- Manipulación de documentos XML (II). Obtener y procesar la lista de hijos y añadir uno nuevo.</a></li>
+         <li><a href="932_manipulacin_de_documentos_xml_iii_eliminar_un_hijo_y_modificar_un_elemento_texto.html" class="no-ch">9.3.2.- Manipulación de documentos XML (III). Eliminar un hijo y modificar un elemento texto.</a></li>
+         <li><a href="933_manipulacin_de_documentos_xml_iv_manejar_atributos_de_un_elemento.html" class="no-ch">9.3.3.- Manipulación de documentos XML (IV). Manejar atributos de un elemento.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="1_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_concepto_de_flujo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.1.- Excepciones.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id3">
+<div class="iDevice emphasis0">
+<div id="ta3_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG08_CONT_R03_calcetines.jpg" alt="Mensaje de error que dice error 404, los calcetines que buscabas no se encontraron." title="Calcetines no encontrados." style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by" title="CC by" href="http://creativecommons.org/licenses/by/3.0/deed.es" target="_blank"><span class="transparente">CC by</span></a>&nbsp;<a title="Luis Fernando Pienda Mahecha" href="https://www.flickr.com/photos/ghostcero/3790862212/" target="_blank">Luis Fernando Pienda Mahecha</a></div>
+</div>
+<p>Cuando se trabaja con archivos, es normal que pueda haber errores, por ejemplo: podr&iacute;amos intentar leer un archivo que no existe, o podr&iacute;amos intentar escribir en un archivo para el que no tenemos permisos de escritura. Para manejar todos estos errores debemos utilizar <a class="glosario">excepciones<span><em>Excepci&oacute;n</em>Una aplicaci&oacute;n, ante una entrada de usuario no esperada, o por alguna otra causa, puede producir un error inesperado. Es posible admitir cierto n&uacute;mero de errores y continuar su proceso para producir el mejor resultado posible en lugar de producir una salida aparatosa con mensajes de error incomprensibles para el usuario. Esto se consigue con las excepciones. Muchas veces, la acci&oacute;n asociada a una excepci&oacute;n es simplemente producir un mensaje informativo y terminar.</span></a>. Las dos excepciones m&aacute;s comunes al manejar archivos son:</p>
+<ul class="lista_verificacion">
+<li><code>FileNotFoundException</code>: si no se puede encontrar el archivo.</li>
+<li><code>IOException</code>: si no se tienen permisos de lectura o escritura o si el archivo est&aacute; da&ntilde;ado.</li>
+</ul>
+<p>Un esquema b&aacute;sico de uso de la captura y tratamiento de excepciones en un programa, podr&iacute;a ser este, importando el paquete <code>java.io.IOException</code>:</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a title="Ampliar imagen." href="PROG08_CONT_R03_01_codigo.jpg"><img alt="Estructura de c&oacute;digo Java para capturar excepciones. Se incluye en archivo enlazado bajo la imagen." class="imagen_ampliable" src="PROG08_CONT_R03_01_codigo_miniatura.jpg" style="width: 200px; height: 140px;" title="Capturar excepciones." width="200" height="140" /></a></div>
+</div>
+<p class="elemento_centrado"><a class="documento" title="Descargar archivo con el c&oacute;digo. [.txt &ndash; 1 KB]" href="PROG07_CONT_R03_02_codiexcep.txt" target="_blank">C&oacute;digo de la estructura para gestionar excepciones.</a> <span class="tamano">(1.00 KB)</span></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id4">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-4_60" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion4_60" class="block question iDevice_content">
+<p><strong>Se&ntilde;ala la opci&oacute;n correcta:</strong></p>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i4_63" class="sr-av"><a href="#answer-4_63">Opción 1</a></label><input type="radio" name="option4_60" id="i4_63" class="exe-radio-option exe-radio-option-0-4-4_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-4_63"><a name="answer-4_63"></a>
+<div id="taans4_63" class="block iDevice_content">
+<p><span lang="en">Java</span> no ofrece soporte para excepciones.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i4_80" class="sr-av"><a href="#answer-4_80">Opción 2</a></label><input type="radio" name="option4_60" id="i4_80" class="exe-radio-option exe-radio-option-1-4-4_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-4_80"><a name="answer-4_80"></a>
+<div id="taans4_80" class="block iDevice_content">
+<p>Un campo y un archivo es lo mismo.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i4_83" class="sr-av"><a href="#answer-4_83">Opción 3</a></label><input type="radio" name="option4_60" id="i4_83" class="exe-radio-option exe-radio-option-2-4-4_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-4_83"><a name="answer-4_83"></a>
+<div id="taans4_83" class="block iDevice_content">
+<p>Si se intenta abrir un archivo que no existe, entonces saltar&aacute; una excepci&oacute;n.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i4_86" class="sr-av"><a href="#answer-4_86">Opción 4</a></label><input type="radio" name="option4_60" id="i4_86" class="exe-radio-option exe-radio-option-3-4-4_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-4_86"><a name="answer-4_86"></a>
+<div id="taans4_86" class="block iDevice_content">
+<p>Ninguna es correcta.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b4_60" class="feedback js-hidden"><a name="sa0b4_60"></a>
+<div id="taf4_63" class=" iDevice_content">
+<p>Respuesta incorrecta, s&iacute; que las soporta.</p>
+</div>
+</div>
+<div id="sa1b4_60" class="feedback js-hidden"><a name="sa1b4_60"></a>
+<div id="taf4_80" class=" iDevice_content">
+<p>Incorrecto, el contenido de un fichero est&aacute; conformado por campos.</p>
+</div>
+</div>
+<div id="sa2b4_60" class="feedback js-hidden"><a name="sa2b4_60"></a>
+<div id="taf4_83" class=" iDevice_content">
+<p>&iexcl;Exacto! Se disparar&aacute; una excepci&oacute;n de tipo <code>FileNotFoundException</code>.</p>
+</div>
+</div>
+<div id="sa3b4_60" class="feedback js-hidden"><a name="sa3b4_60"></a>
+<div id="taf4_86" class=" iDevice_content">
+<p>No has acertado, s&iacute; hay una correcta.</p>
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-4_63">Incorrecto</a><span> (<a href="#sa0b4_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-4_80">Incorrecto</a><span> (<a href="#sa1b4_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-4_83">Opción correcta</a><span> (<a href="#sa2b4_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-4_86">Incorrecto</a><span> (<a href="#sa3b4_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id5">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta5_47" class="block iDevice_content">
+<p>En los siguientes enlaces hay algunos ejemplos donde se puede ver c&oacute;mo se trabaja con ficheros de texto y de acceso aleatorio.</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a una web con informaci&oacute;n sobre ficheros de texto." href="http://puntocomnoesunlenguaje.blogspot.com.es/2013/05/ficheros-de-texto-en-java.html">Alg&uacute;n ejemplo de ficheros de texto en Java.</a></p>
+<p class="enlace_centrado"><a class="html" title="Acceder a una web con informaci&oacute;n sobre ficheros de acceso aleatorio." href="http://puntocomnoesunlenguaje.blogspot.com.es/2013/06/java-ficheros-acceso-aleatorio.html">Alg&uacute;n ejemplo de ficheros de acceso aleatorio.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="1_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_concepto_de_flujo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

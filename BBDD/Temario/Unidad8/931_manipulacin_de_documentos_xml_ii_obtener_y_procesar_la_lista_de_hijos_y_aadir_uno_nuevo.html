@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>9.3.1.- Manipulación de documentos XML (II). Obtener y procesar la lista de hijos y añadir uno nuevo. | PROG07_Contenidos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="Juan Antonio Reina" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-33"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">PROG07_Contenidos</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos externas (ficheros).</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1.- Introducción.</a>
+   <ul class="other-section">
+      <li><a href="11_excepciones.html" class="no-ch">1.1.- Excepciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_concepto_de_flujo.html" class="no-ch">2.- Concepto de flujo.</a></li>
+   <li><a href="3_clases_relativas_a_flujos.html" class="daddy">3.- Clases relativas a flujos.</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplo_comentado_de_una_clase_con_flujos.html" class="no-ch">3.1.- Ejemplo comentado de una clase con flujos.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4.- Flujos.</a>
+   <ul class="other-section">
+      <li><a href="41_flujos_predefinidos_entrada_y_salida_estndar.html" class="no-ch">4.1.- Flujos predefinidos. Entrada y salida estándar.</a></li>
+      <li><a href="42_flujos_predefinidos_entrada_y_salida_estndar_ejemplo.html" class="no-ch">4.2.- Flujos predefinidos. Entrada y salida estándar. Ejemplo.</a></li>
+      <li><a href="43_flujos_basados_en_bytes.html" class="no-ch">4.3.- Flujos basados en bytes.</a></li>
+      <li><a href="44_flujos_basados_en_caracteres.html" class="no-ch">4.4.- Flujos basados en caracteres.</a></li>
+      <li><a href="45_rutas_de_los_ficheros.html" class="no-ch">4.5.- Rutas de los ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_trabajando_con_ficheros.html" class="daddy">5.- Trabajando con ficheros.</a>
+   <ul class="other-section">
+      <li><a href="51_escritura_y_lectura_de_informacin_en_ficheros.html" class="no-ch">5.1.- Escritura y lectura de información en ficheros.</a></li>
+      <li><a href="52_ficheros_binarios_y_ficheros_de_texto_i.html" class="daddy">5.2.- Ficheros binarios y ficheros de texto (I).</a>
+      <ul class="other-section">
+         <li><a href="521_ficheros_binarios_y_ficheros_de_texto_ii.html" class="no-ch">5.2.1.- Ficheros binarios y ficheros de texto (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="53_modos_de_acceso_registros.html" class="no-ch">5.3.- Modos de acceso. Registros.</a></li>
+      <li><a href="54_acceso_secuencial.html" class="no-ch">5.4.- Acceso secuencial.</a></li>
+      <li><a href="55_acceso_aleatorio.html" class="no-ch">5.5.- Acceso aleatorio.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_aplicaciones_del_almacenamiento_de_informacin_en_ficheros.html" class="no-ch">6.- Aplicaciones del almacenamiento de información en ficheros.</a></li>
+   <li><a href="7_utilizacin_de_los_sistemas_de_ficheros.html" class="daddy">7.- Utilización de los sistemas de ficheros.</a>
+   <ul class="other-section">
+      <li><a href="71_clase_file.html" class="no-ch">7.1.- Clase File.</a></li>
+      <li><a href="72_interface_filenamefilter.html" class="no-ch">7.2.- Interface FilenameFilter.</a></li>
+      <li><a href="73_creacin_y_eliminacin_de_ficheros_y_directorios.html" class="no-ch">7.3.- Creación y eliminación de ficheros y directorios.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_almacenamiento_de_objetos_en_ficheros_persistencia_serializacin.html" class="daddy">8.- Almacenamiento de objetos en ficheros. Persistencia. Serialización.</a>
+   <ul class="other-section">
+      <li><a href="81_serializacin_utilidad.html" class="no-ch">8.1.- Serialización: utilidad.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="9_tratamiento_de_documentos_estructurados_xml.html" class="current-page-parent daddy">9.- Tratamiento de documentos estructurados XML.</a>
+   <ul>
+      <li><a href="91_qu_es_un_documento_xml.html" class="no-ch">9.1.- ¿Qué es un documento XML?</a></li>
+      <li><a href="92_libreras_para_procesar_documentos_xml_i_convertir_el_archivo__xml_a_rbol_dom.html" class="daddy">9.2.- Librerías para procesar documentos XML (I). Convertir el archivo  XML a árbol DOM</a>
+      <ul class="other-section">
+         <li><a href="921_libreras_para_procesar_documentos_xml_ii_transformar_el_rbol__dom_en_archivo__xml.html" class="no-ch">9.2.1.- Librerías para procesar documentos XML (II). Transformar el árbol  DOM en archivo  XML.</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="93_manipulacin_de_documentos_xml_i_obtener_el_elemento_raz_y_buscar_un_elemento.html" class="current-page-parent daddy">9.3.- Manipulación de documentos XML (I). Obtener el elemento raíz, y buscar un elemento.</a>
+      <ul>
+         <li id="active"><a href="931_manipulacin_de_documentos_xml_ii_obtener_y_procesar_la_lista_de_hijos_y_aadir_uno_nuevo.html" class="active no-ch">9.3.1.- Manipulación de documentos XML (II). Obtener y procesar la lista de hijos y añadir uno nuevo.</a></li>
+         <li><a href="932_manipulacin_de_documentos_xml_iii_eliminar_un_hijo_y_modificar_un_elemento_texto.html" class="no-ch">9.3.2.- Manipulación de documentos XML (III). Eliminar un hijo y modificar un elemento texto.</a></li>
+         <li><a href="933_manipulacin_de_documentos_xml_iv_manejar_atributos_de_un_elemento.html" class="no-ch">9.3.3.- Manipulación de documentos XML (IV). Manejar atributos de un elemento.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="93_manipulacin_de_documentos_xml_i_obtener_el_elemento_raz_y_buscar_un_elemento.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="932_manipulacin_de_documentos_xml_iii_eliminar_un_hijo_y_modificar_un_elemento_texto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">9.3.1.- Manipulación de documentos XML (II). Obtener y procesar la lista de hijos y añadir uno nuevo.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id150">
+<div class="iDevice emphasis0">
+<div id="ta150_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY-NC-SA" style="width: 136px;"><img src="PROG07_CONT_R058_PadreEHija.jpg" alt="Fotografía de un padre con su hija encima de los hombros." title="Padre e hija." style="float: right;" width="136" height="200" />
+<div class="figcaption"><a href="http://recursostic.educacion.es//bancoimagenes/ArchivosImagenes/DVD27/CD05/190530_m_1.jpg" target="_blank" class="author">Luana Fischer Ferreira.</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+<p><br />¿Y qué más operaciones puedo realizar sobre un árbol <abbr title="Document Object Model." lang="en">DOM</abbr>? Veámoslas.</p>
+<p><span class="destacado_inline"><strong>Obtener la lista de hijos de un elemento y procesarla</strong>.</span></p>
+<p>Se trata de obtener una lista con los nodos hijo de un elemento cualquiera, estos pueden ser un sub-elemento (sub-etiqueta) o texto. Para sacar la lista de nodos hijo se puede usar el método <code>getChildNodes()</code>:</p>
+<div class="codigo elemento_centrado" style="width: 43.95em;">
+<div class="texto_izquierda">
+<pre><code>NodeList listaNodos=documento.getDocumentElement().getChildNodes();</code></pre>
+<pre><code>for (int i=0; i&lt;listaNodos.getLength();i++) {</code></pre>
+<pre><code>    Node nodo=listaNodos.item(i);</code></pre>
+<pre><code>    switch (nodo.getNodeType()){</code></pre>
+<pre><code>        case Node.ELEMENT_NODE: </code></pre>
+<pre><code>             Element elemento = (Element) nodo;</code></pre>
+<pre><code>             System.out.println("Etiqueta:" + elemento.getTagName());</code></pre>
+<pre><code>             break;</code></pre>
+<pre><code>        case Node.TEXT_NODE: </code></pre>
+<pre><code>             Text texto = (Text) nodo;</code></pre>
+<pre><code>             System.out.println("Texto:" + texto.getWholeText());</code></pre>
+<pre><code>             break;</code></pre>
+<pre><code>    }       </code></pre>
+<pre><code>}</code></pre>
+</div>
+</div>
+<p> </p>
+<p>En el ejemplo anterior se usan varios métodos. El método <code>getNodeType()</code> de la clase <code>Node</code> permite saber de qué tipo de nodo se trata, generalmente texto (<code>Node.TEXT_NODE</code>) o un sub-elemento (<code>Node.ELEMENT_NODE</code>). De esta forma podremos hacer la conversión de tipos adecuada y gestionar cada elemento según corresponda. También se usa el método <code>getTagName()</code> aplicado a un elemento, lo cual permitirá obtener el nombre de la etiqueta, y el método <code>getWholeText()</code> aplicado a un nodo de tipo texto (<code>Text</code>), que permite obtener el texto contenido en el nodo.</p>
+<p><span class="destacado_inline"><strong>Añadir un nuevo elemento hijo a otro elemento</strong>.</span></p>
+<p>Hemos visto cómo mirar qué hay dentro de un documento <acronym title="eXtended Markup Language" lang="en">XML</acronym> pero no hemos visto cómo añadir cosas a dicho documento. Para añadir un sub-elemento o un texto a un árbol <abbr title="Document Object Model." lang="en">DOM</abbr>, primero hay que crear los nodos correspondientes y después insertarlos en la posición que queramos. Para crear un nuevo par de etiquetas o elemento (<code>Element</code>) y un nuevo nodo texto (<code>Text</code>), lo podemos hacer de la siguiente forma:</p>
+<div class="codigo elemento_centrado" style="width: 35.15em;">
+<div class="texto_izquierda">
+<pre><code>Element direccionTag=documento.createElement("DIRECCION_ENTREGADA")</code>
+</pre>
+<pre><code>Text direccionTxt=documento.createTextNode("C/Perdida S/N");</code>
+</pre>
+</div>
+</div>
+<p> </p>
+<p>Ahora los hemos creado, pero todavía no los hemos insertado en el documento. Para ello podemos hacerlo usando el método <code>appendChild()</code> que añadirá el nodo (sea del tipo que sea) al final de la lista de hijos del elemento correspondiente:</p>
+<div class="codigo elemento_centrado" style="width: 31.3em;">
+<div class="texto_izquierda">
+<pre><code> direccionTag.appendChild(direccionTxt);</code>
+</pre>
+<pre><code> documento.getDocumentElement().appendChild(direccionTag);</code>
+</pre>
+</div>
+</div>
+<p> </p>
+<p>En el ejemplo anterior, el texto se añade como hijo de la etiqueta "<code>DIRECCION_ENTREGADA</code>", y a su vez, la etiqueta "<code>DIRECCION_ENTREGADA</code>" se añade como hijo, al final del todo, de la etiqueta o elemento raíz del documento. Aparte del método <code>appendChild()</code>, que siempre insertará al final, puedes utilizar los siguientes métodos para insertar nodos dentro de un árbol <abbr title="Document Object Model." lang="en">DOM</abbr> (todos se usan sobre la clase <code>Element</code>):</p>
+<ul class="lista_verificacion">
+<li><code>insertBefore (Node nuevoNodo, Node nodoReferencia)</code>. Insertará un nodo nuevo antes del nodo de referencia (<code>nodoReferencia</code>).</li>
+<li><code>replaceChild (Node nuevoNodo, Node nodoAnterior)</code>. Sustituye un nodo (<code>nodoAnterior</code>) por uno nuevo.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id151">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header" style="background-image:url(icon_debesconocerfpd.png)"><h2 class="iDeviceTitle">Debes conocer</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta151_48" class="block iDevice_content">
+<p>En el siguiente enlace encontrar&aacute;s a la documentaci&oacute;n del <acronym title="Aplication Programming Interface. " lang="en">API</acronym> de&nbsp;<acronym title="Document Object Model." lang="en">DOM</acronym> para<span lang="en"> Java</span>, con todas las funciones de cada clase.</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a API de DOM para Java." href="http://docs.oracle.com/javase/7/docs/api/org/w3c/dom/package-summary.html"><acronym title="Aplication Programming Interface." lang="en">API</acronym> de <acronym title="Document Object Model." lang="en">DOM</acronym> para <span lang="en">Java</span>.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="93_manipulacin_de_documentos_xml_i_obtener_el_elemento_raz_y_buscar_un_elemento.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="932_manipulacin_de_documentos_xml_iii_eliminar_un_hijo_y_modificar_un_elemento_texto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.- Polimorfismo y ligadura dinámica. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-52"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="5_polimorfismo_y_ligadura_dinmica.html" class="active daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul>
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="43_clases_y_mtodos_finales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="51_concepto_de_polimorfismo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5.- Polimorfismo y ligadura dinámica.</h1></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id111">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta111_66" class="block iDevice_content">
+<div class="elemento_derecha"><img alt="Foto de Ada mirando al frente." class="elemento_izquierda" src="PROG07_CONT_R65_CASO_PERSONAJES_24.jpg" title="Ada." style="float: right;" /> <figcaption class="figcaption">
+<div class="elemento_centrado credenciales">Ministerio de Educación. Uso educativo-nc.</div>
+<div class="elemento_centrado credenciales">Elaboración propia.</div>
+</figcaption></div>
+<p><strong>María</strong> está desarrollando algunas clases que representan categorías de <strong>animales</strong> para el proyecto de la <strong>Clínica Veterinaria</strong>. En algunos casos declara objetos de un tipo de animal y en ciertas ocasiones de otros, según las necesidades que tenga en cada momento. La clase <code>Animal</code> es demasiado genérica como para poder utilizarla en determinados casos y necesita clases más específicas para poder trabajar, pues tendrá que usar unas u otras versiones de sus métodos. <strong>Juan</strong> también está haciendo algo parecido y ambos intuyen que el código que están escribiendo podría ser mucho más sencillo y flexible si pudieran declarar inicialmente objetos de la clase <code>Animal</code> y más tarde, durante la ejecución de la aplicación, utilizar objetos de tipo <code>Animal</code>, pero de clases más especializadas (<strong>subclases de <code>Animal</code></strong>) en función de lo que suceda en cada momento. Sería muy interesante poder hacer algo así. <strong>Ada</strong> lleva algunos minutos escuchándolos y decide intervenir:</p>
+<p><span>—</span> Veo que habéis llegado a la conclusión de que necesitáis trabajar con objetos cuya clase aún no está clara en tiempo de compilación, ¿no? <span>—</span>les pregunta a ambos.</p>
+<p><span>—</span>Así es. Pero eso no se puede hacer, el compilador no nos lo va a permitir <span>—</span>le responden casi al unísono.</p>
+<p><span>— </span>Bueno, es lógico que el compilador tenga que saber a qué clase pertenece un objeto para poder analizar si se está accediendo a los miembros correctos y con la sintaxis apropiada, ¿no crees?</p>
+<p><span>—</span> Totalmente de acuerdo. <span>—</span>le contesta <strong>María</strong>.</p>
+<p><span>—</span> Pero si declaramos un objeto de una clase que sea <strong>superclase</strong> de otras, quizá podríamos más tarde intentar para ese objeto instanciar una <strong>subclase</strong> más específica. Al fin y al cabo, una clase de tipo <code>MascotaDomestica</code> sigue siendo también <code>Animal</code>, pues ha heredado de ella, ¿no es así?</p>
+<p><span>— </span>¿Quieres decir que podríamos utilizar en el programa objetos de clases cuyos métodos llamados no sabemos exactamente cuáles van a ser porque dependerá de la <strong>subclase</strong> concreta que se instancie en tiempo de ejecución? <span>—l</span>e responde <strong>María</strong> muy interesada.</p>
+<p>Parece que ha llegado el momento de que empecéis a trabajar con el polimorfismo y la <a href="#t1b6f9565-e679-6153-ed3b-b44959b23e72" id="link1b6f9565-e679-6153-ed3b-b44959b23e72" class="exe-tooltip definition-tt titled-tt" title="Ligadura dinámica | Ver la definición">ligadura dinámica</a> —les contesta satisfecha.</p>
+<div id="t1b6f9565-e679-6153-ed3b-b44959b23e72" class="exe-tooltip-text">
+<p>Indica que la vinculación que se produce en la llamada a un método con la clase a la que pertenece ese método se realiza en tiempo de ejecución. Es decir, que al generar el código ejecutable no se conoce exactamente el método (a qué clase pertenece) que será llamado. Sólo se sabrá cuando el programa esté en ejecución.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id140">
+<div class="iDevice emphasis0">
+<div id="ta140_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG07_CONT_R66_FormasVariadas.jpg" alt="Un conjunto de formas diferentes (siluetas de tortuga, corazón, oso, árbol, etc.)." title="Formas Variadas." style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="CC by-nc-sa" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a> <a title="Acceder a la web de descarga de la imagen de Alessandro Pinna. (Se abre en una ventana nueva)" href="https://www.flickr.com/photos/alessandropinna/1423128740/" target="_blank">Alessandro Pinna</a></div>
+</div>
+<p>El <strong>polimorfismo</strong> es otro de los grandes pilares sobre los que se sustenta la <strong>Programación Orientada</strong><strong> a Objetos</strong> (junto con la <strong>encapsulación</strong> y la <strong>herencia</strong>). Se trata nuevamente de otra forma más de establecer diferencias entre interfaz e implementación, es decir, entre <strong>el qué</strong> y <strong>el cómo</strong>.</p>
+<p>La <strong>encapsulación</strong> te ha permitido agrupar <strong>características</strong> (<strong>atributos</strong>) y <strong>comportamientos</strong> (<strong>métodos</strong>) dentro de una misma unidad (<strong>clase</strong>), pudiendo darles un mayor o menor componente de <strong>visibilidad</strong>, y permitiendo separar al máximo la <strong>interfaz</strong> de la <strong>implementación</strong>. Por otro lado la <strong>herencia</strong> te ha proporcionado la posibilidad de tratar a los objetos como pertenecientes a una <strong>jerarquía de clases</strong>. Esta capacidad va a ser fundamental a la hora de poder manipular muchos posibles objetos de clases diferentes como si fueran de la misma clase (<strong>polimorfismo</strong>).</p>
+<p>El <strong>polimorfismo</strong> te va a permitir mejorar la <strong>organización</strong> y la <strong>legibilidad</strong> del código así como la posibilidad de desarrollar aplicaciones que sean más fáciles de ampliar a la hora de incorporar nuevas funcionalidades. Si la implementación y la utilización de las clases es lo suficientemente genérica y extensible será más sencillo poder volver a este código para incluir nuevos requerimientos.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id139">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-139_60" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion139_60" class="block question iDevice_content">
+<p><strong>¿Cuál de las siguientes características dirías que </strong><strong>no es una de las que se suelen considerar como uno de los tres grandes pilares de la </strong><strong>Programación Orientada</strong><strong> a Objetos?</strong></p>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i139_63" class="sr-av"><a href="#answer-139_63">Opción 1</a></label><input type="radio" name="option139_60" id="i139_63" class="exe-radio-option exe-radio-option-0-4-139_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-139_63"><a name="answer-139_63"></a>
+<div id="taans139_63" class="block iDevice_content">
+<p>Portabilidad.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i139_126" class="sr-av"><a href="#answer-139_126">Opción 2</a></label><input type="radio" name="option139_60" id="i139_126" class="exe-radio-option exe-radio-option-1-4-139_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-139_126"><a name="answer-139_126"></a>
+<div id="taans139_126" class="block iDevice_content">
+Herencia.
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i139_129" class="sr-av"><a href="#answer-139_129">Opción 3</a></label><input type="radio" name="option139_60" id="i139_129" class="exe-radio-option exe-radio-option-2-4-139_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-139_129"><a name="answer-139_129"></a>
+<div id="taans139_129" class="block iDevice_content">
+Polimorfismo.
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i139_132" class="sr-av"><a href="#answer-139_132">Opción 4</a></label><input type="radio" name="option139_60" id="i139_132" class="exe-radio-option exe-radio-option-3-4-139_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-139_132"><a name="answer-139_132"></a>
+<div id="taans139_132" class="block iDevice_content">
+Encapsulación. 
+
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b139_60" class="feedback js-hidden"><a name="sa0b139_60"></a>
+<div id="taf139_63" class=" iDevice_content">
+<p>¡Así es! La <strong>portabilidad</strong> no es una característica inherente al la <strong>Programación Orientada</strong><strong> a Objetos</strong>. Un lenguaje puede ser o no portable a otras plataformas independientemente de si es orientado a objetos o no.</p>
+</div>
+</div>
+<div id="sa1b139_60" class="feedback js-hidden"><a name="sa1b139_60"></a>
+<div id="taf139_126" class=" iDevice_content">
+No. La <strong>herencia</strong>
+(una <strong>subclase</strong> puede heredar miembros de una <strong>superclase</strong>) se
+considera una característica fundamental en la <strong>Programación Orientada</strong><strong>
+a Objetos</strong>.
+
+</div>
+</div>
+<div id="sa2b139_60" class="feedback js-hidden"><a name="sa2b139_60"></a>
+<div id="taf139_129" class=" iDevice_content">
+Error. Acabas de ver que
+<strong>polimorfismo</strong> se considera también una característica fundamental en la <strong>Programación Orientada</strong><strong>
+a Objetos</strong>.
+
+</div>
+</div>
+<div id="sa3b139_60" class="feedback js-hidden"><a name="sa3b139_60"></a>
+<div id="taf139_132" class=" iDevice_content">
+Has fallado. La <strong>encapsulación</strong>
+(agrupación de características y comportamiento en una misma unidad) se
+considera una característica fundamental en la <strong>Programación Orientada</strong><strong>
+a Objetos</strong>.
+
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-139_63">Opción correcta</a><span> (<a href="#sa0b139_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-139_126">Incorrecto</a><span> (<a href="#sa1b139_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-139_129">Incorrecto</a><span> (<a href="#sa2b139_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-139_132">Incorrecto</a><span> (<a href="#sa3b139_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="43_clases_y_mtodos_finales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="51_concepto_de_polimorfismo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

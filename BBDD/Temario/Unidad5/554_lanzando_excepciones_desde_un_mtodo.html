@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.5.4.- Lanzando excepciones desde un método | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-56"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li><a href="4_atributos.html" class="daddy">4.- Atributos</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_mtodos.html" class="current-page-parent daddy">5.- Métodos</a>
+   <ul>
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="55_cuerpo_de_un_mtodo.html" class="current-page-parent daddy">5.5.- Cuerpo de un método</a>
+      <ul>
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li id="active"><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="active no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="553_el_operador_de_autorreferencia_this.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5.5.4.- Lanzando excepciones desde un método</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id170">
+<div class="iDevice emphasis0">
+<div id="ta170_154" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 180px;"><img src="traffic-sign-160659_640.png" alt="Señal de advertencia en triangulo blanco orlado de rojo" title="Warning" style="float: right;" width="180" height="159" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/se%C3%B1ales-de-tr%C3%A1fico-signo-160659/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de OpenClipart-Vectors en Pixabay (se abre en una nueva ventana).">OpenClipart-Vectors</a> <span class="license"><span class="sep">(</span><span class="sep"><span class="license"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span></span></span></span></span><span class="sep"></span></span>)</span></span></div>
+</div>
+<p>Habrá ocasiones en las que el intento de ejecución de un método pueda dar lugar a una situación no deseable o un error. En tales casos, el método debería avisar de que se ha producido esa situación.</p>
+<p>En algunos lenguajes eso se resuelve devolviendo algún tipo de código de error. Por ejemplo, si se espera que un método devuelva un número positivo o cero, puede devolverse un número negativo, por ejemplo -1,  para indicar que se ha producido un error. Si existen diversas posibilidades de error, entonces podrían devolverse distintos números negativos en función del tipo de error que se haya producido.</p>
+<p>Como ya hemos visto en unidades anteriores, <span lang="en">Java</span> dispone de un mecanismo más sofisticado de comunicación de errores o situaciones no deseables: la gestión de <strong>excepciones</strong>.</p>
+<p>Hasta ahora habías visto cómo tratar posibles excepciones generadas por la ejecución de algún método de una clase o por algún operador. Para ello utilizabas la estructura <code>try - catch - finally</code>.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice em_iDevice_recomendacionfpd" id="id171">
+<div class="iDevice emphasis_recomendacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_recomendacionfpd.png)"><h2 class="iDeviceTitle">Recomendación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta171_131" class="block iDevice_content">
+<p>La gestión de excepciones ya sa ha tratado en unidades anteriores. Si consideras que es necesario hacer un repaso del concepto de excepción o de la estructura <code>try - catch - finally</code>, éste es el momento de hacerlo.</p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id172">
+<div class="iDevice emphasis0">
+<div id="ta172_154" class="block iDevice_content">
+<p>Hasta ahora tan solo habías trabajado con excepciones desde el punto de vista de su uso y captura, pero no habías generado ninguna en caso de que se produjera una situación de error. Esto es lo que vamos a aprender a hacer ahora.</p>
+<p>Imagina el método <code>arrancar</code> de nuestra clase <code>Vehiculo</code>. Se trata de un método muy simple que lo único que hace es modificar el valor del atributo <code>estadoMotor</code>. Sin embargo, podría ser razonable que no dejáramos arrancar un vehículo que ya se encuentra arrancado. Para llevar a cabo esa acción podríamos lanzar una excepción desde el método <code>arrancar</code> si el valor del atributo <code>estadoMotor</code> es ya <code>true, </code> o que no sea posible arrancarlo porque el depósito no tiene combustible, o porque haya algún fallo en el motor, y el intento "fracase".</p>
+<p><strong>¿Cómo se lanza una excepción en <span lang="en">Java</span>?</strong></p>
+<p>Para ello utilizamos la sentencia <code>throw</code>. La sintaxis de esta sentencia es la siguiente:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java"><strong>throw</strong> &lt;objetoDeTipoExcepcion&gt;;</code>
+</pre>
+</div>
+<p>Las excepciones son objetos de clases de tipo excepción. Nosotros no vamos a implementar ninguna clase de tipo excepción por el momento, pero sí podemos utilizar algunas que ya nos proporciona la <acronym title="Application Programming Interface">API</acronym> de <span lang="en">Java</span> como son, por ejemplo, <code>IllegalArgumentException</code> e <code>IllegalStateException</code>.</p>
+<p>Para ello simplemente instanciaremos un objeto de una de esas dos clases usando alguno de sus constructores junto con el operador <code>new</code>. Las clases de tipo excepción incluyen al menos un constructor con un parámetro que permite proporcionar un mensaje de texto (parámetro de tipo <code>String</code>) indicando el tipo de error o situación no deseada que se ha producido.</p>
+<p>Por tanto, el lanzamiento de una excepción quedaría más o menos así:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">throw new ClaseDeTipoExcepcion (&lt;listaParametros&gt;);</code>
+</pre>
+</div>
+<p>Por ejemplo:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">throw new IllegalStateException ("vehículo ya arrancado");</code>
+</pre>
+</div>
+<p>En el momento en que se ejecute esa sentencia, el resto del código del método no será ejecutado y se volverá a la línea desde donde el método fue invocado. Es decir, se produce una finalización "brusca" de la ejecución del método que habrá de ser gestionada por quien lo llamó.</p>
+<p>En tal caso, el método <code>arrancar</code> podría quedar de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<pre><code>public void arrancar () {
+  if (this.estadoMotor) {  // Si el motor ya está arrancado
+    throw new IllegalStateException ("vehículo ya arrancado"); // Lanzamos una excepción y finaliza la ejecución del método
+  }
+  this.estadoMotor= true;  // Si no se ha lanzado la excepción, es que el motor no estaba encendido y puede arrancarse
+  Vehiculo.vehiculosArrancados++;  // Actualizamos la cantidad de vehículos arrancados (se incrementa en uno)
+}</code>
+</pre>
+</div>
+<p>De este modo si se intenta ejecutar el método <code>arrancar</code> sobre un vehículo que ya está arrancado, se va a producir una excepción que hará que la ejecución del método finalice, debiendo esa excepción ser recogida y gestionada desde el código donde se realizó la invocación al método <code>arrancar</code>. Por ejemplo:</p>
+<div class="highlighted-code language-java">
+<pre><code>try {
+  v.arrancar();   // Se intenta arrancar el objeto v instancia de la clase Vehiculo
+  System.out.println ("El vehículo ha sido arrancado sin problema.");
+} catch (IllegalStateException ex) {
+  System.out.printf ("Error: %s.\n", ex.getMessage()); // Se mostrará el mensaje "Error: vehículo ya arrancado."
+}</code>
+</pre>
+</div>
+<p>Por último, nos falta indicar una cosa más: un método debe indicar en su cabecera cuáles son los tipos de excepción que puede lanzar. Ya lo hemos visto cuando estudiamos la cabecera de un método. Es el momento de ponerlo en práctica. Si un método puede lanzar más de un tipo de excepción se indicará con una lista de excepciones separadas por comas. Si sólo puede lanzar un tipo de excepción sólo se indicará esa excepción. En el caso de nuestro método <code>arrancar</code>, nos quedaría:</p>
+<div class="highlighted-code language-java">
+<pre><code>public void arrancar () throws IllegalStateException {
+  if (this.estadoMotor) {
+    throw new IllegalStateException ("vehículo ya arrancado");
+  }
+  this.estadoMotor= true;
+  Vehiculo.vehiculosArrancados++;  
+}</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id174">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta174_128" class="block iDevice_content">
+<p>Puedes obtener más información acerca del lanzamiento de excepciones en <span lang="en">Java</span> a través de la siguiente referencia:</p>
+<p></p>
+<p class="enlace_centrado"><a class="html" title="Acceder a un artículo de la documentación Java en Oracle donde se descibe cómo lanzar una excepción usando throws (En inglés. Se abre en ventana nueva)." href="https://docs.oracle.com/javase/tutorial/essential/exceptions/throwing.html" target="_blank"><span lang="en">How to Throw Exceptions.</span></a></p>
+<p>Si quieres repasar aspectos previos sobre la gestión de excepciones vistos en unidades anteriores también puedes echar un vistazo a estas otras referencias:</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a un artículo de la documentación Java en Oracle donde se define el concepto de excepción (En inglés. Se abre en ventana nueva)." href="https://docs.oracle.com/javase/tutorial/essential/exceptions/definition.html" target="_blank"><span lang="en">What Is an Exception?</span></a></p>
+<p class="enlace_centrado"><a class="html" title="Acceder a un artículo de la guía del lenguaje Java de Oracle en la que se describe el mecanismo de captura y gestión de excepciones (En inglés. Se abre en ventana nueva)." href="https://docs.oracle.com/javase/tutorial/essential/exceptions/handling.html"><span lang="en">Catching and Handling Exceptions.</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id176">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta176_121" class="block iDevice_content">
+<p>A partir de ahora, <strong>cada vez que implementes un método deberás tener en cuenta si se dan las condiciones para que ese método pueda ejecutarse apropiadamente</strong> o bien si te encuentras ante una situación no deseable o errónea y entonces hay que lanzar una excepción. Es decir, que no bastará simplemente con escribir el código que lleve a cabo ciertas acciones sino que en muchas ocasiones habrá que incluir también sentencias de comprobación (condicionales de tipo <code>if</code> o <code>switch</code>) para asegurarnos de que la acción puede llevarse a cabo.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id179">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta179_148" class="block story iDevice_content">
+<p>El método <code>repostar</code> de la clase <code>Vehiculo</code> sirve para añadir una cantidad determinada de carburante al depósito de combustible del vehículo.</p>
+</div>
+<div id="taquesQuestion0b179" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="pumping-gas-1631634_640.jpg" alt="Repostaje de combustible de un vehículo" title="Repostaje" style="float: right;" width="200" height="134" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/bombeo-de-gas-de-combustible-bomba-1631634/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Paul Brennan en Pixabay (se abre en una nueva ventana).">Paul Brennan</a> <span class="license"><span class="sep">(</span><span class="license"><span class="license"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span></span></span></span></span><span class="sep"></span></span><span class="sep"></span></span><span class="sep">)</span></span></div>
+</div>
+<p><br />Implementa el método <code>repostar</code> de la clase <code>Vehiculo</code> teniendo en cuenta lo siguiente:</p>
+<ol>
+<li>se trata de un método que <strong>no devuelve ningún valor</strong> (<code>void</code>);</li>
+<li>tiene <strong>un único parámetro</strong> de tipo real que representa la <strong>cantidad de combustible</strong> que se desea introducir en el depósito;</li>
+<li>si se intenta <strong>repostar con el motor del vehículo encendido</strong>, se debe <strong>abortar la operación y lanzarse una excepción</strong> de tipo <code>IllegalStateException</code> con el siguiente mensaje de error: "<em>se ha intentado repostar con el motor encendido</em>";</li>
+<li>si la <strong>cantidad que se intenta introducir es negativa</strong>, debería también <strong>lanzarse una excepción</strong>, en este caso de tipo <code>IllegalArgumentException</code> con el siguiente mensaje de error "<em>cantidad de combustible inválida: xx</em>", donde xx sería la cantidad negativa que se ha pasado como parámetro, con una precisión de dos decimales;</li>
+<li>si la <strong>cantidad de combustible que se intenta introducir hace que el depósito rebose</strong> porque no cabe, entonces debería <strong>llenarse completamente del depósito</strong> pero también <strong>lanzar una excepción</strong> de tipo <code>IllegalStateException</code> con el siguiente mensaje de error: "<em>cantidad de combustible excesiva, se ha sobrepasado la capacidad del depósito en xx litros</em>", donde xx sería la cantidad de combustible en exceso que se ha intentado introducir con una precisión de dos decimales.</li>
+</ol>
+<p>Si te fijas, la complejidad del método ha aumentado sensiblemente. Ya no se trata simplemente de realizar una suma y asignar esa suma a un atributo. Influyen muchos otros factores que habrá que tener en cuenta.</p>
+</div>
+<form name="feedback-form-quesFeedback0b179" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b179text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b179" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b179" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En este caso se trata de un método que puede lanzar <strong>dos tipos de excepciones diferentes</strong>, por lo que habrá que indicarlo en la cabecera mediante una <strong>lista de excepciones separadas por comas</strong>.</p>
+<p>Además, habrá que tener en cuenta todas las condiciones y posibilidades que se han enumerado en el enunciado. Considerando todas esas posibilidades, el código del método <code>repostar</code> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre class="language-java"><code class="language-java">public void repostar (double cantidad) throws IllegalArgumentException, IllegalStateException {
+  double capacidadLibre= this.capacidadDeposito - this.NivelDeposito; // Variable local
+  
+  if ( this.estadoMotor ) {  // Si el motor está encendido no se puede repostar
+    throw new IllegalStateException ("se ha intentado repostar el vehículo con el motor encendido");
+  } else if ( cantidad &lt; 0 )  {  // Si la cantidad de combustible es negativa es un error
+    throw new IllegalArgumentException ( String.format ("cantidad de combustible inválida: %.2f", cantidad) );
+  } else if  ( capacidadLibre &lt; cantidad ) {  // Más combustible del que cabe en el depósito
+      this.NivelDeposito= this.capacidadDeposito;  // Llenamos el depósito completamente
+      throw new IllegalStateException (
+	    String.format (
+              "cantidad de combustible excesiva, se  ha sobrepasado la capacidad del del depósito en %.2f litros", 
+               cantidad - capacidadLibre) 
+      );
+  }
+
+  // Si todo ha ido bien (no se ha producido ninguna circunstancia excepcional)
+  this.nivelDeposito += cantidad;  // Incrementamos el nivel del depósito en la cantidad indicada
+}</code>
+</pre>
+</div>
+<p>Si no terminas de entender cómo funciona el método <code>String.format</code> y los indicadores de formato como por ejemplo <code>%.2f</code> es un buen momento para que vuelvas a la <strong>unidad 4</strong> y hagas un repaso del formateo de cadenas con la clase <code>String</code>.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id182">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta182_148" class="block story iDevice_content">
+<p>El método <code>parar</code> de la clase <code>Vehiculo</code> sirve para detener el motor del vehículo.</p>
+</div>
+<div id="taquesQuestion0b182" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 180px;"><img src="stop-2816449_640.jpg" alt="Botón de apagado del motor" title="Botón stop" style="float: right;" width="180" height="180" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/parada-signo-bot%C3%B3n-luz-rojo-2816449/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Pete Linforth en Pixabay (se abre en una nueva ventana).">Pete Linforth</a> <span class="license"><span class="sep">(</span><span class="license"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span></span></span></span></span><span class="sep"></span></span><span class="sep">)</span></span></div>
+</div>
+<p><br />Implementa el método <code>apagar</code> de la clase <code>Vehiculo</code> teniendo en cuenta lo siguiente:</p>
+<ol>
+<li><strong>no devuelve ningún valor</strong> (<code>void</code>);</li>
+<li><strong>no tiene parámetros</strong>;</li>
+<li><strong>si se intenta apagar el motor de un vehículo que ya lo tiene parado</strong>, se debe <strong>abortar la operación</strong> y <strong>lanzarse una excepción</strong> de tipo <code>IllegalStateException</code> con el siguiente mensaje de error: "<em>el motor ya estaba apagado</em>";</li>
+<li>si el motor finalmente puede ser apagado, entonces sí debe <strong>cambiarse el estado del motor</strong> y además no debes olvidar <strong>actualizar el atributo de clase que controla la cantidad de vehículos arrancados</strong>.</li>
+</ol>
+</div>
+<form name="feedback-form-quesFeedback0b182" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b182text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b182" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b182" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div class="highlighted-code language-java">
+<pre><code>public void parar () throws IllegalStateException {
+  if (!this.estadoMotor) {  
+    throw new IllegalStateException ("el motor ya estaba apagado");  // Si el motor está ya apagado, el método finaliza lanzando una excepción
+  } 
+  this.estadoMotor= false;         // Si el motor aún estaba encencido, cambiamos su estado a apagado (false)
+  Vehiculo.vehiculosArrancados--;  // y decrementamos la cantidad de vehículos arrancados en este momento
+}</code>
+</pre>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id223">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta223_148" class="block story iDevice_content">
+<div id="ta47_67" class="block story iDevice_content">
+<p>El método <code>arrancar</code> de la clase <code>Vehiculo</code> sirve para poner en marcha el motor de un vehículo.</p>
+</div>
+</div>
+<div id="taquesQuestion0b223" class="block iDevice_content">
+<div id="taquesQuestion0b47" class="block iDevice_content">
+<div id="taquesQuestion0b182" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="beginning-1167082_640.jpg" alt="Botón de encendido del motor" title="Botón start" style="float: right;" width="200" height="171" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/comenzando-comienzo-coche-1167082/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de linekslawek en Pixabay (se abre en una nueva ventana).">linekslawek</a> <span class="license"><span class="sep">(</span><span class="license"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span></span></span></span></span></span><span class="sep">)</span></span></div>
+</div>
+<p>Vuelve a implementar el método <code>arrancar</code> de la clase <code>Vehiculo</code> considerando lo siguiente:</p>
+<ol>
+<li><strong>no devuelve ningún valor</strong> (<code>void</code>);</li>
+<li><strong>no tiene parámetros</strong>;</li>
+<li><strong>si se intenta poner en marcha el motor de un vehículo que ya está arrancado</strong>, debe lanzarse una excepción de tipo <code>IllegalStateException</code> pues el motor ya está encendido;</li>
+<li><strong>si el depósito de combustible está vacío</strong>, también debe lanzarse una excepción de tipo <code>IllegalStateException</code> pues sin combustible no se puede arrancar el motor;</li>
+<li><strong>si se trata de un vehículo con el motor parado y con suficiente combustible</strong>, habrá que <strong>cambiar su estado</strong> y actualizar el atributo de clase que controla la <strong>cantidad de vehículos arrancados</strong> en cada momento.</li>
+</ol></div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback0b223" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b223text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b223" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b223" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div class="highlighted-code language-java">
+<pre><code>public void arrancar () throws IllegalStateException {
+  if (this.estadoMotor) {
+    throw new IllegalStateException ("vehículo ya arrancado"); // El motor ya está arrancado
+  }
+  if (this.nivelDeposito == 0) {
+    throw new IllegalStateException ("depósito de combustible vacío");  // Sin combustible para arrancar
+  }
+  // Se dan las circunstancias idóneas para arrancar
+  this.estadoMotor= true;          // Cambiamos de estado el motor
+  Vehiculo.vehiculosArrancados++;  // Incrementamos la cantidad de vehículos activos
+}</code>
+</pre>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="553_el_operador_de_autorreferencia_this.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

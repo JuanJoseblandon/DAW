@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3.- Estructuras condicionales anidadas. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-51"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul class="other-section">
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_estructuras_de_seleccin_o_condicionales.html" class="current-page-parent daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul>
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li id="active"><a href="33_estructuras_condicionales_anidadas.html" class="active no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li><a href="34_estructura_selectiva_mltiple_switch_i.html" class="daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul class="other-section">
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul class="other-section">
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li><a href="45_estructura_repetitiva_for_i.html" class="daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul class="other-section">
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul class="other-section">
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="32_estructura_condicional_compuesta_ifelse.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="34_estructura_selectiva_mltiple_switch_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3.3.- Estructuras condicionales anidadas.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id159">
+<div class="iDevice emphasis0">
+<div id="ta159_154" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 189px;"><img src="matrix-3109378_640.jpg" alt="Listas de números en vertical en fósforo verde con fondo negro, estilo Matrix" title="Números" style="float: right;" width="190" height="131" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/matriz-tecnolog%C3%ADa-de-datos-3109378/" title="Acceder a la web de descarga de la imagen de Jae Rue en Pixabay (se abre en una nueva ventana)" target="_blank" class="author"><span class="author">Jae Rue</span></a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Como ya hemos visto en algún ejemplo en el apartado anterior, <strong>las estructuras de control condicionales (y en general cualquier estructura de control) pueden anidarse</strong> de manera que el bloque de sentencias dentro de la parte <code>if</code> o de la parte <code>else</code> puede a su vez contener una nueva estructura <code>if-else</code>.</p>
+<p>Veamos algunos ejemplos en los que pueda darse esa circunstancia.</p>
+<p>1. Queremos mostrar por pantalla si un número entero x es <strong>par y además superior a 100</strong>. Para ello podríamos primero comprobar si es par y, a continuación, pero dentro del bloque de sentencias del <code>if</code>, comprobar si es superior a 100:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if ( x % 2 == 0) {
+    if ( x &gt; 100 ) {
+        System.out.println ("El número es par y superior a 100.");
+    }
+}
+</code></pre>
+</div>
+</div>
+<p>El <strong><code>if</code> más interno</strong> sólo contiene una sentencia dentro en su bloque, así podrían omitirse las llaves si así lo decidimos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if ( x % 2 == 0 ) {
+    if ( x &gt; 100 ) 
+        System.out.println ("El número es par y superior a 100.");
+}</code></pre>
+</div>
+</div>
+<p>El <strong><code>if</code> más externo</strong> también contiene una única sentencia en su bloque (la segunda sentencia <code>if</code>), de manera que también podríamos omitir sus llaves:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if ( x % 2 == 0 ) 
+    if ( x &gt; 100 ) 
+        System.out.println ("El número es par y superior a 100.");</code></pre>
+</div>
+</div>
+<p>Ahora bien, en este caso la anidación no es necesaria, pues disponemos del operador lógico <code>AND</code> (<code>&amp;&amp;</code> o <code>&amp;</code> en lenguaje Java) que nos permite unir ambas condiciones en una única codición más compleja:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if ( x % 2 == 0 &amp;&amp; x &gt; 100 ) 
+    System.out.println ("El número es par y superior a 100.");</code></pre>
+</div>
+</div>
+<p>Con esto vemos que no siempre es necesario el anidamiento y que el uso de operadores lógicos puede ayudarnos a simplicar la estructura de los programas.</p>
+<p>2. Imaginemos que se nos pide ahora <strong>comprobar si el número x es negativo, cero o positivo </strong>indicando para cada caso un mensaje de texto apropiado. Para resolver este problema podríamos hacer una primera comprobación para ver si el número es negativo y, en caso contrario, como nos quedan dos posibles opciones (cero o positivo), hacer una nueva comprobación para ver si es positivo. Si no fuera positivo sabremos que se trata de la única alternativa que nos queda: cero. Estas comprobaciones podríamos implementarlas con un <code>if-else</code> que tendría un <code>else</code> cuyo bloque de sentencias contendría un nuevo <code>if-else</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (x &lt; 0) {  // El número es negativo
+    System.out.println("El número es negativo.");
+} else {  // El número es cero o positivo
+    if (x &gt; 0 ) {  // El número es positivo
+        System.out.println("El número es positivo.");
+    } else {  // Si se ha llegado hasta aquí el número es obligatoriamente cero
+        System.out.println("El número es cero.");                
+}
+</code></pre>
+</div>
+</div>
+<p>Nuevamente aquí podemos evitar todas las llaves, pues cada bloque de sentencias contiene una única sentencia (aunque alguna de ellas contenga a su vez nuevos bloques):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if (x &lt; 0)   
+    System.out.println("El número es negativo.");
+else  
+    if (x &gt; 0 )  
+        System.out.println("El número es positivo.");
+    else  
+        System.out.println("El número es cero.");</code></pre>
+</div>
+</div>
+<p>Ante esto podemos hacernos la pregunta: ¿nos conviene quitarlas todas o puede venirnos bien dejar algunas para mejorar la legibilidad del código? Esa percepción nos la irá proporcionando la experiencia según vayamos implementando cada vez programas más complejos.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id164">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta164_148" class="block story iDevice_content">
+<p>Nos plantean la posibilidad de escribir un programa que a partir de una nota cuantitativa calcule su calificación cualtiativa equivalente teniendo en cuenta que:</p>
+<ul class="lista_verificacion">
+<li>Si la nota es menor de 5, la calificación será <code>"INSUFICIENTE"</code>.</li>
+<li>Si la nota es mayor o igual a 5 y menor que 6, la calificación será <code>"SUFICIENTE"</code>.</li>
+<li>Si la nota es mayor o igual a 6 y menor que 7, la calificación será <code>"BIEN"</code>.</li>
+<li>Si la nota es mayor o igual a 7 y menor que 9, entonces la calificación será <code>"NOTABLE"</code>.</li>
+<li>Si la nota es mayor o igual a 9 y menor o igual a 10, entonces la calificación será de <code>"SOBRESALIENTE"</code>.</li>
+</ul>
+</div>
+<div id="taquesQuestion0b164" class="block iDevice_content">
+<p>Escribe un programa en Java que a partir de una nota cuantitativa calcule su calificación cualtiativa equivalente utilizando una serie de estructuras <code>if</code> sin anidar.</p>
+<p></p>
+</div>
+<form name="feedback-form-quesFeedback0b164" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b164text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b164" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b164" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Un primer acercamiento podría ser construir toda una serie de sentencias <code>if</code> comprobando cada uno de esos casos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if ( notaCuantitativa &lt; 5 )
+    notaCualitativa= "INSUFICIENTE";
+if ( notaCuantitativa &gt;=5 &amp;&amp; notaCuantitativa &lt; 6  )
+    notaCualitativa= "SUFICIENTE";
+if ( notaCuantitativa &gt;=6 &amp;&amp; notaCuantitativa &lt; 7  )
+    notaCualitativa= "BIEN";
+if ( notaCuantitativa &gt;= 7 &amp;&amp; notaCuantitativa &lt; 9 )
+    notaCualitativa= "NOTABLE";
+if ( notaCuantitativa &gt;=9 &amp;&amp; notaCuantitativa&lt;= 10 )
+    notaCualitativa= "SOBRESALIENTE";
+
+System.out.println ("La calificación cualitativa equivalente es: " + notaCualitativa);
+</code></pre>
+</div>
+</div>
+<p>Ahora bien, esto sería muy poco eficiente, pues si por ejemplo la nota es de un 4.2 la calificación debería ser "INSUFICIENTE" y no se deberían seguir haciendo comprobaciones. Sin embargo, tal y como lo hemos planteado aquí, siempre se van a llevar a cabo todas las comprobaciones (desde insuficiente hasta sobresaliente), aunque ya sepamos desde la primera comprobación que estamos en el rango de insuficiente.</p></div>
+</form>
+<div id="taquesQuestion1b164" class="block iDevice_content">
+<p>Una vez que hemos resuelto el problema de esta primera forma y podemos constatar su escasa eficiencia, se nos plantea la posibilidad de utilizar <code>if</code> anidados de manera que sólo si la condición no se cumple (parte <code>else</code> de la estructura) entonces intentamos la siguiente. De esta manera, en cuanto se logre entrar en alguna de las condiciones, las demás ya no se realizarán, pues están dentro de un <code>else</code>.</p>
+<p>Siguiendo esta nueva manera de plantear el problema escribe el nuevo código Java para ese programa.</p>
+</div>
+<form name="feedback-form-quesFeedback1b164" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b164text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b164" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b164" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Siguiendo esta nueva manera de plantear el problema nos quedaríamos con este código:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if ( notaCuantitativa &lt; 5 ) {
+    notaCualitativa= "INSUFICIENTE";
+} else {
+    if ( notaCuantitativa &gt;=5 &amp;&amp; notaCuantitativa &lt; 6  ) {
+        notaCualitativa= "SUFICIENTE";
+    }
+    else { 
+        if ( notaCuantitativa &gt;=6 &amp;&amp; notaCuantitativa &lt; 7  ) {
+            notaCualitativa= "BIEN";
+        }
+        else {
+            if ( notaCuantitativa &gt;= 7 &amp;&amp; notaCuantitativa &lt; 9 ) {
+                notaCualitativa= "NOTABLE";
+            }
+            else {
+                if ( notaCuantitativa &gt;=9 &amp;&amp; notaCuantitativa&lt;= 10 ) {
+                    notaCualitativa= "SOBRESALIENTE";
+                }
+            }
+        }
+    }
+}
+
+System.out.println ("La calificación cualitativa equivalente es: " + notaCualitativa);
+</code></pre>
+</div>
+</div>
+<p>Ahora bien, aquí hay condiciones que es innecesario comprobar, pues cada vez que se entra en un <code>else</code> es porque no se ha cumplido la condición de su <code>if</code>. Por ejemplo en el primer <code>else</code> ya no es necesario comprobar que <code>notaCuantitativa&gt;=5</code>, pues si no ha sido menor que 5 es que en efecto es mayor o igual que 5. Y así con el resto de los <code>else</code> en los cuales no es necesario volver a comprobar condiciones que ya se han comprobado en sus respectivos <code>if</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if ( notaCuantitativa &lt; 5 ) {
+    notaCualitativa= "INSUFICIENTE";
+} else {  // Aquí ya sabemos que notaCuantitativa &gt;=5. No es necesario comprobarlo
+    if ( notaCuantitativa &lt; 6  ) {
+        notaCualitativa= "SUFICIENTE";
+    }
+    else {  // Aquí ya sabemos que notaCuantitativa &gt;=6. No es necesario comprobarlo
+        if ( notaCuantitativa &lt; 7  ) {
+            notaCualitativa= "BIEN";
+        }
+        else {  // Aquí ya sabemos que notaCuantitativa &gt;=7. No es necesario comprobarlo
+            if ( notaCuantitativa &lt; 9 ) {
+                notaCualitativa= "NOTABLE";
+            }
+            else {  // Aquí ya sabemos que notaCuantitativa &gt;=9. No es necesario comprobarlo
+                if ( notaCuantitativa&lt;= 10 ) {
+                    notaCualitativa= "SOBRESALIENTE";
+                }
+            }
+        }
+    }
+}
+
+System.out.println ("La calificación cualitativa equivalente es: " + notaCualitativa);</code></pre>
+</div>
+</div>
+<p>Si te fijas, tanto los <code>if</code> como los <code>else</code> de toda esa estructura anidada contienen <strong>bloques de una sola sentencia</strong>, de manera que podemos eliminar todas las llaves:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if ( notaCuantitativa &lt; 5 )
+    notaCualitativa= "INSUFICIENTE";
+else
+    if ( notaCuantitativa &lt; 6  )
+        notaCualitativa= "SUFICIENTE";
+    else
+        if ( notaCuantitativa &lt; 7  )
+            notaCualitativa= "BIEN";
+        else 
+            if ( notaCuantitativa &lt; 9 )
+                notaCualitativa= "NOTABLE";
+            else
+                if ( notaCuantitativa&lt;= 10 )
+                    notaCualitativa= "SOBRESALIENTE";
+
+System.out.println ("La calificación cualitativa equivalente es: " + notaCualitativa);
+</code></pre>
+</div>
+</div>
+<p>Ahora bien, es probable que tantos niveles de indentación tan seguidos perjudiquen a la legibilidad del código, haciéndolo difícil de seguir.</p></div>
+</form>
+<div id="taquesQuestion2b164" class="block iDevice_content">
+<p>En estos casos con tanta indentación en estructuras donde se van encadenando los <code>else</code>, las "normas de estilo" de Java permiten y recomiendan que cuando haya un <code>if</code> (y nada más) dentro de un <code>else</code> puedan colocarse ambas palabras juntas (<code>else if</code>) y no incrementar otro nivel de indentación. De esta manera se consigue mejorar sensiblemente la <strong>legibilidad</strong>. De esta manera el código quedaría con el siguiente aspecto:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if ( condición_1 ) {
+    bloque de sentencias 1
+} else if ( condición_2  ) {
+    bloque de sentencias 2
+} else if ( condición_3  ) {
+    bloque de sentencias 3
+} ...
+} else if ( condición_n  ) {
+    bloque de sentencias n
+} else {
+    bloque de sentencias n+1
+}</code></pre>
+</div>
+</div>
+<p>Lo que le proporciona un aspecto mucho más compacto y legible.</p>
+<p>Escribe cómo quedaría nuestro programa utilizando este estilo más compacto.</p>
+</div>
+<form name="feedback-form-quesFeedback2b164" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b164text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b164" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b164" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Nuestro programa de las calificaciones siguiendo ese modelo quedaría entonces así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>if ( notaCuantitativa &lt; 5 )
+    notaCualitativa= "INSUFICIENTE";
+else if ( notaCuantitativa &lt; 6  )
+    notaCualitativa= "SUFICIENTE";
+else if (  notaCuantitativa &lt; 7  )
+    notaCualitativa= "BIEN";
+else if ( notaCuantitativa &lt; 9 )
+    notaCualitativa= "NOTABLE";
+else if ( notaCuantitativa&lt;= 10 )
+    notaCualitativa= "SOBRESALIENTE";
+
+System.out.println ("La calificación cualitativa equivalente es: " + notaCualitativa);
+</code></pre>
+</div>
+</div>
+<p>Lo cual parece bastante más sencillo de entender y de seguir, ¿no crees?</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id85">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Propuesto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta85_63" class="block story iDevice_content">
+<p>Se nos plantea la posibilidad de hacer un programa que calcule la calificación de un examen a partir de las preguntas acertadas, falladas y no contestadas.</p>
+</div>
+<div id="taquesQuestion0b85" class="block iDevice_content">
+<p>Implementa un programa en Java que calcule la nota de un examen de tipo test de <strong>20 preguntas</strong>. </p>
+<p>El programa debe solicitar por teclado <strong>dos números enteros</strong>: <strong>número de preguntas acertadas</strong> y <strong>número de preguntas falladas</strong> y a partir de ahí calcular la nota final teniendo en cuenta que <strong>cada fallo restará la mitad de un acierto</strong>, y que obviamente las <strong>preguntas sin contestar ni restarán ni sumarán</strong>. La nota final deberá estar entre 0 y 10. Si la suma del número de preguntas acertadas y el número de preguntas falladas supera el total de preguntas (20), entonces no se llevará a cabo ningún cálculo y se mostrará por pantalla el mensaje "<em>Datos erróneos</em>". Si los datos son correctos deberán entonces calcularse la calificación no numérica del examen y mostrarse por pantalla ambas calificaciones: la cuantitativa (numérica) y la cualtiativa (no numérica).</p>
+</div>
+<form name="feedback-form-quesFeedback0b85" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b85text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b85" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b85" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En esta ocasión no te vamos a ofrecer la solución aquí sino que te proponemos el desafío de que plantees tu solución en los foros de la unidad para que la discutáis entre vosotros.</p>
+<p>Para desarrollar el programa utiliza la plantilla de programa que os proporcionamos en la unidad 1.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="32_estructura_condicional_compuesta_ifelse.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="34_estructura_selectiva_mltiple_switch_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

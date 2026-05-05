@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1.3.- Agrupaciones: uso de paréntesis. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-83"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_expresiones_regulares.html" class="current-page-parent daddy">3.- Expresiones regulares.</a>
+   <ul>
+      <li class="current-page-parent"><a href="31_construccin_de_expresiones_regulares.html" class="current-page-parent daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul>
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li id="active"><a href="313_agrupaciones_uso_de_parntesis.html" class="active no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="312_cuantificadores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="314_alternativas_operador_barra__o_disyuntor.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.1.3.- Agrupaciones: uso de paréntesis.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id345">
+<div class="iDevice emphasis0">
+<div id="ta345_154" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="parcels-gd239e0c67_640.png" alt="Un grupo de paquetes" title="Grupo" style="float: right;" width="240" height="240" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/paquetes-entrega-caja-servicio-2484036/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de harshahars en Pixabay (se abre en una nueva ventana).">harshahars</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>En ocasiones, tendremos necesidad de <strong>agrupar una secuencia de símbolos</strong> para que se le pueda aplicar un cuantificador a toda esa agrupación. Por ejemplo, si tenemos la siguiente expresión regular:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre class="  language-latex"><code class="  language-latex">xy+</code></pre>
+</div>
+</div>
+<p>es un patrón que indica que debe aparecer un carácter '<code>x</code>' y a continuación uno más caracteres '<code>y</code><code></code>'. Es decir, que se admitirían cadenas del tipo "<code>xy</code>", "<code>xyy</code>", "<code>xyy</code><code>y</code>", <abbr title="etcétera">etc</abbr>.</p>
+<p>Sin embargo, si lo que queremos es poder reconocer o admitir cadenas del tipo "<code>xy</code>", "<code>xyxy</code>", "<code>xyxyx</code><code>y</code>", <abbr title="etcétera">etc</abbr>. Es decir, repeticiones del par "<code>xy</code>", entonces tendríamos que cuantificar ambos elementos. Pero no podemos cuantificarlos individualmente haciendo algo como:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre class="  language-latex"><code class="  language-latex">x+y+</code></pre>
+</div>
+</div>
+<p>Porque en tal caso, estaríamos indicando repeticiones del carácter '<code>x</code><code></code>' y luego repeticiones del carácter '<code>y</code><code></code>', pero no repeticiones del par "<code>xy</code>". Por ejemplo, se admitirían cadenas del tipo "<code>xxxxy</code>", "<code>xxyyyyy</code>", "<code>xy</code>", <abbr title="etcétera">etc</abbr>. Pero una vez que aparezca la primera '<code>y</code><code></code>', ya no aparecerán más '<code>x</code>'.</p>
+<p>Por tanto, lo que tenemos que hacer es agrupar la secuencia de símbolos que queremos que se repita. De ese modo el cuantificador afectará a toda esa secuencia. Para ello se utilizan los paréntesis:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre class="  language-latex"><code class="  language-latex">(xy)+</code></pre>
+</div>
+</div>
+<p>De este modo convertimos a la secuencia "<code>xy</code>" en una unidad indivisible a la cual se le aplicará el cuantificador '+'.<br /><br /></p>
+<p>Si en lugar de utilizar caracteres "fijos" (como '<code>x</code>' o '<code>y</code><code></code>'), se utilizan conjuntos mediante los corchetes, nuestras posibilidades a la hora de flexibilizar nuestras reglas se multiplican. Por ejemplo, si queremos detectar cadenas que sigan la siguiente secuencia:</p>
+<p style="text-align: center;">"<em>una cifra cero o uno seguida de una letra minúscula, todo eso entre una y tres veces</em>"</p>
+<p>podríamos construir la siguiente expresión regular:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre class="  language-latex"><code class="  language-latex">(<span class="token punctuation">[</span>01<span class="token punctuation">]</span><span class="token punctuation">[</span>a-z<span class="token punctuation">]</span>)<span class="token punctuation">{</span>1,3<span class="token punctuation">}</span></code></pre>
+</div>
+</div>
+<p>De esa manera, este patrón detectaría cadenas del tipo "<code>0s</code>", "<code>1b1a0x</code>", "<code>0c1z</code>", "<code>1a1a</code>", "<code>1a<code>1a</code><code>1a</code></code>", "<code>0b<code>0b0b</code><code></code></code>", "<code>0b1<code>b0j</code><code></code></code>",<abbr title="etcétera">etc</abbr>.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ClozefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id346">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta346_122" class="block instructions iDevice_content">
+<div id="ta243_122" class="block instructions iDevice_content">
+<div id="ta241_122" class="block instructions iDevice_content">
+<p><strong>Dadas las siguientes expresiones regulares:</strong></p>
+<table class="tabla" summary="Tabla para relacionar los tipos de datos primitivos de la primera columna con las características que los define, que figura en la tercera columna."><caption>Expresiones regulares</caption>
+<thead>
+<tr><th scope="col">Número</th><th scope="col">Expresión Regular</th><th scope="col">Número</th><th scope="col">Expresión Regular</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="texto_centrado">1</td>
+<td>"<code>[0-9]{2}(-[XZ]{2})+</code>"</td>
+<td style="text-align: center;">5</td>
+<td>"<code>[Gg](oo)+gle<code></code></code>"</td>
+</tr>
+<tr>
+<td class="texto_centrado">2</td>
+<td>"<code>[ACGT](-[ACGT]){3}</code>"</td>
+<td style="text-align: center;">6</td>
+<td>"<code>[pP]az(, paz)*</code>"</td>
+</tr>
+<tr>
+<td class="texto_centrado">3</td>
+<td>"<code>Paz(, Paz)*<code>(, paz)*</code></code>"</td>
+<td style="text-align: center;">7</td>
+<td>"<code>10(:[0-5][0-9]){2}</code>"</td>
+</tr>
+<tr>
+<td class="texto_centrado">4</td>
+<td>"<code>(#[01]){2,3}</code>"</td>
+<td style="text-align: center;">8</td>
+<td>"<code>[1-9][0-9]*( <code>[1-9][0-9]</code>*)*</code>"</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p><strong>relaciónalas con los tipos de textos o cadenas con las que harían "matching" o "acoplamiento":</strong></p>
+</div>
+</div>
+</section>
+<section class="activity" id="activity-346_123"><form name="cloze-form-346_123" action="#" class="activity-form cloze-activity-form"><div id="cloze346_123"><input type="hidden" name="clozeFlag346_123.strictMarking" id="clozeFlag346_123.strictMarking" value="false"/>
+<input type="hidden" name="clozeFlag346_123.checkCaps" id="clozeFlag346_123.checkCaps" value="false"/>
+<input type="hidden" name="clozeFlag346_123.instantMarking" id="clozeFlag346_123.instantMarking" value="false"/>
+<table class="tabla" summary="Tabla para relacionar los tipos de datos primitivos de la primera columna con las características que los define, que figura en la tercera columna."><caption>Textos</caption>
+<thead>
+<tr><th scope="col">Número de expresión regular</th><th scope="col">Cadenas que encajan con la expresión regular (hacen "matching")</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank346_123.0" class="sr-av">Rellenar huecos (1):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank346_123.0" style="width:1ch" /><span style="display:none" id="clozeAnswer346_123.0">JXUwMDZk
+</span></td>
+<td style="text-align: justify;">Cadenas del tipo "<code>Google</code>", "<code>Goooogle</code>", "<code>google</code>", "<code>goooooogle</code>", <abbr title="etcétera">etc</abbr>. Es decir, expresiones de la forma "<code>Google</code>", que pueden empezar en mayúsculas o minúsculas y con un número de par de vocales '<code>o</code>'.</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank346_123.1" class="sr-av">Rellenar huecos (2):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank346_123.1" style="width:1ch" /><span style="display:none" id="clozeAnswer346_123.1">JXUwMDZi
+</span></td>
+<td style="text-align: justify;">Cadenas del tipo "<code>Paz</code>", "<code>Paz, Paz</code>", "<code>Paz, paz</code>", "<code>Paz, Paz, paz</code>", "<code>Paz, Paz, Paz, paz, paz</code>", <abbr title="etcétera">etc</abbr>. Es decir, repeticiones ilimitadas (pero al menos una vez) de la palabra "<code>Paz</code>", separadas por coma y espacio, donde las primeras repeticiones tienen la primera letra en mayúscula, pero una vez aparezca una palabra con la primera letra en minúsculas, ya el resto será también con la primera en minúscula.</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank346_123.2" class="sr-av">Rellenar huecos (3):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank346_123.2" style="width:1ch" /><span style="display:none" id="clozeAnswer346_123.2">JXUwMDZl
+</span></td>
+<td style="text-align: justify;">Cadenas del tipo "<code>Paz</code>", "<code>paz</code>", "<code>Paz, paz</code>", "<code>paz, paz, paz</code>", <abbr title="etcétera">etc</abbr>. Es decir, repeticiones sin límite de la palabra "<code>Paz</code>" (pero apareciendo al menos una vez), separadas por coma y espacio, donde en la primera aparición (y solo en la primera), la primera letra pueden estar en mayúscula o minúscula. El resto de apariciones ya será siempre con todas las letras en minúscula.</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank346_123.3" class="sr-av">Rellenar huecos (4):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank346_123.3" style="width:1ch" /><span style="display:none" id="clozeAnswer346_123.3">JXUwMDY5
+</span></td>
+<td>
+<p style="text-align: justify;">Cadenas del tipo "<code>00-XX</code>", "<code>19-ZX-ZZ</code>", "<code>25-XX-ZX-ZZ</code>", "<code>99-XZ-XZ-XX-ZX-ZZ</code>", <abbr title="etcétera">etc</abbr>. Es decir, cadenas que empiecen por dos dígitos numéricos cualesquiera, a continuación un guion y un par de letras combinación de '<code>X</code>' y '<code>Z</code>', y a partir de ahí puede repetirse el guion con las dos leras tantas veces como se desee.</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank346_123.4" class="sr-av">Rellenar huecos (5):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank346_123.4" style="width:1ch" /><span style="display:none" id="clozeAnswer346_123.4">JXUwMDZh
+</span></td>
+<td>
+<p>Cadenas del tipo "<code>A-C-G-T</code>", "<code>A-A-A-A</code>", "<code>C-G-T-T</code>", "<code>A-C-G-G</code>", <abbr title="etcétera">etc</abbr>. Es decir, cadenas compuestas por cuatro elementos de tipo '<code>A</code>', '<code>C</code>', '<code>G</code>', '<code>T</code>', combinados de cualquier manera y separados por un guion ('<code>-</code>').</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank346_123.5" class="sr-av">Rellenar huecos (6):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank346_123.5" style="width:1ch" /><span style="display:none" id="clozeAnswer346_123.5">JXUwMDZm
+</span></td>
+<td style="text-align: justify;">Cadenas del tipo "<code>10:00:00</code>", "<code>10:00:01</code>", "<code>10:00:59</code>", "<code>10:01:29</code>", "<code>10:27:15</code>", "<code>10:59:00</code>", "<code>10:59:59</code>", <abbr title="etcétera">etc</abbr>. Es decir, cadenas que representan todas las horas (con minutos y segundos) que van desde las <code>10:00:00</code> hasta las <code>10:59:59</code>.</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank346_123.6" class="sr-av">Rellenar huecos (7):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank346_123.6" style="width:1ch" /><span style="display:none" id="clozeAnswer346_123.6">JXUwMDYw
+</span></td>
+<td style="text-align: justify;">Cadenas del tipo "<code>1 2 3</code>", "<code>1200 15 200 3</code>", "<code>1</code>", "<code>25 26 88</code>", "<code>500 1 99</code>", "<code>10 10 10</code>", "<code>4 4 4 200 13</code>", <abbr title="etcétera">etc</abbr>. Es decir, cadenas que representan listas de números enteros separados por espacios. Estos números tienen que ser como mínimo <code>1</code> y no hay definido un máximo. Ninguno de ellos puede comenzar por el carácter '<code>0</code>'.</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank346_123.7" class="sr-av">Rellenar huecos (8):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank346_123.7" style="width:1ch" /><span style="display:none" id="clozeAnswer346_123.7">JXUwMDZj
+</span></td>
+<td style="text-align: justify;">Cadenas del tipo "<code>#0#0</code>", "<code>#0#1</code>", "<code>#1#1</code>", "<code>#1#0</code>", "<code>#0#0<code>#0</code></code>", "<code>#1#1<code>#1</code></code>", "<code>#0#1<code>#0</code></code>", <abbr title="etcétera">etc</abbr>. Es decir, cadenas compuestas por dos o tres elementos de tipo '<code>#</code>' y el carácter '<code>0</code>' o '<code>1</code>'.</td>
+</tr>
+</tbody>
+</table><div class="block iDevice_buttons"><p><input class="button" type="submit" name="submit346_123" value="Enviar"  id="submit346_123" />
+<input type="button" name="restart346_123" value="Reiniciar" style="display:none" id="restart346_123" onclick="$exe.cloze.restart('346_123')" />
+ <input type="button" name="346_123showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton346_123" onclick="$exe.cloze.fillInputs('346_123')" />
+<span class="js-hidden js-warning">Habilitar JavaScript</span></p></div><div id="clozeScore346_123"></div></div></form></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id347">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicios Resueltos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta347_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b347" class="block iDevice_content">
+<p>1.- Plantea una expresión regular que represente a cualquier número real, con cuatro decimales como máximo, entre <code>1</code> y <code>99</code>. Es decir, todos los números reales entre <code>1,0000</code> y <code>99,9999</code>. Ten en cuenta que en la parte entera no deben permitirse ceros a la izquierda y en la parte decimal no deben permitirse ceros a la derecha (ni siquiera se admiten número del estilo a <code>2,0</code>). El símbolo de decimal lo representaremos mediante el carácter coma (',') o mediante el carácter punto ('.').</p>
+</section>
+<form name="feedback-form-quesFeedback0b347" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b347text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b347" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b347" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso deberíamos tener:</p>
+<ol>
+<li>una primera (y a veces única) cifra entre <code>1</code> y <code>99</code> de la parte entera;</li>
+<li>una posible segunda cifra, entre <code>0</code> y <code>99</code>, también de la parte entera;</li>
+<li>si hay parte decimal:<ol>
+<li>el carácter coma (',') o punto ('.') para indicar la parte decimal;</li>
+<li>entre cero y tres cifras (entre <code>0</code> y <code>9</code>) para la parte decimal;</li>
+<li>una última (y a veces única) cifra entre <code>1</code> y <code>9</code> de la parte decimal;</li>
+</ol></li>
+</ol>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>[1-9][0-9]?([.,][0-9]{0,3}[1-9])?</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b347" class="block iDevice_content">
+<p>2.- Construye una expresión regular que sirva para comprobar si una cadena de caracteres contiene únicamente palabras formadas por vocales. La primera letra de cada palabra siempre tendrá que estar en mayúsculas y las palabras pueden estar separadas por una coma (y solo una) o bien uno o varios espacios, o bien por una coma y espacios (pero siempre una coma como máximo entre dos palabras).</p>
+</section>
+<form name="feedback-form-quesFeedback1b347" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b347text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b347" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b347" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Como siempre, lo primero que tenemos que hacer es analizar con rigor qué es lo que queremos permitir o expresar para poder definir adecuadamente las distintas reglas que conformarán el patrón o expresión regular:</p>
+<ul>
+<li class="lista_verificacion">al principio de palabra debe ser una vocal mayúscula (solo una): "<code>[AEIOU]</code>";</li>
+<li class="lista_verificacion">después el resto de la palabra, que estará formado solamente vocales minúsculas: "<code>[AEIOU]</code><code>[aeiou]*</code>";</li>
+<li class="lista_verificacion">puede haber una coma con espacios (o no) antes y después, después de cada palabra. Pero si solo hay una palabra, no habrá comas: "<code>[AEIOU]</code><code>[aeiou]*( *[, ] *<code>[AEIOU]</code><code>[aeiou]*</code>)*</code>";</li>
+<li class="lista_verificacion">por último, si queremos también posibles espacios al principio y al final, habrá que indicarlos: " <code>*     . . .    </code><code>*</code>".</li>
+</ul>
+<p>En este caso no hemos tenido más remedio que repetir el subpatrón "<code>[AEIOU]</code><code>[aeiou]*</code>" para que en el primer caso aparezca como mínimo una palabra (y sin coma) y a partir de ahí, el mismo subpatrón, con una coma (o espacio) delante (y posibles espacios antes y después) para que pueda repetirse cero o más veces. Hemos considerado también que una palabra tendrá como mínimo una letra, de manera que la mayúscula es obligatoria y las minúsculas (letras a partir de la segunda en una palabra) pueden o no aparecer (cuantificador asterisco).</p>
+<p>Por tanto, el patrón quedaría finalmente como:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre class="  language-latex"><code class="  language-latex">" *<span class="token punctuation">[</span>AEIOU<span class="token punctuation">]</span><span class="token punctuation">[</span>aeiou<span class="token punctuation">]</span>*( *<span class="token punctuation">[</span>, <span class="token punctuation">]</span> *<span class="token punctuation">[</span>AEIOU<span class="token punctuation">]</span><span class="token punctuation">[</span>aeiou<span class="token punctuation">]</span>*)* *"</code></pre>
+</div>
+</div>
+<p>Fíjate lo importantes que han sido aquí los <strong>paréntesis</strong> para poder agrupar las partes que queremos cuantificar y que están formadas por más de un símbolo.</p>
+<p>Esta es una posible solución. No tiene por qué ser la única. Lo que siempre hay que buscar es que sea lo más sencilla que podamos para que su procesamiento sea más eficiente y también por facilitar la legibilidad del código. Si se te ocurre una solución más simple a esta (con las herramientas que hemos visto hasta el momento), te animamos a que la propongas en el foro y la discutamos.</p>
+<p></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="312_cuantificadores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="314_alternativas_operador_barra__o_disyuntor.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

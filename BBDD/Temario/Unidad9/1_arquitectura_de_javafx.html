@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.- Arquitectura de JavaFX </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Interfaces gráficas de usuario</a></li>
+   <li id="active"><a href="1_arquitectura_de_javafx.html" class="active no-ch">1.- Arquitectura de JavaFX</a></li>
+   <li><a href="2_estructura_de_una_aplicacin.html" class="daddy">2.- Estructura de una aplicación</a>
+   <ul class="other-section">
+      <li><a href="21_grafo_de_escena.html" class="no-ch">2.1.- Grafo de escena</a></li>
+      <li><a href="22_instalar_sdk.html" class="no-ch">2.2.- Instalar SDK</a></li>
+      <li><a href="23_primer_ejemplo.html" class="no-ch">2.3.- Primer ejemplo</a></li>
+   </ul>
+   </li>
+   <li><a href="3_eventos.html" class="daddy">3.- Eventos</a>
+   <ul class="other-section">
+      <li><a href="31_modelo_de_gestin_de_eventos.html" class="no-ch">3.1.- Modelo de gestión de eventos</a></li>
+      <li><a href="32_tipos_de_eventos.html" class="no-ch">3.2.- Tipos de eventos</a></li>
+      <li><a href="33_aadir_un_manejador_de_evento.html" class="no-ch">3.3.- Añadir un manejador de evento</a></li>
+   </ul>
+   </li>
+   <li><a href="4_css.html" class="daddy">4.- CSS</a>
+   <ul class="other-section">
+      <li><a href="41_introduccin.html" class="no-ch">4.1.- Introducción</a></li>
+      <li><a href="42_hoja_de_estilo_por_defecto.html" class="no-ch">4.2.- Hoja de estilo por defecto</a></li>
+      <li><a href="43_hoja_de_estilo_especfica_de_la_escena.html" class="no-ch">4.3.- Hoja de estilo específica de la escena</a></li>
+      <li><a href="44_hoja_de_estilo_especfica_del_padre.html" class="no-ch">4.4.- Hoja de estilo específica del padre</a></li>
+      <li><a href="45_estilo_especfico_en_componente.html" class="no-ch">4.5.- Estilo específico en componente</a></li>
+   </ul>
+   </li>
+   <li><a href="5_layout_panes.html" class="daddy">5.- Layout panes</a>
+   <ul class="other-section">
+      <li><a href="51_absolute_layout.html" class="no-ch">5.1.- Absolute layout</a></li>
+      <li><a href="52_hbox.html" class="no-ch">5.2.- HBox</a></li>
+      <li><a href="53_vbox.html" class="no-ch">5.3.- VBox</a></li>
+      <li><a href="54_borderpane.html" class="no-ch">5.4.- BorderPane</a></li>
+      <li><a href="55_anchorpane.html" class="no-ch">5.5.- AnchorPane</a></li>
+      <li><a href="56_stackpane.html" class="no-ch">5.6.- StackPane</a></li>
+      <li><a href="57_flowpane.html" class="no-ch">5.7.- FlowPane</a></li>
+      <li><a href="58_tilepane.html" class="no-ch">5.8.- TilePane</a></li>
+      <li><a href="59_gridpane.html" class="no-ch">5.9.- GridPane</a></li>
+   </ul>
+   </li>
+   <li><a href="6_controles_ui.html" class="daddy">6.- Controles UI</a>
+   <ul class="other-section">
+      <li><a href="61_label_etiqueta_y_textfield_campo_de_texto.html" class="no-ch">6.1.- Label (Etiqueta) y TextField (Campo de texto)</a></li>
+      <li><a href="62_button_botn.html" class="daddy">6.2.- Button (Botón)</a>
+      <ul class="other-section">
+         <li><a href="621_aadir_imagenicono_a_botn.html" class="no-ch">6.2.1.- Añadir imagen/icono a botón</a></li>
+         <li><a href="622_validar_entrada.html" class="no-ch">6.2.2.- Validar entrada</a></li>
+      </ul>
+      </li>
+      <li><a href="63_men.html" class="no-ch">6.3.- Menú</a></li>
+      <li><a href="64_menubutton.html" class="no-ch">6.4.- MenuButton</a></li>
+      <li><a href="65_checkbox.html" class="no-ch">6.5.- CheckBox</a></li>
+      <li><a href="66_radiobutton_radiobotn.html" class="no-ch">6.6.- RadioButton (Radiobotón)</a></li>
+      <li><a href="67_combobox.html" class="daddy">6.7.- ComboBox</a>
+      <ul class="other-section">
+         <li><a href="671_seleccionar_un_valor.html" class="no-ch">6.7.1.- Seleccionar un valor</a></li>
+      </ul>
+      </li>
+      <li><a href="68_listview_lista.html" class="daddy">6.8.- ListView (Lista)</a>
+      <ul class="other-section">
+         <li><a href="681_obtener_valor_seleccionado.html" class="no-ch">6.8.1.- Obtener valor seleccionado</a></li>
+         <li><a href="682_seleccionar_varios_elementos.html" class="no-ch">6.8.2.- Seleccionar varios elementos.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="7_javafx_fxml.html" class="daddy">7.- JavaFX FXML</a>
+   <ul class="other-section">
+      <li><a href="71_javafx_scene_builder.html" class="no-ch">7.1.- JavaFX Scene Builder</a></li>
+      <li><a href="72_estructura_de_un_proyecto_fxml.html" class="daddy">7.2.- Estructura de un proyecto FXML</a>
+      <ul class="other-section">
+         <li><a href="721_el_fichero_fxml.html" class="no-ch">7.2.1.- El fichero .fxml</a></li>
+         <li><a href="722_controlador.html" class="no-ch">7.2.2.- Controlador</a></li>
+         <li><a href="723_clase_principal.html" class="no-ch">7.2.3.- Clase principal</a></li>
+         <li><a href="724_ejemplo_javafx_con_scene_builder_y_netbeans.html" class="no-ch">7.2.4.- Ejemplo JavaFX con Scene Builder y NetBeans</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="8_paso_de_informacin_entre_ventanas.html" class="daddy">8.- Paso de información entre ventanas</a>
+   <ul class="other-section">
+      <li><a href="81_paso_de_informacin_entre_ventanas_usando_fxml.html" class="no-ch">8.1.- Paso de información entre ventanas usando FXML</a></li>
+      <li><a href="82_paso_de_informacin_entre_ventanas_usando_fxml_ii.html" class="no-ch">8.2.- Paso de información entre ventanas usando FXML (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="9_grficos.html" class="daddy">9.- Gráficos</a>
+   <ul class="other-section">
+      <li><a href="91_ejemplo_diagrama_de_quesos.html" class="no-ch">9.1.- Ejemplo: diagrama de quesos</a></li>
+   </ul>
+   </li>
+   <li><a href="10_imagen_audio_y_vdeo.html" class="daddy">10.- Imagen, audio y vídeo</a>
+   <ul class="other-section">
+      <li><a href="101_imagen.html" class="no-ch">10.1.- Imagen</a></li>
+      <li><a href="102_audio.html" class="no-ch">10.2.- Audio</a></li>
+      <li><a href="103_vdeo.html" class="no-ch">10.3.- Vídeo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_lambda.html" class="no-ch">Anexo I.- Lambda</a></li>
+   <li><a href="anexo_ii_atributos_tipo_property.html" class="no-ch">Anexo II.- Atributos tipo Property</a></li>
+   <li><a href="anexo_iii_ejemplo_de_aplicacin.html" class="no-ch">Anexo III.- Ejemplo de aplicación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_estructura_de_una_aplicacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.- Arquitectura de JavaFX</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id5">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta5_66" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="Programador_01.jpg" alt="Programador ante monitor." title="Programando." style="float: right;" width="200" height="112" /></div>
+<div class="elemento_centrado credenciales">Ministerio de Educaci&oacute;n.</div>
+<div class="elemento_centrado credenciales">Uso educativo-nc. Elaboraci&oacute;n propia.</div>
+</div>
+<p><strong>Ricardo </strong>est&aacute; un poco abrumado por la cantidad de componentes y clases que posee <span lang="en">JavaFX</span> para desarrollar interfaces gr&aacute;ficos. Piensa que hay tantos, que son tantas clases, que nunca podr&aacute; aprend&eacute;rselos. <strong>Ana</strong> le dice:</p>
+<p>&mdash;<strong>Ricardo</strong>, no te preocupes, seguro que haciendo programas enseguida ubicar&aacute;s los que m&aacute;s utilices, y el resto, siempre tienes la documentaci&oacute;n de<span lang="en"> Java</span> para consultarla cuando dudes.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id6">
+<div class="iDevice emphasis0">
+<div id="ta6_73" class="block iDevice_content">
+<p>Hemos visto que la interfaz gráfica de usuario es la parte del programa que permite al usuario interaccionar con él. Pero, ¿cómo la podemos crear en Java?</p>
+<p>Al principio, el primer sistema de Java para mostrar interfaces de usuario basadas en ventanas en Java. De ahí surgió <span lang="en">Swing</span>, que triunfó rápidamente y a partir de Java <acronym title="Second Edition" lang="en">SE</acronym> 7 <span lang="en">Update</span> 6<strong>, Oracle JavaFX </strong>es la tecnología indicada para desarrollar aplicaciones. Desde entonces, JavaFX<strong> formó parte del <acronym title="Java Development Kit" lang="en">JDK</acronym> </strong>para facilitar el desarrollo de aplicaciones de interfaz de usuario y <strong>proporciona un rico conjunto de <acronym title="Application Programming Interface" lang="en">API</acronym> para desarrollo de gráficos y contenidos multimedia. </strong>Oracle anunció que JavaFX sustituiría a <span lang="en">Swing</span>. Aunque Swing todavía era compatible con Java 8 y será compatible con un futuro cercano, <span lang="en">Swing</span> estará obsoleto en poco tiempo.<strong><br /></strong></p>
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a href="jfxar_dt_001_arch-diag.png" target="_blank"><img src="jfxar_dt_001_arch-diag_mini.png" alt="Esquema en tonos pasteles de los componentes de la arquitectura de JavaFX." title="Arquitectura de JavaFX." class="imagen_ampliable" style="float: right;" width="199" height="64" /></a></div>
+<div class="elemento_centrado credenciales">© (cita).<a title="cita. Oracle" href="http://docs.oracle.com/javafx/2/architecture/jfxpub-architecture.htm" target="_blank"> Oracle</a></div>
+</div>
+<p>En el esquema podemos ver la arquitectura de JavaFX. Los elementos principales son:</p>
+<ul class="lista_verificacion">
+<li><strong><span lang="en">Prism</span>. </strong>Debajo de las <acronym title="interfaz de programación de aplicaciones">API</acronym> públicas de JavaFX se encuentra el motor que ejecuta el código JavaFX, es un motor gráfico de alto rendimiento para gráficos <abbr title="Dos dimensiones">2D</abbr> y <abbr title="Tres dimensiones.">3D</abbr>.<strong><br /></strong></li>
+<li><strong><span lang="en">Glass windowing toolkit</span></strong>, es el <span id="result_box" lang="es">nuevo sistema de ventanas, que constituye un<span id="result_box" lang="es">a capa que conecta JavaFX al sistema operativo nativo. Proporciona servicios nativos del sistema operativo, como la administración de ventanas, eventos, temporizadores, <abbr title="etcétera.">etc</abbr>.</span></span><strong><br /></strong></li>
+<li><strong><span lang="en">Media engine</span></strong>, <span id="result_box" lang="es"><span>proporciona herramientas para crear aplicaciones multimedia que permiten la reproducción de medios en la ventana del escritorio o dentro de una página web en plataformas compatibles.</span></span></li>
+<li><strong><span lang="en">Web engine</span></strong>, <span id="result_box" lang="es"><span>es un motor de navegador web que admite <acronym title="HyperText Markup Language 5" lang="en">HTML5</acronym>, <acronym title="Cascading Style Sheets" lang="en">CSS</acronym>, JavaScript, <acronym title="Modelo en Objetos para la Representación de Documentos">DOM</acronym> y <acronym title="Gráficos vectoriales escalables">SVG</acronym>.</span></span></li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id93">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-93_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion93_60" class="block question iDevice_content">
+<p><strong>Se&ntilde;ala la opci&oacute;n correcta acerca de las interfaces gr&aacute;ficas de usuario:</strong></p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i93_63" class="sr-av"><a href="#answer-93_63">Opción 1</a></label><input type="radio" name="option93_60" id="i93_63" class="exe-radio-option exe-radio-option-0-4-93_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-93_63"><div id="taans93_63" class="block iDevice_content">
+<p>Son sin&oacute;nimos de ficheros de texto.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i93_76" class="sr-av"><a href="#answer-93_76">Opción 2</a></label><input type="radio" name="option93_60" id="i93_76" class="exe-radio-option exe-radio-option-1-4-93_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-93_76"><div id="taans93_76" class="block iDevice_content">
+<p>Las ventanas de una aplicaci&oacute;n no ser&iacute;an un ejemplo de elemento de interfaz gr&aacute;fica de usuario.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i93_79" class="sr-av"><a href="#answer-93_79">Opción 3</a></label><input type="radio" name="option93_60" id="i93_79" class="exe-radio-option exe-radio-option-2-4-93_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-93_79"><div id="taans93_79" class="block iDevice_content">
+<p>Surgen con la idea de facilitar la interactuaci&oacute;n del usuario con la m&aacute;quina.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i93_82" class="sr-av"><a href="#answer-93_82">Opción 4</a></label><input type="radio" name="option93_60" id="i93_82" class="exe-radio-option exe-radio-option-3-4-93_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-93_82"><div id="taans93_82" class="block iDevice_content">
+<p>Ninguna es correcta.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b93_60" class="feedback js-hidden">
+<div id="taf93_63" class=" iDevice_content">
+<p>&iexcl;No! Esos dos conceptos no tienen nada ver.</p>
+</div>
+</section>
+<section id="sa1b93_60" class="feedback js-hidden">
+<div id="taf93_76" class=" iDevice_content">
+<p>&iexcl;Incorrecto! Las ventanas s&iacute; son un ejemplo de interfaz gr&aacute;fica.</p>
+</div>
+</section>
+<section id="sa2b93_60" class="feedback js-hidden">
+<div id="taf93_79" class=" iDevice_content">
+<p>&iexcl;Exacto! Se pretend&iacute;a con ellas que cada vez m&aacute;s gente usara las computadoras.</p>
+</div>
+</section>
+<section id="sa3b93_60" class="feedback js-hidden">
+<div id="taf93_82" class=" iDevice_content">
+<p>&iexcl;No es correcto! Hay una correcta.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-93_63">Incorrecto</a><span> (<a href="#sa0b93_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-93_76">Incorrecto</a><span> (<a href="#sa1b93_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-93_79">Opción correcta</a><span> (<a href="#sa2b93_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-93_82">Incorrecto</a><span> (<a href="#sa3b93_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_estructura_de_una_aplicacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

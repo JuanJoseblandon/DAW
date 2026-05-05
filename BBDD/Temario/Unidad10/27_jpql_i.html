@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.7.- JPQL (I) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-109"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Gestión de bases de datos: relacionales y orientadas a objetos. Persistencia de objetos</a></li>
+   <li><a href="1_bases_de_datos_relacionales.html" class="daddy">1.- Bases de datos relacionales</a>
+   <ul class="other-section">
+      <li><a href="11_el_desfase_objetorelacional.html" class="no-ch">1.1.- El desfase objeto-relacional</a></li>
+      <li><a href="12_jdbc.html" class="no-ch">1.2.- JDBC</a></li>
+      <li><a href="13__conectores_o_drivers.html" class="no-ch">1.3.-  Conectores o Drivers</a></li>
+      <li><a href="14_instalacin_de_la_base_de_datos.html" class="no-ch">1.4.- Instalación de la base de datos</a></li>
+      <li><a href="15_creacin_de_las_tablas_en_una_base_de_datos.html" class="daddy">1.5.- Creación de las tablas en una base de datos</a>
+      <ul class="other-section">
+         <li><a href="151_lenguaje_sql_i.html" class="no-ch">1.5.1.- Lenguaje SQL (I)</a></li>
+         <li><a href="152_lenguaje_sql_ii.html" class="no-ch">1.5.2.- Lenguaje SQL (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="16_establecimiento_de_conexiones.html" class="daddy">1.6.- Establecimiento de conexiones</a>
+      <ul class="other-section">
+         <li><a href="161_configurar_un_conector_jdbc_en_un_proyecto_netbeans.html" class="no-ch">1.6.1.- Configurar un conector JDBC en un proyecto NetBeans</a></li>
+         <li><a href="162_registrar_el_conector_jdbc.html" class="no-ch">1.6.2.- Registrar el conector JDBC</a></li>
+      </ul>
+      </li>
+      <li><a href="17_ejecucin_de_consultas_sobre_la_base_de_datos.html" class="daddy">1.7.- Ejecución de consultas sobre la base de datos</a>
+      <ul class="other-section">
+         <li><a href="171_adicin_de_informacin.html" class="no-ch">1.7.1.- Adición de información</a></li>
+         <li><a href="172_recuperacin_de_informacin_i.html" class="daddy">1.7.2.- Recuperación de información (I)</a>
+         <ul class="other-section">
+            <li><a href="1712_recuperacin_de_informacin_ii.html" class="no-ch">1.7.1.2.- Recuperación de información (II)</a></li>
+         </ul>
+         </li>
+         <li><a href="173_actualizacin_de_informacin.html" class="no-ch">1.7.3.- Actualización de información</a></li>
+         <li><a href="174_borrado_de_informacin.html" class="no-ch">1.7.4.- Borrado de información</a></li>
+         <li><a href="175_cierre_de_conexiones.html" class="no-ch">1.7.5.- Cierre de conexiones</a></li>
+         <li><a href="176_excepciones_en_jdbc.html" class="no-ch">1.7.6.- Excepciones en JDBC</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_persistencia_de_objetos.html" class="current-page-parent daddy">2.- Persistencia de objetos</a>
+   <ul>
+      <li><a href="21_qu_son_las_bases_de_datos_orientadas_a_objetos.html" class="no-ch">2.1.- ¿Qué son las bases de datos orientadas a objetos?</a></li>
+      <li><a href="22_qu_es_el_mapeado_de_objetos.html" class="no-ch">2.2.- ¿Qué es el mapeado de objetos?</a></li>
+      <li><a href="23_cmo_empiezo_a_usar_jpa.html" class="no-ch">2.3.- ¿Cómo empiezo a usar JPA?</a></li>
+      <li><a href="24_unidades_de_persistencia_i.html" class="daddy">2.4.- Unidades de persistencia (I)</a>
+      <ul class="other-section">
+         <li><a href="241_unidades_de_persistencia_ii.html" class="no-ch">2.4.1.- Unidades de persistencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="25_modelo_de_datos_en_jpa.html" class="daddy">2.5.- Modelo de datos en JPA</a>
+      <ul class="other-section">
+         <li><a href="251_entidades.html" class="no-ch">2.5.1.- Entidades</a></li>
+         <li><a href="252_atributos.html" class="no-ch">2.5.2.- Atributos</a></li>
+         <li><a href="253_relaciones_entre_entidades.html" class="no-ch">2.5.3.- Relaciones entre entidades</a></li>
+         <li><a href="254_relaciones_uno_a_uno.html" class="no-ch">2.5.4.- Relaciones uno a uno</a></li>
+         <li><a href="255_relaciones_uno_a_muchos.html" class="no-ch">2.5.5.- Relaciones uno a muchos</a></li>
+      </ul>
+      </li>
+      <li><a href="26_operaciones_crud_con_jpa.html" class="daddy">2.6.- Operaciones CRUD con JPA</a>
+      <ul class="other-section">
+         <li><a href="261_persistir_y_leer.html" class="no-ch">2.6.1.- Persistir y leer</a></li>
+         <li><a href="262__actualizar_y_borrar_instancias.html" class="no-ch">2.6.2.-  Actualizar y borrar instancias</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="27_jpql_i.html" class="active daddy">2.7.- JPQL (I)</a>
+      <ul>
+         <li><a href="271_jpql_ii.html" class="no-ch">2.7.1.- JPQL (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="262__actualizar_y_borrar_instancias.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="271_jpql_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.7.- JPQL (I)</h1></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id172">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta172_147" class="block iDevice_content">
+<figure class="exe-figure exe-image float-left license-CC-BY-SA" style="width: 250px;"><img src="job-interview-3410427_640.jpg" alt="Imagen que muestra una persona entrevistándose con Graciela." title="Entrevista con Graciela" width="250" height="166" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/entrevista-de-trabajo-entrevista-3410427/" target="_blank" class="author" title="Acceder a la imagen  &quot;Entrevista con Graciela&quot;, de &quot;styles66&quot;, en Pixabay. (Se abre en una nueva ventana)">styles66 </a> <span class="sep">(</span><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Licencia Pixabay</a><span class="sep">)</span></figcaption></figure>
+<p><strong>Juan</strong> y <strong>María</strong> acaban de tener una entrevista con <strong>Graciela</strong>, la asesora de la empresa cliente. Aunque ambos estaban un poco nerviosos, finalmente la entrevista no ha ido nada mal.</p>
+<p><strong>Graciela</strong> les ha resultado muy agradable y la entrevista ha sido muy enriquecedora. <strong>Graciela</strong> se ha quedado sorprendida por su capacidad de anticipación, y les ha dicho que anticiparse a los problemas es un factor clave para el éxito de cualquier proyecto.</p>
+<p>Durante la entrevista han hablando, entre otras cosas, de la tecnología que tenían pensado usar para desarrollar el proyecto. Resulta que <strong>Graciela</strong> ya había trabajado con <acronym title="Java Persistence API" lang="en">JPA</acronym> y mencionó varias veces <acronym title="Java Persistence Query Language" lang="en">JPQL</acronym>. <strong>Juan</strong> y <strong>María</strong> realmente no sabían de qué estaba hablando y no querían preguntar para no dar la impresión de que tenían poca experiencia.</p>
+<p>En cuanto han salido de la entrevista, ambos se han puesto a buscar como locos que era eso de <acronym title="Java Persistence Query Language" lang="en">JPQL</acronym>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id101">
+<div class="iDevice emphasis0">
+<div id="ta101_154" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="SELECT.jpg" width="200" height="129" alt="Ilustración de una mano seleccionando una figura rectangular de entre un montón que aparecen juntas." title="SELECT" style="float: left;" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/selecci%C3%B3n-mano-mostrar-seleccione-68953/" target="_blank" class="author" title="Acceder a la imagen  &quot;SELECT&quot;, de &quot;geralt&quot;, en Pixabay. (Se abre en una nueva ventana)">geralt</a> <span class="sep">(</span><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Licencia Pixabay</a><span class="sep">)</span></div>
+</div>
+<p>¿Qué piensas? ¿Crees que con las operaciones vistas en el apartado anterior es suficiente?</p>
+<p>Me temo que no. Hay situaciones donde se necesita operar con la información del almacén de datos de forma un poco más compleja. Para ese tipo de situaciones <acronym title="Java Persistence API" lang="en">JPA</acronym> provee de un lenguaje de consulta llamado <acronym title="Java Persistence Query Language" lang="en">JPQL</acronym> de características,  grosso modo, parecidas a <acronym title="Structured Query Language" lang="en">SQL</acronym>.</p>
+<p>La principal diferencia entre <acronym title="Java Persistence Query Language" lang="en">JPQL</acronym> y <acronym title="Structured Query Language" lang="en">SQL</acronym> es que en <acronym title="Java Persistence Query Language" lang="en">JPQL</acronym> usaremos el nombre de las entidades y los atributos de las mismas, en lugar del nombre de las tablas y columnas.</p>
+<p>Imagina que necesitas obtener todos los productos con un precio superior a 15<abbr title="euro">€</abbr>. Para ello podrías usar una sentencia <acronym title="Java Persistence Query Language" lang="en">JPQL</acronym> como la siguiente:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>SELECT p FROM Producto p WHERE p.precio&gt;=15</code></pre>
+</div>
+</div>
+<p>En la sentencia <acronym title="Java Persistence Query Language" lang="en">JPQL</acronym> anterior, <code>Producto </code>hace referencia a la entidad <code>Producto</code> y <code>p</code> es similar a una variable <span lang="en">Java</span>. Las instancias de entidad almacenadas son filtradas por la sección <code>WHERE</code>, donde como puedes ver, se usa el mismo nombre de atributo que tiene la entidad (<code>precio</code>). Así, al poner <code>p.precio</code> estamos haciendo referencia al valor que tiene dicho atributo para cada una de las instancias de <code>Producto</code> almacenadas.</p>
+<p>Por tanto, las sentencias <code>SELECT </code>sirven para acceder a una porción de las instancias almacenadas. Aquí no vamos a profundizar en su sintaxis, al igual que tampoco lo hicimos para <acronym title="Structured Query Language" lang="en">SQL</acronym>. Solo vamos a exponer unos ejemplos:</p>
+<table class="tabla" style="width: 100%;" summary="Tabla que muestra varios ejemplos comunes de consultas JPQL tipo SELECT, indicando en la primera columna lo que se desea hacer y en la segunda columna el ejemplo de consulta a realizar.." java="" persistence="" query="" language="" lang="en"><caption>Ejemplos de consultas <acronym title="Java Persistence Query Language" lang="en">JPQL</acronym> tipo <code>SELECT</code> típicas.</caption>
+<thead>
+<tr><th scope="col">Descripción de la consulta que se desea hacer.</th><th scope="col">Ejemplo de la consulta a realizar.</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<p><strong>Obtener todas las instancias de una entidad.</strong></p>
+<p></p>
+</td>
+<td>
+<p>A diferencia del ejemplo anterior, si queremos obtener todas las instancias de una entidad, simplemente quitamos la sección <code>WHERE</code>:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>SELECT p FROM Producto p</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Obtener las instancias de una entidad que cumplan dos condiciones.</strong></p>
+<p><br /><code></code></p>
+</td>
+<td>
+<p></p>
+<p>En este tipo de situaciones, uniremos las condiciones de la sección <code>WHERE</code> con <code>AND</code>, por ejemplo, a continuación se seleccionan todos los productos con un precio entre 15 y 30 euros: <code><br /></code></p>
+<div class="highlighted-code language-sql">
+<pre><code>SELECT p FROM Producto p WHERE   p.precio&gt;=15 </code><code>AND </code><code>p.precio&lt;=30</code></pre>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Obtener las instancias de una entidad que cumpla al menos una condición de varias condiciones dadas.</strong></p>
+<p><br /><code></code></p>
+</td>
+<td>
+<p>En este tipo de situaciones, uniremos las condiciones de la sección <code>WHERE</code> con <code>OR</code>, por ejemplo, en la siguiente consulta se seleccionan todos los productos cuyo precio<strong> no</strong> está entre 15 y 30 euros:<code></code></p>
+<div class="highlighted-code language-sql">
+<pre><code>SELECT p FROM Producto p WHERE </code><code>p.precio&lt;15 </code><code>OR </code><code>p.precio&gt;30</code></pre>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Obtener las instancias de una entidad que no cumpla una condición concreta<br /></strong></p>
+<p></p>
+</td>
+<td>
+<p></p>
+<p>En este tipo de situaciones, usaremos <code>NOT</code> en la sección <code>WHERE</code>. En el siguiente ejemplo se seleccionan aquellos productos que <strong>no</strong> tienen un precio inferior o igual a 15 euros, o lo que es lo mismo, que tienen un precio superior a 15 euros:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>SELECT p FROM Producto p WHERE NOT (p.precio&lt;=15)</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>De forma equivalente a las sentencias anteriores, también se pueden hacer consultas de eliminación (<code>DELETE</code>) y actualización de entidades (<code>UPDATE</code>), de forma muy similar a <acronym title="Structured Query Language" lang="en">SQL</acronym>. Veamos algunos ejemplos:</p>
+<table class="tabla" summary="Tabla que muestra varios ejemplos de consultas JPQL tipo DELETE y UPDATE. En la primera columna se muestra la descripción de la consulta que se desea hacer, y en la segunda columna la consulta a realizar para obtener el resultado deseado." java="" persistence="" query="" language="" lang="en" style="width: 100%;"><caption>Ejemplos de consultas <acronym title="Java Persistence Query Language" lang="en">JPQL</acronym> tipo <code>DELETE</code> y <code>UPDATE</code> típicas.</caption>
+<tbody>
+<tr><th>Descripción de la consulta que se desea hacer.</th><th>Ejemplo de la consulta a realizar.</th></tr>
+<tr>
+<td>
+<p></p>
+<p><strong>Actualizar un atributo de una entidad concreta</strong></p>
+<p></p>
+</td>
+<td>
+<p>Para este tipo de situaciones recurrimos a consultas tipo <code>UPDATE</code>. En la sección <code>WHERE</code> indicaremos cuál es la entidad a modificar, especificando la clave primaria correspondiente, y en la sección <code>SET</code> indicamos los atributos a modificar:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>UPDATE Producto p SET p.precio=34 WHERE p.id=16</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Actualizar más de un atributo de una entidad concreta</strong></p>
+</td>
+<td>
+<p>Para este tipo de situaciones recurrimos también a consultas tipo <code>UPDATE</code>, pero en la sección <code>SET</code>, separados por comas, indicamos todos los atributos que deseamos modificar:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>UPDATE Producto p SET p.precio=34, p.barCode='2212988389291' WHERE p.id=16</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Actualizar un atributo con una fórmula</strong></p>
+</td>
+<td>
+<p>A la hora de actualizar un atributo es posible usar una fórmula matemática simple (también se pueden usar en la sección <code>WHERE</code>). En el siguiente ejemplo se incrementan todos los productos un 15% de precio:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>UPDATE Producto p SET p.precio=p.precio*1.15</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Borrar una entidad concreta</strong></p>
+</td>
+<td>
+<p>Para eliminar una entidad concreta, aunque existen otros procedimientos, también podemos recurrir a las consultas tipo <code>DELETE</code>, especificando el valor de la clave primaria correspondiente:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>DELETE FROM Producto p WHERE p.id=15</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>Y ya solo nos queda revisar un concepto más, las <strong><span class="destacado_inline">consultas paramétricas</span></strong>. La realidad es que, salvo raras excepciones, las consultas son siempre paramétricas. Es decir, <strong>no tienen unos valores fijos para los datos, sino que depende de la situación los datos usados en la consulta van cambiando</strong>. En el siguiente ejemplo es una consulta paramétrica de actualización:</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>UPDATE Producto p SET p.precio=:precio WHERE p.id=:id</code></pre>
+</div>
+</div>
+<p>En la consulta anterior <code>":id"</code> sería el <code>id</code> del producto a modificar y <code>":precio"</code> sería el nuevo precio del producto. Antes de ejecutar la consulta, los parámetros serán reemplazados de forma segura, evitando que la consulta tenga una sintaxis errónea o que pueda provocar pérdida o modificación de información malintencionada. Esto se verá en el siguiente apartado.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id103">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta103_128" class="block iDevice_content">
+<p>En la siguiente página encontrarás un poco más de información sobre <acronym title="Java Persistence Query Language" lang="en">JPQL</acronym>, por si quieres ampliar tus conocimientos en el área:</p>
+<p style="text-align: center;"><a href="JPA_articulo.pdf" title="Acceder a artículo sobre JPQL. Se abre en una nueva ventana [pdf - 375472 B]" target="_blank" class="pdf">Artículo sobre <acronym title="Java Persistence Query Language" lang="en">JPQL</acronym>.</a><span class="exe-link-data file-size"> (pdf - 375472 <abbr title="Bytes" lang="en">B</abbr>)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="262__actualizar_y_borrar_instancias.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="271_jpql_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

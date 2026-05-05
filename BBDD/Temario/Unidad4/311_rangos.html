@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1.1.- Rangos. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-81"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_expresiones_regulares.html" class="current-page-parent daddy">3.- Expresiones regulares.</a>
+   <ul>
+      <li class="current-page-parent"><a href="31_construccin_de_expresiones_regulares.html" class="current-page-parent daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul>
+         <li id="active"><a href="311_rangos.html" class="active no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="31_construccin_de_expresiones_regulares.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="312_cuantificadores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.1.1.- Rangos.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id335">
+<div class="iDevice emphasis0">
+<div id="ta335_154" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 160px;"><img src="ruler-g11def22f5_640.png" alt="Regla" title="Regla" style="float: right;" width="160" height="320" /><figcaption class="figcaption"><a href="https://pixabay.com/es/vectors/regla-la-medida-medici%c3%b3n-908891/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de UnboxScience en Pixabay (se abre en una nueva ventana).">UnboxScience</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Como acabamos de ver, una de las principales ventajas que nos ofrece la posibilidad de expresar un patrón mediante una expresión regular es la posibilidad de indicar un <strong>posible conjunto de caracteres</strong> para una o varias posiciones en una cadena.</p>
+<p>Ahora bien, una de las dificultades que puede que te hayas encontrado es que si quieres escribir un conjunto que represente todas las letras del alfabeto, las tendrías que escribir una a una. Por ejemplo:</p>
+<ul>
+<li class="lista_verificacion">para referirte a las letras mayúsculas, tendrías que escribir <strong><span style="font-size: medium;">"<code>[abcdefghijklmnopqrstuvwxyz]</code>"</span></strong>;</li>
+<li class="lista_verificacion">para referirte a las letras mayúsculas, tendrías que escribir <span style="font-size: medium;"><strong><span style="font-size: medium;">"<code>[ABCDEFGHIKLMNOPQRSTUVWXYZ]</code>"</span></strong></span>;</li>
+<li class="lista_verificacion">para referirte a las letras mayúsculas y también a las minúsculas, tendrías que escribir el conjunto siguiente:
+<ul>
+<li class="lista_verificacion"><span style="font-size: medium;"><span style="font-size: medium;"><strong><span style="font-size: medium;">"<code>[abcdefghijklmnopqrstuvwxyzABCDEFGHIKLMNOPQRSTUVWXYZ]</code>"</span></strong></span></span>;</li>
+</ul>
+</li>
+<li class="lista_verificacion">y así sucesivamente, si quieres ir incluyendo más caracteres en el conjunto.</li>
+</ul>
+<p>Para intentar simplificar estas expresiones tan largas dentro de los conjuntos, disponemos de los <strong>rangos de caracteres</strong>.</p>
+<p>Mediante el empleo del <strong>guion</strong> dentro de los corchetes podemos indicar que el patrón admite cualquier carácter entre el símbolo inicial y el final. Es posible indicar varios posibles rangos dentro de un conjunto e incluso añadir algunos caracteres más. Aquí tienes varios ejemplos de especificación de rangos dentro de conjuntos:</p>
+<ul class="lista_verificacion">
+<li><strong><span style="font-size: medium;">"<code>[a-z]</code>"</span></strong> indica que el conjunto representa a todas las letras minúsculas de alfabeto latino (sin incluir la eñe, que no está entre los caracteres estándar). Sería equivalente a escribir <strong><span style="font-size: medium;">"<code>[abcdefghijklmnopqrstuvwxyz]</code>"</span></strong>;</li>
+<li><strong><span style="font-size: medium;">"<code>[A-Z]</code>"</span></strong><span style="font-size: medium;"> hace referencia a todas las letras <span style="font-size: medium;">mayúsculas</span>. Equivalente a <strong><span style="font-size: medium;">"<code>[ABCDEFGHIKLMNOPQRSTUVWXYZ]</code>"</span></strong>;<br /></span></li>
+<li><strong><span style="font-size: medium;">"<code>[a-zA-Z]</code>" </span></strong><span style="font-size: medium;">se refiere al conjunto de todas las letras minúsculas y mayúsculas. En este caso hemos unido dos rangos y sería equivalente a <span style="font-size: medium;"><strong><span style="font-size: medium;">"<code>[abcdefghijklmnopqrstuvwxyzABCDEFGHIKLMNOPQRSTUVWXYZ]</code>"</span></strong>;</span></span></li>
+<li><strong><span style="font-size: medium;">"<code>[A-Fu-z]"</code></span></strong> hace referencia al conjunto de todas las letras mayúsculas entre '<strong><span style="font-size: medium;"><code>A</code></span></strong>' y '<strong><span style="font-size: medium;"><code>F</code></span></strong>' y las minúsculas entre '<strong><span style="font-size: medium;"><code>u</code></span></strong> y '<strong><span style="font-size: medium;"><code>z</code></span></strong>'. <span style="font-size: medium;">Equivalente a <strong><span style="font-size: medium;">"<code>[ABCDEFuvwxyz]</code>"</span></strong>;</span></li>
+<li><strong><span style="font-size: medium;">"<code>[0-9]</code>"</span></strong> indica el conjunto de los diez posibles caracteres numéricos del sistema decimal. De este modo podemos indicar que se permite la presencia de un dígito numérico entre <strong><span style="font-size: medium;"><code>0</code></span></strong> y <strong><span style="font-size: medium;"><code>9</code></span></strong>, cualquiera de ellos, pero solo uno. Sería equivalente a haber escrito <strong><span style="font-size: medium;">"<code>[0123456789]</code>"</span></strong>;</li>
+<li><strong><span style="font-size: medium;">"<code>[a-zA-Z0-9_]</code>"</span></strong> hace referencia a cualquier letra mayúscula o minúscula, o dígito, o el carácter '_' (<em><span lang="en">underscore</span> </em>o "guion bajo" o "subrayado"). En este caso se han incluido tres rangos y un carácter. Sería equivalente a haber escrito <span style="font-size: medium;"><span style="font-size: medium;"><strong><span style="font-size: medium;">"<code>[abcdefghijklmnopqrstuvwxyzABCDEFGHIKLMNOPQRSTUVWXYZ0123456789_]</code>"</span></strong></span></span>.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ClozefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id336">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta336_122" class="block instructions iDevice_content">
+<p><strong>Dadas las siguientes expresiones regulares con rangos:<br /></strong></p>
+<table class="tabla" summary="Tabla para relacionar los tipos de datos primitivos de la primera columna con las características que los define, que figura en la tercera columna."><caption>Expresiones regulares</caption>
+<thead>
+<tr><th scope="col">Número</th><th scope="col">Expresión Regular</th><th scope="col">Número</th><th scope="col">Expresión Regular</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="texto_centrado">1</td>
+<td>"<code>[0-9A-F]</code>"</td>
+<td style="text-align: center;">5</td>
+<td>"<code>[0-1]<code>[01]</code></code>"</td>
+</tr>
+<tr>
+<td class="texto_centrado">2</td>
+<td>"<code>[0-9A-Fa-f]</code>"</td>
+<td style="text-align: center;">6</td>
+<td>"<code>[a-cx-zv][1]</code>"</td>
+</tr>
+<tr>
+<td class="texto_centrado">3</td>
+<td>"<code>[0-9]X[0-9]</code>"</td>
+<td style="text-align: center;">7</td>
+<td>"<code>2[u-w]1</code>"</td>
+</tr>
+<tr>
+<td class="texto_centrado">4</td>
+<td>"<code>[0-9][0-9]</code>"</td>
+<td style="text-align: center;">8</td>
+<td>"<code>[NRJQKA][1-3]</code>"</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p></p>
+<p><strong>relaciónalas con los tipos de textos o cadenas con las que harían "matching" o "acoplamiento":</strong></p>
+</section>
+<section class="activity" id="activity-336_123"><form name="cloze-form-336_123" action="#" class="activity-form cloze-activity-form"><div id="cloze336_123"><input type="hidden" name="clozeFlag336_123.strictMarking" id="clozeFlag336_123.strictMarking" value="false"/>
+<input type="hidden" name="clozeFlag336_123.checkCaps" id="clozeFlag336_123.checkCaps" value="false"/>
+<input type="hidden" name="clozeFlag336_123.instantMarking" id="clozeFlag336_123.instantMarking" value="false"/>
+<input type="hidden" name="clozeVar336_123.feedbackId" id="clozeVar336_123.feedbackId" value="ta336_124"/>
+<table class="tabla" summary="Tabla para relacionar los tipos de datos primitivos de la primera columna con las características que los define, que figura en la tercera columna."><caption>Textos</caption>
+<thead>
+<tr><th scope="col">Número de expresión regular</th><th scope="col">Cadenas que encajan con la expresión regular (hacen "matching")</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="texto_centrado">  <label for="clozeBlank336_123.0" class="sr-av">Rellenar huecos (1):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank336_123.0" style="width:1ch" /><span style="display:none" id="clozeAnswer336_123.0">JXUwMDZk
+</span>  </td>
+<td>Las cadenas "<code>00</code>", "<code>01</code>", "<code>10</code>", "<code>11</code>". Es decir, cualquier cadena de longitud dos formada por combinaciones de los caracteres '<code>0</code>' y '<code>1</code>'.</td>
+</tr>
+<tr>
+<td class="texto_centrado">  <label for="clozeBlank336_123.1" class="sr-av">Rellenar huecos (2):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank336_123.1" style="width:1ch" /><span style="display:none" id="clozeAnswer336_123.1">JXUwMDZj
+</span>  </td>
+<td>Las cadenas "<code>00</code>", "<code>01</code>", "<code>02</code>", "<code>03</code>", ...,  "<code>09</code>", "<code>10</code>", "<code>11</code>", "<code>12</code>", ..., "<code>98</code>", "<code>99</code>". Es decir, cualquier cadena de longitud dos formada por los dígitos numéricos (desde 00 hasta 99).</td>
+</tr>
+<tr>
+<td class="texto_centrado">  <label for="clozeBlank336_123.2" class="sr-av">Rellenar huecos (3):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank336_123.2" style="width:1ch" /><span style="display:none" id="clozeAnswer336_123.2">JXUwMDY5
+</span>  </td>
+<td>Las cadenas "<code>0</code>", "<code>1</code>", "<code>2</code>", "<code>3</code>", ..., "<code>9</code>", "<code>A</code>", "<code>B</code>", ... "<code>F</code>". Es decir, un dígito hexadecimal: cualquier cadena de longitud uno formada por los caracteres que representan los dígitos numéricos y las letras de la 'A' a la 'F' (en mayúsculas).</td>
+</tr>
+<tr>
+<td class="texto_centrado">  <label for="clozeBlank336_123.3" class="sr-av">Rellenar huecos (4):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank336_123.3" style="width:1ch" /><span style="display:none" id="clozeAnswer336_123.3">JXUwMDYw
+</span>  </td>
+<td>
+<p>Las cadenas "<code>N1</code>", "<code>R1</code>", "<code>J1</code>", "<code>Q1</code>", "<code>K1</code>", "<code>A1</code>", "<code>N2</code>", "<code>R2</code>", . . ., "<code>A3</code>". Es decir, cualquier cadena de longitud dos, donde el primer carácter es una letra del conjunto <code>[NRJQKA]</code> y el segundo es el carácter '<code>1</code>', o el '<code>2</code>', o el '<code>3</code>'.</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado">  <label for="clozeBlank336_123.4" class="sr-av">Rellenar huecos (5):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank336_123.4" style="width:1ch" /><span style="display:none" id="clozeAnswer336_123.4">JXUwMDZm
+</span>  </td>
+<td>
+<p></p>
+<p>Las cadenas "<code>2u1</code>", "<code>2v1</code>", "<code>2w1</code>". Es decir, cadenas de longitud tres formada por los caracteres '<code>2</code>', el carácter '<code>u</code>','<code>v</code>' o '<code>w</code>' y el carácter '<code>1</code>'.</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado">  <label for="clozeBlank336_123.5" class="sr-av">Rellenar huecos (6):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank336_123.5" style="width:1ch" /><span style="display:none" id="clozeAnswer336_123.5">JXUwMDZl
+</span>  </td>
+<td>Las cadenas "<code>a1</code>", "<code>b1</code>", "<code>c1</code>", "<code>x1</code>", "<code>y1</code>", "<code>z1</code>", "<code>v1</code>". Es decir, cualquier cadena de longitud dos, donde el primer carácter es una letra del conjunto <code>[abcxyzv]</code> y el segundo es el carácter '<code>1</code>'.</td>
+</tr>
+<tr>
+<td class="texto_centrado">  <label for="clozeBlank336_123.6" class="sr-av">Rellenar huecos (7):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank336_123.6" style="width:1ch" /><span style="display:none" id="clozeAnswer336_123.6">JXUwMDZi
+</span>  </td>
+<td>Las cadenas "<code>0X0</code>", "<code>0X1</code>", "<code>0X2</code>", ...,  "<code>1X0</code>", "<code>1X2</code>", "<code>1X3</code>", "<code>12</code>", ..., "<code>9x9</code>". Es decir, cualquier cadena de longitud tres, donde el primer carácter será un dígito de 0 a 9, el segundo carácter será obligatoriamente 'X' y el tercer carácter será otro dígito de 0 a 9.</td>
+</tr>
+<tr>
+<td class="texto_centrado">  <label for="clozeBlank336_123.7" class="sr-av">Rellenar huecos (8):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank336_123.7" style="width:1ch" /><span style="display:none" id="clozeAnswer336_123.7">JXUwMDZh
+</span>  </td>
+<td>Las cadenas "<code>0</code>", "<code>1</code>", "<code>2</code>", "<code>3</code>", ..., "<code>9</code>", "<code>A</code>", "<code>B</code>", ... "<code>F</code>", "<code>a</code>", "<code>b</code>", ... "<code>f</code>". Es decir, un dígito hexadecimal: cualquier cadena de longitud uno formada por los caracteres que representan los dígitos numéricos y las letras de la 'A' a la 'F' (en mayúsculas) o de la 'a' a la 'f' (en minúsculas).</td>
+</tr>
+</tbody>
+</table><div class="block iDevice_buttons"><p><input class="button" type="submit" name="submit336_123" value="Enviar"  id="submit336_123" />
+<input type="button" name="restart336_123" value="Reiniciar" style="display:none" id="restart336_123" onclick="$exe.cloze.restart('336_123')" />
+ <input type="button" name="336_123showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton336_123" onclick="$exe.cloze.fillInputs('336_123')" />
+<span class="js-hidden js-warning">Habilitar JavaScript</span></p></div><div id="clozeScore336_123"></div></div></form></section><section id="ta336_124" class="feedback js-feedback iDevice_content" style="display:none">
+<ul>
+<li class="lista_verificacion">Fíjate que los conjuntos <code>[0-1]</code> y <code><code>[01]</code></code> representan los mismos elementos (los caracteres '<code><code>0</code></code>' y '<code><code>1</code></code>').</li>
+<li class="lista_verificacion">Observa que incluir un único elemento entre corchetes no tiene mucho sentido, pues es lo mismo que no poner corchetes. Por tanto, en lugar de tener "<code>[a-cx-z][1]</code>", se podría debería haber puesto simplemente "<code>[a-cx-z]1</code>". Hay que procurar simplificar lo máximo posible las expresiones regulares para facilitar la legibilidad del código.</li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id337">
+<div class="iDevice emphasis0">
+<div id="ta337_154" class="block iDevice_content">
+<p>Otra opción que nos permite la definición de conjuntos mediante corchetes, es la del <strong>conjunto complementario u opuesto</strong>. Es decir, podemos especificar un conjunto diciendo precisamente que queremos admitir cualquier símbolo, excepto los que indiquemos explícitamente. <span style="font-size: medium;">Eso se consigue gracias a la utilización del <strong>circunflejo '^' dentro de los corchetes</strong>. </span>El símbolo <strong><span style="font-size: medium;"><code>'^'</code></span></strong>, cuando se coloca justo detrás del corchete de apertura, significa "negación". La expresión regular admitirá cualquier símbolo diferente a los puestos entre corchetes.</p>
+<p><span style="font-size: medium;">Por ejemplo, en el caso</span><strong><span style="font-size: medium;"> "<code>[^abc]</code>"</span></strong> estaríamos especificando, cualquier símbolo diferente de <strong><span style="font-size: medium;"><code>'a'</code></span></strong>, <strong><span style="font-size: medium;"><code>'b'</code></span></strong> o <strong><span style="font-size: medium;"><code>'c'</code></span></strong>. Es decir, justo lo contrario a lo que se indicaría sin el circunflejo. En el caso de la expresión <strong><span style="font-size: medium;">"<code>[^0-9]</code>"</span></strong> haríamos referencia a cualquier símbolo, excepto los dígitos numéricos (letras mayúsculas y minúsculas, espacios, paréntesis, símbolos aritméticos, <abbr title="etcétera">etc</abbr>.). Especificar ese conjunto de manera explícita implicaría escribir cientos de caracteres. Sin embargo, al poder utilizar la negación se puede expresar de una manera muy sencilla.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ClozefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id338">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta338_122" class="block instructions iDevice_content">
+<div id="ta241_122" class="block instructions iDevice_content">
+<p><strong>Dadas las siguientes expresiones regulares con rangos:</strong></p>
+<table class="tabla" summary="Tabla para relacionar los tipos de datos primitivos de la primera columna con las características que los define, que figura en la tercera columna."><caption>Expresiones regulares</caption>
+<thead>
+<tr><th scope="col">Número</th><th scope="col">Expresión Regular</th><th scope="col">Número</th><th scope="col">Expresión Regular</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="texto_centrado">1</td>
+<td>"<code>[^0-9A-FI-Z]</code>"</td>
+<td style="text-align: center;">3</td>
+<td>"<code>x[^()<code>]x</code></code>"</td>
+</tr>
+<tr>
+<td class="texto_centrado">2</td>
+<td>"<code>[0-9]<code>[^0-9]</code><code>[0-9]</code></code>"</td>
+<td style="text-align: center;">4</td>
+<td>"<code>[^a-cx-zv]1</code>"</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p></p>
+<p><strong>relaciónalas con los tipos de textos o cadenas con las que harían "matching" o "acoplamiento":</strong></p>
+</div>
+</section>
+<section class="activity" id="activity-338_123"><form name="cloze-form-338_123" action="#" class="activity-form cloze-activity-form"><div id="cloze338_123"><input type="hidden" name="clozeFlag338_123.strictMarking" id="clozeFlag338_123.strictMarking" value="false"/>
+<input type="hidden" name="clozeFlag338_123.checkCaps" id="clozeFlag338_123.checkCaps" value="false"/>
+<input type="hidden" name="clozeFlag338_123.instantMarking" id="clozeFlag338_123.instantMarking" value="false"/>
+<input type="hidden" name="clozeVar338_123.feedbackId" id="clozeVar338_123.feedbackId" value="ta338_124"/>
+<table class="tabla" summary="Tabla para relacionar los tipos de datos primitivos de la primera columna con las características que los define, que figura en la tercera columna."><caption>Textos</caption>
+<thead>
+<tr><th scope="col">Número de expresión regular</th><th scope="col">Cadenas que encajan con la expresión regular (hacen "matching")</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="texto_centrado"> <label for="clozeBlank338_123.0" class="sr-av">Rellenar huecos (1):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank338_123.0" style="width:1ch" /><span style="display:none" id="clozeAnswer338_123.0">JXUwMDZi
+</span> </td>
+<td>Cadenas de longitud tres, donde el primer carácter sea '<code>x</code>', el segundo sea cualquiera, excepto los símbolos de abrir ('<code>(</code>') o cerrar paréntesis ('<code>)</code>'), y el tercero sea nuevamente el carácter '<code>x</code>'.</td>
+</tr>
+<tr>
+<td class="texto_centrado"> <label for="clozeBlank338_123.1" class="sr-av">Rellenar huecos (2):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank338_123.1" style="width:1ch" /><span style="display:none" id="clozeAnswer338_123.1">JXUwMDZj
+</span> </td>
+<td>Cadenas de longitud dos, donde el primer carácter sea cualquiera, excepto '<code>a</code>', '<code>b</code>', '<code>c</code>', '<code>x</code>', '<code>y</code>', '<code>z</code>', '<code>v</code>'. El segundo será obligatoriamente '<code>1</code>'.</td>
+</tr>
+<tr>
+<td class="texto_centrado"> <label for="clozeBlank338_123.2" class="sr-av">Rellenar huecos (3):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank338_123.2" style="width:1ch" /><span style="display:none" id="clozeAnswer338_123.2">JXUwMDY5
+</span> </td>
+<td>Cadenas de longitud uno que estén compuestas por un carácter que no sea ni un dígito numérico ni una letra mayúscula (salvo '<code>G</code>' y '<code>H</code>', que sí se admiten). Por ejemplo: "<code>a</code>", "<code>b</code>", "<code>z</code>", "<code>G</code>", "<code>H</code>", "<code>%</code>", "<code>(</code>", "<code>?</code>", <abbr title="etcétera">etc</abbr>.</td>
+</tr>
+<tr>
+<td class="texto_centrado"> <label for="clozeBlank338_123.3" class="sr-av">Rellenar huecos (4):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank338_123.3" style="width:1ch" /><span style="display:none" id="clozeAnswer338_123.3">JXUwMDZh
+</span> </td>
+<td>Cadenas de longitud tres, donde el primer carácter sea un dígito (caracteres de '<code>0</code>' a '<code>9</code>'), el segundo será cualquier cosa excepto un dígito numérico y el tercer sea nuevamente otro dígito.</td>
+</tr>
+</tbody>
+</table><div class="block iDevice_buttons"><p><input class="button" type="submit" name="submit338_123" value="Enviar"  id="submit338_123" />
+<input type="button" name="restart338_123" value="Reiniciar" style="display:none" id="restart338_123" onclick="$exe.cloze.restart('338_123')" />
+ <input type="button" name="338_123showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton338_123" onclick="$exe.cloze.fillInputs('338_123')" />
+<span class="js-hidden js-warning">Habilitar JavaScript</span></p></div><div id="clozeScore338_123"></div></div></form></section><section id="ta338_124" class="feedback js-feedback iDevice_content" style="display:none">
+<ul>
+<li class="lista_verificacion">Ten en cuenta que la unión de los rangos <code>A-F</code> y <code>I-Z</code> cubre todas las letras mayúsculas excepto '<code>G</code>' y '<code>H</code>'.</li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id339">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta339_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b339" class="block iDevice_content">
+<p>Imagina que deseamos elaborar un patrón que represente <strong>todas las cadenas posibles de cinco letras</strong>, donde la <strong>primera letra</strong> tiene que ser obligatoriamente en <strong>mayúscula</strong> y <strong>el resto</strong> obligatoriamente en <strong>minúscula</strong>.</p>
+<p>¿Qué expresión regular construirías para implementar ese patrón?</p>
+</section>
+<form name="feedback-form-quesFeedback0b339" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b339text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b339" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b339" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Como siempre, analizamos qué es lo que queremos que se permita para poder definir adecuadamente las distintas reglas que conformarán el patrón o expresión regular:</p>
+<ul>
+<li class="lista_verificacion">el principio de palabra debe ser una letra mayúscula (solo una): "<code>[A-Z]</code>". Gracias a los rangos hemos evitado tener que escribir todas las letras del alfabeto de manera explícita;</li>
+<li class="lista_verificacion">después el resto de la palabra, que estará formado por cuatro caracteres más. Cada uno de esos cuatro caracteres estará representado por un conjunto que contenga todas las letras minúsculas. Eso significa que tendremos que añadir "<code>[a-z]</code>" cuatro veces. En cuanto aprendamos a especificar las repeticiones mediante los <strong>operadores de cuantificación</strong>, podremos evitar tener que escribir eso cuatro veces.</li>
+</ul>
+<p>Por tanto, la expresión regular podría quedar así:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre class="  language-latex"><code class="  language-latex">"<span class="token punctuation">[</span>A-Z<span class="token punctuation">]</span><span class="token punctuation">[</span>a-z<span class="token punctuation">]</span>[a-z][a-z][a-z]"</code></pre>
+</div>
+</div>
+<p>Mediante el <strong>operador de cuantificación</strong> "<strong>llave</strong>", esa expresión podría haber quedado así:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre class="  language-latex"><code class="  language-latex">"<span class="token punctuation">[</span>A-Z<span class="token punctuation">]</span><span class="token punctuation">[</span>a-z<span class="token punctuation">]</span>{4}"</code></pre>
+</div>
+</div>
+<p>Bastante más compacta y sencilla, ¿verdad? Pues vamos a por ello en el siguiente apartado.</p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="31_construccin_de_expresiones_regulares.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="312_cuantificadores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

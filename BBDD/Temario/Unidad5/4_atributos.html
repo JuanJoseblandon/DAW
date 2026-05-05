@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.- Atributos | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="4_atributos.html" class="active daddy">4.- Atributos</a>
+   <ul>
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li><a href="5_mtodos.html" class="daddy">5.- Métodos</a>
+   <ul class="other-section">
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="33_cuerpo_de_una_clase.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="41_declaracin_de_atributos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.- Atributos</h1></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id19">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta19_66" class="block iDevice_content">
+<p><img alt="Foto de Ada mirando al frente. " class="elemento_izquierda" src="PROG06_CONT_R16_CASO_PERSONAJES_24.jpg" style="width: 140px; height: 200px; float: right;" title="Ada." height="200" width="140" /><strong>María</strong> está entusiasmada con las posibilidades que le ofrece el concepto de clase para poder crear cualquier tipo de objeto que a ella se le ocurra. Ya ha aprendido cómo declarar la cabecera de una clase en <span lang="en">Java</span> y ha estado probando con algunos de los ejemplos que le ha proporcionado <strong>Juan</strong>. Entiende más o menos cómo funcionan algunos de los modificadores de la clase, pero ha visto que el cuerpo es algo más complejo: ya no se trata de una simple línea de código como en el caso de la cabecera. Ahora tiene un conjunto de líneas de código que parecen hasta cierto punto un programa en pequeño. Puede encontrarse con declaraciones de variables, estructuras de control, realización de cálculos, <abbr title="etcétera.">etc</abbr>.</p>
+<p>Lo primero que <strong>María</strong> ha observado es que al principio suele haber algunas declaraciones de variables:</p>
+<p><span class="st">—</span>¿Estas declaraciones de variables son lo que hemos llamado atributos? <span class="st">—</span>le pregunta a <strong>Juan</strong>.</p>
+<p><span class="st">—</span>Así es <span class="st">—</span>contesta <strong>Ada</strong>, que en ese momento acaba de entrar por la puerta con <strong>Ana</strong> y con <strong>Carlos</strong>.</p>
+<p><span class="st">—</span>Ahora que estáis todos juntos, creo que ha llegado el momento  de que os explique algunas cosas acerca de los miembros de una clase. Vamos a empezar por los atributos.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id20">
+<div class="iDevice emphasis0">
+<div id="ta20_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-left license-CC-BY-NC-SA" style="width: 230px;"><a href="PROG06_CONT_R17_Atributos.png" title="Ampliar imagen &quot;Atributos de una clase&quot;. (Se abre en una nueva ventana)" target="_blank"><img src="PROG06_CONT_R17_Atributos_miniatura.png" width="200" height="156" alt="Estructura de una clase Java: detalle de los atributos, que se declaran dentro del cuerpo de la clase indicando sus modificadores, su tipo, y su nombre, terminando en punto y coma. Tantos como sean necesarios. " title="Atributos de una clase" class="imagen_ampliable" style="float: left;" /></a>
+<div class="figcaption"><span class="author">Elaboración propia.</span><a href="PROG06_CONT_R17_Atributos.png" title="Ampliar imagen &quot;Atributos de una clase&quot;. (Se abre en una nueva ventana)" target="_blank"> </a><span class="license"><span class="sep">(</span><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" title="Acceder a los términos de la licencia CC BY-NC-SA. (Se abre en una nueva ventana)">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+<p><span>Los </span><strong>atributos</strong><span> constituyen la <strong>estructura interna de los objetos de una clase</strong>. Se trata del conjunto de datos que los objetos de una determinada clase almacenan cuando son creados. Posteriormente esos datos pueden ir modificando su valor a lo largo de la vida del programa. Es decir, es como si fueran variables cuyo ámbito de existencia es el objeto dentro del cual han sido creadas. Fuera del objeto esas variables no tienen sentido y si el objeto deja de existir, esas variables también deberían desaparecer (proceso de destrucción del objeto).</span></p>
+<p><strong><span class="destacado_inline">Los atributos a veces también son conocidos con el nombre de <em>propiedades</em> (<span lang="en">properties</span>), <em>campos</em> (<span lang="en">fields</span>), <em>variables miembro</em> o <em>variables de objeto.</em></span>.</strong></p>
+<p>Los atributos pueden ser de cualquier tipo del que pueda ser cualquier otra variable en un programa en <span lang="en">Java</span>: desde <strong>tipos primitivos</strong> como <code>int</code>, <code>boolean</code> o <code>float</code> hasta <strong>tipos referenciados</strong> como <strong><span lang="en">arrays</span></strong> u otros objetos con los que ya has trabajado (<code>String</code>,<code>LocalDate</code>, <code>LocalTime</code>, <code>StringBuilder</code>, <abbr title="etcétera">etc.</abbr>).</p>
+<p><span style="font-size: 1em;">Además del tipo y del nombre, la declaración de un atributo puede contener también algunos </span><strong style="font-size: 1em;">modificadores</strong><span style="font-size: 1em;"> (por ejemplo  </span><code>public</code><span style="font-size: 1em;">, </span><code>private</code><span style="font-size: 1em;">, </span><code>protected</code><span style="font-size: 1em;"> o </span><code>static</code><span style="font-size: 1em;">). En el caso de la clase </span><code>Vehiculo</code><span style="font-size: 1em;"> con la que hemos empezado a trabajar en apartados anteriores hemos declarado algunos de sus atributos como</span><span style="font-size: 1em;">:</span></p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">public class Vehiculo {
+  double  nivelDeposito;
+  short   añoMatriculacion;
+  boolean estadoMotor;
+}</code></pre>
+</div>
+<p>Hasta este momento no nos habíamos planteado si los atributos debían incorporar también modificadores. Pues así es: también pueden llevar modificadores y de hecho lo recomendable es que los atributos lleven el atributo <code>private</code>. Por otro lado, nuestra sugerencia como norma general es <strong>evitar el uso de caracteres no estándar en los identificadores</strong> como por ejemplo la eñe (<code>añoMatriculacion</code><span></span>). Por tanto, nuestra clase <code>Vehiculo</code> debemos modificarla en este aspecto, y podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre class="  language-java"><code class="  language-java">public class Vehiculo {
+  private double  nivelDeposito;
+  private short   anioMatriculacion;
+  private boolean estadoMotor;
+}</code></pre>
+</div>
+<p>Como ya verás más adelante al estudiar el concepto de <strong>encapsulación</strong>, lo normal es declarar todos los atributos (o al menos la mayoría) como privados (<code>private</code>) de manera que si se desea acceder o manipular algún atributo se tenga que hacer a través de los métodos proporcionados por la clase.</p>
+<p class="destacado" style="text-align: center;"><strong>Lo habitual: atributos privados y métodos de acceso públicos.</strong></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id21">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta21_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b21" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b21" class="block iDevice_content">
+<p><strong>Dado que normalmente se pretende encapsular el contenido de un objeto en su interior y permitir el acceso a sus atributos únicamente a través de los métodos, los atributos de una clase suelen declararse con el modificador </strong><code>public</code><strong>.</strong></p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b21"><input type="radio" name="option0b21" id="true0b21" class="exe-radio-option exe-radio-option-0-2-0b21-truefalse" /> Verdadero</label> 
+<label for="false0b21"><input type="radio" name="option0b21" id="false0b21" class="exe-radio-option exe-radio-option-1-2-0b21-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b21" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b21-result" class="wrong">Falso</strong></p>
+<p>No es cierto.</p>
+<p>Precisamente porque se pretende ocultar los atributos al código externo a una clase, éstos no deberían ser públicos sino privados. Es decir, que si queremos que el acceso a un atributo pueda hacerse únicamente a través de los métodos de la clase, los atributos deberán ser privados (modificador <code>private</code>).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="33_cuerpo_de_una_clase.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="41_declaracin_de_atributos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

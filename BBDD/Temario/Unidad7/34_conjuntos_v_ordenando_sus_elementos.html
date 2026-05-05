@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.4.- Conjuntos (V). Ordenando sus elementos | Estructuras de datos internas (memoria) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-56"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructuras de datos internas (memoria)</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos internas (memoria)</a></li>
+   <li><a href="1_clases_y_mtodos_genricos_i.html" class="daddy">1.- Clases y métodos genéricos (I)</a>
+   <ul class="other-section">
+      <li><a href="11_clases_y_mtodos_genricos_ii.html" class="no-ch">1.1.- Clases y métodos genéricos (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="2__introduccin_a_las_colecciones.html" class="no-ch">2.-  Introducción a las colecciones</a></li>
+   <li class="current-page-parent"><a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="current-page-parent daddy">3.- Conjuntos (I).  ¿Qué son y cómo se declaran? HashSet</a>
+   <ul>
+      <li><a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="no-ch">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</a></li>
+      <li><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="no-ch">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</a></li>
+      <li><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="no-ch">3.3.- Conjuntos (IV). Combinando datos de varias colecciones</a></li>
+      <li id="active"><a href="34_conjuntos_v_ordenando_sus_elementos.html" class="active no-ch">3.4.- Conjuntos (V). Ordenando sus elementos</a></li>
+      <li><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="no-ch">3.5.- Conjuntos (VI). Ejemplos de uso.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_listas_i_definicin_y_diferencias_con_los_conjuntos.html" class="daddy">4.- Listas (I). Definición y diferencias con los conjuntos</a>
+   <ul class="other-section">
+      <li><a href="41_listas_ii_cmo_se_usan.html" class="no-ch">4.1.- Listas (II). ¿Cómo se usan?</a></li>
+      <li><a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="no-ch">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</a></li>
+      <li><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="no-ch">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</a></li>
+   </ul>
+   </li>
+   <li><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="daddy">5.- Conjuntos de pares clave/valor o diccionarios</a>
+   <ul class="other-section">
+      <li><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="no-ch">5.1.- Recorrido de los elementos de un diccionario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="daddy">6.- Iteradores (I). ¿Qué son y cómo se usan?</a>
+   <ul class="other-section">
+      <li><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="no-ch">6.1.- Iteradores (II). ¿Qué características debemos considerar?</a></li>
+   </ul>
+   </li>
+   <li><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="daddy">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</a>
+   <ul class="other-section">
+      <li><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="no-ch">7.1.- Algoritmos (II). Ordenando los elementos de la colección</a></li>
+      <li><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="no-ch">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</a></li>
+      <li><a href="73_algoritmos_iv_operaciones_agregadas.html" class="daddy">7.3. Algoritmos (IV). Operaciones agregadas</a>
+      <ul class="other-section">
+         <li><a href="731_operaciones_de_reduccin.html" class="no-ch">7.3.1. Operaciones de reducción</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I. Ejercicios resueltos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.4.- Conjuntos (V). Ordenando sus elementos</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id152">
+<div class="iDevice emphasis0">
+<div id="ta152_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a title="Ampliar imagen para &quot;Algoritmo de ordenación por selección&quot;. (Se abre en una nueva ventana)" href="PROG09_CONT_R037_ANIMACIONSORT.gif" target="_blank" rel="noopener"><img alt="Imagen animada que ilustra como un algoritmo de ordenación va ordenando los elementos a base de ir comparándolos e ir averiguando cual es el mayor y el menor. En la imagen hay 10 números, del 0 al 9, desordenados. Para ordenarlos el algoritmo recorre toda la lista una y otra vez. En la primera pasada, compara el primer elemento con cada uno de los 9 restantes, si encuentra uno menor, lo cambia de posición. En la segunda pasada, compara el segundo elemento con cada uno de los 8 que le quedan todavía por delante, si encuentra alguno menor, lo cambia de sitio. Este proceso sigue para el resto de elementos, hasta finalizar la ordenación." class="imagen_ampliable" src="PROG09_CONT_R037_ANIMACIONSORT_miniatura.gif" title="Algoritmo de ordenación por selección." width="52" height="192" /></a></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-sa" title="CC by-sa" href="http://creativecommons.org/licenses/by-sa/3.0/deed.es" target="_blank" rel="noopener"><span class="transparente">CC by-sa</span></a> <a title="Acceder a la imagen &quot;Algoritmo de ordenación por selección&quot;, de en:Joestape89, en Wikimedia Commons. (Se abre en una nueva ventana)" href="https://es.wikipedia.org/wiki/Archivo:Selection-Sort-Animation.gif" target="_blank" rel="noopener">Joestape89</a></div>
+</div>
+<p>Para que una colección de tipo <code>TreeSet</code> pueda albergar objetos instancia de un determinado tipo o clase, estos deben ser "ordenables" o "comparables". Es decir, que debe existir para la clase un criterio claro y sin ambigüedad que indique, ante dos objetos cualesquiera instancias de esa clase, si uno es mayor o que otro o si son iguales. Esto significa que ante dos objetos siempre podremos saber cuál estaría antes que el otro (o cuál es menor que el otro), o bien si son iguales. Esto es imprescindible para poder crear un <code>TreeSet</code> que contenga objetos de una clase determinada.</p>
+<p>Por ejemplo, podemos crear colecciones <code>TreeSet</code> de objetos <code>Integer</code>, <code>String</code> o <code>Double</code>, pues todas esas clases disponen de un criterio de comparación (implementan la interfaz <code>Comparable</code>). Del mismo modo sucedería si el <code>TreeSet</code> estuviera compuesto por objetos de tipo <code>LocalDate</code> o <code>LocalTime</code>, pues también disponen de criterio de comparación (también implementan la interfaz <code>Comparable</code>). Ahora bien, si los objetos que se intentan almacenar en la colección no tienen implementada la interfaz <code>Comparable</code> (no disponen de criterio de ordenación), se producirá un error de ejecución al intentar añadir un elemento en el  <code>TreeSet</code>.</p>
+<p>Todos estos casos son válidos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Set&lt;Integer&gt;    conjuntoOrdenado1 = new TreeSet&lt;&gt;();
+conjuntoOrdenado1.add(1);
+
+Set&lt;Double&gt;     conjuntoOrdenado2 = new TreeSet&lt;&gt;();
+conjuntoOrdenado2.add(5.0);
+
+Set&lt;String&gt;     conjuntoOrdenado3 = new TreeSet&lt;&gt;();
+conjuntoOrdenado3.add("Juan");
+
+Set&lt;LocalDate&gt;  conjuntoOrdenado4 = new TreeSet&lt;&gt;();
+conjuntoOrdenado4.add(LocalDate.now());
+
+Set&lt;LocalTime&gt;  conjuntoOrdenado5 = new TreeSet&lt;&gt;();
+conjuntoOrdenado5.add (LocalTime.now());</code></pre>
+</div>
+</div>
+<p>Sin embargo, este otro caso producirá un <strong>error de ejecución</strong> al intentar añadir un objeto en la colección, pues la clase <code>Rectangle</code> no es "comparable" (no implementa la interfaz <code>Comparable</code>) y por tanto no es posible colocar un objeto <code>Rectangle</code> antes que otro (no existe criterio de comparación entre objetos instancia de la clase <code>Rectangle</code>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Set&lt;Rectangle&gt;  conjuntoOrdenado6 = new TreeSet&lt;&gt;();
+conjuntoOrdenado6.add(new Rectangle(100,200)); // Esto dará lugar a un error de ejecución</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta4_152" class="block iDevice_content">
+<p>Si intentamos crear una colección de tipo <code>TreeSet&lt;T&gt;</code> y <code>T</code> es una clase cuyos objetos no son comparables (la clase no implementa la interfaz <code>Comparable</code>), cuando se intente añadir un objeto de tipo T a la colección, se producirá un error de ejecución.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id11">
+<div class="iDevice emphasis0">
+<div id="ta11_155" class="block iDevice_content">
+<p>Entonces, ¿no es posible crear un conjunto "ordenado" (colección <code>TreeSe</code>t) de objetos de tipo <code>Rectangle</code>? La primera respuesta es no, pues la clase <code>Rectangle</code> no implementa la interfaz <code>Comparable</code>. Ahora bien, podríamos hacer una segunda pregunta: ¿es posible dotar a la clase <code>Rectangle</code> de un criterio de ordenación? La clase <code>Rectangle</code> ya está escrita y no implementa la interfaz <code>Comparable</code>, pero existe un segundo mecanismo para poder proporcionar criterios de ordenación: se trata de las clases "comparadoras".</p>
+<p>Llamamos clases "comparadoras" a aquellas clases que implementan la interfaz <code>Comparator</code>. Esta interfaz obliga a codificar un método llamado <code>compare</code>, que es similar al método <code>compareTo</code>. Este mecanismo resulta útil para objetos que no tengan implementado ningún mecanismo de comparación (el caso de la clase <code>Rectangle</code>) o necesiten más de uno (por ejemplo, un producto comercial que es comparable por precio, nombre y fecha de caducidad).</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id9">
+<div class="iDevice emphasis0">
+<div id="ta9_155" class="block iDevice_content">
+<p>Por defecto, los <code>TreeSet</code> ordenan sus elementos de forma ascendente, pero, ¿se podría cambiar el orden de ordenación?</p>
+<p>Como ya sabemos, las colecciones de tipo <code>TreeSet</code> tienen un conjunto de operaciones adicionales, además de las que incluye por el hecho de ser un conjunto e implementar la interfaz <code>Set</code>, que permite entre otras cosas, cambiar la forma de ordenar los elementos. Esto es especialmente útil cuando el tipo de objeto que se almacena no es un simple número, sino algo más complejo (por ejemplo, un artículo o producto de una tienda.</p>
+<p><code>TreeSet</code> es capaz de ordenar sin problema objetos cuyas clases implementen la interfaz <code>Comparable</code> como son, por ejemplo, las clases que representan los tipos básicos (números, cadenas, fechas, <abbr title="etcétera">etc.</abbr>). Ahora bien, si la clase no ha implementado la interfaz <code>Comparable</code> por sí misma, habrá que indicar a la colección <code>TreeSet</code> cómo tiene que ordenar los elementos. Para ello debemos construir una clase "comparadora" que sea capaz de decirle cuándo un elemento va antes o después que otro, y cuándo son iguales. Para crear una clase "comparadora" de objetos de algún tipo disponemos la interfaz genérica <code>java.util.Comparator&lt;T&gt;</code>, usada en general en algoritmos de ordenación, como veremos más adelante.</p>
+<p>Para crear una clase "comparadora" basta con una clase que implemente la interfaz <code>Comparator</code>. Dicha interfaz requiere de un único método que debe calcular si un objeto pasado por parámetro es mayor, menor o igual que otro del mismo tipo, también pasado como parámetro. Veamos un ejemplo general de cómo implementar un comparador para una hipotética clase "<code>ObjetoComparable</code>":</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class ComparadorDeObjetos implements Comparator&lt;ObjetoComparable&gt; {
+    public int compare(ObjetoComparable objeto1, ObjetoComparable objeto2) { ... }    
+}</code></pre>
+</div>
+</div>
+<p>La interfaz <code>Comparator</code> obliga a implementar un único método, el método <code>compare()</code>, con dos parámetros: los dos elementos a comparar. Las reglas son sencillas, a la hora de personalizar dicho método:</p>
+<ul class="lista_verificacion">
+<li>Si el primer objeto (<code>objeto1</code>) se considera menor que el segundo (<code>o<code>bjeto</code>2</code>), debe devolver un número entero negativo.</li>
+<li>Si el primer objeto (<code>o<code>bjeto</code>1</code>) se considera mayor que el segundo (<code>o<code>bjeto</code>2</code>), debe devolver un número entero positivo.</li>
+<li>Si ambos son iguales, debe devolver <code>0</code>. </li>
+</ul>
+<p>Te suena, ¿verdad? Es el mismo criterio que seguía el método <code>compareTo()</code> que usábamos para comparar dos <code>String </code>o que hemos visto en general a la hora de implementar la interfaz <code>Comparable</code>.</p>
+<p>A veces, cuando el orden que deben tener los elementos es diferente al orden habitual (por ejemplo cuando ordenamos los números en orden inverso), la definición de antes, pensando en menor y mayor,  puede ser un poco liosa, así que es recomendable en tales casos pensar en términos de delante y detrás, o de antes y después, más o menos de la siguiente forma:</p>
+<ul class="lista_verificacion">
+<li>Si el primer objeto (<code>o<code>bjeto</code>1</code>) debe ir antes que el segundo objeto (<code>o<code>bjeto</code>2</code>), devolver entero negativo.</li>
+<li>Si el primer objeto (<code>o<code>bjeto</code>1</code>) debe ir después que el segundo objeto (<code>o<code>bjeto</code>2</code>), devolver entero positivo.</li>
+<li>Si ambos son iguales, debe devolver 0.</li>
+</ul>
+<p>Una vez creado el comparador simplemente tenemos que pasarlo como parámetro en el momento de la creación al <code>TreeSet</code>, y los datos internamente mantendrán dicha ordenación:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Set&lt;Objeto&gt; conjunto=new TreeSet&lt;ObjetoComparable&gt;(new ComparadorDeObjetos());</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id153">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta153_67" class="block story iDevice_content">
+<p>Una vez visto como funcionan las interfaces <code>Comparable</code> y <code>Comparator</code>, así como las clases comparadoras, vamos a trabajar con colecciones de tipo <code>TreeSet</code> que contengan objetos instancia de la siguiente clase:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class ObjetoComparable {
+     public int a;
+     public int b;
+}</code></pre>
+</div>
+</div>
+<p>Los objetos de esta clase no son "aptos" para poder ser elementos de colecciones de tipo <code>TreeSet</code>, pues no existe ningún criterio definido para decidir, ante dos objetos de ese tipo, cuál de ellos es menor o mayor, o si son iguales. Es decir, si intentamos ejecutar las siguiente líneas de código:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>ObjetoComparable objeto1 = new ObjetoComparable ();
+objeto1.a = 1;
+objeto1.b = 3;
+
+Set&lt;ObjetoComparable&gt; conjunto = new TreeSet&lt;&gt;();
+conjunto.add (objeto1); // Producirá un error de ejecución</code></pre>
+</div>
+</div>
+<p>Se producirá un error de ejecución al intentar añadir algún elemento a la colección  <code>TreeSet</code> llamada <code>conjunto</code>.</p>
+<p>¿Cómo podemos arreglarlo?</p>
+</section>
+<section id="taquesQuestion0b153" class="block iDevice_content">
+<p>Lo primero que necesitamos es algún criterio para poder comparar y colocar un elemento antes que otro. Se ha decidido que el criterio sea el siguiente: un elemento de tipo <code>ObjetoComparable</code> es mayor que otro si la suma de sus atributos es mayor.</p>
+<p>Ahora que ya disponemos de un criterio, podemos plantearnos cómo implementarlo.</p>
+<p>Para empezar, podríamos hacer que la clase <code>ObjetoComparable</code> implementara la interfaz <code>Comparable</code>. Esa sería la forma más sencilla, si es que tuviéramos la posibilidad de hacerlo (si la clase <code>ObjetoComparable</code> ha sido implementada por nosotros, tenemos acceso al código fuente para modificarlo y no va a suponer ningún problema de coherencia con el resto de código que utilice esta clase).</p>
+<p>Parece fácil, ¿no? Se trataría simplemente de implementar el método <code>CompareTo</code> dentro de la clase <code>ObjetoComparable</code> siguiendo las directrices del criterio anterior. ¿Cómo lo harías?</p>
+</section>
+<form name="feedback-form-quesFeedback0b153" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b153text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b153" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b153" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso, el "comparador" iría implícito en la propia clase <code>ObjetoComparable</code> al implementar la interfaz <code>Comparable</code>. Para ello habría que escribir el código correspondiente al método <code>compareTo</code> e incluir el "<code>Implements Comparable</code>" en la cabecera de la clase:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class ObjetoComparable implements Comparable&lt;ObjetoComparable&gt; {
+
+    public int a;
+    public int b;
+
+    @Override
+    public int compareTo (ObjetoComparable objeto) {
+        int resultado;
+        int sumaThis = this.a + this.b;
+        int sumaParametro = objeto.a + objeto.b;
+        if (sumaThis &lt; sumaParametro) { // El objeto es menor que el objeto que se pasa como parámetro
+            resultado = -1;
+        } else {
+            if (sumaThis &gt; sumaParametro) { // El objeto es mayor que le objeto que se pasa como parámetro
+                resultado = 1;
+            } else {
+                resultado = 0;
+            }
+        }
+        return resultado;
+    }
+}</code></pre>
+</div>
+</div>
+<p>Ahora bien, el método <code>compareTo</code> podría haberse simplificado mucho más haciendo simplemente una resta:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Override
+public int compareTo (ObjetoComparable objeto) {
+    int resultado;
+    int sumaThis = this.a + this.b;
+    int sumaParametro = objeto.a + objeto.b;
+    return sumaThis - SumaParametro;
+}</code></pre>
+</div>
+</div>
+<p>E incluso podríamos simplificarlo más:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>@Override
+public int compareTo (ObjetoComparable objeto) {
+    return (this.a + this.b) - (objeto.a + objeto.b);
+}</code></pre>
+</div>
+</div>
+<p>Por tanto, el resultado final podría haber quedado en algo como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class ObjetoComparable implements Comparable&lt;ObjetoComparable&gt; {
+
+    public int a;
+    public int b;
+
+    @Override
+    public int compareTo (ObjetoComparable objeto) {
+        return (this.a + this.b) - (objeto.a + objeto.b);
+    }
+}</code></pre>
+</div>
+</div>
+<p>En este caso no se producirá un error de ejecución al intentar añadir algún elemento de tipo <code>ObjetoComparable</code> a la colección <code>TreeSet</code> de objetos instancia de la clase <code>ObjetoComparable</code>.</p></section>
+</form>
+<section id="taquesQuestion1b153" class="block iDevice_content">
+<p>Otra opción, en lugar de implementar la interfaz <code>Comparable</code> en la propia clase <code>ObjetoComparable</code>, podría ser implementar una clase "comparadora" de objetos de tipo <code>ObjetoComparable</code> que siga el criterio de comparación.</p>
+<p>Para ello, habrá que implementar una clase llamada, por ejemplo, <code>ComparadorDeObjetosComparables</code> que implemente la interfaz <code>Comparator</code> (y codifique por tanto el método <code>compare</code>). ¿Te animas a intentarlo?</p>
+</section>
+<form name="feedback-form-quesFeedback1b153" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b153text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b153" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b153" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso, habrá que escribir el código del método <code>compare</code>, que tendrá dos parámetros de tipo <code>ObjetoComparable</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class ComparadorDeObjetosComparables implements Comparator&lt;ObjetoComparable&gt; {
+    @Override
+    public int compare(ObjetoComparable objeto1, ObjetoComparable objeto2){
+         return (objeto1.a + objeto1.b) - (objeto2.a + objeto2.b);  
+    }
+}</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion2b153" class="block iDevice_content">
+<p>Una vez que dispusiéramos de ese "comparador", bastaría con utilizarlo a la hora de crear la colección <code>TreeSet</code> de objetos de tipo <code>ObjetoComparable</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>ObjetoComparable objeto1 = new ObjetoComparable ();
+objeto1.a = 1;
+objeto1.b = 3;
+
+Set&lt;ObjetoComparable&gt; conjunto = new TreeSet&lt;&gt;( new ComparadorDeObjetosComparables() ); // Al crear la colección TreeSet de objetos ObjetoComparable, le proporcionamos un criterio de comparación
+conjunto.add (objeto1); // No producirá un error de ejecución, pues existe un criterio de comparación para poder ordenar los elementos</code></pre>
+</div>
+</div>
+<p>En este caso no se producirá un error de ejecución al intentar añadir algún elemento a la colección  <code>TreeSet</code> llamada <code>conjunto</code>.</p>
+<p></p>
+</section>
+<section id="taquesQuestion3b153" class="block iDevice_content">
+<p>La necesidad de utilizar este segundo mecanismo, algo más complicado, puede deberse a varias razones. Por ejemplo:</p>
+<ol>
+<li>que no sea posible modificar el código dela clase <code>ObjetoComparable</code> para que implemente la interfaz <code>Comparable</code>;</li>
+<li>que queramos implementar distintos tipos de "comparadores", es decir, distintos tipos de criterios para comparar objetos de tipo <code>ObjetoComparable</code>. Con este mecanismo de clases "comparadoras" podremos implementar todos lo "comparadores" que necesitemos. Por ejemplo: que el criterio de comparación sea la suma de los parámetros, que el criterio sea la comparación del primer parámetro, que el criterio sea la suma del número de cifras de ambos parámetros, que el criterio sea la suma de los parámetros pero considerando el orden inverso (un elemento se coloca antes cuanto menor sea la suma), <abbr title="etcétera">etc.</abbr> Y así tantos criterios como se nos puedan ocurrir o necesitemos.</li>
+</ol>
+<p>Imaginemos que más adelante apareciera un nuevo posible criterio de ordenación para objetos de la clase <code>ObjetoComparable</code>. En tal caso bastaría con implementar una nueva clase "comparadora" y utilizarla a la hora crear una colección <code>TreeSet</code> para indicar que ese es el criterio de ordenación para esa colección.</p>
+<p>Supongamos que ese nuevo "comparador" se ha implementado en una clase llamada <code>ComparadorObjetosPorCifras</code>. ¿cómo crearías una colección de objetos de tipo <code>ObjetoComparable</code> utilizando este nuevo criterio?</p>
+</section>
+<form name="feedback-form-quesFeedback3b153" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b153text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b153" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback3b153" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Bastaría con pasar una instancia de la clase "comparadora" <code>ComparadorObjetosPorCifras</code> como parámetro en el constructor del <code>TreeSe:</code></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Set&lt;ObjetoComparable&gt; conjunto = new TreeSet&lt;&gt;( new ComparadorObjetosPorCifras() ); // Se proporciona un nuevo criterio de comparación</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

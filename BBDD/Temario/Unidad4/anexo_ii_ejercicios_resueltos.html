@@ -1,0 +1,1418 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Anexo II.- Ejercicios resueltos. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-101"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li id="active"><a href="anexo_ii_ejercicios_resueltos.html" class="active no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="anexo_i_formateado_de_cadenas_en_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Anexo II.- Ejercicios resueltos.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id409">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta409_147" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="white-board-593300_640.jpg" alt="Escribiendo sobre una pizarra blanca" title="Whiteboard" style="float: right;" width="200" height="133" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/tablero-blanco-inicio-593300/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de StartupStockPhotos en Pixabay (se abre en una nueva ventana).">StartupStockPhotos</a> <span class="license"><span class="sep">(</span><span class="license"><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>María y Juan han estado trabajando con <strong>arrays</strong> de diferentes dimensiones y <strong>cadenas de caracteres</strong> de distintos tipos, así como elaborando <strong>patrones</strong> mediante <strong>expresiones regulares</strong> para llevar a cabo búsquedas y comprobaciones. Combinando todas esas herramientas ya se sienten con en el entrenamiento suficiente como para intentar resolver problemas que involucren a una cierta cantidad de información y no solo a unas cuantas variables.</p>
+<p>Por supuesto, aún siguen siendo pocas herramientas para trabajar, pero cada vez disponen de un arsenal un poco más amplio para poder enfrentarse a los problemas que sus superiores les van proponiendo. Vamos a ver algunos de ellos.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id413">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 1: reconocimiento de palíndromos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta413_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b413" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 250px;"><img src="scrabble-447205_640.jpg" alt="Texto SOS con fichas de Scrable" title="SOS" style="float: right;" width="240" height="116" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/escarbar-llamada-de-socorro-ayuda-447205/" target="_blank" class="author" title="Acceder a la web de descarga de la imagen de Jan Ontkoc en Pixabay (Se abre en nueva ventana)" rel="noopener">Jan Ontkoc</a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en nueva ventana)." target="_blank" rel="noopener">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Un <strong>palíndromo</strong> consiste en una palabra o frase que se lee igual en un sentido que en otro (por ejemplo, “<em>Ana</em>”, o “<em>Ligar es ser ágil</em>”). Nos han pedido que ideemos una forma sencilla de comprobar si un conjunto de textos son palíndromos o no.</p>
+<p>Para ello tendrás que escribir un programa en Java que:</p>
+<ol>
+<li><strong>Declare un array de objetos <code>String</code> de entrada</strong>. Este array contendrá una serie de textos de ejemplo. Esos textos no contendrán otros caracteres salvo los alfabéticos (mayúsculas y minúsculas, sin acentos ni eñes), el espacio y los signos de puntuación (coma, punto, dos puntos, punto y coma) y nos servirán como entrada para probar nuestro programa. De este modo evitaremos tener que estar tecleando continuamente casos de prueba. Los textos que debe contener el array son:<br /><ol>
+<li>"<em>Reconocer</em>";</li>
+<li>"<em>AMANECER</em>";</li>
+<li>"<em>Esto no es un palindromo</em>";</li>
+<li>"<em>Dabale arroz a la zorra el abad.</em>";</li>
+<li>"<em>A man, a plan, a canal: Panama.</em>";</li>
+<li>"A <em>man a plan and a canal, Panama.</em>";</li>
+<li>"<em>No deseo ese don...</em>".</li>
+</ol></li>
+<li><strong>Declare un array de <code>boolean</code> para los resultados</strong>. Servirá para almacenar en cada posición i si la cadena que hay en la posición i del array anterior es un palíndromo o no.</li>
+<li><strong>Reserve en memoria el tamaño apropiado para el array de </strong><strong><code>boolean</code></strong>. No debes indicar el literal 7, sino que debes calcular el <strong>tamaño del array de entrada</strong> para que si éste cambiara de tamaño no hubiera que modificar nada más.</li>
+<li><strong>Recorra cada uno de los textos del array de entrada</strong> y los <strong>muestre por pantalla</strong> cada uno en una línea diferente, numerando cada línea y empezando por 1.</li>
+<li><strong>Vuelva a recorrer cada uno de los textos del array de entrada</strong> y para cada uno de ellos:<br /><ol>
+<li><strong>compruebe si se trata o no de un palíndromo</strong>, teniendo en cuenta que para este análisis solo se tienen en cuenta las letras y no los espacios o signos de puntuación. Y no olvides que aquí da igual que sean mayúsculas o minúsculas;</li>
+<li><strong>si se trata de un palíndromo</strong>, almacenaremos en la posición correspondiente del array de resultados el valor <strong><code>true</code></strong>. <strong>En caso contrario</strong> almacenaremos el valor <strong><code>false</code></strong>.</li>
+</ol></li>
+<li><strong>Muestre por pantalla el contenido de ese array de resultados</strong>.</li>
+</ol>
+<p>Dado que no hay que introducir datos de entrada y todos los valores son fijos, la ejecución de tu programa siempre deberá proporcionar el mismo resultado. Aquí tienes una muestra de cómo podría quedar:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>RECONOCIMIENTO DE PALÍNDROMOS
+-----------------------------
+Los textos que vamos a analizar son: 
+-Texto 1: Reconocer
+-Texto 2: AMANECER
+-Texto 3: Esto no es un palindromo
+-Texto 4: Dabale arroz a la zorra el abad.
+-Texto 5: A man, a plan, a canal: Panama
+-Texto 6: A man a plan and a canal, Panama
+-Texto 7: No deseo ese don...
+
+RESULTADOS OBTENIDOS
+--------------------
+Palíndromos encontrados: [true, false, false, true, true, false, true]</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b413" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b413text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b413" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b413" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+
+// Variables de entrada
+String arrayTextos[] = {
+    "Reconocer",
+    "AMANECER",            
+    "Esto no es un palindromo",
+    "Dabale arroz a la zorra el abad.",
+    "A man, a plan, a canal: Panama",
+    "A man a plan and a canal, Panama",
+    "No deseo ese don..."
+};
+// Variables de salida
+boolean[] esPalindromo;
+
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("RECONOCIMIENTO DE PALÍNDROMOS");
+System.out.println("-----------------------------");
+
+// Reservamos espacio para los arrays de resultado
+esPalindromo = new boolean[arrayTextos.length];
+
+// Mostramos el array de textos
+System.out.printf ("Los textos que vamos a analizar son: \n");
+for (int i=0; i&lt;arrayTextos.length; i++) {
+    System.out.printf ("-Texto %d: %s\n", i+1, arrayTextos[i]);
+}
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+// Recorremos el array de textos
+// Para cada texto comprobamos si es palíndromo.
+for (int indice = 0; indice &lt; arrayTextos.length; indice++) {
+    String texto = arrayTextos[indice];
+    // Eliminamos espacios y signos de puntuación del texto
+    StringBuilder todoJunto = new StringBuilder(
+            texto.trim().toLowerCase().replaceAll("[ :.;,]", "")
+    );
+    // Invertimos el texto
+    StringBuilder todoJuntoInverso = new StringBuilder(todoJunto).reverse();
+    // Comprobamos si el texto invertido y el original son iguales
+    esPalindromo[indice] = todoJunto.toString().equals(todoJuntoInverso.toString());
+}
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println();
+System.out.println("RESULTADOS OBTENIDOS");
+System.out.println("--------------------");
+// Mostramos el array de resultados
+System.out.printf ("Palíndromos encontrados: %s\n", Arrays.toString(esPalindromo));
+</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id414">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 2: inversión de palabras</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta414_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b414" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 250px;"><img src="scrabble-tiles-5981981_640.jpg" alt="Fichas del juego Scrablle" title="Scrabble" style="float: right;" width="240" height="160" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/azulejos-de-scrabble-letras-escarbar-5981981/" target="_blank" class="author" title="Acceder a la web de descarga de la imagen de Okan AKGÜL en Pixabay (Se abre en nueva ventana)" rel="noopener">Okan AKGÜL </a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en nueva ventana)." target="_blank" rel="noopener">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Continuando con la manipulación de cadenas de caracteres, textos y palabras, nos piden ahora que pensemos en cómo podríamos invertir las letras de cada palabra de un texto, generando una lista de palabras invertidas para cada texto.</p>
+<p>Para ello tendrás que escribir un programa en Java que:</p>
+<ol>
+<li><strong>Declare un array de objetos <code>String</code> de entrada</strong>. Este array contendrá una serie de textos de ejemplo. Son los mismos ejemplos que en el ejercicio anterior. Esos textos no contendrán otros caracteres salvo los alfabéticos (mayúsculas y minúsculas, sin acentos ni eñes), el espacio y los signos de puntuación (coma, punto, dos puntos, punto y coma) y nos servirán como entrada para probar nuestro programa. De este modo evitaremos tener que estar tecleando continuamente casos de prueba. Los textos que debe contener el array son:<br /><ol>
+<li>"<em>Reconocer</em>";</li>
+<li>"<em>AMANECER</em>";</li>
+<li>"<em>Esto no es un palindromo</em>";</li>
+<li>"<em>Dabale arroz a la zorra el abad.</em>";</li>
+<li>"<em>A man, a plan, a canal: Panama.</em>";</li>
+<li>"A <em>man a plan and a canal, Panama.</em>";</li>
+<li>"<em>No deseo ese don...</em>".</li>
+</ol></li>
+<li><strong>Declare un array de <code>String</code> para los resultados</strong>. Servirá para almacenar en cada posición i la lista de palabras invertidas (separadas por espacios) correspondiente a cada texto.</li>
+<li><strong>Reserve en memoria el tamaño apropiado para el array de </strong><strong><code>String</code></strong>. No debes indicar el literal 7, sino que debes calcular el <strong>tamaño del array de entrada</strong> para que si este cambiara de tamaño no hubiera que modificar nada más.</li>
+<li><strong>Recorra cada uno de los textos del array de entrada</strong> y los <strong>muestre por pantalla</strong> cada uno en una línea diferente, numerando cada línea y empezando por 1.</li>
+<li><strong>Vuelva a recorrer cada uno de los textos del array de entrada</strong> y para cada uno de ellos:<br /><ol>
+<li><strong>obtenga cada palabra del texto</strong>, teniendo en cuenta que se considera palabra toda acumulación de letras (tanto mayúsculas como minúsculas) hasta que se encuentren espacios o signos de puntuación. Aquí podría venirte muy bien el uso de métodos como <code>trim</code> o <code>split</code>;</li>
+<li><strong>se invierta cada una de esas palabras</strong>;</li>
+<li><strong>se almacenen todas en una misma cadena</strong> separándolas por un espacio. Esa cadena resultante se almacenará en el array de textos de resultados en la misma posición en la que se encontrara el texto original en el array de entrada.</li>
+</ol></li>
+<li><strong>Muestre por pantalla el contenido de ese array de resultados</strong>, imprimiendo para cada texto primero el original (en una línea) y a continuación el texto con las palabras invertidas (y ya sin signos de puntuación) en la siguiente línea.</li>
+</ol>
+<p>Dado que no hay que introducir datos de entrada y todos los valores son fijos, la ejecución de tu programa siempre deberá proporcionar el mismo resultado. Aquí tienes una muestra de cómo podría quedar:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>INVERSIÓN DE PALABRAS
+---------------------
+Los textos que vamos a analizar son: 
+-Texto 1: Reconocer
+-Texto 2: AMANECER
+-Texto 3: Esto no es un palindromo
+-Texto 4: Dabale arroz a la zorra el abad.
+-Texto 5: A man, a plan, a canal: Panama
+-Texto 6: A man a plan and a canal, Panama
+-Texto 7: No deseo ese don...
+
+RESULTADOS OBTENIDOS
+--------------------
+Texto 1: "Reconocer"
+Palabras invertidas: "reconoceR"
+
+Texto 2: "AMANECER"
+Palabras invertidas: "RECENAMA"
+
+Texto 3: "Esto no es un palindromo"
+Palabras invertidas: "otsE on se nu omordnilap"
+
+Texto 4: "Dabale arroz a la zorra el abad."
+Palabras invertidas: "elabaD zorra a al arroz le daba"
+
+Texto 5: "A man, a plan, a canal: Panama"
+Palabras invertidas: "A nam a nalp a lanac amanaP"
+
+Texto 6: "A man a plan and a canal, Panama"
+Palabras invertidas: "A nam a nalp dna a lanac amanaP"
+
+Texto 7: "No deseo ese don..."
+Palabras invertidas: "oN oesed ese nod"</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b414" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b414text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b414" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b414" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+// Constantes
+// Variables de entrada
+String arrayTextos[] = {
+    "Reconocer",
+    "AMANECER",            
+    "Esto no es un palindromo",
+    "Dabale arroz a la zorra el abad.",
+    "A man, a plan, a canal: Panama",
+    "A man a plan and a canal, Panama",
+    "No deseo ese  don..."
+};
+// Variables de salida
+String[] arrayTextosInvertidos;
+
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("INVERSIÓN DE PALABRAS");
+System.out.println("---------------------");
+
+// Reservamos espacio para los arrays de resultado
+arrayTextosInvertidos = new String[arrayTextos.length];
+
+// Mostramos el array de textos
+System.out.printf ("Los textos que vamos a analizar son: \n");
+for (int i=0; i&lt;arrayTextos.length; i++) {
+    System.out.printf ("-Texto %d: %s\n", i+1, arrayTextos[i]);
+}
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+// Recorremos el array de textos
+// Para cada texto invertimos cada palabra que contenga.
+for (int i = 0; i &lt; arrayTextos.length; i++) {
+    String texto = arrayTextos[i];
+
+    // Separamos cada palabra del texto
+    String[] arrayPalabras = texto.trim().split("[ :.;,]+");
+
+    // Generamos un nuevo texto con las palabras invertidas
+    StringBuilder textoPalabrasInvertidas = new StringBuilder();
+    for (String palabra : arrayPalabras) {
+        textoPalabrasInvertidas.append(new StringBuilder(palabra).reverse()).append(" ");
+    }
+    if (textoPalabrasInvertidas.length() &gt; 0) {
+        textoPalabrasInvertidas.deleteCharAt(textoPalabrasInvertidas.length() - 1);
+    }
+    arrayTextosInvertidos[i] = textoPalabrasInvertidas.toString();
+}
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+// Recorremos el array de textos
+// Para cada texto:
+// 1. Mostramos el texto original (array arrayTextos)
+// 2. Mostramos el texto con las palabras invertidas (array arrayTextosInvertidos)
+System.out.println();
+System.out.println("RESULTADOS OBTENIDOS");
+System.out.println("--------------------");
+for (int i = 0; i &lt; arrayTextos.length; i++) {
+    System.out.printf("Texto %d: \"%s\"\n", i+1, arrayTextos[i]);
+    System.out.printf("Palabras invertidas: \"%s\"\n\n",
+            arrayTextosInvertidos[i]);
+}
+
+</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id412">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 3: cálculo de puntuaciones</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta412_148" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 250px;"><img src="game-1738065_640.jpg" alt="Juego de tablero indeterminado, con diferentes tipos de piezas" title="Juego" style="float: right;" width="250" height="178" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/juego-gesellschaftsspiel-quoridor-1738065/" target="_blank" class="author" title="Acceder a la web de descarga de la imagen de Alexas_Fotos en Pixabay (Se abre en nueva ventana)">Alexas_Fotos</a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en nueva ventana)." target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Estamos analizando la posibilidad de implementar un juego de mesa donde las puntuaciones de cada mano se anotan de la siguiente manera:</p>
+<ul class="lista_verificacion">
+<li>en cada mano puede haber <strong>entre uno y cuatro turnos</strong>;</li>
+<li>para cada turno se puede haber <strong>ganado o perdido</strong>. Si se ha ganado se indica con el símbolo "<strong>X</strong>" o "<strong>x</strong>" (letra "equis" mayúscula o minúscula, ambas son válidas). Si no se ha ganado, se anota con el símbolo "<strong>O</strong>" u "<strong>o</strong>" (letra "o" mayúscula o minúscula, ambas son válidas);</li>
+<li><strong>cada turno ganado supone un punto</strong>. Un turno sin ganar supone cero puntos;</li>
+<li>al anotarse la puntuación, la información de cada turno debe ir separada del <strong>carácter guion</strong> ("-");</li>
+<li>la <strong>puntuación total</strong> de una mano se obtiene <strong>sumando los puntos de cada turno</strong>. Podrá estar por tanto <strong>entre cero puntos como mínimo y cuatro como máximo</strong>.</li>
+</ul>
+<p>Aquí tienes algunos ejemplos cadenas de caracteres que indicarían anotaciones válidas de puntuaciones de distintas manos:</p>
+<ul class="lista_verificacion">
+<li>"X", que representaría un único turno en el que se ha ganado. La puntuación sería por tanto de 1;</li>
+<li>"O", que indicaría un único turno en el que no se ha ganado. La puntuación sería de 0.</li>
+<li>"X-O", con un turno ganado y otro que no. Puntuación de 1;</li>
+<li>"X-X-X-X", que indicaría que se han ganado cuatro turnos. Puntuación de 4;</li>
+<li>"o-X-x-O", con solo dos turnos ganados de un total de cuatro. Recuerda que debemos ser indiferentes a mayúsculas o minúsculas. Puntuación de 2;</li>
+<li>"o-O-o", ningún turno ganado de un total de tres. Puntuación de 0;</li>
+</ul>
+<p>Si la anotación de un turno no cumple esas reglas, se considera <strong>no válida</strong> y tendrá una <strong>puntuación de -1</strong>.</p>
+</section>
+<section id="taquesQuestion0b412" class="block iDevice_content">
+<p>Se nos ha pedido que ideemos alguna manera de recibir todas las anotaciones de las manos de una partida y que calculemos la puntuación de cada mano.</p>
+<p>Para ello tendrás que escribir un programa en Java que:</p>
+<ol>
+<li><strong>declare un array de objetos</strong> <code>String</code> con el siguiente contenido: <code>{"a", "a-b", "X-A", "O-O-B", "X--X", "O-X-", "-X-X", "O-X-O-X-O", "o", "O-o", "X", "o-x-o", "x", "x-x", "O-x-X", "X-X-X", "x-X-X-x"}</code>. Eso nos servirá como entrada para probar nuestro programa y evitaremos tener que estar tecleando continuamente casos de prueba;</li>
+<li><strong>muestre por pantalla el contenido de ese array de entradas</strong> (anotaciones de turnos). Para ello lo más sencillo es utilizar la herramienta <code>Arrays.toString</code>;</li>
+<li><strong>recorra cada elemento del array</strong> (cada anotación) y lo analice para ver si cumple o no con el patrón de anotación válida para un turno:<ol>
+<li><strong>si cumple con el patrón</strong>, se considerará una <strong>anotación válida</strong> y se calculará su puntuación. La manera más sencilla de hacer esta comprobación es mediante <strong>expresiones regulares</strong>. Para obtener la puntuación de una anotación tendrás que descomponer cada uno de sus componentes (de tipo <code>X/x</code> o bien <code>O/o</code>) y acumular su valor;</li>
+<li><strong>si no cumple con el patrón</strong>, se considerará una <strong>anotación inválida</strong> y su puntuación será de -1;</li>
+<li>tanto en un caso como en otro <strong>se incluirá la puntuación obtenida en un objeto cadena de tipo</strong> <code>StringBuilder</code> que al final del proceso contendrá las puntuaciones de cada anotación separadas por comas;</li>
+</ol></li>
+<li>Una vez explorado el array completo <strong>se mostrarán por pantalla los siguientes resultados</strong>:<ol>
+<li>la <strong>lista completa de puntuaciones de cada mano separadas por comas</strong>. Será el contenido de la cadena <code>StringBuilder</code> que has tenido que ir construyendo durante el proceso;</li>
+<li>la <strong>cantidad de anotaciones válidas</strong> encontradas;</li>
+<li>la <strong>cantidad de anotaciones no válidas</strong> encontradas.</li>
+</ol></li>
+</ol>
+<p>Dado que no hay que introducir datos de entrada y todos los valores son fijos, la ejecución de tu programa siempre deberá proporcionar el mismo resultado. Aquí tienes una muestra de cómo podría quedar:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>CÁLCULO DE PUNTUACIONES
+-----------------------
+Anotaciones obtenidas de cada mano del juego:
+[a, a-b, X-A, O-O-B, X--X, O-X-, -X-X, O-X-O-X-O, o, O-o, X, o-x-o, x, x-x, O-x-X, X-X-X, x-X-X-x]
+
+RESULTADO: PUNTUACIONES CALCULADAS
+----------------------------------
+Puntuaciones: -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 1, 1, 1, 2, 2, 3, 4
+Número de anotaciones válidas:   9.
+Número de anotaciones inválidas: 8.</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b412" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b412text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b412" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b412" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+
+// Variables de entrada
+String arrayAnotaciones[] = {"a", "a-b", "X-A", "O-O-B", "X--X", "O-X-", "-X-X", "O-X-O-X-O",
+    "o", "O-o", "X", "o-x-o", "x", "x-x", "O-x-X", "X-X-X", "x-X-X-x"};
+
+// Variables de salida
+StringBuilder resultadoFinal;
+int anotacionesValidas=0, anotacionesInvalidas=0;
+
+// Variables auxiliares
+String elementosAnotacion[];
+int puntuacionTotalAnotacion;
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("CÁLCULO DE PUNTUACIONES");
+System.out.println("-----------------------");
+
+// Mostramos por pantalla el contenido del array de anotaciones
+System.out.println("Anotaciones obtenidas de cada mano del juego:");
+System.out.println(Arrays.toString(arrayAnotaciones));
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+String patron = "[OoXx](-[OoXx]){0,3}";
+resultadoFinal = new StringBuilder();
+
+// Recorremos cada cadena del array
+for (int indice=  0; indice &lt; arrayAnotaciones.length; indice++) {
+    String elemento = arrayAnotaciones[indice];
+    puntuacionTotalAnotacion = -1;
+    if (indice &gt; 0) {
+        resultadoFinal.append(", ");
+    }
+    // Si el elemento "encaja" con el patrón
+    if (elemento.matches(patron)) {
+        anotacionesValidas++; // Incrementamos el contador de anotaciones válidas
+        // Obtenemos cada una de las puntuaciones de la anotación (X/x o bien O/o)
+        elementosAnotacion = elemento.split("-"); // Para ello separamos todo lo que esté entre "-"
+        puntuacionTotalAnotacion = 0;
+        // Y las vamos sumando (acumulando)
+        for (String fragmento : elementosAnotacion) {
+            if (fragmento.toUpperCase().charAt(0) == 'X') {
+                puntuacionTotalAnotacion++; // Si es X/x podemos sumamos +1, si no (O/o) nada
+            }
+        }
+    } else {
+        anotacionesInvalidas++; // Incrementamos el contador de anotaciones inválidas
+    }
+    // Vamos "acumulando" cada puntuación
+    resultadoFinal.append(puntuacionTotalAnotacion);
+}
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println();
+System.out.println("RESULTADO: PUNTUACIONES CALCULADAS");
+System.out.println("----------------------------------");
+
+// Mostrar por pantalla el resultado final
+System.out.printf ("Puntuaciones: %s\n", resultadoFinal);
+System.out.printf ("Número de anotaciones válidas:  %2d.\n", anotacionesValidas);
+System.out.printf ("Número de anotaciones inválidas:%2d.\n", anotacionesInvalidas);
+</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id410">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 4: códigos de productos textiles</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta410_148" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 250px;"><img src="tshirt-g9c9c38aad_640.jpg" alt="Ordenadores, tablets y móviles" title="Dispositivos" style="float: right;" width="250" height="154" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/camiseta-de-manga-corta-camisa-ropa-2428521/" target="_blank" class="author" title="Acceder a la web de descarga de la imagen de Ranjat M en Pixabay (Se abre en nueva ventana)">Ranjat M</a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en nueva ventana)." target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Un almacén de ropa identifica sus productos siguiendo un código formado por números y letras, el cual permite reconocer el tipo de cliente al que van dirigidos, un identificador y su origen de fabricación. Su estructura es la siguiente:</p>
+<ul class="lista_verificacion">
+<li>una <strong>letra</strong> que indica el <strong>tipo de cliente</strong> ('<code>H</code>' - Hombre, '<code>M</code>' - Mujer o '<code>B</code>' - Bebé);</li>
+<li>un <strong>identificador</strong> de <strong>cinco dígitos numéricos</strong>;</li>
+<li>una <strong>letra</strong> que indica el origen de fabricación del producto: '<code>E</code>' (Europa) o '<code>A</code>' (Asia);</li>
+<li>un <strong>código de control</strong> (dos dígitos). Se formará <strong>sumando todos los dígitos numéricos del identificador</strong>. Si la suma resultante es de una sola cifra se antepondrá el 0.</li>
+</ul>
+<p>Las letras <strong><span style="text-decoration: underline;">solo pueden ser mayúsculas</span></strong>. Si hay alguna letra minúscula, el código se considera inválido.</p>
+</section>
+<section id="taquesQuestion0b410" class="block iDevice_content">
+<p>Dado un array con los siguientes códigos de producto:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Variables de entrada
+String[] productos= {"H12345E15", "M00000E00", "A12345E15", "H12345E11", 
+    "B00011A02", "B00011A11", "h12345E15", "B1111A04", "B111111A06"};  </code></pre>
+</div>
+</div>
+<p>Desarrolla un programa en Java que identifique cuántos productos del array tienen un patrón válido y, de ellos, cuántos contienen códigos de control válidos y cuántos inválidos. Por último, para los productos válidos, identifica de qué tipo de cliente se trata (hombre, mujer, bebé) y su origen (Europa o Asia).</p>
+<p>Puesto que no hay entrada de datos (la entrada es el propio array), la salida debe ser similar a la siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>ANÁLISIS DE CÓDIGOS DE PRODUCTOS TEXTILES
+-----------------------------------------
+Se analizarán los siguientes códigos de producto:
+[H12345E15, M00000E00, A12345E15, H12345E11, B00011A02, B00011A11, h12345E15, B1111A04, B111111A06]
+
+RESULTADO
+---------
+H12345E15:  Prenda de hombre. Fabricación: Europa.
+M00000E00:  Prenda de mujer.  Fabricación: Europa.
+A12345E15:  Patrón NO válido.
+H12345E11:  Código inválido.
+B00011A02:  Prenda de bebé.   Fabricación: Asia.
+B00011A11:  Código inválido.
+h12345E15:  Patrón NO válido.
+B1111A04:   Patrón NO válido.
+B111111A06: Patrón NO válido.
+
+Número de productos con patrón válido:
+5 productos (3 con código de control válido y 2 inválido)</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b410" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b410text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b410" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b410" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+
+// Variables de entrada
+String[] productos= {"H12345E15", "M00000E00", "A12345E15", "H12345E11", 
+    "B00011A02", "B00011A11", "h12345E15", "B1111A04", "B111111A06"};        
+
+// Variables de salida
+String[] descripcionProductos;
+int cantidadPatronesValidos=0, cantidadCodigosValidos=0;
+
+// Variables auxiliares
+String pExpReg= "([HMB])([0-9]{5})([EA])([0-9]{2})"; // Patrón de la expresión regular
+Pattern patron= Pattern.compile(pExpReg);
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("EJERCICIO DE ANÁLISIS DE CÓDIGOS DE PRODUCTOS TEXTILES");
+System.out.println("------------------------------------------------------");
+System.out.printf ("Se analizarán los siguientes códigos de producto: \n%s\n",
+        Arrays.toString(productos));
+
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+
+// Reservamos espacio para el array de descripciones de los productos
+descripcionProductos= new String[productos.length];
+
+// Recorremos cada producto
+for ( int i=0; i&lt;productos.length; i++ ){
+
+    // Analizamos cada elemento
+    String elemento= productos[i];
+    String tipoCliente, identificador, origen, control;
+    Matcher acoplamiento= patron.matcher(elemento);            
+
+    // Comprobamos si el elemento cumple el patrón
+    if (acoplamiento.matches()) { // Se cumple el patrón del número de serie
+        cantidadPatronesValidos++;
+        // Extraemos cada grupo
+        tipoCliente= acoplamiento.group(1);
+        identificador= acoplamiento.group(2);
+        origen= acoplamiento.group(3);
+        control= acoplamiento.group(4);
+        // Comprobamos si la letra de control es correcta
+        int sumaDigitos=0;
+        for (int j=0; j&lt;identificador.length(); j++) {
+            sumaDigitos += (int)(identificador.charAt(j)-'0');
+        }
+        String codigoCalculado=  String.format ("%02d", sumaDigitos);
+
+        // Añadimos la descripción al array de resultados
+        if (codigoCalculado.equals (control)) { // Si el codigo de control es correcto
+            cantidadCodigosValidos++;
+            String descripcion= "Prenda de ";
+            switch (tipoCliente) {
+                case "H":
+                    descripcion += "hombre.";
+                    break;
+                case "M":
+                    descripcion += "mujer. ";
+                    break;
+                case "B":
+                    descripcion += "bebé.  ";
+                    break;
+            }
+            descripcion += " Fabricación: ";
+            switch (origen) {
+                case "E":
+                        descripcion += "Europa.";
+                    break;
+                case "A":
+                    descripcion += " Asia.";
+                    break;                        
+            }
+            descripcionProductos[i]= descripcion;
+        } else { // Si el código no es correcto
+            descripcionProductos[i]= "Código inválido.";
+        }
+
+    } else {  // Si el patrón no es correcto
+        descripcionProductos[i]= "Patrón NO válido.";                
+    }
+}
+
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println ();
+System.out.println("RESULTADO");
+System.out.println("---------");        
+for ( int i=0; i &lt; productos.length ; i++ ) {
+    System.out.printf ("%-12s %s\n", productos[i]+":", descripcionProductos[i]);
+}
+
+System.out.println();
+System.out.println("Número de productos con patrón válido: ");
+System.out.printf ("%d productos (%d con código válido y %d con código inválido)\n",
+                       cantidadPatronesValidos, cantidadCodigosValidos, 
+                       cantidadPatronesValidos - cantidadCodigosValidos);
+</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id411">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 5: códigos de productos informáticos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta411_148" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 250px;"><img src="technology-g8034f03f9_640.png" alt="Ordenadores, tablets y móviles" title="Dispositivos" style="float: right;" width="250" height="139" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/tecnolog%c3%ada-el-equipo-sensible-web-2468063/" target="_blank" class="author" title="Acceder a la web de descarga de la imagen de ElisaRiva en Pixabay (Se abre en nueva ventana)">ElisaRiva</a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en nueva ventana)." target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Una empresa de informática identifica sus <strong>productos</strong> siguiendo un código formado por números y letras el cual permite conocer el <strong>tipo de producto</strong>, su <strong>identificador</strong> y su <strong>estado</strong>. El código de los productos se construye de la siguiente manera:</p>
+<ul>
+<li class="lista_verificacion">una <strong>letra</strong> que indica la <strong>disponibilidad</strong> del producto: <strong>S</strong> (en stock) o <strong>A</strong> (agotado);</li>
+<li class="lista_verificacion">Una <strong>letra</strong> que indica el <strong>tipo de producto</strong> (<strong>T</strong> - Tablet, <strong>P</strong> - Portátil o <strong>M</strong> - Móvil);</li>
+<li class="lista_verificacion">Un <strong>identificador</strong> de <strong>cuatro dígitos</strong> numéricos;</li>
+<li class="lista_verificacion">un <strong>código de control</strong> (una <strong>letra</strong>). Se formará aplicando la operación <strong>módulo 10 a la suma de los cuatro dígitos numéricos del identificador</strong>, por lo que se obtendrá una letra según el resultado de esta operación: 0 será la A, 1 será la B, etc. Hasta el 9, que será la J.</li>
+</ul>
+<p>Las letras pueden ser <span style="text-decoration: underline;"><strong>mayúsculas o minúsculas</strong></span>. En ambos casos se trata de un código válido.<br /><br /></p>
+</section>
+<section id="taquesQuestion0b411" class="block iDevice_content">
+<p>Dados los siguientes códigos de producto:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String[] productos = {"SP1234A", "aM5544I", "AO5925N", "O26232A", "AT5425G",
+    "SM4285J", "sp1599A", "SP12341B", "SP111C"};
+</code></pre>
+</div>
+</div>
+<p>escribe un programa en Java que identifique cuántos productos tienen un patrón válido y, de ellos, cuántos contienen códigos de control válidos y cuántos inválidos. Por último, para los patrones válidos, identifica de qué tipo de producto se trata (móvil, tablet o portátil) y si están "<em>Agotados</em>" o "<em>En stock</em>".</p>
+<p>Puesto que no hay entrada de datos, la salida debe ser similar a la siguiente:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>ANÁLISIS DE CÓDIGOS DE PRODUCTOS INFORMÁTICOS
+---------------------------------------------
+Se analizarán los siguientes códigos de producto: 
+[SP1234A, aM5544I, AO5925N, O26232A, AT5425G, SM4285J, sp1599A, SP12341B, SP111C]
+
+RESULTADO
+---------
+SP1234A:     Portátil (En stock)
+aM5544I:     Móvil (Agotado)
+AO5925N:     Patrón NO válido
+O26232A:     Patrón NO válido
+AT5425G:     Tablet (Agotado)
+SM4285J:     Móvil (En stock)
+sp1599A:     Código inválido
+SP12341B:    Patrón NO válido
+SP111C:      Patrón NO válido
+
+Número de productos con patrón válido: 
+5 productos (4 con código válido y 1 con código inválido)</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b411" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b411text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b411" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b411" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+
+// Variables de entrada
+String[] productos= {"SP1234A", "aM5544I", "AO5925N", "O26232A", "AT5425G", 
+    "SM4285J", "sp1599A", "SP12341B", "SP111C"};        
+
+// Variables de salida
+String[] descripcionProductos;
+int cantidadPatronesValidos=0, cantidadCodigosValidos=0;
+
+// Variables auxiliares
+String pExpReg= "([AS])([TPM])([0-9]{4})([A-J])";
+Pattern patron= Pattern.compile(pExpReg);
+char[] letrasControl= {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};        
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("EJERCICIO DE ANÁLISIS DE CÓDIGOS DE PRODUCTOS INFORMÁTICOS");
+System.out.println("----------------------------------------------------------");
+System.out.printf ("Se analizarán los siguientes códigos de producto: \n%s\n",
+        Arrays.toString(productos));
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+
+// Reservamos espacio para el array de descripciones de los productos
+descripcionProductos= new String[productos.length];
+
+// Recorremos cada producto
+for ( int i=0; i&lt;productos.length; i++ ){
+
+    // Analizamos cada elemento
+    String elemento= productos[i];
+    String disponibilidad, tipo, identificador, control;
+    Matcher acoplamiento= patron.matcher(elemento.toUpperCase());            
+
+    // Comprobamos si el elemento cumple el patrón
+    if (acoplamiento.matches()) { // Se cumple el patrón del número de serie
+        cantidadPatronesValidos++;
+        // Extraemos cada grupo
+        disponibilidad= acoplamiento.group(1);
+        tipo= acoplamiento.group(2);
+        identificador= acoplamiento.group(3);
+        control= acoplamiento.group(4);
+        // Comprobamos si la letra de control es correcta
+        int sumaDigitos=0;
+        for (int j=0; j&lt;identificador.length(); j++) {
+            sumaDigitos += (int)(identificador.charAt(j)-'0');
+        }
+        char codigoCalculado=  (char) ('A' + (sumaDigitos % 10));
+        // Otra opcion char codigoCalculado= letrasControl[sumaDigitos % 10];
+
+        // Añadimos la descripción al array de resultados
+        if (codigoCalculado == control.charAt(0)) { // Si el codigo de control es correcto
+            cantidadCodigosValidos++;
+            String descripcion= "";
+            switch (tipo) {
+                case "T":
+                    descripcion += "Tablet";
+                    break;
+                case "P":
+                    descripcion += "Portátil";
+                    break;
+                case "M":
+                    descripcion += "Móvil";
+                    break;
+            }
+            switch (disponibilidad) {
+                case "S":
+                    descripcion += " (En stock)";
+                    break;
+                case "A":
+                    descripcion += " (Agotado)";
+                    break;                        
+            }
+            descripcionProductos[i]= descripcion;
+        } else { // Si el código no es correcto
+            descripcionProductos[i]= "Código inválido";
+        }
+
+    } else {  // Si el patrón no es correcto
+        descripcionProductos[i]= "Patrón NO válido";                
+    }
+}
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println ();
+System.out.println("RESULTADO");
+System.out.println("---------");
+for ( int i=0; i &lt; productos.length ; i++ ) {
+     System.out.printf ("%-12s %s\n", productos[i]+":", descripcionProductos[i]);
+}
+
+System.out.println();
+System.out.println("Número de productos con patrón válido: ");
+System.out.printf ("%d productos (%d con código válido y %d con código inválido)\n",
+                       cantidadPatronesValidos, cantidadCodigosValidos, 
+                       cantidadPatronesValidos - cantidadCodigosValidos);
+</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id415">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 6: ¡línea!</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta415_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b415" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 180px;"><a href="CartonBingo.png" title="Ampliar imagen (se abre en una nueva ventana)." target="_blank" class="imagen_ampliable"><img src="CartonBingo.png" alt="Cartón de juego del bingo de nueve filas por cuatro columnas con una serie de números" title="CartonBingo" style="float: right;" width="240" height="268" /></a></div>
+<p>Estamos modelando una aplicación para simular el juego del <strong>bingo</strong> y nos ha tocado implementar un <strong>comprobador de líneas para los cartones</strong>. Los cartones de nuestro bingo tienen una estructura de <strong>nueve filas</strong> por <strong>cuatro columnas</strong> con <strong>diecinueve números</strong> en cada cartón.</p>
+<p>Vamos a modelar los cartones usando un <strong>array de dos dimensiones de números enteros</strong> donde la primera dimensión representará las filas del cartón. Será por tanto un array base de nueve elementos (la primera dimensión). Al tratarse de un array bidimensional, los elementos de la primera dimensión serán a su vez referencias a otros arrays cuyo tamaño máximo será de cuatro, pues estarán representando a cada una de las columnas o elementos que hay en cada fila. Estos arrays sí albergarán en su interior números enteros. No todos los arrays de la segunda dimensión serán de tamaño cuatro, pues no todas las filas del cartón contienen los cuatro elementos, tal y como puedes apreciar en la figura de ejemplo.</p>
+<p>Esto significa que no vamos a tener un array "bidimensional regular" con nueve subarrays de cuatro elementos cada uno en forma de rectángulo "perfecto", pues algunos tendrán cuatro elementos, pero otros tendrán menos. No se trata de una tabla de nueve por cuatro con treinta y seis elementos. Por tanto tendrás que declarar el array apropiadamente para rellenarlo con la disposición que aparece en la ilustración de ejemplo.</p>
+<p>Por otro lado, la representación de las bolas que han salido del bombo hasta el momento actual la modelaremos mediante un array unidimensional de números enteros. Vamos a suponer que las bolas que han salido hasta el momento son las siguientes: <strong>1, 2, 5, 10, 11, 12, 14, 15, 22, 55, 56, 57, 59, 60, 61, 66, 78, 89, 90</strong>.</p>
+<p>El programa deberá generar a partir de esa información un array de <code>String</code> que contenga un elemento por cada línea. Si esa línea ya se ha completado, se colocará el texto <code>"línea"</code> en ese elemento. Si aún faltan números por tachar, entonces se colocará el texto <code>"no"</code>.</p>
+<p>Para implementar nuestro prototipo tendrás que escribir un programa en Java que lleve a cabo las siguientes operaciones:</p>
+<ol>
+<li><strong>Declarar un array unidimensional de números enteros</strong> que represente las <strong>bolas que han salido hasta el momento</strong>. Contendrá la lista de números que se nos ha indicado.</li>
+<li><strong>Declarar un array bidimensional de números enteros</strong> para representar a un <strong>cartón</strong> específico con las normas que se nos han explicado. Los números que contendrá el array serán los indicados en la estructura irregular de nueve filas y cuatro columnas de la ilustración anterior.</li>
+<li><strong>Declarar un array unidimensional de <code>String</code></strong> para almacenar los resultados (si se ha producido línea o no).</li>
+<li><strong>Mostrar por pantalla el contenido del cartón</strong>. La forma más sencilla es mediante la herramienta <code>Arrays.deepToString</code>.</li>
+<li><strong>Mostrar por pantalla la lista de bolas que han salido</strong> hasta el momento. La forma más sencilla es mediante la herramienta <code>Arrays.ToString</code>.</li>
+<li><strong>Reservar espacio para el array de resultados</strong>. Tendrá que ser del mismo tamaño que la cantidad de filas del cartón. Procura <strong>no usar un literal</strong>.</li>
+<li><strong>Recorrer cada fila del cartón</strong> (primera dimensión del array bidimensional):<ol>
+<li><strong>para cada fila</strong>, habrá que<strong> recorrer todos los números que contenga</strong> (segunda dimensión del array) y <strong>comprobar si ya han salido</strong> o no;</li>
+<li><strong>si han salido todos</strong>, se marca esa fila como <code>"línea"</code> en el array de resultados;</li>
+<li><strong>si no han salido todos</strong>, se "marcará" como <code>"no"</code>.</li>
+</ol></li>
+<li><strong>Mostrar por pantalla el array de resultados</strong> indicando las líneas que se han marcado y <strong>cuántas</strong> son.</li>
+</ol>
+<p>Dado que no hay que introducir datos de entrada y todos los valores son fijos, la ejecución de tu programa siempre deberá proporcionar el mismo resultado. Aquí tienes una muestra de cómo podría quedar:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>BUSCADOR DE LÍNEAS EN UN CARTÓN DE BINGO
+----------------------------------------
+Cartón: [[1, 2, 5, 9], [11, 15], [22, 29], [34], [47, 49], [55, 59, 60], [61], [71, 75], [88, 90]]
+Números que ya han salido: [1, 2, 5, 10, 11, 12, 14, 15, 22, 55, 56, 57, 59, 60, 61, 66, 78, 89, 90]
+
+RESULTADO
+---------
+Resultado de la búsqueda de líneas en el cartón de bingo:
+[no, línea, no, no, no, línea, línea, no, no]
+Número de líneas obtenidas: 3</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b415" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b415text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b415" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b415" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+
+// Variables de entrada
+int[] arrayBolasExtraidas = {1, 2, 5, 10, 11, 12, 14, 15, 22, 55, 56, 57, 59, 60, 61, 66, 78, 89, 90};
+int[][] arrayCarton = {
+    {1, 2, 5, 9},
+    {11, 15},
+    {22, 29},
+    {34},
+    {47, 49},
+    {55, 59, 60},
+    {61},
+    {71, 75},
+    {88, 90}
+};
+
+// Variables de salida
+String[] arrayResultado;
+int numLineas=0;
+
+// Variables auxiliares
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("BUSCADOR DE LÍNEAS EN UN CARTÓN DE BINGO");
+System.out.println("----------------------------------------");
+System.out.printf ("Cartón: %s\n", Arrays.deepToString (arrayCarton));
+System.out.printf ("Números que ya han salido: %s\n", Arrays.toString (arrayBolasExtraidas));
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------  
+// Reservamos espacio para el array de resultados (obteniendo el número de filas que tenga el cartón)
+arrayResultado = new String[arrayCarton.length];  
+for (int fila = 0; fila &lt; arrayCarton.length ; fila++) { // Recorremos cada fila
+    boolean lineaPosible= true;
+    arrayResultado[fila]= "no";  // En principio no hay línea salvo que se demuestre lo contrario (coincidencia de todos los números)
+    for (int columna=0; columna&lt; arrayCarton[fila].length &amp;&amp; lineaPosible; columna++) { // Recorremos todas las columnas de cada fila
+        boolean encontrado= false;
+        for (int i = 0; i &lt; arrayBolasExtraidas.length &amp;&amp; !encontrado; i++) { // Comparamos el contenido de la columna con los números ya aparecidos
+             encontrado= arrayCarton[fila][columna] == arrayBolasExtraidas[i];
+        }
+        lineaPosible= lineaPosible &amp; encontrado;  // En cuanto no se encuentre un número ya no hay línea en esa fila
+    }
+    if (lineaPosible) {  // Si todos los números han sido encontrados
+        arrayResultado[fila]= "línea";
+        numLineas++;
+    }
+}
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println();
+System.out.println("RESULTADO");
+System.out.println("---------");
+System.out.printf("Resultado de la búsqueda de líneas en el cartón de bingo:\n%s\n",
+        Arrays.toString(arrayResultado));
+System.out.printf("Número de líneas obtenidas: %d\n", numLineas);
+</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id416">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 7: sopa de letras</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta416_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b416" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 280px;"><a href="SopaLetras.png" title="Sopa de letras" target="_blank" class="imagen_ampliable"><img src="SopaLetras.png" alt="Sopa de letras de tamaño 5x5" title="Sopa de letras" style="float: right;" width="240" height="170" /></a></div>
+<p>Nuestro siguiente encargo está relacionado con el famoso pasatiempo de las "<em>Sopas de letras</em>". Nos han pedido que ideemos un mecanismo para averiguar si las palabras contenidas en una lista se encuentran o no en una determinada sopa. Para simplificar, solo vamos a realizar búsquedas en horizontal y de izquierda a derecha.</p>
+<p>Para representar la <strong>sopa de letras</strong> vamos a usar un <strong>array bidimensional de <code>char</code> de tamaño 5x5</strong>. Esta vez sí será completamente regular (un rectángulo "perfecto"). El contenido será el de la ilustración adjunta. Las letras en la sopa estarán todas en mayúsculas. Numeraremos las filas y las columnas partiendo del cero, de manera que irán desde 0 hasta 4.</p>
+<p>La <strong>lista de palabras</strong> será representada mediante un <strong>array de <code>String</code></strong>. Las palabras de la lista serán "<em>Hola</em>", "<em>sol</em>", "<em>AMOR</em>", "<em>ARA</em>", "<em>Casa</em>", "<em>dos</em>". Como puedes observar a veces se usan mayúsculas y en otras ocasiones minúsculas. Nuestro programa no debería tener problema con eso.</p>
+<p>El programa deberá generar a partir de esa información un array de <code>String</code> del mismo tamaño que la lista de palabras. En cada <strong><code>String</code></strong> de ese array se almacenará lo siguiente:</p>
+<ul class="lista_verificacion">
+<li>el texto <code>"no"</code>, si la palabra no se encuentra horizontalmente en la sopa;</li>
+<li>el texto <code>"fila xxx columna yyy"</code>, si la palabra sí se encuentra horizontalmente en la sopa, en la fila xxx y columna yyy.</li>
+</ul>
+<p>Para implementar nuestro prototipo tendrás que escribir un programa en Java que lleve a cabo las siguientes operaciones:</p>
+<ol>
+<li><strong>Declarar un array unidimensional de <strong><code>String</code></strong></strong> que represente la <strong>lista de palabras que se desean buscar en la sopa</strong>. Contendrá la lista de palabras que se nos ha indicado.</li>
+<li><strong>Declarar un array bidimensional de caracteres (tipo <strong><code>char</code></strong>)</strong> para representar la <strong>sopa de letras</strong>. Los caracteres que contendrá el array serán las letras indicadas en la ilustración anterior.</li>
+<li><strong>Declarar un array unidimensional de <code>String</code></strong> para almacenar los resultados.</li>
+<li><strong>Mostrar por pantalla el contenido de la sopa de letras en forma de tabla</strong>. La forma más sencilla es mediante un doble bucle que recorra filas y columnas.</li>
+<li><strong>Mostrar por pantalla la lista de palabras </strong>que van a ser buscadas en la sopa. La forma más sencilla es mediante la herramienta <code>Arrays.ToString</code>.</li>
+<li><strong>Reservar espacio para el array de resultados</strong>. Tendrá que ser del mismo tamaño que la cantidad de palabras que van a ser buscadas. Procura <strong>no usar un literal</strong>.</li>
+<li><strong>Explorar la sopa de letras para buscar horizontalmente cada una de las palabras de la lista</strong>. Para cada palabra, se almacenará en el array de resultados:<br /><ol>
+<li><strong></strong>el texto <code>"no"</code>, si la palabra no se encuentra horizontalmente en la sopa;</li>
+<li><strong></strong>el texto <code>"fila xxx columna yyy"</code>, si la palabra sí se encuentra horizontalmente en la sopa, ubicada en la fila xxx, columna yyy.</li>
+</ol></li>
+<li><strong>Mostrar por pantalla el array de resultados</strong> indicando las palabras que se han encontrado y <strong>cuántas</strong> son.</li>
+</ol>
+<p>Dado que no hay que introducir datos de entrada y todos los valores son fijos, la ejecución de tu programa siempre deberá proporcionar el mismo resultado. Aquí tienes una muestra de cómo podría quedar:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>BUSCADOR DE PALABRAS EN HORIZONTAL
+----------------------------------
+Sopa de letras:
+H J S O L 
+O E C A U 
+L Y K D A 
+A A M O R 
+V C A S A 
+Lista de palabras de prueba:
+[Hola, sol, AMOR, ARA, Casa, dos]
+
+RESULTADO
+---------
+Resultado de la búsqueda horizontal:
+[no, fila 0 columna 2, fila 3 columna 1, no, fila 4 columna 1, no]
+Número de palabras encontradas: 3</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b416" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b416text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b416" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b416" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+// Variables de entrada
+String[] arrayEntrada = {"Hola", "sol", "AMOR", "ARA", "Casa", "dos"};
+
+// Variables de salida
+String[] arrayResultado;
+int numPalabrasEncontradas=0;
+
+char[][] arrayLetras = {
+    {'H', 'J', 'S', 'O', 'L'},
+    {'O', 'E', 'C', 'A', 'U'},
+    {'L', 'Y', 'K', 'D', 'A'},
+    {'A', 'A', 'M', 'O', 'R'},
+    {'V', 'C', 'A', 'S', 'A'}
+};
+
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("BUSCADOR DE PALABRAS EN HORIZONTAL");
+System.out.println("----------------------------------");
+System.out.println("Sopa de letras:");
+for (int fila = 0; fila &lt; arrayLetras.length; fila++) {
+    for (int columna = 0; columna &lt; arrayLetras[fila].length; columna++) {
+        char letra= arrayLetras[fila][columna];
+        System.out.printf ("%c ", letra);
+    }
+    System.out.println();
+}
+System.out.println("Lista de palabras de prueba:");
+System.out.println(Arrays.toString(arrayEntrada));
+
+//----------------------------------------------
+//                Procesamiento 
+//----------------------------------------------
+arrayResultado = new String[arrayEntrada.length];
+for (int i = 0; i &lt; arrayEntrada.length; i++) {  // Recorremos cada palabra del array de entrada
+    String palabra= arrayEntrada[i].toUpperCase();
+    boolean encontrada= false;
+    arrayResultado[i]= "no";
+    for (int fila = 0; fila &lt; arrayLetras.length &amp;&amp; !encontrada; fila++) { // Recorremos cada fila
+        String linea= new String (arrayLetras[fila]); // Obtengo la fila completa (todas sus columnas o celdas) en forma de String 
+        encontrada= linea.contains(palabra); // Y buscamos la palabra en la fila
+        if (encontrada) { // Si la pabra está contenida
+            numPalabrasEncontradas++;
+            int columna= linea.indexOf(palabra);
+            arrayResultado[i]= String.format ("fila %d columna %d", 
+                    fila, columna); // Escribimos su ubicación y sustituimos el "no"
+        }
+    }
+}
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println();
+System.out.println("RESULTADO");
+System.out.println("---------");
+System.out.printf("Resultado de la búsqueda horizontal:\n%s\n",
+        Arrays.toString(arrayResultado));
+System.out.printf ("Número de palabras encontradas: %d\n", numPalabrasEncontradas);</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id417">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio 8: butacas de un teatro</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta417_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b417" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 280px;"><img src="auditorium-86197_640.jpg" alt="Imagen de un teatro/auditorio" title="Teatro" style="float: right;" width="280" height="186" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/auditorio-teatro-arquitectura-86197/" target="_blank" class="author" title="Acceder a la web de descarga de la imagen de David Mark en Pixabay en pixabay">David Mark</a> <span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span><span class="sep">)</span></span></div>
+</div>
+<p>Las <strong>butacas de un teatro</strong> tienen la siguiente disposición en forma de triángulo:</p>
+<ul class="lista_verificacion">
+<li>primera fila (la más cercana al escenario): cuatro butacas;</li>
+<li>segunda fila: seis butacas;</li>
+<li>tercera fila: ocho butacas;</li>
+<li>y así sucesivamente hasta la última fila, aumentando dos butacas más en cada fila.</li>
+</ul>
+<p style="text-align: center;"><img src="PlanoButacas.png" alt="Disposición de butacas en forma de triángulo" title="Disposición de butacas" width="280" height="93" /></p>
+<p>El <strong>precio de las butacas</strong> tendrá la siguiente estructura:</p>
+<ul class="lista_verificacion">
+<li><strong>las más baratas serán las de la última fila</strong>, a 10,50 euros, salvo las de los dos extremos, que costarán cincuenta céntimos menos (10,00);</li>
+<li>según vayamos avanzando filas, acercándonos al escenario, <strong>el precio de la butaca se incrementará en cincuenta céntimos</strong>, teniendo en cuenta que <strong>la butaca de cada extremo es siempre cincuenta céntimos más barata</strong> que el precio general de esa fila.</li>
+</ul>
+<p>Debes implementar un programa en Java que:</p>
+<ol>
+<li>En su <strong>entrada de datos</strong>:<ol>
+<li>solicite por teclado el <strong>número de filas del teatro</strong> (entre 2 y 50). Hasta que no se introduzca una entrada válida el programa insistirá hasta que se introduzca correctamente. El programa no puede romperse porque se introduzcan caracteres incompatibles con los números enteros;</li>
+<li>reserve espacio en memoria para un <strong>array bidimensional de números reales</strong> con la estructura de butacas de ese teatro: la primera fila con cuatro elementos, la segunda fila con seis elementos, la tercera con ocho, <abbr title="etcétera">etc</abbr>. Como puedes imaginar, no se trata en absoluto de un array bidimensional "regular" en forma de tabla, pues cada fila tiene un número diferente de columnas;</li>
+<li>una vez que dispongamos de ese array, que estará vacío, <strong>muestre por pantalla su contenido y estructura</strong> utilizando la herramienta <code>Arrays.deepToString</code>.</li>
+</ol></li>
+<li>En su <strong>procesamiento</strong>:
+<ul class="lista_verificacion">
+<li><strong>rellene el array de butacas</strong> introduciendo en cada casilla el precio correspondiente a cada butaca.</li>
+</ul>
+</li>
+<li>En su <strong>salida de resultados</strong>:
+<ul class="lista_verificacion">
+<li><strong>recorra el array de butacas ya relleno</strong> y muestre<strong> por pantalla</strong>, fila por fila, comenzando por la más cara y cercana al escenario, <strong>la estructura y precios de todas las butacas</strong>. Los precios de las butacas en cada fila deben aparecer con dos decimales y separados por un espacio.</li>
+</ul>
+</li>
+</ol>
+<p>Aquí tienes un ejemplo de ejecución:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre class="  language-latex"><code class="  language-latex">BUTACAS DE UN TEATRO
+--------------------
+Introduzca el número de filas (2-50): x
+Introduzca el número de filas (2-50): 1
+Introduzca el número de filas (2-50): -1
+Introduzca el número de filas (2-50): 51
+Introduzca el número de filas (2-50): 2
+Reservado array de 2 filas, cada fila con una cantidad de elementos diferente:
+[[0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
+
+RESULTADO: ESTRUCTURA DE BUTACAS Y PRECIOS POR FILAS
+----------------------------------------------------
+Fila  1 ( 4 butacas): 10,50 11,00 11,00 10,50 
+Fila  2 ( 6 butacas): 10,00 10,50 10,50 10,50 10,50 10,00 </code></pre>
+</div>
+</div>
+<p>Y aquí otro:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>BUTACAS DE UN TEATRO
+--------------------
+Introduzca el número de filas (2-50): 5
+Reservado array de 5 filas, cada fila con una cantidad de elementos diferente:
+[[0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],  ...  ]
+
+RESULTADO: ESTRUCTURA DE BUTACAS Y PRECIOS POR FILAS
+----------------------------------------------------
+Fila  1 ( 4 butacas): 12,00 12,50 12,50 12,00 
+Fila  2 ( 6 butacas): 11,50 12,00 12,00 12,00 12,00 11,50 
+Fila  3 ( 8 butacas): 11,00 11,50 11,50 11,50 11,50 11,50 11,50 11,00 
+Fila  4 (10 butacas): 10,50 11,00 11,00 11,00 11,00 11,00 11,00 11,00 11,00 10,50 
+Fila  5 (12 butacas): 10,00 10,50 10,50 10,50 10,50 10,50 10,50 10,50 10,50 10,50 10,50 10,00 
+</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b417" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b417text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b417" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b417" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+// Constantes
+final int MIN_FILAS = 2;
+final int MAX_FILAS = 50;
+final double PRECIO_BASE= 10.50;
+
+// Variables de entrada
+int numFilas;
+
+// Variables de salida
+double[][] arrayButacas;
+
+// Variables auxiliares
+double precioFila; 
+
+// Clase Scanner para petición de datos por teclado
+Scanner teclado = new Scanner(System.in);
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("BUTACAS DE UN TEATRO");
+System.out.println("--------------------");
+// 1. Solicitamos por teclado el número de butacas
+do {
+    System.out.printf ("Introduzca el número de filas (%d-%d): ",
+            MIN_FILAS, MAX_FILAS);
+    try {
+        numFilas = teclado.nextInt();
+    } catch (InputMismatchException e) {
+        numFilas = 0;
+        teclado.nextLine();
+    }
+} while (numFilas &lt; MIN_FILAS || numFilas &gt; MAX_FILAS);
+
+// 2. Reservamos espacio para el array
+
+// 2.1. Reservamos espacio para la primera dimensión (cantidad de filas)
+arrayButacas = new double[numFilas][];
+
+// 2.2. Resevamos espacio para cada fila (no es una tabla "regular")
+for (int i = 0; i &lt; arrayButacas.length; i++) {
+    arrayButacas[i] = new double[4 + i * 2];
+}
+
+// 2.3. Mostramos por pantalla el contenido del array que se acaba de crear
+// usando Arrays.deepToString
+System.out.printf ("Reservado array de %d filas, cada fila con una cantidad de elementos diferente:\n",
+        numFilas);
+System.out.println (Arrays.deepToString(arrayButacas));
+System.out.println (Arrays.toString(arrayButacas));
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+
+// 3. Rellenamos el array con los precios
+for (int fila =0; fila &lt;arrayButacas.length ; fila++) {  // Recorremos filas
+    // Empezamos por las más caras (la cúspide del triángulo): PRECIO_BASE + (numFilas-1)*0.50
+    precioFila= PRECIO_BASE + (numFilas-1-fila)*0.50; // Calculamos precio de butaca             
+    // Conforme vayamos avanzando filas iremos restando 0.50 por fila
+    for (int butaca = 0; butaca &lt; arrayButacas[fila].length; butaca++) { // Recorremos butacas               
+        arrayButacas[fila][butaca] = precioFila;   
+    }
+    // Precios de los extremos (-0,50)
+    arrayButacas[fila][0] -= 0.50;
+    arrayButacas[fila][arrayButacas[fila].length - 1] -= 0.50;
+}
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println();
+System.out.println("RESULTADO: ESTRUCTURA DE BUTACAS Y PRECIOS POR FILAS");
+System.out.println("----------------------------------------------------");
+
+// 3. Recorremos el array de precios ya relleno
+for (int i = 0; i &lt; arrayButacas.length; i++) {
+    System.out.printf("Fila %2d (%2d butacas): ", i+1, arrayButacas[i].length);
+    for (int j = 0; j &lt; arrayButacas[i].length; j++) {
+        System.out.printf("%.2f ", arrayButacas[i][j]);
+    }
+    System.out.printf("\n");
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b417" class="block iDevice_content">
+<p>Añade una línea de código para que se muestre también el contenido del array usando la herramienta <code>Arrays.deepToString</code>. Para cinco filas debería obtenerse una salida del siguiente tipo:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>[
+  [12.0, 12.5, 12.5, 12.0],  [11.5, 12.0, 12.0, 12.0, 12.0, 11.5],  [11.0, 11.5, 11.5, 11.5, 11.5, 11.5, 11.5, 11.0], 
+  [10.5, 11.0, 11.0, 11.0, 11.0, 11.0, 11.0, 11.0, 11.0, 10.5],  [10.0, 10.5, 10.5, 10.5, 10.5, 10.5, 10.5, 10.5, 10.5, 10.5, 10.5, 10.0]
+]</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback1b417" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b417text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b417" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b417" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Bastaría con añadir esto al final:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Contenido del array usando la herramienta Arrays.deepToString
+System.out.printf("\nUsando Arrays.deepToString:\n");
+System.out.printf ("%s\n", Arrays.deepToString (arrayButacas));</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion2b417" class="block iDevice_content">
+<p>Intenta ahora que el contenido de la tabla se muestre por pantalla en forma de "triángulo", tal y como sería la disposición física de las butacas en el teatro. Un ejemplo de salida para cinco filas podría ser algo así:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Fila  1:                               12,00 12,50 12,50 12,00 
+Fila  2:                         11,50 12,00 12,00 12,00 12,00 11,50 
+Fila  3:                   11,00 11,50 11,50 11,50 11,50 11,50 11,50 11,00 
+Fila  4:             10,50 11,00 11,00 11,00 11,00 11,00 11,00 11,00 11,00 10,50 
+Fila  5:       10,00 10,50 10,50 10,50 10,50 10,50 10,50 10,50 10,50 10,50 10,50 10,00 </code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback2b417" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b417text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b417" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback2b417" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso tendríamos que "elaborar" un poco más el doble bucle que muestra los precios. Dentro del bucle que recorre filas podríamos ir "pintando" espacios antes de pintar los precios de las butacas de esa fila. Eso podríamos hacerlo con un primer bucle antes de mostrar los precios. Ese bucle irá pintando menos espacios conforme se vaya avanzando de fila. En las primeras se pintarán muchos espacios pues hay pocas butacas y se empiezan a pintar butacas más cerca del centro (la punta del triángulo). En las últimas cada vez menos. Finalmente, no habría que pintar ningún espacio en la última fila.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Pintamos espacios antes de pintar las butacas
+// Según avancemos de fila se irán pintando menos espacios
+for (int j = 0; j &lt; (12 * arrayButacas.length) / 2 - i * 2 * 12/ 4 ; j++) {
+    System.out.printf(" ");
+}</code></pre>
+</div>
+</div>
+<p>Una vez pintados esos espacios, se puede proceder a pintar los precios, como hacíamos antes:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for (int j = 0; j &lt; arrayButacas[i].length; j++) {
+    System.out.printf("%.2f ", arrayButacas[i][j]);
+}</code></pre>
+</div>
+</div>
+<p>El proceso completo podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Para mostrar la estructura de butacas de forma "bonita"
+System.out.printf ("\nCon una salida un poco más \"estética\":\n");
+for (int i = 0; i &lt; arrayButacas.length; i++) {
+    System.out.printf("Fila %2d: ", i+1);
+    for (int j = 0; j &lt; (12 * arrayButacas.length) / 2 - i * 2 * 12/ 4 ; j++) {
+        System.out.printf(" ");
+    }
+
+    for (int j = 0; j &lt; arrayButacas[i].length; j++) {
+        System.out.printf("%.2f ", arrayButacas[i][j]);
+    }
+    System.out.printf("\n");
+}</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="anexo_i_formateado_de_cadenas_en_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

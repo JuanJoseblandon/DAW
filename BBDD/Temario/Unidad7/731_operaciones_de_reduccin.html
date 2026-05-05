@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.3.1. Operaciones de reducción | Estructuras de datos internas (memoria) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-71"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructuras de datos internas (memoria)</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos internas (memoria)</a></li>
+   <li><a href="1_clases_y_mtodos_genricos_i.html" class="daddy">1.- Clases y métodos genéricos (I)</a>
+   <ul class="other-section">
+      <li><a href="11_clases_y_mtodos_genricos_ii.html" class="no-ch">1.1.- Clases y métodos genéricos (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="2__introduccin_a_las_colecciones.html" class="no-ch">2.-  Introducción a las colecciones</a></li>
+   <li><a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="daddy">3.- Conjuntos (I).  ¿Qué son y cómo se declaran? HashSet</a>
+   <ul class="other-section">
+      <li><a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="no-ch">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</a></li>
+      <li><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="no-ch">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</a></li>
+      <li><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="no-ch">3.3.- Conjuntos (IV). Combinando datos de varias colecciones</a></li>
+      <li><a href="34_conjuntos_v_ordenando_sus_elementos.html" class="no-ch">3.4.- Conjuntos (V). Ordenando sus elementos</a></li>
+      <li><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="no-ch">3.5.- Conjuntos (VI). Ejemplos de uso.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_listas_i_definicin_y_diferencias_con_los_conjuntos.html" class="daddy">4.- Listas (I). Definición y diferencias con los conjuntos</a>
+   <ul class="other-section">
+      <li><a href="41_listas_ii_cmo_se_usan.html" class="no-ch">4.1.- Listas (II). ¿Cómo se usan?</a></li>
+      <li><a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="no-ch">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</a></li>
+      <li><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="no-ch">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</a></li>
+   </ul>
+   </li>
+   <li><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="daddy">5.- Conjuntos de pares clave/valor o diccionarios</a>
+   <ul class="other-section">
+      <li><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="no-ch">5.1.- Recorrido de los elementos de un diccionario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="daddy">6.- Iteradores (I). ¿Qué son y cómo se usan?</a>
+   <ul class="other-section">
+      <li><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="no-ch">6.1.- Iteradores (II). ¿Qué características debemos considerar?</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="current-page-parent daddy">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</a>
+   <ul>
+      <li><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="no-ch">7.1.- Algoritmos (II). Ordenando los elementos de la colección</a></li>
+      <li><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="no-ch">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</a></li>
+      <li class="current-page-parent"><a href="73_algoritmos_iv_operaciones_agregadas.html" class="current-page-parent daddy">7.3. Algoritmos (IV). Operaciones agregadas</a>
+      <ul>
+         <li id="active"><a href="731_operaciones_de_reduccin.html" class="active no-ch">7.3.1. Operaciones de reducción</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I. Ejercicios resueltos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="73_algoritmos_iv_operaciones_agregadas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_i_ejercicios_resueltos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.3.1. Operaciones de reducción</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id30">
+<div class="iDevice emphasis0">
+<div id="ta30_154" class="block iDevice_content">
+<div class="exe-figure exe-image float-left license-pd" style="width: 200px;"><img src="water-306142_640.png" alt="Bombilla con un filamento que forma la palabra idea." title="¡Idea!, se me encendió la bombilla" width="100" height="110" />
+<div class="figcaption"><a href="https://pixabay.com/es/vectors/agua-filtrar-embudo-306142/" target="_blank" class="author" title="Acceder a la imagen de Clker-Free-Vector-Images en Pixabay. (Se abre en una nueva ventana)">Clker-Free-Vector-Images </a><span class="license"><span class="sep">(<a href="https://pixabay.com/es/service/license/" target="_blank" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" rel="noopener">Licencia Pixabay</a>)</span></span></div>
+</div>
+<p>Además de las operaciones predefinidas (suma, conteo, promedio, máximo, <abbr title="etcétera">etc.</abbr>) sobre colecciones, la <acronym title="Application Programming Interface">API</acronym> Streams permite realizar <strong>operaciones personalizadas</strong> conocidas como <strong>reducciones</strong> mediante el uso del método <code>reduce</code>. Este método toma una función que combina dos elementos en uno, permitiendo una gran flexibilidad en la forma de procesar los datos.</p>
+<p>Aquí tienes un ejemplo donde llevamos a cabo un par de reducciones para una lista de palabras:</p>
+<p></p>
+<ol>
+<li>La <strong>concatenación</strong> de todas las palabras.</li>
+<li>La localización de la <strong>palabra más larga</strong>.</li>
+</ol>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.util.Arrays;
+import java.util.List;
+
+public class EjemploReduccion {
+    public static void main(String[] args) {
+        List&lt;String&gt; listaPalabras = Arrays.asList("Ejemplo", "de", "reducción", "en", "Java");
+
+        System.out.println ("EJEMPLO DE OPERACIONES DE REDUCCIÓN");
+        System.out.println ("-----------------------------------");
+        
+        System.out.printf ("Lista inicial de palabras: %s\n", listaPalabras);
+        
+        // Concatenar todos los elementos en una sola cadena
+        String concatenadas = listaPalabras.stream()
+                                   .reduce("", (a, b) -&gt; a + b);
+        System.out.printf("Todas las palabras concatenadas: %s\n", concatenadas);
+
+        // Encontrar el elemento más largo
+        String palabraMasLarga = listaPalabras.stream()
+                                  .reduce((a, b) -&gt; a.length() &gt; b.length() ? a : b)
+                                  .orElse("");
+        System.out.println("Palabra más larga: " + palabraMasLarga);
+    }
+}</code></pre>
+</div>
+</div>
+<p>En el primer caso, la operación de reducción que se lleva a cabo es la <strong>concatenación</strong> (+):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>listaPalabras.stream().reduce("", (a, b) -&gt; a + b);</code></pre>
+</div>
+</div>
+<p>En el segundo caso es la <strong>elección de la palabra más larga</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>listaPalabras.stream().reduce((a, b) -&amp;gt; a.length() &amp;gt; b.length() ? a : b).orElse("");</code></pre>
+</div>
+</div>
+<p>El resultado que debería aparecer sería algo así:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>EJEMPLO DE OPERACIONES DE REDUCCIÓN
+-----------------------------------
+Lista inicial de palabras: [Ejemplo, de, reducción, en, Java]
+Todas las palabras concatenadas: EjemplodereducciónenJava
+Palabra más larga: reducción</code></pre>
+</div>
+</div>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id31">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta31_128" class="block iDevice_content">
+<p>En el siguiente enlace puedes encontrar más información sobre cómo utilizar <strong>operaciones de reducción en Java</strong>:</p>
+<ul>
+<li class="lista_verificacion"><a href="https://docs.oracle.com/javase/tutorial/collections/streams/reduction.html" title="Acceder a la página &quot;Reduction&quot; (se abre en una ventana nueva)." target="_blank" class="html">The Java Tutorials. Reduction</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="73_algoritmos_iv_operaciones_agregadas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_i_ejercicios_resueltos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

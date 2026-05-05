@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.1.- Conversiones entre cadenas y tipos numéricos (II). | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-76"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li class="current-page-parent"><a href="2__cadenas_de_caracteres.html" class="current-page-parent daddy">2.-  Cadenas de caracteres.</a>
+   <ul>
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="current-page-parent daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul>
+         <li id="active"><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="active no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_la_clase_stringtokenizer_en_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id308">
+<div class="iDevice emphasis0">
+<div id="ta308_85" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="board-ge18b5b485_640.jpg" alt="Pizarra con fórmulas matemáticas" title="Fórmulas" style="float: right;" width="240" height="160" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/tablero-matem%c3%a1ticas-escuela-4855963/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de athree23 en Pixabay (se abre en una nueva ventana).">athree23</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Ya hemos visto cómo obtener una representación textual de un valor numérico mediante diferentes técnicas (de manera automática cuando es posible, mediante métodos estáticos de las clases "envoltorio" o mediante el método estático <code>format</code> de la clase <code>String</code>). Ahora es el momento de plantearnos la operación inversa: <strong>obtener valores numéricos</strong> (<code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>, <code>float</code> o <code>double</code>) <strong>a partir de textos</strong> (objetos <code>String</code>) <strong>que supuestamente contengan números</strong>. Decimos "supuestamente" porque a priori no estaremos seguros de si lo que contiene un texto es realmente un número correctamente formateado o no. Por eso normalmente habrá que realizar un análisis previo del texto para comprobar que realmente contiene un número (entero corto o largo, número real con decimales, <abbr title="etcétera">etc</abbr>.).</p>
+<p>Del mismo modo que todas las clases "envoltorio" de tipos numéricos (<code>Byte, Short, Integer, Long, Float</code>, <code>Double</code>) disponían de uno o varios métodos estáticos (por ejemplo <code>toString</code>) que permitían obtener la representación textual de valores numéricos, también disponen de uno o varios métodos que permiten justamente lo contrario: la <strong>obtención de un valor numérico a partir una cadena</strong>.</p>
+<p>Veamos un primer ejemplo:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>String textoInt = "250";
+Integer objetoInteger = Integer.valueOf(textoInt); // Crea un objeto de tipo Integer a partir de un String
+int valInt1 = objetoInteger.intValue();            // Obtiene un valor int a partir de un objeto Integer
+int valInt2 = objetoInteger;                       // Obtiene un valor int a partir de un objeto Integer (automático)
+System.out.printf ("textoInt1 = \"%s\" \nobjetoInteger = %d \nvalInt1 = %d \nvalInt2 = %d\n", 
+        textoInt, objetoInteger, valInt1, valInt2);</code></pre>
+</div>
+</div>
+<p>En este ejemplo podemos observar cómo hemos conseguido, a partir de la cadena <code>"250"</code>, el valor numérico entero 250:</p>
+<ol>
+<li>en la primera línea creamos un objeto <code>String</code> con el texto <code>"250"</code>;</li>
+<li>en la segunda línea creamos un objeto de tipo <code>Integer</code> mediante el método estático "fábrica" <code>valueOf</code> de la clase <code>Integer</code>;</li>
+<li>en la tercera línea obtenemos el valor <code>int</code> que "envuelve" el objeto <code>Integer</code> mediante el método <code>intValue</code>;</li>
+<li lang="en">en la cuarta línea conseguimos lo mismo que en la tercera sin necesidad de invocar al método <code>intValue</code>, pues Java lleva a cabo la operación "unboxing" ("desenvolver" el valor <code>int</code> del "envoltorio" objeto <code>Integer</code>) automáticamente.</li>
+</ol>
+<p>Resumiendo, podríamos haberlo hecho todo en una única línea de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int valInt = Integer.valueOf("250");</code></pre>
+</div>
+</div>
+<p>Hasta aquí todo ha funcionado perfectamente. El problema está cuando lo que hay en la cadena de caracteres no puede ser convertido a un valor numérico. Por ejemplo, imagina que el valor de <code>textoInt</code> es <code>"25x"</code>. ¿Qué crees que sucederá al ejecutar el método <code>Integer.valueOf(textoInt)</code>? Te invitamos a que lo pruebes. Si lo haces, lo más probable es que se lance la excepción <code>NumberFormatException</code>. Y si tu código no está preparado para reaccionar ante esa posible excepción, lo hará la máquina virtual de Java, abortando la ejecución de tu programa de manera brusca e inesperada (algo que debemos siempre evitar).</p>
+<p>Cuando hacíamos una conversión de número a texto no había ningún problema, pues cualquier número puede ser transformado a un texto (un texto "admite" cualquier cosa), pero en el sentido contrario debemos procurar ser más precavidos, pues no todo texto es susceptible de ser interpretado como un valor numérico. Por esta razón, cada vez que intentemos obtener un número a partir de un texto, se tratará de una operación "sensible" y susceptible de fallos y, por tanto, deberá estar encerrada dentro de un bloque <code>try</code>, preparándonos para capturar una posible excepción de tipo <code>NumberFormatException</code>.</p>
+<p>En consecuencia, los ejemplos anteriores deberían estar siempre "protegidos" dentro de un <code>try</code> con un <code>catch</code> ante una posible <code>NumberFormatException</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String textoInt1 = "25e";
+try {
+    Integer objetoInteger = Integer.valueOf(textoInt1); // Crea un objeto de tipo Integer a partir de un String
+    System.out.printf ("Número entero obtenido correctamente: %d\n", objetoInteger);  // No es necesario hacer objetoInteger.intValue()
+} catch (NumberFormatException ex) {
+    System.out.printf ("El texto no cumple el formato de un número entero.\n");
+}
+</code></pre>
+</div>
+</div>
+<p>Solo podríamos "permitirnos" no encerrar este tipo de conversiones en un bloque <code>try-</code><code>catch</code> si estamos plenamente seguros de que el texto es perfectamente "transformable" en un número, algo que habitualmente no podremos garantizar. Por eso lo habitual será "asegurar" este tipo de conversiones en bloques <code>try-</code><code>catch</code>. En el fondo es algo similar a lo que hacemos cuando "aseguramos" las lecturas de teclado de valores numéricos en los objetos de la clase <code>Scanner</code> cuando hacemos <code>nextInt</code>, <code>nextDouble</code>, <code>nextLong</code>, <abbr title="etcétera">etc</abbr>. pues cuando introducimos un supuesto valor numérico por teclado no existe la garantía de que el usuario lo introduzca correctamente. De hecho, es exactamente la misma situación: se intenta transformar un texto introducido por teclado (lo que teclea el usuario, que deben ser caracteres numéricos) en un valor numérico.</p>
+<p>Hasta el momento hemos trabajado con la posibilidad de realizar conversiones de texto a número para el caso de enteros de tipo <code>int</code>, pero puede hacerse también para el resto de enteros (<code>byte</code>, <code>short</code>, <code>long</code>) y para los reales (<code>float</code> y <code>double</code>). Por ejemplo, para el caso de un número real, podríamos hacer algo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String textoDouble = "250.12";
+try {
+    Double objetoDouble = Double.valueOf(textoDouble);
+    System.out.printf ("El texto cumple el formato de un número real. El valor es: %6.2f\n", objetoDouble);
+} catch (NumberFormatException ex) {
+    System.out.printf ("El texto no cumple el formato de un número real.\n");
+}</code></pre>
+</div>
+</div>
+<p>En este caso sabemos que va a funcionar seguro, pues el texto "250.12" cumple las reglas de formato de un número real. Sin embargo, si el valor de esa variable no fuera conocida a priori, debemos disponer de un mecanismo de seguridad que garantice que nuestro programa no va a abortar abruptamente. Por esto necesitamos el bloque <code>try-</code><code>catch</code>. Prueba a leer de teclado distintos posibles valores en lugar de escribir un literal en el código y podrás observar el comportamiento de este ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Scanner teclado = new Scanner (System.in);
+System.out.print ("Introduzca un número real: ");
+String textoDouble = teclado.nextLine();
+try {
+    Double objetoDouble = Double.valueOf(textoDouble);
+    System.out.printf ("El texto cumple el formato de un número real. El valor es: %6.2f\n", objetoDouble);
+} catch (NumberFormatException ex) {
+    System.out.printf ("El texto no cumple el formato de un número real.\n");
+}</code></pre>
+</div>
+</div>
+<p>Del mismo modo que hemos trabajado con la posibilidad de transformar valores numéricos a su representación textual en diferentes bases numéricas (decimal, binaria, hexadecimal, etc.), también podemos hacer algo similar en el proceso de conversión de textos a números. Para ello podemos usar la versión sobrecargada del método <code>valueOf</code>, que admite un segundo parámetro en el que se indica la base de conversión. Por ejemplo:<br /><br /></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Scanner teclado = new Scanner (System.in);
+System.out.print ("Introduzca un número entero en base binaria: ");
+String textoIntBin = teclado.nextLine();
+try {
+    Integer objetoInt = Integer.valueOf(textoIntBin, 2); // Interpretamos el texto como un número entero en base binaria
+    System.out.printf ("El texto cumple el formato de un número entero binario. El valor es: %d\n", objetoInt);
+} catch (NumberFormatException ex) {
+    System.out.printf ("El texto no cumple el formato de un número entero binario.\n");
+}</code></pre>
+</div>
+</div>
+<p>Si probamos el programa e introducimos un número binario correcto:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Introduzca un número entero en base binaria: 1111
+El texto cumple el formato de un número entero binario. El valor es: 15</code></pre>
+</div>
+</div>
+<p>Sin embargo, si introducimos algo que no coincide con el patrón de un número en base binaria, obtendremos un error:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Introduzca un número entero en base binaria: 15
+El texto no cumple el formato de un número entero binario.</code></pre>
+</div>
+</div>
+<p>¿Por qué? Porque aunque el texto <code>"15"</code> es convertible en un número entero en formato decimal, no es convertible en un número entero en formato binario (donde solamente se admiten los caracteres <code>'0'</code> y <code>'1'</code>) y en consecuencia la invocación <code>Integer.valueOf(textoIntBin,2)</code> hará saltar la excepción <code>NumberFormatException</code>.</p>
+<p>Por último, indicarte que además de los métodos <code>valueOf</code>, la clase <code>Integer</code> también dispone de métodos del tipo <code>parseInt</code>, que llevan a cabo un análisis (o "parseo") de un texto para intentar convertirlo en <code>int</code>. Si el análisis no tiene éxito, también se lanzará una excepción de tipo <code>NumberFormatException</code>. Su funcionamiento es muy similar al de <code>valueOf</code>.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id309">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta309_128" class="block iDevice_content">
+<p>Como has podido observar, al igual que sucede en la conversión de números a texto, <strong>dispones de diversas alternativas para la conversión de texto a valor numérico</strong> (<code>valueOf</code>, <code>parseInt</code>, <code>parseDouble</code>, <abbr title="etcétera">etc</abbr>.). Te invitamos una vez más a revisar la documentación javadoc de las distintas clases "envoltorio" para que puedas explorar todas sus posibilidades: <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="Enlace a la documentación de la API para la clase Integer (se abre en una nueva ventana)." target="_blank" class="html">Integer</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="Enlace a la documentación de la API para la clase Double (se abre en una nueva ventana)." target="_blank" class="html">Double</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="Enlace a la documentación de la API para la clase Long (se abre en una nueva ventana)." target="_blank" class="html">Long</a>, <abbr title="etcétera">etc</abbr>.</p>
+<p>Nuestra recomendación es que escojas una forma adecuada de hacer las cosas que para ti resulte sencilla de entender. A partir de ahí, utiliza siempre la misma para que te habitúes a ello.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id310">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta310_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b310" class="block iDevice_content">
+<p>Escribe un programa que solicite por teclado un texto que represente un valor numérico natural (no admitimos negativos) en base hexadecimal. Si la cadena no cumple el formato, debería volver a pedirse hasta que se introduzca algo correcto.</p>
+<p>Una vez se disponga de un valor entero hexadecimal correcto deberá mostrarse por pantalla:</p>
+<ul class="lista_verificacion">
+<li>ese mismo valor expresado en las bases binaria, octal y decimal;</li>
+<li>el número de bits a uno que tiene ese valor;</li>
+<li>el valor del bit 1 más a la derecha;</li>
+<li>el valor del bit 1 más a la izquierda;</li>
+</ul>
+<p>Un ejemplo de ejecución del programa podría ser algo así:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>CONVERSIONES ENTRE TEXTOS Y NÚMEROS
+-----------------------------------
+Introduzca número entero en base hexadecimal: 12.1
+Introduzca número entero en base hexadecimal: hola
+Introduzca número entero en base hexadecimal: ffx
+Introduzca número entero en base hexadecimal: f70
+
+RESULTADO
+---------
+Número original:                       F70
+En binario:                   111101110000
+En decimal:                           3952
+En octal:                             7560
+
+Número de bits a 1: 7
+Valor del bit a 1 más alto: 2048
+Valor del bit a 1 más bajo: 16</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b310" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b310text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b310" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b310" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Tendremos que combinar lo visto hasta el momento, así como consultar la documentación de la clase <code>Integer</code> para descubrir y aprender a utilizar los métodos <code>bitCount</code>, <code>highestOneBit</code> y <code>highestOneBit</code>. El programa podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+
+// Variables de entrada
+String stringNumHex;
+
+// Variables de salida
+int num = 0;
+int numBits1;
+int valorBit1MasAlto;
+int valorBit1MasBajo;
+
+// Variables auxiliares
+boolean entradaCorrecta;
+
+// Clase Scanner para petición de datos de entrada
+Scanner teclado= new Scanner (System.in);
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("CONVERSIONES ENTRE TEXTOS Y NÚMEROS");
+System.out.println("-----------------------------------");
+do {
+    entradaCorrecta = true;
+    System.out.printf ("Introduzca número entero en base hexadecimal: ");
+    stringNumHex = teclado.nextLine();
+    try {
+        num= Integer.parseUnsignedInt(stringNumHex, 16);
+    } catch (NumberFormatException ex) {
+        entradaCorrecta = false;
+    }
+} while (!entradaCorrecta);
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+
+// Contamos bits a 1
+numBits1 = Integer.bitCount(num);
+
+// Bits más alto y más bajo
+valorBit1MasAlto = Integer.highestOneBit(num);
+valorBit1MasBajo = Integer.lowestOneBit(num);
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------        
+System.out.println ();
+System.out.println ("RESULTADO");
+System.out.println ("---------");
+System.out.printf ("Número original:  %24X\n", num);
+System.out.printf ("En binario:       %24s\n", Integer.toString(num, 2));
+System.out.printf ("En decimal:       %24d\n", num);
+System.out.printf ("En octal:         %24s\n", Integer.toString(num, 8));
+System.out.println ();
+System.out.printf ("Número de bits a 1: %d\n", numBits1);
+System.out.printf ("Valor del bit a 1 más alto: %d\n", valorBit1MasAlto);
+System.out.printf ("Valor del bit a 1 más bajo: %d\n", valorBit1MasBajo);
+</code></pre>
+</div>
+</div>
+<p>Una alternativa a la entrada de datos con <code>parseInt</code> (o <code>parseUnsignedInt</code>, como finalmente se ha usado), podría haber sido utilizar la versión sobrecargada del método <code>nextInt</code> de la clase <code>Scanner</code> en la cual se indica la base:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>num = teclado.nextInt(16);</code></pre>
+</div>
+</div>
+<p>Ahora bien, en tal caso deberías tener controlada la gestión de la posible excepción <code>InputMismatchException</code> si no se introduce una cadena que "encaje" con el patrón de un número hexadecimal. Además, deberías controlar también que el número introducido no es negativo, cosa que hemos hecho automáticamente con el método <code>parseUnsignedInt</code> (en lugar de usar <code>parseInt</code>).</p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_la_clase_stringtokenizer_en_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

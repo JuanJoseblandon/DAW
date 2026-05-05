@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3.- Utilización de miembros heredados (I). Atributos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_herencia.html" class="current-page-parent daddy">3.- Herencia.</a>
+   <ul>
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li id="active"><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="active daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul>
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="32_acceso_a_miembros_heredados.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">3.3.- Utilización de miembros heredados (I). Atributos.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id31">
+<div class="iDevice emphasis0">
+<div id="ta31_73" class="block iDevice_content">
+<p>Los <strong>atributos heredados</strong> por una clase son, a efectos prácticos, iguales que aquellos que sean definidos específicamente en la nueva <strong>clase derivada</strong>.</p>
+<p>En el ejemplo anterior la clase <strong><code>Persona</code></strong> disponía de tres atributos y la clase <strong><code>Alumno</code></strong>, que heredaba de ella, añadía dos atributos más. Desde un punto de vista funcional podrías considerar que la clase <strong><code>Alumno</code></strong> tiene cinco atributos: tres por ser <strong><code>Persona</code></strong> (<strong><code>nombre</code></strong>, <strong><code>apellidos</code></strong> y <strong><code>fechaNacimiento</code></strong>) y otros dos más por ser <strong><code>Alumno </code></strong> (<strong><code>grupo</code></strong> y <strong><code>notaMedia</code></strong>).</p>
+<p><a title="Ampliar imagen &quot;NetBeans. Clase Persona 01&quot;, (Se abre en una nueva ventana)" href="PROG07_CONT_R24_NetbeansClasePersona01.png" target="_blank"> <img alt="Captura de la ventana de navegación de clases de Netbeans." class="imagen_ampliable elemento_centrado" src="PROG07_CONT_R24_NetbeansClasePersona01_miniatura.png" style="width: 200px; height: 100px;" title="Netbeans. Clase Persona 01." width="200" height="100" /></a></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id32">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicios resueltos</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta32_67" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b32" class="block iDevice_content">
+<p>Dadas las clases <code>Persona</code>, <code>Alumno</code> y <code>Profesor</code> con las que has trabajado anteriormente, implementa un método <code>toStringPresentacion</code> para la clase <code>Alumno</code> que genere una cadena que incluya cuatro de sus cinco atributos (dos heredados más dos específicos) usando el siguiente formato, donde la nota media debe aparecer con dos cifras decimales:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>El alumno &lt;nombre&gt; &lt;apellidos&gt; del grupo &lt;grupo&gt; tiene una nota media de &lt;notaMedia&gt;</code></pre>
+</div>
+</div>
+<p>Por ejemplo:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>El alumno Diosdado Torres Ramos del grupo 1DAW-B tiene una nota media de 7.31</code></pre>
+</div>
+</div>
+<p></p>
+<p>métodos <code>getter</code> y <code>setter</code> en las clases <code>Alumno</code> y <code>Profesor</code> para trabajar con sus cinco atributos (tres heredados más dos específicos).<strong> </strong></p>
+</div>
+<form name="feedback-form-quesFeedback0b32" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b32text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b32" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b32" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p class="enlace_centrado" style="text-align: left;">Suponiendo que los atributos de la clase padre <code>Persona</code> se hubieran declarado <code>protected</code>, bastaría con acceder a ellos como si se trata de atributos de la propia clase, pues han sido heredados y se tiene acceso a su contenido sin problema:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public String toStringPresentacion() {
+    return String.format ("El alumno %s %s del grupo %s tiene una nota media de %.2f",
+            this.nombre,
+            this.apellidos,
+            this.grupo,
+            this,notaMedia);
+}</code></pre>
+</div>
+</div>
+<p class="enlace_centrado" style="text-align: left;">En el <strong><em><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" title="Enlace al Anexo II (se abre en una nueva ventana)." target="_blank" class="html">Anexo <abbr title="Dos en numeración romana.">II</abbr>: Métodos para las clases heredadas <code>Alumno</code> y </a><code><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" title="Enlace al Anexo II (se abre en una nueva ventana)." target="_blank">Profesor</a><code></code></code></em></strong>, puedes observar el proceso completo de elaboración de todos los métodos.<br /><br /><br /></p></div>
+</form>
+<div id="taquesQuestion1b32" class="block iDevice_content">
+<p>Dadas las clases <code>Dispositivo</code>, <code>Bombilla</code> y <code>Cerradura</code> con las que has trabajado anteriormente, implementa un método <code>toStringEstado</code> para la clase <code>Cerradura</code> que genere una cadena que incluya tres de sus cuatro atributos (dos heredados más uno específico) usando el siguiente formato:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>La cerradura &lt;id&gt;, ubicada en la estancia &lt;ubicacion&gt; se encuentra &lt;estado&gt;</code></pre>
+</div>
+</div>
+<p>donde &lt;estado&gt; puede ser "<em>abierta</em>" (si el valor del atributo es <code>false</code>) o "<em>cerrada</em>" (si el valor es <code>true</code>). Por ejemplo:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>La cerradura 3, ubicada en la estancia 6 se encuentra abierta</code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback1b32" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b32text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b32" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b32" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p class="enlace_centrado" style="text-align: left;">Si asumimos que los atributos de la clase padre <code>Dispositivo</code> se hubieran declarado <code>protected</code>, bastaría con acceder a ellos como si se trata de atributos de la propia clase, pues han sido heredados y se tiene acceso a su contenido sin problema:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public String toStringEstado() {
+    return String.format ("La cerradura %d, ubicada en la estancia %s se encuentra %s",
+            this.id,
+            this.ubicacion,
+            this.estado ? "abierta" : "cerrada");
+}</code></pre>
+</div>
+</div>
+<p>Si, por el contrario, los atributos de <code>Dispositivo</code> se hubieran declarado <code>private</code>, pero se hubieran implementado <code>getters</code> públicos para ellos, entonces podríamos haber hecho esto otro:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public String toStringEstado() {
+    return String.format ("La cerradura %d, ubicada en la estancia %s se encuentra %s",
+            this.getId(),
+            this.getUbicacion(),
+            this.estado ? "abierta" : "cerrada");
+}</code></pre>
+</div>
+</div>
+<p>Esto sería posible porque los métodos también se heredan y, por tanto, pueden ser utilizados por las clases derivadas. Lo veremos en los próximos apartados.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="32_acceso_a_miembros_heredados.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

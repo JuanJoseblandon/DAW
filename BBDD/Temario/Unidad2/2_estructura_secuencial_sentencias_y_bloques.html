@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.- Estructura secuencial: sentencias y bloques. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li id="active"><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="active daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul>
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructuras_de_seleccin_o_condicionales.html" class="daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul class="other-section">
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li><a href="34_estructura_selectiva_mltiple_switch_i.html" class="daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul class="other-section">
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul class="other-section">
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li><a href="45_estructura_repetitiva_for_i.html" class="daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul class="other-section">
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul class="other-section">
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="1_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_mbito_o_alcance_de_una_variable.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.- Estructura secuencial: sentencias y bloques.</h1></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id6">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_66" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="stk32305bme.png" alt="Sobre una mesa de reuniones, un portátil abierto." title="Escritura de programas." style="float: left;" /></div>
+<div class="elemento_centrado credenciales">© Stockbyte.</div>
+<div class="elemento_centrado credenciales">Uso educativo no comercial</div>
+<div class="elemento_centrado credenciales">para plataformas públicas de</div>
+<div class="elemento_centrado credenciales">Formación Profesional a distancia.</div>
+<div class="elemento_centrado credenciales">CD-DVD Num. CD165</div>
+</div>
+<p><strong>Ada</strong> valora muy positivamente en un programador el orden y la pulcritud.</p>
+<p>Organizar correctamente el código fuente es de vital importancia cuando se trabaja en entornos colaborativos en los que son varios los desarrolladores que forman los equipos de programación. Por ello, incide en la necesidad de recordar a <strong>Juan </strong>y <strong>María</strong> las nociones básicas a la hora de escribir programas.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id7">
+<div class="iDevice emphasis0">
+<div id="ta7_73" class="block iDevice_content">
+<p>Este apartado lo utilizaremos para reafirmar cuestiones que son obvias y que de alguna manera u otra las hemos ido viendo explícita o implícitamente a lo largo de la unidad anterior. Vamos a repasarlas como un conjunto de <acronym title="Frequently Asked Questions." lang="en">FAQ</acronym> o "<em>preguntas habitualmente formuladas</em>":</p>
+<ul class="lista_verificacion">
+<li><strong>¿Cómo se escribe un programa sencillo? <br /></strong>Si queremos que un programa sencillo realice instrucciones o sentencias para obtener un determinado resultado, es necesario colocar éstas una detrás de la otra, exactamente en el orden en el que queremos que se ejecuten.</li>
+<li><strong>¿Podrían colocarse todas las sentencias una detrás de otra, separadas por puntos y comas en una misma línea?<br /></strong>En el lenguaje Java (y en muchos otros) puede hacerse, pero no es muy recomendable. Cada sentencia debería estar escrita en una línea diferente. De esta manera tu código será mucho más legible y la localización de errores en tus programas será más sencilla y rápida, lo que redundará en menor tiempo de desarrollo y de mantenimiento, lo que reducirá los costes. De hecho, cuando se utilizan herramientas de programación, los errores suelen asociarse a un número o números de línea.</li>
+<li><strong>¿Puede una misma sentencia ocupar varias líneas en el programa?<br /></strong> Sí. Existen sentencias que, por su tamaño, pueden generar varias líneas. Pero siempre finalizarán con un punto y coma.</li>
+<li><strong>¿En <span lang="en">Java</span> todas las sentencias se terminan con punto y coma?<br /></strong> Efectivamente. Si detrás de una sentencia ha de venir otra, pondremos un punto y coma. Escribiendo la siguiente sentencia en una nueva línea. Pero en algunas ocasiones, sobre todo cuando utilizamos estructuras de control de flujo, detrás de la cabecera de una estructura de este tipo no debe colocarse punto y coma. No te preocupes, lo entenderás cuando analicemos cada una de ellas.</li>
+<li><strong>¿Qué es la sentencia nula o sentencia vacía en Java?<br /></strong> La sentencia nula es una línea que no contiene ninguna instrucción y en la que sólo existe un punto y coma. Como su nombre indica, esta sentencia no hace nada. Se puede colocar en cualquier sitio donde la sintaxis del lenguaje exija que vaya una sentencia, pero no queramos que se haga nada. Normalmente su uso puede evitarse, usando una lógica adecuada al construir las estructuras de control de flujo. Pero es importante que la conozcas por si alguna vez te la encuentras en algún programa no hecho por ti (o porque realmente llegaras a necesitarla).</li>
+<li><strong>¿Qué es un bloque de sentencias?<br /></strong> Es un conjunto de sentencias que se encierra entre llaves y que se ejecutaría como si fuera una única sentencia. Sirve para agrupar sentencias y para clarificar el código. Los bloques de sentencias son utilizados en <span lang="en">Java</span> en la práctica totalidad de estructuras de control de flujo, clases, métodos,<abbr title="etcétera."> etc</abbr>. La siguiente tabla muestra dos formas de construir un bloque de sentencias. ¿Cuál de las dos crees que es más clara y que por tanto se recomienda usar?<br />
+<table class="tabla" summary="Tabla en la que se muestra a la izquierda una forma poco recomendable de construcción de bloques de sentencias (todas colocadas en la misma línea y separadas por punto y coma), y a su derecha, un bloque de sentencias correctamente estructurado (cada instrucción en una línea y al final de estas, punto y coma). "><caption>Bloques de sentencias.</caption>
+<thead>
+<tr><th scope="col">Bloque de sentencias en una sola línea</th><th scope="col">Bloque de sentencias de varias líneas</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>{ sentencia_1; sentencia_2; ... ; sentencia_N; }</code></pre>
+</div>
+</div>
+</td>
+<td>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>{
+  sentencia_1;
+  sentencia_2;
+  . . .
+  sentencia_N;
+}
+</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>En un bloque de sentencias, ¿éstas deben estar colocadas con un orden exacto?</strong> <br />En ciertos casos sí, aunque si al final de su ejecución se obtiene el mismo resultado, podrían ocupar diferentes posiciones en nuestro programa.</li>
+<li><strong>¿Es importante documentar los programas?</strong> <br />Claro que sí. Más adelante veremos que se pueden documentar de diversas formas, pero una de ellas es escribir el código con claridad (autodocumentación), usando <strong>indentación</strong> adecuada de las sentencias, eligiendo <strong>nombres descriptivos</strong> para variables, métodos y clases, incluyendo <strong>comentarios explicativos</strong>, <abbr title="etcétera.">etc</abbr>.</li>
+<li><strong>¿Y me tengo que preocupar de las faltas de ortografía y de gramática?</strong> <br />Bueno... lo principal es preocuparte de la propia sintaxis del lenguaje para que todo funcione correctamente, eso es cierto. Pero es <strong>MUY importante</strong> que <strong>las cadenas literales que se incluyan en el código sean correctas</strong>, porque son la primera, y a veces la única impresión que el cliente/usuario obtendrá de la aplicación, y si ve faltas de ortografía o frases incoherentes o complicadas de entender, difícilmente lo vas a convencer de que al escribir en un lenguaje de programación eres una persona cuidadosa y fiable a la hora de escribir código. Además, parte de la documentación se genera con herramientas automáticas a partir de los comentarios, así que la corrección en los mismos también es fundamental.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id152">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta152_151" class="block iDevice_content">
+<p>Debemos asegurarnos de que <strong>cualquier texto que aparezca en el código de un programa</strong>, ya sea en un <strong>comentario</strong> o en una <strong>cadena entre comillas</strong>, está correctamente escrito. Los textos deben aparecer <strong>sin erratas ni faltas de ortografía</strong> y <strong>sin errores gramaticales</strong>, así como con un <strong>discurso coherente</strong> y con un <strong>uso adecuado de los signos de puntuación</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id8">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header" style="background-image:url(icon_debesconocerfpd.png)"><h2 class="iDeviceTitle">Debes conocer</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta8_48" class="block iDevice_content">
+<p>Accede a los tres archivos que te ofrecemos a continuación y compara su código fuente. Verás que los tres obtienen el mismo resultado, pero la organización de las sentencias que los componen es diferente entre ellos.</p>
+<table class="tabla" summary="Tabla en la que ofrece al alumnado la posibilidad de acceder al código fuente de un mismo programa  que como estructura de control de flujo  usa la estructura secuencial, expresado de tres formas diferentes. Debajo de cada uno de los enlaces, se muestra la explicación de cómo se ha organizado el código interno de dichos archivos. "><caption>Sentencias, bloques y diferentes organizaciones.</caption>
+<tbody>
+<tr><th scope="col">Bloque de sentencias para ejecución secuencial.</th><th scope="col">Bloque de sentencias con declaración de variables.</th><th scope="col">Bloque de sentencias  con el código organizado en declaración de variables, entrada de datos, procesamiento y salida</th></tr>
+<tr>
+<td>
+<div class="enlace_centrado"><br /><span class="credenciales"></span></div>
+<div class="enlace_centrado">
+<div class="highlighted-code language-java">
+<div style="text-align: left;">
+<pre><code>int dia=15;
+System.out.println("El día es: "+dia);
+int mes=9;
+System.out.println("El mes es: "+mes);
+int anio=2023;
+System.out.println("El anio es: "+anio)</code></pre>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="enlace_centrado" style="text-align: left;">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Zona de declaración de variables 
+int dia=10;
+int mes=11;
+int anio=2011;
+
+// Sentencias que usan esas variables
+System.out.println("El día es: "+dia);
+System.out.println("El mes es: "+mes);
+System.out.println("El año es: "+anio);</code></pre>
+</div>
+</div>
+<br /><br /><span class="credenciales"></span></div>
+</td>
+<td>
+<div class="enlace_centrado" style="text-align: left;">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Zona de declaración de variables 
+int dia;
+int mes;
+int anio;
+String fecha;
+
+//Zona de inicialización<br />// o entrada de datos
+dia=10;
+mes=11;
+anio=2011;
+fecha="";
+
+//Zona de procesamiento
+fecha=dia+"/"+mes+"/"+anio;
+
+//Zona de salida de resultados
+System.out.println ("La fecha es: "+fecha);</code></pre>
+</div>
+</div>
+<br /><br /><span class="credenciales"></span></div>
+</td>
+</tr>
+<tr>
+<td>
+<p>En este primer ejemplo, las sentencias están colocadas en orden secuencial.</p>
+<div class="enlace_centrado"><a class="documento" title="Descargar un ejemplo de organización secuencial de sentencias en el código fuente.[java - 0.01 MB]" href="OrganizacionSentencias_1.java"> Sentencias en orden secuencial.</a> <span class="credenciales">(0.01 MB)</span></div>
+</td>
+<td>
+<p>En este segundo archivo, se declaran al principio las variables necesarias. En <span lang="en">Java</span> no es imprescindible hacerlo así, pero sí que antes de utilizar cualquier variable ésta debe estar previamente declarada. Aunque la declaración de dicha variable puede hacerse en cualquier lugar de nuestro programa.</p>
+<p></p>
+<div class="enlace_centrado"><a class="documento" title="Descargar un ejemplo de organización secuencial de sentencias en el código fuente.[java - 0.01 MB]" href="OrganizacionSentencias_2.java"> Sentencias y declaraciones de variables.</a> <span class="credenciales">(0.01 MB)</span></div>
+</td>
+<td>
+<p>En este tercer archivo, podrás apreciar que se ha organizado el código en las siguientes partes: declaración de variables, petición de datos de entrada, procesamiento de dichos datos y obtención de la salida. Este tipo de organización está más estandarizada y hace que nuestros programas ganen en legibilidad y claridad.</p>
+<div class="enlace_centrado"><a class="documento" title="Descargar un ejemplo de organización secuencial de sentencias en el código fuente.[java - 0.01 MB]" href="OrganizacionSentencias_3.java"> Sentencias, declaraciones y organización del código.</a> <span class="credenciales">(0.01 MB)</span></div>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Construyas de una forma o de otra tus programas, en <span lang="en">Java</span> debes tener en cuenta siempre las siguientes premisas:</p>
+<ul class="lista_verificacion">
+<li>Declara cada variable antes de utilizarla.</li>
+<li>Inicializa con un valor cada variable la primera vez que la utilices.</li>
+<li>No es recomendable usar variables no inicializadas en nuestros programas, pueden provocar errores o resultados imprevistos.</li>
+</ul>
+<p>Podrás observar que la tercera forma de organizar las sentencias de un programa es la que hemos estado recomendando a lo largo de la unidad anterior en cuanto aprendimos a escribir algo de código. Se trata de la "<em><strong>plantilla estándar de programa principal</strong></em>" que llevamos ya usando para este módulo desde hace algunas semanas. Esa <strong>es la que vamos a utilizar durante todo el curso siempre que nos sea posible</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id9">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-9_60" action="#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion9_60" class="block question iDevice_content">
+<p align="justify"><strong>Indica qu&eacute; afirmaci&oacute;n es la m&aacute;s correcta:</strong></p>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i9_63" class="sr-av"><a href="#answer-9_63">Opción 1</a></label><input type="radio" name="option9_60" id="i9_63" class="exe-radio-option exe-radio-option-0-4-9_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-9_63"><a name="answer-9_63"></a>
+<div id="taans9_63" class="block iDevice_content">
+<p align="justify">Para crear un bloque de sentencias, es necesario delimitar &eacute;stas entre llaves. Este bloque funcionar&aacute; como si hubi&eacute;ramos colocado una &uacute;nica orden.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i9_82" class="sr-av"><a href="#answer-9_82">Opción 2</a></label><input type="radio" name="option9_60" id="i9_82" class="exe-radio-option exe-radio-option-1-4-9_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-9_82"><a name="answer-9_82"></a>
+<div id="taans9_82" class="block iDevice_content">
+<p align="justify">La sentencia nula en<span lang="en"> Java</span>, se puede representar con un punto y coma s&oacute;lo en una &uacute;nica l&iacute;nea.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i9_85" class="sr-av"><a href="#answer-9_85">Opción 3</a></label><input type="radio" name="option9_60" id="i9_85" class="exe-radio-option exe-radio-option-2-4-9_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-9_85"><a name="answer-9_85"></a>
+<div id="taans9_85" class="block iDevice_content">
+<p align="justify">Para finalizar en <span lang="en">Java</span> cualquier sentencia, es necesario hacerlo con un punto y coma.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i9_94" class="sr-av"><a href="#answer-9_94">Opción 4</a></label><input type="radio" name="option9_60" id="i9_94" class="exe-radio-option exe-radio-option-3-4-9_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-9_94"><a name="answer-9_94"></a>
+<div id="taans9_94" class="block iDevice_content">
+<p align="justify">Todas las afirmaciones son correctas.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b9_60" class="feedback js-hidden"><a name="sa0b9_60"></a>
+<div id="taf9_63" class=" iDevice_content">
+<p align="justify">Incorrecto. Aunque la afirmaci&oacute;n es correcta, deber&iacute;as revisar el resto de respuestas.</p>
+</div>
+</div>
+<div id="sa1b9_60" class="feedback js-hidden"><a name="sa1b9_60"></a>
+<div id="taf9_82" class=" iDevice_content">
+<p align="justify">Incorrecto. No es que sea falsa, pero, &iquest;es esta la opci&oacute;n m&aacute;s correcta?</p>
+</div>
+</div>
+<div id="sa2b9_60" class="feedback js-hidden"><a name="sa2b9_60"></a>
+<div id="taf9_85" class=" iDevice_content">
+<p align="justify">No es correcto. La afirmaci&oacute;n tambi&eacute;n es correcta, pero deber&iacute;as revisar el resto de respuestas.</p>
+</div>
+</div>
+<div id="sa3b9_60" class="feedback js-hidden"><a name="sa3b9_60"></a>
+<div id="taf9_94" class=" iDevice_content">
+<p align="justify">Correcto. Todas y cada una de las afirmaciones de esta pregunta son correctas. Las sentencias es imprescindible que acaben en punto y coma, para indicar una sentencia nula basta con incluir una l&iacute;nea con un punto y coma, y los bloques de sentencias se delimitan con llaves.</p>
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-9_63">Incorrecto</a><span> (<a href="#sa0b9_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-9_82">Incorrecto</a><span> (<a href="#sa1b9_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-9_85">Incorrecto</a><span> (<a href="#sa2b9_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-9_94">Opción correcta</a><span> (<a href="#sa3b9_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice em_iDevice_recomendacionfpd" id="id167">
+<div class="iDevice emphasis_recomendacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_recomendacionfpd.png)"><h2 class="iDeviceTitle">Recomendación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta167_131" class="block iDevice_content">
+<p>Este es un buen momento para que vuelvas al apartado de "organización" del código que vimos en la unidad anterior y recuperes la "plantilla estándar de programa principal" que se os proporcionaba para realizar vuestros ejercicios y tareas. La vamos a usar como base para una buena parte del curso, especialmente para las primeras unidades.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="1_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_mbito_o_alcance_de_una_variable.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

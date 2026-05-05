@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.2.- Inicialización. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-92"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4__arrays.html" class="current-page-parent daddy">4.-  Arrays.</a>
+   <ul>
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li id="active"><a href="42_inicializacin.html" class="active no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="41_uso_de_arrays_unidimensionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_mostrar_el_contenido_de_un_array.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.2.- Inicialización.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id378">
+<div class="iDevice emphasis0">
+<div id="ta378_73" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="startup-ga0bec86c7_640.jpg" alt="Corredor a punto de iniciar una carrera." title="Starting" style="float: right;" width="240" height="107" /><figcaption class="figcaption"><a href="https://pixabay.com/es/illustrations/puesta-en-marcha-2188681/" target="_blank" class="author" title="Acceder a la web de descarga de la imagen de Gerd Altmann en Pixabay. (Se abre en una nueva ventana)">Gerd Altmann</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Rellenar un <span lang="en">array</span> para su primera utilización, es una tarea muy habitual que en muchas ocasiones puede ser simplificada. Vamos a explorar dos sistemas que nos van a permitir inicializar un <span lang="en">array</span> de forma cómoda y rápida.</p>
+<p>En primer lugar, se puede inicializar un array simplemente accediendo a cada posición del mismo (directamente una a una o mediante un bucle) y asignando un valor a cada una. Veamos un ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int totalNumeros = 10 ;
+int[] consecutivos = new int[totalNumeros];
+for (int i=0; i &lt; totalNumeros;i++)
+     consecutivos[i] = i ;</code></pre>
+</div>
+</div>
+<p>En el ejemplo anterior se crea un <span lang="en">array</span> con una serie de números consecutivos, empezando por el cero, ¿sencillo no? Este uso suele ahorrar bastantes líneas de código en tareas repetitivas. Otra manera de inicializar los <span lang="en">arrays</span>, cuando el número de elementos es fijo y conocido a priori, es indicando entre llaves el listado de valores que tiene el <span lang="en">array</span>. En el siguiente ejemplo puedes ver la inicialización de un <span lang="en">array</span> de tres números, y la inicialización de un <span lang="en">array</span> con siete cadenas de texto:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int[] array = {10, 20, 30};
+
+String[] diasSemana = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"};</code></pre>
+</div>
+</div>
+<p>Pero cuidado, esta inicialización solo se puede usar en ciertos casos. La inicialización anterior funciona cuando se trata de un tipo de dato del cual Java permita expresar literales en el propio código. Es decir, para los literales de los tipos primitivos (<code>int, short, float, double</code>, <code>boolean</code>, <code>char</code>, <abbr title="etcétera.">etc.</abbr>) o de un <code>String</code> (cuyos literales se expresan mediante un texto entre comillas dobles). Para otro tipo de objetos habrá que realizar una instanciación (mediante invocaciones bien a constructores bien a métodos que devuelvan la referencia a un objeto).</p>
+<p>Cuando se trata de un <span lang="en">array</span> de referencias a objetos, la inicialización del mismo requiere, como acabamos de comentar, invocaciones a métodos que devuelvan referencias a instancias.</p>
+<p>Un array de referencias a objetos recién creado y sin inicializar contendrá valores de tipo <a href="#t3898451b-8eac-06a0-62f5-afce62cdab6a" id="link3898451b-8eac-06a0-62f5-afce62cdab6a" class="exe-tooltip definition-tt titled-tt">null</a>. Debemos tener en cuenta que crear el array (reservar memoria para él mediante el operador <code>new</code>) no significa que se hayan creado las instancias de los objetos a los que va a apuntar cada celda. Hay que instanciar, para cada posición del <span lang="en">array</span>, el objeto del tipo correspondiente con el operador <code>new</code> o, al menos, asignarle la referencia a un objeto que ya exista.</p>
+<p>Veamos un ejemplo con la clase <code>StringBuilder</code>. En el siguiente ejemplo solo aparecerá <code>null</code> por pantalla:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>StringBuilder[] oStrBuilds = new StringBuilder[10];
+
+for (int i = 0; i &lt; oStrBuilds.length; i++)
+    System.out.println("Valor" + i + "=" + oStrBuilds[i]); // Imprimirá null para los 10 valores.</code></pre>
+</div>
+</div>
+<p>Para solucionar este problema podemos optar por lo siguiente, crear para cada posición del <span lang="en">array</span> una instancia del objeto:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>StringBuilder[] oStrBuilds = new StringBuilder[10];
+
+for (int i=0; i &lt; oStrBuilds.length;i++) 
+     oStrBuilds[i] = new StringBuilder("cadena " + i);</code></pre>
+</div>
+</div>
+<p>Si hubiéramos querido inicializar un array de referencias a objetos <code>StringBuilder</code> usando las llaves, habríamos tenido que realizar las instanciaciones con <code>new</code> dentro de la propia declaración. Es decir, hacer algo del estilo a lo siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>StringBuilder[] oStrBuilds = {new StringBuilder ("cadena 0"), new StringBuilder ("cadena 1"), new StringBuilder ("cadena 2"), . . . };</code></pre>
+</div>
+</div>
+<p></p>
+<p>Si se tratara, por ejemplo, de un array de referencias a objetos de tipo <code>LocalDate</code>, podríamos haber hecho lo siguiente (recuerda que la clase <code>LocalDate</code> no dispone de constructores, sino de métodos "fábrica" para instanciarse):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>LocalDate[] arrayFechas= {LocalDate.of (2001, 1, 1), LocalDate.of (2002, 2, 2), LocalDate.of (2003, 3, 3), . . .  }; </code></pre>
+</div>
+</div>
+<div id="t3898451b-8eac-06a0-62f5-afce62cdab6a" class="exe-tooltip-text">
+<p>Una variable que almacena un objeto en realidad es un apuntador a la zona de memoria donde se almacena dicho objeto. Cuando dicha variable no apunta a ningún objeto, porque el objeto aún no se ha creado con el operador new, entonces la variable apunta a null para indicar que no hace referencia todavía a ningún objeto.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id379">
+<div class="iDevice emphasis_reflexionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h1 class="iDeviceTitle">Reflexiona</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta379_40" class="block iDevice_content">
+<p>Para acceder a una propiedad o a un método cuando los elementos del <span lang="en">array</span> son objetos, puedes usar la notación de punto detrás de los corchetes, por ejemplo: <code>diasSemana[0].length</code>.</p>
+<p>Fíjate bien en el <span lang="en">array</span> <code>diasSemana</code> anterior y piensa en lo que se mostraría por pantalla con el siguiente código:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println(diasSemana[0].substring(0,2));</code></pre>
+</div>
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id380">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-380_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion380_60" class="block question iDevice_content">
+<p><strong>&iquest;Cu&aacute;l es el valor de la posici&oacute;n 3 del siguiente <span lang="en">array</span>: <code>String[] m=new String[10]</code>?</strong></p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i380_63" class="sr-av"><a href="#answer-380_63">Opción 1</a></label><input type="radio" name="option380_60" id="i380_63" class="exe-radio-option exe-radio-option-0-3-380_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-380_63"><div id="taans380_63" class="block iDevice_content">
+<p><code>null</code>.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i380_75" class="sr-av"><a href="#answer-380_75">Opción 2</a></label><input type="radio" name="option380_60" id="i380_75" class="exe-radio-option exe-radio-option-1-3-380_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-380_75"><div id="taans380_75" class="block iDevice_content">
+<p>Una cadena vac&iacute;a.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i380_78" class="sr-av"><a href="#answer-380_78">Opción 3</a></label><input type="radio" name="option380_60" id="i380_78" class="exe-radio-option exe-radio-option-2-3-380_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-380_78"><div id="taans380_78" class="block iDevice_content">
+<p>Dar&iacute;a error y no se podr&iacute;a compilar.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b380_60" class="feedback js-hidden">
+<div id="taf380_63" class=" iDevice_content">
+<p>Efectivamente, los objetos no se han creado todav&iacute;a.</p>
+</div>
+</section>
+<section id="sa1b380_60" class="feedback js-hidden">
+<div id="taf380_75" class=" iDevice_content">
+<p>Incorrecto, recuerda que <code>String</code> es al fin y al cabo una clase y, por tanto, si las casillas no se rellenan con nada tendrán el valor "cero" para las referencias a objeto, que es el valor <code>null</code>.</p>
+</div>
+</section>
+<section id="sa2b380_60" class="feedback js-hidden">
+<div id="taf380_78" class=" iDevice_content">
+<p>Incorrecto, s&iacute; se puede compilar. Revisa el apartado.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-380_63">Opción correcta</a><span> (<a href="#sa0b380_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-380_75">Incorrecto</a><span> (<a href="#sa1b380_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-380_78">Incorrecto</a><span> (<a href="#sa2b380_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id381">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicios Resueltos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta381_63" class="block story iDevice_content">
+<p>Ya sabemos lo que son los arrays, y cómo inicializarlos. Supongamos un array, por ejemplo, de enteros (valores de tipo <code>int</code>) ¿Se te ocurre cómo haríamos para ordenarlo?</p>
+</section>
+<section id="taquesQuestion0b381" class="block iDevice_content">
+<p>1.- La idea puede ser ir recorriendo el array, y para cada elemento del mismo, hacemos una segunda pasada, un segundo recorrido del array desde el siguiente elemento más uno en adelante y comparo. Así, si el elemento del array que estoy recorriendo en primer lugar es mayor que el de la segunda pasada, entonces intercambio esos elementos.</p>
+<p lang="en">Intenta resolverlo antes de mirar la solución.</p>
+</section>
+<form name="feedback-form-quesFeedback0b381" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b381text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b381" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b381" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>El siguiente código recorre un array para ordenar su contenido de menor a mayor. Es conocido como el método de la burbuja o Bubble Sort. </p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code><br />
+// Ejemplo de array inicial desordenado
+
+int[] numeros = {20,15,35,10,55,7,1 } ;
+int auxiliar ; 
+
+// Recorremos el array empezando desde el primer elemento
+
+for (int conta = 0; conta &lt; numeros.length - 1; conta++) {
+
+    // Recorrer desde la siguiente posición en adelante para comparar
+    // el elemento en la posición conta con los de más adelante
+
+    for (int pos = conta + 1; pos &lt; numeros.length; pos++) {
+
+        // Si el elemento es menor lo intercambiamos
+
+        if (numeros[pos] &lt; numeros[conta]) {
+            auxiliar = numeros[conta] ;
+            numeros[conta] = numeros[pos] ;
+            numeros[pos] = auxiliar ;
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+<section id="taquesQuestion1b381" class="block iDevice_content">
+<p>2.- Ahora supón que tenemos un array de <code>Integer</code> (en realidad referencias a objetos de tipo <code>Integer</code>), ordenado, pero que puede contener huecos (<code>null</code>) donde insertar un número. Supongamos que los nulos, los huecos están al final. Queremos poder insertar un número al array, y que siga estando ordenado ascendentemente. ¿Cómo lo harías? Una idea puede ser: primero comprobar si hay hueco, y si no lo hay aviso y termino. Si lo hay, empiezo a recorrer el array y si es nulo, lo inserto sin más, si no, comparo si el elemento que quiero insertar es menor que el de la posición actual del array. Cuando detecte un número mayor que el que yo quiero insertar, tendré que desplazar los elementos del array desde esa posición en adelante para abrir hueco. ¿Eres capaz de hacerlo? ¡Adelante! Inténtalo antes de ver la solución más abajo.</p>
+</section>
+<form name="feedback-form-quesFeedback1b381" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b381text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b381" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b381" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>El siguiente código inserta en el array de enteros <code>vectorDeEnteros</code> el número entero <code>elemento</code>, manteniendo el vector ordenado ascendentemente y empaquetado (sin huecos <code>null</code> en medio, esto quiere decir que todos los espacios vacíos que tenga el vector van a estar siempre juntos en las últimas posiciones del vector).<br />No funcionará bien si no se cumple el supuesto de que esté ordenado ascendentemente y empaquetado.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Integer[] vectorDeEnteros = {10, 20, 30, 50, null, null};
+int elemento = 5; // Elemento a insertar
+int j = 0;
+
+/*
+ * Lo primero será comprobar si en el vector hay hueco para un elemento más. Puesto que el vector está
+ * empaquetado, basta con comprobar si la última posición apunta a null. 
+ * Si tiene algo distinto de null, es que el vector está lleno, y por tanto lo indicaremos con un mensaje que diga
+ * que no fue posible insertar el nuevo elemento. 
+ * Si  por el contrario, la última posición apunta a null, es que hay hueco, y se puede insertar el elemento sin problemas.
+ */
+
+if (vectorDeEnteros[vectorDeEnteros.length - 1] == null) {
+
+    /*
+     * Hacemos un recorrido del array hasta que nos posicionamos en el lugar donde debe ir el elemento
+     * a insertar. Sabemos que nos pararemos antes de salirnos del array, porque ya hemos comprobado antes
+     * que al menos hay un hueco, así que en el peor de los casos, pararemos cuando lleguemos a él
+     */
+
+    while (vectorDeEnteros[j] != null &amp;&amp; vectorDeEnteros[j] &lt;= elemento) {
+        j++;
+    }
+
+    /*
+     * Comprobamos por qué motivo hemos salido del ciclo.
+     * Si hemos salido porque hemos encontrado un elemento mayor que el que queremos insertar, tenemos que
+     * abrir hueco, desplazando todos los elementos a partir de esa posición un lugar hacia arriba. Para ello
+     * empezamos desplazando el penúltimo elemento a la última posición, e iremos hacia abajo, hasta llegar a la
+     * posición donde debe insertar el nuevo elemento, desplazando el elemento que contenía a la siguiente posición, con
+     * lo que el hueco queda abierto. 
+     * En caso contrario, querrá decir que hemos salido porque hemos encontrado un null, así que no hay que hacer nada, 
+     * ya estamos posicionados en la posición donde debe ir el número, y es un hueco, no resta más que insertarlo
+     */ 
+
+    if (vectorDeEnteros[j] != null) {
+
+        /*
+         * El for abre el hueco
+         */
+
+       for (int k = vectorDeEnteros.length - 1; k &gt; j; k--) {
+            vectorDeEnteros[k] = vectorDeEnteros[k - 1];
+        }
+    }
+
+    /*
+     * Tanto si hemos tenido que abrir hueco como si no, j tiene la posición del hueco donde tenemos que insertar el número.
+     * Ahora solo falta insertarlo. 
+     */
+
+    vectorDeEnteros[j] = elemento;
+} else {
+    System.out.println("El vector ya está lleno. No ha sido posible insertar el nuevo número.");
+}</code></pre>
+</div>
+</div>
+<p><span style="font-size: 1em;">Y ahora comprobamos que tras la inserción sigue estando ordenado. Para ello, listamos su contenido:</span></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>
+for (int i = 0; i &lt; vectorDeEnteros.length; i++) {
+    System.out.println(numeros[i]);
+}</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+<section id="taquesQuestion2b381" class="block iDevice_content">
+<p>3.- Por último, veamos cómo borrar un elemento de un array manteniendo el array ordenado y empaquetado (sin huecos <code>null</code> en medio, esto quiere decir que todos los espacios vacíos que tenga el vector van a estar siempre juntos en las últimas posiciones del vector). ¿Cómo lo harías? La idea es desplazar todos los elementos de las posiciones siguientes al elemento que queremos borrar una posición hacia abajo, para mantener el vector empaquetado, sin abrir huecos en medio. Una vez hecho esto, debemos asegurarnos de igualar a null la última posición del vector, para que no aparezca duplicada, y para que el vector tenga un hueco más de los que tenía. Como siempre, antes de mirar la solución, intenta hacerlo.</p>
+</section>
+<form name="feedback-form-quesFeedback2b381" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b381text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b381" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback2b381" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>El siguiente código <span>borra un elemento de un array manteniendo el array ordenado y empaquetado:</span></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Ejemplo de array inicial 
+Integer[] numeros = {10, 20, 30, 50, null, null } ;
+
+// Elemento a eliminar
+int elemento = 20 ;
+
+// Buscamos la posición del elemento en el array
+        
+int posicion = 0;
+boolean seguir = true ;
+
+/* Mientras queden elementos por comprobar y mientras que el número
+ * comparado sea distinto del que buscamos, seguimos recorriendo
+ * el vector y pasamos a  la siguiente posición para seguir  buscando.*/
+
+while (seguir) {
+    // Si llegamos al final terminamos
+    if (posicion == numeros.length)
+        seguir = false ;
+    else
+    {
+        // Si encuentro un null, ya he llegado al final sin encontrarlo
+        if (numeros[posicion] == null) {
+            // Para salir del ciclo
+            seguir = false ;
+            posicion = numeros.length ;
+        }  
+        else {
+            // Si el número no es el que buscamos, avanzamos en el array
+            if (numeros[posicion] != elemento)
+                posicion++ ;
+            else
+                // Lo encontramos, así que salimos del ciclo while
+                seguir = false ;
+        }  
+    }
+}
+
+/*Podemos salir del ciclo while por dos motivos, y debemos comprobar
+* por cuál de ellos hemos terminado. Si posicion es igual a la longitud del 
+* vector, quiere decir que hemos llegado hasta el final del vector sin
+* encontrar el elemento */
+        
+if (posicion == numeros.length)
+    System.out.println("El número a eliminar no está" );
+        
+/*En caso contrario, habremos salido porque hemos encontrado
+ * un número que coincide con el que buscábamos, y también lo indicamos
+ * con un mensaje apropiado.*/
+
+else {
+    System.out.println("El número está en la posición " + posicion);
+	// Una vez buscada la posición, comprobamos si el número está en el array
+	if (posicion != numeros.length){
+    	// y movemos los números de una posición
+    	for(int conta = posicion; conta &lt;= numeros.length - 2; conta++) {
+       		numeros[conta] = numeros[conta + 1];
+    	}
+	}
+}
+// Nos aseguramos de que la última posición apunta a null, para comprobar
+// que se ha borrado el elemento.
+numeros[numeros.length - 1] = null ;</code></pre>
+</div>
+</div>
+<p>Ahora comprobamos el array final. Para ello, imprimimos su contenido:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for (int i = 0; i &lt; numeros.length; i++) 
+    System.out.println( numeros[i]) ;</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion3b381" class="block iDevice_content">
+
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="41_uso_de_arrays_unidimensionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="43_mostrar_el_contenido_de_un_array.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

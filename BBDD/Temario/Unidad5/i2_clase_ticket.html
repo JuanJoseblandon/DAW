@@ -1,0 +1,481 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>I.2.- Clase Ticket | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-79"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li><a href="4_atributos.html" class="daddy">4.- Atributos</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li><a href="5_mtodos.html" class="daddy">5.- Métodos</a>
+   <ul class="other-section">
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="current-page-parent daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul>
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li id="active"><a href="i2_clase_ticket.html" class="active no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="i1_clase_bombilla.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="i3_clase_dado.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">I.2.- Clase Ticket</h1></div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id261">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta261_148" class="block story iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 120px;"><img src="entries-3238747_640.png" alt="Dibujo de tres tickets de entrada a un espectáculo" title="Tickets" style="float: right;" width="120" height="154" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/entradas-ticket-papel-taquilla-3238747/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de sbgonti en Pixabay (se abre en una nueva ventana).">sbgonti</a> <span class="license"><span class="sep">(</span><span class="license"><span class="sep"></span><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span><span class="sep"></span></span><span class="sep"></span></span><span class="sep">)</span></span></div>
+</div>
+<p>Nuestro equipo de desarrollo ha recibido instrucciones para implementar una clase <code>Ticket</code> cuyos objetos representen un ticket de entrada a un servicio. Se han establecido los siguientes requerimientos:</p>
+<ul class="lista_verificacion">
+<li>todo <span lang="en">ticket </span>debe incluir un identificador que tendrá el siguiente formato: "NNNN-XXXXXXXX" donde "NNNN" representa las cuatro cifras del año en el que se ha generado el <span lang="en">ticket </span>y "XXXXXXXX" un número de ocho cifras que empezará en "00000001" para cada año;</li>
+<li>cada vez que se genere un nuevo <span lang="en">ticket</span> ese código avanza en un número y cada vez que se cambie de año habrá que comenzar de nuevo por "00000001". Esto significa que el primer <span lang="en">ticket</span> que se genere en el año 2021 tendrá el identificador "2021-00000001", el segundo "2021-00000002" y así sucesivamente;</li>
+<li>cuando el último <span lang="en">ticket</span> generado tenga el número de secuencia "99999999", ya no se podrán generar más <span lang="en">tickets</span> para ese año;</li>
+<li>todo <span lang="en">ticket</span> tendrá asociada una fecha (un día, mes y año) durante el cual podrá ser utilizado. Fuera de esa fecha no podrá usarse;</li>
+<li>los <span lang="en">tickets</span> sólo pueden usarse una vez. Una vez usados quedan marcados con la hora en la que han sido utilizados y no podrán volver a usarse.</li>
+</ul>
+<p></p>
+</div>
+<div id="taquesQuestion0b261" class="block iDevice_content">
+<p>Realiza un análisis inicial para decidir qué atributos necesitarías para implementar apropiadamente esta clase.</p>
+</div>
+<form name="feedback-form-quesFeedback0b261" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b261text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b261" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b261" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Necesitaríamos almacenar la siguiente información:</p>
+<ul class="lista_verificacion">
+<li><strong>por cada <span lang="en">ticket</span></strong> (atributos <strong>de objeto</strong>):
+<ul>
+<li>la <strong>fecha</strong> del ticket, <strong>inmutable</strong>. Podría usarse un objeto de la clase <code>LocalDate</code>.</li>
+<li>el <strong>identificador</strong> (cadena de tipo "NNNN-XXXXXXXX"), <strong>inmutable</strong>, de tipo <code>String</code>.</li>
+<li><strong>si el ticket ha sido usado o no</strong>, <strong>mutable</strong>. Podríamos usar un <strong>boolean</strong>.</li>
+<li>la hora a la que ha sido usado el ticket. <strong>Mutable</strong>. Podríamos usar un <code>LocalTime</code> o un <code>String</code>. Podríamos usar este mismo atributo para indicar si el ticket ha sido usado o no (si tiene el valor <code>null</code> es que aún no ha sido usado y si contiene una hora, es que ya se ha utilizado). Así nos ahorraríamos el atributo anterior. </li>
+</ul>
+</li>
+<li><strong>para todos los tickets</strong> (atributos <strong>de clase</strong>):
+<ul>
+<li>el <strong>último número de secuencia utilizado</strong> para así poder generar el siguiente. <strong>Mutable</strong>, de tipo <strong>entero</strong> (por ejemplo <code>int</code>).</li>
+<li>el <strong>año del último <span lang="en">ticket</span> que se ha generado</strong>, para saber si se ha cambiado de año y hay que <strong>reiniciar la secuencia de identificadores</strong>. <strong>Mutable</strong>, de tipo entero (por ejemplo <code>short</code>, pues es para almacenar un año).</li>
+<li>el <strong>máximo número de secuencia para el identificador de <span lang="en">ticket</span></strong> (valor 99999999). Así evitamos usar literales en los métodos. Este tipo de atributos suele ser público, pero dado que en este caso el usuario de la clase no puede decidir el número de secuencia, no se trata de una información que le pueda ayudar a evitar errores, así que podríamos dejarlo como <strong>privado</strong> en esta ocasión.</li>
+</ul>
+</li>
+</ul>
+<p>A partir de esas decisiones, los atributos de la clase <code>Ticket</code> podrían quedar así:</p>
+<div class="highlighted-code language-java">
+<pre><code>public class Ticket {
+
+    // ATRIBUTOS DE CLASE
+    // ------------------
+    // Atributos de clase constantes
+    private static int MAX_SEQUENCE = 99_999_999;  // Máximo número de secuencia en id
+
+    // Atributos de clase variables 
+    private static short lastYear = (short) LocalDate.now().getYear();  // Año actual
+    private static int lastSequence = 0;  // Inicio de secuencia
+
+    // ATRIBUTOS DE OBJETO
+    // -------------------
+    // Atributos de objeto inmutables
+    private final LocalDate fecha;  // Fecha para usar el ticket
+    private final String id;        // Id del ticket
+
+    // Atributos de objeto variables (estado)
+    private LocalTime usado;  // Momento de uso del ticket
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion1b261" class="block iDevice_content">
+<p>Respecto a los posibles <strong>constructores</strong>, el equipo de desarrollo ha pensado en las siguientes posibilidades:</p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li>un<strong> constructor sin parámetros</strong>, donde se genere un nuevo <span lang="en">ticket </span>para ser usado en la <strong>fecha actual</strong> (hoy);</li>
+<li>un<strong> constructor con un parámetro</strong> que indique la fecha para la que se podrá usar el <span lang="en">ticket</span>. Esa fecha no podrá ser anterior a la actual (pues ya no podría usarse) y debe estar dentro del año actual. No se pueden generar <span lang="en">tickets</span> para ser usados en años futuros.</li>
+</ol>
+<p>Implementa esos constructores en <span lang="en">Java</span>.</p>
+</div>
+<form name="feedback-form-quesFeedback1b261" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b261text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b261" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b261" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En la implementación de los constructores hay que poner en marcha la maquinaria que:</p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li>compruebe que <strong>aún se pueden generar <span lang="en">tickets</span></strong> (no se ha llegado al máximo número de la secuencia);</li>
+<li>compruebe <strong>si se ha cambiado de año desde que se generó el último <span lang="en">ticket</span></strong>. Si no es así (el año registrado no es el año actual), hay <strong>reiniciar la secuencia</strong> para el nuevo año;</li>
+<li><strong>incremente el número de secuencia para generar el nuevo <span lang="en">ticket</span></strong> y haga que quede registrado en la clase (atributo estático) para la próxima vez que se vuelva a generar otro <span lang="en">ticket</span>.</li>
+</ol>
+<p>Además, en la implementación del <strong>constructor con un parámetro</strong> habría que <strong>comprobar que la fecha es válida (no <code>null</code>)</strong>, que<strong> no es anterior a la fecha actual</strong> y que está <strong>dentro del año actual</strong>.</p>
+<p>Podríamos realizar todas esas acciones y comprobaciones en el constructor de un parámetro:</p>
+<div class="highlighted-code language-java">
+<pre><code>public Ticket (LocalDate fecha) throws IllegalArgumentException, IllegalStateException {
+  LocalDate hoy = LocalDate.now();
+  if (fecha == null) {
+    throw new IllegalArgumentException("fecha inválida (null)");
+  }
+  if (fecha.isBefore(hoy)) {
+    throw new IllegalArgumentException("fecha de uso anterior a la actual");
+  }
+  if (fecha.getYear() &gt; hoy.getYear()) {
+    throw new IllegalArgumentException("fecha de uso posterior al año actual");
+  }
+  if (Ticket.lastSequence == Ticket.MAX_SEQUENCE) {
+    throw new IllegalStateException("expedidos el número máximo de tickets para este año");
+  }
+
+  // Inicializamos atributos de objeto
+  this.usado = null;  // El ticket aún no ha sido usado
+  this.fecha = fecha; // Registramos la fecha en que podrá ser usado
+
+  // Comprobamos si se ha cambiado de año desde la generación del último ticket
+  if (Ticket.lastYear != hoy.getYear()) {
+    Ticket.lastSequence = 0;  // Se reinicia la secuencia
+    Ticket.lastYear= (short) hoy.getYear();  // Se registra el nuevo año
+  }
+  // Generamos el id del ticket e incrementamos el número de secuencia
+  id = String.format("%04d-%08d", hoy.getYear(), ++Ticket.lastSequence);
+}</code></pre>
+</div>
+<p>Y de este modo la implementación del <strong>constructor sin parámetros</strong> quedaría reducida a la mínima expresión (una invocación al constructor de un parámetro con la fecha actual usando <code>this()</code>):</p>
+<div class="highlighted-code language-java">
+<pre><code>public Ticket() throws IllegalStateException {
+  this(LocalDate.now());
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion2b261" class="block iDevice_content">
+<p>En cuanto a posibles métodos <span lang="en">getter</span> se ha pensado en los siguientes:</p>
+<ul class="lista_verificacion">
+<li>uno que devuelva el <strong>identificador</strong> (id) del <span lang="en">ticket</span> (<code>getId</code>);</li>
+<li>otro que devuelva la <strong>fecha</strong> en la que se puede utilizar el<span lang="en"> ticket</span> (<code>getFecha</code>);</li>
+<li>otro que indique <strong>si ha sido ya utilizado</strong> o no (<code>isUsado</code>);</li>
+<li>otro que indique si <span lang="en">ticket </span>es para ser utilizado en <strong>fin de semana</strong> (<code>isFinDeSemana</code>).</li>
+</ul>
+<p>Implementa esos métodos de obtención de información.</p>
+</div>
+<form name="feedback-form-quesFeedback2b261" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b261text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b261" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b261" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La implementación de los <span lang="en">getter</span> podría quedar más o menos así:</p>
+<div class="highlighted-code language-java">
+<pre><code>public LocalDate getFecha() {
+  return this.fecha;
+}
+
+public String getId() {
+  return this.id;
+}
+
+public boolean isUsado() {
+  return this.usado != null;
+}
+
+public boolean isFinDeSemana() {
+  return (fecha.getDayOfWeek() == DayOfWeek.SATURDAY || fecha.getDayOfWeek() == DayOfWeek.SUNDAY);
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion3b261" class="block iDevice_content">
+<p>Cuando un<span lang="en"> ticket</span> vaya a ser <strong>utilizado</strong> podrá ejecutarse el método <code>usar</code>, que tendrá que comprobar:</p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li>si nos encontramos <strong>en la fecha de uso del <span lang="en">ticket</span></strong> (la fecha actual coincide con la fecha de uso);</li>
+<li>si el <span lang="en">ticket</span> <strong>ha sido ya usado o no</strong>.</li>
+</ol>
+<p>En caso de que el <span lang="en">ticket</span> sea "usable", entonces habrá que <strong>marcarlo como usado</strong> y <strong>registrar la hora</strong> (hora y minuto) en la que fue usado.</p>
+</div>
+<form name="feedback-form-quesFeedback3b261" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b261text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b261" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback3b261" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Como ya comentamos a la hora de analizar los posibles atributos de la clase, podrían usarse dos atributos para el control del uso: un <code>boolean</code> que "marca" el uso del <span lang="en">ticket</span> y un <code>LocalTime</code> que registra la hora de uso. Ahora bien, también dijimos que podríamos utilizar simplemente la hora como marca (si aún tiene el valor <code>null</code> es que aún no se ha usado). Incluso también comentamos que en lugar de almacenar un <code>Localtime</code> podríamos directamente almacenar un <code>String</code> representando la hora con el formato "<em>hh:mm</em>". Cualquier alternativa sería razonable.</p>
+<p>Nosotros hemos escogido la opción de usar un único atributo de tipo <code>LocalTime</code>.</p>
+<pre><code></code></pre>
+<p>También debes recordar que <strong>un <span lang="en">ticket</span>, una vez usado, no puede volver a usarse</strong>. Una forma de controlarlo podría ser lanzando una excepción de tipo <code>IllegalStateException</code> si se intenta usar un <span lang="en">ticket</span> ya marcado.</p>
+<div class="highlighted-code language-java">
+<pre><code>public void usar() throws IllegalStateException {
+  if (!this.fecha.isEqual(LocalDate.now())) {
+    throw new IllegalStateException (
+      String.format("el ticket no es para hoy: %s",
+        String.format ("%02d/%02d/%02d",
+          this.fecha.getDayOfMonth(), this.fecha.getMonthValue(), this.fecha.getYear() ) )
+    );
+  }
+  
+  if (isUsado()) {
+    throw new IllegalStateException(
+       String.format("el ticket ya ha sido usado: %s", this.usado));
+  }
+  
+  // Si es posible usar el ticket lo marcamos como usado
+  usado= LocalTime.now();
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion4b261" class="block iDevice_content">
+<p>Respecto a una posible <strong>representación textual</strong> de un objeto <code>Ticket</code> se ha propuesto que se muestre la siguiente información:</p>
+<ul class="lista_verificacion">
+<li><strong>identificador</strong> (id) del <span lang="en">ticket</span>;</li>
+<li><strong>fecha</strong> en que el <span lang="en">ticket </span>podrá ser usado;</li>
+<li>si no ha sido <strong>usado</strong> (cadena "no") o bien la hora a la que se usó (en formato "<em><abbr title="horas  y minutos, separados por dos puntos, con dos dígitos cada uno.">hh:mm</abbr></em>").</li>
+</ul>
+<p>El <strong>formato</strong> sería el siguiente:</p>
+<div>
+<pre><code>{ID: NNNN-XXXXXXXX, Fecha:dd/mm/aaaaa, Usado: no | hora}
+</code></pre>
+</div>
+<p>Algunos ejemplos de salidas de podrían ser:</p>
+<div>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>{ID: 2020-00000003, Fecha:15/01/2020, Usado: 17:10}
+{ID: 2020-00000301, Fecha:21/02/2020, Usado: 09:35}
+{ID: 2020-00111111, Fecha:15/07/2020, Usado: no}
+{ID: 2020-00921121, Fecha:26/04/2020, Usado: 21:57}
+{ID: 2020-00001212, Fecha:12/03/2020, Usado: no}
+{ID: 2020-99999999, Fecha:12/09/2020, Usado: no}
+</code></pre>
+</div>
+</div>
+</div>
+<p>Implementa el método <code>toString</code> para que produzca una salida de ese estilo.</p>
+</div>
+<form name="feedback-form-quesFeedback4b261" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback4b261text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback4b261" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback4b261" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La implementación del método <code>toString</code> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre><code>@Override
+public String toString () {
+  return String.format ("{ID: %s, Fecha:%02d/%02d/%02d, Usado: %s}",
+    this.id,
+    this.fecha.getDayOfMonth(), this.fecha.getMonthValue(), this.fecha.getYear(),
+    this.usado == null ? "no" : String.format ("%02d:%02d", usado.getHour(), usado.getMinute()));
+}</code></pre>
+</div></div>
+</form>
+<div id="taquesQuestion5b261" class="block iDevice_content">
+<p>Por último, también se ha requerido la implementación de un par de métodos "fábrica" (o pseudoconstructores) que generen un<span lang="en"> ticket</span> "aleatorio":</p>
+<ul class="lista_verificacion">
+<li>un método <code>randomEsteMes</code>, que genere nuevo <span lang="en">ticket </span>para ser usado en una <strong>fecha aleatoria del mes actual</strong>;</li>
+<li>un método <code>random</code>, que genere un nuevo <span lang="en">ticket </span>para ser usado en una <strong>fecha aleatoria del año actual</strong>.</li>
+</ul>
+<p>Implementa ambos métodos generadores de nuevos objetos <code>Ticket</code>.</p>
+<p></p>
+</div>
+<form name="feedback-form-quesFeedback5b261" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback5b261text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback5b261" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback5b261" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Lo razonable es que estos métodos sean <strong>estáticos</strong> o <strong>de clase</strong> (<code>static</code>) pues no van a usar el contenido de ningún atributo de objeto. Son métodos "herramienta" que se utilizarán para generar nuevos <span lang="en">tickets </span>de manera similar a como hacemos con los constructores. De hecho en el interior estos métodos se va a producir:</p>
+<ol>
+<li>la <strong>generación de una fecha aleatoria</strong> acorde con las características buscadas (que no sea anterior a la fecha actual y que esté dentro del mes o del año actual);</li>
+<li>la <strong>creación de un nuevo objeto</strong> <code>Ticket</code> con esa <strong>fecha aleatoria</strong> mediante una <strong>invocación al constructor</strong> a través del operador <code>new;</code></li>
+<li>la <strong>devolución de la referencia al objeto</strong> instanciado devuelta por el operador <code>new</code> con la llamada al constructor.</li>
+</ol>
+<p>La forma de generar una fecha aleatoria apropiada tendrás que llevarla a cabo jugando con las distintas posibilidades que te ofrecen los métodos de la clase <code>LocalDate</code>. Puedes enfocarlo desde distintas perspectivas.</p>
+<p>Aquí tienes una posible implementación:</p>
+<div class="highlighted-code language-java">
+<pre><code>public static Ticket randomEsteMes () {
+  LocalDate hoy= LocalDate.now();  // Fecha actual
+
+  // Calculo día de mes actual
+  int diaActual= hoy.getDayOfMonth();
+
+  // Calculo último día de mes del mes actual
+  int ultimoDiaMes= hoy.lengthOfMonth();
+
+  // Calculo número aleatorio entre ambos
+  int diasRandom= (int) (Math.random() * (ultimoDiaMes - diaActual +1)) ;
+
+  // Generamos fecha del mes actual con día aleatorio y a partir de hoy
+  LocalDate fechaRandom= hoy.plusDays(diasRandom);
+
+  // Generamos ticket con la fecha aleatoria (dentro del mes actual)
+  Ticket ticket= new Ticket (fechaRandom);
+
+  // Devolvemos referencia a objeto ticket con fecha aleatoria
+  return ticket;       
+}
+
+public static Ticket random() {
+  LocalDate hoy= LocalDate.now();  // Fecha actual
+
+  // Calculo día del año para hoy (entre 1-365 o 366)
+  int diaActual= hoy.getDayOfYear();
+
+  // Calculo último día del año actual (365 o 366)
+  int ultimoDia= 365 + (hoy.isLeapYear() ? 1 : 0);
+
+  // Calculo número aleatorio entre ambos
+  int diasRandom= (int) (Math.random() * (ultimoDia - diaActual +1)) ;
+
+  // Generamos fecha del año actual con día aleatorio y a partir de hoy
+  LocalDate fechaRandom= hoy.plusDays(diasRandom);
+
+  // Generamos ticket con la fecha aleatoria (dentro del año actual)
+  Ticket ticket= new Ticket (fechaRandom);
+
+  // Devolvemos objeto ticket con fecha aleatoria
+  return ticket;       
+}</code></pre>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="i1_clase_bombilla.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="i3_clase_dado.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

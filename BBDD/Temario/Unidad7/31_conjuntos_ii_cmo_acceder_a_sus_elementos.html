@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos? | Estructuras de datos internas (memoria) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-53"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructuras de datos internas (memoria)</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos internas (memoria)</a></li>
+   <li><a href="1_clases_y_mtodos_genricos_i.html" class="daddy">1.- Clases y métodos genéricos (I)</a>
+   <ul class="other-section">
+      <li><a href="11_clases_y_mtodos_genricos_ii.html" class="no-ch">1.1.- Clases y métodos genéricos (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="2__introduccin_a_las_colecciones.html" class="no-ch">2.-  Introducción a las colecciones</a></li>
+   <li class="current-page-parent"><a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="current-page-parent daddy">3.- Conjuntos (I).  ¿Qué son y cómo se declaran? HashSet</a>
+   <ul>
+      <li id="active"><a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="active no-ch">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</a></li>
+      <li><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="no-ch">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</a></li>
+      <li><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="no-ch">3.3.- Conjuntos (IV). Combinando datos de varias colecciones</a></li>
+      <li><a href="34_conjuntos_v_ordenando_sus_elementos.html" class="no-ch">3.4.- Conjuntos (V). Ordenando sus elementos</a></li>
+      <li><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="no-ch">3.5.- Conjuntos (VI). Ejemplos de uso.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_listas_i_definicin_y_diferencias_con_los_conjuntos.html" class="daddy">4.- Listas (I). Definición y diferencias con los conjuntos</a>
+   <ul class="other-section">
+      <li><a href="41_listas_ii_cmo_se_usan.html" class="no-ch">4.1.- Listas (II). ¿Cómo se usan?</a></li>
+      <li><a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="no-ch">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</a></li>
+      <li><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="no-ch">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</a></li>
+   </ul>
+   </li>
+   <li><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="daddy">5.- Conjuntos de pares clave/valor o diccionarios</a>
+   <ul class="other-section">
+      <li><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="no-ch">5.1.- Recorrido de los elementos de un diccionario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="daddy">6.- Iteradores (I). ¿Qué son y cómo se usan?</a>
+   <ul class="other-section">
+      <li><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="no-ch">6.1.- Iteradores (II). ¿Qué características debemos considerar?</a></li>
+   </ul>
+   </li>
+   <li><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="daddy">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</a>
+   <ul class="other-section">
+      <li><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="no-ch">7.1.- Algoritmos (II). Ordenando los elementos de la colección</a></li>
+      <li><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="no-ch">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</a></li>
+      <li><a href="73_algoritmos_iv_operaciones_agregadas.html" class="daddy">7.3. Algoritmos (IV). Operaciones agregadas</a>
+      <ul class="other-section">
+         <li><a href="731_operaciones_de_reduccin.html" class="no-ch">7.3.1. Operaciones de reducción</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I. Ejercicios resueltos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id145">
+<div class="iDevice emphasis0">
+<div id="ta145_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a title="Ampliar imagen &quot;Concepto matemático de conjunto. (Se abre en una nueva ventana)" href="PROG09_CONT_R030_Conjunto.png" target="_blank" rel="noopener"><img alt="Ilustración que muestra el concepto matemático de conjunto. En la ilustración se muestra un área circular que en su interior tiene un montón de figuras humanas de diferentes colores, las cuales conforman el conjunto. Al conjunto le llama A, y debajo del mismo, se muestran los elementos del conjunto usando una nomenclatura matemática." class="imagen_ampliable" src="PROG09_CONT_R030_Conjunto_miniatura.png" title="Concepto matemático de conjunto." /></a></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-sa" title="CC by-sa" href="http://creativecommons.org/licenses/by-sa/3.0/deed.es" target="_blank" rel="noopener"><span class="transparente">CC by-sa</span></a> <a title=" Acceder a la imagen &quot;Concepto matemático de conjunto&quot;, de Kismalac en Wikipedia. (Se abre en una nueva ventana)" href="https://es.wikipedia.org/wiki/Archivo:PersonsSet.svg" target="_blank" rel="noopener">Kismalac</a></div>
+</div>
+<p>Y ahora te preguntarás, ¿cómo accedo a los elementos almacenados en un conjunto?</p>
+<p>Para obtener todos los elementos almacenados en un conjunto hay que usar<strong> iteradores</strong>, que permiten obtener los elementos del conjunto uno a uno de forma secuencial (es la única forma de acceder a todos los elementos de un conjunto).</p>
+<p>Los iteradores se verán en mayor profundidad más adelante, así que de momento los utilizaremos de forma "transparente" mediante un bucle <strong><span lang="en">"for-each</span></strong>" o bucle "para cada". Este tipo de bucles ya los hemos utilizados para recorrer arrays. En el siguiente código tienes un ejemplo de uso de un bucle <strong><span lang="en">for-each</span></strong>. En él <strong>la variable <code>i</code> va tomando todos los valores almacenados en el conjunto hasta que llega al último</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for (Integer elemento: conjunto) { 
+     System.out.printf ("Elemento almacenado: %s\n", elemento); 
+}</code></pre>
+</div>
+</div>
+<p>Como ves, la estructura<strong><span lang="en"> for-each</span></strong> es muy sencilla: la palabra <code>for</code> seguida de "<span title="Paréntesis seguido de tipo de la variable y espacio, seguido de nombre de la variable que irá tomando el valor de cada elemento de la colección, dos puntos, y después la variable que contiene la colección. Finalmente cierre de paréntesis.">(<code>tipo variable:colección</code>)</span>" y el cuerpo del bucle, donde:</p>
+<ul class="lista_verificacion">
+<li><code>tipo </code>es el tipo del objeto sobre el que se ha creado la colección;</li>
+<li><code>variable</code> es la variable donde se almacenará cada elemento de la colección para ser procesado en cada iteración;</li>
+<li><code>colección</code> es la colección en sí.</li>
+</ul>
+<p>Los bucles<strong><span lang="en"> for-each</span></strong> se pueden usar para todas las colecciones.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id146">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta146_67" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b146" class="block iDevice_content">
+<p>Realiza un pequeño programa que pregunte al usuario cinco números enteros diferentes (almacenándolos en un <code>HashSet</code>), y que después calcule la suma de los mismos (usando un bucle<strong><span lang="en"> for-each</span></strong>). Si se introduce algún número repetido, no se tiene en cuenta y se vuelve a pedir otro.</p>
+<p>Aquí tienes un posible ejemplo de ejecución:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Introduce el número 1º: 34
+Introduce el número 2º: -34
+Introduce el número 3º: 3.4
+Número erróneo. Debe ser un número entero válido.
+Introduce el número 3º: error
+Número erróneo. Debe ser un número entero válido.
+Introduce el número 3º: 10
+Introduce el número 4º: 10
+El número 10 ya está en la lista. Debes introducir otro.
+Introduce el número 4º: 34
+El número 34 ya está en la lista. Debes introducir otro.
+Introduce el número 4º: 5
+Introduce el número 5º: 15
+La suma es: 30. 
+</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b146" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b146text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b146" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b146" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Una solución posible podría ser la siguiente. Fíjate en la solución y verás que el uso de conjuntos ha simplificado enormemente el ejercicio, permitiendo al programador o la programadora centrarse en otros aspectos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>package ejemplo;
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Ejemplo {
+
+    public static void main(String[] args) {
+        HashSet&lt;Integer&gt; conjunto;
+        conjunto = new HashSet&lt;&gt;();  // También se podría haber puesto conjunto = new HashSet&lt;Integer&gt;();  
+                                     // pero este segundo Integer es redundante, y el operador diamante, 
+                                     // nos permite asumirlo por defecto
+        String str;
+        Scanner teclado= new Scanner(System.in);
+        do {
+            System.out.printf("Introduce el número %dº: ", (conjunto.size() + 1));
+            try {
+                str=teclado.nextLine();
+                Integer numero = Integer.parseInt(str);
+                if (!conjunto.add(numero)) {
+                    System.out.printf("El número %d ya está en la lista. Debes introducir otro.\n",numero);
+                }
+            } catch (NumberFormatException e) {
+                System.out.printf("Número erróneo. Debe ser un número entero válido.\n");
+            }
+        } while (conjunto.size() &lt; 5);
+
+        // Calcular la suma
+        int sumaElementosConjunto =0;
+        for (Integer elemento : conjunto) {
+            sumaElementosConjunto += elemento;
+        }
+       System.out.printf("La suma es: %d. \n\n", sumaElementosConjunto);
+    }
+}</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

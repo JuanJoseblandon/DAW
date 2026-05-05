@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.1.- Composición, agregación, asociación. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li class="current-page-parent"><a href="1_relaciones_entre_clases.html" class="current-page-parent daddy">1.- Relaciones entre clases.</a>
+   <ul>
+      <li id="active"><a href="11_composicin_agregacin_asociacin.html" class="active no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_interfaces.html" class="daddy">6.- Interfaces.</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_interfaces_y_polimorfismo.html" class="no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="1_relaciones_entre_clases.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_herencia.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.1.- Composición, agregación, asociación.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id4">
+<div class="iDevice emphasis0">
+<div id="ta4_73" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="PROG07_CONT_R04_Container01.jpg" alt="Contenedores apilados." title="Container1." class="elemento_izquierda" width="192" height="144" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc" title="CC by-nc" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc</span></a> <a href="https://www.flickr.com/photos/s_volenszki/2218589271/" title="Enlace a la web de descarga de s_volenszki (se abre en una nueva ventana)." target="_blank">s_volenszki</a>.</div>
+</div>
+<p>Como ya hemos indicado, se producen este tipo de relaciones <strong>cuando alguno de los atributos de una clase es una referencia a un objeto de otra clase</strong>. Es decir, que la clase "A" contiene una o más referencias a objetos de la clase "B".</p>
+<p>También se dijo que se hablará de un tipo u otro de relación en función de la dependencia que exista entre el objeto "contenedor" y el "contenido". Diferenciar unos casos de otros en resultar un tanto en algunos casos. Veamos algunos ejemplos:</p>
+<ul class="lista_verificacion">
+<li>En el caso de la <strong>composición</strong> entendemos que la existencia de los objetos contenidos es imprescindible para que pueda existir el objeto contenedor, de manera que se suelen instanciar en el constructor de la clase contenedora. Por ejemplo, si una clase <code>Persona</code> contiene un atributo llamado <code>cabeza</code>, que es una instancia de la clase <code>Cabeza</code>, está claro que se trata de un atributo imprescindible para su existencia y que probablemente la existencia de la cabeza no tendría sentido sin la existencia del cuerpo al que pertenece (aunque eso ya dependería del contexto de diseño).</li>
+<li>Si se trata de objetos que el objeto contenedor puede incluir, pero también puede no hacerlo, se suele hablar de <strong>agregación</strong>. Además, en este caso, el objeto contenido podría existir de manera independiente a la existencia del objeto contenido. Si seguimos con el ejemplo de una persona, podríamos hablar de un atributo <code>ropa</code>, que sería una referencia a un objeto de tipo <code>Ropa</code>, que la persona podría o no tener, e incluso tener varias instancias de ella (un array de referencias a objetos <code>Ropa</code>, por ejemplo). Además, esa ropa podría existir de manera independiente a la existencia de esa persona. En estos casos, normalmente la instanciación del objeto contenido se hace de manera independiente a la instanciación del objeto contenedor, pues es posible que el primero ya existiera antes de que se creara el segundo.</li>
+<li>En el caso de la <strong>asociación</strong>, se trata de objetos que pueden existir de manera independiente, aunque en un momento dado pueden tener algún tipo de relación entre ellos. Ejemplo: una persona podría trabajar para una determinada empresa en un momento dado, pero en otros momentos podría estar en paro o incluso trabajar para otra empresa. Por otro lado, otras personas podrían también trabajar para esa empresa.</li>
+</ul>
+<p>Aunque se trata de una diferencia que puede ser importante desde el punto de vista del diseño de una aplicación, desde la perspectiva del programador no siempre será posible implementar estas distinciones, pues se trata de algo que dependerá del lenguaje de programación que se utilice. En este curso no nos vamos a obsesionar por buscar esas diferencias, que sería más una cuestión de <strong>diseño</strong>. Normalmente, englobaremos todas estas posibles relaciones con el nombre genérico de <strong>composición</strong>, pues la forma de implementarlo en un lenguaje será prácticamente la misma: <strong>atributos de clases que son a su vez referencias a objetos de otras clases</strong> (a veces, incluso, referencias a objetos de la misma clase). Si debemos hacer algo más al respecto, ya se nos indicará desde las especificaciones de diseño (si los objetos contenidos deben ser instanciados en el constructor de la clase contendora, si los objetos pueden existir de manera independiente, <abbr title="etcétera">etc</abbr>.).</p>
+<p>Por ejemplo, si describes una entidad <strong>País</strong> compuesta por una serie de atributos, entre los cuales se encuentra una lista de comunidades autónomas, podrías decir que los objetos de la clase <strong><code>Pais</code></strong> contienen varias referencias a objetos de la clase <code>ComunidadAutonoma</code> (por ejemplo, en un array). Por otro lado, los objetos de la clase <code>ComunidadAutonoma</code> podrían contener como atributos referencias a objetos de la clase <code><code>Provinci</code>a</code>, la cual a su vez también podría contener atributos que fueran referencias a objetos de la clase <code><code>Municipio</code></code>. Aunque desde el punto de vista del diseño podríamos discutir si se trata de composición, agregación o asociación, desde la perspectiva de quien programa no habrá demasiadas diferencias y hablaremos en general de composición.</p>
+<p>Como puedes observar, la <strong>composición</strong> puede encadenarse todas las veces que sea necesario hasta llegar a objetos básicos del lenguaje o hasta tipos primitivos que ya no contendrán otros objetos en su interior. Ésta es la forma más habitual de definir clases: mediante otras clases ya definidas anteriormente. Es una manera eficiente y sencilla de gestionar la reutilización de todo el código ya escrito. Si se definen clases que describen entidades distinguibles y con funciones claramente definidas, podrán utilizarse cada vez que haya que representar objetos similares dentro de otras clases.</p>
+<p class="destacado"><strong>La <em>composición</em> (así como la <em>agregación</em> y la <em>asociación</em>) se produce cuando una clase contiene algún atributo que es una referencia a un objeto de otra clase.</strong></p>
+<p>Una forma sencilla de plantearte si la relación que existe entre dos clases A y B es de <strong>composición</strong> podría ser mediante la expresión idiomática “<strong>tiene un</strong>”: “la clase A tiene uno o varios objetos de la clase B”, o visto de otro modo: “Objetos de la clase B pueden formar parte de la clase A”.</p>
+<p>Algunos ejemplos de composición podrían ser:</p>
+<ul class="lista_verificacion">
+<li>Un <strong>coche</strong> tiene un <strong>motor</strong> y tiene cuatro <strong>ruedas</strong>.</li>
+<li>Una <strong>persona</strong> tiene un <strong>nombre</strong>, una <strong>fecha de nacimiento</strong>, una <strong>cuenta bancaria</strong> asociada para ingresar la nómina, etc.</li>
+<li>Un <strong>cocodrilo</strong> bajo investigación científica que tiene un número de <strong>dientes</strong> determinado, una <strong>edad</strong>, unas <strong>coordenadas</strong> de ubicación geográfica (medidas con <acronym title="Global System Positioning." lang="en">GPS</acronym>), etc.</li>
+<li>Una clase <strong><code>Rectangulo</code></strong> podría contener en su interior dos objetos de la clase <code>Punto</code> para almacenar los vértices inferior izquierdo y superior derecho.</li>
+<li>Una clase <code>Empleado</code> podría contener en su interior un objeto de la clase <code><acronym title="Documento Nacional de Identidad.">Dni</acronym></code> para almacenar su <acronym title="Documento Nacional de Identidad.">DNI</acronym>/<acronym title="Número de Identificación Fiscal.">NIF</acronym>, y otro objeto de la clase <code>CuentaBancaria</code> para guardar la cuenta en la que se realizan los ingresos en nómina.</li>
+<li>Una clase <code>JFrame</code> (<code>javax.Swing.JFrame</code>) de la <strong>interfaz gráfica</strong> contiene en su interior referencias a objetos de las clases <code>JRootPane</code>, <code>JMenuBar</code> o <code>JLayeredPane</code>, pues contiene menús, paneles, etc.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdIdevice em_iDevice em_iDevice_reflexionfpd" id="id93">
+<div class="iDevice emphasis_reflexionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta93_119" class="block iDevice_content">
+<p>Hemos resumido las relaciones de composición, agregación y asociación con la frase "<em>tiene un</em>".</p>
+<p>Imagina que vamos a implementar las clases <code>Ave</code> y <code>Loro</code>. ¿Podría decirse que la relación que existe entre la clase <code>Ave</code> y la clase <code>Loro</code> es una relación de composición, agregación o asociación? Es decir, ¿podría decirse que un objeto de un tipo "<em>tiene</em>" un objeto del otro tipo?</p>
+</div>
+<form name="feedback-form-93" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedback93text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-93" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-93" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div id="ta93_120" class="block iDevice_content">
+<p><strong>La respuesta sería no</strong>.</p>
+<p>Aunque claramente existe algún tipo de relación entre ambas, no parece que sea la de composición. No se aprecia que se cumpla la expresión “<em><strong>tiene un</strong></em>”: “<em>Un loro tiene un ave</em>”. Se verificaría más bien una expresión del tipo “<strong>es un</strong>”: “<em>Un loro <strong>es</strong> un ave</em>”. Algunos objetos que cumplirían la relación de composición podrían ser <strong>pico</strong> o <strong>alas</strong>, pues “un loro tiene un pico y dos alas”, del mismo modo que “un ave tiene pico y dos alas”.</p>
+<p>Por tanto, podríamos decir que este tipo de relación parece más bien de <strong>herencia</strong> (un loro es un tipo de ave).</p>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id92">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta92_148" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b92" class="block iDevice_content">
+<p>Declara en Java los atributos de una clase <strong><code>Persona</code></strong> con las siguientes características:</p>
+<ul class="lista_verificacion">
+<li>primer apellido;</li>
+<li>segundo apellido;</li>
+<li>nombre;</li>
+<li>fecha de nacimiento.</li>
+</ul>
+<p>¿Se estaría produciendo un caso de composición?</p>
+</div>
+<form name="feedback-form-quesFeedback0b92" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b92text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b92" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b92" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>En efecto, se trata de un ejemplo bastante simple y habitual de <strong>composición</strong>. Un objeto persona contendrá una serie de características personales que se implementarán en forma de atributos que serán referencias a objetos de tipo cadena o fecha. En este caso, podríamos tener algo así si lo escribimos en Java:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public class Persona {
+    // Atributos de objeto
+    String apellido1;
+    String apellido2;
+    String nombre;
+    LocalDate fechaNacim; 
+    . . .</code></pre>
+</div>
+</div>
+<p>Puedes observar que en realidad se trata de algo que ya hemos llevado a cabo un buen número de veces en la unidad anterior al declarar los atributos de una clase cuando algunos de estos no eran tipos primitivos, sino referencias a objetos.</p>
+<p>Como ya hemos comentado anteriormente, salvo que se nos indique explícitamente en las especificaciones de diseño (o, en nuestro caso, en unas instrucciones o en el enunciado de un ejercicio), hablaremos normalmente de <strong>composición</strong> de manera genérica, sin llegar a distinguir si se trata de agregación, asociación, <abbr title="etcétera">etc</abbr>. Solo cuando se considere necesario haremos esta distinción pues a la hora de declarar los atributos no va a haber prácticamente ninguna diferencia.</p></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="1_relaciones_entre_clases.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_herencia.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

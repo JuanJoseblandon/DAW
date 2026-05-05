@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.1.- Operadores aritméticos | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-62"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li class="current-page-parent"><a href="11_operadores_y_expresiones.html" class="current-page-parent daddy">11.- Operadores y expresiones</a>
+   <ul>
+      <li id="active"><a href="111_operadores_aritmticos.html" class="active no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="11_operadores_y_expresiones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="112_operadores_de_asignacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.1.- Operadores aritméticos</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id174">
+<div class="iDevice emphasis0">
+<div id="ta174_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG02_CONT_R24_abaco.jpg" alt="Imagen de viejo ábaco utilizado en las civilizaciones primitivas para realizar operaciones aritméticas sencillas, tales como suma, resta y multiplicaciones." title="Ábaco" style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by" title="CC by" href="http://creativecommons.org/licenses/by/3.0/deed.es" target="_blank"><span class="transparente">CC by</span></a> <a title="Paul Schadler" href="https://www.flickr.com/photos/pschadler/4932737690/" target="_blank">Paul Schadler</a></div>
+</div>
+<p>Los operadores aritméticos son aquellos operadores que combinados con los operandos forman expresiones matemáticas o aritméticas.</p>
+<table class="tabla" summary="Cuadro o tabla de siete filas por cuatro columnas, de título &quot;Operadores aritméticos básicos&quot;, de modo que para cada tipo de operador se indica la operación a que corresponde, un ejemplo de uso y el resultado del ejemplo. Debe ser leída en columnas de izquierda a derecha y de arriba abajo. "><caption>Operadores aritméticos básicos</caption>
+<thead>
+<tr><th scope="col">Operador</th><th scope="col">Operación Java</th><th scope="col">Expresión Java</th><th scope="col">Resultado</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;">-</span></td>
+<td>Operador unario de cambio de signo</td>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>-10</code></span></strong></td>
+<td style="text-align: center;">-10</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;">+</span></td>
+<td>Adición</td>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>1.2 <abbr title="más">+</abbr> 9.3</code></span></strong></td>
+<td style="text-align: center;">10.5</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;">-</span></td>
+<td>Sustracción</td>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>312.5 <abbr title="menos">-</abbr> 12.3</code></span></strong></td>
+<td style="text-align: center;">300.2</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;">*</span></td>
+<td>Multiplicación</td>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>1.7 <abbr title="por">*</abbr> 1.2</code></span></strong></td>
+<td style="text-align: center;">2.04</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;">/</span></td>
+<td>División (entera o real)</td>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>0.5 <abbr title="partido por">/</abbr> 0.2</code></span></strong></td>
+<td style="text-align: center;">2.5</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><strong>%</strong></span></td>
+<td>Resto de la división entera</td>
+<td style="text-align: center;"><strong><span style="font-size: medium;"><code>25 <abbr title="Resto-módulo. ">%</abbr> 3</code></span></strong></td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>El resultado de este tipo de expresiones depende de los operandos que utilicen:</p>
+<table class="tabla" summary="Cuadro o tabla de cinco filas por dos columnas, de título &quot;Resultado de las operaciones aritméticas en Java&quot;, de modo que para cada tipo de operando se indica el resultado que dará la expresión aritmética. Debe ser leída en columnas de izquierda a derecha y de arriba abajo. "><caption>Resultados de las operaciones aritméticas en Java</caption>
+<thead>
+<tr><th scope="col">Tipo de los operandos</th><th scope="col">Resultado</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Un operando de tipo <strong><span style="font-size: medium;"><code>long</code></span></strong> y ninguno real ( ni <strong><span style="font-size: medium;"><code>float</code></span></strong> ni <strong><span style="font-size: medium;"><code>double</code></span></strong>)</td>
+<td style="text-align: center;"><span style="font-size: medium;"><code>long</code></span></td>
+</tr>
+<tr>
+<td>Ningún operando de tipo <strong><span style="font-size: medium;"><code>long</code></span></strong> ni real (<code><strong><span style="font-size: medium;"><code>float</code></span></strong> o <strong><span style="font-size: medium;"><code>double</code></span></strong></code>)</td>
+<td style="text-align: center;"><span style="font-size: medium;"><code>int</code></span></td>
+</tr>
+<tr>
+<td>Al menos un operando de tipo <strong><span style="font-size: medium;"><code>double</code></span></strong></td>
+<td style="text-align: center;"><span style="font-size: medium;"><code>double</code></span></td>
+</tr>
+<tr>
+<td>Al menos un operando de tipo <strong><span style="font-size: medium;"><code>float</code></span></strong> y ninguno <strong><span style="font-size: medium;"><code>double</code></span></strong></td>
+<td style="text-align: center;"><span style="font-size: medium;"><code>float</code></span></td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Otro tipo de operadores aritméticos son los<strong> operadores unarios de incremento y decremento</strong>. Producen un resultado del mismo tipo que el operando, y podemos utilizarlos con <strong>notación prefija</strong>, si el operador aparece antes que el operando, o <strong>notación</strong> <strong>postfija</strong>, si el operador aparece después del operando. En la tabla puedes ver un ejemplo de utilización de cada uno de estos operadores.</p>
+<table class="tabla" summary="Cuadro o tabla de tres filas por dos columnas, de título &quot;Operadores incrementales en Java&quot;, de modo que para cada tipo de operador incremental se indica su símbolo, un ejemplo de uso y el resultado. Debe ser leída en columnas de izquierda a derecha y de arriba abajo. "><caption>Operadores incrementales en Java</caption>
+<thead>
+<tr><th scope="col">Tipo operador</th><th scope="col" colspan="2">Expresión Java</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">++ (incremental)</th>
+<td style="text-align: center;">
+<p>Prefija:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>x=3;
+y=++x;
+// x vale 4 e y vale 4</code></pre>
+</div>
+</div>
+</td>
+<td style="text-align: center;">
+<p>Postfija:</p>
+<p style="text-align: left;"></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>x=3;
+y=x++;
+// x vale 4 e y vale 3</code></pre>
+</div>
+</div>
+</td>
+</tr>
+<tr><th scope="row">--(decremental)</th>
+<td style="text-align: center;">
+<p>Prefija:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>x=3;
+y=--x;
+// x vale 2 e y vale 2</code></pre>
+</div>
+</div>
+</td>
+<td style="text-align: center;">
+<p>Postfija:</p>
+<p style="text-align: left;"></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>x=3;
+y=x--;
+// x vale 2 e y vale 3</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id184">
+<div class="iDevice emphasis0">
+<div id="ta184_85" class="block iDevice_content">
+<p>En el siguiente ejemplo vemos un programa básico que utiliza algunos <strong>operadores aritméticos</strong>. <abbr title="etcétera."></abbr></p>
+<table class="tabla" summary="Cuadro o tabla de dos filas por dos columnas, de título &quot;Uso de operadores aritméticos en Java&quot;, donde a la izquierda aparece un ejemplo de código y a la derecha el resultado de ejecutarlo." style="width: 100%;"><caption>Ejemplo de uso de operadores aritméticos en Java</caption>
+<thead>
+<tr><th scope="col">Ejemplo de código</th><th scope="col">Salida por pantalla</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">
+<div class="highlighted-code language-java" style="text-align: left;">
+<div>
+<pre><code>public class OperadoresAritmeticos {
+    public static void main(String[] args) {
+        // Declaración de variables
+        short x = 7;
+        int y = 5;
+        float f1 = 13.5f;
+        float f2 = 8f;
+
+        // Ejemplos de operaciones
+        System.out.println("EJEMPLOS DE USO DE OPERADORES ARITMÉTICOS");
+        System.out.println("-----------------------------------------");
+        System.out.println("El valor de x es " + x + ", y es " + y);
+        System.out.println("El resultado de x + y es " + (x + y));
+        System.out.println("El resultado de x - y es " + (x - y));
+        System.out.println("División entera: x / y = " + (x/y));
+        System.out.println("Resto de la división entera: x % y = " + (x % y));
+        System.out.println("El valor de f1 es " + f1 + ", f2 es " + f2);
+        System.out.println("El resultado de f1 / f2 es " + (f1 / f2));
+    } 
+} </code></pre>
+</div>
+</div>
+</td>
+<td style="text-align: center;">
+<div class="highlighted-code code-style-2 language-markup">
+<div style="text-align: left;">
+<pre><code>EJEMPLOS DE USO DE OPERADORES ARITMÉTICOS
+-----------------------------------------
+El valor de x es 7, y es 5
+El resultado de x + y es 12
+El resultado de x - y es 2
+División entera:
+x / y = 1
+Resto de la división entera: x % y = 2
+El valor de f1 es 13.5, f2 es 8.0
+El resultado de f1 / f2 es 1.6875</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id195">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta195_149" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b195" class="block iDevice_content">
+<p>Partiendo de una variable entera llamada <code>x</code> cuyo valor inicial es <code>6</code>, haz que se muestre por pantalla la secuencia de números siguiente, aplicando una operación matemática sobre <code>x</code>:</p>
+<p style="text-align: center;">6, 10, -4, 12, 3, 2, 9, -6, 0</p>
+<p>Para hacer este ejercicio deberás realizar 9 operaciones matemáticas sobre la variable <code>x</code>, y deberás utilizar cada uno de los operadores vistos en este apartado al menos una vez.</p>
+</section>
+<form name="feedback-form-quesFeedback0b195" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b195text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b195" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b195" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Una solución posible podría ser la siguiente:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class EjercicioListaNumeros {
+     public static void main(String[] args) {
+         int x=6;         
+         System.out.println(x - 0);
+         System.out.println(x + 4);
+         System.out.println(x - 10);
+         System.out.println(x * 2);
+         System.out.println(x / 2);
+         System.out.println(x % 4);
+         System.out.println(x + 3);
+         System.out.println(-x);
+         System.out.println(x - x);              
+    }
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id206">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta206_149" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b206" class="block iDevice_content">
+<p>Con el siguiente código se lee desde teclado el precio de un producto:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.util.Scanner;
+
+public class CalcularIVA {
+    public static void main(String args[]) {
+      Scanner scanner=new Scanner(System.in);
+      System.out.print("Introduce el precio del producto: ");
+      double precioProducto=scanner.nextDouble();
+    }
+}</code></pre>
+</div>
+</div>
+<p>¿Podrías modificar el código anterior para que mostrara el precio con IVA de la siguiente forma? (ten en cuenta que el IVA es del 21%)</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Introduce el precio del producto: 8,4
+Importe del IVA: 1.764
+Precio con IVA: 10.164</code></pre>
+</div>
+</div>
+<p></p>
+</section>
+<form name="feedback-form-quesFeedback0b206" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b206text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b206" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b206" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Una solución al problema anterior podría ser la siguiente:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>import java.util.Scanner;
+
+public class CalcularIVA {
+    public static void main(String args[]) {
+      Scanner scanner=new Scanner(System.in);
+      System.out.print("Introduce el precio del producto: ");
+      double precioProducto=scanner.nextDouble();
+      double iva=0.21*precioProducto;
+      double precioConIVA=precioProducto+iva;
+      System.out.println("Importe del IVA: " +iva);
+      System.out.println("Precio con IVA: " +precioConIVA);
+    }
+}</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id207">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta207_149" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b207" class="block iDevice_content">
+<p>El siguiente código pregunta al usuario por la velocidad (en kilómetros por hora) y el tiempo (en segundos) de un vehículo.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.util.Scanner;
+
+public class Velocidad {
+    public static void main(String args[]) {
+      Scanner scanner=new Scanner(System.in);
+      System.out.print("Velocidad en kilometros por hora:");
+      double velocidad=scanner.nextDouble();
+      System.out.print("Tiempo en segundos:");
+      int segundos=scanner.nextInt();            
+    }
+}</code></pre>
+</div>
+</div>
+<p>¿Serías capaz de modificarlo para que calculase la distancia recorrida en kilómetros y en metros? Un ejemplo de salida sería:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Velocidad en kilometros por hora:30
+Tiempo en segundos:90
+Distancia recorrida en kilometros:0.75
+Distancia recorrida en metros:750.0</code></pre>
+</div>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b207" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b207text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b207" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b207" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Una solución posible sería la siguiente:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>import java.util.Scanner;
+
+public class Velocidad {
+    public static void main(String args[]) {
+      Scanner scanner=new Scanner(System.in);
+      System.out.print("Velocidad en kilometros por hora:");
+      double velocidad=scanner.nextDouble();
+      System.out.print("Tiempo en segundos:");
+      int segundos=scanner.nextInt();
+      
+      double distanciaKM=velocidad*(segundos/3600.0);
+      double distanciaM=distanciaKM*1000;
+      
+      System.out.println("Distancia recorrida en kilometros:"+distanciaKM);
+      System.out.println("Distancia recorrida en metros:"+distanciaM);
+      
+    }
+}</code></pre>
+</div>
+</div>
+<p>Fíjate que el tiempo en segundos se divide por <code>3600.0</code> (literal <code>double</code>) y no por <code>3600</code> (literal <code>int</code>). Esto se realiza así para forzar a que la división <code>segundos/3600.0</code>  se realice con precisión <code>double</code> y no con precisión <code>int</code>.</p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="11_operadores_y_expresiones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="112_operadores_de_asignacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

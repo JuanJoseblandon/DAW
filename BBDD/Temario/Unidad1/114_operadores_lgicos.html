@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.4.- Operadores lógicos | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-66"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li class="current-page-parent"><a href="11_operadores_y_expresiones.html" class="current-page-parent daddy">11.- Operadores y expresiones</a>
+   <ul>
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li id="active"><a href="114_operadores_lgicos.html" class="active no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="113_operadores_de_relacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="115_operador_condicional.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.4.- Operadores lógicos</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id181">
+<div class="iDevice emphasis0">
+<div id="ta181_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG02_CONT_R31_Logicos.jpg" alt="Imagen con los operadores lógicos de Java escritos sobre un fondo de cuadros." title="Operadores lógicos." style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="CC by-nc-sa" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a> <a title="Aldo Cavini Benedetti" href="https://www.flickr.com/photos/aldoaldoz/4165811238/" target="_blank">Aldo Cavini Benedetti</a></div>
+</div>
+<p>Los operadores lógicos realizan operaciones sobre valores booleanos, o resultados de expresiones relacionales, dando como resultado un valor booleano.</p>
+<p>Los operadores lógicos los podemos ver en la tabla que se muestra a continuación.</p>
+<p><span style="border: 0.1em solid #004781; background-color: #004781; border-radius: 0.5em 0.5em 0.5em 0.5em; color: #ffffff; padding: 0.15em 0.5em; font-weight: bold;">Existen ciertos casos en los que el segundo operando de una expresión lógica no se evalúa para ahorrar tiempo de ejecución, porque con el primero ya es suficiente para saber cuál va a ser el resultado de la expresión.</span></p>
+<p>Por ejemplo, en la expresión <code>a &amp;&amp; b</code> si <code>a</code> es falso, no se sigue comprobando la expresión, puesto que ya se sabe que la condición de que ambos sean verdadero no se va a cumplir. En estos casos es más conveniente colocar el operando más propenso a ser falso en el lado de la izquierda. Igual ocurre con el operador <code>||</code>, en cuyo caso es más favorable colocar el operando más propenso a ser verdadero en el lado izquierdo.</p>
+<table class="tabla" summary="Cuadro o tabla de siete filas por tres columnas, de título &quot;Operadores lógicos en Java&quot;, de modo que para cada operador lógico se indica cómo se escribe en Java y su significado. Debe ser leída en columnas de izquierda a derecha y de arriba abajo. "><caption>Operadores lógicos en Java</caption>
+<thead>
+<tr><th scope="col">Operador</th><th scope="col">Ejemplo en Java</th><th scope="col">Significado</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><code>!</code></span></td>
+<td style="text-align: center;"><span style="font-size: medium;">!op</span></td>
+<td><span style="font-size: medium;">Devuelve <code>true</code> si el operando es <code>false</code> y viceversa.</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><code>&amp; </code></span></td>
+<td style="text-align: center;"><span style="font-size: medium;">op1 &amp; op2</span></td>
+<td><span style="font-size: medium;">Devuelve true si <code>op1</code> y <code>op2</code> son <code>true</code></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><code>| </code></span></td>
+<td style="text-align: center;"><span style="font-size: medium;">op1 | op2</span></td>
+<td><span style="font-size: medium;">Devuelve <code>true</code> si <code>op1</code> u <code>op2</code> son <code>true</code></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><code>^ </code></span></td>
+<td style="text-align: center;"><span style="font-size: medium;">op1 ^ op2</span></td>
+<td><span style="font-size: medium;">Devuelve <code>true</code> si sólo uno de los operandos es <code>true</code></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><code>&amp;&amp; </code></span></td>
+<td style="text-align: center;"><span style="font-size: medium;">op1 &amp;&amp; op2</span></td>
+<td><span style="font-size: medium;">Igual que <code>&amp;</code>, pero si <code>op1</code> es <code>false</code> ya no se evalúa <code>op2</code></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><code>|| </code></span></td>
+<td style="text-align: center;"><span style="font-size: medium;">op1 || op2</span></td>
+<td><span style="font-size: medium;">Igual que<code> |</code>, pero si <code>op1</code> es <code>true</code> ya no se evalúa <code>op2</code></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextIdevice" id="id182">
+<div class="iDevice emphasis0">
+<div id="ta182_85" class="block iDevice_content">
+<p>En el siguiente código puedes ver un ejemplo de utilización de operadores lógicos. Observa la salida que se debería obtener:</p>
+<table class="tabla" summary="Cuadro o tabla de dos filas por dos columnas, de título &quot;Ejemplo de uso de operadores lógicos en Java&quot;, donde a la izquierda aparece un ejemplo de código y a la derecha el resultado de su ejecución. " style="width: 100%;"><caption>Ejemplo de uso de operadores lógicos en Java</caption>
+<thead>
+<tr><th scope="col">Ejemplo de código</th><th scope="col">Salida por pantalla</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">
+<div class="highlighted-code language-java" style="text-align: left;">
+<div>
+<pre><code>public class OperadoresLogicos { 
+    
+    public static void main(String[] args) {
+
+        System.out.println("EJEMPLOS DE USO DE OPERADORES LÓGICOS");
+        System.out.println("-------------------------------------");
+
+        System.out.println("Negacion:\n !false es : " + (! false));
+        System.out.println(" !true es : " + (! true));
+
+        System.out.println("Operador AND (&amp;):");
+        System.out.println(" false &amp; false es : " + (false &amp; false));
+        System.out.println(" false &amp; true  es : " + (false &amp; true));
+        System.out.println(" true  &amp; false es : " + (true &amp; false));
+        System.out.println(" true  &amp; true  es : " + (true &amp; true));
+
+        System.out.println("Operador OR (|):");
+        System.out.println(" false | false es : " + (false | false));
+        System.out.println(" false | true  es : " + (false | true));
+        System.out.println(" true  | false es : " + (true | false));
+        System.out.println(" true  | true  es : " + (true | true));
+
+        System.out.println("Operador OR Exclusivo o XOR (^):");
+        System.out.println(" false ^ false es : "  + (false ^ false));
+        System.out.println(" false ^ true  es : " + (false ^ true));
+        System.out.println(" true  ^ false es : " + (true ^ false));
+        System.out.println(" true  ^ true  es : " + (true ^ true));
+
+        System.out.println("Operador AND (&amp;&amp;):");
+        System.out.println(" false &amp;&amp; false es : "  + (false &amp;&amp; false));
+        System.out.println(" false &amp;&amp; true  es : " + (false &amp;&amp; true));
+        System.out.println(" true  &amp;&amp; false es : " + (true &amp;&amp; false));
+        System.out.println(" true  &amp;&amp; true  es : " + (true &amp;&amp; true));
+
+        System.out.println("Operador OR (||):");
+        System.out.println(" false || false es : " + (false || false));
+        System.out.println(" false || true  es : " + (false || true));
+        System.out.println(" true  || false es : " + (true || false));
+        System.out.println(" true  || true  es : " + (true || true));
+    } 
+}</code></pre>
+</div>
+</div>
+</td>
+<td style="text-align: center;">
+<div class="highlighted-code code-style-2 language-markup">
+<div style="text-align: left;">
+<pre><code>EJEMPLOS DE USO DE OPERADORES LÓGICOS
+-------------------------------------
+Negacion:
+ !false es : true
+ !true es : false
+Operador AND (&amp;):
+ false &amp; false es : false
+ false &amp; true  es : false
+ true  &amp; false es : false
+ true  &amp; true  es : true
+Operador OR (|):
+ false | false es : false
+ false | true  es : true
+ true  | false es : true
+ true  | true  es : true
+Operador OR Exclusivo o XOR (^):
+ false ^ false es : false
+ false ^ true  es : true
+ true  ^ false es : true
+ true  ^ true  es : false
+Operador AND (&amp;&amp;):
+ false &amp;&amp; false es : false
+ false &amp;&amp; true  es : false
+ true  &amp;&amp; false es : false
+ true  &amp;&amp; true  es : true
+Operador OR (||):
+ false || false es : false
+ false || true  es : true
+ true  || false es : true
+ true  || true  es : true</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id198">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta198_149" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b198" class="block iDevice_content">
+<p>Dadas las variables siguientes:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>int x1=10, x2=5, x3=0;
+char c1='F', c2='S';</code></pre>
+</div>
+</div>
+<p>Crea una expresión lógica, que utilice operadores lógicos y relacionales, para cada uno de los siguientes casos (intenta evaluar mentalmente el resultado de la expresión antes de mostrarlo por pantalla):</p>
+<ul class="lista_verificacion">
+<li><code>x1</code> es igual a <code>x2</code></li>
+<li><code>c1</code> es distinto a <code>c2</code></li>
+<li><code>x1</code> está entre <code>10</code> y <code>100</code></li>
+<li><code>x2</code> no está entre <code>10</code> y <code>100</code></li>
+<li><code>x3</code> no está entre <code>10</code> y <code>100</code></li>
+<li><code>x1</code> es mayor que <code>x2</code> y <code>c1</code> es igual a <code>c2</code></li>
+<li>O <code>x1</code> es mayor que <code>x2</code>, o <code>c1</code> es distinto a <code>c2</code>, cualquiera de los dos casos.</li>
+<li><code>x1</code> es menor o igual que 7 y <code>c2</code> es igual a <code>c1</code></li>
+<li><code>c2</code> es distinto de <code>'A'</code> y <code>x2</code> es mayor que <code>0</code></li>
+<li><code>'F'</code> es distinto de <code>c1</code> o <code>x1</code> es mayor que <code>20</code></li>
+<li><code>'F'</code> es distinto de <code>c1</code> o <code>x1</code> es mayor que <code>20</code> o <code>x2</code> es mayor que <code>2</code></li>
+<li><code>'F'</code> es igual a <code>c1</code> y <code>x3</code> es menor que <code>x1</code></li>
+<li><code>'F'</code> es igual a <code>c1</code> y <code>x3</code> es menor que <code>x1</code> y <code>x2</code> es menor o igual que <code>x3</code></li>
+<li><code>x2</code> está entre <code>x3</code> y <code>x1</code>, y <code>c2</code> es <code>'S'</code></li>
+<li><code>x3</code> no está entre <code>x2</code> y <code>x1</code></li>
+<li><code>x2</code> no está entre <code>x3</code> y <code>x1</code>, o <code>c2</code> es igual a <code>c1</code></li>
+<li>no se cumple que <code>x3</code> es menor que <code>x1</code></li>
+<li>ni <code>x3</code> es mayor que <code>x1</code>, ni <code>c2</code> es distinto a <code>c1</code></li>
+<li>no se cumple que <code>x1</code> es menor que <code>100</code> y <code>x2</code> es mayor que <code>10</code></li>
+<li><code>c2</code> es anterior alfabéticamente a <code>c1</code></li>
+</ul>
+<p></p>
+</section>
+<form name="feedback-form-quesFeedback0b198" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b198text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b198" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b198" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Una solución posible sería la siguiente:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class EjercicioOperadoresLogicos {
+     public static void main(String[] args) {
+         int x1=10, x2=5, x3=0;
+         char c1='F', c2='S';
+         boolean b;
+
+         //x1 es igual a x2
+         b=x1==x2; //false
+         System.out.println("C1: "+b);
+
+         //c1 es distinto a c2
+         b=c1!=c2; //true
+         System.out.println("C2: "+b);
+         
+         //x1 está entre 10 y 100
+         b=x1&gt;=10 &amp;&amp; x1&lt;=100; //true (x1 está en ese rango)
+         System.out.println("C3: "+b);
+         
+         //x2 no está entre 10 y 100
+         b=!(x2&gt;=10 &amp;&amp; x2&lt;=100); //true (x2 no está en ese rango)
+         System.out.println("C4: "+b);
+         
+         //x3 no está entre 10 y 100
+         b=x3&lt;10 || x3&gt;100; //true (x3 no está en ese rango)
+         System.out.println("C5: "+b);
+         
+         //x1 es mayor que x2 y c1 es igual a c2
+         b=x1&gt;x2 &amp;&amp; c1==c2; //false (c1 no es igual a c2)
+         System.out.println("C6: "+b);
+
+         //O x1 es mayor que x2, o c1 es distinto a c2, cualquiera de los dos casos.
+         b=x1&gt;x2 || c1!=c2; //true (se cumplen ambas condiciones)
+         System.out.println("C7: "+b);
+         
+         //x1 es menor o igual que 7 y c2 es igual a c1
+         b=x1&lt;=7 &amp;&amp; c2==c1; //false (ambas condiciones son falsas)
+         System.out.println("C8: "+b);
+         
+         //c2 es distinto de 'A' y x2 es mayor que 0
+         b=c2!='A' &amp;&amp; x2&gt;0; //true (ambas condiciones son true)
+         System.out.println("C9: "+b);
+         
+         //'F' es distinto de c1 o x1 es mayor que 20
+         b='F'!=c1 || x1&gt;20; //false (ambas condiciones son false)
+         System.out.println("C10: "+b);
+         
+         //'F' es distinto de c1 o x1 es mayor que 20 o x2 es mayor que 2
+         b='F'!=c1 || x1&gt;20 || x2&gt;2; //true (la última condición es cierta)
+         System.out.println("C11: "+b);
+         
+         //'F' es igual a c1 y x3 es menor que x1
+         b='F'==c1 &amp;&amp; x3&lt;x1; //true (ambas condiciones son ciertas)
+         System.out.println("C12: "+b);         
+         
+         //'F' es igual a c1 y x3 es menor que x1 y x2 es menor o igual que x3
+         b='F'==c1 &amp;&amp; x3&lt;x1 &amp;&amp; x2&lt;=x3; //false (la última condición es falsa)
+         System.out.println("C13: "+b);
+         
+         //x2 está entre x3 y x1, y c2 es 'S'
+         b=x2&gt;=x3 &amp;&amp; x2&lt;=x1 &amp;&amp; c2=='S'; //true (todas las condiciones se cumplen)
+         System.out.println("C14: "+b);
+         
+         //x3 no está entre x2 y x1
+         b=x3&lt;x2 || x3&gt;x1; //true (todas las condiciones se cumplen)
+         System.out.println("C15: "+b);
+         
+         //x2 no está entre x3 y x1, o c2 es igual a c1
+         b=x2&lt;x3 || x2&gt;x1 || c2==c1; // false (Las tres condiciones no se cumplen)
+         System.out.println("C16: "+b);
+         
+         //no se cumple que x3 es menor que x1
+         b=!(x3&lt;x1); //false (x3 si es menor que x1)
+         System.out.println("C17: "+b);
+         
+         //ni x3 es mayor que x1, ni c2 es distinto a c1
+         b=!(x3&gt;x1) &amp;&amp; !(c2!=c1); //false (c2 si es distinto a c1 )
+         System.out.println("C18: "+b);
+         
+         //no se cumple que x1 es menor que 100 y x2 es mayor que 10
+         b=!(x1&lt;100 &amp;&amp; x2&gt;10); //true
+         System.out.println("C19: "+b);
+
+         //c2 es anterior alfabéticamente a c1         
+         b=c2&lt;c1; //false (la 'S' es posterior a la 'F')
+         System.out.println("C20: "+b);         
+        
+    }
+}</code></pre>
+</div>
+</div>
+<p><strong>Nota importante: el tipo de datos <code>char </code>es internamente un número, por eso se pueden comparar usando operadores relacionales, pero esto no es posible con cadenas de caracteres (<code>String</code>).</strong></p>
+<p></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="113_operadores_de_relacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="115_operador_condicional.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

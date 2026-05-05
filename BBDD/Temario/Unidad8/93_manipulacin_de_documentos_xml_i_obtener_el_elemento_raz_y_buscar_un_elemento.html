@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>9.3.- Manipulación de documentos XML (I). Obtener el elemento raíz, y buscar un elemento. | PROG07_Contenidos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="Juan Antonio Reina" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-32"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">PROG07_Contenidos</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos externas (ficheros).</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1.- Introducción.</a>
+   <ul class="other-section">
+      <li><a href="11_excepciones.html" class="no-ch">1.1.- Excepciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_concepto_de_flujo.html" class="no-ch">2.- Concepto de flujo.</a></li>
+   <li><a href="3_clases_relativas_a_flujos.html" class="daddy">3.- Clases relativas a flujos.</a>
+   <ul class="other-section">
+      <li><a href="31_ejemplo_comentado_de_una_clase_con_flujos.html" class="no-ch">3.1.- Ejemplo comentado de una clase con flujos.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_flujos.html" class="daddy">4.- Flujos.</a>
+   <ul class="other-section">
+      <li><a href="41_flujos_predefinidos_entrada_y_salida_estndar.html" class="no-ch">4.1.- Flujos predefinidos. Entrada y salida estándar.</a></li>
+      <li><a href="42_flujos_predefinidos_entrada_y_salida_estndar_ejemplo.html" class="no-ch">4.2.- Flujos predefinidos. Entrada y salida estándar. Ejemplo.</a></li>
+      <li><a href="43_flujos_basados_en_bytes.html" class="no-ch">4.3.- Flujos basados en bytes.</a></li>
+      <li><a href="44_flujos_basados_en_caracteres.html" class="no-ch">4.4.- Flujos basados en caracteres.</a></li>
+      <li><a href="45_rutas_de_los_ficheros.html" class="no-ch">4.5.- Rutas de los ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_trabajando_con_ficheros.html" class="daddy">5.- Trabajando con ficheros.</a>
+   <ul class="other-section">
+      <li><a href="51_escritura_y_lectura_de_informacin_en_ficheros.html" class="no-ch">5.1.- Escritura y lectura de información en ficheros.</a></li>
+      <li><a href="52_ficheros_binarios_y_ficheros_de_texto_i.html" class="daddy">5.2.- Ficheros binarios y ficheros de texto (I).</a>
+      <ul class="other-section">
+         <li><a href="521_ficheros_binarios_y_ficheros_de_texto_ii.html" class="no-ch">5.2.1.- Ficheros binarios y ficheros de texto (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="53_modos_de_acceso_registros.html" class="no-ch">5.3.- Modos de acceso. Registros.</a></li>
+      <li><a href="54_acceso_secuencial.html" class="no-ch">5.4.- Acceso secuencial.</a></li>
+      <li><a href="55_acceso_aleatorio.html" class="no-ch">5.5.- Acceso aleatorio.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_aplicaciones_del_almacenamiento_de_informacin_en_ficheros.html" class="no-ch">6.- Aplicaciones del almacenamiento de información en ficheros.</a></li>
+   <li><a href="7_utilizacin_de_los_sistemas_de_ficheros.html" class="daddy">7.- Utilización de los sistemas de ficheros.</a>
+   <ul class="other-section">
+      <li><a href="71_clase_file.html" class="no-ch">7.1.- Clase File.</a></li>
+      <li><a href="72_interface_filenamefilter.html" class="no-ch">7.2.- Interface FilenameFilter.</a></li>
+      <li><a href="73_creacin_y_eliminacin_de_ficheros_y_directorios.html" class="no-ch">7.3.- Creación y eliminación de ficheros y directorios.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_almacenamiento_de_objetos_en_ficheros_persistencia_serializacin.html" class="daddy">8.- Almacenamiento de objetos en ficheros. Persistencia. Serialización.</a>
+   <ul class="other-section">
+      <li><a href="81_serializacin_utilidad.html" class="no-ch">8.1.- Serialización: utilidad.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="9_tratamiento_de_documentos_estructurados_xml.html" class="current-page-parent daddy">9.- Tratamiento de documentos estructurados XML.</a>
+   <ul>
+      <li><a href="91_qu_es_un_documento_xml.html" class="no-ch">9.1.- ¿Qué es un documento XML?</a></li>
+      <li><a href="92_libreras_para_procesar_documentos_xml_i_convertir_el_archivo__xml_a_rbol_dom.html" class="daddy">9.2.- Librerías para procesar documentos XML (I). Convertir el archivo  XML a árbol DOM</a>
+      <ul class="other-section">
+         <li><a href="921_libreras_para_procesar_documentos_xml_ii_transformar_el_rbol__dom_en_archivo__xml.html" class="no-ch">9.2.1.- Librerías para procesar documentos XML (II). Transformar el árbol  DOM en archivo  XML.</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="93_manipulacin_de_documentos_xml_i_obtener_el_elemento_raz_y_buscar_un_elemento.html" class="active daddy">9.3.- Manipulación de documentos XML (I). Obtener el elemento raíz, y buscar un elemento.</a>
+      <ul>
+         <li><a href="931_manipulacin_de_documentos_xml_ii_obtener_y_procesar_la_lista_de_hijos_y_aadir_uno_nuevo.html" class="no-ch">9.3.1.- Manipulación de documentos XML (II). Obtener y procesar la lista de hijos y añadir uno nuevo.</a></li>
+         <li><a href="932_manipulacin_de_documentos_xml_iii_eliminar_un_hijo_y_modificar_un_elemento_texto.html" class="no-ch">9.3.2.- Manipulación de documentos XML (III). Eliminar un hijo y modificar un elemento texto.</a></li>
+         <li><a href="933_manipulacin_de_documentos_xml_iv_manejar_atributos_de_un_elemento.html" class="no-ch">9.3.3.- Manipulación de documentos XML (IV). Manejar atributos de un elemento.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="921_libreras_para_procesar_documentos_xml_ii_transformar_el_rbol__dom_en_archivo__xml.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="931_manipulacin_de_documentos_xml_ii_obtener_y_procesar_la_lista_de_hijos_y_aadir_uno_nuevo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">9.3.- Manipulación de documentos XML (I). Obtener el elemento raíz, y buscar un elemento.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id156">
+<div class="iDevice emphasis0">
+<div id="ta156_73" class="block iDevice_content">
+<p><img alt="Fotograf&iacute;a en la que se ve una persona manipulando productos con guantes de l&aacute;tex." class="elemento_derecha" src="PROG09_CONT_R057_Guantes.jpg" style="width: 192px; height: 128px;" title="&iquest;Manipulando el &aacute;rbol DOM con guantes? Tampoco es necesario tanto." /></p>
+<p>Bien, ahora sabes cargar un documento&nbsp;<acronym title="eXtended Markup Language." lang="en">XML</acronym> a &aacute;rbol <abbr title="Document Object Model." lang="en">DOM</abbr> y de &aacute;rbol&nbsp;<abbr title="Document Object Model." lang="en">DOM</abbr> a <acronym title="eXtended Markup Language." lang="en">XML</acronym>, pero, &iquest;c&oacute;mo se modifica el &aacute;rbol <abbr title="Document Object Model." lang="en">DOM</abbr>?</p>
+<p>C&oacute;mo ya se dijo antes, un &aacute;rbol&nbsp;<abbr title="Document Object Model." lang="en">DOM</abbr> es una estructura en &aacute;rbol, jer&aacute;rquica como cabe esperar, formada por nodos de diferentes tipos. El funcionamiento del modelo de objetos <abbr title="Document Object Model." lang="en">DOM</abbr> es establecido por el organismo <abbr title="World Wide Web Consortium." lang="en">W3C</abbr>, lo cual tiene una gran ventaja:<strong> el modelo es pr&aacute;cticamente el mismo en todos los lenguajes de programaci&oacute;n</strong>.</p>
+<p>En <span lang="en">Java</span>, pr&aacute;cticamente todas las clases que vas a necesitar para manipular un &aacute;rbol&nbsp;<abbr title="Document Object Model." lang="en">DOM</abbr> est&aacute;n en el paquete <code>org.w3c.dom</code>. Si vas a hacer un uso muy intenso de&nbsp;<abbr title="Document Object Model." lang="en">DOM</abbr> es conveniente que hagas una importaci&oacute;n de todas las clases de este paquete ("<code>import org.w3c.dom.*;</code>").</p>
+<p>Tras convertir un documento&nbsp;<acronym title="eXtended Markup Language." lang="en">XML</acronym> a&nbsp;<abbr title="Document Object Model." lang="en">DOM</abbr> lo que obtenemos es una instancia de la clase <code>org.w3c.dom.Document</code>. Esta instancia ser&aacute; el nodo principal que contendr&aacute; en su interior toda la jerarqu&iacute;a del documento <acronym title="eXtended Markup Language." lang="en">XML</acronym>. Dentro de un documento o &aacute;rbol&nbsp;<abbr title="Document Object Model." lang="en">DOM</abbr> podremos encontrar los siguientes tipos de clases:</p>
+<ul class="lista_verificacion">
+<li><code>org.w3c.dom.Node</code> (Nodo). Todos los objetos contenidos en el &aacute;rbol&nbsp;<abbr title="Document Object Model." lang="en">DOM</abbr> son nodos. La clase <code>Document</code> es tambi&eacute;n un tipo de nodo, considerado el nodo principal.</li>
+<li><code>org.w3c.dom.Element</code> (Elemento). Corresponde con cualquier par de etiquetas ("<code>&lt;&gt; &lt;/&gt;</code>") y todo su contenido (atributos, texto, subetiquetas, <abbr title="etc&eacute;tera.">etc.</abbr>).</li>
+<li><code>org.w3c.dom.Attr</code> (Atributo). Corresponde con cualquier atributo.</li>
+<li><code>org.w3c.dom.Comment</code> (Comentario). Corresponde con un comentario.</li>
+<li><code>org.w3c.dom.Text</code> (Texto). Corresponde con el texto que encontramos dentro de dos etiquetas.</li>
+</ul>
+<p>&iquest;A qu&eacute; te resultan familiares?</p>
+<p>Claro que s&iacute;. Estas clases tendr&aacute;n diferentes m&eacute;todos para acceder y manipular la informaci&oacute;n del &aacute;rbol <abbr title="Document Object Model." lang="en">DOM</abbr>. A continuaci&oacute;n vamos a ver las operaciones m&aacute;s importantes sobre un &aacute;rbol <abbr title="Document Object Model." lang="en">DOM</abbr>. En todos los ejemplos, "<code>documento</code>" corresponde con una instancia de la clase <code>Document</code>.</p>
+<p><span class="destacado_inline"><strong>Obtener el elemento ra&iacute;z del documento</strong>.</span></p>
+<p>Como ya sabes, los documentos&nbsp;<acronym title="eXtended Markup Language." lang="en">XML</acronym> deben tener obligatoriamente un &uacute;nico elemento ("<code>&lt;pedido&gt;&lt;/pedido&gt;</code>" por ejemplo), considerado el elemento ra&iacute;z, dentro del cual est&aacute; el resto de la informaci&oacute;n estructurada de forma jer&aacute;rquica. Para obtener dicho elemento y poder manipularlo podemos usar el m&eacute;todo <code>getDocumentElement()</code>.</p>
+<div class="codigo elemento_centrado" style="width: 26.9em;">
+<div class="texto_izquierda">
+<pre><code>Element raiz=<strong>documento</strong>.getDocumentElement();</code>
+</pre>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><span class="destacado_inline"><strong>Buscar un elemento en toda la jerarqu&iacute;a del documento</strong>.</span></p>
+<p>Para realizar esta operaci&oacute;n se puede usar el m&eacute;todo <code>getElementsByTagName()</code> disponible tanto en la clase <code>Document</code> como en la clase <code>Element</code>. Dicha operaci&oacute;n busca un elemento por el nombre de la etiqueta y retorna una lista de nodos (<code>NodeList</code>) que cumplen con la condici&oacute;n. Si se usa en la clase <code>Element</code>, solo buscar&aacute; entre las subetiquetas (subelementos) de dicha clase (no en todo el documento).</p>
+<div class="codigo elemento_centrado" style="width: 34.05em;">
+<div class="texto_izquierda">
+<pre><code>NodeList listaNodos=<strong>documento</strong>.getElementsByTagName("cliente");</code>
+</pre>
+<pre><code>Element cliente;</code>
+</pre>
+<pre><code>if (<code>listaNodos</code>.getLength()==1){ </code></pre>
+<pre><code>     cliente=(Element)<code><code>listaNodos</code></code>.item(0);</code></pre>
+<pre><code>}</code></pre>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>El m&eacute;todo <code>getLength()</code> de la clase <code>NodeList</code>, permite obtener el n&uacute;mero de elementos (longitud de la lista) encontrados cuyo nombre de etiqueta es coincidente. El m&eacute;todo <code>item()</code> permite acceder a cada uno de los elementos encontrados, y se le pasa por argumento el &iacute;ndice del elemento a obtener (empezando por cero y acabando por longitud menos uno). F&iacute;jate que es necesario hacer una conversi&oacute;n de tipos despu&eacute;s de invocar el m&eacute;todo <code>item</code>(). Esto es porque la clase <code>NodeList</code> almacena un listado de nodos (<code>Node</code>), sin diferenciar el tipo.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id157">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<div id="actitity-157_55">
+<form name="multi-select-form-157_55" action="#" class="activity-form multi-select-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion157_55" class="block question iDevice_content">
+<p><strong>Dado el siguiente c&oacute;digo XML<code>, </code>indica qu&eacute; elementos&nbsp;<abbr title="Document Object Model." lang="en">DOM</abbr> encontramos en el mismo:</strong></p>
+<div class="codigo elemento_centrado" style="width: 32.95em;">
+<div class="texto_izquierda">
+<pre><code><strong>&lt;pedido&gt;&lt;!--Datos del pedido--&gt;&lt;/pedido&gt;</strong></code></pre>
+</div>
+</div>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op157_550" class="sr-av"><a href="#answer-157_58">Opción 1</a></label><input type="checkbox" id="op157_550" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-157_58"><a name="answer-157_58"></a>
+<div id="taans157_58" class="block iDevice_content">
+<p><code>org.w3c.dom.Element</code>.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-157_550" style="display:none"></div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op157_551" class="sr-av"><a href="#answer-157_159">Opción 2</a></label><input type="checkbox" id="op157_551" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-157_159"><a name="answer-157_159"></a>
+<div id="taans157_159" class="block iDevice_content">
+<p><code>org.w3c.dom.Node</code>.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-157_551" style="display:none"></div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op157_552" class="sr-av"><a href="#answer-157_161">Opción 3</a></label><input type="checkbox" id="op157_552" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-157_161"><a name="answer-157_161"></a>
+<div id="taans157_161" class="block iDevice_content">
+<p><code>org.w3c.dom.Text</code>.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-157_552" style="display:none"></div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op157_553" class="sr-av"><a href="#answer-157_163">Opción 4</a></label><input type="checkbox" id="op157_553" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-157_163"><a name="answer-157_163"></a>
+<div id="taans157_163" class="block iDevice_content">
+<p><code>org.w3c.dom.Comment</code>.</p>
+</div>
+</div>
+<div class="iDevice_answer-feedback feedback" id="feedback-157_553" style="display:none"></div>
+</div>
+</div>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-157_55" /> 
+</p>
+</div>
+<div id="f157_55" class="js-hidden js-feedback">
+<h4 class="js-sr-av">Retroalimentación</h4>
+
+<div id="tafeedback157_55" class="feedback iDevice_content">
+<p>Recuerda que todo es un nodo en un &aacute;rbol <abbr title="Document Object Model." lang="en">DOM</abbr>.</p>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="#answer-157_58" class="right">Correcto</a></li>
+<li><a href="#answer-157_159" class="right">Correcto</a></li>
+<li><a href="#answer-157_161" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-157_163" class="right">Correcto</a></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="921_libreras_para_procesar_documentos_xml_ii_transformar_el_rbol__dom_en_archivo__xml.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="931_manipulacin_de_documentos_xml_ii_obtener_y_procesar_la_lista_de_hijos_y_aadir_uno_nuevo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

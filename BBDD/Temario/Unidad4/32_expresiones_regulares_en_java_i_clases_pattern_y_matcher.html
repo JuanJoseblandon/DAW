@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-86"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_expresiones_regulares.html" class="current-page-parent daddy">3.- Expresiones regulares.</a>
+   <ul>
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="active daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul>
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="315_metacaracteres_y_escapado.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="321_el_mtodo_matches_de_la_clase_string.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id362">
+<div class="iDevice emphasis0">
+<div id="ta362_73" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="teamwork-g9212c7404_640.jpg" alt="Dos muñecos encajando piezas en puzzle." title="Puzzle" style="float: right;" width="240" height="172" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/trabajo-en-equipo-juntos-metas-3276694/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Alexas_Fotos en Pixabay (se abre en una nueva ventana).">Alexas_Fotos</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Una vez que ya hemos aprendido a construir expresiones regulares de cierta complejidad, la siguiente pregunta queºes: ¿y cómo uso las expresiones regulares en un programa?</p>
+<p>Para poder trabajar con expresiones regulares, Java ofrece las clases <code>Pattern</code> y <code>Matcher</code> contenidas en el paquete <code>java.util.regex</code>:</p>
+<ul>
+<li class="lista_verificacion">la clase <code>Pattern</code> o "patrón" se utiliza para procesar la expresión regular y "compilarla", lo cual significa verificar que es correcta, y dejarla lista para su utilización en un objeto de tipo <code>Pattern</code>. Para ello disponemos del método estático <code>Pattern.compile</code>;</li>
+<li class="lista_verificacion">la clase <code>Matcher</code> o "acoplador" sirve para comprobar si una cadena cualquiera sigue o no un patrón indicado en un objeto de tipo <code>Pattern</code>. A eso se le suele llamar hacer "<em></em><span class="lista_verificacion" lang="en"><em>matching</em></span>", o "acoplar", o "encajar" con el patrón. Para ello disponemos del método <code>matcher</code> en la clase <code>Pattern</code>, que nos devolverá un objeto de tipo <code>Matcher</code>. Sobre ese objeto podremos aplicar el método <code>matches</code> de la clase <code>Matcher</code> para saber si se produce un "<em>matching</em>" o no.</li>
+</ul>
+<p class="lista_verificacion">Veámoslo con un ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Pattern patron=Pattern.compile("[01]+");   // Creamos el patrón: objeto de tipo Pattern 
+Matcher texto=patron.matcher("00001010");  // Creamos un caso de posible acoplamiento, encaje o matching: objeto de tipo Matcher
+if (texto.matches())  // Se produce "matching" o "acoplamiento"
+    System.out.println("La cadena encaja con el patrón.");
+else  // No se produce "matching"
+    System.out.println("La cadena no encaja con el patrón.");
+</code></pre>
+</div>
+</div>
+<p>En el ejemplo, el método estático <code>compile</code> de la clase <code>Pattern</code> permite crear un objeto de tipo patrón (<code>Pattern</code>). Dicho método compila la expresión regular pasada por parámetro en forma de <code>String</code> y genera una instancia de <code>Pattern</code> (<code>patron</code> en el ejemplo). El patrón <code>patron</code> podrá ser usado múltiples veces para revisar si una cadena coincide o no con el patrón, dicha comprobación se hace invocando el método <code>matcher</code>, el cual combina el patrón con la cadena de entrada y genera una instancia de la clase <code>Matcher</code> (<code>texto</code> en el ejemplo). La clase <code>Matcher</code> contiene el resultado de la comprobación y ofrece varios métodos para analizar el modo en el que la cadena puede encajar o acoplarse (o hacer "matching") con un patrón. En este primer ejemplo hemos utilizado el método <strong><span style="font-size: medium;"><code>matches()</code></span></strong>, que devolverá <strong><span style="font-size: medium;"><code>true</code></span></strong> si toda la cadena (de principio a fin) encaja con el patrón o <strong><span style="font-size: medium;"><code>false</code></span></strong> en caso contrario.</p>
+<p>Ahora ya podemos empezar a escribir pequeños programas en Java que prueben todos los ejemplos de expresiones regulares que hemos estado viendo en los apartados anteriores.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id363">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta363_148" class="block story iDevice_content">
+<p>Ahora puedes plantearte implementar en Java algunos de los ejercicios y ejemplos planteados en apartados anteriores. Intentemos algunos de ellos:</p>
+</section>
+<section id="taquesQuestion0b363" class="block iDevice_content">
+<p>1.- Implementa un programa en Java que solicite por teclado una hora en el formato <strong>hh:mm:ss en 24 horas</strong> y compruebe si esa hora es válida.</p>
+</section>
+<form name="feedback-form-quesFeedback0b363" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b363text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b363" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b363" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>La expresión regular ya la hemos resuelto en una actividad anterior:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>"([01]?[0-9]|2[0-3])(:[0-5][0-9]){2}"</code></pre>
+</div>
+</div>
+<p>Ahora solo nos quedaría usarla en un programa en Java utilizando las herramientas <code>Pattern</code> y <code>Matcher</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Variables de entrada
+String entrada;
+
+// Variables de salida
+boolean encaja;
+
+// Variables auxiliares
+Pattern patron;
+Matcher matcher;
+Scanner teclado = new Scanner(System.in);
+
+// Entrada de datos
+System.out.print("Introduzca hora en formato hh:mm:ss 24 horas : ");
+entrada = teclado.nextLine();
+
+// Procesamiento
+Pattern patron = Pattern.compile("([01]?[0-9]|2[0-3])(:[0-5][0-9]){2}");
+Matcher matcher = patron.matcher (entrada);
+encaja = matcher.matches();
+
+// Salida de resultados
+if (encaja) {
+    System.out.println("La hora es correcta.");
+} else {
+    System.out.println("La hora no es correcta");
+}</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b363" class="block iDevice_content">
+<p>2.- Implementa un programa en Java que solicite por teclado un <strong>día de la semana</strong> en <strong>minúscula</strong> y <strong>sin tildes</strong>, y compruebe si ese día es válido.</p>
+</section>
+<form name="feedback-form-quesFeedback1b363" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b363text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b363" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b363" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Esta expresión regular también la tenemos resuelta en actividades anteriores:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>"(lun|mart|miercol|juev|viern)es|sabado|domingo"</code></pre>
+</div>
+</div>
+<p>Por tanto, solo nos quedaría la implementación en Java utilizando las herramientas <code>Pattern</code> y <code>Matcher</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Variables de entrada
+String entrada;
+
+// Variables de salida
+boolean encaja;
+
+// Variables auxiliares
+Pattern patron;
+Matcher matcher;
+Scanner teclado = new Scanner(System.in);
+
+// Entrada de datos
+System.out.print("Introduzca día de la semana: ");
+entrada = teclado.nextLine();
+
+// Procesamiento
+Pattern patron = Pattern.compile("(lun|mart|miercol|juev|viern)es|sabado|domingo");
+Matcher matcher = patron.matcher (entrada);
+encaja = matcher.matches();
+
+// Salida de resultados
+if (encaja) {
+    System.out.println("El día es correcto.");
+} else {
+    System.out.println("El día no es correcto");
+}</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion2b363" class="block iDevice_content">
+<p>3.- Implementa un programa en Java que solicite por teclado un <strong>número romano entre 0 y 3999</strong> (considerando el cero como la cadena vacía) y compruebe si número romano es válido.</p>
+</section>
+<form name="feedback-form-quesFeedback2b363" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b363text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b363" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback2b363" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>A partir de la expresión regular ya resuelta en ejercicios anteriores:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre class="  language-java"><code class="  language-java">M<span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">(</span>CM<span class="token operator">|</span>CD<span class="token operator">|</span>D<span class="token operator">?</span>C<span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>XC<span class="token operator">|</span>XL<span class="token operator">|</span>L<span class="token operator">?</span>X<span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>IX<span class="token operator">|</span>IV<span class="token operator">|</span>V<span class="token operator">?</span>I<span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+</div>
+</div>
+<p>A partir de aquí se trata de utilizar objetos de la clase <code>Pattern</code> y <code>Matcher</code> para resolver el problema.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------
+//          Declaración de variables 
+//----------------------------------------------
+// Constantes
+// Variables de entrada
+String numeroRomano;
+
+// Variables de salida
+boolean encaja;
+
+// Variables auxiliares
+String patronRomano = "M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})";
+Pattern patron = Pattern.compile(patronRomano);
+Matcher acoplamiento;
+
+// Clase Scanner para petición de datos de entrada
+Scanner teclado = new Scanner(System.in);
+
+//----------------------------------------------
+//                Entrada de datos 
+//----------------------------------------------
+System.out.println("PROGRAMA PARA RESOLVER NÚMEROS ROMANOS");
+System.out.println("--------------------------------------");
+System.out.println("Introduzca número romano (entre 0 y 3999): ");
+System.out.println("(entendemos el 0 como la cadena vacía)");
+numeroRomano = teclado.nextLine();
+
+//----------------------------------------------
+//                 Procesamiento 
+//----------------------------------------------
+acoplamiento = patron.matcher(numeroRomano);
+encaja = acoplamiento.matches();
+
+//----------------------------------------------
+//              Salida de resultados 
+//----------------------------------------------
+System.out.println();
+System.out.println("RESULTADO");
+System.out.println("---------");
+if (encaja) {
+    System.out.printf ("Es un número romano válido.");
+} else {
+    System.out.printf ("No es un número romano válido.");
+}
+</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id364">
+<div class="iDevice emphasis0">
+<div id="ta364_154" class="block iDevice_content">
+<p>Si en algún caso es indiferente que un texto esté en mayúsculas o minúsculas, para intentar simplificar la expresión regular (evitar tener que incluir los rangos <code class="  language-latex"><span class="token punctuation">A</span>-Z</code> y <code class="  language-latex"><span class="token punctuation">a</span>-z</code>), tenemos varias opciones:</p>
+<ul>
+<li class="lista_verificacion">transformar la cadena que se va a comprobar a todo mayúsculas o minúsculas, según se haya planteado la expresión regular;</li>
+<li class="lista_verificacion">utilizar una versión sobrecargada del método fábrica <code>Pattern.compile</code>, que admite un segundo parámetro con algunos flags o indicadores interesantes. Para este caso nos vendría bien el flag <code>CASE_INSENSITIVE</code>.</li>
+</ul>
+<p>Algunos de los flags que admite el método "fábrica" <code>Pattern.compile</code> son:</p>
+<ul>
+<li class="lista_verificacion"><code>CASE_INSENSITIVE</code>, que, como hemos dicho, hace que la expresión regular <strong>no diferencie entre mayúsculas y minúsculas</strong> sin tener que indicarlo explícitamente;</li>
+<li class="lista_verificacion"><code>LITERAL</code>, que <strong>anula el significado de cualquier metacarácter</strong> que pudiera haber en la expresión regular, otorgándole su valor literal. Es decir, que los asteriscos significarán asteriscos y no cuantificación, los corchetes no indicarán conjuntos, <abbr title="etcétera">etc</abbr>.</li>
+</ul>
+<p>Puedes ver el resto flags o indicadores disponibles para <code>Pattern.compile</code> en la documentación de la <acronym title="Application Programming Interface">API</acronym> de Java.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id365">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(icon_debesconocerfpd.png)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta365_129" class="block iDevice_content">
+<p>Es importante que le eches un vistazo a la documentación oficial de la clase <code>Pattern</code> de la <acronym title="Application Programming Interface">API</acronym> de Java:</p>
+<p style="text-align: center;"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html" title="Enlace a la documentación de la API para la clase Pattern (se abre en una nueva ventana)." target="_blank" class="html">Documentación oficial de la clase <code>Pattern</code></a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="315_metacaracteres_y_escapado.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="321_el_mtodo_matches_de_la_clase_string.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

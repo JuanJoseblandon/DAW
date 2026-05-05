@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.- Persistencia de objetos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-90"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Gestión de bases de datos: relacionales y orientadas a objetos. Persistencia de objetos</a></li>
+   <li><a href="1_bases_de_datos_relacionales.html" class="daddy">1.- Bases de datos relacionales</a>
+   <ul class="other-section">
+      <li><a href="11_el_desfase_objetorelacional.html" class="no-ch">1.1.- El desfase objeto-relacional</a></li>
+      <li><a href="12_jdbc.html" class="no-ch">1.2.- JDBC</a></li>
+      <li><a href="13__conectores_o_drivers.html" class="no-ch">1.3.-  Conectores o Drivers</a></li>
+      <li><a href="14_instalacin_de_la_base_de_datos.html" class="no-ch">1.4.- Instalación de la base de datos</a></li>
+      <li><a href="15_creacin_de_las_tablas_en_una_base_de_datos.html" class="daddy">1.5.- Creación de las tablas en una base de datos</a>
+      <ul class="other-section">
+         <li><a href="151_lenguaje_sql_i.html" class="no-ch">1.5.1.- Lenguaje SQL (I)</a></li>
+         <li><a href="152_lenguaje_sql_ii.html" class="no-ch">1.5.2.- Lenguaje SQL (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="16_establecimiento_de_conexiones.html" class="daddy">1.6.- Establecimiento de conexiones</a>
+      <ul class="other-section">
+         <li><a href="161_configurar_un_conector_jdbc_en_un_proyecto_netbeans.html" class="no-ch">1.6.1.- Configurar un conector JDBC en un proyecto NetBeans</a></li>
+         <li><a href="162_registrar_el_conector_jdbc.html" class="no-ch">1.6.2.- Registrar el conector JDBC</a></li>
+      </ul>
+      </li>
+      <li><a href="17_ejecucin_de_consultas_sobre_la_base_de_datos.html" class="daddy">1.7.- Ejecución de consultas sobre la base de datos</a>
+      <ul class="other-section">
+         <li><a href="171_adicin_de_informacin.html" class="no-ch">1.7.1.- Adición de información</a></li>
+         <li><a href="172_recuperacin_de_informacin_i.html" class="daddy">1.7.2.- Recuperación de información (I)</a>
+         <ul class="other-section">
+            <li><a href="1712_recuperacin_de_informacin_ii.html" class="no-ch">1.7.1.2.- Recuperación de información (II)</a></li>
+         </ul>
+         </li>
+         <li><a href="173_actualizacin_de_informacin.html" class="no-ch">1.7.3.- Actualización de información</a></li>
+         <li><a href="174_borrado_de_informacin.html" class="no-ch">1.7.4.- Borrado de información</a></li>
+         <li><a href="175_cierre_de_conexiones.html" class="no-ch">1.7.5.- Cierre de conexiones</a></li>
+         <li><a href="176_excepciones_en_jdbc.html" class="no-ch">1.7.6.- Excepciones en JDBC</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li id="active"><a href="2_persistencia_de_objetos.html" class="active daddy">2.- Persistencia de objetos</a>
+   <ul>
+      <li><a href="21_qu_son_las_bases_de_datos_orientadas_a_objetos.html" class="no-ch">2.1.- ¿Qué son las bases de datos orientadas a objetos?</a></li>
+      <li><a href="22_qu_es_el_mapeado_de_objetos.html" class="no-ch">2.2.- ¿Qué es el mapeado de objetos?</a></li>
+      <li><a href="23_cmo_empiezo_a_usar_jpa.html" class="no-ch">2.3.- ¿Cómo empiezo a usar JPA?</a></li>
+      <li><a href="24_unidades_de_persistencia_i.html" class="daddy">2.4.- Unidades de persistencia (I)</a>
+      <ul class="other-section">
+         <li><a href="241_unidades_de_persistencia_ii.html" class="no-ch">2.4.1.- Unidades de persistencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="25_modelo_de_datos_en_jpa.html" class="daddy">2.5.- Modelo de datos en JPA</a>
+      <ul class="other-section">
+         <li><a href="251_entidades.html" class="no-ch">2.5.1.- Entidades</a></li>
+         <li><a href="252_atributos.html" class="no-ch">2.5.2.- Atributos</a></li>
+         <li><a href="253_relaciones_entre_entidades.html" class="no-ch">2.5.3.- Relaciones entre entidades</a></li>
+         <li><a href="254_relaciones_uno_a_uno.html" class="no-ch">2.5.4.- Relaciones uno a uno</a></li>
+         <li><a href="255_relaciones_uno_a_muchos.html" class="no-ch">2.5.5.- Relaciones uno a muchos</a></li>
+      </ul>
+      </li>
+      <li><a href="26_operaciones_crud_con_jpa.html" class="daddy">2.6.- Operaciones CRUD con JPA</a>
+      <ul class="other-section">
+         <li><a href="261_persistir_y_leer.html" class="no-ch">2.6.1.- Persistir y leer</a></li>
+         <li><a href="262__actualizar_y_borrar_instancias.html" class="no-ch">2.6.2.-  Actualizar y borrar instancias</a></li>
+      </ul>
+      </li>
+      <li><a href="27_jpql_i.html" class="daddy">2.7.- JPQL (I)</a>
+      <ul class="other-section">
+         <li><a href="271_jpql_ii.html" class="no-ch">2.7.1.- JPQL (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="176_excepciones_en_jdbc.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_qu_son_las_bases_de_datos_orientadas_a_objetos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">2.- Persistencia de objetos</h1></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id78">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta78_66" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-copyright" style="width: 200px;"><img src="CASO_PERSONAJES_08.jpg" alt="Antonio mirando de frente sonriente con camiseta amarilla." title="Antonio mirando de frente." style="float: right;" width="200" height="132" />
+<div class="figcaption"><span class="author">Ministerio de Educación. Uso educativo-nc. Elaboración propia.</span><span class="license"><span class="sep"></span></span></div>
+</div>
+<p><strong><span>Antonio</span></strong><span> esta mañana está muy contento y todo es porque una aplicación que estaba haciendo le ha funcionado. Es una aplicación donde está utilizando bases de datos con <acronym title="Java Persistence API" lang="en">JPA</acronym>, y se siente orgulloso por haber sido capaz de hacerlo.<br /></span></p>
+<p><span><strong>Juan</strong> y <strong>Antonio</strong> se encuentran por el pasillo y comienza a hablar:</span></p>
+<p><span><span>—</span>¿Dónde vas tan contento? <span>—</span>pregunta <strong>Juan</strong> a <strong>Antonio</strong>.</span></p>
+<p><span><span>—</span>Pues voy a tomarme un café, que desde que llegue esta mañana estoy sentado tecleando sin parar. ¿Te apuntas?</span></p>
+<p><span><span>—</span>Sí claro, si me cuentas en que estás trabajando, ¿tan interesante es?</span></p>
+<p><span><span>—</span>No es solo que sea interesante, es que es algo que no había hecho antes, y claro, para mí es un reto superado. Estoy trabajando en un proyecto que utiliza <acronym title="Java Persistence API" lang="en"><span>JPA</span></acronym> para almacenar datos en la base de datos, y aunque cuesta arrancar un poco, luego te das cuenta de la gran potencia que tiene.</span></p>
+<p><span>—Dirás <acronym title="Java Database Connectivity" lang="en">JDBC</acronym> —replica <strong>Juan</strong>, convencido de que <strong>Antonio</strong> estaba confundiendo términos.</span></p>
+<p><span>—No, que va. Es otra tecnología diferente. Si tuviera que hacer lo mismo que estoy haciendo con <span> <acronym title="Java Database Connectivity" lang="en">JDBC</acronym> </span>tardaría el triple.</span></p>
+<p><span>—¿En serio? —pregunta <strong>Juan</strong> asombrado—. Cuéntame un poco como es, <strong>María</strong> y yo estamos en un proyecto donde quizás nos venga bien.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id79">
+<div class="iDevice emphasis0">
+<div id="ta79_69" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img class="elemento_derecha" src="PROG11_CONT_R25_discoduro.jpg" alt="Disco duro color gris metálico abierto." title="Disco duro" style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="Acceder a la licencia CC BY-NC-SA. (Se abre en una nueva ventana)" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a> <a title="Acceder a la imagen &quot;Disco duro&quot; de &quot;Ken Fager&quot; en Flickr. (Se abre en una nueva ventana)" href="https://www.flickr.com/photos/kenfagerdotcom/6813531077/sizes/s/in/photolist-bo68pK-bo68fx-5KBK3Z-5KFZ3d-5KBJWa-5KBJUP-5KFYUJ-9SZzCU-9SZAfA-9SZyGy-9SWKPk-5KBK8F-5KBK1r-5KFYZJ-5KFZ4A-5KBJZr-5KFYPw-5KBJTD-5KFYWs-9RPRwV-9RQ6rP-9RPmCF-9RSywC-9RPMjn-9RNWKF-9RPwWg-9RQ2bz-9RS3Mu-9RQeor-9RU9So-cDRX2s-9RSX7q-9RNEx4-9RNM7V-9RSiGv-9RRgfe-9RNtXR-9RRBek-9RVjwb-9RMHNa-9RMVoz-9RPJPo-9RMd7z-9RR5r5-bmcCX5-6wJbuC-9kUnFc-2hSWvQ-9RMyKe-9RQXVS/" target="_blank">Ken Fager</a></div>
+</div>
+<p>En el apartado anterior se hablaba del desfase objeto-relacional, y los inconvenientes entre usar un modelo de datos en nuestro <span lang="en">software</span>, y un modelo diferente en la base de datos. Pero, ¿y si fuera posible almacenar los objetos directamente? Entonces, ya no existiría dicho desfase. ¿Sería posible?</p>
+<p>La realidad es que hoy en día sí es posible. Existen una variedad de opciones, aquí vamos a presentar unas cuantas y a explorar una de ellas.</p>
+<p>A la hora de almacenar los datos de una organización, vamos a hacer una pequeña generalización. El lugar donde se almacenen los datos vamos a denominarlo <strong><span class="resaltado_inline">almacén de datos</span></strong>. Esto nos dará cierta independencia, porque cuando hablamos de base de datos en cierta medida damos por sentado que la base de datos tiene que ser relacional, pero existen otras opciones para implementar un almacén de datos.</p>
+<p>Vamos a revisar algunas de las opciones disponibles:</p>
+<ul class="lista_verificacion">
+<li><strong>Almacenamiento de objetos en archivos de forma serializada.</strong> Almacenar los objetos de forma serializada es algo que ya conoces de unidades anteriores. Es válido para un conjunto de datos pequeño, pero cuando el volumen de datos es grande, la serialización de datos presenta problemas que son difíciles de solventar<strong>.</strong></li>
+<li><strong>Usar un sistema gestor de bases datos relacional (<acronym title="Sistema Gestor de Bases de Datos Relacional.">SGDBR</acronym>)</strong>. Es una de las soluciones más recurridas, pero como ya sabes, para almacenar objetos hay que realizar consultas <acronym title="Structured Query Language." lang="en">SQL</acronym> y los tipos de datos de la base de datos no coinciden con los tipos de datos del lenguaje de programación. Esta barrera hace que no sea posible almacenar objetos directamente, sino que haya que transformar la información para poder almacenarla.</li>
+<li><strong>Extensiones de lenguajes de programación tradicionales para facilitar el acceso a datos</strong>. Este tipo de técnicas amplían la funcionalidad de los lenguajes de programación tradicionales, como Cobol, C, <abbr title="C plus plus.">C++</abbr>, <abbr title="C Sharp.">C#</abbr> o <span lang="en">Java</span>, para hacer más sencillo el acceso a los datos. <acronym title="Structured Query Language Java." lang="en">SQLJ</acronym> o PRO*C son algunos ejemplos de extensiones de los lenguajes <span lang="en">Java</span> y C respectivamente. Algunas de estas extensiones, como <acronym title="Language-Integrated Query." lang="en">LINQ</acronym>, están pensadas para varios lenguajes de programación.</li>
+<li><strong>Usar un sistema gestor de bases de datos orientado a objetos (<acronym title="Sistema gestor de bases de datos orientadas a objetos." lang="es">SGBDOO</acronym>)</strong>. Se trata de sistemas donde el modelo de datos usado para almacenar los datos es también orientado a objetos. El objetivo de este tipo de sistemas es precisamente que no exista el desfase objeto-relacional.</li>
+<li><strong>Usar un sistema gestor de bases de datos objeto-relacional (<acronym title="Sistema gestor de  bases de datos objeto relacional.">SGBDOR</acronym>).</strong> Se trata de bases de datos que implementan un modelo híbrido o "post-relacional". En este tipo de sistemas de almacenamiento conviven el modelo relacional y el orientado a objetos. La idea aquí, nuevamente, es reducir el desfase objeto-relacional.</li>
+<li><strong>Mapeado de objetos</strong>. El mapeado de objetos permite almacenar objetos directamente en el almacén de datos con independencia de la naturaleza del mismo. Se trata básicamente de técnicas que permiten almacenar objetos de un lenguaje de programación directamente en la base de datos, sea esta del tipo que sea. Inicialmente la idea era poder almacenar objetos de forma pseudo-transparente en una base de datos relacional, pero también se ha extendido a algunas bases de datos de otra naturaleza.</li>
+</ul>
+<p>Las bases de datos orientadas a objetos estarían englobadas dentro de lo que se conoce como bases de datos <abbr title="Non SQL" lang="en">NoSQL</abbr>. Las bases de datos NoSQL pretenden escapar del tradicional modelo relacional, ofreciendo otros modelos de datos alternativos para gestionar la información. Dos de los tipos de bases de datos NoSQL más usados son las<strong> bases de datos documentales</strong> y las <strong>bases de datos clave-valor</strong>.</p>
+<p>Hoy día es normal que en un almacén de datos de una organización existan varios tipos de bases de datos, aprovechando así las capacidades que aporta cada una de ellas.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id147">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta147_135" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b147" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b147" class="block iDevice_content">
+<p><strong>El objetivo de cualquier almacén de datos es reducir desfase objeto-relacional.</strong></p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b147"><input type="radio" name="option0b147" id="true0b147" class="exe-radio-option exe-radio-option-0-2-0b147-truefalse" /> Verdadero</label> 
+<label for="false0b147"><input type="radio" name="option0b147" id="false0b147" class="exe-radio-option exe-radio-option-1-2-0b147-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b147" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b147-result" class="wrong">Falso</strong></p>
+<p>No es completamente cierto, los <strong><acronym title="Sistema Gestor de Bases de Datos Relacional.">SGDBR</acronym></strong> no persiguen ese objetivo.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="176_excepciones_en_jdbc.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_qu_son_las_bases_de_datos_orientadas_a_objetos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

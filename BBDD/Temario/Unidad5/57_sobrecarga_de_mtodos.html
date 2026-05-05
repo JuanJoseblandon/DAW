@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.7.- Sobrecarga de métodos | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-25"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li><a href="4_atributos.html" class="daddy">4.- Atributos</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_mtodos.html" class="current-page-parent daddy">5.- Métodos</a>
+   <ul>
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="57_sobrecarga_de_mtodos.html" class="active daddy">5.7.- Sobrecarga de métodos</a>
+      <ul>
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li><a href="8_creacin_y_utilizacin_de_objetos.html" class="daddy">8.- Creación y utilización de objetos</a>
+   <ul class="other-section">
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="563_mtodos_privados.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="571_sobrecarga_de_operadores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">5.7.- Sobrecarga de métodos</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id40">
+<div class="iDevice emphasis0">
+<div id="ta40_73" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="PROG06_CONT_R32_CamionSobrecargado.jpg" alt="Camión sobrecargado con fardos de paja." title="Camión sobrecargado." style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="Acceder a los términos de la Licencia CC BY-NC-SA (se abre en una nueva ventana)." href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a> <a title="Acceder a la web descarga de la imagen de Collin Key en Flickr (se abre en una nueva ventana)." href="http://www.flickr.com/photos/collin_key/3003658750" target="_blank">Collin Key</a></div>
+</div>
+<p>En principio parece lógico pensar que el nombre de un método sólo puede ser utilizado una vez en la declaración de una clase. Es decir, que una clase no podría tener más de un método con el mismo nombre. Pero no tiene por qué ser siempre así. Es posible tener varias versiones de un mismo método (varios métodos con el mismo nombre) gracias a la <strong>sobrecarga</strong>.</p>
+<p>El lenguaje <span lang="en">Java</span> soporta la característica conocida como <strong>sobrecarga de métodos</strong>. Ésta permite declarar en una misma clase varias versiones del mismo método con el mismo nombre. La forma que tendrá el compilador de distinguir entre varios métodos que tengan el mismo nombre será mediante la lista de parámetros del método: si el método tiene una lista de parámetros diferente, será considerado como un método diferente (aunque tenga el mismo nombre) y el analizador léxico no producirá un error de compilación al encontrar dos nombres de método iguales en la misma clase.</p>
+<p>Imagínate que estás desarrollando una clase para escribir sobre un lienzo que permite utilizar diferentes tipografías en función del tipo de información que se va a escribir. Es probable que necesitemos un método diferente según se vaya a pintar un número entero (<code>int</code>), un número real (<code>double</code>) o una cadena de caracteres (<code>String</code>). Una primera opción podría ser definir un nombre de método diferente dependiendo de lo que se vaya a escribir en el lienzo.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id281">
+<div class="iDevice emphasis0">
+<div id="ta281_154" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="art-supplies-4276606_640.png" alt="Set de herramientas de pintor: caballete, paletas, pinceles, pinturas" title="Pintura" style="float: right;" width="200" height="200" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/materiales-de-arte-caballete-paleta-4276606/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Annalise Batista en Pixabay (se abre en una nueva ventana).">Annalise Batista</a> <span class="license"><span class="sep">(</span><span class="sep"><span class="license"><span class="license"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span></span></span></span></span><span class="sep"></span></span><span class="sep"></span></span>)</span></span></div>
+</div>
+<p>Por ejemplo:</p>
+<ul class="lista_verificacion">
+<li>método <code>pintarEntero (int entero)</code>,</li>
+<li>método <code>pintarReal (double real)</code>,</li>
+<li>método <code>pintarCadena (String cadena)</code>,</li>
+<li>método <code>pintarEnteroCadena (int entero, String cadena)</code>.</li>
+</ul>
+<p>Y así sucesivamente para todos los casos que desees contemplar...</p>
+<div class="elemento_derecha"></div>
+<p>La posibilidad que te ofrece la sobrecarga es utilizar un mismo nombre para todos esos métodos (dado que en el fondo hacen lo mismo: <code>pintar</code>). Pero para poder distinguir unos de otros será necesario que siempre exista alguna diferencia entre ellos en las listas de parámetros (bien en el número de parámetros, bien en el tipo de los parámetros, bien en el orden de los tipos de esos parámetros). Volviendo al ejemplo anterior, podríamos utilizar un mismo nombre, por ejemplo <code>pintar</code>, para todos los métodos anteriores:</p>
+<ul class="lista_verificacion">
+<li>método <code>pintar(int entero)</code>,</li>
+<li>método <code>pintar(double real)</code>,</li>
+<li>método <code>pintar(String cadena)</code>,</li>
+<li>método <code>pintar(int entero, String cadena)</code>.</li>
+</ul>
+<p>En este caso el compilador no va a generar ningún error, pues se cumplen las normas ya que unos métodos son perfectamente distinguibles de otros (a pesar de tener el mismo nombre) gracias a que tienen listas de parámetros diferentes.</p>
+<p>Lo que sí habría producido un error de compilación habría sido por ejemplo incluir otro método <code>pintar (int otroEntero)</code>, pues es imposible distinguirlo del método que ya existía,  <code>pintar(int entero)</code>, con el mismo nombre y con la misma lista de parámetros (ya existe un método <code>pintar</code> con un único parámetro de tipo <code>int</code>,  y que el nombre del parámetro sea distinto no es algo que le permita diferenciarlo en una llamada como por ejemplo, <code>pintar(3)</code>, donde lo que tiene no es el nombre del parámetro, sino un valor de tipo <code>int</code> (<code>3</code> en este caso), que podría encajar en cualquiera de los dos métodos, así que nos deja sin saber a cuál de los dos hay que ligar esa llamada para ejecutar su código.</p>
+<p>También debes tener en cuenta que <strong>el tipo devuelto por el método no es considerado a la hora de identificar un método</strong>, así que el tipo devuelto sea diferente no es suficiente para distinguir un método de otro. Es decir, no podrías definir dos métodos exactamente iguales en nombre y lista de parámetros e intentar distinguirlos indicando un tipo devuelto diferente. El compilador producirá un error de duplicidad en el nombre del método y no te lo permitirá.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id210">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta210_151" class="block iDevice_content">
+<p><strong>La sobrecarga de métodos es muy útil para evitarnos tener que inventar nombres distintos para métodos que en realidad hacen lo mismo, aunque sea con distintos datos. Fuera de ahí, debes utilizarla con cierta moderación, dado que nombrar igual a métodos que en realidad tienen diferencias sustanciales en cuanto a lo que hacen, podría dificultar la legibilidad del código.</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id41">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta41_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b41" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b41" class="block iDevice_content">
+<p><strong>En una clase <span lang="en">Java</span> puedes definir tantos métodos con el mismo nombre como desees y sin ningún tipo de restricción, pues el lenguaje soporta la sobrecarga de métodos y el compilador sabrá distinguir unos métodos de otros.<br /></strong></p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b41"><input type="radio" name="option0b41" id="true0b41" class="exe-radio-option exe-radio-option-0-2-0b41-truefalse" /> Verdadero</label> 
+<label for="false0b41"><input type="radio" name="option0b41" id="false0b41" class="exe-radio-option exe-radio-option-1-2-0b41-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b41" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b41-result" class="wrong">Falso</strong></p>
+<p>No es cierto del todo. La sobrecarga de métodos en efecto permite declarar distintos métodos con un mismo nombre, pero para que el compilador pueda distinguirlos es necesario que los métodos que tengan el mismo nombre tengan una lista de parámetros diferentes (en número de parámetros o en el tipo de los parámetros, o en el orden en que aparecen esos tipos). Si no es así, será imposible distinguir unos métodos de otros y se producirá un error durante el proceso de compilación.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id211">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta211_148" class="block story iDevice_content">
+<p>Desamos incluir en nuestra clase <code>Vehiculo</code> un método que simule que el vehículo ha recorrido una determinada distancia para así hacer que se actualicen los atributos relacionados con el nivel de combustible y los kilómetros recorridos.</p>
+</div>
+<div id="taquesQuestion0b211" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><img src="forest-1835019_640.jpg" alt="Carretera en un bosque" title="Carretera" style="float: right;" width="200" height="113" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/forestales-naturaleza-por-carretera-1835019/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Pexels en Pixabay (se abre en una nueva ventana).">Pexels</a> <span class="license"><span class="sep">(</span><span class="license"><span class="license"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="license"><span class="sep"><span class="license"><span class="sep"><span class="license"><span class="sep"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank">Pixabay License</a></span></span></span></span></span></span></span></span></span></span><span class="sep"></span></span><span class="sep"></span></span><span class="sep">)</span></span></div>
+</div>
+<p>Implementa dentro de la clase <code>Vehiculo</code> un método llamado <code>recorrerTrayecto</code> teniendo en cuenta que:</p>
+<ul class="lista_verificacion">
+<li>Recibe como único parámetro un número real que representa la <strong>cantidad de kilómetros que se van a recorrer</strong>.</li>
+<li>Si el parámetro es <strong>negativo</strong>, debería lanzarse una excepción de tipo <code>IllegalArgumentException</code>.</li>
+<li>Si el <strong>motor del vehículo está apagado</strong>, el vehículo no debería poder moverse y se produciría una excepción de tipo <code>IllegalStateException</code>.</li>
+<li><strong>Si no hay combustible suficiente</strong> para completar el trayecto, se debería <strong>recorrer la parte de trayecto a la que se llegue hasta consumir todo el combustible</strong> y a continuación <strong>apagar el motor del vehículo</strong>.</li>
+<li>El método devolverá el <strong>trayecto efectivo</strong> (en kilómetros) que ha podido realizarse, que no siempre coincidirá con el que se deseaba realizar.</li>
+<li>Todos los cuentakilómetros deben actualizarse apropiadamente.</li>
+</ul>
+</div>
+<form name="feedback-form-quesFeedback0b211" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b211text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b211" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b211" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Teniendo en cuenta todos los condicionantes anteriores más cualquier otro efecto colateral que se nos pueda ocurrir, la implementación del método <code>recorrerTrayecto</code> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<pre><code>// Método para recorrer un trayecto
+double recorrerTrayecto (double distancia) throws IllegalArgumentException, IllegalStateException {
+  double combustibleNecesario= distancia / this.consumoMedio;  // Combustible necesario para realizar el trayecto
+  double distanciaEfectiva= distancia;  // Distancia efectiva recorrida por el vehículo
+
+  if (distancia &lt; 0) // Una distancia negativa es un error
+    throw new IllegalArgumentException (String.format ("la distancia a recorrer es negativa: %.2f", distancia));
+  if (!this.estadoMotor)  // Si el motor está apagado no se puede recorrer ningún trayecto
+    throw new IllegalStateException ("el motor está apagado");
+  if (this.nivelDeposito &lt; combustibleNecesario) {  // Si no hay suficiente combustible para completar el trayecto
+    distanciaEfectiva= this.nivelDeposito * this.consumoMedio; //  Calculamos la distancia efectiva recorrida
+    this.estadoMotor= false;  // Apagamos el motor del vehículo al consumir todo el combustible
+    Vehiculo.vehiculosArrancados--; // Actualizamos la cantidad de vehículos activos en ese momento (se decrementa en uno)
+  }
+  
+  // Actualizamos los cuentakilómetros del objeto
+  this.kilometrosTotales += distanciaEfectiva;
+  this.kilometrosParciales += distanciaEfectiva;
+
+  //Actualizamos el nivel del depósito del objeto Vehiculo (combustible consumido)
+  this.nivelDeposito -=  this.consumoMedio * distanciaEfectiva; 
+  
+  // Actualizamos el cuentakilómetros global de la clase
+  Vehiculo.kilometrosTotalesFlota += distanciaEfectiva;
+  
+  // Devolvemos la distancia efectiva recorrida
+  return distanciaEfectiva;
+}</code>
+</pre>
+</div>
+<p>Si te fijas, la implementación de los métodos se complica cada vez más, pues hay acciones que tienen efectos colaterales en atributos en los que podríamos no reparar en un primer vistazo. Por ejemplo si el combustible se acaba sin poder completar el trayecto habrá que apagar el motor (atributo <strong>estado del motor</strong>) y si esto sucede habrá que actualizar también el atributo de clase de <strong>número de vehículos arrancados</strong>. Es decir, que no solamente se modifican los atributos de los <strong>kilómetros recorridos</strong> y el <strong>nivel del depósito</strong>. Cada vez que escribas el código de un método debes tener en cuenta todos los detalles de la "maquinaria" de la clase que has inventado para poder implementar apropiadamente su comportamiento.</p></div>
+</form>
+<div id="taquesQuestion1b211" class="block iDevice_content">
+<p>Imagina que se nos encarga que desarrollemos una segunda versión del método para recorrer un trayecto, pero en esta ocasión con dos parámetros de entrada: el tiempo que se va a estar conduciendo (en horas) y la velocidad media a la que se va a conducir (en <abbr title="kilómetros por hora">km/h</abbr>).</p>
+<p>Implementa esta nueva acción <strong>sobrecargando</strong> el método <code>recorrerTrayecto</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback1b211" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b211text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b211" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b211" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Dado que esta nueva versión del método para recorrer un trayecto tendría un número diferente de parámetros, no habría problema de ambigüedad y el compilador de <span lang="en">Java</span> no nos pondría ningún problema al implementar otro método que se llamara exactamente igual (<code>recorrerTrayecto</code>).</p>
+<p>Realmente la única diferencia entre este método y el anterior podría ser únicamente una línea: un cálculo inicial en el que obtenemos la distancia que se desea recorrer a partir del tiempo y la velocidad media de conducción. A partir de ahí el método sería exactamente igual. Por tanto no tendría mucho sentido volver a escribir todo ese código. Lo más razonable en estos casos es aprovechar todo ese código haciendo una <strong>llamada al método homónimo</strong> (con el mismo nombre) desde dentro de nuestro nuevo método:</p>
+<ol>
+<li><strong>Se calcula la distancia</strong> a partir del tiempo y la velocidad media de conducción.</li>
+<li><strong>Se invoca a la anterior versión del método</strong> <code>recorrerTrayecto</code> con esa información (un único parámetro).</li>
+<li><strong>Se recoge el valor devuelto por la llamada al método y se devuelve</strong> desde el método mediante una sentencia <code>return</code>.</li>
+</ol>
+<p>Respecto a los posibles errores que puedan darse, sólo debemos tener en cuenta los específicos de esta versión del método (parámetros negativos) porque de los otros (motor parado, insuficiente combustible, <span lang="en">etc.</span>) ya se encargará la versión anterior del método en hacer las comprobaciones necesarias. En tal caso se lanzarían las excepciones apropiadas que llegarían hasta este método. En el momento en que saltara una excepción, la ejecución de este método también finalizaría y se reenviaría esa excepción a quien lo hubiera invocado.</p>
+<div class="highlighted-code language-java">
+<pre><code>// Método para recorrer un trayecto basándose en el tiempo de conducción y la velocidad media
+double recorrerTrayecto (double tiempo, double velocidadMedia) throws IllegalArgumentException, IllegalStateException {
+// NOTA: este método lanza las mismas excepciones que su método "sobrecargado"
+  // Variables locales
+  double distanciaEfectiva= 0.0;  // Variable para almacenar la distancia realmente recorrida
+  double distancia= tiempo * velocidadMedia; // Cálculo que se recorrería con ese tiempo y velocidad  
+
+  // Comprobación de que los parámetros no son negativos
+  if (tiempo &lt; 0)
+    throw new IllegalArgumentException (String.format ("parámetro inválido: %.2f", tiempo));
+  if (velocidadMedia &lt; 0)
+    throw new IllegalArgumentException (String.format ("parámetro inválido: %.2f", velocidadMedia));
+
+  // Llamada a la versión anterior de recorrerTrayecto: (método "homónimo")
+  distanciaEfectiva= recorrerTrayecto (distancia);  // Si se lanza alguna excepción, este método la "relanzará"
+
+  // Devolvemos la distancia efectiva calculada por el método (si es que no se produjo una excepción)
+  return distanciaEfectiva;
+}</code>
+</pre>
+</div>
+<p>De esta manera, dejamos que todo el "trabajo duro" (comprobaciones, actualizaciones, lanzamiento de excepciones, <abbr title="etcétera">etc.</abbr>) lo haga el método anterior (que ya habremos implementado y probado adecuadamente) y desde aquí simplemente lo utilizamos calculando previamente lo que necesita como entrada e invocándolo para que nos devuelva una respuesta.</p>
+<p>Esta manera de trabajar también es conocida como "<em>escríbelo una vez, úsalo muchas</em>" ("<em></em><span lang="en"><em>write it once, use multiple times</em></span>") y la volveremos a ver cuando sobrecarguemos el constructor.</p>
+<p>En realidad ni siquiera harían falta esas variables locales auxiliares. Lo hemos hecho para ilustrar el ejemplo con mayor claridad. El método podría haber quedado así de sencillo y compacto:</p>
+<div class="highlighted-code language-java">
+<pre><code>// Método para recorrer un trayecto basándose en el tiempo de conducción y la velocidad media
+double recorrerTrayecto (double tiempo, double velocidadMedia) throws IllegalArgumentException, IllegalStateException {
+  // Comprobación de que los parámetros no son negativos
+  if (tiempo &lt; 0)
+    throw new IllegalArgumentExeption (String.format ("parámetro inválido: %.2f", tiempo));
+  if (velocidadMedia &lt; 0)
+    throw new IllegalArgumentExeption (String.format ("parámetro inválido: %.2f", velocidadMedia));
+
+  return recorrerTrayecto (tiempo * velocidadMedia);
+}</code>
+</pre>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="563_mtodos_privados.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="571_sobrecarga_de_operadores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.2.- Inicialización de arrays multidimensionales. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-97"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_arrays_multidimensionales.html" class="current-page-parent daddy">5.- Arrays multidimensionales.</a>
+   <ul>
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li id="active"><a href="52_inicializacin_de_arrays_multidimensionales.html" class="active no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="51_uso_de_arrays_multidimensionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.2.- Inicialización de arrays multidimensionales.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id396">
+<div class="iDevice emphasis0">
+<div id="ta396_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG05_CONT_R024_pantallas.jpg" alt="Fotografía nocturna de un edificio con un montón de monitores mostrando diferentes cosas." title="Monitores." /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc" title="CC by-nc" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc</span></a> <a title="Geoff LMV" href="http://www.flickr.com/photos/geoff_mv/2080100008/sizes/m/in/photolist-4aP4gf-FcdHE-6rfE7a-8SAMb5-2ANC9-2ANC8-2ANCa-4EHAvD-c8GNZ5-3G9PJv-GPGer-b82kB-2ECvm-7wLbNR-4Zng8Y-bn657e-GwNZ-zX8we-6jVTaX-DTQS-34ebii-amLmAq-8FWn6u-6hB1GV-CZtc-7347Y6-61Abd6-5zUNzH-9RYG9P-eqzrH-asimY3-9sG1-o9qwn-5rQv8w-5rQvdN-eZVmE-4LTU29-3WrBW-3WrCi-5QTxTh-3WrBD-2zdYbA-gNSyB2-bU18sM-4GuG6a-Lj75-ni1Mt-DoH2-x2Byk-6YZBks-bz5dSm/" target="_blank">Geoff LMV</a></div>
+</div>
+<p>¿En qué se diferencia la inicialización de <span lang="en">arrays</span> unidimensionales y de <span lang="en">arrays</span> multidimensionales? En muy poco, la inicialización se puede hacer de las mismas formas.</p>
+<p>Podemos inicializar un <span lang="en">array</span> multidimensional recorriéndolo con dos bucles y asignando un valor a cada posición de los arrays internos. Veamos un ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>
+int n=3;
+int m=4;
+        
+int[][] a2d=new int[n][m];
+
+for (int i=0;i&lt;n;i++)
+
+    for (int j=0;j&lt;m;j++)
+
+        a2d[i][j]=n*m;
+</code></pre>
+</div>
+</div>
+<p> </p>
+<p>También se puede inicializar un <span lang="en">array</span> multidimensional usando las llaves, poniendo después de la declaración del <span lang="en">array</span> un símbolo de igual, y encerrado entre llaves los diferentes valores del <span lang="en">array</span> separados por comas, con la salvedad de que hay que poner unas llaves nuevas cada vez que haya que poner los datos de una nueva dimensión, lo mejor es verlo con un ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int[][] a2d={{0,1,2},{3,4,5},{6,7,8},{9,10,11}};
+int[][][] a3d={{{0,1},{2,3}},{{0,1},{2,3}}};
+</code></pre>
+</div>
+</div>
+<p>El primer <span lang="en">array</span> anterior sería un <span lang="en">array</span> de 4 por 3 y el siguiente sería un <span lang="en">array</span> de <abbr title="Dos por dos por dos"><span title="Primera dimensión 2, segunda dimensión 2 y tercera dimensión 2.">2x2x2</span></abbr>. Como puedes observar esta notación a partir de 3 dimensiones ya es muy liosa y normalmente no se usa. Utilizando esta notación también podemos inicializar rápidamente <span lang="en">arrays</span> irregulares, simplemente poniendo separados por comas los elementos que tiene cada dimensión:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int[][] i2d = {{0,1},{0,1,2},{0,1,2,3},{0,1,2,3,4},{0,1,2,3,4,5}};
+int[][][] i3d = { { {0,1},{0,2} } , {{0,1,3}} , {{0,3,4},{0,1,5} } };</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id397">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta397_70" class="block iDevice_content">
+<p>Es posible que en algunos libros y en Internet se refieran a los <span lang="en">arrays</span> usando otra terminolog&iacute;a. A los <span lang="en">arrays</span> unidimensionales es com&uacute;n llamarlos tambi&eacute;n <strong>arreglos </strong>o <strong>vectores</strong>, a los <span lang="en">arrays</span> de dos dimensiones es com&uacute;n llamarlos directamente <strong>matrices</strong>, y a los <span lang="en">arrays</span> de m&aacute;s de dos dimensiones es posible que los veas escritos como <strong>matrices multidimensionales</strong>. Sea como sea, lo m&aacute;s normal en la jerga inform&aacute;tica es llamarlos <span lang="en">arrays</span>, t&eacute;rmino que procede del ingl&eacute;s.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ClozefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id4">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta4_122" class="block instructions iDevice_content">
+<div id="taquestion398_60" class="block question iDevice_content">
+<p><strong>Dado el siguiente <span lang="en">array</span>: </strong><code>int[][][] i3d={{{7,1},{0,2}}, {{8,1,3}},{{6,3,4},{0,1,5}}};</code></p>
+<p><strong>¿Cuál es el contenido de las siguientes posiciones? (si consideras que alguna posición no existe, sebes indicarlo con X mayúscula)<br /></strong></p>
+</div>
+</section>
+<section class="activity" id="activity-4_123"><form name="cloze-form-4_123" action="#" class="activity-form cloze-activity-form"><div id="cloze4_123"><input type="hidden" name="clozeFlag4_123.strictMarking" id="clozeFlag4_123.strictMarking" value="false"/>
+<input type="hidden" name="clozeFlag4_123.checkCaps" id="clozeFlag4_123.checkCaps" value="false"/>
+<input type="hidden" name="clozeFlag4_123.instantMarking" id="clozeFlag4_123.instantMarking" value="false"/>
+<input type="hidden" name="clozeVar4_123.feedbackId" id="clozeVar4_123.feedbackId" value="ta4_124"/>
+<table class="tabla" summary="Tabla para relacionar los tipos de datos primitivos de la primera columna con las características que los define, que figura en la tercera columna."><caption>Posiciones y valores del array</caption>
+<thead>
+<tr><th scope="col">Posición</th><th scope="col">Contenido</th><th scope="col">Posición</th><th scope="col">Contenido</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="texto_centrado"><code>i3d[1][0][0]</code></td>
+<td class="texto_centrado"><label for="clozeBlank4_123.0" class="sr-av">Rellenar huecos (1):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank4_123.0" style="width:1ch" /><span style="display:none" id="clozeAnswer4_123.0">JXUwMDYw
+</span></td>
+<td class="texto_centrado"><code>i3d[2][1][1]</code></td>
+<td class="texto_centrado"><label for="clozeBlank4_123.1" class="sr-av">Rellenar huecos (2):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank4_123.1" style="width:1ch" /><span style="display:none" id="clozeAnswer4_123.1">JXUwMDY5
+</span></td>
+</tr>
+<tr>
+<td class="texto_centrado"><code>i3d[0][1][1]</code></td>
+<td class="texto_centrado"><label for="clozeBlank4_123.2" class="sr-av">Rellenar huecos (3):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank4_123.2" style="width:1ch" /><span style="display:none" id="clozeAnswer4_123.2">JXUwMDZh
+</span></td>
+<td class="texto_centrado"><code>i3d[2][1][0]</code></td>
+<td class="texto_centrado"><label for="clozeBlank4_123.3" class="sr-av">Rellenar huecos (4):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank4_123.3" style="width:1ch" /><span style="display:none" id="clozeAnswer4_123.3">JXUwMDY4
+</span></td>
+</tr>
+<tr>
+<td class="texto_centrado"><code>i3d[2][1][2]</code></td>
+<td class="texto_centrado"><label for="clozeBlank4_123.4" class="sr-av">Rellenar huecos (5):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank4_123.4" style="width:1ch" /><span style="display:none" id="clozeAnswer4_123.4">JXUwMDZk
+</span></td>
+<td class="texto_centrado"><code>i3d[0][0][0]</code></td>
+<td class="texto_centrado"><label for="clozeBlank4_123.5" class="sr-av">Rellenar huecos (6):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank4_123.5" style="width:1ch" /><span style="display:none" id="clozeAnswer4_123.5">JXUwMDZm
+</span></td>
+</tr>
+<tr>
+<td class="texto_centrado"><code>i3d[2][2][0]</code></td>
+<td class="texto_centrado"><label for="clozeBlank4_123.6" class="sr-av">Rellenar huecos (7):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank4_123.6" style="width:1ch" /><span style="display:none" id="clozeAnswer4_123.6">JXUwMDAw
+</span></td>
+<td class="texto_centrado"><code>i3d[2][1][3]</code></td>
+<td class="texto_centrado"><label for="clozeBlank4_123.7" class="sr-av">Rellenar huecos (8):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank4_123.7" style="width:1ch" /><span style="display:none" id="clozeAnswer4_123.7">JXUwMDAw
+</span></td>
+</tr>
+<tr>
+<td class="texto_centrado"><code>i3d[1][0][1]</code></td>
+<td class="texto_centrado"><label for="clozeBlank4_123.8" class="sr-av">Rellenar huecos (9):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank4_123.8" style="width:1ch" /><span style="display:none" id="clozeAnswer4_123.8">JXUwMDY5
+</span></td>
+<td class="texto_centrado"><code>i3d[0][1][0]</code></td>
+<td class="texto_centrado"><label for="clozeBlank4_123.9" class="sr-av">Rellenar huecos (10):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank4_123.9" style="width:1ch" /><span style="display:none" id="clozeAnswer4_123.9">JXUwMDY4
+</span></td>
+</tr>
+</tbody>
+</table><div class="block iDevice_buttons"><p><input class="button" type="submit" name="submit4_123" value="Enviar"  id="submit4_123" />
+<input type="button" name="restart4_123" value="Reiniciar" style="display:none" id="restart4_123" onclick="$exe.cloze.restart('4_123')" />
+ <input type="button" name="4_123showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton4_123" onclick="$exe.cloze.fillInputs('4_123')" />
+<span class="js-hidden js-warning">Habilitar JavaScript</span></p></div><div id="clozeScore4_123"></div></div></form></section><section id="ta4_124" class="feedback js-feedback iDevice_content" style="display:none">
+<p>Si no tenías claro cómo resolverlo, una forma sencilla de asegurarte del valor de cada posición podría ser ejecutar un pequeño programa que fuera recorriendo todos los elementos posibles:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int[][][] i3d={ {{7,1},{0,2}}, {{8,1,3}}, {{6,3,4},{0,1,5}} };
+        
+for (int i=0; i&lt;i3d.length; i++) {
+    for (int j=0; j&lt;i3d[i].length ; j++) {
+        for (int k=0; k&lt;i3d[i][j].length ; k++) {
+            System.out.printf ("i3d[%d][%d][%d]=%2d  ", i,j,k, i3d[i][j][k]);
+        }
+        System.out.println();
+    }
+    System.out.prinln();
+}</code></pre>
+</div>
+</div>
+<p>Recuerda que siempre que utilices la propiedad <code>length</code> en cada array o subarray estarás evitando salirte del rango y, por tanto, la excepción <code>ArrayIndexOutOfBoundsException</code>.</p>
+<p>El resultado de ese fragmento de código debería ser algo del estilo a:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>i3d[0][0][0]= 7  i3d[0][0][1]= 1  
+i3d[0][1][0]= 0  i3d[0][1][1]= 2  
+
+i3d[1][0][0]= 8  i3d[1][0][1]= 1  i3d[1][0][2]= 3  
+
+i3d[2][0][0]= 6  i3d[2][0][1]= 3  i3d[2][0][2]= 4  
+i3d[2][1][0]= 0  i3d[2][1][1]= 1  i3d[2][1][2]= 5  </code></pre>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id399">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta399_47" class="block iDevice_content">
+<p>Las matrices tienen asociadas un amplio abanico de operaciones (transposición, suma, producto, <abbr title="etcétera.">etc</abbr>.). En la siguiente página tienes ejemplos de cómo realizar algunas de estas operaciones, usando por supuesto <span lang="en">arrays</span>:</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a páginas web sobre operaciones básicas con matrices en Java." href="http://www.sc.ehu.es/sbweb/fisica/cursoJava/numerico/matrices/matriz/matriz.htm" target="_blank">Operaciones básicas con matrices.</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id400">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta400_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b400" class="block iDevice_content">
+<div id="taquesQuestion0b267" class="block iDevice_content">
+<p>Repite el ejercicio del apartado anterior en el que había que escribir un programa en Java que reservara memoria para un <strong>array de dos dimensiones</strong> de elementos de tipo <code>int</code>. La <strong>primera dimensión</strong> será de <strong>tamaño cinco</strong>, y el tamaño de los elementos de esa segunda dimensión sean a su vez arrays de tamaño uno, tamaño dos, y así hasta el tamaño cinco (para el último elemento). Los elementos finales de tipo <code>int</code> se irán rellenando sucesivamente con los números 1, 2, 3, 4, 5, 6, 7, <abbr title="etcétera">etc</abbr>. En este caso, inicializa directamente el array al declarar la variable, sin utilizar ningún bucle.</p>
+</div>
+</section>
+<form name="feedback-form-quesFeedback0b400" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b400text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b400" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b400" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso tendríamos que hacer uso de las llaves para la inicialización:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int[][] tablaIrregular =  { {1}, {2,3}, {4,5,6}, {7,8,9,10}, {11,12,13,14,15} };</code></pre>
+</div>
+</div>
+<p>La parte de salida del contenido del array por pantalla sería exactamente igual:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Recorremos los elementos de la primera dimensión
+for (int i=0 ; i&lt;tablaIrregular.length ; i++) {
+    // Para cada punto de la primera dimensión, recorremos cada elemento de la segunda
+    for (int j=0 ; j&lt;tablaIrregular[i].length ; j++) {
+        System.out.printf ("%2d ", tablaIrregular[i][j]);  // Mostramos el elemento (i,j)
+    }
+    System.out.println(); // Salto de línea para el cambio de elemento en la primera dimensión
+}   </code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="51_uso_de_arrays_multidimensionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

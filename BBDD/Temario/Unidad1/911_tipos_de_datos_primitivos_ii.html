@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>9.1.1.- Tipos de datos primitivos II | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-56"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="9_los_tipos_de_datos.html" class="current-page-parent daddy">9.- Los tipos de datos</a>
+   <ul>
+      <li class="current-page-parent"><a href="91_tipos_de_datos_primitivos_i.html" class="current-page-parent daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul>
+         <li id="active"><a href="911_tipos_de_datos_primitivos_ii.html" class="active no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li><a href="10_literales_de_los_tipos_primitivos.html" class="no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="91_tipos_de_datos_primitivos_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="92_declaracin_e_inicializacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">9.1.1.- Tipos de datos primitivos II</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id158">
+<div class="iDevice emphasis0">
+<div id="ta158_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a title="Ampliar imagen" href="PROG02_CONT_R15_TiposPrimitivosII.jpg"><img src="PROG02_CONT_R15_TiposPrimitivosII_miniatura.jpg" alt="Evoluci&oacute;n de los simios " title="Evoluci&oacute;n de los simios" class="imagen_ampliable" style="float: right;" /></a></div>
+<div class="elemento_centrado credenciales"><a class="cc-by" title="CC by" href="http://creativecommons.org/licenses/by/3.0/deed.es" target="_blank"><span class="transparente">CC by</span></a>&nbsp;<a title="dullhunk " href="http://www.flickr.com/photos/dullhunk/4833512699/ " target="_blank">dullhunk </a></div>
+</div>
+<p>&iquest;C&oacute;mo representaremos los datos de tipo real en <span lang="en">Java</span>?</p>
+<p>El tipo de dato real permite representar <strong>n&uacute;meros con decimales</strong>. Al igual que ocurre con los enteros, la mayor&iacute;a de los lenguajes definen m&aacute;s de un tipo de dato real, en funci&oacute;n del n&uacute;mero de bits usado para representarlos. Cuanto mayor sea ese n&uacute;mero:</p>
+<ul class="lista_verificacion">
+<li><strong>M&aacute;s grande podr&aacute; ser </strong>el n&uacute;mero real representado en valor absoluto.</li>
+<li><strong>Mayor ser&aacute; la precisi&oacute;n</strong> de la parte decimal.</li>
+</ul>
+<p>Entre cada dos n&uacute;meros reales cualesquiera, siempre tendremos matem&aacute;ticamente hablando infinitos n&uacute;meros reales, pero un ordenador no puede representar infinitos n&uacute;meros, porque no dispone de capacidad ilimitada,&nbsp; por lo que <strong>la mayor&iacute;a de ellos los representaremos de forma aproximada.</strong></p>
+<p>&iexcl;&iexcl;No fastidies!! &iquest;Tanta inform&aacute;tica, tanto ordenador cada vez m&aacute;s potente, y ni siquiera puedo representar de forma exacta la mayor&iacute;a de los n&uacute;meros reales?</p>
+<p>Justamente, sentimos decirte que&nbsp; as&iacute; es, pero no se hunde el mundo por ello, y&nbsp; de una forma u otra, tenemos precisi&oacute;n suficiente para casi todo lo que nos propongamos, ya que como humanos, la "precisi&oacute;n infinita" tampoco la manejamos muy bien.&nbsp;</p>
+<p>Por ejemplo, en la aritm&eacute;tica convencional, cuando dividimos 10 entre 3, el resultado es 3.3333333&hellip;, con la secuencia de 3 repiti&eacute;ndose infinitamente. En el ordenador s&oacute;lo podemos almacenar un n&uacute;mero finito de bits, por lo que el almacenamiento de un n&uacute;mero real ser&aacute; siempre una aproximaci&oacute;n.</p>
+<p><br /> Los n&uacute;meros reales se representan en <strong>coma flotante</strong>&nbsp;o notaci&oacute;n cient&iacute;fica, que consiste en trasladar la coma decimal a la primera cifra significativa del valor, con objeto de poder representar el m&aacute;ximo de n&uacute;meros posible.</p>
+<p>Un n&uacute;mero en el interior de un computador se expresa como: <img alt="Valor igual a mantisa por dos elevado a exponente." src="eXe_LaTeX_math_2.gif" style="margin-bottom: 0px;" title="F&oacute;rmula de notaci&oacute;n en coma flotante"   height="17" width="240" /></p>
+<p>Donde la mantisa son las cifras significativas del n&uacute;mero (pues hemos trasladado la coma decimal hasta el principio).&nbsp;<span>De este modo, para almacenar el n&uacute;mero, s&oacute;lo se guardan la mantisa&nbsp;y el exponente al que va elevada la base. Los bits empleados por la mantisa representan la&nbsp;</span><strong>precisi&oacute;n</strong><span>&nbsp;del n&uacute;mero real, es decir, el n&uacute;mero de cifras decimales significativas que puede tener el n&uacute;mero real, mientras que los bits del exponente expresan la diferencia entre el mayor y el menor n&uacute;mero representable, lo que viene a ser el&nbsp;</span><strong>intervalo de representaci&oacute;n</strong><span>.</span></p>
+<p>En <span lang="en">Java</span> las variables de tipo <code>float</code> se emplean para representar los n&uacute;meros en coma flotante de simple precisi&oacute;n de 32 bits, de los cuales 24 son para la mantisa y 8 para el exponente. La mantisa es un valor entre -1.0 y 1.0 y el exponente representa la potencia de 2 necesaria para obtener el valor que se quiere representar. Por su parte, las variables tipo <code>double</code> representan los n&uacute;meros en coma flotante de doble precisi&oacute;n de 64 bits, de los cuales 53 son para la mantisa y 11 para el exponente.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id159">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta159_70" class="block iDevice_content">
+<p>La mayor&iacute;a de los programadores en <span lang="en">Java</span> emplean el tipo <code>double</code> cuando trabajan con datos de tipo real. Es una forma de asegurarse de que los errores cometidos por las sucesivas aproximaciones sean menores. De hecho, <span lang="en">Java</span> considera los valores en coma flotante como de tipo <code>double</code> por defecto. As&iacute;, el literal <code>3.65</code> ser&aacute; considerado por defecto como un literal de tipo <code>double</code>. Si quiero que sea considerado como <code>float</code>, (que es de menor precisi&oacute;n, y ocupa menos espacio) tendr&eacute; que indicarlo expl&iacute;citamente a&ntilde;adi&eacute;ndole una<code> f</code> detr&aacute;s: <code>3.65f</code> o <code>3.65F</code>.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id160">
+<div class="iDevice emphasis0">
+<div id="ta160_73" class="block iDevice_content">
+<p>Con el objetivo de conseguir la m&aacute;xima portabilidad de los programas, <span lang="en">Java</span> utiliza el est&aacute;ndar internacional &nbsp;<a class="glosario">IEEE 754<span><em>IEEE 754</em>Formato de representaci&oacute;n o normativa cuyo objetivo es estandarizar el uso de la representaci&oacute;n de n&uacute;meros en coma flotante entre distintos fabricantes. Est&aacute; desarrollado por el IEEE (Institute of Electrical and Electronics Engineers, en espa&ntilde;ol Instituto de Ingenieros El&eacute;ctricos y Electr&oacute;nicos).</span></a> para la representaci&oacute;n interna de los n&uacute;meros en coma flotante, que es una forma de asegurarse de que el resultado de los c&aacute;lculos sea el mismo para diferentes plataformas.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id161">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta161_47" class="block iDevice_content">
+<p>La siguiente página  en inglés es la web oficial sobre el estándar internacional <acronym title="Institute of Electrical and Electronics Engineers." lang="en">IEEE</acronym> 754-2008 para representación de números en coma flotante (<span lang="en">Standard for Binary Floating-Point Arithmetic</span>, edición de 2008 desarrollado por el  <acronym title="Institute of Electrical and Electronics Engineers." lang="en">IEEE</acronym>: <span lang="en">Institute of Electrical and Electronics Engineers, conocido como "IE cubo"</span>):</p>
+<div class="enlace_centrado"><a class="html" title="Acceder  a la web sobre el estándar IEEE 754." href="http://grouper.ieee.org/groups/msc/ANSI_IEEE-Std-754-2019/" target="_blank"> Notación <acronym title="Institute of Electrical and Electronics Engineers.">IEEE</acronym> 754</a></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ClozefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id162">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta162_41" class="block instructions iDevice_content">
+<p><strong>Relaciona los tipos primitivos con los bits y rango de valores correspondientes, escribiendo el n&uacute;mero asociado en el hueco correspondiente.</strong></p>
+</section>
+<section class="activity" id="activity-162_42"><form name="cloze-form-162_42" action="#" class="activity-form cloze-activity-form"><div id="cloze162_42"><input type="hidden" name="clozeFlag162_42.strictMarking" id="clozeFlag162_42.strictMarking" value="false"/>
+<input type="hidden" name="clozeFlag162_42.checkCaps" id="clozeFlag162_42.checkCaps" value="false"/>
+<input type="hidden" name="clozeFlag162_42.instantMarking" id="clozeFlag162_42.instantMarking" value="false"/>
+<input type="hidden" name="clozeVar162_42.feedbackId" id="clozeVar162_42.feedbackId" value="ta162_43"/>
+<table class="tabla" summary="Tabla para relacionar los tipos de datos primitivos de la primera columna con las características que los define, que figura en la tercera columna."><caption>Ejercicio de relacionar</caption>
+<thead>
+<tr><th scope="col">Tipo</th><th scope="col">Relación</th><th scope="col">Característica</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><span style="font-size: medium;"><code>short</code></span></td>
+<td class="texto_centrado"><label for="clozeBlank162_42.0" class="sr-av">Rellenar huecos (1):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank162_42.0" style="width:1ch" /><span style="display:none" id="clozeAnswer162_42.0">JXUwMDZi
+</span></td>
+<td>Coma flotante de 64 bits, usando la representación <acronym title="Institute of Electrical and Electronics Engineers." lang="en">IEEE</acronym> 754-2008</td>
+</tr>
+<tr>
+<td><span style="font-size: medium;"><code>byte</code></span></td>
+<td class="texto_centrado"><label for="clozeBlank162_42.1" class="sr-av">Rellenar huecos (2):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank162_42.1" style="width:1ch" /><span style="display:none" id="clozeAnswer162_42.1">JXUwMDZk
+</span></td>
+<td>Entero de 32 bits, rango de valores de<code><span style="font-size: medium;"> -2.147.483.648</span> </code>(<span title="Menos dos elevado a treinta y uno">-2<sup>31</sup></span>) a <span style="font-size: medium;"><code>2.147.483.647</code> </span>(<span title="Más dos elevado a treinta y uno, menos uno.">+2<sup>31</sup>-1</span>)</td>
+</tr>
+<tr>
+<td><span style="font-size: medium;"><code>double</code></span></td>
+<td class="texto_centrado"><label for="clozeBlank162_42.2" class="sr-av">Rellenar huecos (3):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank162_42.2" style="width:1ch" /><span style="display:none" id="clozeAnswer162_42.2">JXUwMDY5
+</span></td>
+<td>Entero de 16 bits, rango de valores de <span style="font-size: medium;"><code>-32.768</code></span> (<span title="Menos dos elevado a quince">-2<sup>15</sup></span>) a <span style="font-size: medium;"><code>+32.767 </code></span>(<span title="Más dos elevado a quince, menos uno">+2<sup>15</sup>-1</span>)</td>
+</tr>
+<tr>
+<td><span style="font-size: medium;"><code>long</code></span></td>
+<td class="texto_centrado"><label for="clozeBlank162_42.3" class="sr-av">Rellenar huecos (4):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank162_42.3" style="width:1ch" /><span style="display:none" id="clozeAnswer162_42.3">JXUwMDZl
+</span></td>
+<td>Coma flotante de 32 bits, usando la representación <acronym title="Institute of Electrical and Electronics Engineers." lang="en">IEEE</acronym> 745-2008</td>
+</tr>
+<tr>
+<td><span style="font-size: medium;"><code>int</code></span></td>
+<td class="texto_centrado"><label for="clozeBlank162_42.4" class="sr-av">Rellenar huecos (5):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank162_42.4" style="width:1ch" /><span style="display:none" id="clozeAnswer162_42.4">JXUwMDZh
+</span></td>
+<td>Entero de 8 bits, rango de valores de<span style="font-size: medium;"><code> -128</code></span> (<span title="Menos dos elevado a siete">-2<sup>7</sup></span>) a<span style="font-size: medium;"><code> +127</code></span> (<span title="Más dos elevado a 7, menos uno">+2<sup>7</sup>-1</span>)</td>
+</tr>
+<tr>
+<td><span style="font-size: medium;"><code>float</code></span></td>
+<td class="texto_centrado"><label for="clozeBlank162_42.5" class="sr-av">Rellenar huecos (6):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank162_42.5" style="width:1ch" /><span style="display:none" id="clozeAnswer162_42.5">JXUwMDZj
+</span></td>
+<td>Entero de 64 bits, rango de valores de <span style="font-size: medium;"><code>-9.223.372.036.854.775.808</code></span> (-263)<br/> a<span style="font-size: medium;"> <code>9.223.372.036.854.775.807</code> </span>(+263-1)</td>
+</tr>
+</tbody>
+</table><div class="block iDevice_buttons"><p><input class="button" type="submit" name="submit162_42" value="Enviar"  id="submit162_42" />
+<input type="button" name="restart162_42" value="Reiniciar" style="display:none" id="restart162_42" onclick="$exe.cloze.restart('162_42')" />
+ <input type="button" name="162_42showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton162_42" onclick="$exe.cloze.fillInputs('162_42')" />
+<span class="js-hidden js-warning">Habilitar JavaScript</span></p></div><div id="clozeScore162_42"></div></div></form></section><section id="ta162_43" class="feedback js-feedback iDevice_content" style="display:none">
+<p>Adem&aacute;s de los anteriores, tambi&eacute;n son tipos primitivos el tipo de dato <code>boolean</code>, con valores <code>true</code> y <code>false</code>, y el tipo de datos <code>char</code>, que almacena el c&oacute;digo <span lang="en">Unicode</span> de un car&aacute;cter.</p>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="91_tipos_de_datos_primitivos_i.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="92_declaracin_e_inicializacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

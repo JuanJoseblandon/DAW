@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>10.- Literales de los tipos primitivos | Prog01 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-60"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Prog01</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción a la programación</a></li>
+   <li><a href="1_programas_buscando_una_solucin.html" class="daddy">1.- Programas: buscando una solución</a>
+   <ul class="other-section">
+      <li><a href="11_algoritmos_y_programas.html" class="no-ch">1.1.- Algoritmos y programas</a></li>
+   </ul>
+   </li>
+   <li><a href="2_fases_de_la_programacin.html" class="daddy">2.- Fases de la programación</a>
+   <ul class="other-section">
+      <li><a href="21_resolucin_del_problema.html" class="no-ch">2.1.- Resolución del problema</a></li>
+      <li><a href="22_implementacin.html" class="no-ch">2.2.- Implementación</a></li>
+      <li><a href="23_explotacin.html" class="no-ch">2.3.- Explotación</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ciclo_de_vida_del_software.html" class="no-ch">3.- Ciclo de vida del software</a></li>
+   <li><a href="4_lenguajes_de_programacin.html" class="daddy">4.- Lenguajes de programación</a>
+   <ul class="other-section">
+      <li><a href="41_lenguaje_mquina.html" class="no-ch">4.1.- Lenguaje máquina</a></li>
+      <li><a href="42_lenguaje_ensamblador.html" class="no-ch">4.2.- Lenguaje ensamblador</a></li>
+      <li><a href="43_lenguajes_compilados.html" class="no-ch">4.3.- Lenguajes compilados</a></li>
+      <li><a href="44_lenguajes_interpretados.html" class="no-ch">4.4.- Lenguajes interpretados</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_programacin_java.html" class="daddy">5.- El lenguaje de programación Java</a>
+   <ul class="other-section">
+      <li><a href="51_breve_historia.html" class="no-ch">5.1.- Breve historia</a></li>
+      <li><a href="52_la_poo_y_java.html" class="no-ch">5.2.- La POO y Java</a></li>
+      <li><a href="53_independencia_de_la_plataforma_y_trabajo_en_red.html" class="no-ch">5.3.- Independencia de la plataforma y trabajo en red</a></li>
+      <li><a href="54_seguridad_y_simplicidad.html" class="no-ch">5.4.- Seguridad y simplicidad</a></li>
+      <li><a href="55_java_y_los_bytecodes.html" class="no-ch">5.5.- Java y los Bytecodes</a></li>
+   </ul>
+   </li>
+   <li><a href="6_programas_en_java.html" class="daddy">6.- Programas en Java</a>
+   <ul class="other-section">
+      <li><a href="61_estructura_de_un_programa.html" class="no-ch">6.1.- Estructura de un programa</a></li>
+      <li><a href="62_el_entorno_bsico_de_desarrollo_java.html" class="no-ch">6.2.- El entorno básico de desarrollo Java</a></li>
+      <li><a href="63_la_api_de_java.html" class="no-ch">6.3.- La API de Java</a></li>
+      <li><a href="64_afinando_la_configuracin.html" class="no-ch">6.4.- Afinando la configuración</a></li>
+      <li><a href="65_codificacin_compilacin_y_ejecucin_de_aplicaciones.html" class="daddy">6.5.- Codificación, compilación y ejecución de aplicaciones</a>
+      <ul class="other-section">
+         <li><a href="651_estandarizacin_del_cdigo.html" class="no-ch">6.5.1.- Estandarización del código</a></li>
+         <li><a href="652_solucin_a_posibles_problemas_con_la_codificacin_de_caracteres_acentuados.html" class="no-ch">6.5.2.- Solución a posibles problemas con la codificación de caracteres acentuados</a></li>
+      </ul>
+      </li>
+      <li><a href="66_tipos_de_aplicaciones_en_java.html" class="no-ch">6.6.- Tipos de aplicaciones en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_entornos_integrados_de_desarrollo_ide.html" class="daddy">7.- Entornos Integrados de Desarrollo (IDE)</a>
+   <ul class="other-section">
+      <li><a href="71_qu_son.html" class="no-ch">7.1.- ¿Qué son?</a></li>
+      <li><a href="72_ide_actuales.html" class="no-ch">7.2.- IDE actuales</a></li>
+      <li><a href="73_el_entorno_netbeans.html" class="no-ch">7.3.- El entorno NetBeans</a></li>
+      <li><a href="74_instalacin_y_configuracin.html" class="no-ch">7.4.- Instalación y configuración</a></li>
+      <li><a href="75_aspecto_del_entorno_y_gestin_de_proyectos.html" class="no-ch">7.5.- Aspecto del entorno y gestión de proyectos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_variables_e_identificadores.html" class="daddy">8.- Variables e identificadores</a>
+   <ul class="other-section">
+      <li><a href="81_identificadores.html" class="no-ch">8.1.- Identificadores</a></li>
+      <li><a href="82_convenios_y_reglas_para_nombrar_variables.html" class="no-ch">8.2.- Convenios y reglas para nombrar variables</a></li>
+      <li><a href="83_palabras_reservadas.html" class="no-ch">8.3.- Palabras reservadas</a></li>
+      <li><a href="84_tipos_de_variables_i.html" class="daddy">8.4.- Tipos de variables I</a>
+      <ul class="other-section">
+         <li><a href="841_tipos_de_variables_ii.html" class="no-ch">8.4.1.- Tipos de variables II</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="9_los_tipos_de_datos.html" class="daddy">9.- Los tipos de datos</a>
+   <ul class="other-section">
+      <li><a href="91_tipos_de_datos_primitivos_i.html" class="daddy">9.1.- Tipos de datos primitivos I</a>
+      <ul class="other-section">
+         <li><a href="911_tipos_de_datos_primitivos_ii.html" class="no-ch">9.1.1.- Tipos de datos primitivos II</a></li>
+      </ul>
+      </li>
+      <li><a href="92_declaracin_e_inicializacin.html" class="no-ch">9.2.- Declaración e inicialización</a></li>
+      <li><a href="93_tipos_referenciados.html" class="no-ch">9.3.- Tipos referenciados</a></li>
+      <li><a href="94_tipos_enumerados.html" class="no-ch">9.4.- Tipos enumerados</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="10_literales_de_los_tipos_primitivos.html" class="active no-ch">10.- Literales de los tipos primitivos</a></li>
+   <li><a href="11_operadores_y_expresiones.html" class="daddy">11.- Operadores y expresiones</a>
+   <ul class="other-section">
+      <li><a href="111_operadores_aritmticos.html" class="no-ch">11.1.- Operadores aritméticos</a></li>
+      <li><a href="112_operadores_de_asignacin.html" class="no-ch">11.2.- Operadores de asignación</a></li>
+      <li><a href="113_operadores_de_relacin.html" class="no-ch">11.3.- Operadores de relación</a></li>
+      <li><a href="114_operadores_lgicos.html" class="no-ch">11.4.- Operadores lógicos</a></li>
+      <li><a href="115_operador_condicional.html" class="no-ch">11.5.- Operador condicional</a></li>
+      <li><a href="116_operadores_de_bits.html" class="no-ch">11.6.- Operadores de bits</a></li>
+      <li><a href="117_trabajo_con_cadenas.html" class="no-ch">11.7.- Trabajo con cadenas</a></li>
+      <li><a href="118_precedencia_de_operadores.html" class="no-ch">11.8.- Precedencia de operadores</a></li>
+   </ul>
+   </li>
+   <li><a href="12_conversin_de_tipo.html" class="no-ch">12.- Conversión de tipo</a></li>
+   <li><a href="13_comentarios.html" class="no-ch">13.- Comentarios</a></li>
+   <li><a href="anexo_i_listado_de_ides.html" class="no-ch">Anexo I.- Listado de IDEs</a></li>
+   <li><a href="anexo_ii_conversin_de_tipos_de_datos_en_java.html" class="no-ch">Anexo II.- Conversión de tipos de datos en Java</a></li>
+   <li><a href="anexo_iii_ejercicios_resueltos.html" class="no-ch">Anexo III.- Ejercicios resueltos</a></li>
+   <li><a href="anexo_iv_paradigmas_de_la_programacin.html" class="no-ch">Anexo IV.- Paradigmas de la programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="94_tipos_enumerados.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="11_operadores_y_expresiones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">10.- Literales de los tipos primitivos</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id218">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta218_66" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG02_CONT_R21_CASO_BU004815.png" alt="Imagen en la que se aprecia una mesa de reuni&oacute;n con las manos de una persona, en una de ellas sustenta un l&aacute;piz y apuntador, sobre la mesa un vaso de agua." title="Reuni&oacute;n." style="float: right;" height="160" width="160" /></div>
+<div class="elemento_centrado credenciales">Stockbyte. Uso educativo no comercial</div>
+<div class="elemento_centrado credenciales">para plataformas p&uacute;blicas de</div>
+<div class="elemento_centrado credenciales">Formaci&oacute;n Profesional a distancia.</div>
+<div class="elemento_centrado credenciales">CD-DVD Num. V43.</div>
+</div>
+<p><strong>Ada</strong> se encuentra con <strong>Mar&iacute;a</strong> y <strong>Juan</strong>.</p>
+<p>&mdash;&iquest;C&oacute;mo van esos avances con<span lang="en"> Java</span>?</p>
+<p><strong>Juan</strong> sabe lo que significa eso, <strong>Ada</strong> se interesa por el trabajo que est&aacute;n llevando a cabo. Ya tienen claro qu&eacute; tipos de datos utilizar, pero necesitan cerciorarse de los valores que pueden almacenar esos tipos de datos, es decir, qu&eacute; literales pueden contener, para estar seguros que han hecho la elecci&oacute;n adecuada.</p>
+<p>&mdash;Muy bien &mdash;contesta <strong>Juan</strong>&mdash;. Si quieres te hacemos una demostraci&oacute;n para que veas la estructura del programa.</p>
+<p>A <strong>Ada</strong> le satisface la eficacia con que trabajan <strong>Mar&iacute;a</strong> y <strong>Juan</strong>, apenas han comenzado con el proyecto y pronto podr&aacute; ver resultados inmediatos.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id220">
+<div class="iDevice emphasis0">
+<div id="ta220_73" class="block iDevice_content">
+<p class="destacado">Un <strong>literal</strong>, <strong>valor literal</strong> o <strong>constante literal</strong> es un valor concreto para los tipos de datos primitivos del lenguaje, el tipo <code>String</code> o el valor <code>null</code>.</p>
+<p>Los <strong>literales booleanos</strong> son dos únicos valores, los que puede aceptar el tipo: <code>true</code> y <code>false</code>. Por ejemplo, con la instrucción <code>boolean encontrado = true;</code> estamos declarando una variable de tipo booleana a la cual le asignamos el valor literal <code>true</code>.</p>
+<p>Los <strong>literales enteros</strong> se pueden representar en cuatro notaciones:</p>
+<ul class="lista_verificacion">
+<li><strong>Decimal</strong>: por ejemplo <strong><span style="font-size: medium;"><code>20</code></span></strong>. Es la forma más común. Un literal en decimal estará compuesto por dígitos decimales (del 0 al 9), sin ningún prefijo delante. No puede empezar por cero (salvo que estemos representando al propio 0).</li>
+<li><strong>Octal</strong>: por ejemplo <strong><span style="font-size: medium;"><code>024</code></span></strong>. Un literal en octal siempre empieza por cero, seguido de dígitos octales (del 0 al 7). Por eso en la representación decimal no se puede empezar por <strong><span style="font-size: medium;"><code>0</code></span></strong>, pues se tomaría como un entero representado en octal.</li>
+<li><strong>Hexadecimal</strong>: por ejemplo <strong><span style="font-size: medium;"><code>0x14</code></span></strong>. Un literal en hexadecimal siempre empieza por <strong><span style="font-size: medium;"><code>0x</code></span></strong> (o <strong><span style="font-size: medium;"><code>0X</code></span></strong>) seguido de dígitos hexadecimales (del 0 al 9, de la ‘<strong><span style="font-size: medium;"><code>a</code></span></strong>’ a la ‘<strong><span style="font-size: medium;"><code>f</code></span></strong>’ o de la ‘<strong><span style="font-size: medium;"><code>A</code></span></strong>’ a la ‘<strong><span style="font-size: medium;"><code>F</code></span></strong>’).</li>
+<li><strong>Binaria</strong>: por ejemplo <strong><span style="font-size: medium;"><code>0b10100</code></span></strong>. Un literal en binario siempre empieza por <strong><span style="font-size: medium;"><code>0b</code></span></strong> (o <strong><span style="font-size: medium;"><code>0B</code></span></strong>) seguido de dígitos binarios (únicamente 0 o 1).</li>
+</ul>
+<p>A los literales de tipo <code>long</code> se les debe añadir detrás una ele mayúscula o minúscula (<strong>l</strong> ó <strong>L)</strong>, por ejemplo <code>873L</code>, de lo contrario se considera por defecto  un literal de tipo <code>int</code>. Se suele utilizar <strong>L</strong> para evitar la confusión de la ele minúscula con 1.</p>
+<p>Los <strong>literales</strong> <strong>reales </strong>o en coma flotante se expresan con coma decimal o en notación científica, o sea, seguidos de un exponente <strong>e</strong> ó <strong>E</strong>. El valor puede finalizarse con una <code>f</code> o una <code>F</code> para indicar que se trata de un literal de tipo <code>float</code> o con una <code>d</code> o una <code>D</code> para indicar el formato <code>double</code> (por omisión, si no se indica nada, el real es <code>double</code>). Por ejemplo, podemos representar un mismo literal real de las siguientes formas: <code>13.2, 13.2D, 1.32e1, 0.132E2</code>. Otras constantes literales reales son por ejemplo: <code>.54, 31.21E-5, 2.f, 6.022137e+23f, 3.141e-9d. </code></p>
+<p>Desde Java <acronym title="Second Edition" lang="en">SE</acronym> 7 y posteriores, pueden aparecer caracteres _ entre dígitos en un literal numérico. La idea subyacente es mejorar la legibilidad del código. Así, por ejemplo, sería válido escribir:<br /><br /><code>long numeroDeTarjeta = 1234_5678_9012_3456L;</code></p>
+<p>Un <strong>literal carácter</strong> puede escribirse como un carácter entre comillas simples como<code> 'a', 'ñ', 'Z', 'p'</code>, <abbr title="etcétera.">etc.,</abbr> o por su código de la tabla <span lang="en">Unicode</span>, anteponiendo la secuencia de escape <code>‘\’</code> si el valor lo ponemos en octal o <code>‘\u’</code> si ponemos el valor en hexadecimal. Por ejemplo, si sabemos que tanto en <acronym title="American Standard Code for Information Interchange." lang="en">ASCII</acronym> como en <span lang="en">Unicode</span>, la letra A (mayúscula) es el símbolo número 65, y que 65 en octal es 101 y 41 en hexadecimal, podemos representar esta letra como <code>'\101'</code> en octal y <code>'\u0041'</code> en hexadecimal. Existen unos caracteres especiales que se representan utilizando secuencias de escape:</p>
+<table class="tabla" summary="Cuadro o tabla de cinco filas por cuatro columnas, de título &quot;Secuencias de escape en Java&quot;, de modo que para cada tipo de secuencia de escape se indica su significado. Debe ser leída de dos en dos columnas, de izquierda a derecha y de arriba abajo. "><caption>Secuencias de escape en <span lang="en">Java</span></caption>
+<thead>
+<tr><th scope="col">Secuencia de escape</th><th scope="col">Significado</th><th scope="col">Secuencia de escape</th><th scope="col">Significado</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><code>\b</code></span></td>
+<td>Retroceso</td>
+<td style="text-align: center;"><span style="font-size: medium;"><code>\r</code></span></td>
+<td>Retorno de carro</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code> \⁣t</code></td>
+<td>Tabulador</td>
+<td style="text-align: center;"><span style="font-size: medium;"><code>\''</code></span></td>
+<td>Carácter comillas dobles</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code> \⁣n</code></td>
+<td>Salto de línea</td>
+<td style="text-align: center;"><span style="font-size: medium;"><code>\'</code></span></td>
+<td>Carácter comillas simples</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span style="font-size: medium;"><code>\f</code></span></td>
+<td>Salto de página</td>
+<td style="text-align: center;"><span style="font-size: medium;"><code>\\</code></span></td>
+<td>Barra diagonal</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id221">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta221_70" class="block iDevice_content">
+<p><strong>Normalmente, los objetos en <span lang="en">Java</span> deben ser creados con el operador <code>new</code>. Sin embargo, los literales <code>String</code> no lo necesitan ya que son objetos que se crean impl&iacute;citamente por <span lang="en">Java</span>, pudiendo prescindir del uso del operador <code>new</code>.</strong></p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id172">
+<div class="iDevice emphasis0">
+<div id="ta172_73" class="block iDevice_content">
+<p>Los <strong>literales de cadenas de caracteres</strong> se indican entre comillas dobles. En el ejemplo anterior “<code>El primer mensaje</code>” es un literal de tipo cadena de caracteres. Al construir una cadena de caracteres se puede incluir cualquier carácter <span lang="en">Unicode</span> excepto un carácter de retorno de carro. Por ejemplo, en la siguiente instrucción utilizamos la secuencia de escape \’’ para escribir dobles comillas dentro del mensaje:</p>
+<div class="highlighted-code language-java" style="width: 39em;">
+<pre><code>String texto = "Juan dijo: \"Hoy hace un día fantástico…\"";</code>
+</pre>
+</div>
+<p>En realidad, dentro de la variable texto se está incluyendo la cadena literal <code>Juan dijo: "Hoy hace un día fantástico..."</code>, que incluye una parte entre comillas dobles.</p>
+<p>En el ejemplo del apartado anterior para tipos enumerados ya estábamos utilizando secuencias de escape, para introducir un salto de línea en una cadena de caracteres, utilizando el carácter especial <code> \n</code>.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id128">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta128_43" class="block iDevice_content">
+<p>Tienes m&aacute;s ejemplos sobre el uso de literales num&eacute;ricos con el car&aacute;cter <span lang="en">underscore</span> en el siguiente enlace en ingl&eacute;s:</p>
+<p style="text-align: center;">&nbsp;<a class="html" title="Literales num&eacute;ricos con el car&aacute;cter _" href="https://docs.oracle.com/javase/8/docs/technotes/guides/language/underscores-literals.html" target="_blank">Literales num&eacute;ricos con el car&aacute;cter _</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id193">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta193_149" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b193" class="block iDevice_content">
+<p>Declara e inicializa las variables o constantes necesarias en Java, de forma que encajen con cada uno de los siguientes enunciados:</p>
+<ul class="lista_verificacion">
+<li>La edad de un niño es <code>12</code>.          </li>
+<li>La velocidad de la luz es de <code>300000</code> kilómetros por segundo.</li>
+<li>La edad mínima para apuntarse a actividades de tiro con arco es de <code>10</code> años.</li>
+<li>El correo electrónico de una persona es <code>vaya@mail.com</code>.</li>
+<li>El peso de un atleta es de <code>40,44</code> kilogramos.           </li>
+<li>El número de meses del año es <code>12</code>.</li>
+<li>La letra del <acronym title="Documento Nacional de Identidad" lang="es">DNI</acronym> de una persona es <code>C</code>.</li>
+<li>El número de teléfono es <code>887-44-42-12</code>.</li>
+<li>La distancia de la tierra al sol es de <code>147.100.000.000</code> metros</li>
+<li>La distancia que recorre la luz en un año es de <code>9.460.740.478.580,8</code> kilómetros.</li>
+</ul>
+</section>
+<form name="feedback-form-quesFeedback0b193" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b193text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b193" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b193" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Una solución posible podría ser la siguiente:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>public class EjercicioTiposPrimitivos {
+     public static void main(String[] args) {
+
+        //VARIABLE: La edad de un niño es 12.        
+        //Variable tipo int declarada e inicializada en el mismo sitio.
+        int edadNiño = 12;
+
+        //CONSTANTE: La velocidad de la luz es de 300000 (trescientos mil) kilómetros por segundo.
+        //Constante tipo double inicializada en la misma línea.
+        // El literal de entero (300000) promociona a double automáticamente.
+        final double VELOCIDAD_LUZ = 300000;
+
+        //CONSTANTE: La edad mínima para apuntarse a actividades de tiro con arco es de 10 años.
+        //Constante tipo int declarada e inicializada en distintas líneas.
+        final int EDAD_MINIMA_TIRO_ARCO;
+        EDAD_MINIMA_TIRO_ARCO = 10;
+        
+        //VARIABLE: el correo electrónico de una persona es vaya@mail.com
+        //Variable tipo String declarada e inicializada en la misma línea.
+        String mail="vaya@mail.com";        
+        
+        //VARIABLE: el peso de un atleta es de 40,44 kilogramos.        
+        //Variable tipo double declada e inicializada en líneas diferentes.
+        double pesoAtleta;
+        pesoAtleta=40.44d; //d indica literal de double
+        
+        //CONSTANTE: el número de meses del año es 12
+        //Constante entera declarada e inicializadas en líneas diferentes.
+        final int MESES_AÑO;
+        MESES_AÑO=12;
+        
+        //VARIABLE: la letra del dni de una persona es C
+        //Variable tipo char declarada e inicializada en la misma línea.
+        char letraDNI='C';
+        
+        //VARIABLE: El número de teléfono es 887-44-42-12.
+        //Variable tipo String declarada e inicializada en líneas diferentes.
+        String telefono;
+        telefono="887-44-42-12";
+        
+        //CONSTANTE: la distancia de la tierra al sol es de 147.100.000.000 metros 
+        //Constante tipo long inicializada y declarada en la misma línea
+        final long DISTANCIA_TIERRA_SOL=147_100_000_000L;
+        
+        //CONSTANTE: la distancia que recorre la luz en un año es de 9.460.740.478.580,8 kilómetros.
+        //Constante tipo double inicializada y declarada en la misma línea.
+        final double KM_RECORRIDOS_LUZ_AÑO=9_460_740_478_580.8d;            
+    }
+}</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="94_tipos_enumerados.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="11_operadores_y_expresiones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

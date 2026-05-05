@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.5.- Creación de las tablas en una base de datos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Gestión de bases de datos: relacionales y orientadas a objetos. Persistencia de objetos</a></li>
+   <li class="current-page-parent"><a href="1_bases_de_datos_relacionales.html" class="current-page-parent daddy">1.- Bases de datos relacionales</a>
+   <ul>
+      <li><a href="11_el_desfase_objetorelacional.html" class="no-ch">1.1.- El desfase objeto-relacional</a></li>
+      <li><a href="12_jdbc.html" class="no-ch">1.2.- JDBC</a></li>
+      <li><a href="13__conectores_o_drivers.html" class="no-ch">1.3.-  Conectores o Drivers</a></li>
+      <li><a href="14_instalacin_de_la_base_de_datos.html" class="no-ch">1.4.- Instalación de la base de datos</a></li>
+      <li id="active"><a href="15_creacin_de_las_tablas_en_una_base_de_datos.html" class="active daddy">1.5.- Creación de las tablas en una base de datos</a>
+      <ul>
+         <li><a href="151_lenguaje_sql_i.html" class="no-ch">1.5.1.- Lenguaje SQL (I)</a></li>
+         <li><a href="152_lenguaje_sql_ii.html" class="no-ch">1.5.2.- Lenguaje SQL (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="16_establecimiento_de_conexiones.html" class="daddy">1.6.- Establecimiento de conexiones</a>
+      <ul class="other-section">
+         <li><a href="161_configurar_un_conector_jdbc_en_un_proyecto_netbeans.html" class="no-ch">1.6.1.- Configurar un conector JDBC en un proyecto NetBeans</a></li>
+         <li><a href="162_registrar_el_conector_jdbc.html" class="no-ch">1.6.2.- Registrar el conector JDBC</a></li>
+      </ul>
+      </li>
+      <li><a href="17_ejecucin_de_consultas_sobre_la_base_de_datos.html" class="daddy">1.7.- Ejecución de consultas sobre la base de datos</a>
+      <ul class="other-section">
+         <li><a href="171_adicin_de_informacin.html" class="no-ch">1.7.1.- Adición de información</a></li>
+         <li><a href="172_recuperacin_de_informacin_i.html" class="daddy">1.7.2.- Recuperación de información (I)</a>
+         <ul class="other-section">
+            <li><a href="1712_recuperacin_de_informacin_ii.html" class="no-ch">1.7.1.2.- Recuperación de información (II)</a></li>
+         </ul>
+         </li>
+         <li><a href="173_actualizacin_de_informacin.html" class="no-ch">1.7.3.- Actualización de información</a></li>
+         <li><a href="174_borrado_de_informacin.html" class="no-ch">1.7.4.- Borrado de información</a></li>
+         <li><a href="175_cierre_de_conexiones.html" class="no-ch">1.7.5.- Cierre de conexiones</a></li>
+         <li><a href="176_excepciones_en_jdbc.html" class="no-ch">1.7.6.- Excepciones en JDBC</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="2_persistencia_de_objetos.html" class="daddy">2.- Persistencia de objetos</a>
+   <ul class="other-section">
+      <li><a href="21_qu_son_las_bases_de_datos_orientadas_a_objetos.html" class="no-ch">2.1.- ¿Qué son las bases de datos orientadas a objetos?</a></li>
+      <li><a href="22_qu_es_el_mapeado_de_objetos.html" class="no-ch">2.2.- ¿Qué es el mapeado de objetos?</a></li>
+      <li><a href="23_cmo_empiezo_a_usar_jpa.html" class="no-ch">2.3.- ¿Cómo empiezo a usar JPA?</a></li>
+      <li><a href="24_unidades_de_persistencia_i.html" class="daddy">2.4.- Unidades de persistencia (I)</a>
+      <ul class="other-section">
+         <li><a href="241_unidades_de_persistencia_ii.html" class="no-ch">2.4.1.- Unidades de persistencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="25_modelo_de_datos_en_jpa.html" class="daddy">2.5.- Modelo de datos en JPA</a>
+      <ul class="other-section">
+         <li><a href="251_entidades.html" class="no-ch">2.5.1.- Entidades</a></li>
+         <li><a href="252_atributos.html" class="no-ch">2.5.2.- Atributos</a></li>
+         <li><a href="253_relaciones_entre_entidades.html" class="no-ch">2.5.3.- Relaciones entre entidades</a></li>
+         <li><a href="254_relaciones_uno_a_uno.html" class="no-ch">2.5.4.- Relaciones uno a uno</a></li>
+         <li><a href="255_relaciones_uno_a_muchos.html" class="no-ch">2.5.5.- Relaciones uno a muchos</a></li>
+      </ul>
+      </li>
+      <li><a href="26_operaciones_crud_con_jpa.html" class="daddy">2.6.- Operaciones CRUD con JPA</a>
+      <ul class="other-section">
+         <li><a href="261_persistir_y_leer.html" class="no-ch">2.6.1.- Persistir y leer</a></li>
+         <li><a href="262__actualizar_y_borrar_instancias.html" class="no-ch">2.6.2.-  Actualizar y borrar instancias</a></li>
+      </ul>
+      </li>
+      <li><a href="27_jpql_i.html" class="daddy">2.7.- JPQL (I)</a>
+      <ul class="other-section">
+         <li><a href="271_jpql_ii.html" class="no-ch">2.7.1.- JPQL (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="14_instalacin_de_la_base_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="151_lenguaje_sql_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">1.5.- Creación de las tablas en una base de datos</h1></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id13">
+<div class="iDevice emphasis_casopracticofpd" >
+<div class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta13_66" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 200px;"><a href="esquema0.png" target="_blank"><img src="esquema0_mini.png" alt="Imagen que muestra el esquema entidad-relación de la base de datos que María y Juan están diseñando a modo de pruebas. En la imagen se ve como el esquema incluye tres enteidades, producto, ticket y línea de ticket. También se ve como línea de ticket está relacionado con producto y ticket, y los atributos que contiene cada entidad." title="Esquema entidad-relación de la base de datos de pruebas" class="imagen_ampliable" style="float: right;" width="200" height="140" /></a>
+<div class="figcaption"><span class="author">Elaboración propia. (Dominio público)</span><span class="license"><span><br /></span></span></div>
+</div>
+<p><strong><br />María</strong> y <strong>Juan</strong> han realizado el diseño de las tablas que necesitan para la base de datos del mini punto de venta. De momento incluye solo tres tablas: producto, ticket y línea de ticket; con unos pocos atributos, pero piensan hacerlo evolucionar. El aspecto que tiene ahora mismo es el que se muestra en el esquema entidad-relación de la derecha.</p>
+<p>También han decidido utilizar H2 como sistema gestor de bases de datos para las pruebas, con la mente puesta en que luego tendrán que usar <span lang="en">MySQL</span>.</p>
+<p>Saben que H2 es un sistema gestor de bases de datos relacional. Una vez instalado, tendrán que programar los accesos a la base de datos para guardar los datos, recuperarlos, realizar las consultas para los informes y documentos que sean necesarios,<abbr title="etcétera."> etc.</abbr></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id14">
+<div class="iDevice emphasis0">
+<div id="ta14_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-left license-copyright" style="width: 200px;"><img src="BasesDeDatos.1.png" alt="Ilustración de un archivador con cajones con forma cilíndrica con el texto Bases de Datos en la cara superior." title="Bases de Datos." style="float: left;" width="200" height="150" />
+<div class="figcaption"><a href="https://pixabay.com/es/illustrations/big-data-base-de-datos-almacenar-2103091/" target="_blank" class="author">daniel_diaz_bardillo</a> <span class="license"><span class="sep">(</span><span>Pixabay License</span><span class="sep">)</span></span></div>
+</div>
+<p><br />En <span lang="en">Java</span> podemos conectarnos y manipular bases de datos utilizando <acronym title="Java Database Connectivity." lang="en">JDBC</acronym>. Pero la creación en sí de la estructura de la base de datos normalmente es necesario hacerla con una herramienta específica para ello. Normalmente será el administrador o la administradora de la base de datos, a través de las herramientas que proporcionan el sistema gestor, quien creará la base de datos. No todos los <span lang="en">drivers</span> <acronym title="Java Database Connectivity." lang="en">JDBC</acronym> soportan la creación de la base de datos mediante el lenguaje de definición de datos (<strong><abbr title="Data Definition Language." lang="en">DDL</abbr></strong>).</p>
+<p>Normalmente, cualquier sistema gestor de bases de datos incluye asistentes gráficos para crear la base de datos con sus tablas, <a href="#t3cfbcb93-460d-5679-b67e-a09bf3beaf29" id="link3cfbcb93-460d-5679-b67e-a09bf3beaf29" class="exe-tooltip definition-tt titled-tt">claves</a>, y todo lo necesario.</p>
+<p>También, como en el caso de <span lang="en">MySQL</span>, o de<span lang="en"> Oracle</span>, y la mayoría de sistemas gestores de bases de datos, se puede crear la base de datos, desde la <a href="#t75b4ab11-3a1a-cf08-ba41-e95974508ed3" id="link75b4ab11-3a1a-cf08-ba41-e95974508ed3" class="exe-tooltip definition-tt titled-tt">línea de comandos</a> de <span lang="en">MySQL</span> o de <span lang="en">Oracle</span>, con las sentencias <acronym title="Structured Query Language." lang="en">SQL</acronym> apropiadas.</p>
+<p>Vamos utilizar el sistema gestor de base de datos <span lang="en">MySQL</span>, por ser un producto gratuito y de fácil uso, además de muy potente. También vamos a utilizar la base de datos H2 por ser <span lang="en">software</span> libre y compatible con <span lang="en">MySQL</span>.</p>
+<div id="t3cfbcb93-460d-5679-b67e-a09bf3beaf29" class="exe-tooltip-text">
+<p>Una clave consiste en un subconjunto del conjunto de atributos comunes en una colección de entidades, que permite identificar unívocamente cada una de las entidades pertenecientes a dicha colección.</p>
+</div>
+<div id="t75b4ab11-3a1a-cf08-ba41-e95974508ed3" class="exe-tooltip-text">
+<p>Es un método que permite a los usuarios dar instrucciones a algún programa informático por medio de una línea de texto simple.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id15">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header" style="background-image:url(icon_debesconocerfpd.png)"><h2 class="iDeviceTitle">Debes conocer</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta15_48" class="block iDevice_content">
+<p>Una de las herramientas más usadas para crear esquemas de bases de datos en <span lang="en">MySQL</span> es <span lang="en">MySQL WorkBench. En la siguiente presentación puedes ver como se crearía con MySQL WorkBench una tabla llamada </span><code>clientes</code>:</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><iframe width="320" height="240" src="//www.youtube.com/embed/bBxuxZpB_yk" play="false" scale="exactfit" frameborder="0"></iframe></div>
+<div class="credenciales elemento_centrado"><a title="Acceder al resumen textual alternativo para &quot;Crear tabla MySQL&quot; (Se abre en una nueva ventana)" href="PROG11_Descripcion_Presentacion_Crear_Tabla.html" target="_blank">Resumen textual alternativo para "Crear tablas con <span lang="en">MySQL</span>"</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id125">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header" style="background-image:url(icon_debesconocerfpd.png)"><h2 class="iDeviceTitle">Debes conocer</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta125_129" class="block iDevice_content">
+<p>Aunque en H2 puedes crear las tablas desde <acronym title="Java Database Connectivity." lang="en">JDBC</acronym>, si lo necesitas H2 dispone de una consola web donde ejecutar sentencias <acronym title="Structured Query Language" lang="en">SQL</acronym>. En el siguiente documento puedes ver cómo arrancar dicha consola, es muy sencillo:</p>
+<p style="text-align: center;"><a href="AbrirConsolaH2.pdf" title="Descargar el resumen de cómo iniciar la consola H2.  Se abre en una nueva ventana [pdf - 58.25 KB]" target="_blank" class="pdf">Resumen de como iniciar la consola de H2</a><span class="exe-link-data file-size"> (pdf - 58.25 <abbr title="KiloBytes" lang="en">KB</abbr>)</span>.</p>
+<p style="text-align: left;">No obstante, en el proyecto base expuesto en apartados anteriores, puedes ver como se pueden crear tablas desde H2.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id16">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta16_47" class="block iDevice_content">
+<p>Aquí puedes ver un vídeo sobre la instalación de la base de datos <span lang="en">Oracle Express</span> y creación de tablas.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><iframe width="300" height="200" src="https://www.youtube-nocookie.com/embed/H8KiNPpq73o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div>
+<div class="credenciales elemento_centrado"><a title="Acceder al resumen textual alternativo para &quot;Instalar Oracle Express y crear tablas.&quot;  (Se abre en una nueva ventana)" href="PROG11_Descripcion_Video_Inst_Oracle_Crear_Tablas.html" target="_blank">Resumen textual alternativo para para "Instalar <span lang="en">Oracle Express</span> y crear tablas."</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="14_instalacin_de_la_base_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="151_lenguaje_sql_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

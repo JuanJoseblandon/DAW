@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables? | Estructuras de datos internas (memoria) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-60"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructuras de datos internas (memoria)</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructuras de datos internas (memoria)</a></li>
+   <li><a href="1_clases_y_mtodos_genricos_i.html" class="daddy">1.- Clases y métodos genéricos (I)</a>
+   <ul class="other-section">
+      <li><a href="11_clases_y_mtodos_genricos_ii.html" class="no-ch">1.1.- Clases y métodos genéricos (II)</a></li>
+   </ul>
+   </li>
+   <li><a href="2__introduccin_a_las_colecciones.html" class="no-ch">2.-  Introducción a las colecciones</a></li>
+   <li><a href="3_conjuntos_i__qu_son_y_cmo_se_declaran_hashset.html" class="daddy">3.- Conjuntos (I).  ¿Qué son y cómo se declaran? HashSet</a>
+   <ul class="other-section">
+      <li><a href="31_conjuntos_ii_cmo_acceder_a_sus_elementos.html" class="no-ch">3.1.- Conjuntos (II). ¿Cómo acceder a sus elementos?</a></li>
+      <li><a href="32_conjuntos_iii_en_qu_se_diferencian_linkedhashset_y_treeset.html" class="no-ch">3.2.- Conjuntos (III). ¿En qué se diferencian LinkedHashSet y TreeSet?</a></li>
+      <li><a href="33_conjuntos_iv_combinando_datos_de_varias_colecciones.html" class="no-ch">3.3.- Conjuntos (IV). Combinando datos de varias colecciones</a></li>
+      <li><a href="34_conjuntos_v_ordenando_sus_elementos.html" class="no-ch">3.4.- Conjuntos (V). Ordenando sus elementos</a></li>
+      <li><a href="35_conjuntos_vi_ejemplos_de_uso.html" class="no-ch">3.5.- Conjuntos (VI). Ejemplos de uso.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_listas_i_definicin_y_diferencias_con_los_conjuntos.html" class="current-page-parent daddy">4.- Listas (I). Definición y diferencias con los conjuntos</a>
+   <ul>
+      <li><a href="41_listas_ii_cmo_se_usan.html" class="no-ch">4.1.- Listas (II). ¿Cómo se usan?</a></li>
+      <li><a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="no-ch">4.2.- Listas (III). Diferencias entre LinkedList y ArrayList</a></li>
+      <li id="active"><a href="43_listas_iv_es_igual_si_los_elementos_son_mutables_o_inmutables.html" class="active no-ch">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</a></li>
+   </ul>
+   </li>
+   <li><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="daddy">5.- Conjuntos de pares clave/valor o diccionarios</a>
+   <ul class="other-section">
+      <li><a href="51_recorrido_de_los_elementos_de_un_diccionario.html" class="no-ch">5.1.- Recorrido de los elementos de un diccionario</a></li>
+   </ul>
+   </li>
+   <li><a href="6_iteradores_i_qu_son_y_cmo_se_usan.html" class="daddy">6.- Iteradores (I). ¿Qué son y cómo se usan?</a>
+   <ul class="other-section">
+      <li><a href="61_iteradores_ii_qu_caractersticas_debemos_considerar.html" class="no-ch">6.1.- Iteradores (II). ¿Qué características debemos considerar?</a></li>
+   </ul>
+   </li>
+   <li><a href="7_algoritmos_i_qu_podemos_hacer_con_las_colecciones.html" class="daddy">7.- Algoritmos (I). ¿Qué podemos hacer con las colecciones?</a>
+   <ul class="other-section">
+      <li><a href="71_algoritmos_ii_ordenando_los_elementos_de_la_coleccin.html" class="no-ch">7.1.- Algoritmos (II). Ordenando los elementos de la colección</a></li>
+      <li><a href="72_algoritmos_iii_algunas_operaciones_adicionales_con_colecciones.html" class="no-ch">7.2.- Algoritmos (III). Algunas operaciones adicionales con colecciones</a></li>
+      <li><a href="73_algoritmos_iv_operaciones_agregadas.html" class="daddy">7.3. Algoritmos (IV). Operaciones agregadas</a>
+      <ul class="other-section">
+         <li><a href="731_operaciones_de_reduccin.html" class="no-ch">7.3.1. Operaciones de reducción</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I. Ejercicios resueltos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.3.- Listas (IV). ¿Es igual si los elementos son mutables o inmutables?</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id163">
+<div class="iDevice emphasis0">
+<div id="ta163_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-pd" style="width: 300px;"><img src="WorkStation.jpg" alt="Programadora en su puesto de trabajo, usando varias pantallas de ordenador simultáneamente." title="Programando." class="elemento_derecha" width="300" height="200" />
+<div class="figcaption"><a href="https://pixabay.com/es/photos/mujer-equipos-oficina-trabajo-5653501/" target="_blank" class="author" title="Acceder a la imagen &quot;Programando&quot;, de googlerankfaster en Pixabay. (Se abre en una nueva ventana)" rel="noopener">googlerankfaster</a> <span class="sep">(<a href="https://pixabay.com/es/service/license/" target="_blank" title="Acceder a los términos de la Licencia Pixabay (Se abre en una nueva ventana)" rel="noopener">Licencia Pixabay</a></span><span class="sep">)</span></div>
+</div>
+<p>A la hora de usar las listas, hay que tener en cuenta un par de detalles, ¿sabes cuáles? Es sencillo, pero importante.</p>
+<p>No es lo mismo usar las colecciones (listas y conjuntos) con objetos inmutables (<code>String</code>, <code>Integer</code>, <abbr title="etcétera.">etc.</abbr>) que con objetos mutables. Los objetos inmutables no pueden ser modificados después de su creación, por lo que cuando se incorporan a la lista, a través de los métodos <code>add()</code>, se pasan por copia (es decir, se realiza una copia de los mismos). En cambio los objetos mutables (como las clases que tú puedes crear), <strong>no se copian</strong>, y eso puede producir efectos no deseados.</p>
+<p>Imagínate la siguiente clase, que contiene un número:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>class Test {
+    public Integer numero;
+    Test (int numero) { 
+        this.numero=new Integer(numero);
+    }
+}</code></pre>
+</div>
+</div>
+<p>La clase de antes es mutable, por lo que no se pasa por copia a la lista. Ahora imagina el siguiente código en el que se crea una lista que usa este tipo de objeto, y en el que se insertan dos objetos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Test p1=new Test(11); // Se crea un objeto Test donde el entero que contiene vale 11.
+Test p2=new Test(12); // Se crea otro objeto Test donde el entero que contiene vale 12.
+LinkedList&lt;Test&gt; lista=new LinkedList&lt;&gt;(); // Creamos una lista enlazada para objetos tipo Test.
+lista.add(p1); // Añadimos el primer objeto test.
+lista.add(p2); // Añadimos el segundo objeto test. 
+for (Test p:lista){
+     System.out.println(p.numero); // Mostramos la lista de objetos.
+}</code></pre>
+</div>
+</div>
+<p>¿Qué mostraría por pantalla el código anterior?   Simplemente mostraría los números 11 y 12 en líneas consecutivas.</p>
+<p>Ahora bien, ¿qué pasa si modificamos el valor de uno de los números de los objetos <code>Test</code>? ¿Qué se mostrará al ejecutar el siguiente código?</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>p1.numero=44;
+for (Test p:lista){
+     System.out.println(p.numero);
+}</code></pre>
+</div>
+</div>
+<p>El resultado de ejecutar el código anterior es que se muestran los números 44 y 12. El número ha sido modificado y no hemos tenido que volver a insertar el elemento en la lista para que en la lista se cambie también. Esto es porque en la lista no se almacena una copia del objeto <code>Test</code>, sino un apuntador o referencia a dicho objeto (solo hay una copia del objeto a la que se hace referencia desde distintos lugares).</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper CitasparapensarfpdIdevice em_iDevice em_iDevice_citasparapensarfpd" id="id164">
+<div class="iDevice emphasis_citasparapensarfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Citas para pensar</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta164_49" class="block iDevice_content">
+<blockquote>
+<blockquote class="exe-quote-cite styled-qc">
+<p>Controlar la complejidad es la esencia de la programación.</p>
+<cite lang="en">Brian Kernighan</cite></blockquote>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id165">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-165_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion165_60" class="block question iDevice_content">
+<p><strong>Los elementos de un <code>ArrayList</code> de objetos <code>Short</code> se copian al insertarse, ya que son objetos mutables. </strong></p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i165_63" class="sr-av"><a href="#answer-165_63">Opción 1</a></label><input type="radio" name="option165_60" id="i165_63" class="exe-radio-option exe-radio-option-0-2-165_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-165_63"><div id="taans165_63" class="block iDevice_content">
+<p>Verdadero.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i165_127" class="sr-av"><a href="#answer-165_127">Opción 2</a></label><input type="radio" name="option165_60" id="i165_127" class="exe-radio-option exe-radio-option-1-2-165_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-165_127"><div id="taans165_127" class="block iDevice_content">
+<p>Falso.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b165_60" class="feedback js-hidden">
+<div id="taf165_63" class=" iDevice_content">
+<p>Lo siento, pero no has acertado. Los objetos <code>Short</code> son inmutables.</p>
+</div>
+</section>
+<section id="sa1b165_60" class="feedback js-hidden">
+<div id="taf165_127" class=" iDevice_content">
+<p>Acertaste. Los elementos se pasan por copia por ser inmutables, no mutables.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-165_63">Incorrecto</a><span> (<a href="#sa0b165_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-165_127">Opción correcta</a><span> (<a href="#sa1b165_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id15">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta15_148" class="block story iDevice_content">
+<p><strong>1. Listas de colores con objetos <code>String</code></strong>.<br /><br /><br /></p>
+</section>
+<section id="taquesQuestion0b15" class="block iDevice_content">
+<p>1.1. Crea una lista (<strong><code>lista1</code></strong>) con seis objetos <strong><code>Sring</code></strong> con las palabras "<em>rojo</em>", "<em>amarillo</em>", "<em>verde</em>", "<em>azul</em>", "<em>morado</em>", "<em>gris</em>".</p>
+</section>
+<form name="feedback-form-quesFeedback0b15" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b15text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b15" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b15" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Instanciamos dos colecciones de tipo List y rellenamos la primera con los colores:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>List&lt;String&gt; lista1, lista2;
+
+lista1 = new LinkedList&lt;&gt;();       
+lista2 = new LinkedList&lt;&gt;();       
+
+// Añadimos colores a lista1
+lista1.add ("rojo");
+lista1.add ("amarillo");
+lista1.add ("verde");
+lista1.add ("azul");
+lista1.add ("morado");
+lista1.add ("gris");
+</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b15" class="block iDevice_content">
+<p>1.2. Crea una nueva (<strong><code>lista2</code></strong>) del mismo tipo que <strong><code>lista1</code></strong> en la que se introduzcan todos los elementos de <strong><code>lista2</code></strong> que terminen en vocal.</p>
+</section>
+<form name="feedback-form-quesFeedback1b15" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b15text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b15" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b15" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Recorremos <strong><code>lista1</code></strong> y vamos comprobando si la palabra termina en vocal. Si es así, añadimos esa palabra a <strong><code>lista2</code></strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Recorremos lista1 y añadimos en lista2 los que terminen en vocal
+for ( String color : lista1 ) {
+    if (terminaVocal(color)) {
+        lista2.add(color);
+    }
+}</code></pre>
+</div>
+</div>
+<p>El método <strong><code>terminaVocal</code></strong> podría implementarse por ejemplo así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public static boolean terminaVocal (String texto) {
+    return texto.matches(".*[aeiou]");
+}</code></pre>
+</div>
+</div>
+<p></p></section>
+</form>
+<section id="taquesQuestion2b15" class="block iDevice_content">
+<p>1.3. Invierte todas las palabras que haya en <strong><code>lista2</code></strong>.</p>
+</section>
+<form name="feedback-form-quesFeedback2b15" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b15text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b15" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback2b15" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Invertimos todos los elementos de lista2
+for ( int i=0 ; i&lt;lista2.size() ; i++) {
+    String color = lista2.get(i);
+    lista2.set (i, new StringBuilder(color).reverse().toString());
+}</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion3b15" class="block iDevice_content">
+<p>1.4. Muestra en pantalla el contenido de <strong><code>lista1</code></strong> y de <strong><code>lista2</code></strong>.</p>
+</section>
+<form name="feedback-form-quesFeedback3b15" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b15text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b15" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback3b15" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Mostramos por pantalla lista1 y lista2
+System.out.printf ("Lista1: %s\n", lista1);
+System.out.printf ("Lista2: %s\n", lista2);</code></pre>
+</div>
+</div>
+<p>La salida por pantalla debería ser:</p>
+<div class="highlighted-code code-style-2 language-latex">
+<div>
+<pre><code>Lista1: [rojo, amarillo, verde, azul, morado, gris]
+Lista2: [ojor, ollirama, edrev, odarom]</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion4b15" class="block iDevice_content">
+<p>1.5. Reflexiona: ¿Se ha modificado el contenido de <strong><code>lista1</code></strong> y de <strong><code>lista2</code></strong> o sólo el de <strong><code>lista2</code></strong>? ¿Por qué?</p>
+</section>
+<form name="feedback-form-quesFeedback4b15" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback4b15text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback4b15" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback4b15" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Solamente se ha modificado el contenido de <strong><code>lista2</code></strong>, porque <strong>los objetos de la clase <code>String</code> son inmutables</strong> y por tanto, cada vez que se hace algún tipo de operación sobre ellos se está generando un nuevo objeto de tipo <strong><code>String</code></strong>, de manera que las referencias a los objetos <strong><code>String</code></strong> de <strong><code>lista2</code></strong> no son referencia a objetos <strong><code>String</code></strong> de <strong><code>lista1</code></strong>, sino nuevos objetos.</p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id16">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio Resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta16_148" class="block story iDevice_content">
+<div id="ta15_148" class="block story iDevice_content">
+<p><strong>2. Listas de colores con objetos <code>StringBuilder</code></strong>.</p>
+</div>
+<div id="taquesQuestion0b15" class="block iDevice_content">
+<p></p>
+</div>
+</section>
+<section id="taquesQuestion0b16" class="block iDevice_content">
+<p>2.1. Crea una lista (<strong><code>lista1</code></strong>) con seis objetos <strong><code>SringBuilder</code></strong> con las palabras "<em>rojo</em>", "<em>amarillo</em>", "<em>verde</em>", "<em>azul</em>", "<em>morado</em>", "<em>gris</em>".</p>
+</section>
+<form name="feedback-form-quesFeedback0b16" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b16text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b16" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b16" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Será algo muy similar al caso anterior, aunque esta vez utilizando elementos de tipo objetos instancias de la clase <strong><code>SringBuilder</code></strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>List&lt;StringBuilder&gt; lista1, lista2;
+
+lista1 = new LinkedList&lt;&gt;();       
+lista2 = new LinkedList&lt;&gt;();       
+
+// Añadimos colores a lista1
+lista1.add (new StringBuilder("rojo"));
+lista1.add (new StringBuilder("amarillo"));
+lista1.add (new StringBuilder("verde"));
+lista1.add (new StringBuilder("azul"));
+lista1.add (new StringBuilder("morado"));
+lista1.add (new StringBuilder("gris"));
+
+System.out.printf ("Lista1 creada: %s\n", lista1);
+System.out.println ();</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b16" class="block iDevice_content">
+<p>2.2. Crea una nueva (<strong><code>lista2</code></strong>) del mismo tipo que <strong><code>lista1</code></strong> en la que se introduzcan todos los elementos de <strong><code>lista1</code></strong> que terminen en vocal.</p>
+</section>
+<form name="feedback-form-quesFeedback1b16" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b16text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b16" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b16" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Prácticamente lo mismo que en el caso anterior:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Recorremos lista1 y añadimos en lista2 los que terminen en vocal
+for ( StringBuilder color : lista1) {
+    if (terminaVocal(color.toString())) {
+        lista2.add(color);
+    }
+}
+System.out.printf ("Lista2 creada: %s\n", lista2);
+System.out.println ();</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion2b16" class="block iDevice_content">
+<p>2.3. Invierte todas las palabras que haya en <strong><code>lista2</code></strong>.</p>
+</section>
+<form name="feedback-form-quesFeedback2b16" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b16text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b16" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback2b16" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Realizamos la inversión sobre cada elemento de la lista:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Invertimos todos los elementos de lista2
+System.out.printf ("Invertimos todos los componentes de Lista2\n");
+for ( int i=0 ; i&lt;lista2.size() ; i++) {
+    StringBuilder color = lista2.get(i);
+    lista2.set (i, color.reverse());
+}
+System.out.println ();</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion3b16" class="block iDevice_content">
+<p>2.4. Muestra en pantalla el contenido de <strong><code>lista1</code></strong> y de <strong><code>lista2</code></strong>.</p>
+</section>
+<form name="feedback-form-quesFeedback3b16" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b16text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b16" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback3b16" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Mostramos por pantalla lista1 y lista2
+System.out.println ("Observamos cómo han quedado las dos listas");
+System.out.printf ("Lista1: %s\n", lista1);
+System.out.printf ("Lista2: %s\n", lista2);
+System.out.println ();<br /></code></pre>
+</div>
+</div>
+<p>La salida por pantalla debería ser:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Lista1: [ojor, ollirama, edrev, azul, odarom, gris]
+Lista2: [ojor, ollirama, edrev, odarom]</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion4b16" class="block iDevice_content">
+<p>2.5. Reflexiona: ¿Se ha modificado el contenido de <strong><code>lista1</code></strong> y de <strong><code>lista2</code></strong> o sólo el de <strong><code>lista2</code></strong>? ¿Por qué?</p>
+</section>
+<form name="feedback-form-quesFeedback4b16" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback4b16text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback4b16" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback4b16" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso también se ha modificado el contenido de <strong><code>lista1</code></strong>, porque <strong>los objetos de la clase <code>StringBuilder</code> son mutables</strong> y por tanto, cada vez que se hace algún tipo de operación sobre ellos se está realizando sobre el mismo objeto, pues las referencias a los objetos <strong><code>StringBuilder</code></strong> de <strong><code>lista2</code></strong> son tambien referencia a objetos <strong><code>StringBuilder</code></strong> de <strong><code>lista1</code></strong>, y no nuevos objetos.</p></section>
+</form>
+<section id="taquesQuestion5b16" class="block iDevice_content">
+<p>2.6. ¿Cómo podríamos evitar que las modificaciones sobre los elementos de <strong><code>lista2</code></strong> afecten a <strong><code>lista1</code></strong>?</p>
+</section>
+<form name="feedback-form-quesFeedback5b16" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback5b16text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback5b16" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback5b16" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Si queremos evitar que las operaciones realizadas sobre elementos de <strong><code>lista2</code></strong> no afecten a <strong><code>lista1</code></strong>, habría que lograr que los elementos de <strong><code>lista2</code></strong> no fueran referencias a objetos que hay en <strong><code>lista1</code></strong>. Para conseguir esto habría que tener nuevos objetos en <strong><code>lista2</code></strong> que sean copias de los que hay en <strong><code>lista1</code></strong> y no referencias:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Invertimos todos los elementos de lista2
+System.out.printf ("Invertimos todos los componentes de Lista2\n");
+for ( int i=0 ; i&lt;lista2.size() ; i++) {
+    StringBuilder colorNuevo = new StringBuilder (color);
+    lista2.set (i, colorNuevo);
+}
+System.out.println ();</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="42_listas_iii_diferencias_entre_linkedlist_y_arraylist.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_conjuntos_de_pares_clavevalor_o_diccionarios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

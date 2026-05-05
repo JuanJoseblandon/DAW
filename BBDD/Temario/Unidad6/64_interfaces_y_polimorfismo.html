@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.4.- Interfaces y polimorfismo. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-56"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Utilización avanzada de clases.</a></li>
+   <li><a href="1_relaciones_entre_clases.html" class="daddy">1.- Relaciones entre clases.</a>
+   <ul class="other-section">
+      <li><a href="11_composicin_agregacin_asociacin.html" class="no-ch">1.1.- Composición, agregación, asociación.</a></li>
+      <li><a href="12_herencia.html" class="no-ch">1.2.- Herencia.</a></li>
+      <li><a href="13_herencia_o_composicin.html" class="no-ch">1.3.- ¿Herencia o composición?</a></li>
+   </ul>
+   </li>
+   <li><a href="2_composicin.html" class="daddy">2.- Composición.</a>
+   <ul class="other-section">
+      <li><a href="21_sintaxis_de_la_composicin.html" class="no-ch">2.1.- Sintaxis de la composición.</a></li>
+      <li><a href="22_uso_de_la_composicin_i_preservacin_de_la_ocultacin_en_los_getters.html" class="daddy">2.2.- Uso de la composición (I). Preservación de la ocultación en los getters.</a>
+      <ul class="other-section">
+         <li><a href="221_uso_de_la_composicin_ii_preservacin_de_la_ocultacin_en_setters_y_llamadas_a_constructores.html" class="no-ch">2.2.1.- Uso de la composición (II). Preservación de la ocultación en setters y llamadas a constructores.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_clases_anidadas_o_internas.html" class="no-ch">2.3.- Clases anidadas o internas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_herencia.html" class="daddy">3.- Herencia.</a>
+   <ul class="other-section">
+      <li><a href="31_sintaxis_de_la_herencia.html" class="no-ch">3.1.- Sintaxis de la herencia.</a></li>
+      <li><a href="32_acceso_a_miembros_heredados.html" class="no-ch">3.2.- Acceso a miembros heredados.</a></li>
+      <li><a href="33_utilizacin_de_miembros_heredados_i_atributos.html" class="daddy">3.3.- Utilización de miembros heredados (I). Atributos.</a>
+      <ul class="other-section">
+         <li><a href="331_utilizacin_de_miembros_heredados_ii_mtodos.html" class="no-ch">3.3.1- Utilización de miembros heredados (II). Métodos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_redefinicin_de_mtodos_heredados.html" class="no-ch">3.4.- Redefinición de métodos heredados.</a></li>
+      <li><a href="35_ampliacin_de_mtodos_heredados.html" class="no-ch">3.5.- Ampliación de métodos heredados.</a></li>
+      <li><a href="36_constructores_y_herencia_i.html" class="daddy">3.6.- Constructores y herencia (I).</a>
+      <ul class="other-section">
+         <li><a href="361_constructores_y_herencia_ii.html" class="no-ch">3.6.1. Constructores y herencia (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="37_creacin_y_utilizacin_de_clases_derivadas.html" class="no-ch">3.7.- Creación y utilización de clases derivadas.</a></li>
+      <li><a href="38_la_clase_object_en_java.html" class="no-ch">3.8.- La clase Object en Java.</a></li>
+      <li><a href="39_herencia_mltiple.html" class="no-ch">3.9.- Herencia múltiple.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_clases_abstractas.html" class="daddy">4.- Clases abstractas.</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_una_clase_abstracta.html" class="no-ch">4.1.- Declaración de una clase abstracta.</a></li>
+      <li><a href="42_mtodos_abstractos.html" class="no-ch">4.2.- Métodos abstractos.</a></li>
+      <li><a href="43_clases_y_mtodos_finales.html" class="no-ch">4.3.- Clases y métodos finales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_polimorfismo_y_ligadura_dinmica.html" class="daddy">5.- Polimorfismo y ligadura dinámica.</a>
+   <ul class="other-section">
+      <li><a href="51_concepto_de_polimorfismo.html" class="no-ch">5.1.- Concepto de polimorfismo.</a></li>
+      <li><a href="52_ligadura_dinmica.html" class="no-ch">5.2.- Ligadura dinámica.</a></li>
+      <li><a href="53_limitaciones_de_la_ligadura_dinmica.html" class="no-ch">5.3.- Limitaciones de la ligadura dinámica.</a></li>
+      <li><a href="54_conversin_de_objetos_operador_instanceof.html" class="no-ch">5.4.- Conversión de objetos. Operador instanceof.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_interfaces.html" class="current-page-parent daddy">6.- Interfaces.</a>
+   <ul>
+      <li><a href="61_concepto_de_interfaz.html" class="daddy">6.1.- Concepto de interfaz.</a>
+      <ul class="other-section">
+         <li><a href="611_clase_abstracta_o_interfaz.html" class="no-ch">6.1.1.- ¿Clase abstracta o interfaz?</a></li>
+      </ul>
+      </li>
+      <li><a href="62_definicin_de_interfaces.html" class="no-ch">6.2.- Definición de interfaces.</a></li>
+      <li><a href="63_implementacin_de_interfaces.html" class="daddy">6.3.- Implementación de interfaces.</a>
+      <ul class="other-section">
+         <li><a href="631_un_ejemplo_de_implementacin_de_interfaces.html" class="no-ch">6.3.1.- Un ejemplo de implementación de interfaces.</a></li>
+         <li><a href="632_interfaces_con_mtodos_default_en_java.html" class="no-ch">6.3.2.- Interfaces con métodos default en Java.</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="64_interfaces_y_polimorfismo.html" class="active no-ch">6.4.- Interfaces y polimorfismo.</a></li>
+      <li><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="no-ch">6.5.- Simulación de la herencia múltiple mediante el uso de interfaces.</a></li>
+      <li><a href="66_herencia_de_interfaces.html" class="no-ch">6.6.- Herencia de interfaces.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_elaboracin_de_los_constructores_de_la_clase_rectangulo.html" class="no-ch">Anexo I.- Elaboración de los constructores de la clase Rectangulo.</a></li>
+   <li><a href="anexo_ii_mtodos_para_las_clases_heredadas_alumno_y_profesor.html" class="no-ch">Anexo II.- Métodos para las clases heredadas Alumno y Profesor.</a></li>
+   <li><a href="anexo_iii_mtodos_para_los_atributos_de_las_clases_alumno_y_profesor.html" class="no-ch">Anexo III.- Métodos para los atributos de las clases Alumno y Profesor.</a></li>
+   <li><a href="anexo_iv_contextos_del_modificador_final.html" class="no-ch">Anexo IV.- Contextos del modificador final.</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="632_interfaces_con_mtodos_default_en_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">6.4.- Interfaces y polimorfismo.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id137">
+<div class="iDevice emphasis0">
+<div id="ta137_73" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="PROG07_CONT_R72_BotonArranque.jpg" alt="Botón de arranque de un motor. " title="Botón de arranque." style="float: left;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by" title="CC by" href="http://creativecommons.org/licenses/by/3.0/deed.es" target="_blank"><span class="transparente">CC by</span></a> <a title="Acceder a la web de descarga de la imagen de Norlando Pobre. (se abre en una nueva ventana)" href="https://www.flickr.com/photos/npobre/2601582256" target="_blank">Norlando Pobre</a></div>
+</div>
+<p>Es posible también llevar a cabo el <strong>polimorfismo</strong> mediante el uso de <strong>interfaces</strong>. Un objeto puede tener una referencia cuyo tipo sea una <strong>interfaz</strong>, pero para que el compilador te lo permita, la clase cuyo <strong>constructor</strong> se utilice para crear el objeto deberá implementar esa <strong>interfaz</strong> (bien por si misma o bien porque la implemente alguna <strong>superclase</strong>). Un objeto cuya referencia sea de tipo <strong>interfaz</strong> sólo puede utilizar aquellos métodos definidos en la <strong>interfaz</strong>, es decir, que no podrán utilizarse los atributos y métodos específicos de su clase, tan solo los de la <strong>interfaz</strong>.</p>
+<p>Las referencias de tipo <strong>interfaz</strong> permiten unificar de una manera bastante estricta la forma de utilizar objetos que pertenezcan a clases muy diferentes (pero que todas ellas implementan la misma <strong>interfaz</strong>). De este modo podrías hacer referencia a diferentes objetos que no tienen ninguna relación jerárquica entre sí utilizando la misma variable (referencia a la <strong>interfaz</strong>). Lo único que los distintos objetos tendrían en común es que implementan la misma <strong>interfaz</strong>. En este caso sólo podrás llamar a los métodos de la <strong>interfaz</strong> y no a los específicos de las clases.</p>
+<p>Por ejemplo, si tenías una variable de tipo referencia a la interfaz <code>Arrancable</code>, podrías instanciar objetos de tipo <code>Coche</code> o <code>Motosierra</code> y asignarlos a esa referencia (teniendo en cuenta que ambas clases no tienen una relación de herencia). Sin embargo, tan solo podrás usar en ambos casos los métodos y los atributos de la interfaz <code>Arrancable</code> (por ejemplo <code>arrancar</code>) y no los de <code>Coche</code> o los de <code>Motosierra</code> (sólo los genéricos, nunca los específicos).</p>
+<p>En el caso de las clases <code>Persona</code>, <code>Alumno</code> y <code>Profesor</code>, podrías declarar, por ejemplo, variables del tipo <code>Imprimible</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Imprimible objeto ;                // Imprimible es una interfaz y no una clase</code></pre>
+</div>
+</div>
+<p><span style="font-size: 1em;">Con este tipo de referencia podrías luego apuntar a objetos tanto de tipo <code>Profesor</code></span><span style="font-size: 1em;"> como de tipo <code>Alumno</code></span><span style="font-size: 1em;">, pues ambos implementan la interfaz <code>Imprimible</code></span><span style="font-size: 1em;">:</span></p>
+<div class="highlighted-code language-java  hightlight-2and5">
+<div>
+<pre><code>// En algunas circunstancias podría suceder esto:
+objeto = new Alumno (nombre, apellidos, fecha, grupo, nota) ; // Polimorfismo con interfaces
+...
+// En otras circunstancias podría suceder esto:
+objeto = new Profesor (nombre, apellidos, fecha, especialidad, salario) ; // Polimorfismo con interfaces
+...</code></pre>
+</div>
+</div>
+<p><span style="font-size: 1em;">Y más adelante hacer uso de la </span><strong style="font-size: 1em;">ligadura dinámica</strong><span style="font-size: 1em;">:</span></p>
+<div class="highlighted-code language-java  hightlight-3">
+<div>
+<pre><code>// Llamadas sólo a métodos de la interfaz
+String contenido ;
+contenido = objeto.devolverContenidoString() ;  // Ligadura dinámica con interfaces</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id110">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta110_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b110" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b110" class="block iDevice_content">
+<strong>El </strong><strong>polimorfismo
+puede hacerse con referencias de </strong><strong>superclases abstractas, </strong><strong>superclases
+no abstractas o con </strong><strong>interfaces. ¿Verdadero o Falso? 
+</strong>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b110"><input type="radio" name="option0b110" id="true0b110" class="exe-radio-option exe-radio-option-0-2-0b110-truefalse" /> Verdadero</label> 
+<label for="false0b110"><input type="radio" name="option0b110" id="false0b110" class="exe-radio-option exe-radio-option-1-2-0b110-truefalse" /> Falso</label>
+</p>
+</form>
+<div id="s0b110" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b110-result" class="right">Verdadero</strong></p>
+Así es. Pueden declararse variables de un tipo <strong>superclase</strong>
+(<strong>abstracta</strong> o no) y más tarde instanciarse objetos <strong>subclase</strong>, o bien
+declararse variables de un tipo <strong>interfaz</strong> y posteriormente instanciarse
+objetos de clases que implementen esa <strong>interfaz</strong>.
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id138">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicios Resueltos</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta138_148" class="block story iDevice_content">
+<p><strong>Interfaces Activable y Regulable para los dispositivos domóticos</strong></p>
+<p><a href="DispositivosDomoticosConInterfaces.png" title="Enlace a imagen de la jerarquía de clases de piezas de dispositivos domóticos (se abre en una nueva ventana)" target="_blank" class="imagen_ampliable"><img src="DispositivosDomoticosConInterfaces.png" alt="Esquema que muestra la relación jerárquica enre las clases Dispositivo, Bombilla y Cerradura, así como con las interfaces Activable y Regulable." title="Dispositivos domóticos" width="640" height="343" /></a></p>
+<p>En el contexto de la jerarquía de clases de dispositivos domóticos se han introducido un par de interfaces para facilitar su implementación y uso. Se trata de las interfaces <code>Activable</code> y <code>Regulable</code>.</p>
+</div>
+<div id="taquesQuestion0b138" class="block iDevice_content">
+<p>La interfaz <code>Activable</code> será implementada por cualquier elemento que pueda <strong>activarse</strong> o <strong>desactivarse</strong><abbr title="etcétera">.</abbr> Para proporcionar esta funcionalidad habrá que codificar los siguientes métodos;</p>
+<ul>
+<li class="lista_verificacion">método <code>getEstado</code>, que permitirá obtener el <strong>estado actual</strong> del elemento: activado (<code>true</code>) o desactivado (<code>false</code>);</li>
+<li class="lista_verificacion">método <code>on</code>, que <strong>activará</strong> el elemento. Si está ya activado se lanzará una excepción de tipo <code>IllegalStateException</code>. No devolverá ningún valor;</li>
+<li class="lista_verificacion">método <code>off</code>, que <strong>desactivará</strong> el elemento. Si se encuentra ya desactivado se lanzará una excepción de tipo <code>IllegalStateException</code>. No devolverá ningún valor.</li>
+</ul>
+<p>Las clases que implementen esta interfaz tendrán que codificar estos métodos "a su modo", dependiendo del comportamiento y las características de cada clase específica. En el caso de una cerradura, se cerrará y abrirá; en el caso de una bombilla se encenderá y se apagará, <abbr title="etcétera">etc</abbr>. Es decir, que <strong>aunque se trate de métodos que representan un comportamiento similar, cada clase tendrá que implementarlos de una manera diferente de acuerdo a su naturaleza y sus características específicas</strong> (<strong>polimorfismo</strong>). </p>
+<p>Declara la interfaz <code>Activable</code>, que posteriormente será implementada por algunas clases derivadas de la clase <strong><code>Dispositivo</code></strong>.</p>
+</div>
+<form name="feedback-form-quesFeedback0b138" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b138text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b138" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b138" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La declaración de la interfaz <code>Activable</code> podría quedar así;</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public interface Activable {
+    public void on() throws IllegalStateException;
+    public void off() throws IllegalStateException;
+    public boolean getEstado();
+        
+}</code></pre>
+</div>
+</div></div>
+</form>
+<div id="taquesQuestion1b138" class="block iDevice_content">
+<p>Dado que la clase <code>Cerradura</code> implementa la interfaz <strong><code>Activable</code></strong>, será necesario implementar apropiadamente cada uno de sus métodos:</p>
+<ul class="lista_verificacion">
+<li>método <code>getEstado</code>, para consultar el <strong>estado</strong> actual de la cerradura ("abierta" o "cerrada"). Se devolverá <code>false</code> si está abierta (desactivada) y  <strong><code>true</code></strong> si está cerrada (activada);</li>
+<li>método <code>on</code>, para <strong>cerrar</strong> o "armar" la cerradura (activarla). Si la cerradura está ya activada (<code>true</code>), el mensaje de error de la excepción será "<em>Cerradura ya activada (cerrada)</em>";</li>
+<li>método <code>off</code>, para <strong>abrir</strong> la cerradura o "desarmarla" (desactivarla). Si la cerradura está ya desactivada (<code>false</code>), el mensaje de error de la excepción será "<em>Cerradura ya desactivada (abierta)</em>".</li>
+</ul>
+<p>Implementa la interfaz <code>Activable</code> para la clase <code>Cerradura</code>, es decir, codifica esos métodos dentro de la clase <code>Cerradura</code>.</p>
+</div>
+<form name="feedback-form-quesFeedback1b138" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b138text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b138" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback1b138" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La implementación en la clase <code>Cerradura</code> de los tres métodos que conforman la interfaz <code>Activable</code> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------------------------
+// Implementación de la interfaz Activable en la clase Cerradura
+//----------------------------------------------------------------    
+
+@Override
+public boolean getEstado() {
+    return this.estado;
+}    
+
+
+@Override
+public void on() throws IllegalStateException {
+    if (this.estado) {
+        throw new IllegalStateException("Cerradura ya activada (cerrada)");
+    }
+    this.estado= true;
+}
+
+@Override
+public void off() throws IllegalStateException {
+    if (!this.estado) {
+        throw new IllegalStateException("Cerradura ya desactivada (abierta)");
+    }
+    this.estado= false;
+}</code></pre>
+</div>
+</div>
+<p>Esta es la manera particular que tiene la clase <code>Cerradura</code> de implementar estos tres métodos. Otras clases (<code>Bombilla</code>, <code>Persiana</code>, <code>Enchufe</code>, <code>Altavoz</code>, <abbr title="etcétera">etc</abbr>.) que pudieran implementar esta interfaz codificarán esos métodos a su manera, pues son clases diferentes con implementaciones diferentes para estos métodos. Lo que tienen en común es la <strong>interfaz</strong>.</p></div>
+</form>
+<div id="taquesQuestion2b138" class="block iDevice_content">
+<p>Dado que la clase <strong><code>Bombilla</code></strong> también implementa la interfaz <strong><code>Activable</code></strong>, será necesario codificar nuevamente cada uno de sus métodos para esta clase:</p>
+<ul class="lista_verificacion">
+<li>método <code>getEstado</code>, para consultar el <strong>estado</strong> actual de la bombilla. Dado que el estado de este dispositivo es "escalonado" o "gradual" y este método necesita que se devuelva un valor "binario" (bombilla "encendida" o "apagada"), se devolverá <strong><code>false</code></strong> solo cuando la intensidad esté en el valor mínimo y <strong><code>true</code></strong> en cualquier otro caso;</li>
+<li>método <code>on</code>, para <strong>encender</strong> la bombilla (activarla). Habrá que establecer la intensidad a su máximo nivel posible. Si la bombilla está ya encendida, el mensaje de error de la excepción será "<em>Bombilla ya encendida</em>";</li>
+<li>método <code>off</code>, para <strong>apagar</strong> la bombilla (desactivarla). Habrá que establecer la intensidad a su mínimo nivel posible. Si la bombilla se encuentra ya apagada, el mensaje de error de la excepción será "<em>Bombilla ya apagada</em>";</li>
+</ul>
+<p>Consideramos que la bombilla es encendida o apagada de manera "efectiva" cuando es realmente encendida o apagada (es decir si no lo estaba ya).</p>
+<p>Nuevamente, se trata de otra forma particular de codificar métodos que tienen el mismo nombre. La forma de hacer on(), off() o getEstado en una bombilla no va a ser igual que para una cerradura.</p>
+<p>Implementa ahora la interfaz <strong><code>Activable</code></strong> para la clase <strong><code>Bombilla</code></strong>.</p>
+</div>
+<form name="feedback-form-quesFeedback2b138" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b138text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b138" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback2b138" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La implementación en la clase <code>Bombilla</code> de los tres métodos que conforman la interfaz <code>Activable</code> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//------------------------------------------------------------------
+//  Implementación de la interfaz Activable para la clase Bombilla
+//------------------------------------------------------------------
+@Override
+public boolean getEstado() {
+    return this.intensidad != Bombilla.MIN_INTENSIDAD;
+}
+
+@Override
+public void on() throws IllegalStateException {
+    if (this.getEstado()) {
+        throw new IllegalStateException("Bombilla ya encendida");
+    }
+    this.numVecesManipulada++;
+    this.intensidad= Bombilla.MAX_INTENSIDAD;
+}
+
+public void off() throws IllegalStateException  {
+    if (!this.getEstado()) {
+        throw new IllegalStateException("Bombilla ya apagada");
+    }
+    this.numVecesManipulada++;
+    this.intensidad= Bombilla.MIN_INTENSIDAD;
+}
+</code></pre>
+</div>
+</div>
+<p>Como ya indicamos para la clase <code>Cerradura</code>, esta es la manera particular que tiene la clase <code>Bombilla</code> de implementar estos tres métodos. Otras clases (<code>Cerradura</code>, <code>Persiana</code>, <code>Enchufe</code>, <code>Altavoz</code>, <abbr title="etcétera">etc</abbr>.) que pudieran implementar esta interfaz codificarán esos métodos a su manera, pues son clases diferentes con implementaciones diferentes para estos métodos. Lo que tienen en común es la <strong>interfaz</strong>.</p></div>
+</form>
+<div id="taquesQuestion3b138" class="block iDevice_content">
+<p style="text-align: justify;">La interfaz <strong><code>Regulable</code></strong> será implementada por todas aquellas clases cuyas instancias dispongan de la posibilidad de regular su estado de forma "gradual" o "escalonada" (intensidad) y no solo puedan estar simplemente activadas o desactivadas. Los métodos que obliga a implementar esta interfaz son:</p>
+<ul class="lista_verificacion">
+<li style="text-align: justify;">método <strong><code>getIntensidad</code></strong>, que devolverá un <strong>entero</strong> que representará la intensidad actual (estado "escalonado") del elemento;</li>
+<li>método <strong><code>up</code></strong>, que incrementará la intensidad del estado del elemento;</li>
+<li>método <strong><code>down</code></strong>, que decrementará la intensidad del estado del elemento.</li>
+</ul>
+<p>Tanto el método <strong><code>up</code></strong> como el método <strong><code>down</code></strong> devolverán también un número entero que representará la intensidad (estado "gradual") a la que se ha llegado tras su ejecución.</p>
+<p>Nuevamente, las clases que incorporen esta interfaz tendrán que implementar estos métodos "a su manera", dependiendo del comportamiento de cada clase específica (incrementando la intensidad en uno o más escalones, decidiendo qué hacer cuando se llegue al máximo o mínimo nivel, <abbr title="etcétera">etc</abbr>.). Cada clase tendrá que implementarlos de una manera diferente (<strong>polimorfismo</strong>).</p>
+<p>Declara la interfaz <code>Regulable</code>, que posteriormente será implementada por algunas clases derivadas de la clase <strong><code>Dispositivo</code></strong>.</p>
+</div>
+<form name="feedback-form-quesFeedback3b138" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b138text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b138" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback3b138" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La declaración de la interfaz <code>Regulable</code> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public interface Regulable {
+    public int up();
+    public int down();
+    public int getIntensidad();
+}
+</code></pre>
+</div>
+</div></div>
+</form>
+<div id="taquesQuestion4b138" class="block iDevice_content">
+<p>La clase <strong><code>Bombilla</code></strong> implementa la interfaz <strong><code>Regulable</code></strong>. Aquí tienes cuál debe ser el comportamiento específico de sus métodos:</p>
+<ul class="lista_verificacion">
+<li>método <code>getIntensidad</code>, para consultar el valor actual de la <strong>intensidad</strong> de la bombilla.</li>
+<li>método <strong><code>up</code></strong>, para <strong>incrementar </strong>en una unidad la intensidad de la bombilla;</li>
+<li>método <strong><code>down</code></strong>, para <strong>decrementar</strong> en una unidad la intensidad la bombilla.</li>
+</ul>
+<p>Para los métodos de <strong><code>up</code></strong> y <strong><code>down</code></strong>, si se ha llegado al nivel máximo o al mínimo de intensidad y se sigue intentando incrementar o decrementar, simplemente no se hará nada y se permanecerá en ese nivel.</p>
+<p>Consideramos que en la bombilla se ha producido un cambio de intensidad de manera "efectiva" cuando se llega a modificar realmente su valor (es decir, si el nuevo valor de la intensidad es diferente al que había antes de invocar al método de incremento o decremento).</p>
+<p>Una vez hechas todas estas aclaraciones, ¿te animas a implementar la interfaz <strong><code>Regulable</code></strong> para la clase <strong><code>Bombilla</code></strong>?</p>
+</div>
+<form name="feedback-form-quesFeedback4b138" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback4b138text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback4b138" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback4b138" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>La implementación en la clase <code>Bombilla</code> de los tres métodos que conforman la interfaz <code>Regulable</code> podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//----------------------------------------------------------------
+//  Implementación de la interfaz Regulable en la clase Bombilla
+//----------------------------------------------------------------
+@Override
+public int getIntensidad() {
+    return this.intensidad;
+}
+
+@Override
+public int up() {
+    if (this.intensidad &lt; Bombilla.MAX_INTENSIDAD) {
+        this.intensidad++;
+        this.numVecesManipulada++;
+    }
+    return this.intensidad;
+}
+
+@Override
+public int down() {
+    if (this.intensidad &gt; Bombilla.MIN_INTENSIDAD) {
+        this.intensidad--;
+        this.numVecesManipulada++;
+    }
+    return this.intensidad;
+}
+</code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="632_interfaces_con_mtodos_default_en_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="65_simulacin_de_la_herencia_mltiple_mediante_el_uso_de_interfaces.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

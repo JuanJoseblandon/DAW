@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1.4.- Alternativas: operador barra ('|') o disyuntor. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-84"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_expresiones_regulares.html" class="current-page-parent daddy">3.- Expresiones regulares.</a>
+   <ul>
+      <li class="current-page-parent"><a href="31_construccin_de_expresiones_regulares.html" class="current-page-parent daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul>
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li id="active"><a href="314_alternativas_operador_barra__o_disyuntor.html" class="active no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="313_agrupaciones_uso_de_parntesis.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="315_metacaracteres_y_escapado.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id348">
+<div class="iDevice emphasis0">
+<div id="ta348_154" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="shift-g9b433828c_640.jpg" alt="Palanca de cambios" title="Cambios" style="float: right;" width="240" height="164" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/cambio-engranaje-perilla-1838138/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Engin Akyurt en Pixabay (se abre en una nueva ventana).">Engin Akyurt</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Otro operador importante en las expresiones regulares es la <strong>barra</strong> (símbolo '<strong>|</strong>') o <strong>disyuntor</strong>, utilizado para indicar varias opciones o alternativas. Por ejemplo, la expresión regular <strong>"<code>o|u</code>"</strong> buscará cualquier "<strong>o</strong>" o "<strong>u</strong>" dentro del texto y la expresión regular <strong>"<code>este|oeste|norte|sur</code>"</strong> puede servir para encontrar el nombre de cualquiera de los puntos cardinales (en minúscula).</p>
+<p>Cuando se usa una <strong>barra</strong> ('<strong>|</strong>'), la primera opción o alternativa comienza al principio de la expresión regular y finaliza cuando encuentra una <strong>barra</strong> (símbolo '<strong>|</strong>'). A partir de ahí comienza la segunda alternativa, que finalizará cuando haya otra barra o bien cuando termine la expresión, y así sucesivamente. Por ejemplo, si queremos dar la alternativa entre las palabras <strong>"<code>Antes</code>"</strong> y <strong>"<code>antes</code>"</strong>, podríamos escribir <strong>"<code>Antes|antes</code>"</strong>, aunque en tal caso podríamos interesarnos escribir una sola vez la parte común (<strong>"<code>ntes</code>"</strong>). Ahora bien, para hacerlo correctamente no podemos escribir <strong>"<strong><code><strong><strong><code>A</code></strong></strong><strong><strong><code>|</code></strong></strong>a</code></strong><code>ntes</code>"</strong>, porque entonces las alternativas serían <strong>"<strong><code><strong><strong><code>A</code></strong></strong></code></strong>"</strong> y <strong>"<strong><code>a</code></strong><code>ntes</code>"</strong>, sino que habrá que aislar entre paréntesis la parte que contenga la barra para que la opcionalidad únicamente afecte a ese fragmento de la expresión: <strong>"<strong><code>(A|a)</code></strong>"</strong>. Eso hará que la expresión regular quede finalmente como <strong>"<code>(A|a)ntes</code>"</strong>. Esto significa que podemos encerrar la opcionalidad entre paréntesis para que no afecte a todo el patrón, sino solamente a una parte de él.</p>
+<p>En algunos casos (normalmente cuando las alternativas representan un único carácter) se puede obtener el mismo resultado mediante el uso de la barra o bien de los corchetes, pues en ambos casos se está expresando una opcionalidad. Por ejemplo:</p>
+<ul class="lista_verificacion">
+<li>el patrón <strong>"<code>(A|a)ntes</code>"</strong> es equivalente a <strong class="lista_verificacion">"<code>[Aa]ntes</code>";</strong></li>
+<li>el patrón <strong>"<code>[xyz]=[0-2]</code>"</strong> es equivalente a <strong>"<code>(x|y|z)=(0|1|2)</code>"</strong>.<strong class="lista_verificacion"></strong></li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ClozefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id349">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta349_122" class="block instructions iDevice_content">
+<div id="ta243_122" class="block instructions iDevice_content">
+<div id="ta241_122" class="block instructions iDevice_content">
+<p><strong>Dadas las siguientes expresiones regulares:</strong></p>
+<table class="tabla" summary="Tabla para relacionar los tipos de datos primitivos de la primera columna con las características que los define, que figura en la tercera columna."><caption>Expresiones regulares</caption>
+<thead>
+<tr><th scope="col">Número</th><th scope="col">Expresión Regular</th><th scope="col">Número</th><th scope="col">Expresión Regular</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="texto_centrado">1</td>
+<td>"<code>([01]?[0-9]|2[0-3]):[0-5][0-9]</code>"</td>
+<td style="text-align: center;">5</td>
+<td>"<code>(G|g)(oo)+gle<code></code></code>"</td>
+</tr>
+<tr>
+<td class="texto_centrado">2</td>
+<td>"<code>(3[01]|[12][0-9]|0[1-9])/(1[0-2]|0[1-9])/20[0-9]{2}</code>"</td>
+<td style="text-align: center;">6</td>
+<td>"<code>((p|P)az|(G|g)uerra)(, paz| <code>, guerra</code>)*</code>"</td>
+</tr>
+<tr>
+<td class="texto_centrado">3</td>
+<td>"<code>(lun|mart|miercol|juev|viern)es|sabado|domingo</code>"</td>
+<td style="text-align: center;">7</td>
+<td>"<code>Ford (Puma|Sierra)|Audi (A3|A4)<code></code></code>"</td>
+</tr>
+<tr>
+<td class="texto_centrado">4</td>
+<td>"<code>(El<code>|</code>La) <code>mar y (el cielo|la tierra)</code></code>"</td>
+<td style="text-align: center;">8</td>
+<td>"<code>(La|Lo) mejor|<code>(La|Lo)s mejores</code></code>"</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p><strong>relaciónalas con los tipos de textos o cadenas con las que harían "matching" o "acoplamiento":</strong></p>
+</div>
+</div>
+</section>
+<section class="activity" id="activity-349_123"><form name="cloze-form-349_123" action="#" class="activity-form cloze-activity-form"><div id="cloze349_123"><input type="hidden" name="clozeFlag349_123.strictMarking" id="clozeFlag349_123.strictMarking" value="false"/>
+<input type="hidden" name="clozeFlag349_123.checkCaps" id="clozeFlag349_123.checkCaps" value="false"/>
+<input type="hidden" name="clozeFlag349_123.instantMarking" id="clozeFlag349_123.instantMarking" value="false"/>
+<table class="tabla" summary="Tabla para relacionar los tipos de datos primitivos de la primera columna con las características que los define, que figura en la tercera columna."><caption>Textos</caption>
+<thead>
+<tr><th scope="col">Número de expresión regular</th><th scope="col">Cadenas que encajan con la expresión regular (hacen "matching")</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank349_123.0" class="sr-av">Rellenar huecos (1):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank349_123.0" style="width:1ch" /><span style="display:none" id="clozeAnswer349_123.0">JXUwMDZk
+</span></td>
+<td style="text-align: justify;">Cadenas del tipo "<code>Google</code>", "<code>Goooogle</code>", "<code>google</code>", "<code>goooooogle</code>", <abbr title="etcétera">etc</abbr>. Es decir, expresiones de la forma "<code>Google</code>", que pueden empezar en mayúsculas o minúsculas y con un número de par de vocales '<code>o</code>'.</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank349_123.1" class="sr-av">Rellenar huecos (2):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank349_123.1" style="width:1ch" /><span style="display:none" id="clozeAnswer349_123.1">JXUwMDZj
+</span></td>
+<td style="text-align: justify;">Las cadenas "<code>El mar y el cielo</code>", "<code>La mar y el cielo</code>", "<code>El mar y la tierra</code>", "<code>La mar y la tierra</code>".</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank349_123.2" class="sr-av">Rellenar huecos (3):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank349_123.2" style="width:1ch" /><span style="display:none" id="clozeAnswer349_123.2">JXUwMDYw
+</span></td>
+<td style="text-align: justify;">Las cadenas "<code>La mejor</code>", "<code>Lo mejor</code>", "<code>Los mejores</code>", "<code>Las mejores</code>".</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank349_123.3" class="sr-av">Rellenar huecos (4):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank349_123.3" style="width:1ch" /><span style="display:none" id="clozeAnswer349_123.3">JXUwMDY5
+</span></td>
+<td>
+<p style="text-align: justify;">Cadenas que representan una hora en formato <strong>hh:mm</strong> en sistema horario de 24 horas. Ejemplos: "<code>23:59</code>", "<code>00:00</code>", "<code>01:05</code>", "<code>09:01</code>", "<code>08:30</code>", <abbr title="etcétera">etc</abbr>. Solo se permiten horas válidas.</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank349_123.4" class="sr-av">Rellenar huecos (5):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank349_123.4" style="width:1ch" /><span style="display:none" id="clozeAnswer349_123.4">JXUwMDZh
+</span></td>
+<td>
+<p>Cadenas que representan una fecha en formato <strong>dd/mm/aaaa</strong>, donde ni los días ni los meses pueden empezar por cero, pero los años sí. Únicamente se permiten días entre "<code>01</code>" y "<code>31</code>", meses entre "<code>01</code>" y "<code>12</code>", y años entre "<code>2000</code>" y "<code>2099</code>". Ejemplos: "<code>01/01/2000</code>", "<code>31/12/2022</code>", "<code>30/02/2025</code>", "<code>31/04/2026</code>", "<code>31/12/2099</code>", <abbr title="etcétera">etc</abbr>. Como puedes observar, se admiten fechas no válidas (días superiores a los permitidos en algunos meses). Pero eso es muy complicado de comprobar en una expresión regular. Es más sencillo llevar a cabo una comprobación "semántica" posterior.</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank349_123.5" class="sr-av">Rellenar huecos (6):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank349_123.5" style="width:1ch" /><span style="display:none" id="clozeAnswer349_123.5">JXUwMDZl
+</span></td>
+<td style="text-align: justify;">Cadenas donde se alternan las palabras "<code>guerra</code>" y "<code>paz</code>", separadas por coma y espacio, donde solamente la primera palabra del todo el texto puede tener la primera letra en mayúscula (aunque no es obligatorio). Ejemplos: "<code>Paz</code>", "<code>paz</code>", "<code>Guerra</code>", "<code>guerra</code>", "<code>Paz, paz</code>", "<code>paz, paz, guerra, paz</code>", "<code>Guerra, guerra, paz</code>", "<code>Paz, paz, guerra, paz</code>", "<code>Paz, paz, guerra, guerra</code>", "<code>paz, paz, guerra, paz</code>", <abbr title="etcétera">etc</abbr>.</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank349_123.6" class="sr-av">Rellenar huecos (7):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank349_123.6" style="width:1ch" /><span style="display:none" id="clozeAnswer349_123.6">JXUwMDZm
+</span></td>
+<td style="text-align: justify;">Cadenas que representan varios modelos de vehículos: "<code>Ford Puma</code>", "<code>Ford Sierra<code></code></code>", "<code>Audi A3</code>", "<code>Audi A4</code>".</td>
+</tr>
+<tr>
+<td class="texto_centrado"><label for="clozeBlank349_123.7" class="sr-av">Rellenar huecos (8):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank349_123.7" style="width:1ch" /><span style="display:none" id="clozeAnswer349_123.7">JXUwMDZi
+</span></td>
+<td style="text-align: justify;">Cadenas que representan los siete días de la semana: "<code>lunes</code>", "<code>martes</code>", "<code>miercoles</code>", "<code>jueves</code>", "<code>viernes</code>", "<code>sabado</code>", "<code>domingo</code>".</td>
+</tr>
+</tbody>
+</table><div class="block iDevice_buttons"><p><input class="button" type="submit" name="submit349_123" value="Enviar"  id="submit349_123" />
+<input type="button" name="restart349_123" value="Reiniciar" style="display:none" id="restart349_123" onclick="$exe.cloze.restart('349_123')" />
+ <input type="button" name="349_123showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton349_123" onclick="$exe.cloze.fillInputs('349_123')" />
+<span class="js-hidden js-warning">Habilitar JavaScript</span></p></div><div id="clozeScore349_123"></div></div></form></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id350">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta350_67" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b350" class="block iDevice_content">
+<p>1.- Con lo visto hasta ahora ya es posible construir una expresión regular capaz de verificar si una cadena contiene un <acronym title="Documento Nacional de Identidad.">DNI</acronym> o un <acronym title="Número de Identificación de Extranjeros.">NIE</acronym>, ¿cómo lo harías?</p>
+</section>
+<form name="feedback-form-quesFeedback0b350" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b350text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b350" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b350" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Se trataría simplemente de unir los patrones de <acronym title="Documento Nacional de Identidad.">DNI</acronym> y NIE separados por la barra o disyuntor:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>"[0-9]{8}[A-HJ-NP-TV-Z]|[XYZ][0-9]{7}[A-HJ-NP-TV-Z]"</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Ahora bien, dado que la letra final es común a ambos tipos de patrón, podríamos "extraerla" del disyuntor u opcionalidad mediante el aislamiento entre paréntesis y escribirla una sola vez:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>"([0-9]{8}|[XYZ][0-9]{7})[A-HJ-NP-TV-Z]"</code></pre>
+</div>
+</div>
+<p style="text-align: justify;"></p></section>
+</form>
+<section id="taquesQuestion1b350" class="block iDevice_content">
+<p>2.- Escribe una expresión que represente <strong>todas las fechas posibles entre el 1 de enero de 1900 y el 31 de diciembre de 2099</strong> en el formato <em><strong>aaaa-mm-dd</strong></em>. El rango permitido para el campo de los meses (<em><strong>mm</strong></em>) es de 01 a 12. El rango permitido para el campo de los días (<strong><em>dd</em>)</strong> es de 01 a 31. Se permiten incoherencias entre días y meses (por ejemplo, se permiten el 30 de febrero o el 31 de abril, aunque no existan).</p>
+</section>
+<form name="feedback-form-quesFeedback1b350" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b350text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b350" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b350" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso podemos dividir la expresión regular en tres subpatrones separados por el guion ('<code>-</code>'):</p>
+<ol>
+<li>la parte del año, que puede ser un que empiece por "<code>19</code>" (para ello podríamos hacer "<code>19[0-9]{2}</code>", que cubre desde "<code>1900</code>" hasta "<code>1999</code>") o bien un año que empiece por "<code>20</code>" (para lo cual podría escribirse "<code>20[0-9]{2}</code>", que cubre desde "<code>2000</code>" hasta "<code>2099</code>"). Para poder indicar varias opciones nos viene muy bien el disyuntor. Dado que una parte es común ("<code>[0-9]{2}</code>"), podríamos indicarla una única vez. Por tanto, la representación del año podría quedar como: "<code>(19|20)[0-9]{2}</code>";</li>
+<li>la parte del mes, podría empezar por el carácter '<code>0</code>' o bien por el '<code>1</code>'. No hay más posibilidades, pues como mucho hay doce meses. Además, en el caso de '<code>1</code>', solamente podría ser seguido por los caracteres '<code>0</code>', '<code>1</code>', o '<code>2</code>' (para los meses de octubre, noviembre y diciembre). Teniendo en cuenta todo esto, la representación del día la podemos expresar como: "<code>1[0-2]|0[1-9]</code>";</li>
+<li>la parte del día, que solamente puede empezar por el carácter '<code>0</code>', '<code>1</code>', '<code>2</code>' o '<code>3</code>'. Y para el caso de '<code>3</code>' solo puede ir seguido de '<code>0</code>' o '<code>1</code>' (para los días "<code>30</code>" o "<code>31</code>"). Para los casos '<code>1</code>' y '<code>2</code>', el segundo dígito puede ser cualquiera (días de "<code>10</code>" a "<code>19</code>" y de "<code>20</code>" a "<code>29</code>"). Pero para el caso '<code>0</code>', el segundo dígito no puede ser '<code>0</code>', pues no existe el día "<code>00</code>" (días de "<code>01</code>" a "<code>09</code>"). Esto significa que tendremos tres alternativas: días que empiezan por <code>3</code> (treinta y algo), días que empiezan por <code>1</code> o <code>2</code> ("diecialgo" o "veintialgo") y días por debajo del <code>10</code>. La representación del día podría quedar entonces como: "<code>3[01]|[1-2][0-9]|0[1-9]</code>";</li>
+</ol>
+<p>Una vez hemos logrado construir por separado los tres subpatrones, podemos unirlos mediante el carácter guion, que es lo que separa cada campo. Ahora bien, ten en cuenta que si algún subpatrón contiene disyuntores y no están "aislados" (dentro de un paréntesis), debes encerrarlo entre paréntesis. ¿Por qué? Porque no queremos que esa barra o disyuntor afecte al resto de la expresión regular. Por tanto, la expresión regular podría quedar finalmente así:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>"(19|20)[0-9]{2}-(1[0-2]|0[1-9])-(3[01]|[1-2][0-9]|0[1-9])"</code></pre>
+</div>
+</div>
+<p>¿Qué crees que habría pasado si aquellos subpatrones que contienen la barra o disyuntor no hubieran estado apropiadamente aislados?</p></section>
+</form>
+<section id="taquesQuestion2b350" class="block iDevice_content">
+<p>3.- Plantea una expresión regular que sirva para comprobar si un texto cumple el <strong>formato de una hora</strong> en formato <strong>hh:mm:ss</strong> en sistema horario de <strong>24 horas</strong>. En cada campo siempre tiene que haber dos dígitos. Si es necesario se completa con un cero a la izquierda.</p>
+</section>
+<form name="feedback-form-quesFeedback2b350" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b350text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b350" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback2b350" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Para este caso, ya hemos visto algo muy similar: el formato <strong>hh:mm</strong>, es decir, sin los segundos:</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>"([01]?[0-9]|2[0-3]):[0-5][0-9]"</code></pre>
+</div>
+</div>
+<div>Dado que el formato de los minutos y el de los segundos es idéntico (desde <code>00</code> hasta <code>5</code><code>9</code>) Bastaría con repetir la parte de los minutos ("<code>:[0-5][0-9]</code>") una vez más:</div>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>"([01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]"</code></pre>
+</div>
+</div>
+<p>Y para evitar escribir dos veces lo mismo podemos usar un cuantificador: "<code>(:[0-5][0-9]){2}</code>"</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>"([01]?[0-9]|2[0-3])(:[0-5][0-9]){2}"</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion3b350" class="block iDevice_content">
+<p>4.- Diseña una expresión regular que reconozca cualquier <strong>número romano</strong> entre <strong>1</strong> (<code>I</code>) y el <strong>3999</strong> (<code>MMMCMXCIX<code></code></code>).</p>
+</section>
+<form name="feedback-form-quesFeedback3b350" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b350text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b350" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback3b350" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Para construir un patrón que se adecúe a todas las posibilidades de un número romano debemos tener en cuenta los posibles símbolos y el orden en el que se pueden aparecer:</p>
+<ul>
+<li class="lista_verificacion">símbolos de los miles (<code>M</code>): como máximo tres y puede no aparecer ninguno;</li>
+<li class="lista_verificacion">símbolo de quinientos (<code>D</code>): como máximo uno y puede no haber;</li>
+<li class="lista_verificacion">símbolos de los cientos (<code>C</code>): como máximo tres y puede no haber ninguno;</li>
+<li class="lista_verificacion">símbolo de cincuenta (<code>L</code>): uno o ninguno;</li>
+<li class="lista_verificacion">símbolos de diez (<code>X</code>): tres como máximo y cero como mínimo;</li>
+<li class="lista_verificacion">símbolo de cinco (<code>V</code>): uno o ninguno;</li>
+<li class="lista_verificacion">símbolos de uno (<code>I</code>): entre cero y tres.</li>
+</ul>
+<p>Dado que solo pueden aparecer tres símbolos seguidos como máximo, podríamos plantearnos inicialmente algo como <code>M{0,3}D?C{0,3}L?X{0,3}V?I{0,3}</code>. Pero en ese caso el máximo número que podríamos representar sería MMMDCCCLXXXVIII. Y además habría números intermedios que no estaríamos contemplando. ¿Por qué? El problema es que esa forma de representar números romanos, aunque puede resultar atractiva por su simplicidad, es incompleta. En la notación romana no llegan a escribirse cuatro símbolos seguidos, únicamente tres como máximo, porque para representar el 4 se escribe <code>I<code>V</code></code>, para el 9 se escribe <code>I<code>X</code></code>, <code>XI<code>V</code></code> para el 14, <code>XXXI<code>X</code></code> para el 39, <code>LXXXIX<code></code></code> para el 89, <code>XCIV<code></code></code> para 94, <code>XCV<code></code></code> para 95, <code>XCIX<code></code></code> para 99, <code>CD</code> para 400, <abbr title="etcétera">etc</abbr>.</p>
+<p>Para poder tener en cuenta esa notación para toda cifra de tipo 4 o 9, tendremos que complicar algo más nuestra expresión regular:</p>
+<ul>
+<li class="lista_verificacion">símbolos de los miles (<code>M</code>): como máximo tres y puede no aparecer ninguno. Esta parte quedaría igual: <code>M{0,3}</code>;</li>
+<li class="lista_verificacion">para indicar las centenas, podría ser novecientos (<code>CM</code>), o cuatrocientos (<code>CD</code>), o bien o un número entre quinientos y ochocientos (<code>DC{0,3}</code>) o entre cero (centenas) y trescientos (<code>C{0,3}</code>). Estas dos últimas casuísticas se pueden resumir dejando el quinientos como opcional: (<code>D?C{0,3}</code>) y así representar 0, 100, 200, 300, 500, 600, 700, 800. Por tanto, esta parte quedaría como:  <code>CM|CD|D?C{0,3}</code>;</li>
+<li class="lista_verificacion">para indicar las decenas, podríamos hacer algo similar a como hemos hecho con las centenas: 90 (<code>XC</code>) o 40 (<code>XL</code>) o 0-30/50-80 (<code>L?X{0,3}</code>). En definitiva: <code>XC|XL|L?X{0,3}</code>;</li>
+<li class="lista_verificacion">por último, para las unidades haríamos nuevamente algo muy parecido: 9 (<code>IX</code>) o 4 (<code>IV</code>) o un número en uno de los dos rangos 0-3 o 5-8 (<code>V?I{0,3}</code>). Por tanto: <code>IX|IV|V?I{0,3}</code>.</li>
+</ul>
+<p>Y por último, si lo unimos todo (y aislamos con paréntesis los subpatrones que incluyan disyuntores):</p>
+<div class="highlighted-code language-latex">
+<div>
+<pre><code>M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})</code></pre>
+</div>
+</div>
+<p>Hay que tener en cuenta que esta expresión admite también la cadena vacía, la cual podríamos decir que representa al "cero".</p></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="313_agrupaciones_uso_de_parntesis.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="315_metacaracteres_y_escapado.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.4.- Manipulación de un objeto: utilización de métodos y atributos. | Desarrollo de clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-33"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Desarrollo de clases</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de clases</a></li>
+   <li><a href="1_concepto_de_clase.html" class="daddy">1.- Concepto de clase</a>
+   <ul class="other-section">
+      <li><a href="11_repaso_del_concepto_de_objeto.html" class="no-ch">1.1.- Repaso del concepto de objeto</a></li>
+      <li><a href="12_el_concepto_de_clase.html" class="no-ch">1.2.- El concepto de clase</a></li>
+   </ul>
+   </li>
+   <li><a href="2_empaquetado_de_clases.html" class="daddy">2.- Empaquetado de clases</a>
+   <ul class="other-section">
+      <li><a href="21_jerarqua_de_paquetes.html" class="no-ch">2.1.- Jerarquía de paquetes</a></li>
+      <li><a href="22_utilizacin_de_los_paquetes.html" class="no-ch">2.2.- Utilización de los paquetes</a></li>
+      <li><a href="23_inclusin_de_una_clase_en_un_paquete.html" class="no-ch">2.3.- Inclusión de una clase en un paquete</a></li>
+      <li><a href="24_proceso_de_creacin_de_un_paquete.html" class="no-ch">2.4.- Proceso de creación de un paquete</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructura_y_miembros_de_una_clase.html" class="daddy">3.- Estructura y miembros de una clase</a>
+   <ul class="other-section">
+      <li><a href="31_declaracin_de_una_clase.html" class="no-ch">3.1.- Declaración de una clase</a></li>
+      <li><a href="32_cabecera_de_una_clase.html" class="no-ch">3.2.- Cabecera de una clase</a></li>
+      <li><a href="33_cuerpo_de_una_clase.html" class="no-ch">3.3.- Cuerpo de una clase</a></li>
+   </ul>
+   </li>
+   <li><a href="4_atributos.html" class="daddy">4.- Atributos</a>
+   <ul class="other-section">
+      <li><a href="41_declaracin_de_atributos.html" class="no-ch">4.1.- Declaración de atributos</a></li>
+      <li><a href="42_modificadores_de_atributo.html" class="no-ch">4.2.- Modificadores de atributo</a></li>
+      <li><a href="43_modificadores_de_acceso.html" class="no-ch">4.3.- Modificadores de acceso</a></li>
+      <li><a href="44_modificadores_de_contenido_i_atributos_constantes.html" class="no-ch">4.4.- Modificadores de contenido (I): atributos constantes</a></li>
+      <li><a href="45_modificadores_de_contenido_ii_atributos_estticos.html" class="no-ch">4.5.- Modificadores de contenido (II): atributos estáticos</a></li>
+      <li><a href="46_combinando_modificadores.html" class="no-ch">4.6.- Combinando modificadores</a></li>
+      <li><a href="47_objetos_inmutables.html" class="no-ch">4.7.- Objetos inmutables</a></li>
+   </ul>
+   </li>
+   <li><a href="5_mtodos.html" class="daddy">5.- Métodos</a>
+   <ul class="other-section">
+      <li><a href="51_declaracin_de__un_mtodo.html" class="no-ch">5.1.- Declaración de  un método</a></li>
+      <li><a href="52_cabecera_de_un_mtodo.html" class="no-ch">5.2.- Cabecera de un método</a></li>
+      <li><a href="53_modificadores_en_la_declaracin_de_un_mtodo.html" class="no-ch">5.3.- Modificadores en la declaración de un método</a></li>
+      <li><a href="54_parmetros_en_un_mtodo.html" class="daddy">5.4.- Parámetros en un método</a>
+      <ul class="other-section">
+         <li><a href="541_listas_de_parmetros_variables.html" class="no-ch">5.4.1.- Listas de parámetros variables</a></li>
+         <li><a href="542_modificador_final_en_los_parmetros.html" class="no-ch">5.4.2.- Modificador final en los parámetros</a></li>
+      </ul>
+      </li>
+      <li><a href="55_cuerpo_de_un_mtodo.html" class="daddy">5.5.- Cuerpo de un método</a>
+      <ul class="other-section">
+         <li><a href="551_valor_devuelto_por_un_mtodo_return.html" class="no-ch">5.5.1.- Valor devuelto por un método: return</a></li>
+         <li><a href="552_variables_locales.html" class="no-ch">5.5.2.- Variables locales</a></li>
+         <li><a href="553_el_operador_de_autorreferencia_this.html" class="no-ch">5.5.3.- El operador de autorreferencia this</a></li>
+         <li><a href="554_lanzando_excepciones_desde_un_mtodo.html" class="no-ch">5.5.4.- Lanzando excepciones desde un método</a></li>
+      </ul>
+      </li>
+      <li><a href="56_encapsulacin_control_de_acceso_y_visibilidad.html" class="daddy">5.6.- Encapsulación, control de acceso y visibilidad</a>
+      <ul class="other-section">
+         <li><a href="561_mtodos_de_accesoi_getters.html" class="no-ch">5.6.1.- Métodos de acceso(I): getters</a></li>
+         <li><a href="562_mtodos_de_acceso_ii_setters.html" class="no-ch">5.6.2.- Métodos de acceso (II): setters</a></li>
+         <li><a href="563_mtodos_privados.html" class="no-ch">5.6.3.- Métodos privados</a></li>
+      </ul>
+      </li>
+      <li><a href="57_sobrecarga_de_mtodos.html" class="daddy">5.7.- Sobrecarga de métodos</a>
+      <ul class="other-section">
+         <li><a href="571_sobrecarga_de_operadores.html" class="no-ch">5.7.1.- Sobrecarga de operadores</a></li>
+      </ul>
+      </li>
+      <li><a href="58_mtodos_estticos.html" class="daddy">5.8.- Métodos estáticos</a>
+      <ul class="other-section">
+         <li><a href="581_mtodo_main_en_java.html" class="no-ch">5.8.1.- Método main en Java</a></li>
+      </ul>
+      </li>
+      <li><a href="59_mtodo_tostring_en_java.html" class="no-ch">5.9.- Método toString en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="6_constructores.html" class="daddy">6.- Constructores</a>
+   <ul class="other-section">
+      <li><a href="61_concepto_de_constructor.html" class="no-ch">6.1.- Concepto de constructor</a></li>
+      <li><a href="62_implementacin_de_constructores.html" class="no-ch">6.2.- Implementación de constructores</a></li>
+      <li><a href="63_lanzando_exepciones_desde_los_constructores.html" class="no-ch">6.3.- Lanzando exepciones desde los constructores</a></li>
+      <li><a href="64_sobrecarga_de_constructores.html" class="daddy">6.4.- Sobrecarga de constructores</a>
+      <ul class="other-section">
+         <li><a href="641_uso_de_la_llamada_a_this_en_los_constructores.html" class="no-ch">6.4.1.- Uso de la llamada a this() en los constructores</a></li>
+      </ul>
+      </li>
+      <li><a href="65_constructores_de_copia.html" class="no-ch">6.5.- Constructores de copia</a></li>
+      <li><a href="66_destruccin_de_objetos.html" class="no-ch">6.6.- Destrucción de objetos</a></li>
+      <li><a href="67_mtodos_fbrica_o_pseudoconstructores.html" class="no-ch">6.7.- Métodos "fábrica" o pseudoconstructores</a></li>
+      <li><a href="68_bloques_de_inicializacin_en_java.html" class="no-ch">6.8.- Bloques de inicialización en Java</a></li>
+   </ul>
+   </li>
+   <li><a href="7_documentacin_de_una_clase.html" class="daddy">7.- Documentación de una clase</a>
+   <ul class="other-section">
+      <li><a href="71_etiquetas_y_posicin.html" class="no-ch">7.1.- Etiquetas y posición</a></li>
+      <li><a href="72_uso_de_las_etiquetas.html" class="no-ch">7.2.- Uso de las etiquetas</a></li>
+      <li><a href="73_orden_de_las_etiquetas.html" class="no-ch">7.3.- Orden de las etiquetas</a></li>
+      <li><a href="74_ejemplo_prctico.html" class="no-ch">7.4.- Ejemplo práctico</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="8_creacin_y_utilizacin_de_objetos.html" class="current-page-parent daddy">8.- Creación y utilización de objetos</a>
+   <ul>
+      <li><a href="81_declaracin_de_un_objeto.html" class="no-ch">8.1.- Declaración de un objeto</a></li>
+      <li><a href="82_creacin_de_un_objeto.html" class="no-ch">8.2.- Creación de un objeto</a></li>
+      <li><a href="83_referencias_a_un_objeto.html" class="no-ch">8.3.- Referencias a un objeto</a></li>
+      <li id="active"><a href="84_manipulacin_de_un_objeto_utilizacin_de_mtodos_y_atributos.html" class="active no-ch">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</a></li>
+      <li><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="no-ch">8.5.- Recogiendo las excepciones lanzadas por un método</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_de_implementacin_de_clases.html" class="daddy">Anexo I.- Ejercicios de implementación de clases</a>
+   <ul class="other-section">
+      <li><a href="i1_clase_bombilla.html" class="no-ch">I.1.- Clase Bombilla</a></li>
+      <li><a href="i2_clase_ticket.html" class="no-ch">I.2.- Clase Ticket</a></li>
+      <li><a href="i3_clase_dado.html" class="no-ch">I.3.- Clase Dado</a></li>
+      <li><a href="i4_clase_bombo.html" class="no-ch">I.4.- Clase Bombo</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_ii_implementacin_de_la_clase_vehiculo.html" class="daddy">Anexo II.- Implementación de la clase Vehiculo</a>
+   <ul class="other-section">
+      <li><a href="ii1_descripcin_de_la_tarea.html" class="no-ch">II.1.- Descripción de la tarea</a></li>
+      <li><a href="ii2_informacin_de_inters.html" class="no-ch">II.2.- Información de interés</a></li>
+      <li><a href="ii3_propuesta_de_solucin.html" class="no-ch">II.3.- Propuesta de solución</a></li>
+   </ul>
+   </li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="83_referencias_a_un_objeto.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">8.4.- Manipulación de un objeto: utilización de métodos y atributos.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id70">
+<div class="iDevice emphasis0">
+<div id="ta70_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="PROG05_CONT_R46_puntocero.jpg" alt="SE ve en el suelo, una señalización de punto cero." title="Punto cero." style="float: right;" /></div>
+<div class="elemento_centrado credenciales"><a class="cc-by" title="Acceder a los términos de la Licencia CC BY (se abre en una nueva ventana)." href="http://creativecommons.org/licenses/by/3.0/deed.es" target="_blank"><span class="transparente">CC by</span></a> <a title="Acceder a la web descarga de la imagen de Serge Melki en Flickr (se abre en una nueva ventana)." href="https://www.flickr.com/photos/sergemelki/3354064020/in/photolist-67oso1-Mp2A9-4vitLi-7Yhhxy-nownov-Jfmwe-5nsaYg-maC3Zq-9fNJoC-dRsLkh-6zZyEt-nMSY42-6A6tBY-eJFA9B-8ZQwbt-8o6YNr-5Ba7Ju-brb3BY-5Sqz9E-qzsp7P-8fx5rQ-argEhZ-px8hdd-jR9gc-5koSRw-7WoCVD-9M2QU4-5rQVv9-cM7Nb9-94KkFq-agTw6-8VXq4q-3ZTe1T-maB8rx-maB6vi-jojWHS-maAuVP-4Sbo7E-c6Jh99-4SuKdk-8TtmLu-maB5D8-7Ye2WT-cGMG9S-cou2CW-9tCef9-cou2mf-4SKWxN-64Ghvh-e9YiKh" target="_blank">Serge Melki</a></div>
+</div>
+<p>Una vez que un objeto ha sido declarado y creado (clase instanciada) ya sí se puede decir que el objeto existe en el entorno de ejecución, y por tanto que puede ser manipulado como un objeto más en el programa, haciéndose uso de sus atributos y sus métodos públicos.</p>
+<p>Para acceder a un miembro de un objeto se utiliza el operador <strong>punto</strong> (<code><abbr title="Punto.">.</abbr></code>) del siguiente modo:</p>
+<div class="highlighted-code language-java">
+<pre><code>&lt;nombreObjeto&gt;.&lt;nombreMiembro&gt;</code>
+</pre>
+</div>
+<p>Donde <code>&lt;nombreMiembro&gt;</code> será el nombre de algún miembro del objeto (atributo o método) al cual se tenga acceso.</p>
+<p>Por ejemplo, en el caso de los objetos de tipo <code>Circulo</code>, podríamos acceder a sus miembros de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<pre><code>Circulo c1, c2, c3;
+System.out.printf ("Cantidad de círculos creados hasta el momento: %d.\n", Circulo.numeroCirculos);
+c1= new Circulo (0.0, 0.0, 0.25, "c1", "black");
+System.out.printf ("Propiedades del círculo c1: %s.\n", c1);
+System.out.printf ("Superficie del círculo c1: %.2f.\n", c1.calculaSuperficie());
+System.out.printf ("Longitud de la cirunferencia que rodea al círculo c1: %.2f.\n", c1.calculaArea());
+System.out.printf ("Cantidad de círculos creados hasta el momento: %d.\n", Circulo.numeroCirculos);
+c2= new Circulo();
+c2.setX(0.50);
+c2.setY(0.25);
+System.out.printf ("El centro del círculo c2 está en (%.2f,%.2f).\n", c2.getX(), c2.getY());
+System.out.printf ("El nombre y el color del círculo c2 son: \"%s\" y \"%s\".\n", c2.getNombre(), c2.getColor());
+Ssytem.out.printf ("Cantidad de círculos creados hasta el momento: %d.\n", Circulo.numeroCirculos);</code>
+</pre>
+</div>
+<p>Es decir, colocando el operador <strong>punto</strong> (<code>.</code>) a continuación del nombre del objeto y seguido del nombre del miembro público al que se desea acceder. Obviamente, si se trata de un miembro estático (atributo de clase o método de clase como por ejemplo <code>numeroCirculos</code>) entonces habrá que escribir el nombre de la clase (<code>Circulo.numeroCirculos</code>) y no del objeto (<code><span style="text-decoration: line-through;">c1</span>.numeroCirculos</code>).</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id71">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta71_67" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b71" class="block iDevice_content">
+<p>Escribe el código Java necesario para:</p>
+<ol class="auto-numbered" style="list-style-type: decimal;">
+<li>mostrar por pantalla cuántos objetos instancias de la clase <code>Rectangulo</code> hay creados hasta el momento;</li>
+<li>crear un objeto instancia de la clase <code>Rectangulo</code> ubicado en los coordenadas (0.0, 0.0), (5.0, 5.0), con nombre "<em>Bloque Uno</em>" y color "<em><span lang="en">black</span></em>";</li>
+<li>volver a mostrar por pantalla cuántos objetos instancias de la clase <code>Rectangulo</code> hay creados hasta el momento;</li>
+<li>mostrar una representación textual del objeto por pantalla;</li>
+<li>calcular y mostrar por pantalla su área y la longitud de su perímetro;</li>
+<li>modificar las coordenadas del vértice superior derecho a (2.0, 2.0);</li>
+<li>volver a mostrar una representación textual del objeto por pantalla;</li>
+<li>volver a calcular y mostrar por pantalla su área y la longitud de su perímetro;</li>
+<li>mostrar una vez más por pantalla cuántos objetos instancias de la clase <code>Rectangulo</code> hay creados hasta el momento;</li>
+<li>crear otro objeto <code>Rectangulo</code> exactamente igual que el primer rectángulo creado;</li>
+<li>cambiar el atributo nombre de ese segundo objeto a "<em>Bloque Dos</em>" y el color a "<em><span lang="en">red</span></em>";</li>
+<li>mostrar por pantalla (representación textual) los datos de ese nuevo objeto;</li>
+<li>mostrar por pantalla por última vez cuántos objetos instancias de la clase <code>Rectangulo</code> hay creados hasta el momento.</li>
+</ol>
+</div>
+<form name="feedback-form-quesFeedback0b71" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b71text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b71" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b71" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div class="highlighted-code language-java">
+<pre><code>System.out.printf ("Cantidad de rectángulos creados hasta el momento: %d.\n", Rectangulo.cantidadRectangulos);
+Rectangulo r1= new (0.0, 0.0, 5.0, 5.0, "Bloque Uno", "black");
+System.out.printf ("Cantidad de rectángulos creados hasta el momento: %d.\n", Rectangulo.cantidadRectangulos);
+System.out.printf ("Atributos del rectángulo r1: %s.\n", r1);
+System.out.printf ("Superficie del rectángulo r1: %s.\n", r1.calcularSuperficie());
+System.out.printf ("Longitud del perímetro del rectángulo r1: %s.\n", r1);
+r1.setX2 (2.0);
+r1.setY2 (2.0);
+System.out.printf ("Atributos del rectángulo r1: %s.\n", r1);
+System.out.printf ("Superficie del rectángulo r1: %s.\n", r1.calcularSuperficie());
+System.out.printf ("Longitud del perímetro del rectángulo r1: %s.\n", r1);
+System.out.printf ("Cantidad de rectángulos creados hasta el momento: %d.\n", Rectangulo.cantidadRectangulos);
+Rectangulo r2= new (r1);
+r2.setNombre ("Boque Dos");
+r2.setColor  ("red");
+System.out.printf ("Atributos del rectángulo r1: %s.\n", r1);
+System.out.printf ("Cantidad de rectángulos creados hasta el momento: %d.\n", Rectangulo.cantidadRectangulos);</code>
+</pre>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="83_referencias_a_un_objeto.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="85_recogiendo_las_excepciones_lanzadas_por_un_mtodo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

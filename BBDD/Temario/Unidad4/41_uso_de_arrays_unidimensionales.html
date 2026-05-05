@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.1.- Uso de arrays unidimensionales. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-91"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li><a href="2__cadenas_de_caracteres.html" class="daddy">2.-  Cadenas de caracteres.</a>
+   <ul class="other-section">
+      <li><a href="21_operaciones_con_cadenas_de_caracteres.html" class="daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4__arrays.html" class="current-page-parent daddy">4.-  Arrays.</a>
+   <ul>
+      <li id="active"><a href="41_uso_de_arrays_unidimensionales.html" class="active no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="4__arrays.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_inicializacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.1.- Uso de arrays unidimensionales.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id375">
+<div class="iDevice emphasis0">
+<div id="ta375_73" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 240px;"><img src="money-gb68f33ad4_640.jpg" alt="Monedas apiladas en varios grupos" title="Monedas" style="float: right;" width="240" height="160" /><figcaption class="figcaption"><a href="https://pixabay.com/es/photos/dinero-monedas-apilar-2180330/" target="_blank" class="author" title="Acceder a la web descarga de la imagen de Kevin Schneider en Pixabay (se abre en una nueva ventana).">Kevin Schneider</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><a href="https://pixabay.com/es/service/license/" title="Acceder a los términos de la Licencia Pixabay. (Se abre en una nueva ventana)" target="_blank" rel="noopener"><span>Licencia Pixabay</span></a></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Ya sabes declarar y crear de <span lang="en">arrays</span>, pero, ¿cómo y cuándo se usan?</p>
+<p>Las operaciones habituales que se suelen realizar sobre ellos son:</p>
+<ul class="lista_verificacion">
+<li>modificación del elemento ubicado en una posición del <span lang="en">array;</span></li>
+<li>acceso al elemento ubicado en una posición del <span lang="en">array</span>.</li>
+</ul>
+<p>La <strong>modificación de un elemento en una posición del <span lang="en">array</span></strong> se realiza mediante una simple asignación. Simplemente, se especifica entre corchetes la posición a modificar después del nombre del <span lang="en">array (operador "corchete")</span>. Veámoslo con un simple ejemplo:</p>
+<p></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int[] numeros = new int[3] ; // Array de 3 números (posiciones del 0 al 2).
+numeros[0] = 99 ; // Primera posición del array.
+numeros[1] = 120 ; // Segunda posición del array.
+numeros[2] = 33; // Tercera y última posición del array.
+</code></pre>
+</div>
+</div>
+<p>El <strong>acceso a un valor ya existente dentro de una posición del <span lang="en">array</span></strong> se consigue de forma similar, simplemente poniendo el nombre del <span lang="en">array</span> y la posición a la cual se quiere acceder entre corchetes:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int suma = numeros[0] + numeros[1] + numeros[2];</code></pre>
+</div>
+</div>
+<p>Para nuestra comodidad, los <span lang="en">arrays</span>, como referencias que son en <span lang="en">Java</span>, disponen de una propiedad pública muy útil: la propiedad <code>length</code>, que nos permite conocer el tamaño de cualquier <span lang="en">array</span>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println("Longitud del array: " + numeros.length);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id376">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta376_151" class="block iDevice_content">
+<p>Para conocer el tamaño de una array mediante la propiedad <strong><span style="font-size: medium;"><code>length</code></span></strong> es necesario que ese array haya sido creado (se haya reservado memoria para él).</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice em_iDevice_recomendacionfpd" id="id377">
+<div class="iDevice emphasis_recomendacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_recomendacionfpd.png)"><h1 class="iDeviceTitle">Recomendación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta377_46" class="block iDevice_content">
+<p><span class="resaltado_inline">Buena práctica de programación </span></p>
+<p>Dependiendo del lenguaje de programación, a las <strong>variables constantes</strong> también se les conoce como <strong>constantes con nombre</strong>. Este tipo de variables mejoran la <strong>legibilidad</strong> del código respecto al uso de valores literales. Por ejemplo, una constante con un nombre como <strong><span style="font-size: medium;"><code>LONGITUD_VECTOR</code></span></strong> indica sin duda su propósito, mientras que un valor literal (por ejemplo, <span style="font-family: courier new,courier;">10</span>) podría tener distintos signifi­cados, dependiendo de su contexto.</p>
+<p>De esta manera si se hace:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>final int LONGITUD_VECTOR = 10;
+. . .
+. . .
+String[] listaNombres = new String[LONGITUD_VECTOR];</code></pre>
+</div>
+</div>
+<p>quedará más claro y más fácil de gestionar que se hubiera hecho directamente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String[] listaNombres = new String[10];</code></pre>
+</div>
+</div>
+<p><span class="resaltado_inline">Error común de programación</span></p>
+<p>Tratar de <strong>asignar un valor a una variable constante después de inicializarla</strong> produce un error de com­pilación.</p>
+<p>Intentar <strong>usar una constante antes de inicializarla</strong> también da lugar a un error de compilación.</p>
+<p><span class="resaltado_inline">Observación para prevenir errores</span></p>
+<p>Al acceder a un elemento de un array, hay que asegurarse de que el índice del array siempre sea mayor o igual a 0 y menor que su longitud. Esto ayudará a evitar excepciones del tipo <strong><span style="font-size: medium;"><code>ArraylndexOutOfBoundsException</code></span></strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="4__arrays.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_inicializacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

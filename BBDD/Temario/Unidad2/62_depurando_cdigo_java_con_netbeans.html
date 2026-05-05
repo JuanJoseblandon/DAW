@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2.- Depurando código Java con Netbeans. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-66"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul class="other-section">
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructuras_de_seleccin_o_condicionales.html" class="daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul class="other-section">
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li><a href="34_estructura_selectiva_mltiple_switch_i.html" class="daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul class="other-section">
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul class="other-section">
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li><a href="45_estructura_repetitiva_for_i.html" class="daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul class="other-section">
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="current-page-parent daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul>
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li id="active"><a href="62_depurando_cdigo_java_con_netbeans.html" class="active no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="61_depuracin_de_cdigo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_i_ejercicios_resueltos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">6.2.- Depurando código Java con Netbeans.</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id255">
+<div class="iDevice emphasis0">
+<div id="ta255_69" class="block iDevice_content">
+<p>A continuación tienes un breve resumen descriptivo de las opciones más habituales que se pueden llevar a cabo durante un proceso de depuración básico con Netbeans.</p>
+<p>Para depurar un archivo o un proyecto, puedes usar el menú de depuración o bien el menú contextual de cada pestaña de código Java. Imagina que tienes abierto el archivo "<code>Ejercicio1.java</code>", el menú general de depuración podría aparecer así (puede haber variaciones dependiendo de la versión de <span lang="en">Netbeans</span> que se utilice):</p>
+<figure class="exe-figure exe-image position-center" style="width: 347px;"><img src="Menu_debug.JPG" alt="Menú del depurador donde se pueden ver las diferentes opciones." title="Menú del depurador" style="vertical-align: baseline;" width="347" height="562" /><figcaption class="figcaption"><span class="title"><em>Menú del depurador</em></span></figcaption></figure>
+<p>Para comenzar a depurar podemos elegir una de estas dos opciones:</p>
+<ul>
+<li><em><strong>Debug Project</strong></em> o <em><strong>Depurar Proyecto</strong></em> iniciará la depuración del proyecto y se detendrá cuando encuentre un punto de ruptura. En todo proyecto hay un archivo <code>.java</code> principal, que será el que se depurará al seleccionar esta opción.</li>
+<li><em><strong>Debug File</strong></em> iniciará la depuración de un archivo <code>.java</code> concreto, concretamente el que estemos editando en ese momento, deteniéndose en cuanto encuentre un punto de ruptura. Esta será la opción que usaremos en nuestro caso.</li>
+</ul>
+<p>Para establecer un nuevo <strong>punto de ruptura</strong> (<strong><em></em></strong><span lang="en"><strong><em>breakpoint</em></strong></span>) lo más sencillo es hacer clic en sobre el número de línea, aunque también puedes usar la opción de menú <em><strong></strong></em><span lang="en"><em><strong>Toggle Line Breakpoint</strong></em></span> o su atajo de teclado equivalente:</p>
+<figure class="exe-figure exe-image position-center" style="width: 498px;"><img src="Punto_de_ruptura.JPG" alt="Imagen que ilustra como se crea un punto de ruptura haciendo clic en el número de línea." title="Punto de ruptura." width="498" height="249" /><figcaption class="figcaption"><span class="title"><em>Punto de ruptura.</em></span></figcaption></figure>
+<p>Una vez que se inicia la depuración y/o se alcanza un punto de ruptura, la opción de <strong>"Step Over (F8)"</strong> o <strong>"Continuar Ejecución (F8)"</strong> está disponible. Esta opción permitirá ir ejecutando el código sentencia a sentencia, sin entrar en ningún método que se pudiera invocar<code></code>. La opción <strong>"Step Into (F7)"</strong> o <strong>"Paso a paso (F7)"</strong> sí que permitiría ejecutar paso a paso cualquier método que se invoque, entrando dentro del código del método en cuestión (eso lo veremos más adelante, cuando aprendamos a implementar clases y métodos). Pero para el propósito de la tarea de esta unidad, de momento, es suficiente con <strong>"Step Over (F8)"</strong>:</p>
+<figure class="exe-figure exe-image position-center" style="width: 350px;"><img src="Menu_debug_en_modo_depuracion.JPG" alt="Imagen que muestra el menú del depurador, cuando el depurador está activo y nos hemos detenido en un punto de ruptura." title="Menú del depurador, cuando el depurador está activo y estamos detenidos en un punto de ruptura." width="350" height="563" /><figcaption class="figcaption"><span class="title"><em>Menú del depurador cuando estamos detenidos en un punto de ruptura.</em></span></figcaption></figure>
+<p> Por último, para observar el valor de las variables en un momento concreto de la ejecución tenemos la ventana <strong>"<em>Variables</em>" </strong>de NetBeans. Si esta ventana no te aparece puedes mostrarla accediendo al menú "<em><strong><span lang="en">Window</span> &gt; <span lang="en">Debugging</span> &gt; </strong></em><span lang="en"><em><strong>Variables</strong></em></span>":</p>
+<figure class="exe-figure exe-image position-center" style="width: 475px;"><img src="Mostrar_variables_depuracion.JPG" alt="Imagen que muestra como hacer que aparezca la ventana de &quot;Variables&quot; cuando se está ejecutando el depurador." title="Mostrar la ventana &quot;Variables&quot;." width="475" height="499" /><figcaption class="figcaption"><span class="title"><em>Mostrar la ventana de "Variables".</em></span></figcaption></figure>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id163">
+<div class="iDevice emphasis_debesconocerfpd" >
+<div class="iDevice_header" style="background-image:url(icon_debesconocerfpd.png)"><h2 class="iDeviceTitle">Debes conocer</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta163_44" class="block iDevice_content">
+<p>Para completar tus conocimientos sobre la depuración de programas, te proponemos los siguientes enlaces en los que podrás encontrar cómo se llevan a cabo las tareas básicas de depuración a través del <acronym title="Integrated Development Environment." lang="en">IDE </acronym><span lang="en">NetBeans</span>.</p>
+<p class="enlace_centrado"><a title="Acceder a información sobre depuración básica en NetBeans." class="html" href="http://losremediosinformaticos.blogspot.com/2009/11/depuracion-de-programas-con-netbeans.html">Depuración básica en <span lang="en">NetBeans</span>.</a></p>
+<p class="enlace_centrado"><a title="Acceder a información sobre uso básico del depurador en NetBeans." class="html" href="http://javiergarciaescobedo.es/programacion-en-java/28-programacion-estructurada/114-depuracion-de-programas-con-netbeans">Uso básico del depurador en <span lang="en">NetBeans</span>.</a></p>
+<p align="justify"></p>
+<p align="justify">A continuación te mostramos un vídeo introductorio a la depuración de programas.</p>
+<p class="titulo" align="center"><span lang="en">Depurando con</span> <span lang="en">NetBeans</span>.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><iframe width="320" height="240" style="border: 0;" src="//www.youtube.com/embed/9HH47pqP6rQ"></iframe></div>
+<div class="credenciales elemento_centrado"><a title="Acceder al resumen textual alternativo para &quot;Depurando con NetBeans.&quot;" href="Resumen_textual_alternativo_para_el_video_Depurando_con_NetBeans..html">Resumen textual alternativo para Debugging avanzado en NetBeans.</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id72">
+<div class="iDevice emphasis_parasabermasfpd" >
+<div class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta72_47" class="block iDevice_content">
+<p align="justify">Si deseas conocer algo más sobre depuración de programas, pero a un nivel algo más avanzado, puedes ver el siguiente vídeo.</p>
+<p class="titulo" align="center"><span lang="en">Debugging</span> avanzado en <span lang="en">NetBeans</span>.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><iframe width="427" height="240" src="//www.youtube.com/embed/qAo9-bWDzj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="credenciales elemento_centrado"><a title="Acceder al resumen textual alternativo para &quot;Debugging avanzado en NetBeans.&quot;" href="PROG03_Descripcion_video_Debugging_NetBeans.html">Resumen textual alternativo para Debugging avanzado en NetBeans.</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="61_depuracin_de_cdigo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_i_ejercicios_resueltos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

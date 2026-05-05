@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.5.- Estructura repetitiva for (I). </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<div id="emptyHeader"></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Uso de estructuras de control.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_estructura_secuencial_sentencias_y_bloques.html" class="daddy">2.- Estructura secuencial: sentencias y bloques.</a>
+   <ul class="other-section">
+      <li><a href="21_mbito_o_alcance_de_una_variable.html" class="no-ch">2.1.- Ámbito o alcance de una variable.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_estructuras_de_seleccin_o_condicionales.html" class="daddy">3.- Estructuras de selección o condicionales.</a>
+   <ul class="other-section">
+      <li><a href="31_estructura_condicional_simple_if.html" class="no-ch">3.1.- Estructura condicional simple: if.</a></li>
+      <li><a href="32_estructura_condicional_compuesta_ifelse.html" class="no-ch">3.2.- Estructura condicional compuesta: if-else.</a></li>
+      <li><a href="33_estructuras_condicionales_anidadas.html" class="no-ch">3.3.- Estructuras condicionales anidadas.</a></li>
+      <li><a href="34_estructura_selectiva_mltiple_switch_i.html" class="daddy">3.4.- Estructura selectiva múltiple: switch (I).</a>
+      <ul class="other-section">
+         <li><a href="341_estructura_selectiva_mltiple_switch_ii.html" class="no-ch">3.4.1.- Estructura selectiva múltiple: switch (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_estructuras_repetitivas_iterativas_o_cclicas.html" class="current-page-parent daddy">4.- Estructuras repetitivas, iterativas o cíclicas.</a>
+   <ul>
+      <li><a href="41_estructura_repetitiva_while_i.html" class="daddy">4.1.- Estructura repetitiva while (I).</a>
+      <ul class="other-section">
+         <li><a href="411_estructura_repetitiva_while_ii.html" class="no-ch">4.1.1.- Estructura repetitiva while (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="42_estructura_repetitiva_dowhile_i.html" class="daddy">4.2.- Estructura repetitiva do-while (I).</a>
+      <ul class="other-section">
+         <li><a href="421_estructura_repetitiva_dowhile_ii.html" class="no-ch">4.2.1.- Estructura repetitiva do-while (II)</a></li>
+      </ul>
+      </li>
+      <li><a href="43_concepto_de_contador.html" class="no-ch">4.3.- Concepto de contador.</a></li>
+      <li><a href="44_concepto_de_acumulador.html" class="no-ch">4.4.- Concepto de acumulador.</a></li>
+      <li id="active"><a href="45_estructura_repetitiva_for_i.html" class="active daddy">4.5.- Estructura repetitiva for (I).</a>
+      <ul>
+         <li><a href="451_estructura_repetitiva_for_ii.html" class="no-ch">4.5.1.- Estructura repetitiva for (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_estructuras_de_salto_incondicional.html" class="daddy">5.- Estructuras de salto incondicional.</a>
+   <ul class="other-section">
+      <li><a href="51_sentencias_break_y_continue.html" class="no-ch">5.1.- Sentencias break y continue.</a></li>
+      <li><a href="52_etiquetas.html" class="no-ch">5.2.- Etiquetas.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_errores_pruebas_y_depuracin_de_programas.html" class="daddy">6.- Errores, pruebas y depuración de programas.</a>
+   <ul class="other-section">
+      <li><a href="61_depuracin_de_cdigo.html" class="no-ch">6.1.- Depuración de código.</a></li>
+      <li><a href="62_depurando_cdigo_java_con_netbeans.html" class="no-ch">6.2.- Depurando código Java con Netbeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_ejercicios_resueltos.html" class="no-ch">Anexo I.- Ejercicios resueltos</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="44_concepto_de_acumulador.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="451_estructura_repetitiva_for_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">4.5.- Estructura repetitiva for (I).</h1></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id23">
+<div class="iDevice emphasis0">
+<div id="ta23_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a title="Imagen ampliada para el diagrama de flujo de sentencia for." href="PROG03_CONT_R05_diagramafor.jpg"><img alt="Bajo un rectángulo azul en el que está inscrita la palabra “Inicialización”, aparece un rombo verde en el que se lee “Evaluación”. A su derecha la palabra “falso” de la que parte una flecha hacia abajo que representa el final del bucle. Del rombo parte una línea en la que aparecen tres rectángulos con las palabras “verdadero”, “secuencia” e “iteración”. De este último rectángulo parte una flecha que sube a apuntar de nuevo al rombo verde." class="imagen_ampliable" src="PROG03_CONT_R05_diagramafor_miniatura.jpg" style="width: 160px; height: 180px;" title="Diagrama de flujo de sentencia for." width="160" height="180" /></a></div>
+</div>
+<p align="justify">Hemos indicado anteriormente que el bucle <code>for</code> es un bucle <strong>controlado por contador</strong>. ¿Recuerdas lo que significaba un contador?</p>
+<p align="justify">Este tipo de bucle tiene las siguientes características:</p>
+<ul class="lista_verificacion">
+<li>Se ejecuta <strong>un número determinado de veces conocido</strong> a priori.</li>
+<li>Utiliza un <strong>contador</strong> (una variable usada como contador o índice) que controla las iteraciones que se van haciendo  del bucle.</li>
+</ul>
+<p align="justify">En general, existen <strong>tres operaciones</strong> que se llevan a cabo  sobre la variable contador que controla la ejecución en este tipo de bucles:</p>
+<ul class="lista_verificacion">
+<li>Se <strong>inicializa</strong> la variable contador.</li>
+<li>Se <strong>evalúa</strong> el valor de la variable contador, por medio de una comparación de su valor con el número de iteraciones especificado para saber si hay que continuar con otra nueva iteración.</li>
+<li>Se <strong> actualiza</strong> con incrementos o decrementos el valor del contador, en cada una de las iteraciones.</li>
+</ul>
+<p>En realidad esas tres operaciones también las has realizado cuando has usado contadores en bucles de tipo <code>while</code> o <code>do-while</code>. La diferencia en este tipo de bucles es que sistematizamos su utilización.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id92">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta92_66" class="block iDevice_content">
+<p><span class="titulo">Aspectos importantes:</span></p>
+<ul class="lista_verificacion">
+<li>La<strong> inicialización del contador</strong> debe realizase correctamente para hacer posible que el bucle se ejecute al menos la primera repetición de su código interno, aunque puede haber casos en los que no queramos ejecutarlo ninguna vez si la condición es de partida falsa.</li>
+<li>La <strong>condición de terminación</strong> del bucle es importante establecerla cuidadosamente, ya que si no, podemos caer en la creación de un bucle infinito, cuestión que se debe evitar por todos los medios.</li>
+<li>Es necesario estudiar el <strong>número de veces que se repite el bucle</strong>, pues debe ajustarse al número de veces estipulado.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ClozefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id94">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<div class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta94_37" class="block instructions iDevice_content">
+<p><strong>Rellena los huecos con la palabra adecuada.</strong></p>
+</div>
+<div class="activity" id="activity-94_38"><form name="cloze-form-94_38" action="#" class="activity-form cloze-activity-form"><div id="cloze94_38"><input type="hidden" name="clozeFlag94_38.strictMarking" id="clozeFlag94_38.strictMarking" value="false"/>
+<input type="hidden" name="clozeFlag94_38.checkCaps" id="clozeFlag94_38.checkCaps" value="false"/>
+<input type="hidden" name="clozeFlag94_38.instantMarking" id="clozeFlag94_38.instantMarking" value="false"/>
+<input type="hidden" name="clozeVar94_38.feedbackId" id="clozeVar94_38.feedbackId" value="ta94_39"/>
+<p>En la estructura repetitiva tipo for lo primero que debe hacerse es una correcta <label for="clozeBlank94_38.0" class="sr-av">Rellenar huecos (1):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank94_38.0" style="width:14ch" /><span style="display:none" id="clozeAnswer94_38.0">JXUwMDMxJXUwMDA3JXUwMDA3JXUwMDBhJXUwMDBhJXUwMDA4JXUwMDBkJXUwMDA1JXUwMDEzJXUw
+MDFiJXUwMDAyJXUwMDBhJXUwMDlhJXUwMDlk
+</span> de la variable contador que controla la ejecución del bucle, luego se <label for="clozeBlank94_38.1" class="sr-av">Rellenar huecos (2):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank94_38.1" style="width:6ch" /><span style="display:none" id="clozeAnswer94_38.1">JXUwMDNkJXUwMDEzJXUwMDE3JXUwMDBkJXUwMDk2JXUwMDli
+</span> el valor de la variable para comprobar si se ha alcanzado el número de <label for="clozeBlank94_38.2" class="sr-av">Rellenar huecos (3):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank94_38.2" style="width:11ch" /><span style="display:none" id="clozeAnswer94_38.2">JXUwMDMxJXUwMDFkJXUwMDExJXUwMDE3JXUwMDEzJXUwMDAyJXUwMDBhJXUwMDA2JXUwMDAxJXUw
+MDBiJXUwMDE2
+</span> que deben realizarse, o si por el contrario debe realizar una nueva <label for="clozeBlank94_38.3" class="sr-av">Rellenar huecos (4):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank94_38.3" style="width:9ch" /><span style="display:none" id="clozeAnswer94_38.3">JXUwMDMxJXUwMDFkJXUwMDExJXUwMDE3JXUwMDEzJXUwMDAyJXUwMDBhJXUwMDlhJXUwMDlk
+</span> . Finalmente, como último paso de cada iteración, se <label for="clozeBlank94_38.4" class="sr-av">Rellenar huecos (5):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank94_38.4" style="width:9ch" /><span style="display:none" id="clozeAnswer94_38.4">JXUwMDM5JXUwMDAyJXUwMDE3JXUwMDAxJXUwMDE0JXUwMDBkJXUwMDA1JXUwMDEzJXUwMDFi
+</span> el valor de la variable <label for="clozeBlank94_38.5" class="sr-av">Rellenar huecos (6):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank94_38.5" style="width:8ch" /><span style="display:none" id="clozeAnswer94_38.5">JXUwMDNiJXUwMDBjJXUwMDAxJXUwMDFhJXUwMDE1JXUwMDA1JXUwMDBiJXUwMDFk
+</span>  mediante sentencias de <label for="clozeBlank94_38.6" class="sr-av">Rellenar huecos (7):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank94_38.6" style="width:10ch" /><span style="display:none" id="clozeAnswer94_38.6">JXUwMDMxJXUwMDA3JXUwMDBkJXUwMDExJXUwMDE3JXUwMDA4JXUwMDA4JXUwMDBiJXUwMDFhJXUw
+MDFi
+</span> o <label for="clozeBlank94_38.7" class="sr-av">Rellenar huecos (8):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank94_38.7" style="width:10ch" /><span style="display:none" id="clozeAnswer94_38.7">JXUwMDNjJXUwMDAxJXUwMDA2JXUwMDExJXUwMDE3JXUwMDA4JXUwMDA4JXUwMDBiJXUwMDFhJXUw
+MDFi
+</span> . Es importante que el contador se actualice modificando su valor para que en algún momento se alcance la <label for="clozeBlank94_38.8" class="sr-av">Rellenar huecos (9):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank94_38.8" style="width:9ch" /><span style="display:none" id="clozeAnswer94_38.8">JXUwMDNiJXUwMDBjJXUwMDAxJXUwMDBhJXUwMDBkJXUwMDBhJXUwMDBhJXUwMDlhJXUwMDlk
+</span> de <label for="clozeBlank94_38.9" class="sr-av">Rellenar huecos (10):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank94_38.9" style="width:6ch" /><span style="display:none" id="clozeAnswer94_38.9">JXUwMDJiJXUwMDEyJXUwMDBkJXUwMDA1JXUwMDBkJXUwMDA1
+</span> del bucle, ya que de lo contrario podríamos caer en un <label for="clozeBlank94_38.10" class="sr-av">Rellenar huecos (11):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank94_38.10" style="width:5ch" /><span style="display:none" id="clozeAnswer94_38.10">JXUwMDNhJXUwMDE3JXUwMDE2JXUwMDBmJXUwMDA5
+</span> <label for="clozeBlank94_38.11" class="sr-av">Rellenar huecos (12):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank94_38.11" style="width:8ch" /><span style="display:none" id="clozeAnswer94_38.11">JXUwMDMxJXUwMDA3JXUwMDA4JXUwMDBmJXUwMDA3JXUwMDA3JXUwMDFkJXUwMDFi
+</span> ,que debe evitarse a toda costa.</p><div class="block iDevice_buttons"><p><input class="button" type="submit" name="submit94_38" value="Enviar"  id="submit94_38" />
+<input type="button" name="restart94_38" value="Reiniciar" style="display:none" id="restart94_38" onclick="$exe.cloze.restart('94_38')" />
+ <input type="button" name="94_38showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton94_38" onclick="$exe.cloze.fillInputs('94_38')" />
+<span class="js-hidden js-warning">Habilitar JavaScript</span></p></div><div id="clozeScore94_38"></div></div></form></div><div id="ta94_39" class="feedback js-feedback iDevice_content" style="display:none">
+<p>Si has tenido problemas para completar todos los huecos, repasa de nuevo el apartado para ver cu&aacute;les eran las tres operaciones que generalmente estos bucles realizan sobre la variable contador que controla su ejecuci&oacute;n, as&iacute; como los aspectos importantes a tener en cuenta.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id89">
+<div class="iDevice emphasis0">
+<div id="ta89_73" class="block iDevice_content">
+<p align="justify">En la siguiente tabla, podemos ver la especificación para el lenguaje <span lang="en">Java</span>  de la estructura <code>for</code>:</p>
+<table class="tabla" summary="En esta tabla se muestra la sintaxis de la estructura repetitiva for, tanto con una única sentencia, como con un bloque de ellas. A la derecha, se detalla el significado de cada una de las partes de la cabecera de este tipo de bucles."><caption>Estructura repetitiva <strong><span style="font-size: medium;"><code>for</code></span></strong>.</caption>
+<tbody>
+<tr><th scope="col">
+<p><strong>Sintaxis</strong></p>
+</th><th scope="col">Funcionamiento</th></tr>
+<tr>
+<td>
+<p>Estructura <code>for </code><code></code> con una única sentencia (no necesita las llaves):</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>for (inicialización ; condición ; incremento)
+   sentencia; </code></pre>
+</div>
+</div>
+</td>
+<td rowspan="2">
+<ul class="lista_verificacion">
+<li>Donde <code>inicialización</code> es una expresión en la que se inicializa una variable de control, que será la encargada de controlar el final del bucle.</li>
+<li>Donde <code>condición</code> es una expresión que evaluará la variable de control. Mientras la condición sea verdadera (condición de "continuidad"), el cuerpo del bucle estará repitiéndose. Cuando la condición deje de cumplirse, terminará la ejecución del bucle.</li>
+<li>Donde <code>incremento</code> indica la manera en la que la variable de control va cambiando en cada iteración del bucle. Podrá ser en realidad, mediante incremento o decremento, y no solo de uno en uno.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong></strong>Estructura <code>for</code> con un bloque de sentencias:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>for (inicialización ; condición ; incremento){
+   sentencia_1;
+   sentencia_2;
+   ...
+   sentencia_N;
+}
+</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id233">
+<div class="iDevice emphasis0">
+<div id="ta233_154" class="block iDevice_content">
+<p>En este caso, la sintaxis es algo diferente a la que hemos visto en las estructuras de tipo <code class="  language-markup">while</code> y <code class="  language-markup">do-while</code>. Veamos el mismo ejemplo del contador de 1 a 5 utilizando un bucle <code class="  language-markup">for</code>.</p>
+<p>Aquí tanto la inicialización (<code>numero=1</code>) como la condición (<code>numero&lt;=5</code>) y el incremento (<code>numero++</code>) los tenemos en la propia cabecera de la estructura <code class="  language-markup">for</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>for ( numero=1 ; numero&lt;=5 ; numero++ )
+</code></pre>
+</div>
+</div>
+<p>Y en el cuerpo tendríamos únicamente la parte de mostrar por pantalla el valor de la variable contador (<code>numero</code>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>{
+    System.out.println (numero);
+} </code></pre>
+</div>
+</div>
+<p>Si lo unimos todo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>int numero; 
+for (numero=1; numero&lt;=5; numero++) {
+    System.out.println (numero);
+}</code></pre>
+</div>
+</div>
+<p>Si así lo consideras, podrías incluso declarar el contador dentro de la propia estructura <code>for</code>. Ahora bien, esa variable solo existirá dentro del bloque <code>for</code> y no se podrá acceder a ella desde fuera. Por ejemplo:</p>
+<div class="highlighted-code language-java line-numbers">
+<div>
+<pre><code>// Aquí aún no existe la variable numero
+for (int numero=1; numero&lt;=5; numero++) { // Aquí se declara la variable número
+    System.out.println (numero);
+} 
+// Aquí deja de existir la variable numero</code></pre>
+</div>
+</div>
+<p>De hecho, si intentas utilizar la variable <code>numero</code> en la línea 1 o la línea 5, se produciría un error de compilación y no se podría ejecutar el programa, pues esa variable no existe fuera del contexto del ese bucle.</p>
+<p>Por último, recuerda que si el bloque es de una única línea, puedes omitir las llaves:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Aquí aún no existe la variable numero
+for (int numero=1; numero&lt;=5; numero++) // Aquí se declara la variable numero
+    System.out.println (numero); 
+// Aquí deja de existir la variable numero
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id234">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<div class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h2 class="iDeviceTitle">Ejercicio Resuelto</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta234_148" class="block story iDevice_content">
+
+</div>
+<div id="taquesQuestion0b234" class="block iDevice_content">
+<p>Escribe un programa que solicite dos números por teclado (inicio y fin) y muestre por pantalla todos los números que van desde inicio hasta fin, todos en una misma línea. Este ejercicio ya lo hemos planteado usando bucles <code>while</code> y <code>do-while</code>. En este caso debes utilizar un bucle <code>for</code>.</p>
+<p>Aquí tienes un ejemplo de una posible ejecución del programa:</p>
+<div class="highlighted-code code-style-2 language-markup">
+<div>
+<pre><code>Introduzca el inicio: 4
+Introduzca el fin: 11
+
+Secuencia de números desde 4 hasta 11
+4 5 6 7 8 9 10 11 </code></pre>
+</div>
+</div>
+</div>
+<form name="feedback-form-quesFeedback0b234" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b234text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b234" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<div id="feedback-quesFeedback0b234" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<p>Aquí tienes una muestra de cómo podría quedar tu programa:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Declaración de variables
+Scanner teclado = new Scanner(System.in);  
+int inicio, fin, numero;
+
+// Entrada de datos
+System.out.print ("Introduzca el inicio: ");
+inicio = teclado.nextInt();
+
+System.out.print("Introduzca el fin: ");
+fin = teclado.nextInt();
+
+// Procesamiento y salida de resultados
+System.out.println ("\nSecuencia de números desde " + inicio + " hasta " + fin);
+for (numero=inicio; numero &lt;= fin; numero++) {
+    System.out.print (numero + " ");
+}
+System.out.println ();</code></pre>
+</div>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="44_concepto_de_acumulador.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="451_estructura_repetitiva_for_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</div>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

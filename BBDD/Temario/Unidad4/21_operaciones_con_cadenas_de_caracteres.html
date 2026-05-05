@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.- Operaciones con cadenas de caracteres. | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-70"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li class="current-page-parent"><a href="2__cadenas_de_caracteres.html" class="current-page-parent daddy">2.-  Cadenas de caracteres.</a>
+   <ul>
+      <li id="active"><a href="21_operaciones_con_cadenas_de_caracteres.html" class="active daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul>
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="2__cadenas_de_caracteres.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1.- Operaciones con cadenas de caracteres.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id304">
+<div class="iDevice emphasis0">
+<div id="ta304_73" class="block iDevice_content">
+<div class="elemento_derecha"> </div>
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a href="PROG05_CONT_R006_salida_estandar.png" target="_blank"><img src="PROG05_CONT_R006_salida_estandar_miniatura.PNG" alt="Ejemplo de salida estándar en modo texto." title="Salida estándar en modo texto." class="imagen_ampliable" width="160" height="172" /></a></div>
+<div class="elemento_centrado credenciales"><a class="cc0" title="Dominio público" href="http://creativecommons.org/publicdomain/zero/1.0/deed.es" target="_blank"><span class="transparente">Dominio público</span></a> <a title="Chealer" href="http://commons.wikimedia.org/wiki/File:Bash_demo.png" target="_blank">Chealer</a></div>
+</div>
+<p>¿Qué operaciones puedes hacer con una cadena? Muchas más de las que te imaginas. Empezaremos con la operación más sencilla: la <strong>concatenación</strong>. <strong>La concatenación es la unión de dos cadenas, para formar una sola</strong>. En Java es muy fácil, pues solamente tienes que utilizar el <strong>operador de concatenación</strong> (signo de suma):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String cad1= "¡Bien";
+String cad2= "venido!";
+String cadResultado= cad1 + cad2;
+
+System.out.println(cadResultado);
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;" align="left">También podrías haberlo hecho directamente con los literales, sin utilizar variables intermedias:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String cadResultado = "¡Bien" + "venido!";
+System.out.println(cadResultado);
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;" align="left">Incluso podríamos haberlo hecho sin utilizar una variable para apuntar al resultado:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println("¡Bien" + "venido!");</code></pre>
+</div>
+</div>
+<p style="text-align: justify;" align="left">En los ejemplos anteriores se está creando una nueva cadena, resultado de unir dos cadenas: una cadena con el texto "<code>¡Bien</code>", y otra cadena con el texto "<code>venido!</code>".</p>
+<p style="text-align: justify;" align="left">En estos ejemplos se puede observar una vez más cómo la clase <code>String</code> es tratada de una manera "especial" en Java. El lenguaje ha permitido "sobrecargar" el <strong>operador <code>+</code></strong>, que es un operador aritmético de tipos primitivos numéricos, para que pueda ser utilizado también por un tipo externo al lenguaje como es la clase <code>String</code>. Nuevamente, esto se ha hecho para simplificar y facilitar a los programadores la operación de concatenación, que es una de las más usadas en la mayoría de los programas.</p>
+<p style="text-align: justify;" align="left">Además de disponer de este operador de concatenación, la clase <code>String</code> proporciona también un método para poder concatenar dos cadenas: el <strong>método <code>concat</code></strong>. A cualquier objeto de tipo <code>String</code> se le puede aplicar el método <strong><code>concat</code></strong>, que necesitará como parámetro un segundo objeto de tipo <code>String</code>. El método devolverá una tercera cadena, que también será instancia de la clase <code>String</code> y que consistirá en la cadena resultado de unir o concatenar esas dos cadenas.</p>
+<p align="left">Un ejemplo de uso podría ser el siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String cad1= "¡Bien";
+String cad2= "venido!";
+String cadResultado= cad1.concat(cad2);
+
+System.out.print(cadResultado);</code></pre>
+</div>
+</div>
+<p style="text-align: justify;" align="left">Aquí, nuevamente, podríamos haber optado por utilizar también literales directamente en lugar de variables intermedias:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String cad="¡Bien".concat("venido!");
+System.out.printf(cad);</code></pre>
+</div>
+</div>
+<p style="text-align: justify;" align="left">En este ejemplo participan tres instancias de la clase <code>String</code>. Una instancia literal que contiene el texto "<code>¡Bien</code>" (un literal de tipo <code>String</code> al que no apuntará ninguna variable) otra instancia que contiene el texto "<code>venido!</code>" (otro literal) y otra que contiene el texto "<code>¡Bienvenido!</code>". La tercera cadena se crea nueva al realizar la operación de concatenación, sin que las otras dos hayan desaparecido o se hayan modificado (recuerda que los <code>String</code> son inmutables). Ahora bien, como esas dos cadenas no están siendo referenciadas por ninguna variable de tipo <code>String</code>, se borrarán de la memoria cuando el <a href="#t7930320d-ffcb-b37f-3cae-0d2f0f3d5bf1" id="link7930320d-ffcb-b37f-3cae-0d2f0f3d5bf1" class="exe-tooltip definition-tt titled-tt">recolector de basura</a> detecte que ya no se usan.</p>
+<p style="text-align: justify;" align="left">Fíjate, además, que se puede invocar directamente un método de la clase <code>String</code>, posponiendo el método al literal de cadena. Esto es una señal de que al escribir un literal de cadena, se produce una instancia del <a href="#tf2ed0174-fa7f-0c15-3d5a-316fa56feb5a" id="linkf2ed0174-fa7f-0c15-3d5a-316fa56feb5a" class="exe-tooltip definition-tt titled-tt">objeto inmutable</a> <code>String</code>.</p>
+<p style="text-align: justify;" align="left">Pero no solo podemos concatenar una cadena a otra cadena. Gracias al método <code>toString()</code>, que incorpora toda clase Java, podemos concatenar cadenas con literales numéricos e instancias de otros objetos sin problemas.</p>
+<div id="t7930320d-ffcb-b37f-3cae-0d2f0f3d5bf1" class="exe-tooltip-text">
+<p>Es una pieza clave de Java. Se trata de un mecanismo para ir eliminando de memoria aquellas instancias de clases u objetos que ya no están siendo utilizados.</p>
+</div>
+<div id="tf2ed0174-fa7f-0c15-3d5a-316fa56feb5a" class="exe-tooltip-text">
+<p>Los objetos inmutables son aquellos que no se pueden modificar una vez creados. Es el caso de las clases String, LocalDate y LocalTime de Java, así como las clases envoltorio Integer, Float, Double, etc.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id305">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta305_70" class="block iDevice_content">
+<p style="text-align: justify;" align="left">El método <code>toString()</code> es un método disponible en todas las clases de Java. Su objetivo es simple: permitir la conversión de una instancia de clase en cadena, de forma que se pueda obtener una representación textual del contenido del objeto. Pero esa conversión no siempre es tan sencilla. Hay clases fácilmente convertibles a texto, como por ejemplo los objetos de la clase <code>Integer</code>, que contienen simplemente un número entero, o la clase <code>LocalDate</code>, que contiene un mes, un día y un año. Sin embargo, hay otras en las que el objeto no tiene una conversión trivial a texto, y el método <code>toString()</code> tendrá que ser implementado según algún criterio para que genere algún tipo de representación apropiada del contenido del objeto.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id306">
+<div class="iDevice emphasis0">
+<div id="ta306_73" class="block iDevice_content">
+<p>Dado que cualquier valor literal de tipo numérico en Java (<code>int</code>, <code>double</code>, <code>long</code>, <abbr title="etcétera">etc.</abbr>) dispone de una proyección a un objeto instancia de una clase de tipo envoltorio (<code>Integer</code>, <code>Double</code>, <code>Long</code>, <abbr title="etcétera">etc.</abbr>), si intentamos concatenar una cadena con un literal numérico (o incluso una variable), sucederá lo siguiente:</p>
+<ol>
+<li>el compilador automáticamente "envolverá" ese valor numérico en un objeto de su clase envoltorio correspondiente;</li>
+<li>se le aplicará el método <code>toString</code>.</li>
+</ol>
+<p>Por ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// La variable numero, de tipo int, contiene el entero 123.
+// Al tratarse de un tipo primitivo y no referencia, sí "contiene" el número y no "apunta" a una zona de memoria que contiene el número 
+int numero = 123; 
+// La variable cadena contendrá el texto "Número: 123"
+// llevándose a cabo una conversión a texto del contenido la variable número
+String cadena = "Número: " + numero; // automáticamente se "envuelve" numero en un objeto Integer y se le aplica el método toString
+// Se mostrará por pantalla el texto "Número: 123"
+System.out.println(cadena); </code></pre>
+</div>
+</div>
+<p>De esta manera hemos evitado el uso explícito de tipos "envoltorio" y la llamada al método <code>toString</code>. En conclusión, cuando Java observa que vamos a concatenar una cadena con un número, se encarga automáticamente de llevar a cabo esas dos operaciones ("envolver" el valor en un objeto y aplicarle el método toString). Es decir, nos evita tener que escribir lo siguiente:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String cadena = "Número: " + Integer.valueOf (numero).toString();</code></pre>
+</div>
+</div>
+<p>Y basta con que hayamos hecho:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String cadena = "Número: " + numero;</code></pre>
+</div>
+</div>
+<p>Respecto al orden de evaluación de <strong>varios operadores '+' en secuencia</strong>, debes tener en cuenta que la evaluación de operadores del mismo tipo (en este caso el operador '+') se lleva siempre a cabo <strong>de izquierda a derecha</strong>. Esto significa que si el primer operador de tipo '+' que aparece en una expresión es aritmético (entre dos valores numéricos), se llevará a cabo una <strong>suma de números</strong>, mientras que si alguno de ellos es de tipo cadena, entonces sí se realizará una <strong>concatenación de cadenas</strong>. Fíjate en el siguiente ejemplo:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println (2 + 5 + " es siete")</code></pre>
+</div>
+</div>
+<p>¿Qué piensas que se mostrará por pantalla? En este caso, sucederá lo siguiente:</p>
+<ol>
+<li>el primer operador que se ejecuta, en orden de izquierda a derecha, es el primer '+', que es un <strong>operador aritmético (suma)</strong>, dando lugar al entero <code>7</code>;</li>
+<li>a continuación, se intentará llevar a cabo el segundo '+', donde al ser uno de sus operandos de tipo <code>String</code> (la cadena <code>" es siete"</code>), obligará a Java a que lleve a cabo una conversión implícita o automática del entero <code>7</code> a la cadena <code>"7"</code> para que la operación sea posible. Eso hará que el segundo operador '+' sea "<strong>operador de concatenación de cadenas</strong>" (y no suma, como en el primer caso), generando la cadena <code>"7 es siete"</code>;</li>
+<li>por último, esa cadena será mostrada por pantalla.</li>
+</ol>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id307">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-307_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion307_60" class="block question iDevice_content">
+<p><strong>¿Qué se mostrará como resultado de ejecutar el siguiente código?</strong></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>System.out.println(4+1+"-"+4+1);</code></pre>
+</div>
+</div>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i307_63" class="sr-av"><a href="#answer-307_63">Opción 1</a></label><input type="radio" name="option307_60" id="i307_63" class="exe-radio-option exe-radio-option-0-3-307_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-307_63"><div id="taans307_63" class="block iDevice_content">
+<p>Mostrar&aacute; la cadena "<code>5-41</code>".</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i307_86" class="sr-av"><a href="#answer-307_86">Opción 2</a></label><input type="radio" name="option307_60" id="i307_86" class="exe-radio-option exe-radio-option-1-3-307_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-307_86"><div id="taans307_86" class="block iDevice_content">
+<p>Mostrar&aacute; la cadena "<code>41-14</code>".</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i307_89" class="sr-av"><a href="#answer-307_89">Opción 3</a></label><input type="radio" name="option307_60" id="i307_89" class="exe-radio-option exe-radio-option-2-3-307_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-307_89"><div id="taans307_89" class="block iDevice_content">
+<p>Esa operaci&oacute;n dar&aacute; error.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b307_60" class="feedback js-hidden">
+<div id="taf307_63" class=" iDevice_content">
+<p>Efectivamente, primero se realiza la suma aritmética de <code>4</code> y <code>1</code>, generando un <code>5</code>. Después se concatena <code>5</code> a "<code>-</code>" creando una nueva cadena: "<code>5-</code>". A continuación se concatena la cadena "<code>5-</code>" al número <code>4</code>, dando lugar a la cadena "<code>5-4</code>" y, por último, se concatena la cadena "<code>5-4</code>" al número <code>1</code>, dando lugar a la cadena "<code>5-41</code>". Las operaciones se aplican <strong>de izquierda a derecha</strong>.</p>
+</div>
+</section>
+<section id="sa1b307_60" class="feedback js-hidden">
+<div id="taf307_86" class=" iDevice_content">
+<p>Incorrecto. El símbolo es el mismo, la suma, pero se aplican de forma diferente según el contexto, en unos casos significa sumar y en otros concatenación, siempre de izquierda a derecha.</p>
+</div>
+</section>
+<section id="sa2b307_60" class="feedback js-hidden">
+<div id="taf307_89" class=" iDevice_content">
+<p>Incorrecto. Los literales enteros se encapsularán en la clase <code>Integer</code> y se aplicará el método <code>toString</code> cuando sea necesario.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-307_63">Opción correcta</a><span> (<a href="#sa0b307_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-307_86">Incorrecto</a><span> (<a href="#sa1b307_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-307_89">Incorrecto</a><span> (<a href="#sa2b307_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="2__cadenas_de_caracteres.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

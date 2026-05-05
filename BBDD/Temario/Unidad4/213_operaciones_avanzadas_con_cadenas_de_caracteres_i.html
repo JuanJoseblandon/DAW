@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.3.- Operaciones avanzadas con cadenas de caracteres (I). | Cadenas de caracteres y arrays. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-73"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Cadenas de caracteres y arrays.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Cadenas de caracteres y arrays.</a></li>
+   <li><a href="1_introduccin_a_las_estructuras_de_almacenamiento.html" class="no-ch">1.- Introducción a las estructuras de almacenamiento.</a></li>
+   <li class="current-page-parent"><a href="2__cadenas_de_caracteres.html" class="current-page-parent daddy">2.-  Cadenas de caracteres.</a>
+   <ul>
+      <li class="current-page-parent"><a href="21_operaciones_con_cadenas_de_caracteres.html" class="current-page-parent daddy">2.1.- Operaciones con cadenas de caracteres.</a>
+      <ul>
+         <li><a href="211_operaciones_bsicas_con_cadenas_de_caracteres_i.html" class="no-ch">2.1.1.- Operaciones básicas con cadenas de caracteres (I).</a></li>
+         <li><a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.2.- Operaciones básicas con cadenas de caracteres (II).</a></li>
+         <li id="active"><a href="213_operaciones_avanzadas_con_cadenas_de_caracteres_i.html" class="active no-ch">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</a></li>
+         <li><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="no-ch">2.1.4.- Operaciones avanzadas con cadenas de caracteres (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_conversiones_entre_cadenas_y_tipos_numricos_i.html" class="daddy">2.2.- Conversiones entre cadenas y tipos numéricos (I).</a>
+      <ul class="other-section">
+         <li><a href="221_conversiones_entre_cadenas_y_tipos_numricos_ii.html" class="no-ch">2.2.1.- Conversiones entre cadenas y tipos numéricos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="23_la_clase_stringtokenizer_en_java.html" class="no-ch">2.3.- La clase StringTokenizer en Java.</a></li>
+      <li><a href="24_otros_tipos_de_cadenas_de_caracteres_en_java.html" class="no-ch">2.4.- Otros tipos de cadenas de caracteres en Java.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_expresiones_regulares.html" class="daddy">3.- Expresiones regulares.</a>
+   <ul class="other-section">
+      <li><a href="31_construccin_de_expresiones_regulares.html" class="daddy">3.1.- Construcción de expresiones regulares.</a>
+      <ul class="other-section">
+         <li><a href="311_rangos.html" class="no-ch">3.1.1.- Rangos.</a></li>
+         <li><a href="312_cuantificadores.html" class="no-ch">3.1.2.- Cuantificadores.</a></li>
+         <li><a href="313_agrupaciones_uso_de_parntesis.html" class="no-ch">3.1.3.- Agrupaciones: uso de paréntesis.</a></li>
+         <li><a href="314_alternativas_operador_barra__o_disyuntor.html" class="no-ch">3.1.4.- Alternativas: operador barra ('|') o disyuntor.</a></li>
+         <li><a href="315_metacaracteres_y_escapado.html" class="no-ch">3.1.5.- Metacaracteres y escapado.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_expresiones_regulares_en_java_i_clases_pattern_y_matcher.html" class="daddy">3.2.- Expresiones regulares en Java (I): clases Pattern y Matcher.</a>
+      <ul class="other-section">
+         <li><a href="321_el_mtodo_matches_de_la_clase_string.html" class="no-ch">3.2.1.- El método matches de la clase String.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_expresiones_regulares_en_java_ii_bsquedas.html" class="no-ch">3.3.- Expresiones regulares en Java (II): búsquedas.</a></li>
+      <li><a href="34_expresiones_regulares_en_java_iii_agrupaciones.html" class="no-ch">3.4.- Expresiones regulares en Java (III): agrupaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__arrays.html" class="daddy">4.-  Arrays.</a>
+   <ul class="other-section">
+      <li><a href="41_uso_de_arrays_unidimensionales.html" class="no-ch">4.1.- Uso de arrays unidimensionales.</a></li>
+      <li><a href="42_inicializacin.html" class="no-ch">4.2.- Inicialización.</a></li>
+      <li><a href="43_mostrar_el_contenido_de_un_array.html" class="no-ch">4.3.- Mostrar el contenido de un array.</a></li>
+      <li><a href="44_el_mtodo_split_de_la_clase_string.html" class="no-ch">4.4.- El método split de la clase String.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_arrays_multidimensionales.html" class="daddy">5.- Arrays multidimensionales.</a>
+   <ul class="other-section">
+      <li><a href="51_uso_de_arrays_multidimensionales.html" class="no-ch">5.1.- Uso de arrays multidimensionales.</a></li>
+      <li><a href="52_inicializacin_de_arrays_multidimensionales.html" class="no-ch">5.2.- Inicialización de arrays multidimensionales.</a></li>
+      <li><a href="53_mostrar_el_contenido_de_un_array_multidimensional.html" class="no-ch">5.3.- Mostrar el contenido de un array multidimensional.</a></li>
+      <li><a href="54_aplicaciones_de_los_arrays_multidimensionales.html" class="no-ch">5.4.- Aplicaciones de los arrays multidimensionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_formateado_de_cadenas_en_java.html" class="no-ch">Anexo I.- Formateado de cadenas en Java.</a></li>
+   <li><a href="anexo_ii_ejercicios_resueltos.html" class="no-ch">Anexo II.- Ejercicios resueltos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1.3.- Operaciones avanzadas con cadenas de caracteres (I).</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id298">
+<div class="iDevice emphasis0">
+<div id="ta298_73" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-pd" style="width: 192px;"><img src="PROG05_CONT_R013_operacion.jpg" alt="Varias personas operando en un quirófano." title="Las operaciones sobre cadenas son complicadas, pero no tanto." style="float: right;" width="192" height="148" /><figcaption class="figcaption"><a title="Mass Communication Specialist 3rd Class Matthew Jackson" href="http://commons.wikimedia.org/wiki/File:Orif_surgery.jpg" target="_blank">Matthew Jackson</a> <span class="license"><span class="sep">(</span><span class="license"><span class="custom-license"><span>Dominio público</span></span><span class="sep"></span></span><span class="sep">)</span></span></figcaption></figure>
+<p>Además de las operaciones vistas hasta ahora, ¿qué más posibilidades de trabajo ofrece Java sobre las cadenas? Vamos a continuar viendo algunos métodos algo más sofisticados como la <strong>búsqueda de una cadena dentro de otra</strong>, la <strong>eliminación de espacios en blanco</strong> o la <strong>sustitución</strong>. Nuevamente, en todos los ejemplos expuestos, las variables <code>cad1</code>, <code>cad2</code> y <code>cad3</code> son cadenas ya existentes, y la variable <code>num</code> es un número entero mayor o igual a cero.</p>
+<table class="tabla" summary="Tabla que expone alguno de los métodos más importantes de la clase String. En la primera columna aparece un ejemplo en el que se usa el método, en la segunda columna una descripción que explica para que sirve dicho método."><caption>Más métodos de la clase <code>String</code>.</caption>
+<thead>
+<tr><th scope="col">Método</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td scope="row"><span style="font-size: medium;"><strong><code>cad1.trim()</code></strong></span></td>
+<td>Genera una copia de la cadena eliminando los espacios en blanco anteriores y posteriores de la cadena. Si solo quieres eliminar los espacios anteriores o solo los posteriores, dispones también de los métodos <span style="font-size: medium;"><strong><code>stripLeading</code></strong></span> y <span style="font-size: medium;"><strong><code>stripTrailing</code></strong></span>.</td>
+</tr>
+<tr>
+<td scope="row"><span style="font-size: medium;"><strong><code>cad1.indexOf(cad2)<br /> cad1.indexOf(cad2,num)</code></strong></span></td>
+<td>Si la cadena o carácter pasado por argumento está contenida en la cadena invocante, retorna su posición, en caso contrario retornará -1. Opcionalmente se le puede indicar la posición a partir de la cual buscar, lo cual es útil para buscar varias apariciones de una cadena dentro de otra.</td>
+</tr>
+<tr>
+<td scope="row"><span style="font-size: medium;"><strong><code>cad1.contains(cad2)</code></strong></span></td>
+<td>Retornará <strong><span style="font-size: medium;"><code>true</code></span></strong> si la cadena pasada por argumento está contenida dentro de la cadena. En caso contrario retornará <strong><span style="font-size: medium;"><code>false</code></span></strong>.</td>
+</tr>
+<tr>
+<td scope="row"><span style="font-size: medium;"><strong><code>cad1.startsWith(cad2)</code></strong></span></td>
+<td>Retornará <strong><span style="font-size: medium;"><code>true</code></span></strong> si la cadena comienza por la cadena pasada como argumento. En caso contrario retornará <strong><span style="font-size: medium;"><code>false</code></span></strong>.</td>
+</tr>
+<tr>
+<td scope="row"><span style="font-size: medium;"><strong><code>cad1.endsWith(cad2)</code></strong></span></td>
+<td>Retornará <strong><span style="font-size: medium;"><code>true</code></span></strong> si la cadena acaba por la cadena pasada como argumento. En caso contrario retornará <strong><span style="font-size: medium;"><code>false</code></span></strong>.</td>
+</tr>
+<tr>
+<td scope="row"><span style="font-size: medium;"><strong><code>cad1.replace(cad2,cad3)</code></strong></span></td>
+<td>Generará una copia de la cadena <strong><span style="font-size: medium;"><code>cad1</code></span></strong>, en la que se sustituirán todas las apariciones de <strong><span style="font-size: medium;"><code>cad2</code></span></strong> por <strong><span style="font-size: medium;"><code>cad3</code></span></strong>. El reemplazo se hará de izquierda a derecha, por ejemplo: reemplazar "<strong><span style="font-size: medium;"><code>zzz</code></span></strong>" por "<strong><span style="font-size: medium;"><code>xx</code></span></strong>" en la cadena "<strong><span style="font-size: medium;"><code>zzzzz</code></span></strong>" generará "<strong><span style="font-size: medium;"><code>xxzz</code></span></strong>" y no "<strong><span style="font-size: medium;"><code>zzxx</code></span></strong>".</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id299">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-299_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion299_60" class="block question iDevice_content">
+<p><strong>&iquest;Cu&aacute;l ser&aacute; el resultado de ejecutar</strong> <code>cad1.replace("l","j").indexOf("ja")</code> <strong>si <code>cad1</code> contiene la cadena "<code>hojalata</code>"?</strong></p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i299_63" class="sr-av"><a href="#answer-299_63">Opción 1</a></label><input type="radio" name="option299_60" id="i299_63" class="exe-radio-option exe-radio-option-0-4-299_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-299_63"><div id="taans299_63" class="block iDevice_content">
+<p>2.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i299_101" class="sr-av"><a href="#answer-299_101">Opción 2</a></label><input type="radio" name="option299_60" id="i299_101" class="exe-radio-option exe-radio-option-1-4-299_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-299_101"><div id="taans299_101" class="block iDevice_content">
+<p>3.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i299_104" class="sr-av"><a href="#answer-299_104">Opción 3</a></label><input type="radio" name="option299_60" id="i299_104" class="exe-radio-option exe-radio-option-2-4-299_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-299_104"><div id="taans299_104" class="block iDevice_content">
+<p>4.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i299_107" class="sr-av"><a href="#answer-299_107">Opción 4</a></label><input type="radio" name="option299_60" id="i299_107" class="exe-radio-option exe-radio-option-3-4-299_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-299_107"><div id="taans299_107" class="block iDevice_content">
+<p>-1.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b299_60" class="feedback js-hidden">
+<div id="taf299_63" class=" iDevice_content">
+<p>Acertaste, esta no era f&aacute;cil. Enhorabuena.</p>
+</div>
+</section>
+<section id="sa1b299_60" class="feedback js-hidden">
+<div id="taf299_101" class=" iDevice_content">
+<p>Incorrecto. Una recomendaci&oacute;n, empieza a contar por cero.</p>
+</div>
+</section>
+<section id="sa2b299_60" class="feedback js-hidden">
+<div id="taf299_104" class=" iDevice_content">
+<p>No es correcto. Revisa el funcionamiento del m&eacute;todo <code>indexOf</code>.</p>
+</div>
+</section>
+<section id="sa3b299_60" class="feedback js-hidden">
+<div id="taf299_107" class=" iDevice_content">
+<p>Deber&iacute;as revisar los m&eacute;todos anteriores. No es correcto.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-299_63">Opción correcta</a><span> (<a href="#sa0b299_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-299_101">Incorrecto</a><span> (<a href="#sa1b299_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-299_104">Incorrecto</a><span> (<a href="#sa2b299_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-299_107">Incorrecto</a><span> (<a href="#sa3b299_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id300">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto: búsqueda de una subcadena</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta300_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b300" class="block iDevice_content">
+<p>Queremos saber si en un texto aparecen las letras '<em>m</em>', '<em>a</em>', '<em>l</em>' de manera consecutiva, ya sea porque se trate de la palabra "<em><strong>mal</strong></em>" o bien porque forme parte de otra palabra como "<em><strong>mal</strong>dad</em>", "<em>ra</em><strong><em>mal</em></strong>", "<em>for<strong>mal</strong>izar</em>", <abbr title="etcétera">etc</abbr>. ¿cómo lo harías? ¿Qué alternativas se te ocurren?</p>
+</section>
+<form name="feedback-form-quesFeedback0b300" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b300text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b300" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b300" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso, basta con hacer uso del método <code>contains</code> de la clase <code>String</code>. Si devuelve <code>true</code> es que en efecto la cadena "<em>mal</em>" está contenida dentro de la cadena en la que se busca.</p>
+<p>Suponiendo que en la entrada de datos ya se ha introducido una cadena y se ha almacenado en una variable llamada <code>texto</code>, la búsqueda podría quedar como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>boolean encontrado;
+encontrado = texto.contains("mal");</code></pre>
+</div>
+</div>
+<p>Otra posibilidad para hacer la búsqueda es utilizar el método <code>indexOf</code>, que además de indicarnos si la cadena buscada se encuentra dentro del texto, nos dice la posición en la que se encuentra. Si no la encontrara, sabemos que devolverá -1. En tal caso, la búsqueda podría quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>encontrado = texto.indexOf("mal") &gt;= 0;</code></pre>
+</div>
+</div>
+<p>O bien:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>encontrado = texto.indexOf("mal") != -1;</code></pre>
+</div>
+</div>
+<p>Dado que el método <code>indexOf</code> está sobrecargado (dispone de varias versiones en función de los parámetros), también podríamos haber trabajado con la versión con dos parámetros:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>encontrado = texto.indexOf("mal", 0) &gt;= 0;</code></pre>
+</div>
+</div>
+<p>Aunque en este caso no tendría mucho sentido, pues nos interesa buscar desde el comienzo de la cadena <code>texto</code>, con lo cual nos podemos "ahorrar" ese parámetro y el código queda más compacto y legible.</p>
+<p>Por supuesto, también podríamos haber intentado realizar la búsqueda mediante un procedimiento mucho más "manual": recorriendo la cadena carácter a carácter mediante un bucle y comparando cada elemento con la 'm'. Si coincide, entonces empezaríamos a comparar el siguiente con la 'a' y, si también coincide, el siguiente con la 'l'. Si en el caso de la comparación con la 'a' no se produce una coincidencia, entonces habría que volver a seguir comparando con la 'm' y así sucesivamente.</p>
+<p>Obviamente, esa forma de resolver el problema también funcionaría y probablemente es como están construidos los métodos <code>contains</code> e <code>indexOf</code> por dentro. Pero si estas herramientas ya existen, y están a nuestra disposición, la idea es utilizarlas y aprovechar esa ventaja y no volver a resolver un problema ya resuelto. Es la base de la programación orientada a objetos y en general de cualquier metodología en la cual se aprovechan las herramientas ya disponibles para poder enfrentarse a problemas más complejos.</p></section>
+</form>
+<section id="taquesQuestion1b300" class="block iDevice_content">
+<p>Imagina ahora que no solo queremos saber si la cadena "<em><strong>mal</strong></em>" aparece en un texto determinado, sino en qué posición del texto aparece. ¿Cómo podríamos resolverlo?</p>
+</section>
+<form name="feedback-form-quesFeedback1b300" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b300text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b300" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b300" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En esta ocasión sí nos resultará útil el uso del método <code>indexOf</code>, pues la información que devuelve es justo lo que necesitamos:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Variables de entrada
+String texto;
+
+// Variables de salida
+bolean encontrado;
+int posicion;
+
+// Entrada de datos
+System.out.println("Introduzca texto donde buscar:");
+texto = teclado.nextLine();
+
+// Procesamiento
+posicion= texto.indexOf("mal", 0);  // Posición en la que se encuentra la subcadena (-1 si no la encuentra)
+encontrado = posicion &gt;= 0;  // Si es superior a -1 es que la ha encontrado
+
+// Salida de resultados
+System.out.printf ("Texto \"mal\" %sencontrado.\n", encontrado ? "" : "no ");
+if (encontrado) {
+    System.out.printf ("Encontrado en la posición %d\n", posicion);
+}</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion2b300" class="block iDevice_content">
+<p>Supongamos ahora que lo que nos interesa saber es si la cadena "<em><strong>mal</strong></em>" aparece más de una vez en el texto, ¿qué se te ocurre para resolverlo?</p>
+</section>
+<form name="feedback-form-quesFeedback2b300" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b300text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b300" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback2b300" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso, no basta con hacer una búsqueda. Habría que realizar al menos dos búsquedas. Si empleamos <code>contains </code>sabemos que el patrón buscado (en este caso la cadena "<em>mal</em>") aparece al menos una vez, pero no sabremos si aparece más veces. Para ir un poco más allá, podríamos hacer uso del método <code>indexOf </code>y, si devuelve un número superior a -1 (es decir, si se ha encontrado el patrón), entonces podríamos intentar volver a buscar (de nuevo con <code>indexOf</code>) a partir de la posición siguiente a la que obtuvo la primera coincidencia. Esto significa que tendríamos que utilizar el método <strong>dos veces</strong>. La búsqueda podría entonces quedar así:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Procesamiento
+posicion= texto.indexOf("mal");  // Buscamos unan primera coincidencia
+if (posicion &gt;=0) {
+    // Buscamos más allá de la primera coincidencia
+    posicion = (texto.indexOf("mal", posicion+1));
+}
+encontrado = posicion &gt;= 0; // Si se produjo una segunda coincidencia
+
+// Salida de resultados
+System.out.printf ("Texto \"mal\"%s encontrado más de una vez.\n", encontrado ? "" : " no");</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion3b300" class="block iDevice_content">
+<p>Avanzando un paso más, imagina que lo que nos interesa es averiguar cuántas veces aparece la cadena "<em><strong>mal</strong></em>" en todo el texto, ¿cómo lo harías?</p>
+</section>
+<form name="feedback-form-quesFeedback3b300" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback3b300text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback3b300" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback3b300" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Si lo que nos interesa es saber cuántas veces aparece el patrón (en este caso la cadena "<em>mal</em>") en todo el texto, en lugar de utilizar dos veces el método <code>indexOf</code>, lo que podemos hacer es utilizarlo todas las veces que podamos hasta que nos devuelva -1. En ese momento sabremos que ya no nos quedan más cadenas "<em>mal</em>" por encontrar. Obviamente, cada vez que encontremos una coincidencia, tendremos que avanzar la posición de comienzo de búsqueda para no volver a encontrar la misma ocurrencia y evitar quedar "atascados" en un bucle infinito.</p>
+<p>En el fondo, se trata de convertir el código anterior en un <strong>bucle</strong> para que, en lugar de aplicarse dos veces el método <code>indexOf</code>, se aplique todas las veces que sea necesario hasta que se cumpla (o se deje de cumplir) una determinada condición:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Variables de entrada
+String texto;
+
+// Variables de salida
+int numVeces
+
+// Variables intermedias
+int posicion;
+
+// Entrada de datos
+System.out.println("Introduzca texto donde buscar:");
+texto = teclado.nextLine();
+
+// Procesamiento
+numVeces = 0;
+posicion = -1;
+do {
+    posicion= texto.indexOf("mal", posicion+1);
+    if (posicion&gt;=0) {
+        numVeces++;
+    }
+} while (posicion&gt;=0);
+
+// Salida de resultados
+System.out.printf ("El texto \"mal\" se ha encontrado %d veces.\n", numVeces);</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id301">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto: buscar en los extremos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta301_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b301" class="block iDevice_content">
+<p>Siguiendo con el ejercicio anterior, imagina que nos interesa saber si una cadena comienza con el texto "<em><strong>mal</strong></em>", <strong>sin tener en cuenta los posibles espacios iniciales</strong> ni las <strong>mayúsculas/minúsculas</strong>.</p>
+</section>
+<form name="feedback-form-quesFeedback0b301" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b301text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b301" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b301" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Dado que no nos interesan los posibles espacios iniciales, lo primero que podemos hacer es generar una nueva cadena donde los eliminemos (método <code>trim</code> de la clase <code>String</code>):</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>textoFiltrado = texto.trim(); // Texto original sin los espacios iniciales y finales</code></pre>
+</div>
+</div>
+<p>Te recomendamos que <strong>no modifiques el texto original</strong> (variable <code>texto</code>) que se introdujo desde teclado, pues es lo que el usuario introdujo inicialmente y si lo modificamos, perderemos la información exacta que se nos proporcionó y será imposible recuperarla si la necesitáramos más adelante.</p>
+<p>Como norma general, <strong><span class="destacado_inline">¡jamás debemos modificar una variable de entrada!</span></strong></p>
+<p>Una vez que ya hemos eliminado esos posibles espacios iniciales, podríamos pensar en comprobar si el texto comienza con la cadena "mal" mediante el uso del método <code>startsWith</code>, pero el problema está en que podría por ejemplo empezar por mayúsculas ("<em>Mal...</em>") o incluso que todo el texto sea en mayúsculas ("<em>MAL...</em>"). Para ello, lo más seguro es pasar toda la cadena de entrada (ya sin espacios a los lados), a una nueva cadena donde todo sean minúsculas. Así, la comparación no dependerá de mayúsculas o minúsculas. La comprobación podría entonces quedar como:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>textoFiltrado = texto.trim();
+textoFiltrado = textoFiltrado.toLowerCase();
+encontrado = textoFiltrado.startsWith("mal");</code></pre>
+</div>
+</div>
+<p>En este caso, sí "machacamos" a donde apunta la variable <code>textoFiltrado</code>, perdiendo el acceso a su anterior valor, porque ese contenido no nos interesa conservarlo (mientras tengamos el texto original en la variable <code>texto</code>, siempre podemos volver a transformarlo). Recuerda siempre que cuando asignamos a una variable de tipo <code>String</code> otra variable de tipo <code>String</code> no estamos modificando una cadena por el valor de otra, sino modificando la dirección de memoria (la zona donde está realmente la cadena) a la que se hace referencia. Las cadenas en Java son inmutables.</p>
+<p>Por otro lado, dado que esas variables intermedias en realidad no nos hacen falta más que para disponer de la cadena modificada a la hora de hacer la comprobación, otra opción podría haber sido directamente obtener las cadenas modificadas (o "filtradas") sin ni siquiera hacer referencia a ellas desde variables de tipo <code>String</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>encontrado = texto.trim().toLowerCase().startsWith("mal");</code></pre>
+</div>
+</div>
+<p>En estos casos, si las variables intermedias no van a volver a ser utilizadas, podemos hacerlo todo en una única línea, quedando el código bastante más compacto.</p>
+<p>El programa completo podría entonces haber quedado de la siguiente manera:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Variables de entrada
+String texto;
+
+// Variables de salida
+boolean encontrado;
+
+
+// Entrada de datos
+System.out.println("Introduzca texto donde buscar");
+texto = teclado.nextLine();
+
+// Procesamiento
+encontrado = texto.trim().toLowerCase().startsWith("mal");
+
+// Salida de resultados
+System.out.printf ("El texto introducido %scomienza por la cadena \"mal\".", encontrado ? "" : "no ");</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion1b301" class="block iDevice_content">
+<p>Si quisiéramos ampliar el ejercicio anterior, comprobando si el texto comienza o termina por la cadena "<strong><em>mal</em></strong>", nuevamente sin tener en cuenta mayúsculas/minúsculas ni los espacios de los extremos (iniciales y/o finales), ¿cómo crees que podríamos resolverlo?</p>
+</section>
+<form name="feedback-form-quesFeedback1b301" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback1b301text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback1b301" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback1b301" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En este caso se trataría de hacer una comprobación similar tanto al comienzo del texto (método <code>startsWith</code>) como al final (metodo <code>endsWith</code>) y unirlas con un <strong>OR</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>String textoFiltrado = texto.trim().toLowerCase();
+boolean encontradoIzqda = textoFilrado.startsWith("mal");
+boolean encontradoDcha  = textoFilrado.endsWith("mal");
+encontrado = encontradoIzqda || encontradoDcha;</code></pre>
+</div>
+</div>
+<p>Podríamos incluso hacerlo todo en una única línea:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>
+encontrado = texto.trim().toLowerCase().startsWith("mal") || texto.trim().toLowerCase().endsWith("mal");</code></pre>
+</div>
+</div></section>
+</form>
+<section id="taquesQuestion2b301" class="block iDevice_content">
+<p>¿Y si lo que queremos es comprobar si el texto tanto <strong>empieza</strong> como <strong>termina</strong> con la cadena "<strong><em>mal</em></strong>"?</p>
+</section>
+<form name="feedback-form-quesFeedback2b301" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback2b301text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback2b301" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback2b301" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>En tal caso, bastaría con utilizar un <strong>AND</strong> en lugar de un <strong>OR</strong>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>encontrado = texto.trim().toLowerCase().startsWith("mal") &amp;&amp; texto.trim().toLowerCase().endsWith("mal");</code></pre>
+</div>
+</div></section>
+</form>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice em_iDevice_ejercicioresueltofpd" id="id302">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header" style="background-image:url(icon_ejercicioresueltofpd.png)"><h1 class="iDeviceTitle">Ejercicio Resuelto: sustituciones</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta302_148" class="block story iDevice_content">
+
+</section>
+<section id="taquesQuestion0b302" class="block iDevice_content">
+<p>Imagina ahora que lo que nos interesa es sustituir todas las apariciones de la cadena "mal" por la cadena "---", ¿cómo lo harías?</p>
+</section>
+<form name="feedback-form-quesFeedback0b302" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b302text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b302" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b302" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p>Para resolver este ejercicio bastaría con hacer uso del método <code>replace</code>:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>textoModificado = texto.replace ("mal", "---");</code></pre>
+</div>
+</div>
+<p></p>
+<p></p></section>
+</form>
+<section id="taquesQuestion1b302" class="block iDevice_content">
+<p>¿Y si quisiéramos <strong>no tener en cuenta mayúsculas/minúsculas</strong> como hemos hecho en otras ocasiones?</p>
+<p>En este caso, la situación se complica bastante, pues el método <code>replace</code> es "estricto" y la clase <code>replace</code> no dispone de una versión del estilo <code>replaceIgnoreCase</code>. Tendríamos nosotros que escribir el código que lo hiciera y tendría cierta complejidad.</p>
+<p>Para casos así y muchos otros en los cuales las búsquedas y/o las sustituciones no son tan inmediatas, haremos uso más adelante de una potente herramienta conocida con el nombre de <strong>expresiones regulares</strong>. Por ahora, basta con que nos vayamos quedando con el nombre.</p>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="212_operaciones_bsicas_con_cadenas_de_caracteres_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="214_operaciones_avanzadas_con_cadenas_de_caracteres_ii.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>
